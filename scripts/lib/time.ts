@@ -65,6 +65,20 @@ export function parsePeriod(raw: string, frequencyHint?: Frequency) {
     }
   }
 
+  if (frequencyHint === "quarterly" && /^\d{6}$/.test(text)) {
+    const year = Number(text.slice(0, 4));
+    const month = Number(text.slice(4, 6));
+    if ([3, 6, 9, 12].includes(month)) {
+      const quarter = month / 3;
+      return {
+        frequency: "quarterly" as const,
+        period_key: `${year}-Q${quarter}`,
+        label_tc: `${year}年第${quarter}季`,
+        date: new Date(Date.UTC(year, month - 1, 1)).toISOString()
+      };
+    }
+  }
+
   if (frequencyHint === "half_yearly" && /^\d{6}$/.test(text)) {
     const year = Number(text.slice(0, 4));
     const month = Number(text.slice(4, 6));
@@ -119,7 +133,7 @@ export function parsePeriod(raw: string, frequencyHint?: Frequency) {
     }
   }
 
-  if (!Number.isNaN(parsedDate.getTime())) {
+  if (!/^\d+$/.test(text) && !Number.isNaN(parsedDate.getTime())) {
     return {
       frequency: (frequencyHint ?? "event") as Frequency,
       period_key: text,

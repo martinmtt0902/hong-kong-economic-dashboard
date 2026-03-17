@@ -4,6 +4,7 @@ import { fetchCenstatdSeries } from "./fetch/censtatd";
 import { fetchCsvSeries } from "./fetch/csvSource";
 import { fetchBaseRateSeries, fetchHibor1MSeries } from "./fetch/hkma";
 import { fetchMinimumWageSeries } from "./fetch/labour";
+import { fetchRvdCompletionsSeries } from "./fetch/rvd";
 import { cardDefinitions, metricConfigs, URLs } from "./lib/source";
 import { buildMetricSeries, fallbackMetric } from "./lib/series";
 import { createSeedPayload } from "./lib/seed";
@@ -31,7 +32,8 @@ async function main() {
         id: card.id,
         title_tc: card.title_tc,
         metrics,
-        latest_data_at: latestMetricDate(metrics)
+        latest_data_at: latestMetricDate(metrics),
+        latest_data_label: latestMetricLabel(metrics)
       } satisfies DashboardCard;
     })
   );
@@ -212,22 +214,7 @@ async function resolveCardMetrics(
           })
         ),
         resolveMetric("private_completions", previousMetrics, async () =>
-          fetchCsvSeries({
-            url: URLs.rvdCompletionsCsv,
-            frequency: "annual",
-            unit: "伙",
-            dateColumns: ["year", "Year", "年份"],
-            valueSelector: (row) => {
-              const entries = Object.entries(row).filter(
-                ([header]) => !/(year|年份|date|district|備註|remarks|region|class)/i.test(header)
-              );
-              const sum = entries.reduce((total, [, value]) => {
-                const numeric = Number(value.replace(/,/g, ""));
-                return Number.isFinite(numeric) ? total + numeric : total;
-              }, 0);
-              return sum > 0 ? sum : undefined;
-            }
-          })
+          fetchRvdCompletionsSeries(URLs.rvdCompletionsCsv)
         )
       ]);
     case "fiscal":
@@ -337,11 +324,43 @@ function deriveYearOnYear(series: DataPoint[], unit: string, lookback: number): 
 }
 
 function latestMetricDate(metrics: MetricSeries[]): string | undefined {
+  return pickCardLatestPoint(metrics)?.date;
+}
+
+function latestMetricLabel(metrics: MetricSeries[]): string | undefined {
+  return pickCardLatestPoint(metrics)?.label_tc;
+}
+
+function pickCardLatestPoint(metrics: MetricSeries[]): DataPoint | undefined {
   return metrics
-    .map((metric) => metric.latest?.date)
-    .filter((value): value is string => Boolean(value))
-    .sort()
-    .at(-1);
+    .filter((metric): metric is MetricSeries & { latest: DataPoint } => Boolean(metric.latest))
+    .sort((left, right) => {
+      const dateOrder = left.latest.date.localeCompare(right.latest.date);
+      if (dateOrder !== 0) {
+        return dateOrder;
+      }
+      return frequencyRank(left.frequency) - frequencyRank(right.frequency);
+    })
+    .at(-1)?.latest;
+}
+
+function frequencyRank(frequency: MetricSeries["frequency"]): number {
+  switch (frequency) {
+    case "daily":
+      return 6;
+    case "monthly":
+      return 5;
+    case "quarterly":
+      return 4;
+    case "half_yearly":
+      return 3;
+    case "annual":
+      return 2;
+    case "event":
+      return 1;
+    default:
+      return 0;
+  }
 }
 
 async function loadPreviousDashboard(): Promise<DashboardPayload | null> {

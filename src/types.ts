@@ -42,6 +42,7 @@ export type DashboardCard = {
   title_tc: string;
   metrics: MetricSeries[];
   latest_data_at?: string;
+  latest_data_label?: string;
   stale_reason?: string;
 };
 

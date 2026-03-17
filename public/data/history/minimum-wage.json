@@ -39,5 +39,6 @@
       "expected_update": "按政策變動"
     }
   ],
-  "latest_data_at": "2025-04-30T16:00:00.000Z"
+  "latest_data_at": "2025-04-30T16:00:00.000Z",
+  "latest_data_label": "現行法定最低工資"
 }

@@ -933,5 +933,6 @@
       "expected_update": "每年"
     }
   ],
-  "latest_data_at": "2026-01-01T00:00:00.000Z"
+  "latest_data_at": "2026-01-01T00:00:00.000Z",
+  "latest_data_label": "2024-25"
 }

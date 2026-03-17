@@ -1990,5 +1990,6 @@
       "expected_update": "每年"
     }
   ],
-  "latest_data_at": "2025-12-01T00:00:00.000Z"
+  "latest_data_at": "2025-12-01T00:00:00.000Z",
+  "latest_data_label": "2025年年底"
 }

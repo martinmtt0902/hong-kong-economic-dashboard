@@ -45,6 +45,7 @@ export const dashboardCardSchema = z.object({
   title_tc: z.string(),
   metrics: z.array(metricSeriesSchema),
   latest_data_at: z.string().optional(),
+  latest_data_label: z.string().optional(),
   stale_reason: z.string().optional()
 });
 

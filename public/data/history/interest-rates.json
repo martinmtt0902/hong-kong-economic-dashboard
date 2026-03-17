@@ -1631,5 +1631,6 @@
       "expected_update": "每日"
     }
   ],
-  "latest_data_at": "2026-03-17T00:00:00.000Z"
+  "latest_data_at": "2026-03-17T00:00:00.000Z",
+  "latest_data_label": "2026-03-17"
 }

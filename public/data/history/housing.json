@@ -5794,205 +5794,73 @@
       "unit": "伙",
       "frequency": "annual",
       "latest": {
-        "period_key": "5177",
-        "label_tc": "5177年",
-        "date": "5177-01-01T00:00:00.000Z",
-        "value": 45249,
-        "unit": "伙"
+        "period_key": "2026",
+        "label_tc": "2026年（預測）",
+        "date": "2026-01-01T00:00:00.000Z",
+        "value": 20098,
+        "unit": "伙",
+        "provisional": true
       },
       "previous": {
-        "period_key": "4865",
-        "label_tc": "4865年",
-        "date": "4865-01-01T00:00:00.000Z",
-        "value": 34802,
-        "unit": "伙"
+        "period_key": "2025",
+        "label_tc": "2025年（預測）",
+        "date": "2025-01-01T00:00:00.000Z",
+        "value": 20862,
+        "unit": "伙",
+        "provisional": true
       },
-      "change_abs": 10447,
-      "change_pct": 30.0184,
+      "change_abs": -764,
+      "change_pct": -3.6622,
       "sparkline_points": [
         {
-          "period_key": "1329",
-          "label_tc": "1329年",
-          "date": "1329-01-01T00:00:00.000Z",
-          "value": 4804,
-          "unit": "伙"
+          "period_key": "2024",
+          "label_tc": "2024年",
+          "date": "2024-01-01T00:00:00.000Z",
+          "value": 24261,
+          "unit": "伙",
+          "provisional": false
         },
         {
-          "period_key": "1430",
-          "label_tc": "1430年",
-          "date": "1430-01-01T00:00:00.000Z",
-          "value": 7709,
-          "unit": "伙"
+          "period_key": "2025",
+          "label_tc": "2025年（預測）",
+          "date": "2025-01-01T00:00:00.000Z",
+          "value": 20862,
+          "unit": "伙",
+          "provisional": true
         },
         {
-          "period_key": "1691",
-          "label_tc": "1691年",
-          "date": "1691-01-01T00:00:00.000Z",
-          "value": 9431,
-          "unit": "伙"
-        },
-        {
-          "period_key": "1705",
-          "label_tc": "1705年",
-          "date": "1705-01-01T00:00:00.000Z",
-          "value": 3744,
-          "unit": "伙"
-        },
-        {
-          "period_key": "1722",
-          "label_tc": "1722年",
-          "date": "1722-01-01T00:00:00.000Z",
-          "value": 10736,
-          "unit": "伙"
-        },
-        {
-          "period_key": "1787",
-          "label_tc": "1787年",
-          "date": "1787-01-01T00:00:00.000Z",
-          "value": 10854,
-          "unit": "伙"
-        },
-        {
-          "period_key": "2271",
-          "label_tc": "2271年",
-          "date": "2271-01-01T00:00:00.000Z",
-          "value": 2363,
-          "unit": "伙"
-        },
-        {
-          "period_key": "3032",
-          "label_tc": "3032年",
-          "date": "3032-01-01T00:00:00.000Z",
-          "value": 22777,
-          "unit": "伙"
-        },
-        {
-          "period_key": "4865",
-          "label_tc": "4865年",
-          "date": "4865-01-01T00:00:00.000Z",
-          "value": 34802,
-          "unit": "伙"
-        },
-        {
-          "period_key": "5177",
-          "label_tc": "5177年",
-          "date": "5177-01-01T00:00:00.000Z",
-          "value": 45249,
-          "unit": "伙"
+          "period_key": "2026",
+          "label_tc": "2026年（預測）",
+          "date": "2026-01-01T00:00:00.000Z",
+          "value": 20098,
+          "unit": "伙",
+          "provisional": true
         }
       ],
       "history_points": [
         {
-          "period_key": "10794",
-          "label_tc": "10794",
-          "date": "+010793-12-31T16:00:00.000Z",
-          "value": 89482,
-          "unit": "伙"
+          "period_key": "2024",
+          "label_tc": "2024年",
+          "date": "2024-01-01T00:00:00.000Z",
+          "value": 24261,
+          "unit": "伙",
+          "provisional": false
         },
         {
-          "period_key": "1039",
-          "label_tc": "1039年",
-          "date": "1039-01-01T00:00:00.000Z",
-          "value": 1943,
-          "unit": "伙"
+          "period_key": "2025",
+          "label_tc": "2025年（預測）",
+          "date": "2025-01-01T00:00:00.000Z",
+          "value": 20862,
+          "unit": "伙",
+          "provisional": true
         },
         {
-          "period_key": "1074",
-          "label_tc": "1074年",
-          "date": "1074-01-01T00:00:00.000Z",
-          "value": 3247,
-          "unit": "伙"
-        },
-        {
-          "period_key": "1122",
-          "label_tc": "1122年",
-          "date": "1122-01-01T00:00:00.000Z",
-          "value": 4481,
-          "unit": "伙"
-        },
-        {
-          "period_key": "1128",
-          "label_tc": "1128年",
-          "date": "1128-01-01T00:00:00.000Z",
-          "value": 11379,
-          "unit": "伙"
-        },
-        {
-          "period_key": "1132",
-          "label_tc": "1132年",
-          "date": "1132-01-01T00:00:00.000Z",
-          "value": 1132,
-          "unit": "伙"
-        },
-        {
-          "period_key": "1329",
-          "label_tc": "1329年",
-          "date": "1329-01-01T00:00:00.000Z",
-          "value": 4804,
-          "unit": "伙"
-        },
-        {
-          "period_key": "1430",
-          "label_tc": "1430年",
-          "date": "1430-01-01T00:00:00.000Z",
-          "value": 7709,
-          "unit": "伙"
-        },
-        {
-          "period_key": "1691",
-          "label_tc": "1691年",
-          "date": "1691-01-01T00:00:00.000Z",
-          "value": 9431,
-          "unit": "伙"
-        },
-        {
-          "period_key": "1705",
-          "label_tc": "1705年",
-          "date": "1705-01-01T00:00:00.000Z",
-          "value": 3744,
-          "unit": "伙"
-        },
-        {
-          "period_key": "1722",
-          "label_tc": "1722年",
-          "date": "1722-01-01T00:00:00.000Z",
-          "value": 10736,
-          "unit": "伙"
-        },
-        {
-          "period_key": "1787",
-          "label_tc": "1787年",
-          "date": "1787-01-01T00:00:00.000Z",
-          "value": 10854,
-          "unit": "伙"
-        },
-        {
-          "period_key": "2271",
-          "label_tc": "2271年",
-          "date": "2271-01-01T00:00:00.000Z",
-          "value": 2363,
-          "unit": "伙"
-        },
-        {
-          "period_key": "3032",
-          "label_tc": "3032年",
-          "date": "3032-01-01T00:00:00.000Z",
-          "value": 22777,
-          "unit": "伙"
-        },
-        {
-          "period_key": "4865",
-          "label_tc": "4865年",
-          "date": "4865-01-01T00:00:00.000Z",
-          "value": 34802,
-          "unit": "伙"
-        },
-        {
-          "period_key": "5177",
-          "label_tc": "5177年",
-          "date": "5177-01-01T00:00:00.000Z",
-          "value": 45249,
-          "unit": "伙"
+          "period_key": "2026",
+          "label_tc": "2026年（預測）",
+          "date": "2026-01-01T00:00:00.000Z",
+          "value": 20098,
+          "unit": "伙",
+          "provisional": true
         }
       ],
       "source_name": "差餉物業估價署",
@@ -6001,5 +5869,6 @@
       "expected_update": "每年"
     }
   ],
-  "latest_data_at": "5177-01-01T00:00:00.000Z"
+  "latest_data_at": "2026-01-01T00:00:00.000Z",
+  "latest_data_label": "2026年1月"
 }
