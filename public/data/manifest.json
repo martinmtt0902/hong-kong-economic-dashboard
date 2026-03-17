@@ -1,0 +1,25 @@
+{
+  "generated_at": "2026-03-17T17:19:19.252Z",
+  "card_ids": [
+    "employment",
+    "inflation",
+    "gdp",
+    "consumption-travel",
+    "minimum-wage",
+    "population",
+    "housing",
+    "fiscal",
+    "interest-rates"
+  ],
+  "history_paths": {
+    "employment": "./history/employment.json",
+    "inflation": "./history/inflation.json",
+    "gdp": "./history/gdp.json",
+    "consumption-travel": "./history/consumption-travel.json",
+    "minimum-wage": "./history/minimum-wage.json",
+    "population": "./history/population.json",
+    "housing": "./history/housing.json",
+    "fiscal": "./history/fiscal.json",
+    "interest-rates": "./history/interest-rates.json"
+  }
+}
