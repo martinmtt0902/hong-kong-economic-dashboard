@@ -12,6 +12,8 @@ test("every metric has explicit chart metadata and tooltip unit", () => {
       assert.ok(metric.chart_definition.y_axis_label);
       assert.ok(metric.chart_definition.time_label);
       assert.ok(metric.chart_definition.value_label);
+      assert.ok(metric.chart_definition.chart_value_transform);
+      assert.ok(metric.chart_definition.chart_value_transform.scale > 0);
       if (metric.chart_points.length > 0) {
         const tooltip = metric.chart_points[0].tooltip_value_text;
         assert.ok(tooltip.length > 0);

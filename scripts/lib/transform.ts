@@ -68,6 +68,11 @@ export function buildTransformedMetric(input: BuildMetricInput): TransformedMetr
       frequency: input.definition.frequency,
       unit: input.definition.unit,
       display_unit: displayUnit,
+      chart_value_transform: {
+        scale: roundingPolicy.display_scale ?? 1,
+        raw_unit: input.definition.unit,
+        display_unit: displayUnit
+      },
       period_start: chartSource[0]?.as_of_date ?? "",
       period_end: chartSource.at(-1)?.as_of_date ?? "",
       x_axis_label: input.definition.chart_time_label ?? defaultTimeLabel(input.definition.frequency),

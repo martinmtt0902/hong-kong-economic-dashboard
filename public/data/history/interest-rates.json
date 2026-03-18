@@ -20,7 +20,7 @@
       "display_comparison_period_text": "2026-03-16",
       "display_unit": "%",
       "data_origin": "live",
-      "last_successful_fetch_at": "2026-03-18T04:23:48.911Z",
+      "last_successful_fetch_at": "2026-03-18T04:31:06.977Z",
       "chart": {
         "chart_type": "line",
         "x_axis_label": "日期",
@@ -28,6 +28,11 @@
         "time_label": "日期",
         "value_label": "HKMA Base Rate",
         "display_unit": "%",
+        "chart_value_transform": {
+          "scale": 1,
+          "raw_unit": "%",
+          "display_unit": "%"
+        },
         "suggested_ticks": [
           "2026-03-02",
           "2026-03-10",
@@ -188,7 +193,7 @@
       "display_comparison_period_text": "2026-03-16",
       "display_unit": "%",
       "data_origin": "live",
-      "last_successful_fetch_at": "2026-03-18T04:23:48.911Z",
+      "last_successful_fetch_at": "2026-03-18T04:31:06.977Z",
       "chart": {
         "chart_type": "line",
         "x_axis_label": "日期",
@@ -196,6 +201,11 @@
         "time_label": "日期",
         "value_label": "1個月 HIBOR",
         "display_unit": "%",
+        "chart_value_transform": {
+          "scale": 1,
+          "raw_unit": "%",
+          "display_unit": "%"
+        },
         "suggested_ticks": [
           "2026-03-02",
           "2026-03-10",

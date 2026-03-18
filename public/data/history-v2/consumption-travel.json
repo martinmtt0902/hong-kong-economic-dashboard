@@ -49,6 +49,11 @@
         "frequency": "monthly",
         "unit": "百萬港元",
         "display_unit": "億港元",
+        "chart_value_transform": {
+          "scale": 0.01,
+          "raw_unit": "百萬港元",
+          "display_unit": "億港元"
+        },
         "period_start": "2004-10-31",
         "period_end": "2026-01-31",
         "x_axis_label": "月份",
@@ -243,7 +248,7 @@
       "validation_state": "ok",
       "validation_messages": [],
       "expected_update": "每月",
-      "last_successful_fetch_at": "2026-03-18T04:23:48.911Z"
+      "last_successful_fetch_at": "2026-03-18T04:31:06.977Z"
     },
     {
       "id": "visitor_arrivals",
@@ -285,6 +290,11 @@
         "frequency": "monthly",
         "unit": "人次",
         "display_unit": "人次",
+        "chart_value_transform": {
+          "scale": 1,
+          "raw_unit": "人次",
+          "display_unit": "人次"
+        },
         "period_start": "2004",
         "period_end": "2026-01-31",
         "x_axis_label": "月份",
@@ -479,7 +489,7 @@
       "validation_state": "ok",
       "validation_messages": [],
       "expected_update": "每月",
-      "last_successful_fetch_at": "2026-03-18T04:23:48.911Z"
+      "last_successful_fetch_at": "2026-03-18T04:31:06.977Z"
     }
   ]
 }

@@ -20,7 +20,7 @@
       "display_comparison_period_text": "2025年第3季",
       "display_unit": "%",
       "data_origin": "live",
-      "last_successful_fetch_at": "2026-03-18T04:23:48.911Z",
+      "last_successful_fetch_at": "2026-03-18T04:31:06.977Z",
       "chart": {
         "chart_type": "line",
         "x_axis_label": "季度",
@@ -28,6 +28,11 @@
         "time_label": "季度",
         "value_label": "實質 GDP 增長",
         "display_unit": "%",
+        "chart_value_transform": {
+          "scale": 1,
+          "raw_unit": "%",
+          "display_unit": "%"
+        },
         "suggested_ticks": [
           "2023Q1",
           "2024Q3",
@@ -188,7 +193,7 @@
       "display_comparison_period_text": "2025年第3季",
       "display_unit": "%",
       "data_origin": "live",
-      "last_successful_fetch_at": "2026-03-18T04:23:48.911Z",
+      "last_successful_fetch_at": "2026-03-18T04:31:06.977Z",
       "chart": {
         "chart_type": "line",
         "x_axis_label": "季度",
@@ -196,6 +201,11 @@
         "time_label": "季度",
         "value_label": "名義 GDP 增長",
         "display_unit": "%",
+        "chart_value_transform": {
+          "scale": 1,
+          "raw_unit": "%",
+          "display_unit": "%"
+        },
         "suggested_ticks": [
           "2023Q1",
           "2024Q3",

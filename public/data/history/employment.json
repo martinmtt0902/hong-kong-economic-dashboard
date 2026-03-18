@@ -20,7 +20,7 @@
       "display_comparison_period_text": "2025年10月–12月",
       "display_unit": "%",
       "data_origin": "live",
-      "last_successful_fetch_at": "2026-03-18T04:23:48.911Z",
+      "last_successful_fetch_at": "2026-03-18T04:31:06.977Z",
       "chart": {
         "chart_type": "line",
         "x_axis_label": "三個月移動期間",
@@ -28,6 +28,11 @@
         "time_label": "三個月移動期間",
         "value_label": "失業率",
         "display_unit": "%",
+        "chart_value_transform": {
+          "scale": 1,
+          "raw_unit": "%",
+          "display_unit": "%"
+        },
         "suggested_ticks": [
           "2024-12",
           "2025-06",
@@ -188,7 +193,7 @@
       "display_comparison_period_text": "2025年10月–12月",
       "display_unit": "%",
       "data_origin": "live",
-      "last_successful_fetch_at": "2026-03-18T04:23:48.911Z",
+      "last_successful_fetch_at": "2026-03-18T04:31:06.977Z",
       "chart": {
         "chart_type": "line",
         "x_axis_label": "三個月移動期間",
@@ -196,6 +201,11 @@
         "time_label": "三個月移動期間",
         "value_label": "就業不足率",
         "display_unit": "%",
+        "chart_value_transform": {
+          "scale": 1,
+          "raw_unit": "%",
+          "display_unit": "%"
+        },
         "suggested_ticks": [
           "2024-12",
           "2025-06",
@@ -356,7 +366,7 @@
       "display_comparison_period_text": "2025年10月–12月",
       "display_unit": "人",
       "data_origin": "live",
-      "last_successful_fetch_at": "2026-03-18T04:23:48.911Z",
+      "last_successful_fetch_at": "2026-03-18T04:31:06.977Z",
       "chart": {
         "chart_type": "line",
         "x_axis_label": "三個月移動期間",
@@ -364,6 +374,11 @@
         "time_label": "三個月移動期間",
         "value_label": "勞動人口",
         "display_unit": "人",
+        "chart_value_transform": {
+          "scale": 1,
+          "raw_unit": "人",
+          "display_unit": "人"
+        },
         "suggested_ticks": [
           "2024-12",
           "2025-06",

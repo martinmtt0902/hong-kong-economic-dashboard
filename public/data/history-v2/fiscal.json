@@ -44,6 +44,11 @@
         "frequency": "annual",
         "unit": "百萬港元",
         "display_unit": "億港元",
+        "chart_value_transform": {
+          "scale": 0.01,
+          "raw_unit": "百萬港元",
+          "display_unit": "億港元"
+        },
         "period_start": "1998-03-31",
         "period_end": "2027-03-31",
         "x_axis_label": "財政年度",
@@ -238,7 +243,7 @@
       "validation_state": "ok",
       "validation_messages": [],
       "expected_update": "每年",
-      "last_successful_fetch_at": "2026-03-18T04:23:48.911Z"
+      "last_successful_fetch_at": "2026-03-18T04:31:06.977Z"
     },
     {
       "id": "government_expenditure",
@@ -280,6 +285,11 @@
         "frequency": "annual",
         "unit": "百萬港元",
         "display_unit": "億港元",
+        "chart_value_transform": {
+          "scale": 0.01,
+          "raw_unit": "百萬港元",
+          "display_unit": "億港元"
+        },
         "period_start": "1998-03-31",
         "period_end": "2027-03-31",
         "x_axis_label": "財政年度",
@@ -474,7 +484,7 @@
       "validation_state": "ok",
       "validation_messages": [],
       "expected_update": "每年",
-      "last_successful_fetch_at": "2026-03-18T04:23:48.911Z"
+      "last_successful_fetch_at": "2026-03-18T04:31:06.977Z"
     },
     {
       "id": "fiscal_reserves",
@@ -516,6 +526,11 @@
         "frequency": "annual",
         "unit": "百萬港元",
         "display_unit": "億港元",
+        "chart_value_transform": {
+          "scale": 0.01,
+          "raw_unit": "百萬港元",
+          "display_unit": "億港元"
+        },
         "period_start": "1998-03-31",
         "period_end": "2027-03-31",
         "x_axis_label": "財政年度",
@@ -710,7 +725,7 @@
       "validation_state": "ok",
       "validation_messages": [],
       "expected_update": "每年",
-      "last_successful_fetch_at": "2026-03-18T04:23:48.911Z"
+      "last_successful_fetch_at": "2026-03-18T04:31:06.977Z"
     }
   ]
 }

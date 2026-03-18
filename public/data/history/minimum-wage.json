@@ -18,7 +18,7 @@
       "display_comparison_basis_text": "較上一次生效值",
       "display_unit": "HK$/小時",
       "data_origin": "live",
-      "last_successful_fetch_at": "2026-03-18T04:23:48.911Z",
+      "last_successful_fetch_at": "2026-03-18T04:31:06.977Z",
       "chart": {
         "chart_type": "step_after",
         "x_axis_label": "生效日期",
@@ -26,6 +26,11 @@
         "time_label": "生效日期",
         "value_label": "法定最低工資",
         "display_unit": "HK$/小時",
+        "chart_value_transform": {
+          "scale": 1,
+          "raw_unit": "港元/小時",
+          "display_unit": "HK$/小時"
+        },
         "suggested_ticks": [
           "2025-05-01"
         ],
@@ -63,7 +68,7 @@
       "display_comparison_period_text": "2025-05-01",
       "display_unit": "HK$/小時",
       "data_origin": "live",
-      "last_successful_fetch_at": "2026-03-18T04:23:48.911Z",
+      "last_successful_fetch_at": "2026-03-18T04:31:06.977Z",
       "reason": "將於 2026-05-01 生效",
       "chart": {
         "chart_type": "step_after",
@@ -72,6 +77,11 @@
         "time_label": "生效日期",
         "value_label": "法定最低工資",
         "display_unit": "HK$/小時",
+        "chart_value_transform": {
+          "scale": 1,
+          "raw_unit": "港元/小時",
+          "display_unit": "HK$/小時"
+        },
         "suggested_ticks": [
           "2025-05-01",
           "2026-05-01"

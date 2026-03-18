@@ -19,7 +19,7 @@
       "display_comparison_period_text": "2025年12月",
       "display_unit": "指數",
       "data_origin": "live",
-      "last_successful_fetch_at": "2026-03-18T04:23:48.911Z",
+      "last_successful_fetch_at": "2026-03-18T04:31:06.977Z",
       "chart": {
         "chart_type": "line",
         "x_axis_label": "月份",
@@ -27,6 +27,11 @@
         "time_label": "月份",
         "value_label": "私樓售價指數",
         "display_unit": "指數",
+        "chart_value_transform": {
+          "scale": 1,
+          "raw_unit": "指數",
+          "display_unit": "指數"
+        },
         "suggested_ticks": [
           "2025-02",
           "2025-08",
@@ -187,7 +192,7 @@
       "display_comparison_period_text": "2025年12月",
       "display_unit": "指數",
       "data_origin": "live",
-      "last_successful_fetch_at": "2026-03-18T04:23:48.911Z",
+      "last_successful_fetch_at": "2026-03-18T04:31:06.977Z",
       "chart": {
         "chart_type": "line",
         "x_axis_label": "月份",
@@ -195,6 +200,11 @@
         "time_label": "月份",
         "value_label": "私樓租金指數",
         "display_unit": "指數",
+        "chart_value_transform": {
+          "scale": 1,
+          "raw_unit": "指數",
+          "display_unit": "指數"
+        },
         "suggested_ticks": [
           "2025-02",
           "2025-08",
@@ -355,7 +365,7 @@
       "display_comparison_period_text": "2025年（預測）",
       "display_unit": "伙",
       "data_origin": "live",
-      "last_successful_fetch_at": "2026-03-18T04:23:48.911Z",
+      "last_successful_fetch_at": "2026-03-18T04:31:06.977Z",
       "chart": {
         "chart_type": "line",
         "x_axis_label": "年份",
@@ -363,6 +373,11 @@
         "time_label": "年份",
         "value_label": "私人住宅落成量",
         "display_unit": "伙",
+        "chart_value_transform": {
+          "scale": 1,
+          "raw_unit": "伙",
+          "display_unit": "伙"
+        },
         "suggested_ticks": [
           "2024",
           "2025",

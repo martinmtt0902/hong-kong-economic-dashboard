@@ -343,6 +343,11 @@ function fallbackMetric(
       frequency: definition.frequency,
       unit: definition.unit,
       display_unit: definition.display_unit ?? definition.unit,
+      chart_value_transform: {
+        scale: definition.rounding_policy?.display_scale ?? 1,
+        raw_unit: definition.unit,
+        display_unit: definition.display_unit ?? definition.unit
+      },
       period_start: "",
       period_end: "",
       x_axis_label: definition.chart_time_label ?? "期間",

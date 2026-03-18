@@ -43,6 +43,11 @@
         "frequency": "daily",
         "unit": "%",
         "display_unit": "%",
+        "chart_value_transform": {
+          "scale": 1,
+          "raw_unit": "%",
+          "display_unit": "%"
+        },
         "period_start": "2025-10-20",
         "period_end": "2026-03-17",
         "x_axis_label": "日期",
@@ -237,7 +242,7 @@
       "validation_state": "ok",
       "validation_messages": [],
       "expected_update": "每日",
-      "last_successful_fetch_at": "2026-03-18T04:23:48.911Z"
+      "last_successful_fetch_at": "2026-03-18T04:31:06.977Z"
     },
     {
       "id": "hibor_1m",
@@ -278,6 +283,11 @@
         "frequency": "daily",
         "unit": "%",
         "display_unit": "%",
+        "chart_value_transform": {
+          "scale": 1,
+          "raw_unit": "%",
+          "display_unit": "%"
+        },
         "period_start": "2025-10-20",
         "period_end": "2026-03-17",
         "x_axis_label": "日期",
@@ -472,7 +482,7 @@
       "validation_state": "ok",
       "validation_messages": [],
       "expected_update": "每日",
-      "last_successful_fetch_at": "2026-03-18T04:23:48.911Z"
+      "last_successful_fetch_at": "2026-03-18T04:31:06.977Z"
     }
   ]
 }

@@ -44,6 +44,11 @@
         "frequency": "monthly",
         "unit": "%",
         "display_unit": "%",
+        "chart_value_transform": {
+          "scale": 1,
+          "raw_unit": "%",
+          "display_unit": "%"
+        },
         "period_start": "1985-03-31",
         "period_end": "2026-01-31",
         "x_axis_label": "三個月移動期間",
@@ -238,7 +243,7 @@
       "validation_state": "ok",
       "validation_messages": [],
       "expected_update": "每月",
-      "last_successful_fetch_at": "2026-03-18T04:23:48.911Z"
+      "last_successful_fetch_at": "2026-03-18T04:31:06.977Z"
     },
     {
       "id": "underemployment",
@@ -280,6 +285,11 @@
         "frequency": "monthly",
         "unit": "%",
         "display_unit": "%",
+        "chart_value_transform": {
+          "scale": 1,
+          "raw_unit": "%",
+          "display_unit": "%"
+        },
         "period_start": "1985-03-31",
         "period_end": "2026-01-31",
         "x_axis_label": "三個月移動期間",
@@ -474,7 +484,7 @@
       "validation_state": "ok",
       "validation_messages": [],
       "expected_update": "每月",
-      "last_successful_fetch_at": "2026-03-18T04:23:48.911Z"
+      "last_successful_fetch_at": "2026-03-18T04:31:06.977Z"
     },
     {
       "id": "labour_force",
@@ -516,6 +526,11 @@
         "frequency": "monthly",
         "unit": "人",
         "display_unit": "人",
+        "chart_value_transform": {
+          "scale": 1,
+          "raw_unit": "人",
+          "display_unit": "人"
+        },
         "period_start": "1985-03-31",
         "period_end": "2026-01-31",
         "x_axis_label": "三個月移動期間",
@@ -710,7 +725,7 @@
       "validation_state": "ok",
       "validation_messages": [],
       "expected_update": "每月",
-      "last_successful_fetch_at": "2026-03-18T04:23:48.911Z"
+      "last_successful_fetch_at": "2026-03-18T04:31:06.977Z"
     }
   ]
 }

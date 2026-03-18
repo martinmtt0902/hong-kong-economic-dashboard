@@ -20,7 +20,7 @@
       "display_comparison_period_text": "2025-26 (修訂預算)",
       "display_unit": "億港元",
       "data_origin": "live",
-      "last_successful_fetch_at": "2026-03-18T04:23:48.911Z",
+      "last_successful_fetch_at": "2026-03-18T04:31:06.977Z",
       "chart": {
         "chart_type": "line",
         "x_axis_label": "財政年度",
@@ -28,6 +28,11 @@
         "time_label": "財政年度",
         "value_label": "政府收入",
         "display_unit": "億港元",
+        "chart_value_transform": {
+          "scale": 0.01,
+          "raw_unit": "百萬港元",
+          "display_unit": "億港元"
+        },
         "suggested_ticks": [
           "2015-16",
           "2021-22",
@@ -36,84 +41,84 @@
         "points": [
           {
             "x": "2015-16",
-            "y": 450007,
+            "y": 4500.07,
             "tick_label": "2015-16",
             "tooltip_title": "2015-16",
             "tooltip_value_text": "HK$4500.1億"
           },
           {
             "x": "2016-17",
-            "y": 573124,
+            "y": 5731.24,
             "tick_label": "2016-17",
             "tooltip_title": "2016-17",
             "tooltip_value_text": "HK$5731.2億"
           },
           {
             "x": "2017-18",
-            "y": 619837,
+            "y": 6198.37,
             "tick_label": "2017-18",
             "tooltip_title": "2017-18",
             "tooltip_value_text": "HK$6198.4億"
           },
           {
             "x": "2018-19",
-            "y": 599774,
+            "y": 5997.74,
             "tick_label": "2018-19",
             "tooltip_title": "2018-19",
             "tooltip_value_text": "HK$5997.7億"
           },
           {
             "x": "2019-20",
-            "y": 590926,
+            "y": 5909.26,
             "tick_label": "2019-20",
             "tooltip_title": "2019-20",
             "tooltip_value_text": "HK$5909.3億"
           },
           {
             "x": "2020-21",
-            "y": 564230,
+            "y": 5642.3,
             "tick_label": "2020-21",
             "tooltip_title": "2020-21",
             "tooltip_value_text": "HK$5642.3億"
           },
           {
             "x": "2021-22",
-            "y": 693576,
+            "y": 6935.76,
             "tick_label": "2021-22",
             "tooltip_title": "2021-22",
             "tooltip_value_text": "HK$6935.8億"
           },
           {
             "x": "2022-23",
-            "y": 622147,
+            "y": 6221.47,
             "tick_label": "2022-23",
             "tooltip_title": "2022-23",
             "tooltip_value_text": "HK$6221.5億"
           },
           {
             "x": "2023-24",
-            "y": 549406,
+            "y": 5494.06,
             "tick_label": "2023-24",
             "tooltip_title": "2023-24",
             "tooltip_value_text": "HK$5494.1億"
           },
           {
             "x": "2024-25",
-            "y": 564909,
+            "y": 5649.09,
             "tick_label": "2024-25",
             "tooltip_title": "2024-25",
             "tooltip_value_text": "HK$5649.1億"
           },
           {
             "x": "2025-26 (修訂預算)",
-            "y": 688762,
+            "y": 6887.62,
             "tick_label": "2025-26 (修訂預算)",
             "tooltip_title": "2025-26 (修訂預算)",
             "tooltip_value_text": "HK$6887.6億"
           },
           {
             "x": "2026-27 (原來預算)",
-            "y": 765234,
+            "y": 7652.34,
             "tick_label": "2026-27 (原來預算)",
             "tooltip_title": "2026-27 (原來預算)",
             "tooltip_value_text": "HK$7652.3億"
@@ -188,7 +193,7 @@
       "display_comparison_period_text": "2025-26 (修訂預算)",
       "display_unit": "億港元",
       "data_origin": "live",
-      "last_successful_fetch_at": "2026-03-18T04:23:48.911Z",
+      "last_successful_fetch_at": "2026-03-18T04:31:06.977Z",
       "chart": {
         "chart_type": "line",
         "x_axis_label": "財政年度",
@@ -196,6 +201,11 @@
         "time_label": "財政年度",
         "value_label": "政府支出",
         "display_unit": "億港元",
+        "chart_value_transform": {
+          "scale": 0.01,
+          "raw_unit": "百萬港元",
+          "display_unit": "億港元"
+        },
         "suggested_ticks": [
           "2015-16",
           "2021-22",
@@ -204,84 +214,84 @@
         "points": [
           {
             "x": "2015-16",
-            "y": 435633,
+            "y": 4356.33,
             "tick_label": "2015-16",
             "tooltip_title": "2015-16",
             "tooltip_value_text": "HK$4356.3億"
           },
           {
             "x": "2016-17",
-            "y": 462052,
+            "y": 4620.52,
             "tick_label": "2016-17",
             "tooltip_title": "2016-17",
             "tooltip_value_text": "HK$4620.5億"
           },
           {
             "x": "2017-18",
-            "y": 470863,
+            "y": 4708.63,
             "tick_label": "2017-18",
             "tooltip_title": "2017-18",
             "tooltip_value_text": "HK$4708.6億"
           },
           {
             "x": "2018-19",
-            "y": 531825,
+            "y": 5318.25,
             "tick_label": "2018-19",
             "tooltip_title": "2018-19",
             "tooltip_value_text": "HK$5318.3億"
           },
           {
             "x": "2019-20",
-            "y": 607830,
+            "y": 6078.3,
             "tick_label": "2019-20",
             "tooltip_title": "2019-20",
             "tooltip_value_text": "HK$6078.3億"
           },
           {
             "x": "2020-21",
-            "y": 816075,
+            "y": 8160.75,
             "tick_label": "2020-21",
             "tooltip_title": "2020-21",
             "tooltip_value_text": "HK$8160.8億"
           },
           {
             "x": "2021-22",
-            "y": 693339,
+            "y": 6933.39,
             "tick_label": "2021-22",
             "tooltip_title": "2021-22",
             "tooltip_value_text": "HK$6933.4億"
           },
           {
             "x": "2022-23",
-            "y": 810477,
+            "y": 8104.77,
             "tick_label": "2022-23",
             "tooltip_title": "2022-23",
             "tooltip_value_text": "HK$8104.8億"
           },
           {
             "x": "2023-24",
-            "y": 721301,
+            "y": 7213.01,
             "tick_label": "2023-24",
             "tooltip_title": "2023-24",
             "tooltip_value_text": "HK$7213.0億"
           },
           {
             "x": "2024-25",
-            "y": 753220,
+            "y": 7532.2,
             "tick_label": "2024-25",
             "tooltip_title": "2024-25",
             "tooltip_value_text": "HK$7532.2億"
           },
           {
             "x": "2025-26 (修訂預算)",
-            "y": 789171,
+            "y": 7891.71,
             "tick_label": "2025-26 (修訂預算)",
             "tooltip_title": "2025-26 (修訂預算)",
             "tooltip_value_text": "HK$7891.7億"
           },
           {
             "x": "2026-27 (原來預算)",
-            "y": 843416,
+            "y": 8434.16,
             "tick_label": "2026-27 (原來預算)",
             "tooltip_title": "2026-27 (原來預算)",
             "tooltip_value_text": "HK$8434.2億"
@@ -356,7 +366,7 @@
       "display_comparison_period_text": "2025-26 (修訂預算)",
       "display_unit": "億港元",
       "data_origin": "live",
-      "last_successful_fetch_at": "2026-03-18T04:23:48.911Z",
+      "last_successful_fetch_at": "2026-03-18T04:31:06.977Z",
       "chart": {
         "chart_type": "line",
         "x_axis_label": "財政年度",
@@ -364,6 +374,11 @@
         "time_label": "財政年度",
         "value_label": "財政儲備",
         "display_unit": "億港元",
+        "chart_value_transform": {
+          "scale": 0.01,
+          "raw_unit": "百萬港元",
+          "display_unit": "億港元"
+        },
         "suggested_ticks": [
           "2015-16",
           "2021-22",
@@ -372,84 +387,84 @@
         "points": [
           {
             "x": "2015-16",
-            "y": 842888,
+            "y": 8428.880000000001,
             "tick_label": "2015-16",
             "tooltip_title": "2015-16",
             "tooltip_value_text": "HK$8428.9億"
           },
           {
             "x": "2016-17",
-            "y": 953960,
+            "y": 9539.6,
             "tick_label": "2016-17",
             "tooltip_title": "2016-17",
             "tooltip_value_text": "HK$9539.6億"
           },
           {
             "x": "2017-18",
-            "y": 1102934,
+            "y": 11029.34,
             "tick_label": "2017-18",
             "tooltip_title": "2017-18",
             "tooltip_value_text": "HK$11029.3億"
           },
           {
             "x": "2018-19",
-            "y": 1170883,
+            "y": 11708.83,
             "tick_label": "2018-19",
             "tooltip_title": "2018-19",
             "tooltip_value_text": "HK$11708.8億"
           },
           {
             "x": "2019-20",
-            "y": 1160308,
+            "y": 11603.08,
             "tick_label": "2019-20",
             "tooltip_title": "2019-20",
             "tooltip_value_text": "HK$11603.1億"
           },
           {
             "x": "2020-21",
-            "y": 927767,
+            "y": 9277.67,
             "tick_label": "2020-21",
             "tooltip_title": "2020-21",
             "tooltip_value_text": "HK$9277.7億"
           },
           {
             "x": "2021-22",
-            "y": 957128,
+            "y": 9571.28,
             "tick_label": "2021-22",
             "tooltip_title": "2021-22",
             "tooltip_value_text": "HK$9571.3億"
           },
           {
             "x": "2022-23",
-            "y": 834790,
+            "y": 8347.9,
             "tick_label": "2022-23",
             "tooltip_title": "2022-23",
             "tooltip_value_text": "HK$8347.9億"
           },
           {
             "x": "2023-24",
-            "y": 734585,
+            "y": 7345.85,
             "tick_label": "2023-24",
             "tooltip_title": "2023-24",
             "tooltip_value_text": "HK$7345.9億"
           },
           {
             "x": "2024-25",
-            "y": 654317,
+            "y": 6543.17,
             "tick_label": "2024-25",
             "tooltip_title": "2024-25",
             "tooltip_value_text": "HK$6543.2億"
           },
           {
             "x": "2025-26 (修訂預算)",
-            "y": 657222,
+            "y": 6572.22,
             "tick_label": "2025-26 (修訂預算)",
             "tooltip_title": "2025-26 (修訂預算)",
             "tooltip_value_text": "HK$6572.2億"
           },
           {
             "x": "2026-27 (原來預算)",
-            "y": 679332,
+            "y": 6793.32,
             "tick_label": "2026-27 (原來預算)",
             "tooltip_title": "2026-27 (原來預算)",
             "tooltip_value_text": "HK$6793.3億"

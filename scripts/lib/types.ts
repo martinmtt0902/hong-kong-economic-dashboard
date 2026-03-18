@@ -115,6 +115,11 @@ export const chartDefinitionSchema = z.object({
   frequency: frequencySchema,
   unit: z.string(),
   display_unit: z.string(),
+  chart_value_transform: z.object({
+    scale: z.number().positive(),
+    raw_unit: z.string(),
+    display_unit: z.string()
+  }),
   period_start: z.string(),
   period_end: z.string(),
   x_axis_label: z.string(),
@@ -214,6 +219,11 @@ export const uiChartSchema = z.object({
   time_label: z.string(),
   value_label: z.string(),
   display_unit: z.string(),
+  chart_value_transform: z.object({
+    scale: z.number().positive(),
+    raw_unit: z.string(),
+    display_unit: z.string()
+  }),
   suggested_ticks: z.array(z.string()),
   points: z.array(uiChartPointSchema)
 });

@@ -1,12 +1,17 @@
-import { useMemo, useState } from "react";
+import { useEffect, useMemo, useState } from "react";
 import type { UIChart } from "../types";
 
 const width = 220;
-const height = 112;
-const margin = { top: 10, right: 10, bottom: 26, left: 44 };
+const height = 128;
+const margin = { top: 10, right: 10, bottom: 28, left: 46 };
 
 export function Sparkline({ chart }: { chart: UIChart }) {
-  const [activeIndex, setActiveIndex] = useState<number | null>(null);
+  const defaultIndex = chart.points.length ? chart.points.length - 1 : null;
+  const [activeIndex, setActiveIndex] = useState<number | null>(defaultIndex);
+
+  useEffect(() => {
+    setActiveIndex(defaultIndex);
+  }, [defaultIndex]);
 
   const geometry = useMemo(() => {
     if (chart.points.length === 0) {
@@ -19,15 +24,19 @@ export function Sparkline({ chart }: { chart: UIChart }) {
     const plotWidth = width - margin.left - margin.right;
     const plotHeight = height - margin.top - margin.bottom;
     const valueSpan = maxValue - minValue || 1;
+    const padding = valueSpan * 0.08;
+    const domainMin = minValue - padding;
+    const domainMax = maxValue + padding;
+    const domainSpan = domainMax - domainMin || 1;
 
     const points = chart.points.map((point, index) => {
       const x = margin.left + (chart.points.length === 1 ? plotWidth / 2 : (index / (chart.points.length - 1)) * plotWidth);
-      const y = margin.top + plotHeight - ((point.y - minValue) / valueSpan) * plotHeight;
+      const y = margin.top + plotHeight - ((point.y - domainMin) / domainSpan) * plotHeight;
       return { ...point, svgX: x, svgY: y };
     });
 
     const ticks = [0, 0.5, 1].map((ratio) => {
-      const rawValue = maxValue - ratio * valueSpan;
+      const rawValue = domainMax - ratio * domainSpan;
       return {
         y: margin.top + ratio * plotHeight,
         label: formatYAxisTick(rawValue, chart.display_unit)
@@ -50,7 +59,7 @@ export function Sparkline({ chart }: { chart: UIChart }) {
       <svg
         className="sparkline"
         viewBox={`0 0 ${width} ${height}`}
-        onMouseLeave={() => setActiveIndex(null)}
+        onMouseLeave={() => setActiveIndex(defaultIndex)}
       >
         <line x1={margin.left} y1={height - margin.bottom} x2={width - margin.right} y2={height - margin.bottom} className="axis-line" />
         <line x1={margin.left} y1={margin.top} x2={margin.left} y2={height - margin.bottom} className="axis-line" />
@@ -87,17 +96,25 @@ export function Sparkline({ chart }: { chart: UIChart }) {
             className={activeIndex === index ? "chart-point chart-point-active" : "chart-point"}
             onMouseEnter={() => setActiveIndex(index)}
             onFocus={() => setActiveIndex(index)}
+            onBlur={() => setActiveIndex(defaultIndex)}
             tabIndex={0}
           />
         ))}
       </svg>
       <div className="mini-chart-axis mini-chart-axis-x">{chart.x_axis_label}</div>
-      {activePoint ? (
-        <div className="mini-chart-tooltip" role="note">
-          <div>{activePoint.tooltip_title}</div>
-          <div>{activePoint.tooltip_value_text}</div>
-        </div>
-      ) : null}
+      <div className="mini-chart-panel" role="note" aria-live="polite">
+        {activePoint ? (
+          <>
+            <div className="mini-chart-panel-period">{activePoint.tooltip_title}</div>
+            <div className="mini-chart-panel-value">{activePoint.tooltip_value_text}</div>
+          </>
+        ) : (
+          <>
+            <div className="mini-chart-panel-period">滑鼠移到圖上查看數值</div>
+            <div className="mini-chart-panel-value">-</div>
+          </>
+        )}
+      </div>
     </div>
   );
 }

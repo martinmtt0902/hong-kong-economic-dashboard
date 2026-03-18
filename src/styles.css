@@ -135,8 +135,8 @@ a {
 
 .metric-row {
   display: grid;
-  grid-template-columns: minmax(0, 1.15fr) minmax(220px, 1fr);
-  gap: 14px;
+  grid-template-columns: minmax(0, 1.12fr) minmax(240px, 1fr);
+  gap: 16px;
   align-items: center;
   padding: 16px;
   border-radius: 18px;
@@ -204,9 +204,8 @@ a {
 }
 
 .mini-chart {
-  position: relative;
   display: grid;
-  gap: 4px;
+  gap: 8px;
   align-content: start;
 }
 
@@ -225,7 +224,7 @@ a {
 
 .sparkline {
   width: 100%;
-  height: 124px;
+  height: 136px;
   display: block;
 }
 
@@ -278,18 +277,25 @@ a {
   background: rgba(19, 38, 31, 0.04);
 }
 
-.mini-chart-tooltip {
-  position: absolute;
-  right: 0;
-  top: 8px;
-  max-width: 140px;
-  padding: 6px 8px;
-  border-radius: 10px;
-  background: rgba(253, 248, 239, 0.96);
-  border: 1px solid rgba(19, 38, 31, 0.12);
-  box-shadow: 0 8px 18px rgba(19, 38, 31, 0.12);
+.mini-chart-panel {
+  min-height: 46px;
+  padding: 8px 10px;
+  border-radius: 12px;
+  background: rgba(19, 38, 31, 0.04);
+  border: 1px solid rgba(19, 38, 31, 0.1);
+  display: grid;
+  gap: 2px;
+}
+
+.mini-chart-panel-period {
+  color: var(--muted);
   font-size: 11px;
+}
+
+.mini-chart-panel-value {
   color: var(--ink);
+  font-size: 0.88rem;
+  font-weight: 600;
 }
 
 .metric-meta {
@@ -383,6 +389,10 @@ a {
 
   .metric-bullets {
     margin-top: 12px;
+  }
+
+  .mini-chart {
+    gap: 6px;
   }
 
   .metric-meta {

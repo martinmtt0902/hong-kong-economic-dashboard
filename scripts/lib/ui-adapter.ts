@@ -60,6 +60,7 @@ export function toUIMetricRow(metric: TransformedMetric): UIMetricRow {
         time_label: metric.chart_definition.time_label,
         value_label: metric.chart_definition.value_label,
         display_unit: metric.chart_definition.display_unit,
+        chart_value_transform: metric.chart_definition.chart_value_transform,
         suggested_ticks: metric.chart_definition.suggested_ticks,
         points: []
       },
@@ -87,22 +88,23 @@ export function toUIMetricRow(metric: TransformedMetric): UIMetricRow {
     data_origin: metric.data_origin,
     last_successful_fetch_at: metric.last_successful_fetch_at,
     reason: metric.reason,
-    chart: {
-      chart_type: metric.chart_definition.chart_type,
-      x_axis_label: metric.chart_definition.x_axis_label,
-      y_axis_label: metric.chart_definition.y_axis_label,
-      time_label: metric.chart_definition.time_label,
-      value_label: metric.chart_definition.value_label,
-      display_unit: metric.chart_definition.display_unit,
-      suggested_ticks: metric.chart_definition.suggested_ticks,
-      points: metric.chart_points.map((point) => ({
-        x: point.as_of_label,
-        y: point.value,
-        tick_label: point.tick_label,
-        tooltip_title: point.tooltip_title,
-        tooltip_value_text: point.tooltip_value_text
-      }))
-    },
+      chart: {
+        chart_type: metric.chart_definition.chart_type,
+        x_axis_label: metric.chart_definition.x_axis_label,
+        y_axis_label: metric.chart_definition.y_axis_label,
+        time_label: metric.chart_definition.time_label,
+        value_label: metric.chart_definition.value_label,
+        display_unit: metric.chart_definition.display_unit,
+        chart_value_transform: metric.chart_definition.chart_value_transform,
+        suggested_ticks: metric.chart_definition.suggested_ticks,
+        points: metric.chart_points.map((point) => ({
+          x: point.as_of_label,
+          y: point.value * metric.chart_definition.chart_value_transform.scale,
+          tick_label: point.tick_label,
+          tooltip_title: point.tooltip_title,
+          tooltip_value_text: point.tooltip_value_text
+        }))
+      },
     sparkline_points: metric.chart_points.map((point) => ({ x: point.as_of_label, y: point.value })),
     expected_update: metric.expected_update
   };

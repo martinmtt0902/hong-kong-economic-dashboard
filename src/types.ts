@@ -40,6 +40,11 @@ export type UIChart = {
   time_label: string;
   value_label: string;
   display_unit: string;
+  chart_value_transform: {
+    scale: number;
+    raw_unit: string;
+    display_unit: string;
+  };
   suggested_ticks: string[];
   points: UIChartPoint[];
 };

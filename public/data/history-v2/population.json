@@ -44,6 +44,11 @@
         "frequency": "half_yearly",
         "unit": "人",
         "display_unit": "人",
+        "chart_value_transform": {
+          "scale": 1,
+          "raw_unit": "人",
+          "display_unit": "人"
+        },
         "period_start": "1961-06-30",
         "period_end": "2025-12-31",
         "x_axis_label": "半年期間",
@@ -238,7 +243,7 @@
       "validation_state": "ok",
       "validation_messages": [],
       "expected_update": "半年",
-      "last_successful_fetch_at": "2026-03-18T04:23:48.911Z"
+      "last_successful_fetch_at": "2026-03-18T04:31:06.977Z"
     },
     {
       "id": "live_births",
@@ -279,6 +284,11 @@
         "frequency": "annual",
         "unit": "人",
         "display_unit": "人",
+        "chart_value_transform": {
+          "scale": 1,
+          "raw_unit": "人",
+          "display_unit": "人"
+        },
         "period_start": "2021-12-31",
         "period_end": "2024-12-31",
         "x_axis_label": "年份",
@@ -362,7 +372,7 @@
       "validation_state": "ok",
       "validation_messages": [],
       "expected_update": "每年",
-      "last_successful_fetch_at": "2026-03-18T04:23:48.911Z"
+      "last_successful_fetch_at": "2026-03-18T04:31:06.977Z"
     },
     {
       "id": "median_age",
@@ -404,6 +414,11 @@
         "frequency": "annual",
         "unit": "歲",
         "display_unit": "歲",
+        "chart_value_transform": {
+          "scale": 1,
+          "raw_unit": "歲",
+          "display_unit": "歲"
+        },
         "period_start": "1961-12-31",
         "period_end": "2025-12-31",
         "x_axis_label": "年份",
@@ -598,7 +613,7 @@
       "validation_state": "ok",
       "validation_messages": [],
       "expected_update": "每年",
-      "last_successful_fetch_at": "2026-03-18T04:23:48.911Z"
+      "last_successful_fetch_at": "2026-03-18T04:31:06.977Z"
     }
   ]
 }

@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-03-18T04:23:48.911Z",
+  "generated_at": "2026-03-18T04:31:06.977Z",
   "cards": [
     {
       "id": "employment",
@@ -47,6 +47,11 @@
             "frequency": "monthly",
             "unit": "%",
             "display_unit": "%",
+            "chart_value_transform": {
+              "scale": 1,
+              "raw_unit": "%",
+              "display_unit": "%"
+            },
             "period_start": "1985-03-31",
             "period_end": "2026-01-31",
             "x_axis_label": "三個月移動期間",
@@ -241,7 +246,7 @@
           "validation_state": "ok",
           "validation_messages": [],
           "expected_update": "每月",
-          "last_successful_fetch_at": "2026-03-18T04:23:48.911Z"
+          "last_successful_fetch_at": "2026-03-18T04:31:06.977Z"
         },
         {
           "id": "underemployment",
@@ -283,6 +288,11 @@
             "frequency": "monthly",
             "unit": "%",
             "display_unit": "%",
+            "chart_value_transform": {
+              "scale": 1,
+              "raw_unit": "%",
+              "display_unit": "%"
+            },
             "period_start": "1985-03-31",
             "period_end": "2026-01-31",
             "x_axis_label": "三個月移動期間",
@@ -477,7 +487,7 @@
           "validation_state": "ok",
           "validation_messages": [],
           "expected_update": "每月",
-          "last_successful_fetch_at": "2026-03-18T04:23:48.911Z"
+          "last_successful_fetch_at": "2026-03-18T04:31:06.977Z"
         },
         {
           "id": "labour_force",
@@ -519,6 +529,11 @@
             "frequency": "monthly",
             "unit": "人",
             "display_unit": "人",
+            "chart_value_transform": {
+              "scale": 1,
+              "raw_unit": "人",
+              "display_unit": "人"
+            },
             "period_start": "1985-03-31",
             "period_end": "2026-01-31",
             "x_axis_label": "三個月移動期間",
@@ -713,7 +728,7 @@
           "validation_state": "ok",
           "validation_messages": [],
           "expected_update": "每月",
-          "last_successful_fetch_at": "2026-03-18T04:23:48.911Z"
+          "last_successful_fetch_at": "2026-03-18T04:31:06.977Z"
         }
       ]
     },
@@ -763,6 +778,11 @@
             "frequency": "monthly",
             "unit": "%",
             "display_unit": "%",
+            "chart_value_transform": {
+              "scale": 1,
+              "raw_unit": "%",
+              "display_unit": "%"
+            },
             "period_start": "1981-10-31",
             "period_end": "2026-01-31",
             "x_axis_label": "月份",
@@ -957,7 +977,7 @@
           "validation_state": "ok",
           "validation_messages": [],
           "expected_update": "每月",
-          "last_successful_fetch_at": "2026-03-18T04:23:48.911Z"
+          "last_successful_fetch_at": "2026-03-18T04:31:06.977Z"
         }
       ]
     },
@@ -1007,6 +1027,11 @@
             "frequency": "quarterly",
             "unit": "%",
             "display_unit": "%",
+            "chart_value_transform": {
+              "scale": 1,
+              "raw_unit": "%",
+              "display_unit": "%"
+            },
             "period_start": "1974-03-31",
             "period_end": "2025-12-31",
             "x_axis_label": "季度",
@@ -1201,7 +1226,7 @@
           "validation_state": "ok",
           "validation_messages": [],
           "expected_update": "每季",
-          "last_successful_fetch_at": "2026-03-18T04:23:48.911Z"
+          "last_successful_fetch_at": "2026-03-18T04:31:06.977Z"
         },
         {
           "id": "gdp_nominal_yoy",
@@ -1243,6 +1268,11 @@
             "frequency": "quarterly",
             "unit": "%",
             "display_unit": "%",
+            "chart_value_transform": {
+              "scale": 1,
+              "raw_unit": "%",
+              "display_unit": "%"
+            },
             "period_start": "1974-03-31",
             "period_end": "2025-12-31",
             "x_axis_label": "季度",
@@ -1437,7 +1467,7 @@
           "validation_state": "ok",
           "validation_messages": [],
           "expected_update": "每季",
-          "last_successful_fetch_at": "2026-03-18T04:23:48.911Z"
+          "last_successful_fetch_at": "2026-03-18T04:31:06.977Z"
         }
       ]
     },
@@ -1492,6 +1522,11 @@
             "frequency": "monthly",
             "unit": "百萬港元",
             "display_unit": "億港元",
+            "chart_value_transform": {
+              "scale": 0.01,
+              "raw_unit": "百萬港元",
+              "display_unit": "億港元"
+            },
             "period_start": "2004-10-31",
             "period_end": "2026-01-31",
             "x_axis_label": "月份",
@@ -1686,7 +1721,7 @@
           "validation_state": "ok",
           "validation_messages": [],
           "expected_update": "每月",
-          "last_successful_fetch_at": "2026-03-18T04:23:48.911Z"
+          "last_successful_fetch_at": "2026-03-18T04:31:06.977Z"
         },
         {
           "id": "visitor_arrivals",
@@ -1728,6 +1763,11 @@
             "frequency": "monthly",
             "unit": "人次",
             "display_unit": "人次",
+            "chart_value_transform": {
+              "scale": 1,
+              "raw_unit": "人次",
+              "display_unit": "人次"
+            },
             "period_start": "2004",
             "period_end": "2026-01-31",
             "x_axis_label": "月份",
@@ -1922,7 +1962,7 @@
           "validation_state": "ok",
           "validation_messages": [],
           "expected_update": "每月",
-          "last_successful_fetch_at": "2026-03-18T04:23:48.911Z"
+          "last_successful_fetch_at": "2026-03-18T04:31:06.977Z"
         }
       ]
     },
@@ -1965,6 +2005,11 @@
             "frequency": "event",
             "unit": "港元/小時",
             "display_unit": "HK$/小時",
+            "chart_value_transform": {
+              "scale": 1,
+              "raw_unit": "港元/小時",
+              "display_unit": "HK$/小時"
+            },
             "period_start": "2025-05-01",
             "period_end": "2025-05-01",
             "x_axis_label": "生效日期",
@@ -2004,7 +2049,7 @@
           "validation_messages": [],
           "expected_update": "按政策變動",
           "provisional": false,
-          "last_successful_fetch_at": "2026-03-18T04:23:48.911Z"
+          "last_successful_fetch_at": "2026-03-18T04:31:06.977Z"
         },
         {
           "id": "statutory_minimum_wage_next",
@@ -2045,6 +2090,11 @@
             "frequency": "event",
             "unit": "港元/小時",
             "display_unit": "HK$/小時",
+            "chart_value_transform": {
+              "scale": 1,
+              "raw_unit": "港元/小時",
+              "display_unit": "HK$/小時"
+            },
             "period_start": "2025-05-01",
             "period_end": "2026-05-01",
             "x_axis_label": "生效日期",
@@ -2100,7 +2150,7 @@
           "expected_update": "按政策變動",
           "provisional": true,
           "reason": "將於 2026-05-01 生效",
-          "last_successful_fetch_at": "2026-03-18T04:23:48.911Z"
+          "last_successful_fetch_at": "2026-03-18T04:31:06.977Z"
         }
       ]
     },
@@ -2150,6 +2200,11 @@
             "frequency": "half_yearly",
             "unit": "人",
             "display_unit": "人",
+            "chart_value_transform": {
+              "scale": 1,
+              "raw_unit": "人",
+              "display_unit": "人"
+            },
             "period_start": "1961-06-30",
             "period_end": "2025-12-31",
             "x_axis_label": "半年期間",
@@ -2344,7 +2399,7 @@
           "validation_state": "ok",
           "validation_messages": [],
           "expected_update": "半年",
-          "last_successful_fetch_at": "2026-03-18T04:23:48.911Z"
+          "last_successful_fetch_at": "2026-03-18T04:31:06.977Z"
         },
         {
           "id": "live_births",
@@ -2385,6 +2440,11 @@
             "frequency": "annual",
             "unit": "人",
             "display_unit": "人",
+            "chart_value_transform": {
+              "scale": 1,
+              "raw_unit": "人",
+              "display_unit": "人"
+            },
             "period_start": "2021-12-31",
             "period_end": "2024-12-31",
             "x_axis_label": "年份",
@@ -2468,7 +2528,7 @@
           "validation_state": "ok",
           "validation_messages": [],
           "expected_update": "每年",
-          "last_successful_fetch_at": "2026-03-18T04:23:48.911Z"
+          "last_successful_fetch_at": "2026-03-18T04:31:06.977Z"
         },
         {
           "id": "median_age",
@@ -2510,6 +2570,11 @@
             "frequency": "annual",
             "unit": "歲",
             "display_unit": "歲",
+            "chart_value_transform": {
+              "scale": 1,
+              "raw_unit": "歲",
+              "display_unit": "歲"
+            },
             "period_start": "1961-12-31",
             "period_end": "2025-12-31",
             "x_axis_label": "年份",
@@ -2704,7 +2769,7 @@
           "validation_state": "ok",
           "validation_messages": [],
           "expected_update": "每年",
-          "last_successful_fetch_at": "2026-03-18T04:23:48.911Z"
+          "last_successful_fetch_at": "2026-03-18T04:31:06.977Z"
         }
       ]
     },
@@ -2752,6 +2817,11 @@
             "frequency": "monthly",
             "unit": "指數",
             "display_unit": "指數",
+            "chart_value_transform": {
+              "scale": 1,
+              "raw_unit": "指數",
+              "display_unit": "指數"
+            },
             "period_start": "1993-01-31",
             "period_end": "2026-01-31",
             "x_axis_label": "月份",
@@ -2946,7 +3016,7 @@
           "validation_state": "ok",
           "validation_messages": [],
           "expected_update": "每月",
-          "last_successful_fetch_at": "2026-03-18T04:23:48.911Z"
+          "last_successful_fetch_at": "2026-03-18T04:31:06.977Z"
         },
         {
           "id": "private_rent_index",
@@ -2986,6 +3056,11 @@
             "frequency": "monthly",
             "unit": "指數",
             "display_unit": "指數",
+            "chart_value_transform": {
+              "scale": 1,
+              "raw_unit": "指數",
+              "display_unit": "指數"
+            },
             "period_start": "1993-01-31",
             "period_end": "2026-01-31",
             "x_axis_label": "月份",
@@ -3180,7 +3255,7 @@
           "validation_state": "ok",
           "validation_messages": [],
           "expected_update": "每月",
-          "last_successful_fetch_at": "2026-03-18T04:23:48.911Z"
+          "last_successful_fetch_at": "2026-03-18T04:31:06.977Z"
         },
         {
           "id": "private_completions",
@@ -3220,6 +3295,11 @@
             "frequency": "annual",
             "unit": "伙",
             "display_unit": "伙",
+            "chart_value_transform": {
+              "scale": 1,
+              "raw_unit": "伙",
+              "display_unit": "伙"
+            },
             "period_start": "2024-12-31",
             "period_end": "2026-12-31",
             "x_axis_label": "年份",
@@ -3289,7 +3369,7 @@
           "validation_messages": [],
           "expected_update": "每年",
           "provisional": true,
-          "last_successful_fetch_at": "2026-03-18T04:23:48.911Z"
+          "last_successful_fetch_at": "2026-03-18T04:31:06.977Z"
         }
       ]
     },
@@ -3339,6 +3419,11 @@
             "frequency": "annual",
             "unit": "百萬港元",
             "display_unit": "億港元",
+            "chart_value_transform": {
+              "scale": 0.01,
+              "raw_unit": "百萬港元",
+              "display_unit": "億港元"
+            },
             "period_start": "1998-03-31",
             "period_end": "2027-03-31",
             "x_axis_label": "財政年度",
@@ -3533,7 +3618,7 @@
           "validation_state": "ok",
           "validation_messages": [],
           "expected_update": "每年",
-          "last_successful_fetch_at": "2026-03-18T04:23:48.911Z"
+          "last_successful_fetch_at": "2026-03-18T04:31:06.977Z"
         },
         {
           "id": "government_expenditure",
@@ -3575,6 +3660,11 @@
             "frequency": "annual",
             "unit": "百萬港元",
             "display_unit": "億港元",
+            "chart_value_transform": {
+              "scale": 0.01,
+              "raw_unit": "百萬港元",
+              "display_unit": "億港元"
+            },
             "period_start": "1998-03-31",
             "period_end": "2027-03-31",
             "x_axis_label": "財政年度",
@@ -3769,7 +3859,7 @@
           "validation_state": "ok",
           "validation_messages": [],
           "expected_update": "每年",
-          "last_successful_fetch_at": "2026-03-18T04:23:48.911Z"
+          "last_successful_fetch_at": "2026-03-18T04:31:06.977Z"
         },
         {
           "id": "fiscal_reserves",
@@ -3811,6 +3901,11 @@
             "frequency": "annual",
             "unit": "百萬港元",
             "display_unit": "億港元",
+            "chart_value_transform": {
+              "scale": 0.01,
+              "raw_unit": "百萬港元",
+              "display_unit": "億港元"
+            },
             "period_start": "1998-03-31",
             "period_end": "2027-03-31",
             "x_axis_label": "財政年度",
@@ -4005,7 +4100,7 @@
           "validation_state": "ok",
           "validation_messages": [],
           "expected_update": "每年",
-          "last_successful_fetch_at": "2026-03-18T04:23:48.911Z"
+          "last_successful_fetch_at": "2026-03-18T04:31:06.977Z"
         }
       ]
     },
@@ -4054,6 +4149,11 @@
             "frequency": "daily",
             "unit": "%",
             "display_unit": "%",
+            "chart_value_transform": {
+              "scale": 1,
+              "raw_unit": "%",
+              "display_unit": "%"
+            },
             "period_start": "2025-10-20",
             "period_end": "2026-03-17",
             "x_axis_label": "日期",
@@ -4248,7 +4348,7 @@
           "validation_state": "ok",
           "validation_messages": [],
           "expected_update": "每日",
-          "last_successful_fetch_at": "2026-03-18T04:23:48.911Z"
+          "last_successful_fetch_at": "2026-03-18T04:31:06.977Z"
         },
         {
           "id": "hibor_1m",
@@ -4289,6 +4389,11 @@
             "frequency": "daily",
             "unit": "%",
             "display_unit": "%",
+            "chart_value_transform": {
+              "scale": 1,
+              "raw_unit": "%",
+              "display_unit": "%"
+            },
             "period_start": "2025-10-20",
             "period_end": "2026-03-17",
             "x_axis_label": "日期",
@@ -4483,7 +4588,7 @@
           "validation_state": "ok",
           "validation_messages": [],
           "expected_update": "每日",
-          "last_successful_fetch_at": "2026-03-18T04:23:48.911Z"
+          "last_successful_fetch_at": "2026-03-18T04:31:06.977Z"
         }
       ]
     }
