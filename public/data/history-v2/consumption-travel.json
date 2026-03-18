@@ -72,108 +72,108 @@
           "as_of_label": "2025年2月",
           "tick_label": "2025-02",
           "value": 29385,
-          "display_value_text": "HK$293.9億",
+          "display_value_text": "293.9億",
           "tooltip_title": "2025年2月",
-          "tooltip_value_text": "HK$293.9億"
+          "tooltip_value_text": "293.9億"
         },
         {
           "as_of_date": "2025-03-31",
           "as_of_label": "2025年3月",
           "tick_label": "2025-03",
           "value": 30091,
-          "display_value_text": "HK$300.9億",
+          "display_value_text": "300.9億",
           "tooltip_title": "2025年3月",
-          "tooltip_value_text": "HK$300.9億"
+          "tooltip_value_text": "300.9億"
         },
         {
           "as_of_date": "2025-04-30",
           "as_of_label": "2025年4月",
           "tick_label": "2025-04",
           "value": 28876,
-          "display_value_text": "HK$288.8億",
+          "display_value_text": "288.8億",
           "tooltip_title": "2025年4月",
-          "tooltip_value_text": "HK$288.8億"
+          "tooltip_value_text": "288.8億"
         },
         {
           "as_of_date": "2025-05-31",
           "as_of_label": "2025年5月",
           "tick_label": "2025-05",
           "value": 31319,
-          "display_value_text": "HK$313.2億",
+          "display_value_text": "313.2億",
           "tooltip_title": "2025年5月",
-          "tooltip_value_text": "HK$313.2億"
+          "tooltip_value_text": "313.2億"
         },
         {
           "as_of_date": "2025-06-30",
           "as_of_label": "2025年6月",
           "tick_label": "2025-06",
           "value": 30094,
-          "display_value_text": "HK$300.9億",
+          "display_value_text": "300.9億",
           "tooltip_title": "2025年6月",
-          "tooltip_value_text": "HK$300.9億"
+          "tooltip_value_text": "300.9億"
         },
         {
           "as_of_date": "2025-07-31",
           "as_of_label": "2025年7月",
           "tick_label": "2025-07",
           "value": 29671,
-          "display_value_text": "HK$296.7億",
+          "display_value_text": "296.7億",
           "tooltip_title": "2025年7月",
-          "tooltip_value_text": "HK$296.7億"
+          "tooltip_value_text": "296.7億"
         },
         {
           "as_of_date": "2025-08-31",
           "as_of_label": "2025年8月",
           "tick_label": "2025-08",
           "value": 30367,
-          "display_value_text": "HK$303.7億",
+          "display_value_text": "303.7億",
           "tooltip_title": "2025年8月",
-          "tooltip_value_text": "HK$303.7億"
+          "tooltip_value_text": "303.7億"
         },
         {
           "as_of_date": "2025-09-30",
           "as_of_label": "2025年9月",
           "tick_label": "2025-09",
           "value": 31344,
-          "display_value_text": "HK$313.4億",
+          "display_value_text": "313.4億",
           "tooltip_title": "2025年9月",
-          "tooltip_value_text": "HK$313.4億"
+          "tooltip_value_text": "313.4億"
         },
         {
           "as_of_date": "2025-10-31",
           "as_of_label": "2025年10月",
           "tick_label": "2025-10",
           "value": 35174,
-          "display_value_text": "HK$351.7億",
+          "display_value_text": "351.7億",
           "tooltip_title": "2025年10月",
-          "tooltip_value_text": "HK$351.7億"
+          "tooltip_value_text": "351.7億"
         },
         {
           "as_of_date": "2025-11-30",
           "as_of_label": "2025年11月",
           "tick_label": "2025-11",
           "value": 33727,
-          "display_value_text": "HK$337.3億",
+          "display_value_text": "337.3億",
           "tooltip_title": "2025年11月",
-          "tooltip_value_text": "HK$337.3億"
+          "tooltip_value_text": "337.3億"
         },
         {
           "as_of_date": "2025-12-31",
           "as_of_label": "2025年12月",
           "tick_label": "2025-12",
           "value": 35018,
-          "display_value_text": "HK$350.2億",
+          "display_value_text": "350.2億",
           "tooltip_title": "2025年12月",
-          "tooltip_value_text": "HK$350.2億"
+          "tooltip_value_text": "350.2億"
         },
         {
           "as_of_date": "2026-01-31",
           "as_of_label": "2026年1月",
           "tick_label": "2026-01",
           "value": 37308,
-          "display_value_text": "HK$373.1億",
+          "display_value_text": "373.1億",
           "tooltip_title": "2026年1月",
-          "tooltip_value_text": "HK$373.1億"
+          "tooltip_value_text": "373.1億"
         }
       ],
       "sparkline_definition": {
@@ -248,7 +248,7 @@
       "validation_state": "ok",
       "validation_messages": [],
       "expected_update": "每月",
-      "last_successful_fetch_at": "2026-03-18T04:31:06.977Z"
+      "last_successful_fetch_at": "2026-03-18T08:22:14.148Z"
     },
     {
       "id": "visitor_arrivals",
@@ -489,7 +489,7 @@
       "validation_state": "ok",
       "validation_messages": [],
       "expected_update": "每月",
-      "last_successful_fetch_at": "2026-03-18T04:31:06.977Z"
+      "last_successful_fetch_at": "2026-03-18T08:22:14.148Z"
     }
   ]
 }

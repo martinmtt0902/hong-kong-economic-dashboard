@@ -26,7 +26,7 @@ test("consumption and travel snapshot matches latest official values", () => {
   assert.equal(visitor.rounding_policy.change_decimals, 1);
 
   const retailUi = uiCard.metrics.find((item: any) => item.id === "retail_sales");
-  assert.equal(retailUi.display_value_text, "HK$373.1億");
+  assert.equal(retailUi.display_value_text, "373.1億");
   assert.equal(retailUi.display_change_text, "較去年同月（2025年1月） +5.5%");
 
   const visitorUi = uiCard.metrics.find((item: any) => item.id === "visitor_arrivals");

@@ -11,16 +11,16 @@
       "source_url": "https://data.gov.hk/en-data/dataset/hk-censtatd-tablechart-620-67001",
       "status": "ok",
       "status_text_tc": "最新",
-      "display_value_text": "HK$373.1億",
+      "display_value_text": "373.1億",
       "display_change_text": "較去年同月（2025年1月） +5.5%",
-      "display_previous_text": "去年同月（2025年1月） HK$353.8億",
+      "display_previous_text": "去年同月（2025年1月） 353.8億",
       "display_period_text": "2026年1月",
       "display_comparison_text": "較去年同月（2025年1月） +5.5%",
       "display_comparison_basis_text": "較去年同月",
       "display_comparison_period_text": "2025年1月",
       "display_unit": "億港元",
       "data_origin": "live",
-      "last_successful_fetch_at": "2026-03-18T04:31:06.977Z",
+      "last_successful_fetch_at": "2026-03-18T08:22:14.148Z",
       "chart": {
         "chart_type": "line",
         "x_axis_label": "月份",
@@ -44,84 +44,84 @@
             "y": 293.85,
             "tick_label": "2025-02",
             "tooltip_title": "2025年2月",
-            "tooltip_value_text": "HK$293.9億"
+            "tooltip_value_text": "293.9億"
           },
           {
             "x": "2025年3月",
             "y": 300.91,
             "tick_label": "2025-03",
             "tooltip_title": "2025年3月",
-            "tooltip_value_text": "HK$300.9億"
+            "tooltip_value_text": "300.9億"
           },
           {
             "x": "2025年4月",
             "y": 288.76,
             "tick_label": "2025-04",
             "tooltip_title": "2025年4月",
-            "tooltip_value_text": "HK$288.8億"
+            "tooltip_value_text": "288.8億"
           },
           {
             "x": "2025年5月",
             "y": 313.19,
             "tick_label": "2025-05",
             "tooltip_title": "2025年5月",
-            "tooltip_value_text": "HK$313.2億"
+            "tooltip_value_text": "313.2億"
           },
           {
             "x": "2025年6月",
             "y": 300.94,
             "tick_label": "2025-06",
             "tooltip_title": "2025年6月",
-            "tooltip_value_text": "HK$300.9億"
+            "tooltip_value_text": "300.9億"
           },
           {
             "x": "2025年7月",
             "y": 296.71,
             "tick_label": "2025-07",
             "tooltip_title": "2025年7月",
-            "tooltip_value_text": "HK$296.7億"
+            "tooltip_value_text": "296.7億"
           },
           {
             "x": "2025年8月",
             "y": 303.67,
             "tick_label": "2025-08",
             "tooltip_title": "2025年8月",
-            "tooltip_value_text": "HK$303.7億"
+            "tooltip_value_text": "303.7億"
           },
           {
             "x": "2025年9月",
             "y": 313.44,
             "tick_label": "2025-09",
             "tooltip_title": "2025年9月",
-            "tooltip_value_text": "HK$313.4億"
+            "tooltip_value_text": "313.4億"
           },
           {
             "x": "2025年10月",
             "y": 351.74,
             "tick_label": "2025-10",
             "tooltip_title": "2025年10月",
-            "tooltip_value_text": "HK$351.7億"
+            "tooltip_value_text": "351.7億"
           },
           {
             "x": "2025年11月",
             "y": 337.27,
             "tick_label": "2025-11",
             "tooltip_title": "2025年11月",
-            "tooltip_value_text": "HK$337.3億"
+            "tooltip_value_text": "337.3億"
           },
           {
             "x": "2025年12月",
             "y": 350.18,
             "tick_label": "2025-12",
             "tooltip_title": "2025年12月",
-            "tooltip_value_text": "HK$350.2億"
+            "tooltip_value_text": "350.2億"
           },
           {
             "x": "2026年1月",
             "y": 373.08,
             "tick_label": "2026-01",
             "tooltip_title": "2026年1月",
-            "tooltip_value_text": "HK$373.1億"
+            "tooltip_value_text": "373.1億"
           }
         ]
       },
@@ -193,7 +193,7 @@
       "display_comparison_period_text": "2025年1月",
       "display_unit": "人次",
       "data_origin": "live",
-      "last_successful_fetch_at": "2026-03-18T04:31:06.977Z",
+      "last_successful_fetch_at": "2026-03-18T08:22:14.148Z",
       "chart": {
         "chart_type": "line",
         "x_axis_label": "月份",

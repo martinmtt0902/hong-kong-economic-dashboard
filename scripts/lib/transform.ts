@@ -261,7 +261,7 @@ function formatChartDisplayValue(
   }
 
   if (displayUnit === "億港元") {
-    return `HK$${scaled.toFixed(roundingPolicy.value_decimals)}億`;
+    return `${scaled.toFixed(roundingPolicy.value_decimals)}億`;
   }
 
   if (displayUnit === "歲" || displayUnit === "指數") {

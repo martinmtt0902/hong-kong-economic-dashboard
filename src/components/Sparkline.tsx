@@ -51,7 +51,7 @@ export function Sparkline({ chart }: { chart: UIChart }) {
   }
 
   const activePoint = activeIndex !== null ? geometry.points[activeIndex] : undefined;
-  const path = chart.chart_type === "step_after" ? stepPath(geometry.points) : linePath(geometry.points);
+  const segments = buildSegments(geometry.points, chart.chart_type);
 
   return (
     <div className="mini-chart">
@@ -85,7 +85,16 @@ export function Sparkline({ chart }: { chart: UIChart }) {
           );
         })}
 
-        <path d={path} className="sparkline-path" />
+        {segments.map((segment, index) => (
+          <line
+            key={`${segment.x1}-${segment.y1}-${segment.x2}-${segment.y2}-${index}`}
+            x1={segment.x1}
+            y1={segment.y1}
+            x2={segment.x2}
+            y2={segment.y2}
+            className={segment.trend === "up" ? "sparkline-segment sparkline-segment-up" : "sparkline-segment sparkline-segment-down"}
+          />
+        ))}
 
         {geometry.points.map((point, index) => (
           <circle
@@ -119,23 +128,27 @@ export function Sparkline({ chart }: { chart: UIChart }) {
   );
 }
 
-function linePath(points: Array<{ svgX: number; svgY: number }>): string {
-  return points.map((point, index) => `${index === 0 ? "M" : "L"} ${point.svgX} ${point.svgY}`).join(" ");
-}
+function buildSegments(
+  points: Array<{ svgX: number; svgY: number; y: number }>,
+  chartType: UIChart["chart_type"]
+): Array<{ x1: number; y1: number; x2: number; y2: number; trend: "up" | "down" }> {
+  const segments: Array<{ x1: number; y1: number; x2: number; y2: number; trend: "up" | "down" }> = [];
 
-function stepPath(points: Array<{ svgX: number; svgY: number }>): string {
-  if (points.length === 0) {
-    return "";
-  }
-
-  const commands = [`M ${points[0].svgX} ${points[0].svgY}`];
   for (let index = 1; index < points.length; index += 1) {
     const point = points[index];
     const previous = points[index - 1];
-    commands.push(`L ${point.svgX} ${previous.svgY}`);
-    commands.push(`L ${point.svgX} ${point.svgY}`);
+    const trend = point.y >= previous.y ? "up" : "down";
+
+    if (chartType === "step_after") {
+      segments.push({ x1: previous.svgX, y1: previous.svgY, x2: point.svgX, y2: previous.svgY, trend });
+      segments.push({ x1: point.svgX, y1: previous.svgY, x2: point.svgX, y2: point.svgY, trend });
+      continue;
+    }
+
+    segments.push({ x1: previous.svgX, y1: previous.svgY, x2: point.svgX, y2: point.svgY, trend });
   }
-  return commands.join(" ");
+
+  return segments;
 }
 
 function formatYAxisTick(value: number, displayUnit: string): string {

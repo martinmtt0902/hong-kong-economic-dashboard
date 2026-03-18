@@ -47,10 +47,9 @@ function App() {
       <section className="hero">
         <div>
           <p className="hero-kicker">香港官方經濟指標</p>
-          <h1>每日自動更新的 9 格官方統計儀表板</h1>
+          <h1>Official Statistics Tracker</h1>
         </div>
         <div className="hero-meta">
-          <p>只採用官方來源，不直接引用非正式平台數據。</p>
           <p>網站更新於 {formatTimestamp(dashboard.generated_at)}</p>
         </div>
       </section>

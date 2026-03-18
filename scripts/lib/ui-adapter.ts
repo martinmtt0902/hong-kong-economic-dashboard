@@ -146,7 +146,7 @@ function formatValue(value: number | undefined, metric: TransformedMetric, mode:
   }
 
   if (metric.display_unit === "億港元") {
-    return `HK$${scaled.toFixed(decimals)}億`;
+    return `${scaled.toFixed(decimals)}億`;
   }
 
   if (metric.display_unit === "歲") {
