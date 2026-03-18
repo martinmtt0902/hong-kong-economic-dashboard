@@ -1,11 +1,15 @@
 import { fetchText } from "../lib/http";
-import type { DataPoint } from "../lib/types";
-import { numericValue, parsePeriod, sortPoints } from "../lib/time";
+import { parseOfficialPeriod } from "../lib/period";
+import type { RawObservation, SourceRef } from "../lib/types";
 
 const completionHeaderPattern =
   /^(?<kind>Completions in|Forecast Completions in)\s+(?<year>\d{4})(?:\s*-\s*Total)?\s*$/i;
 
-export async function fetchRvdCompletionsSeries(url: string): Promise<DataPoint[]> {
+export async function fetchRvdCompletionsObservations(
+  url: string,
+  source: SourceRef,
+  seriesLabel: string
+): Promise<RawObservation[]> {
   const rawText = await fetchText(url);
   const rows = parseRvdCompletionsCsv(rawText);
   const overallRow = rows.find((row) => /overall/i.test(row["District"] ?? ""));
@@ -14,35 +18,40 @@ export async function fetchRvdCompletionsSeries(url: string): Promise<DataPoint[
     throw new Error("差餉物業估價署落成量 CSV 找不到 OVERALL 行。");
   }
 
-  const points = Object.entries(overallRow)
-    .map(([header, rawValue]) => {
-      const match = header.trim().match(completionHeaderPattern);
-      if (!match?.groups) {
-        return undefined;
-      }
+  const points: RawObservation[] = [];
+  for (const [header, rawValue] of Object.entries(overallRow)) {
+    const match = header.trim().match(completionHeaderPattern);
+    if (!match?.groups) {
+      continue;
+    }
+    const value = Number(rawValue.replace(/,/g, "").trim());
+    if (!Number.isFinite(value)) {
+      continue;
+    }
 
-      const value = numericValue(rawValue);
-      if (typeof value !== "number") {
-        return undefined;
-      }
+    const year = match.groups.year;
+    const isForecast = /forecast/i.test(match.groups.kind);
+    const parsed = parseOfficialPeriod(year, "annual");
 
-      const parsedPeriod = parsePeriod(match.groups.year, "annual");
-      const isForecast = /forecast/i.test(match.groups.kind);
+    points.push({
+      source,
+      series_id: "rvd|private_domestic_completions|overall",
+      series_label_tc: seriesLabel,
+      frequency: "annual",
+      dimensions: { district: "OVERALL" },
+      measure_code: "PRIVATE_DOMESTIC_COMPLETIONS",
+      measure_aliases: ["PRIVATE_DOMESTIC_COMPLETIONS"],
+      measure_label_tc: isForecast ? "私人住宅落成量（預測）" : "私人住宅落成量",
+      period_raw: year,
+      as_of_date: parsed.as_of_date,
+      as_of_label: isForecast ? `${parsed.as_of_label}（預測）` : parsed.as_of_label,
+      value,
+      unit: "伙",
+      provisional: isForecast
+    });
+  }
 
-      const point: DataPoint = {
-        period_key: parsedPeriod.period_key,
-        label_tc: isForecast ? `${parsedPeriod.label_tc}（預測）` : parsedPeriod.label_tc,
-        date: parsedPeriod.date,
-        value,
-        unit: "伙",
-        provisional: isForecast
-      };
-
-      return point;
-    })
-    .filter((point): point is DataPoint => point !== undefined);
-
-  return sortPoints(points);
+  return points.sort((left, right) => left.as_of_date.localeCompare(right.as_of_date));
 }
 
 function parseRvdCompletionsCsv(text: string): Array<Record<string, string>> {

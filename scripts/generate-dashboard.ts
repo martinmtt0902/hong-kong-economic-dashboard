@@ -1,396 +1,285 @@
 import { mkdir, readFile, writeFile } from "node:fs/promises";
 import path from "node:path";
-import { fetchCenstatdSeries } from "./fetch/censtatd";
-import { fetchCsvSeries } from "./fetch/csvSource";
-import { fetchBaseRateSeries, fetchHibor1MSeries } from "./fetch/hkma";
-import { fetchMinimumWageSeries } from "./fetch/labour";
-import { fetchRvdCompletionsSeries } from "./fetch/rvd";
-import { cardDefinitions, metricConfigs, URLs } from "./lib/source";
-import { buildMetricSeries, fallbackMetric } from "./lib/series";
-import { createSeedPayload } from "./lib/seed";
-import type { DashboardCard, DashboardManifest, DashboardPayload, DataPoint, MetricSeries } from "./lib/types";
-import { dashboardManifestSchema, dashboardPayloadSchema } from "./lib/types";
+import { fetchCenstatdObservations } from "./fetch/censtatd";
+import { fetchCsvObservations } from "./fetch/csvSource";
+import { fetchDhBirthObservations } from "./fetch/dhBirths";
+import { fetchBaseRateObservations, fetchHibor1MObservations } from "./fetch/hkma";
+import { fetchMinimumWageObservations } from "./fetch/labour";
+import { fetchRvdCompletionsObservations } from "./fetch/rvd";
+import { metricDefinitions, type MetricDefinitionRecord, type MetricPipelineDefinition } from "./lib/metric-definition";
+import { renderPreviewMarkdown } from "./lib/render-preview";
+import { cardDefinitions } from "./lib/source";
+import { buildTransformedMetric, latestCardMetric } from "./lib/transform";
+import { toDashboardPayload, toUIMetricRow } from "./lib/ui-adapter";
+import type {
+  DashboardCardV2,
+  DashboardManifest,
+  DashboardPayloadV2,
+  RawObservation,
+  TransformedMetric
+} from "./lib/types";
+import {
+  dashboardManifestSchema,
+  dashboardPayloadSchema,
+  dashboardPayloadV2Schema
+} from "./lib/types";
 
 const root = process.cwd();
 const publicDataDir = path.join(root, "public", "data");
 const historyDir = path.join(publicDataDir, "history");
-const artifactsDir = path.join(root, "artifacts", "raw");
+const historyV2Dir = path.join(publicDataDir, "history-v2");
+const reportsDir = path.join(root, "artifacts", "reports");
+const rawDir = path.join(root, "artifacts", "raw");
 
-async function main() {
+export async function generateDashboardArtifacts() {
   const generatedAt = new Date().toISOString();
-  const previous = await loadPreviousDashboard();
+  const previous = await loadPreviousDashboardV2();
   const previousMetrics = indexPreviousMetrics(previous);
 
   await mkdir(publicDataDir, { recursive: true });
   await mkdir(historyDir, { recursive: true });
-  await mkdir(artifactsDir, { recursive: true });
+  await mkdir(historyV2Dir, { recursive: true });
+  await mkdir(reportsDir, { recursive: true });
+  await mkdir(rawDir, { recursive: true });
 
-  const cards = await Promise.all(
-    cardDefinitions.map(async (card) => {
-      const metrics = await resolveCardMetrics(card.id, previousMetrics);
-      return {
-        id: card.id,
-        title_tc: card.title_tc,
-        metrics,
-        latest_data_at: latestMetricDate(metrics),
-        latest_data_label: latestMetricLabel(metrics)
-      } satisfies DashboardCard;
-    })
+  const metricResults = await Promise.all(
+    metricDefinitions.map((definition) => resolveMetric(definition, previousMetrics[definition.metric.id]))
   );
 
-  const dashboard: DashboardPayload =
-    cards.some((card) => card.metrics.some((metric) => metric.latest))
-      ? { generated_at: generatedAt, cards }
-      : createSeedPayload(generatedAt);
+  const cardsV2: DashboardCardV2[] = cardDefinitions.map((card) => {
+    const metrics = metricResults
+      .filter((result) => result.metric.card_id === card.id)
+      .map((result) => result.metric);
+    const latestMetric = latestCardMetric(metrics);
 
-  dashboardPayloadSchema.parse(dashboard);
+    return {
+      id: card.id,
+      title_tc: card.title_tc,
+      latest_as_of_date: latestMetric?.as_of_date,
+      latest_as_of_label: latestMetric?.as_of_label,
+      metrics
+    };
+  });
+
+  const dashboardV2: DashboardPayloadV2 = {
+    generated_at: generatedAt,
+    cards: cardsV2
+  };
+
+  dashboardPayloadV2Schema.parse(dashboardV2);
+
+  const uiDashboard = toDashboardPayload(dashboardV2);
+  dashboardPayloadSchema.parse(uiDashboard);
 
   const manifest: DashboardManifest = {
     generated_at: generatedAt,
-    card_ids: dashboard.cards.map((card) => card.id),
-    history_paths: Object.fromEntries(
-      dashboard.cards.map((card) => [card.id, `./history/${card.id}.json`])
-    )
+    card_ids: uiDashboard.cards.map((card) => card.id),
+    history_paths: Object.fromEntries(uiDashboard.cards.map((card) => [card.id, `./history/${card.id}.json`])),
+    history_v2_paths: Object.fromEntries(uiDashboard.cards.map((card) => [card.id, `./history-v2/${card.id}.json`]))
   };
 
   dashboardManifestSchema.parse(manifest);
 
-  await writeFile(
-    path.join(publicDataDir, "dashboard.json"),
-    `${JSON.stringify(dashboard, null, 2)}\n`,
-    "utf-8"
-  );
-  await writeFile(
-    path.join(publicDataDir, "manifest.json"),
-    `${JSON.stringify(manifest, null, 2)}\n`,
-    "utf-8"
-  );
+  await writeJson(path.join(publicDataDir, "dashboard.v2.json"), dashboardV2);
+  await writeJson(path.join(publicDataDir, "dashboard.json"), uiDashboard);
+  await writeJson(path.join(publicDataDir, "manifest.json"), manifest);
 
   await Promise.all(
-    dashboard.cards.map((card) =>
-      writeFile(
-        path.join(historyDir, `${card.id}.json`),
-        `${JSON.stringify(card, null, 2)}\n`,
-        "utf-8"
-      )
-    )
+    uiDashboard.cards.map((card) => writeJson(path.join(historyDir, `${card.id}.json`), card))
+  );
+  await Promise.all(
+    dashboardV2.cards.map((card) => writeJson(path.join(historyV2Dir, `${card.id}.json`), card))
+  );
+
+  const reportRows = metricResults.map((result) => ({
+    metric_id: result.metric.id,
+    raw_payload: {
+      primary: result.primarySeries,
+      auxiliary: result.auxiliarySeries
+    },
+    transformed_payload: result.metric,
+    rendered_preview: toUIMetricRow(result.metric)
+  }));
+
+  await writeJson(path.join(reportsDir, "raw-to-transformed.json"), reportRows);
+  await writeFile(
+    path.join(reportsDir, "render-preview.md"),
+    renderPreviewMarkdown(dashboardV2, metricResults.map((result) => ({
+      metric_id: result.metric.id,
+      raw_count: result.primarySeries.length + result.auxiliarySeries.length,
+      transformed_payload: result.metric,
+      rendered_preview: toUIMetricRow(result.metric)
+    }))),
+    "utf-8"
   );
 }
 
-async function resolveCardMetrics(
-  cardId: string,
-  previousMetrics: Record<string, MetricSeries>
-): Promise<MetricSeries[]> {
-  switch (cardId) {
-    case "employment":
-      return Promise.all([
-        resolveMetric("unemployment", previousMetrics, async () =>
-          fetchCenstatdSeries({
-            tableId: "210-06101",
-            filters: { SEX: "", freq: "M3M", sv: "UR" },
-            frequency: "monthly",
-            unit: "%"
-          })
-        ),
-        resolveMetric("underemployment", previousMetrics, async () =>
-          fetchCenstatdSeries({
-            tableId: "210-06101",
-            filters: { SEX: "", freq: "M3M", sv: "UDR" },
-            frequency: "monthly",
-            unit: "%"
-          })
-        ),
-        resolveMetric("labour_force", previousMetrics, async () =>
-          fetchCenstatdSeries({
-            tableId: "210-06101",
-            filters: { SEX: "", freq: "M3M", sv: "LF" },
-            frequency: "monthly",
-            unit: "人",
-            scale: 1000
-          })
-        )
-      ]);
-    case "inflation":
-      return [
-        await resolveDerivedMetric("cpi_yoy", previousMetrics, async () => {
-          const baseSeries = await fetchCenstatdSeries({
-            tableId: "510-60001A",
-            filters: { GROUP: "", freq: "M", sv: "CC_CM_1920" },
-            frequency: "monthly",
-            unit: "指數"
-          });
-          return deriveYearOnYear(baseSeries, "%", 12);
-        })
-      ];
-    case "gdp":
-      return Promise.all([
-        resolveDerivedMetric("gdp_real_yoy", previousMetrics, async () => {
-          const series = await fetchCenstatdSeries({
-            tableId: "310-31003",
-            filters: { GDP_COMPONENT: "", freq: "Q", sv: "CON" },
-            frequency: "quarterly",
-            unit: "百萬港元"
-          });
-          return deriveYearOnYear(series, "%", 4);
-        }),
-        resolveDerivedMetric("gdp_nominal_yoy", previousMetrics, async () => {
-          const series = await fetchCenstatdSeries({
-            tableId: "310-31002",
-            filters: { GDP_COMPONENT: "", freq: "Q", sv: "CUR" },
-            frequency: "quarterly",
-            unit: "百萬港元"
-          });
-          return deriveYearOnYear(series, "%", 4);
-        })
-      ]);
-    case "consumption-travel":
-      return Promise.all([
-        resolveMetric("retail_sales", previousMetrics, async () =>
-          fetchCenstatdSeries({
-            tableId: "620-67001",
-            filters: { freq: "M", sv: "VAL_RS" },
-            frequency: "monthly",
-            unit: "百萬港元"
-          })
-        ),
-        resolveMetric("visitor_arrivals", previousMetrics, async () =>
-          fetchCenstatdSeries({
-            tableId: "650-80001",
-            filters: { REGION: "", freq: "M", sv: "VIS_ARR" },
-            frequency: "monthly",
-            unit: "人次"
-          })
-        )
-      ]);
-    case "minimum-wage":
-      return [await resolveMetric("statutory_minimum_wage", previousMetrics, fetchMinimumWageSeries)];
-    case "population":
-      return Promise.all([
-        resolveMetric("population_total", previousMetrics, async () =>
-          fetchCenstatdSeries({
-            tableId: "110-01002",
-            filters: { SEX: "", AGE: "", freq: "H", sv: "POP", svDesc: "數目 ('000)" },
-            frequency: "half_yearly",
-            unit: "人",
-            scale: 1000
-          })
-        ),
-        resolveMetric("live_births", previousMetrics, async () =>
-          fetchCsvSeries({
-            url: URLs.birthsCsv,
-            frequency: "annual",
-            unit: "人",
-            dateColumns: ["年份", "year"],
-            valueColumns: ["總數", "number of births", "活產總數", "出生總數"]
-          })
-        ),
-        resolveMetric("median_age", previousMetrics, async () =>
-          fetchCenstatdSeries({
-            tableId: "110-01004",
-            filters: { SEX: "", freq: "Y", sv: "MED_AGE_POPN" },
-            frequency: "annual",
-            unit: "歲"
-          })
-        )
-      ]);
-    case "housing":
-      return Promise.all([
-        resolveMetric("private_price_index", previousMetrics, async () =>
-          fetchCsvSeries({
-            url: URLs.rvdPriceCsv,
-            frequency: "monthly",
-            unit: "指數",
-            dateColumns: ["date", "month", "月份"],
-            valueColumns: ["all classes", "overall", "所有類別", "private domestic"]
-          })
-        ),
-        resolveMetric("private_rent_index", previousMetrics, async () =>
-          fetchCsvSeries({
-            url: URLs.rvdRentCsv,
-            frequency: "monthly",
-            unit: "指數",
-            dateColumns: ["date", "month", "月份"],
-            valueColumns: ["all classes", "overall", "所有類別", "private domestic"]
-          })
-        ),
-        resolveMetric("private_completions", previousMetrics, async () =>
-          fetchRvdCompletionsSeries(URLs.rvdCompletionsCsv)
-        )
-      ]);
-    case "fiscal":
-      return Promise.all([
-        resolveMetric("government_revenue", previousMetrics, async () =>
-          fetchCsvSeries({
-            url: URLs.fstbOverviewCsv,
-            frequency: "annual",
-            unit: "百萬港元",
-            dateColumns: ["財政年度"],
-            valueColumns: ["政府收入總額"],
-            labelSelector: (row) => row["財政年度"]
-          })
-        ),
-        resolveMetric("government_expenditure", previousMetrics, async () =>
-          fetchCsvSeries({
-            url: URLs.fstbOverviewCsv,
-            frequency: "annual",
-            unit: "百萬港元",
-            dateColumns: ["財政年度"],
-            valueColumns: ["政府開支總額"],
-            labelSelector: (row) => row["財政年度"]
-          })
-        ),
-        resolveMetric("fiscal_reserves", previousMetrics, async () =>
-          fetchCsvSeries({
-            url: URLs.fstbOverviewCsv,
-            frequency: "annual",
-            unit: "百萬港元",
-            dateColumns: ["財政年度"],
-            valueColumns: ["年終財政儲備"],
-            labelSelector: (row) => row["財政年度"]
-          })
-        )
-      ]);
-    case "interest-rates":
-      return Promise.all([
-        resolveMetric("base_rate", previousMetrics, fetchBaseRateSeries),
-        resolveMetric("hibor_1m", previousMetrics, fetchHibor1MSeries)
-      ]);
+async function resolveMetric(definition: MetricPipelineDefinition, previousMetric?: TransformedMetric) {
+  try {
+    const primarySeries = await loadObservations(definition.metric);
+    const auxiliarySeries = definition.auxiliary_series
+      ? (await Promise.all(definition.auxiliary_series.map((item) => loadAuxiliaryObservations(item)))).flat()
+      : [];
+
+    await writeJson(path.join(rawDir, `${definition.metric.id}.json`), {
+      metric_id: definition.metric.id,
+      primary_series: primarySeries,
+      auxiliary_series: auxiliarySeries
+    });
+
+    if (primarySeries.length === 0) {
+      return {
+        metric: fallbackMetric(definition.metric, previousMetric, "schema_changed", "來源欄位變更或找不到對應序列。"),
+        primarySeries,
+        auxiliarySeries
+      };
+    }
+
+    const metric = buildTransformedMetric({
+      definition: definition.metric,
+      primarySeries,
+      auxiliarySeries
+    });
+
+    return {
+      metric,
+      primarySeries,
+      auxiliarySeries
+    };
+  } catch (error) {
+    return {
+      metric: fallbackMetric(
+        definition.metric,
+        previousMetric,
+        "source_error",
+        error instanceof Error ? error.message : "未知抓取錯誤"
+      ),
+      primarySeries: [],
+      auxiliarySeries: []
+    };
+  }
+}
+
+async function loadObservations(definition: MetricDefinitionRecord): Promise<RawObservation[]> {
+  switch (definition.loader_kind) {
+    case "censtatd":
+      return fetchCenstatdObservations({
+        source: definition.source,
+        table_id: definition.table_id,
+        series_label_tc: definition.series_label_tc,
+        frequency: definition.frequency,
+        dimensions: definition.dimensions,
+        measure: definition.measure,
+        scale: definition.scale,
+        period_mode: definition.period_mode
+      });
+    case "csv_long":
+      return fetchCsvObservations({
+        source: definition.source,
+        series_id: definition.id,
+        series_label_tc: definition.series_label_tc,
+        frequency: definition.frequency,
+        unit: definition.unit,
+        url: definition.url,
+        date_columns: definition.date_columns,
+        value_columns: definition.value_columns,
+        row_filter: definition.row_filter,
+        label_selector: definition.label_selector
+      });
+    case "dh_births":
+      return fetchDhBirthObservations(definition.url, definition.source, definition.series_label_tc);
+    case "minimum_wage":
+      return fetchMinimumWageObservations(definition.source, definition.series_label_tc);
+    case "hkma":
+      return definition.metric_key === "base_rate"
+        ? fetchBaseRateObservations(definition.source, definition.series_label_tc)
+        : fetchHibor1MObservations(definition.source, definition.series_label_tc);
+    case "rvd_completions":
+      return fetchRvdCompletionsObservations(definition.url, definition.source, definition.series_label_tc);
     default:
       return [];
   }
 }
 
-async function resolveMetric(
-  metricId: keyof typeof metricConfigs,
-  previousMetrics: Record<string, MetricSeries>,
-  loader: () => Promise<DataPoint[]>
-): Promise<MetricSeries> {
-  const config = metricConfigs[metricId];
-  try {
-    const points = await loader();
-    await saveRawSnapshot(metricId, points);
-    if (points.length === 0) {
-      return fallbackMetric(config, previousMetrics[metricId], "來源暫時沒有可用數據。");
-    }
-    return buildMetricSeries({
-      ...config,
-      points,
-      freshness: "fresh"
-    });
-  } catch (error) {
-    return fallbackMetric(
-      config,
-      previousMetrics[metricId],
-      error instanceof Error ? error.message : "未知抓取錯誤"
-    );
+async function loadAuxiliaryObservations(
+  definition: NonNullable<MetricPipelineDefinition["auxiliary_series"]>[number]
+): Promise<RawObservation[]> {
+  return fetchCenstatdObservations({
+    source: definition.source,
+    table_id: definition.table_id,
+    series_label_tc: definition.id,
+    frequency: definition.frequency,
+    dimensions: definition.dimensions,
+    measure: definition.measure
+  });
+}
+
+function fallbackMetric(
+  definition: MetricDefinitionRecord,
+  previousMetric: TransformedMetric | undefined,
+  state: TransformedMetric["validation_state"],
+  message: string
+): TransformedMetric {
+  if (previousMetric) {
+    return {
+      ...previousMetric,
+      source: definition.source,
+      validation_state: state,
+      validation_messages: [{ code: state === "schema_changed" ? "schema_changed" : "source_missing", level: "error", message_tc: message }],
+      expected_update: definition.expected_update
+    };
   }
+
+  return {
+    id: definition.id,
+    card_id: definition.card_id,
+    label_tc: definition.label_tc,
+    source: definition.source,
+    series_id: definition.id,
+    metric_type: definition.metric_type,
+    frequency: definition.frequency,
+    unit: definition.unit,
+    as_of_date: "",
+    as_of_label: "",
+    change_type: definition.change_type,
+    comparison_basis: definition.comparison_basis,
+    comparison_basis_label_tc: definition.comparison_basis_label_tc,
+    sparkline_definition: {
+      series_id: definition.id,
+      metric_type: definition.sparkline_metric_type ?? definition.metric_type,
+      comparison_basis: definition.comparison_basis,
+      unit: definition.unit,
+      frequency: definition.frequency
+    },
+    sparkline_points: [],
+    validation_state: state,
+    validation_messages: [{ code: state === "schema_changed" ? "schema_changed" : "source_missing", level: "error", message_tc: message }],
+    source_note: definition.source_note,
+    expected_update: definition.expected_update
+  };
 }
 
-async function resolveDerivedMetric(
-  metricId: keyof typeof metricConfigs,
-  previousMetrics: Record<string, MetricSeries>,
-  loader: () => Promise<DataPoint[]>
-): Promise<MetricSeries> {
-  return resolveMetric(metricId, previousMetrics, loader);
-}
-
-function deriveYearOnYear(series: DataPoint[], unit: string, lookback: number): DataPoint[] {
-  const derived = series.map((point, index) => {
-      const previousYear = series[index - lookback];
-      if (!previousYear || previousYear.value === 0) {
-        return undefined;
-      }
-
-      const nextPoint: DataPoint = {
-        period_key: point.period_key,
-        label_tc: point.label_tc,
-        date: point.date,
-        value: Number((((point.value - previousYear.value) / previousYear.value) * 100).toFixed(4)),
-        unit
-      };
-
-      if (point.release_date) {
-        nextPoint.release_date = point.release_date;
-      }
-
-      if (typeof point.provisional === "boolean") {
-        nextPoint.provisional = point.provisional;
-      }
-
-      return nextPoint;
-    });
-
-  return derived.filter((point): point is DataPoint => point !== undefined);
-}
-
-function latestMetricDate(metrics: MetricSeries[]): string | undefined {
-  return pickCardLatestPoint(metrics)?.date;
-}
-
-function latestMetricLabel(metrics: MetricSeries[]): string | undefined {
-  return pickCardLatestPoint(metrics)?.label_tc;
-}
-
-function pickCardLatestPoint(metrics: MetricSeries[]): DataPoint | undefined {
-  return metrics
-    .filter((metric): metric is MetricSeries & { latest: DataPoint } => Boolean(metric.latest))
-    .sort((left, right) => {
-      const dateOrder = left.latest.date.localeCompare(right.latest.date);
-      if (dateOrder !== 0) {
-        return dateOrder;
-      }
-      return frequencyRank(left.frequency) - frequencyRank(right.frequency);
-    })
-    .at(-1)?.latest;
-}
-
-function frequencyRank(frequency: MetricSeries["frequency"]): number {
-  switch (frequency) {
-    case "daily":
-      return 6;
-    case "monthly":
-      return 5;
-    case "quarterly":
-      return 4;
-    case "half_yearly":
-      return 3;
-    case "annual":
-      return 2;
-    case "event":
-      return 1;
-    default:
-      return 0;
-  }
-}
-
-async function loadPreviousDashboard(): Promise<DashboardPayload | null> {
+async function loadPreviousDashboardV2(): Promise<DashboardPayloadV2 | null> {
   try {
-    const raw = await readFile(path.join(publicDataDir, "dashboard.json"), "utf-8");
-    return dashboardPayloadSchema.parse(JSON.parse(raw));
+    const raw = await readFile(path.join(publicDataDir, "dashboard.v2.json"), "utf-8");
+    return dashboardPayloadV2Schema.parse(JSON.parse(raw));
   } catch {
     return null;
   }
 }
 
-function indexPreviousMetrics(payload: DashboardPayload | null): Record<string, MetricSeries> {
+function indexPreviousMetrics(payload: DashboardPayloadV2 | null): Record<string, TransformedMetric> {
   if (!payload) {
     return {};
   }
-
-  return Object.fromEntries(
-    payload.cards.flatMap((card) => card.metrics.map((metric) => [metric.id, metric]))
-  );
+  return Object.fromEntries(payload.cards.flatMap((card) => card.metrics.map((metric) => [metric.id, metric])));
 }
 
-async function saveRawSnapshot(metricId: string, payload: unknown): Promise<void> {
-  await writeFile(
-    path.join(artifactsDir, `${metricId}.json`),
-    `${JSON.stringify(payload, null, 2)}\n`,
-    "utf-8"
-  );
+async function writeJson(filePath: string, payload: unknown) {
+  await writeFile(filePath, `${JSON.stringify(payload, null, 2)}\n`, "utf-8");
 }
 
-main().catch((error) => {
+generateDashboardArtifacts().catch((error) => {
   console.error(error);
   process.exitCode = 1;
 });

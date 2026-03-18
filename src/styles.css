@@ -121,6 +121,12 @@ a {
   text-align: right;
 }
 
+.card-status {
+  margin: 8px 0 0;
+  color: var(--amber);
+  font-size: 0.92rem;
+}
+
 .card-body {
   display: grid;
   gap: 14px;
@@ -209,6 +215,7 @@ a {
 }
 
 .period-chip,
+.comparison-chip,
 .badge {
   display: inline-flex;
   align-items: center;
@@ -224,18 +231,25 @@ a {
   color: var(--green);
 }
 
-.badge-fresh {
+.comparison-chip {
+  background: rgba(19, 38, 31, 0.06);
+  color: var(--muted);
+}
+
+.badge-ok {
   color: var(--green);
   background: rgba(46, 109, 83, 0.12);
 }
 
 .badge-stale,
-.badge-empty {
+.badge-needs_review {
   color: var(--amber);
   background: rgba(154, 106, 24, 0.12);
 }
 
-.badge-failed {
+.badge-data_error,
+.badge-schema_changed,
+.badge-source_error {
   color: var(--red);
   background: rgba(140, 63, 45, 0.12);
 }

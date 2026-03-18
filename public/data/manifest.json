@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-03-17T17:46:31.087Z",
+  "generated_at": "2026-03-18T02:56:47.701Z",
   "card_ids": [
     "employment",
     "inflation",
@@ -21,5 +21,16 @@
     "housing": "./history/housing.json",
     "fiscal": "./history/fiscal.json",
     "interest-rates": "./history/interest-rates.json"
+  },
+  "history_v2_paths": {
+    "employment": "./history-v2/employment.json",
+    "inflation": "./history-v2/inflation.json",
+    "gdp": "./history-v2/gdp.json",
+    "consumption-travel": "./history-v2/consumption-travel.json",
+    "minimum-wage": "./history-v2/minimum-wage.json",
+    "population": "./history-v2/population.json",
+    "housing": "./history-v2/housing.json",
+    "fiscal": "./history-v2/fiscal.json",
+    "interest-rates": "./history-v2/interest-rates.json"
   }
 }

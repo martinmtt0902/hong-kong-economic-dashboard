@@ -1,0 +1,293 @@
+{
+  "id": "fiscal",
+  "title_tc": "公共財政",
+  "latest_as_of_date": "2027-03-31",
+  "latest_as_of_label": "2026-27 (原來預算)",
+  "metrics": [
+    {
+      "id": "government_revenue",
+      "card_id": "fiscal",
+      "label_tc": "收入",
+      "source": {
+        "publisher": "財經事務及庫務局",
+        "dataset_url": "https://www.fstb.gov.hk/datagovhk/tsyb/financial-statistics/tc/fin-stats_overview_a_tc.csv"
+      },
+      "series_id": "government_revenue",
+      "metric_type": "level",
+      "frequency": "annual",
+      "unit": "百萬港元",
+      "as_of_date": "2027-03-31",
+      "as_of_label": "2026-27 (原來預算)",
+      "latest_value": 765234,
+      "previous_value": 688762,
+      "previous_as_of_date": "2026-03-31",
+      "previous_as_of_label": "2025-26 (修訂預算)",
+      "change_value": 76472,
+      "change_type": "absolute_change",
+      "comparison_basis": "previous_observation",
+      "comparison_basis_label_tc": "較上期",
+      "sparkline_definition": {
+        "series_id": "government_revenue",
+        "metric_type": "level",
+        "comparison_basis": "previous_observation",
+        "unit": "百萬港元",
+        "frequency": "annual"
+      },
+      "sparkline_points": [
+        {
+          "as_of_date": "2016-03-31",
+          "as_of_label": "2015-16",
+          "value": 450007
+        },
+        {
+          "as_of_date": "2017-03-31",
+          "as_of_label": "2016-17",
+          "value": 573124
+        },
+        {
+          "as_of_date": "2018-03-31",
+          "as_of_label": "2017-18",
+          "value": 619837
+        },
+        {
+          "as_of_date": "2019-03-31",
+          "as_of_label": "2018-19",
+          "value": 599774
+        },
+        {
+          "as_of_date": "2020-03-31",
+          "as_of_label": "2019-20",
+          "value": 590926
+        },
+        {
+          "as_of_date": "2021-03-31",
+          "as_of_label": "2020-21",
+          "value": 564230
+        },
+        {
+          "as_of_date": "2022-03-31",
+          "as_of_label": "2021-22",
+          "value": 693576
+        },
+        {
+          "as_of_date": "2023-03-31",
+          "as_of_label": "2022-23",
+          "value": 622147
+        },
+        {
+          "as_of_date": "2024-03-31",
+          "as_of_label": "2023-24",
+          "value": 549406
+        },
+        {
+          "as_of_date": "2025-03-31",
+          "as_of_label": "2024-25",
+          "value": 564909
+        },
+        {
+          "as_of_date": "2026-03-31",
+          "as_of_label": "2025-26 (修訂預算)",
+          "value": 688762
+        },
+        {
+          "as_of_date": "2027-03-31",
+          "as_of_label": "2026-27 (原來預算)",
+          "value": 765234
+        }
+      ],
+      "validation_state": "ok",
+      "validation_messages": [],
+      "expected_update": "每年"
+    },
+    {
+      "id": "government_expenditure",
+      "card_id": "fiscal",
+      "label_tc": "支出",
+      "source": {
+        "publisher": "財經事務及庫務局",
+        "dataset_url": "https://www.fstb.gov.hk/datagovhk/tsyb/financial-statistics/tc/fin-stats_overview_a_tc.csv"
+      },
+      "series_id": "government_expenditure",
+      "metric_type": "level",
+      "frequency": "annual",
+      "unit": "百萬港元",
+      "as_of_date": "2027-03-31",
+      "as_of_label": "2026-27 (原來預算)",
+      "latest_value": 843416,
+      "previous_value": 789171,
+      "previous_as_of_date": "2026-03-31",
+      "previous_as_of_label": "2025-26 (修訂預算)",
+      "change_value": 54245,
+      "change_type": "absolute_change",
+      "comparison_basis": "previous_observation",
+      "comparison_basis_label_tc": "較上期",
+      "sparkline_definition": {
+        "series_id": "government_expenditure",
+        "metric_type": "level",
+        "comparison_basis": "previous_observation",
+        "unit": "百萬港元",
+        "frequency": "annual"
+      },
+      "sparkline_points": [
+        {
+          "as_of_date": "2016-03-31",
+          "as_of_label": "2015-16",
+          "value": 435633
+        },
+        {
+          "as_of_date": "2017-03-31",
+          "as_of_label": "2016-17",
+          "value": 462052
+        },
+        {
+          "as_of_date": "2018-03-31",
+          "as_of_label": "2017-18",
+          "value": 470863
+        },
+        {
+          "as_of_date": "2019-03-31",
+          "as_of_label": "2018-19",
+          "value": 531825
+        },
+        {
+          "as_of_date": "2020-03-31",
+          "as_of_label": "2019-20",
+          "value": 607830
+        },
+        {
+          "as_of_date": "2021-03-31",
+          "as_of_label": "2020-21",
+          "value": 816075
+        },
+        {
+          "as_of_date": "2022-03-31",
+          "as_of_label": "2021-22",
+          "value": 693339
+        },
+        {
+          "as_of_date": "2023-03-31",
+          "as_of_label": "2022-23",
+          "value": 810477
+        },
+        {
+          "as_of_date": "2024-03-31",
+          "as_of_label": "2023-24",
+          "value": 721301
+        },
+        {
+          "as_of_date": "2025-03-31",
+          "as_of_label": "2024-25",
+          "value": 753220
+        },
+        {
+          "as_of_date": "2026-03-31",
+          "as_of_label": "2025-26 (修訂預算)",
+          "value": 789171
+        },
+        {
+          "as_of_date": "2027-03-31",
+          "as_of_label": "2026-27 (原來預算)",
+          "value": 843416
+        }
+      ],
+      "validation_state": "ok",
+      "validation_messages": [],
+      "expected_update": "每年"
+    },
+    {
+      "id": "fiscal_reserves",
+      "card_id": "fiscal",
+      "label_tc": "儲備",
+      "source": {
+        "publisher": "財經事務及庫務局",
+        "dataset_url": "https://www.fstb.gov.hk/datagovhk/tsyb/financial-statistics/tc/fin-stats_overview_a_tc.csv"
+      },
+      "series_id": "fiscal_reserves",
+      "metric_type": "level",
+      "frequency": "annual",
+      "unit": "百萬港元",
+      "as_of_date": "2027-03-31",
+      "as_of_label": "2026-27 (原來預算)",
+      "latest_value": 679332,
+      "previous_value": 657222,
+      "previous_as_of_date": "2026-03-31",
+      "previous_as_of_label": "2025-26 (修訂預算)",
+      "change_value": 22110,
+      "change_type": "absolute_change",
+      "comparison_basis": "previous_observation",
+      "comparison_basis_label_tc": "較上期",
+      "sparkline_definition": {
+        "series_id": "fiscal_reserves",
+        "metric_type": "level",
+        "comparison_basis": "previous_observation",
+        "unit": "百萬港元",
+        "frequency": "annual"
+      },
+      "sparkline_points": [
+        {
+          "as_of_date": "2016-03-31",
+          "as_of_label": "2015-16",
+          "value": 842888
+        },
+        {
+          "as_of_date": "2017-03-31",
+          "as_of_label": "2016-17",
+          "value": 953960
+        },
+        {
+          "as_of_date": "2018-03-31",
+          "as_of_label": "2017-18",
+          "value": 1102934
+        },
+        {
+          "as_of_date": "2019-03-31",
+          "as_of_label": "2018-19",
+          "value": 1170883
+        },
+        {
+          "as_of_date": "2020-03-31",
+          "as_of_label": "2019-20",
+          "value": 1160308
+        },
+        {
+          "as_of_date": "2021-03-31",
+          "as_of_label": "2020-21",
+          "value": 927767
+        },
+        {
+          "as_of_date": "2022-03-31",
+          "as_of_label": "2021-22",
+          "value": 957128
+        },
+        {
+          "as_of_date": "2023-03-31",
+          "as_of_label": "2022-23",
+          "value": 834790
+        },
+        {
+          "as_of_date": "2024-03-31",
+          "as_of_label": "2023-24",
+          "value": 734585
+        },
+        {
+          "as_of_date": "2025-03-31",
+          "as_of_label": "2024-25",
+          "value": 654317
+        },
+        {
+          "as_of_date": "2026-03-31",
+          "as_of_label": "2025-26 (修訂預算)",
+          "value": 657222
+        },
+        {
+          "as_of_date": "2027-03-31",
+          "as_of_label": "2026-27 (原來預算)",
+          "value": 679332
+        }
+      ],
+      "validation_state": "ok",
+      "validation_messages": [],
+      "expected_update": "每年"
+    }
+  ]
+}

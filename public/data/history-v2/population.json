@@ -1,0 +1,297 @@
+{
+  "id": "population",
+  "title_tc": "人口",
+  "latest_as_of_date": "2025-12-31",
+  "latest_as_of_label": "2025年年底",
+  "metrics": [
+    {
+      "id": "population_total",
+      "card_id": "population",
+      "label_tc": "人口總量",
+      "source": {
+        "publisher": "政府統計處",
+        "dataset_url": "https://data.gov.hk/en-data/dataset/hk-censtatd-tablechart-110-01002",
+        "api_url": "https://www.censtatd.gov.hk/api/get.php?full_series=1&id=110-01002&lang=tc",
+        "table_id": "110-01002"
+      },
+      "series_id": "censtatd|110-01002|SEX=|AGE=|freq=H|measure=POP|label=數目 ('000)",
+      "metric_type": "level",
+      "frequency": "half_yearly",
+      "unit": "人",
+      "as_of_date": "2025-12-31",
+      "as_of_label": "2025年年底",
+      "latest_value": 7510800,
+      "previous_value": 7500600,
+      "previous_as_of_date": "2024-12-31",
+      "previous_as_of_label": "2024年年底",
+      "change_value": 10200,
+      "change_type": "absolute_change",
+      "comparison_basis": "same_period_last_year",
+      "comparison_basis_label_tc": "較去年同期",
+      "sparkline_definition": {
+        "series_id": "censtatd|110-01002|SEX=|AGE=|freq=H|measure=POP|label=數目 ('000)",
+        "metric_type": "level",
+        "comparison_basis": "same_period_last_year",
+        "unit": "人",
+        "frequency": "half_yearly"
+      },
+      "sparkline_points": [
+        {
+          "as_of_date": "2020-06-30",
+          "as_of_label": "2020年年中",
+          "value": 7481000
+        },
+        {
+          "as_of_date": "2020-12-31",
+          "as_of_label": "2020年年底",
+          "value": 7426700
+        },
+        {
+          "as_of_date": "2021-06-30",
+          "as_of_label": "2021年年中",
+          "value": 7413100
+        },
+        {
+          "as_of_date": "2021-12-31",
+          "as_of_label": "2021年年底",
+          "value": 7401500
+        },
+        {
+          "as_of_date": "2022-06-30",
+          "as_of_label": "2022年年中",
+          "value": 7346100
+        },
+        {
+          "as_of_date": "2022-12-31",
+          "as_of_label": "2022年年底",
+          "value": 7472600
+        },
+        {
+          "as_of_date": "2023-06-30",
+          "as_of_label": "2023年年中",
+          "value": 7536100
+        },
+        {
+          "as_of_date": "2023-12-31",
+          "as_of_label": "2023年年底",
+          "value": 7527900
+        },
+        {
+          "as_of_date": "2024-06-30",
+          "as_of_label": "2024年年中",
+          "value": 7524100
+        },
+        {
+          "as_of_date": "2024-12-31",
+          "as_of_label": "2024年年底",
+          "value": 7500600
+        },
+        {
+          "as_of_date": "2025-06-30",
+          "as_of_label": "2025年年中",
+          "value": 7498900
+        },
+        {
+          "as_of_date": "2025-12-31",
+          "as_of_label": "2025年年底",
+          "value": 7510800
+        }
+      ],
+      "validation_state": "ok",
+      "validation_messages": [],
+      "expected_update": "半年"
+    },
+    {
+      "id": "live_births",
+      "card_id": "population",
+      "label_tc": "出生數",
+      "source": {
+        "publisher": "衞生署",
+        "dataset_url": "https://www.dh.gov.hk/datagovhk/ncdd/Number%20of%20Known%20Births%20for%20Different%20Sexes%20and%20Crude%20Birth%20Rate%201981-2024(tc).csv"
+      },
+      "series_id": "dh|births|known_live_births_total",
+      "metric_type": "level",
+      "frequency": "annual",
+      "unit": "人",
+      "as_of_date": "2024-12-31",
+      "as_of_label": "2024年",
+      "latest_value": 36723,
+      "previous_value": 33232,
+      "previous_as_of_date": "2023-12-31",
+      "previous_as_of_label": "2023年",
+      "change_value": 3491,
+      "change_type": "absolute_change",
+      "comparison_basis": "previous_observation",
+      "comparison_basis_label_tc": "較上期",
+      "sparkline_definition": {
+        "series_id": "dh|births|known_live_births_total",
+        "metric_type": "level",
+        "comparison_basis": "previous_observation",
+        "unit": "人",
+        "frequency": "annual"
+      },
+      "sparkline_points": [
+        {
+          "as_of_date": "2013-12-31",
+          "as_of_label": "2013年",
+          "value": 57084
+        },
+        {
+          "as_of_date": "2014-12-31",
+          "as_of_label": "2014年",
+          "value": 62305
+        },
+        {
+          "as_of_date": "2015-12-31",
+          "as_of_label": "2015年",
+          "value": 59878
+        },
+        {
+          "as_of_date": "2016-12-31",
+          "as_of_label": "2016年",
+          "value": 60856
+        },
+        {
+          "as_of_date": "2017-12-31",
+          "as_of_label": "2017年",
+          "value": 56548
+        },
+        {
+          "as_of_date": "2018-12-31",
+          "as_of_label": "2018年",
+          "value": 53716
+        },
+        {
+          "as_of_date": "2019-12-31",
+          "as_of_label": "2019年",
+          "value": 52856
+        },
+        {
+          "as_of_date": "2020-12-31",
+          "as_of_label": "2020年",
+          "value": 43031
+        },
+        {
+          "as_of_date": "2021-12-31",
+          "as_of_label": "2021年",
+          "value": 36953
+        },
+        {
+          "as_of_date": "2022-12-31",
+          "as_of_label": "2022年",
+          "value": 32501
+        },
+        {
+          "as_of_date": "2023-12-31",
+          "as_of_label": "2023年",
+          "value": 33232
+        },
+        {
+          "as_of_date": "2024-12-31",
+          "as_of_label": "2024年",
+          "value": 36723
+        }
+      ],
+      "validation_state": "ok",
+      "validation_messages": [],
+      "expected_update": "每年"
+    },
+    {
+      "id": "median_age",
+      "card_id": "population",
+      "label_tc": "年齡中位數",
+      "source": {
+        "publisher": "政府統計處",
+        "dataset_url": "https://data.gov.hk/en-data/dataset/hk-censtatd-tablechart-110-01004",
+        "api_url": "https://www.censtatd.gov.hk/api/get.php?full_series=1&id=110-01004&lang=tc",
+        "table_id": "110-01004"
+      },
+      "series_id": "censtatd|110-01004|SEX=|freq=Y|measure=MED_AGE_POPN|label=(歲)",
+      "metric_type": "level",
+      "frequency": "annual",
+      "unit": "歲",
+      "as_of_date": "2025-12-31",
+      "as_of_label": "2025年",
+      "latest_value": 48.4,
+      "previous_value": 47.9,
+      "previous_as_of_date": "2024-12-31",
+      "previous_as_of_label": "2024年",
+      "change_value": 0.5,
+      "change_type": "absolute_change",
+      "comparison_basis": "previous_observation",
+      "comparison_basis_label_tc": "較上期",
+      "sparkline_definition": {
+        "series_id": "censtatd|110-01004|SEX=|freq=Y|measure=MED_AGE_POPN|label=(歲)",
+        "metric_type": "level",
+        "comparison_basis": "previous_observation",
+        "unit": "歲",
+        "frequency": "annual"
+      },
+      "sparkline_points": [
+        {
+          "as_of_date": "2014-12-31",
+          "as_of_label": "2014年",
+          "value": 42.8
+        },
+        {
+          "as_of_date": "2015-12-31",
+          "as_of_label": "2015年",
+          "value": 43.1
+        },
+        {
+          "as_of_date": "2016-12-31",
+          "as_of_label": "2016年",
+          "value": 43.4
+        },
+        {
+          "as_of_date": "2017-12-31",
+          "as_of_label": "2017年",
+          "value": 44
+        },
+        {
+          "as_of_date": "2018-12-31",
+          "as_of_label": "2018年",
+          "value": 44.4
+        },
+        {
+          "as_of_date": "2019-12-31",
+          "as_of_label": "2019年",
+          "value": 44.9
+        },
+        {
+          "as_of_date": "2020-12-31",
+          "as_of_label": "2020年",
+          "value": 45.5
+        },
+        {
+          "as_of_date": "2021-12-31",
+          "as_of_label": "2021年",
+          "value": 46.3
+        },
+        {
+          "as_of_date": "2022-12-31",
+          "as_of_label": "2022年",
+          "value": 47.1
+        },
+        {
+          "as_of_date": "2023-12-31",
+          "as_of_label": "2023年",
+          "value": 47.4
+        },
+        {
+          "as_of_date": "2024-12-31",
+          "as_of_label": "2024年",
+          "value": 47.9
+        },
+        {
+          "as_of_date": "2025-12-31",
+          "as_of_label": "2025年",
+          "value": 48.4
+        }
+      ],
+      "validation_state": "ok",
+      "validation_messages": [],
+      "expected_update": "每年"
+    }
+  ]
+}

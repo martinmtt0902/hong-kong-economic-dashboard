@@ -1,0 +1,129 @@
+{
+  "id": "housing",
+  "title_tc": "住屋",
+  "latest_as_of_date": "2026-12-31",
+  "latest_as_of_label": "2026年（預測）",
+  "metrics": [
+    {
+      "id": "private_price_index",
+      "card_id": "housing",
+      "label_tc": "私樓售價指數",
+      "source": {
+        "publisher": "差餉物業估價署",
+        "dataset_url": "https://www.rvd.gov.hk/datagovhk/1.4M.csv"
+      },
+      "series_id": "private_price_index",
+      "metric_type": "level",
+      "frequency": "monthly",
+      "unit": "指數",
+      "as_of_date": "",
+      "as_of_label": "",
+      "change_type": "absolute_change",
+      "comparison_basis": "previous_observation",
+      "comparison_basis_label_tc": "較上期",
+      "sparkline_definition": {
+        "series_id": "private_price_index",
+        "metric_type": "level",
+        "comparison_basis": "previous_observation",
+        "unit": "指數",
+        "frequency": "monthly"
+      },
+      "sparkline_points": [],
+      "validation_state": "schema_changed",
+      "validation_messages": [
+        {
+          "code": "schema_changed",
+          "level": "error",
+          "message_tc": "來源欄位變更或找不到對應序列。"
+        }
+      ],
+      "expected_update": "每月"
+    },
+    {
+      "id": "private_rent_index",
+      "card_id": "housing",
+      "label_tc": "私樓租金指數",
+      "source": {
+        "publisher": "差餉物業估價署",
+        "dataset_url": "https://www.rvd.gov.hk/datagovhk/1.3M.csv"
+      },
+      "series_id": "private_rent_index",
+      "metric_type": "level",
+      "frequency": "monthly",
+      "unit": "指數",
+      "as_of_date": "",
+      "as_of_label": "",
+      "change_type": "absolute_change",
+      "comparison_basis": "previous_observation",
+      "comparison_basis_label_tc": "較上期",
+      "sparkline_definition": {
+        "series_id": "private_rent_index",
+        "metric_type": "level",
+        "comparison_basis": "previous_observation",
+        "unit": "指數",
+        "frequency": "monthly"
+      },
+      "sparkline_points": [],
+      "validation_state": "schema_changed",
+      "validation_messages": [
+        {
+          "code": "schema_changed",
+          "level": "error",
+          "message_tc": "來源欄位變更或找不到對應序列。"
+        }
+      ],
+      "expected_update": "每月"
+    },
+    {
+      "id": "private_completions",
+      "card_id": "housing",
+      "label_tc": "私人住宅落成量",
+      "source": {
+        "publisher": "差餉物業估價署",
+        "dataset_url": "https://www.rvd.gov.hk/datagovhk/Dom_Completions_and_Forecast_Completions_by_District_Eng.csv"
+      },
+      "series_id": "rvd|private_domestic_completions|overall",
+      "metric_type": "level",
+      "frequency": "annual",
+      "unit": "伙",
+      "as_of_date": "2026-12-31",
+      "as_of_label": "2026年（預測）",
+      "latest_value": 20098,
+      "previous_value": 20862,
+      "previous_as_of_date": "2025-12-31",
+      "previous_as_of_label": "2025年（預測）",
+      "change_value": -764,
+      "change_type": "absolute_change",
+      "comparison_basis": "previous_observation",
+      "comparison_basis_label_tc": "較上期",
+      "sparkline_definition": {
+        "series_id": "rvd|private_domestic_completions|overall",
+        "metric_type": "level",
+        "comparison_basis": "previous_observation",
+        "unit": "伙",
+        "frequency": "annual"
+      },
+      "sparkline_points": [
+        {
+          "as_of_date": "2024-12-31",
+          "as_of_label": "2024年",
+          "value": 24261
+        },
+        {
+          "as_of_date": "2025-12-31",
+          "as_of_label": "2025年（預測）",
+          "value": 20862
+        },
+        {
+          "as_of_date": "2026-12-31",
+          "as_of_label": "2026年（預測）",
+          "value": 20098
+        }
+      ],
+      "validation_state": "ok",
+      "validation_messages": [],
+      "expected_update": "每年",
+      "provisional": true
+    }
+  ]
+}

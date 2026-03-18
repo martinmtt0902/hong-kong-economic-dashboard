@@ -1,0 +1,205 @@
+{
+  "id": "consumption-travel",
+  "title_tc": "消費與旅遊",
+  "latest_as_of_date": "2026-01-31",
+  "latest_as_of_label": "2026年1月",
+  "metrics": [
+    {
+      "id": "retail_sales",
+      "card_id": "consumption-travel",
+      "label_tc": "零售銷售額",
+      "source": {
+        "publisher": "政府統計處",
+        "dataset_url": "https://data.gov.hk/en-data/dataset/hk-censtatd-tablechart-620-67001",
+        "api_url": "https://www.censtatd.gov.hk/api/get.php?full_series=1&id=620-67001&lang=tc",
+        "table_id": "620-67001"
+      },
+      "series_id": "censtatd|620-67001|freq=M|measure=VAL_RS|label=百萬港元",
+      "auxiliary_series_ids": [
+        "censtatd|620-67001|freq=M|measure=VAL_IDX_RS|label=按年變動百分率"
+      ],
+      "metric_type": "level",
+      "frequency": "monthly",
+      "unit": "百萬港元",
+      "as_of_date": "2026-01-31",
+      "as_of_label": "2026年1月",
+      "latest_value": 37308,
+      "previous_value": 35379,
+      "previous_as_of_date": "2025-01-31",
+      "previous_as_of_label": "2025年1月",
+      "change_value": 5.4524,
+      "change_type": "yoy_percent",
+      "comparison_basis": "same_period_last_year",
+      "comparison_basis_label_tc": "較去年同月",
+      "sparkline_definition": {
+        "series_id": "censtatd|620-67001|freq=M|measure=VAL_RS|label=百萬港元",
+        "metric_type": "level",
+        "comparison_basis": "same_period_last_year",
+        "unit": "百萬港元",
+        "frequency": "monthly"
+      },
+      "sparkline_points": [
+        {
+          "as_of_date": "2025-02-28",
+          "as_of_label": "2025年2月",
+          "value": 29385
+        },
+        {
+          "as_of_date": "2025-03-31",
+          "as_of_label": "2025年3月",
+          "value": 30091
+        },
+        {
+          "as_of_date": "2025-04-30",
+          "as_of_label": "2025年4月",
+          "value": 28876
+        },
+        {
+          "as_of_date": "2025-05-31",
+          "as_of_label": "2025年5月",
+          "value": 31319
+        },
+        {
+          "as_of_date": "2025-06-30",
+          "as_of_label": "2025年6月",
+          "value": 30094
+        },
+        {
+          "as_of_date": "2025-07-31",
+          "as_of_label": "2025年7月",
+          "value": 29671
+        },
+        {
+          "as_of_date": "2025-08-31",
+          "as_of_label": "2025年8月",
+          "value": 30367
+        },
+        {
+          "as_of_date": "2025-09-30",
+          "as_of_label": "2025年9月",
+          "value": 31344
+        },
+        {
+          "as_of_date": "2025-10-31",
+          "as_of_label": "2025年10月",
+          "value": 35174
+        },
+        {
+          "as_of_date": "2025-11-30",
+          "as_of_label": "2025年11月",
+          "value": 33727
+        },
+        {
+          "as_of_date": "2025-12-31",
+          "as_of_label": "2025年12月",
+          "value": 35018
+        },
+        {
+          "as_of_date": "2026-01-31",
+          "as_of_label": "2026年1月",
+          "value": 37308
+        }
+      ],
+      "validation_state": "ok",
+      "validation_messages": [],
+      "expected_update": "每月"
+    },
+    {
+      "id": "visitor_arrivals",
+      "card_id": "consumption-travel",
+      "label_tc": "旅客入境",
+      "source": {
+        "publisher": "政府統計處",
+        "dataset_url": "https://data.gov.hk/en-data/dataset/hk-censtatd-tablechart-650-80001",
+        "api_url": "https://www.censtatd.gov.hk/api/get.php?full_series=1&id=650-80001&lang=tc",
+        "table_id": "650-80001"
+      },
+      "series_id": "censtatd|650-80001|REGION=|measure=VIS_ARR|label=數目",
+      "metric_type": "level",
+      "frequency": "monthly",
+      "unit": "人次",
+      "as_of_date": "2026-01-31",
+      "as_of_label": "2026年1月",
+      "latest_value": 4811700,
+      "previous_value": 4742066,
+      "previous_as_of_date": "2025-01-31",
+      "previous_as_of_label": "2025年1月",
+      "change_value": 1.4684,
+      "change_type": "yoy_percent",
+      "comparison_basis": "same_period_last_year",
+      "comparison_basis_label_tc": "較去年同月",
+      "sparkline_definition": {
+        "series_id": "censtatd|650-80001|REGION=|measure=VIS_ARR|label=數目",
+        "metric_type": "level",
+        "comparison_basis": "same_period_last_year",
+        "unit": "人次",
+        "frequency": "monthly"
+      },
+      "sparkline_points": [
+        {
+          "as_of_date": "2025-02-28",
+          "as_of_label": "2025年2月",
+          "value": 3667671
+        },
+        {
+          "as_of_date": "2025-03-31",
+          "as_of_label": "2025年3月",
+          "value": 3818512
+        },
+        {
+          "as_of_date": "2025-04-30",
+          "as_of_label": "2025年4月",
+          "value": 3847934
+        },
+        {
+          "as_of_date": "2025-05-31",
+          "as_of_label": "2025年5月",
+          "value": 4078938
+        },
+        {
+          "as_of_date": "2025-06-30",
+          "as_of_label": "2025年6月",
+          "value": 3480979
+        },
+        {
+          "as_of_date": "2025-07-31",
+          "as_of_label": "2025年7月",
+          "value": 4390514
+        },
+        {
+          "as_of_date": "2025-08-31",
+          "as_of_label": "2025年8月",
+          "value": 5152837
+        },
+        {
+          "as_of_date": "2025-09-30",
+          "as_of_label": "2025年9月",
+          "value": 3292197
+        },
+        {
+          "as_of_date": "2025-10-31",
+          "as_of_label": "2025年10月",
+          "value": 4588515
+        },
+        {
+          "as_of_date": "2025-11-30",
+          "as_of_label": "2025年11月",
+          "value": 4189272
+        },
+        {
+          "as_of_date": "2025-12-31",
+          "as_of_label": "2025年12月",
+          "value": 4645397
+        },
+        {
+          "as_of_date": "2026-01-31",
+          "as_of_label": "2026年1月",
+          "value": 4811700
+        }
+      ],
+      "validation_state": "ok",
+      "validation_messages": [],
+      "expected_update": "每月"
+    }
+  ]
+}

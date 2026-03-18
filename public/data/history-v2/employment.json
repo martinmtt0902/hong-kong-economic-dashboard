@@ -1,0 +1,299 @@
+{
+  "id": "employment",
+  "title_tc": "就業",
+  "latest_as_of_date": "2026-01-31",
+  "latest_as_of_label": "2025年11月–2026年1月",
+  "metrics": [
+    {
+      "id": "unemployment",
+      "card_id": "employment",
+      "label_tc": "失業率",
+      "source": {
+        "publisher": "政府統計處",
+        "dataset_url": "https://data.gov.hk/en-data/dataset/hk-censtatd-tablechart-210-06101",
+        "api_url": "https://www.censtatd.gov.hk/api/get.php?full_series=1&id=210-06101&lang=tc",
+        "table_id": "210-06101"
+      },
+      "series_id": "censtatd|210-06101|SEX=|freq=M3M|measure=SAUR|label=(%)",
+      "metric_type": "level",
+      "frequency": "monthly",
+      "unit": "%",
+      "as_of_date": "2026-01-31",
+      "as_of_label": "2025年11月–2026年1月",
+      "latest_value": 3.9,
+      "previous_value": 3.8,
+      "previous_as_of_date": "2025-12-31",
+      "previous_as_of_label": "2025年10月–2025年12月",
+      "change_value": 0.1,
+      "change_type": "percentage_point_change",
+      "comparison_basis": "previous_rolling_window",
+      "comparison_basis_label_tc": "較上一個三個月移動窗",
+      "sparkline_definition": {
+        "series_id": "censtatd|210-06101|SEX=|freq=M3M|measure=SAUR|label=(%)",
+        "metric_type": "level",
+        "comparison_basis": "previous_rolling_window",
+        "unit": "%",
+        "frequency": "monthly"
+      },
+      "sparkline_points": [
+        {
+          "as_of_date": "2025-02-28",
+          "as_of_label": "2024年12月–2025年2月",
+          "value": 3.2
+        },
+        {
+          "as_of_date": "2025-03-31",
+          "as_of_label": "2025年1月–2025年3月",
+          "value": 3.2
+        },
+        {
+          "as_of_date": "2025-04-30",
+          "as_of_label": "2025年2月–2025年4月",
+          "value": 3.4
+        },
+        {
+          "as_of_date": "2025-05-31",
+          "as_of_label": "2025年3月–2025年5月",
+          "value": 3.5
+        },
+        {
+          "as_of_date": "2025-06-30",
+          "as_of_label": "2025年4月–2025年6月",
+          "value": 3.5
+        },
+        {
+          "as_of_date": "2025-07-31",
+          "as_of_label": "2025年5月–2025年7月",
+          "value": 3.7
+        },
+        {
+          "as_of_date": "2025-08-31",
+          "as_of_label": "2025年6月–2025年8月",
+          "value": 3.7
+        },
+        {
+          "as_of_date": "2025-09-30",
+          "as_of_label": "2025年7月–2025年9月",
+          "value": 3.9
+        },
+        {
+          "as_of_date": "2025-10-31",
+          "as_of_label": "2025年8月–2025年10月",
+          "value": 3.8
+        },
+        {
+          "as_of_date": "2025-11-30",
+          "as_of_label": "2025年9月–2025年11月",
+          "value": 3.8
+        },
+        {
+          "as_of_date": "2025-12-31",
+          "as_of_label": "2025年10月–2025年12月",
+          "value": 3.8
+        },
+        {
+          "as_of_date": "2026-01-31",
+          "as_of_label": "2025年11月–2026年1月",
+          "value": 3.9
+        }
+      ],
+      "validation_state": "ok",
+      "validation_messages": [],
+      "expected_update": "每月"
+    },
+    {
+      "id": "underemployment",
+      "card_id": "employment",
+      "label_tc": "就業不足率",
+      "source": {
+        "publisher": "政府統計處",
+        "dataset_url": "https://data.gov.hk/en-data/dataset/hk-censtatd-tablechart-210-06101",
+        "api_url": "https://www.censtatd.gov.hk/api/get.php?full_series=1&id=210-06101&lang=tc",
+        "table_id": "210-06101"
+      },
+      "series_id": "censtatd|210-06101|SEX=|freq=M3M|measure=UDR|label=(%)",
+      "metric_type": "level",
+      "frequency": "monthly",
+      "unit": "%",
+      "as_of_date": "2026-01-31",
+      "as_of_label": "2025年11月–2026年1月",
+      "latest_value": 1.7,
+      "previous_value": 1.7,
+      "previous_as_of_date": "2025-12-31",
+      "previous_as_of_label": "2025年10月–2025年12月",
+      "change_value": 0,
+      "change_type": "percentage_point_change",
+      "comparison_basis": "previous_rolling_window",
+      "comparison_basis_label_tc": "較上一個三個月移動窗",
+      "sparkline_definition": {
+        "series_id": "censtatd|210-06101|SEX=|freq=M3M|measure=UDR|label=(%)",
+        "metric_type": "level",
+        "comparison_basis": "previous_rolling_window",
+        "unit": "%",
+        "frequency": "monthly"
+      },
+      "sparkline_points": [
+        {
+          "as_of_date": "2025-02-28",
+          "as_of_label": "2024年12月–2025年2月",
+          "value": 1.1
+        },
+        {
+          "as_of_date": "2025-03-31",
+          "as_of_label": "2025年1月–2025年3月",
+          "value": 1.1
+        },
+        {
+          "as_of_date": "2025-04-30",
+          "as_of_label": "2025年2月–2025年4月",
+          "value": 1.3
+        },
+        {
+          "as_of_date": "2025-05-31",
+          "as_of_label": "2025年3月–2025年5月",
+          "value": 1.4
+        },
+        {
+          "as_of_date": "2025-06-30",
+          "as_of_label": "2025年4月–2025年6月",
+          "value": 1.4
+        },
+        {
+          "as_of_date": "2025-07-31",
+          "as_of_label": "2025年5月–2025年7月",
+          "value": 1.4
+        },
+        {
+          "as_of_date": "2025-08-31",
+          "as_of_label": "2025年6月–2025年8月",
+          "value": 1.6
+        },
+        {
+          "as_of_date": "2025-09-30",
+          "as_of_label": "2025年7月–2025年9月",
+          "value": 1.6
+        },
+        {
+          "as_of_date": "2025-10-31",
+          "as_of_label": "2025年8月–2025年10月",
+          "value": 1.6
+        },
+        {
+          "as_of_date": "2025-11-30",
+          "as_of_label": "2025年9月–2025年11月",
+          "value": 1.6
+        },
+        {
+          "as_of_date": "2025-12-31",
+          "as_of_label": "2025年10月–2025年12月",
+          "value": 1.7
+        },
+        {
+          "as_of_date": "2026-01-31",
+          "as_of_label": "2025年11月–2026年1月",
+          "value": 1.7
+        }
+      ],
+      "validation_state": "ok",
+      "validation_messages": [],
+      "expected_update": "每月"
+    },
+    {
+      "id": "labour_force",
+      "card_id": "employment",
+      "label_tc": "勞動人口",
+      "source": {
+        "publisher": "政府統計處",
+        "dataset_url": "https://data.gov.hk/en-data/dataset/hk-censtatd-tablechart-210-06101",
+        "api_url": "https://www.censtatd.gov.hk/api/get.php?full_series=1&id=210-06101&lang=tc",
+        "table_id": "210-06101"
+      },
+      "series_id": "censtatd|210-06101|SEX=|freq=M3M|measure=LF|label=千人",
+      "metric_type": "level",
+      "frequency": "monthly",
+      "unit": "人",
+      "as_of_date": "2026-01-31",
+      "as_of_label": "2025年11月–2026年1月",
+      "latest_value": 3804300,
+      "previous_value": 3805200,
+      "previous_as_of_date": "2025-12-31",
+      "previous_as_of_label": "2025年10月–2025年12月",
+      "change_value": -900,
+      "change_type": "absolute_change",
+      "comparison_basis": "previous_rolling_window",
+      "comparison_basis_label_tc": "較上一個三個月移動窗",
+      "sparkline_definition": {
+        "series_id": "censtatd|210-06101|SEX=|freq=M3M|measure=LF|label=千人",
+        "metric_type": "level",
+        "comparison_basis": "previous_rolling_window",
+        "unit": "人",
+        "frequency": "monthly"
+      },
+      "sparkline_points": [
+        {
+          "as_of_date": "2025-02-28",
+          "as_of_label": "2024年12月–2025年2月",
+          "value": 3821300
+        },
+        {
+          "as_of_date": "2025-03-31",
+          "as_of_label": "2025年1月–2025年3月",
+          "value": 3815500
+        },
+        {
+          "as_of_date": "2025-04-30",
+          "as_of_label": "2025年2月–2025年4月",
+          "value": 3806500
+        },
+        {
+          "as_of_date": "2025-05-31",
+          "as_of_label": "2025年3月–2025年5月",
+          "value": 3800500
+        },
+        {
+          "as_of_date": "2025-06-30",
+          "as_of_label": "2025年4月–2025年6月",
+          "value": 3793500
+        },
+        {
+          "as_of_date": "2025-07-31",
+          "as_of_label": "2025年5月–2025年7月",
+          "value": 3816200
+        },
+        {
+          "as_of_date": "2025-08-31",
+          "as_of_label": "2025年6月–2025年8月",
+          "value": 3831600
+        },
+        {
+          "as_of_date": "2025-09-30",
+          "as_of_label": "2025年7月–2025年9月",
+          "value": 3830100
+        },
+        {
+          "as_of_date": "2025-10-31",
+          "as_of_label": "2025年8月–2025年10月",
+          "value": 3822300
+        },
+        {
+          "as_of_date": "2025-11-30",
+          "as_of_label": "2025年9月–2025年11月",
+          "value": 3814300
+        },
+        {
+          "as_of_date": "2025-12-31",
+          "as_of_label": "2025年10月–2025年12月",
+          "value": 3805200
+        },
+        {
+          "as_of_date": "2026-01-31",
+          "as_of_label": "2025年11月–2026年1月",
+          "value": 3804300
+        }
+      ],
+      "validation_state": "ok",
+      "validation_messages": [],
+      "expected_update": "每月"
+    }
+  ]
+}

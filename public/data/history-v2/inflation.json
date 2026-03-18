@@ -1,0 +1,105 @@
+{
+  "id": "inflation",
+  "title_tc": "通脹",
+  "latest_as_of_date": "2026-01-31",
+  "latest_as_of_label": "2026年1月",
+  "metrics": [
+    {
+      "id": "cpi_yoy",
+      "card_id": "inflation",
+      "label_tc": "綜合 CPI 按年變動",
+      "source": {
+        "publisher": "政府統計處",
+        "dataset_url": "https://data.gov.hk/en-data/dataset/hk-censtatd-tablechart-510-60001a",
+        "api_url": "https://www.censtatd.gov.hk/api/get.php?full_series=1&id=510-60001A&lang=tc",
+        "table_id": "510-60001A"
+      },
+      "series_id": "censtatd|510-60001A|GROUP=|freq=M|measure=CC_CM_1920|label=按年變動百分率",
+      "metric_type": "yoy_percent",
+      "frequency": "monthly",
+      "unit": "%",
+      "as_of_date": "2026-01-31",
+      "as_of_label": "2026年1月",
+      "latest_value": 1.1,
+      "previous_value": 1.4,
+      "previous_as_of_date": "2025-12-31",
+      "previous_as_of_label": "2025年12月",
+      "change_value": -0.3,
+      "change_type": "percentage_point_change",
+      "comparison_basis": "previous_observation",
+      "comparison_basis_label_tc": "較上期",
+      "sparkline_definition": {
+        "series_id": "censtatd|510-60001A|GROUP=|freq=M|measure=CC_CM_1920|label=按年變動百分率",
+        "metric_type": "yoy_percent",
+        "comparison_basis": "previous_observation",
+        "unit": "%",
+        "frequency": "monthly"
+      },
+      "sparkline_points": [
+        {
+          "as_of_date": "2025-02-28",
+          "as_of_label": "2025年2月",
+          "value": 1.4
+        },
+        {
+          "as_of_date": "2025-03-31",
+          "as_of_label": "2025年3月",
+          "value": 1.4
+        },
+        {
+          "as_of_date": "2025-04-30",
+          "as_of_label": "2025年4月",
+          "value": 2
+        },
+        {
+          "as_of_date": "2025-05-31",
+          "as_of_label": "2025年5月",
+          "value": 1.9
+        },
+        {
+          "as_of_date": "2025-06-30",
+          "as_of_label": "2025年6月",
+          "value": 1.4
+        },
+        {
+          "as_of_date": "2025-07-31",
+          "as_of_label": "2025年7月",
+          "value": 1
+        },
+        {
+          "as_of_date": "2025-08-31",
+          "as_of_label": "2025年8月",
+          "value": 1.1
+        },
+        {
+          "as_of_date": "2025-09-30",
+          "as_of_label": "2025年9月",
+          "value": 1.1
+        },
+        {
+          "as_of_date": "2025-10-31",
+          "as_of_label": "2025年10月",
+          "value": 1.2
+        },
+        {
+          "as_of_date": "2025-11-30",
+          "as_of_label": "2025年11月",
+          "value": 1.2
+        },
+        {
+          "as_of_date": "2025-12-31",
+          "as_of_label": "2025年12月",
+          "value": 1.4
+        },
+        {
+          "as_of_date": "2026-01-31",
+          "as_of_label": "2026年1月",
+          "value": 1.1
+        }
+      ],
+      "validation_state": "ok",
+      "validation_messages": [],
+      "expected_update": "每月"
+    }
+  ]
+}

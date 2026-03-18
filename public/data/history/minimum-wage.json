@@ -1,44 +1,32 @@
 {
   "id": "minimum-wage",
   "title_tc": "最低工資",
+  "latest_data_at": "2026-04-30",
+  "latest_data_label": "2026-04-30",
   "metrics": [
     {
       "id": "statutory_minimum_wage",
       "label_tc": "法定最低工資",
-      "unit": "港元/小時",
-      "frequency": "event",
-      "latest": {
-        "period_key": "1 May 2025",
-        "label_tc": "現行法定最低工資",
-        "date": "2025-04-30T16:00:00.000Z",
-        "value": 42.1,
-        "unit": "港元/小時"
-      },
-      "sparkline_points": [
-        {
-          "period_key": "1 May 2025",
-          "label_tc": "現行法定最低工資",
-          "date": "2025-04-30T16:00:00.000Z",
-          "value": 42.1,
-          "unit": "港元/小時"
-        }
-      ],
-      "history_points": [
-        {
-          "period_key": "1 May 2025",
-          "label_tc": "現行法定最低工資",
-          "date": "2025-04-30T16:00:00.000Z",
-          "value": 42.1,
-          "unit": "港元/小時"
-        }
-      ],
       "source_name": "勞工處",
       "source_url": "https://www.labour.gov.hk/eng/news/mwo.htm",
-      "source_note": "若已公布下一次調整，於來源頁附註說明。",
-      "freshness": "fresh",
+      "status": "ok",
+      "status_text_tc": "最新",
+      "display_value_text": "HK$43.1",
+      "display_change_text": "較上一次生效值 +1",
+      "display_previous_text": "上一次生效值 HK$42.1",
+      "display_period_text": "2026-04-30",
+      "display_comparison_basis_text": "較上一次生效值",
+      "sparkline_points": [
+        {
+          "x": "2025-04-30",
+          "y": 42.1
+        },
+        {
+          "x": "2026-04-30",
+          "y": 43.1
+        }
+      ],
       "expected_update": "按政策變動"
     }
-  ],
-  "latest_data_at": "2025-04-30T16:00:00.000Z",
-  "latest_data_label": "現行法定最低工資"
+  ]
 }

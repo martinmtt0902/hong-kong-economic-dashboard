@@ -11,6 +11,7 @@ export function DashboardCard({ card }: { card: DashboardCardType }) {
         <div>
           <p className="card-eyebrow">Official Tracker</p>
           <h2>{card.title_tc}</h2>
+          {card.card_status_text_tc ? <p className="card-status">{card.card_status_text_tc}</p> : null}
         </div>
         <p className="card-updated">資料更新至 {latestLabel}</p>
       </header>

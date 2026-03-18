@@ -1,0 +1,55 @@
+{
+  "id": "minimum-wage",
+  "title_tc": "最低工資",
+  "latest_as_of_date": "2026-04-30",
+  "latest_as_of_label": "2026-04-30",
+  "metrics": [
+    {
+      "id": "statutory_minimum_wage",
+      "card_id": "minimum-wage",
+      "label_tc": "法定最低工資",
+      "source": {
+        "publisher": "勞工處",
+        "dataset_url": "https://www.labour.gov.hk/eng/news/mwo.htm"
+      },
+      "series_id": "labour|min_wage",
+      "metric_type": "level",
+      "frequency": "event",
+      "unit": "港元/小時",
+      "as_of_date": "2026-04-30",
+      "as_of_label": "2026-04-30",
+      "release_date": "2025-04-29",
+      "latest_value": 43.1,
+      "previous_value": 42.1,
+      "previous_as_of_date": "2025-04-30",
+      "previous_as_of_label": "2025-04-30",
+      "change_value": 1,
+      "change_type": "absolute_change",
+      "comparison_basis": "event_previous_effective",
+      "comparison_basis_label_tc": "較上一次生效值",
+      "sparkline_definition": {
+        "series_id": "labour|min_wage",
+        "metric_type": "level",
+        "comparison_basis": "event_previous_effective",
+        "unit": "港元/小時",
+        "frequency": "event"
+      },
+      "sparkline_points": [
+        {
+          "as_of_date": "2025-04-30",
+          "as_of_label": "2025-04-30",
+          "value": 42.1
+        },
+        {
+          "as_of_date": "2026-04-30",
+          "as_of_label": "2026-04-30",
+          "value": 43.1
+        }
+      ],
+      "validation_state": "ok",
+      "validation_messages": [],
+      "expected_update": "按政策變動",
+      "provisional": true
+    }
+  ]
+}

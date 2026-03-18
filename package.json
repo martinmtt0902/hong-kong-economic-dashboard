@@ -7,7 +7,11 @@
     "dev": "vite",
     "build": "tsc -b && vite build",
     "preview": "vite preview",
-    "generate:data": "tsx scripts/generate-dashboard.ts"
+    "generate:data": "node --import tsx scripts/generate-dashboard.ts",
+    "test:snapshots": "node --import tsx --test tests/snapshots/*.test.ts",
+    "test:snapshots:refresh": "npm run generate:data && npm run test:snapshots",
+    "test:invariants": "node --import tsx --test tests/invariants/*.test.ts",
+    "test": "npm run test:snapshots && npm run test:invariants"
   },
   "dependencies": {
     "react": "^18.3.1",

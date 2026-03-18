@@ -1,0 +1,212 @@
+{
+  "id": "interest-rates",
+  "title_tc": "利率",
+  "latest_as_of_date": "2026-03-17",
+  "latest_as_of_label": "2026-03-17",
+  "metrics": [
+    {
+      "id": "base_rate",
+      "card_id": "interest-rates",
+      "label_tc": "HKMA Base Rate",
+      "source": {
+        "publisher": "香港金融管理局",
+        "dataset_url": "https://www.hkma.gov.hk/eng/data-publications-and-research/data-and-statistics/daily-monetary-statistics/",
+        "api_url": "https://api.hkma.gov.hk/public/market-data-and-statistics/daily-monetary-statistics/daily-figures-interbank-liquidity"
+      },
+      "series_id": "hkma|base_rate",
+      "metric_type": "level",
+      "frequency": "daily",
+      "unit": "%",
+      "as_of_date": "2026-03-17",
+      "as_of_label": "2026-03-17",
+      "latest_value": 4,
+      "previous_value": 4,
+      "previous_as_of_date": "2026-03-16",
+      "previous_as_of_label": "2026-03-16",
+      "change_value": 0,
+      "change_type": "percentage_point_change",
+      "comparison_basis": "previous_observation",
+      "comparison_basis_label_tc": "較上期",
+      "sparkline_definition": {
+        "series_id": "hkma|base_rate",
+        "metric_type": "level",
+        "comparison_basis": "previous_observation",
+        "unit": "%",
+        "frequency": "daily"
+      },
+      "sparkline_points": [
+        {
+          "as_of_date": "2026-03-02",
+          "as_of_label": "2026-03-02",
+          "value": 4
+        },
+        {
+          "as_of_date": "2026-03-03",
+          "as_of_label": "2026-03-03",
+          "value": 4
+        },
+        {
+          "as_of_date": "2026-03-04",
+          "as_of_label": "2026-03-04",
+          "value": 4
+        },
+        {
+          "as_of_date": "2026-03-05",
+          "as_of_label": "2026-03-05",
+          "value": 4
+        },
+        {
+          "as_of_date": "2026-03-06",
+          "as_of_label": "2026-03-06",
+          "value": 4
+        },
+        {
+          "as_of_date": "2026-03-09",
+          "as_of_label": "2026-03-09",
+          "value": 4
+        },
+        {
+          "as_of_date": "2026-03-10",
+          "as_of_label": "2026-03-10",
+          "value": 4
+        },
+        {
+          "as_of_date": "2026-03-11",
+          "as_of_label": "2026-03-11",
+          "value": 4
+        },
+        {
+          "as_of_date": "2026-03-12",
+          "as_of_label": "2026-03-12",
+          "value": 4
+        },
+        {
+          "as_of_date": "2026-03-13",
+          "as_of_label": "2026-03-13",
+          "value": 4
+        },
+        {
+          "as_of_date": "2026-03-16",
+          "as_of_label": "2026-03-16",
+          "value": 4
+        },
+        {
+          "as_of_date": "2026-03-17",
+          "as_of_label": "2026-03-17",
+          "value": 4
+        }
+      ],
+      "validation_state": "source_error",
+      "validation_messages": [
+        {
+          "code": "source_missing",
+          "level": "error",
+          "message_tc": "fetch failed"
+        }
+      ],
+      "expected_update": "每日"
+    },
+    {
+      "id": "hibor_1m",
+      "card_id": "interest-rates",
+      "label_tc": "1個月 HIBOR",
+      "source": {
+        "publisher": "香港金融管理局",
+        "dataset_url": "https://www.hkma.gov.hk/eng/data-publications-and-research/data-and-statistics/daily-monetary-statistics/",
+        "api_url": "https://api.hkma.gov.hk/public/market-data-and-statistics/daily-monetary-statistics/daily-figures-interbank-liquidity"
+      },
+      "series_id": "hkma|hibor_1m",
+      "metric_type": "level",
+      "frequency": "daily",
+      "unit": "%",
+      "as_of_date": "2026-03-17",
+      "as_of_label": "2026-03-17",
+      "latest_value": 2.08173,
+      "previous_value": 2.05637,
+      "previous_as_of_date": "2026-03-16",
+      "previous_as_of_label": "2026-03-16",
+      "change_value": 0.0254,
+      "change_type": "percentage_point_change",
+      "comparison_basis": "previous_observation",
+      "comparison_basis_label_tc": "較上期",
+      "sparkline_definition": {
+        "series_id": "hkma|hibor_1m",
+        "metric_type": "level",
+        "comparison_basis": "previous_observation",
+        "unit": "%",
+        "frequency": "daily"
+      },
+      "sparkline_points": [
+        {
+          "as_of_date": "2026-03-02",
+          "as_of_label": "2026-03-02",
+          "value": 2.35518
+        },
+        {
+          "as_of_date": "2026-03-03",
+          "as_of_label": "2026-03-03",
+          "value": 2.30446
+        },
+        {
+          "as_of_date": "2026-03-04",
+          "as_of_label": "2026-03-04",
+          "value": 2.41399
+        },
+        {
+          "as_of_date": "2026-03-05",
+          "as_of_label": "2026-03-05",
+          "value": 2.31179
+        },
+        {
+          "as_of_date": "2026-03-06",
+          "as_of_label": "2026-03-06",
+          "value": 2.19613
+        },
+        {
+          "as_of_date": "2026-03-09",
+          "as_of_label": "2026-03-09",
+          "value": 2.04524
+        },
+        {
+          "as_of_date": "2026-03-10",
+          "as_of_label": "2026-03-10",
+          "value": 2.02083
+        },
+        {
+          "as_of_date": "2026-03-11",
+          "as_of_label": "2026-03-11",
+          "value": 2.02982
+        },
+        {
+          "as_of_date": "2026-03-12",
+          "as_of_label": "2026-03-12",
+          "value": 2.02982
+        },
+        {
+          "as_of_date": "2026-03-13",
+          "as_of_label": "2026-03-13",
+          "value": 2.07583
+        },
+        {
+          "as_of_date": "2026-03-16",
+          "as_of_label": "2026-03-16",
+          "value": 2.05637
+        },
+        {
+          "as_of_date": "2026-03-17",
+          "as_of_label": "2026-03-17",
+          "value": 2.08173
+        }
+      ],
+      "validation_state": "source_error",
+      "validation_messages": [
+        {
+          "code": "source_missing",
+          "level": "error",
+          "message_tc": "fetch failed"
+        }
+      ],
+      "expected_update": "每日"
+    }
+  ]
+}

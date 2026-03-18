@@ -1,85 +1,64 @@
 import { fetchText } from "../lib/http";
-import type { DataPoint, Frequency } from "../lib/types";
-import { numericValue, parsePeriod, sortPoints } from "../lib/time";
 import { parseCsv } from "../lib/csv";
+import { parseOfficialPeriod } from "../lib/period";
+import { numericValue } from "../lib/time";
+import type { RawObservation, SourceRef } from "../lib/types";
 
-type CsvMetricConfig = {
-  url: string;
-  frequency: Frequency;
+type CsvObservationConfig = {
+  source: SourceRef;
+  series_id: string;
+  series_label_tc: string;
+  frequency: RawObservation["frequency"];
   unit: string;
-  dateColumns?: string[];
-  valueColumns?: string[];
-  rowFilter?: (row: Record<string, string>) => boolean;
-  valueSelector?: (row: Record<string, string>) => number | undefined;
-  labelSelector?: (row: Record<string, string>) => string | undefined;
+  url: string;
+  date_columns: string[];
+  value_columns: string[];
+  row_filter?: (row: Record<string, string>) => boolean;
+  label_selector?: (row: Record<string, string>) => string | undefined;
 };
 
-export async function fetchCsvSeries(config: CsvMetricConfig): Promise<DataPoint[]> {
-  const rawText = await fetchText(config.url);
+export async function fetchCsvObservations(config: CsvObservationConfig): Promise<RawObservation[]> {
+  const text = await fetchText(config.url);
+  const rows = parseCsv(text);
 
-  const rows = parseCsv(rawText);
+  return rows
+    .filter((row) => (config.row_filter ? config.row_filter(row) : true))
+    .map((row) => {
+      const rawPeriod = pickColumn(row, config.date_columns);
+      const rawValue = pickColumn(row, config.value_columns);
+      const numeric = numericValue(rawValue);
+      if (!rawPeriod || typeof numeric !== "number") {
+        return undefined;
+      }
 
-  const points = rows
-    .filter((row) => (config.rowFilter ? config.rowFilter(row) : true))
-    .map((row) => rowToPoint(row, config))
-    .filter((point): point is DataPoint => Boolean(point));
-
-  return dedupe(sortPoints(points));
+      const parsed = parseOfficialPeriod(rawPeriod, config.frequency);
+      return {
+        source: config.source,
+        series_id: config.series_id,
+        series_label_tc: config.series_label_tc,
+        frequency: config.frequency,
+        dimensions: {},
+        measure_code: config.series_id,
+        measure_aliases: [config.series_id],
+        measure_label_tc: config.label_selector?.(row) ?? config.series_label_tc,
+        period_raw: rawPeriod,
+        as_of_date: parsed.as_of_date,
+        as_of_label: parsed.as_of_label,
+        value: numeric,
+        unit: config.unit
+      } satisfies RawObservation;
+    })
+    .filter((point): point is RawObservation => Boolean(point))
+    .sort((left, right) => left.as_of_date.localeCompare(right.as_of_date));
 }
 
-function rowToPoint(
-  row: Record<string, string>,
-  config: CsvMetricConfig
-): DataPoint | undefined {
-  const dateValue =
-    pickColumn(row, config.dateColumns) ??
-    Object.values(row).find((value) => /\d{4}/.test(value));
-
-  if (!dateValue) {
-    return undefined;
-  }
-
-  const parsedPeriod = parsePeriod(dateValue, config.frequency);
-
-  const value =
-    config.valueSelector?.(row) ??
-    numericValue(pickColumn(row, config.valueColumns)) ??
-    firstNumericValue(row);
-
-  if (typeof value !== "number") {
-    return undefined;
-  }
-
-  return {
-    period_key: parsedPeriod.period_key,
-    label_tc: config.labelSelector?.(row) ?? parsedPeriod.label_tc,
-    date: parsedPeriod.date,
-    value,
-    unit: config.unit
-  };
-}
-
-function pickColumn(row: Record<string, string>, candidates: string[] = []): string | undefined {
+function pickColumn(row: Record<string, string>, candidates: string[]): string | undefined {
   const entries = Object.entries(row);
   for (const candidate of candidates) {
     const match = entries.find(([header]) => header.toLowerCase().includes(candidate.toLowerCase()));
     if (match?.[1]) {
-      return match[1];
+      return match[1].trim();
     }
   }
   return undefined;
-}
-
-function firstNumericValue(row: Record<string, string>): number | undefined {
-  for (const value of Object.values(row)) {
-    const numeric = numericValue(value);
-    if (typeof numeric === "number") {
-      return numeric;
-    }
-  }
-  return undefined;
-}
-
-function dedupe(points: DataPoint[]): DataPoint[] {
-  return Array.from(new Map(points.map((point) => [point.period_key, point])).values());
 }
