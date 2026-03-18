@@ -22,10 +22,11 @@ export function MetricRow({ metric }: { metric: UIMetricRow }) {
           ) : null}
         </div>
         <div className="metric-value">{metric.display_value_text}</div>
-        <div className="metric-subline">{metric.display_comparison_text}</div>
-        <div className="metric-previous">{metric.display_previous_text}</div>
+        <ul className="metric-bullets" aria-label={`${metric.label_tc} 比較資訊`}>
+          <li>{metric.display_comparison_text}</li>
+          <li>{metric.display_previous_text}</li>
+        </ul>
         {metric.reason ? <div className="metric-previous">{metric.reason}</div> : null}
-        {metric.last_successful_fetch_at ? <div className="metric-previous">最近成功抓取：{metric.last_successful_fetch_at}</div> : null}
       </div>
 
       <div className="metric-chart">

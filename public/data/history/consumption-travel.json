@@ -20,7 +20,7 @@
       "display_comparison_period_text": "2025年1月",
       "display_unit": "億港元",
       "data_origin": "live",
-      "last_successful_fetch_at": "2026-03-18T03:41:58.938Z",
+      "last_successful_fetch_at": "2026-03-18T04:23:48.911Z",
       "chart": {
         "chart_type": "line",
         "x_axis_label": "月份",
@@ -188,7 +188,7 @@
       "display_comparison_period_text": "2025年1月",
       "display_unit": "人次",
       "data_origin": "live",
-      "last_successful_fetch_at": "2026-03-18T03:41:58.938Z",
+      "last_successful_fetch_at": "2026-03-18T04:23:48.911Z",
       "chart": {
         "chart_type": "line",
         "x_axis_label": "月份",

@@ -18,5 +18,6 @@ test("measure mapping uses the intended codes and labels", () => {
   assert.equal(gdpNominal.raw_payload.primary.at(-1).measure_label_tc, "按年變動百分率");
 
   const births = rows.find((item) => item.metric_id === "live_births");
-  assert.equal(births.raw_payload.primary.at(-1).measure_code, "KNOWN_LIVE_BIRTHS_TOTAL");
+  assert.equal(births.raw_payload.primary.at(-1).measure_code, "REGISTERED_BIRTHS_TOTAL");
+  assert.equal(births.transformed_payload.label_tc, "出生登記總數");
 });

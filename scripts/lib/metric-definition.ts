@@ -32,7 +32,7 @@ export type CsvMetricDefinition = BaseMetricDefinition & {
 };
 
 export type BirthsMetricDefinition = BaseMetricDefinition & {
-  loader_kind: "dh_births";
+  loader_kind: "births_registration";
   url: string;
 };
 
@@ -88,9 +88,10 @@ const cAndSD = (dataset_url: string, table_id: string): SourceRef => ({
   table_id
 });
 
-const dh: SourceRef = {
-  publisher: "衞生署",
-  dataset_url: URLs.birthsCsv
+const birthsRegistrationSource: SourceRef = {
+  publisher: "入境事務處",
+  dataset_url: URLs.birthsRegistrationDataset,
+  api_url: URLs.birthsRegistrationCsv
 };
 
 const labourDepartment: SourceRef = {
@@ -518,8 +519,8 @@ export const metricDefinitions: MetricPipelineDefinition[] = [
       ...metricBase({
         id: "live_births",
         card_id: "population",
-        label_tc: "出生數",
-        source: dh,
+        label_tc: "出生登記總數",
+        source: birthsRegistrationSource,
         frequency: "annual",
         unit: "人",
         display_unit: "人",
@@ -531,10 +532,10 @@ export const metricDefinitions: MetricPipelineDefinition[] = [
         validation: { min: 10000, max: 100000, disallow_year_value: true },
         chart_time_label: "年份",
         chart_value_label: "出生數",
-        series_label_tc: "活產嬰兒總數"
+        series_label_tc: "出生登記總數"
       }),
-      loader_kind: "dh_births",
-      url: URLs.birthsCsv
+      loader_kind: "births_registration",
+      url: URLs.birthsRegistrationCsv
     }
   },
   {

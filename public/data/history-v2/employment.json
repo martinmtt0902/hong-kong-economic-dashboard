@@ -238,7 +238,7 @@
       "validation_state": "ok",
       "validation_messages": [],
       "expected_update": "每月",
-      "last_successful_fetch_at": "2026-03-18T03:41:58.938Z"
+      "last_successful_fetch_at": "2026-03-18T04:23:48.911Z"
     },
     {
       "id": "underemployment",
@@ -474,7 +474,7 @@
       "validation_state": "ok",
       "validation_messages": [],
       "expected_update": "每月",
-      "last_successful_fetch_at": "2026-03-18T03:41:58.938Z"
+      "last_successful_fetch_at": "2026-03-18T04:23:48.911Z"
     },
     {
       "id": "labour_force",
@@ -710,7 +710,7 @@
       "validation_state": "ok",
       "validation_messages": [],
       "expected_update": "每月",
-      "last_successful_fetch_at": "2026-03-18T03:41:58.938Z"
+      "last_successful_fetch_at": "2026-03-18T04:23:48.911Z"
     }
   ]
 }

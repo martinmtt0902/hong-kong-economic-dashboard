@@ -247,6 +247,7 @@ export const dashboardCardSchema = z.object({
   title_tc: z.string(),
   latest_data_at: z.string().optional(),
   latest_data_label: z.string().optional(),
+  periods_summary_text_tc: z.string().optional(),
   card_status_text_tc: z.string().optional(),
   metrics: z.array(uiMetricRowSchema)
 });

@@ -14,12 +14,15 @@ export function toDashboardPayload(payloadV2: DashboardPayloadV2): DashboardPayl
     generated_at: payloadV2.generated_at,
     cards: payloadV2.cards.map((card) => {
       const hasOnlyIssues = card.metrics.every((metric) => metric.validation_state !== "ok");
+      const uniquePeriods = [...new Set(card.metrics.map((metric) => metric.as_of_label).filter(Boolean))];
+      const hasMixedPeriods = uniquePeriods.length > 1;
 
       return {
         id: card.id,
         title_tc: card.title_tc,
-        latest_data_at: card.latest_as_of_date,
-        latest_data_label: card.latest_as_of_label,
+        latest_data_at: hasMixedPeriods ? undefined : card.latest_as_of_date,
+        latest_data_label: hasMixedPeriods ? undefined : card.latest_as_of_label,
+        periods_summary_text_tc: hasMixedPeriods ? "各卡更新期不同，請以各列期別為準" : undefined,
         card_status_text_tc: hasOnlyIssues ? "資料待核對" : undefined,
         metrics: card.metrics.map(toUIMetricRow)
       } satisfies DashboardCard;

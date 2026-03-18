@@ -10,6 +10,7 @@ test("minimum wage snapshot separates current and next effective rates", () => {
   const uiCard = ui.cards.find((item: any) => item.id === "minimum-wage");
 
   assert.equal(card.latest_as_of_label, "2025-05-01");
+  assert.equal(uiCard.periods_summary_text_tc, "各卡更新期不同，請以各列期別為準");
 
   const current = card.metrics.find((item: any) => item.id === "statutory_minimum_wage_current");
   assert.equal(current.latest_value, 42.1);

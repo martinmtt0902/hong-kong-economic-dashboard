@@ -10,6 +10,10 @@ export const URLs = {
   medianAgeDataset: "https://data.gov.hk/en-data/dataset/hk-censtatd-tablechart-110-01004",
   birthsCsv:
     "https://www.dh.gov.hk/datagovhk/ncdd/Number%20of%20Known%20Births%20for%20Different%20Sexes%20and%20Crude%20Birth%20Rate%201981-2024(tc).csv",
+  birthsRegistrationCsv:
+    "https://www.immd.gov.hk/opendata/hkt/law-and-security/personal_documentation/statistics_on_births_registration.csv",
+  birthsRegistrationDataset:
+    "https://data.gov.hk/en-data/dataset/hk-immd-set6-statistics-personal-documentation-births-registration",
   smwPage: "https://www.labour.gov.hk/eng/news/mwo.htm",
   smwPressRelease: "https://www.info.gov.hk/gia/general/202505/01/P2025042900231.htm",
   rvdPriceCsv: "https://www.rvd.gov.hk/datagovhk/1.4M.csv",

@@ -10,6 +10,7 @@ test("population snapshot matches official headline values and reports", () => {
 
   const card = payload.cards.find((item: any) => item.id === "population");
   const uiCard = ui.cards.find((item: any) => item.id === "population");
+  assert.equal(uiCard.periods_summary_text_tc, "各卡更新期不同，請以各列期別為準");
 
   const population = card.metrics.find((item: any) => item.id === "population_total");
   assert.equal(population.latest_value, 7510800);
@@ -19,8 +20,9 @@ test("population snapshot matches official headline values and reports", () => {
   assert.equal(population.comparison_period_label, "2024年底");
 
   const births = card.metrics.find((item: any) => item.id === "live_births");
-  assert.equal(births.latest_value, 36723);
-  assert.equal(births.previous_value, 33232);
+  assert.equal(births.label_tc, "出生登記總數");
+  assert.equal(births.latest_value, 36767);
+  assert.equal(births.previous_value, 33288);
   assert.equal(births.comparison_period_label, "2023年");
 
   const medianAge = card.metrics.find((item: any) => item.id === "median_age");
@@ -33,5 +35,5 @@ test("population snapshot matches official headline values and reports", () => {
 
   assert.ok(rawToTransformed.some((item) => item.metric_id === "population_total"));
   assert.match(preview, /## 人口/);
-  assert.match(preview, /### 出生數/);
+  assert.match(preview, /### 出生登記總數/);
 });

@@ -6,7 +6,7 @@ const height = 112;
 const margin = { top: 10, right: 10, bottom: 26, left: 44 };
 
 export function Sparkline({ chart }: { chart: UIChart }) {
-  const [activeIndex, setActiveIndex] = useState<number | null>(chart.points.length ? chart.points.length - 1 : null);
+  const [activeIndex, setActiveIndex] = useState<number | null>(null);
 
   const geometry = useMemo(() => {
     if (chart.points.length === 0) {
@@ -50,7 +50,7 @@ export function Sparkline({ chart }: { chart: UIChart }) {
       <svg
         className="sparkline"
         viewBox={`0 0 ${width} ${height}`}
-        onMouseLeave={() => setActiveIndex(chart.points.length - 1)}
+        onMouseLeave={() => setActiveIndex(null)}
       >
         <line x1={margin.left} y1={height - margin.bottom} x2={width - margin.right} y2={height - margin.bottom} className="axis-line" />
         <line x1={margin.left} y1={margin.top} x2={margin.left} y2={height - margin.bottom} className="axis-line" />
@@ -86,6 +86,8 @@ export function Sparkline({ chart }: { chart: UIChart }) {
             r={activeIndex === index ? 4.5 : 3}
             className={activeIndex === index ? "chart-point chart-point-active" : "chart-point"}
             onMouseEnter={() => setActiveIndex(index)}
+            onFocus={() => setActiveIndex(index)}
+            tabIndex={0}
           />
         ))}
       </svg>

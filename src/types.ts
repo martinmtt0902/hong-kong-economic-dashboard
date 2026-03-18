@@ -74,6 +74,7 @@ export type DashboardCard = {
   metrics: UIMetricRow[];
   latest_data_at?: string;
   latest_data_label?: string;
+  periods_summary_text_tc?: string;
   card_status_text_tc?: string;
 };
 

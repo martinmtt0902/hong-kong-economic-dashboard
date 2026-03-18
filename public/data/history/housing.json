@@ -1,8 +1,7 @@
 {
   "id": "housing",
   "title_tc": "住屋",
-  "latest_data_at": "2026-01-31",
-  "latest_data_label": "2026年1月",
+  "periods_summary_text_tc": "各卡更新期不同，請以各列期別為準",
   "metrics": [
     {
       "id": "private_price_index",
@@ -20,7 +19,7 @@
       "display_comparison_period_text": "2025年12月",
       "display_unit": "指數",
       "data_origin": "live",
-      "last_successful_fetch_at": "2026-03-18T03:41:58.938Z",
+      "last_successful_fetch_at": "2026-03-18T04:23:48.911Z",
       "chart": {
         "chart_type": "line",
         "x_axis_label": "月份",
@@ -188,7 +187,7 @@
       "display_comparison_period_text": "2025年12月",
       "display_unit": "指數",
       "data_origin": "live",
-      "last_successful_fetch_at": "2026-03-18T03:41:58.938Z",
+      "last_successful_fetch_at": "2026-03-18T04:23:48.911Z",
       "chart": {
         "chart_type": "line",
         "x_axis_label": "月份",
@@ -356,7 +355,7 @@
       "display_comparison_period_text": "2025年（預測）",
       "display_unit": "伙",
       "data_origin": "live",
-      "last_successful_fetch_at": "2026-03-18T03:41:58.938Z",
+      "last_successful_fetch_at": "2026-03-18T04:23:48.911Z",
       "chart": {
         "chart_type": "line",
         "x_axis_label": "年份",

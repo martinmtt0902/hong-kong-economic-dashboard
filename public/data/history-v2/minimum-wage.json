@@ -76,7 +76,7 @@
       "validation_messages": [],
       "expected_update": "按政策變動",
       "provisional": false,
-      "last_successful_fetch_at": "2026-03-18T03:41:58.938Z"
+      "last_successful_fetch_at": "2026-03-18T04:23:48.911Z"
     },
     {
       "id": "statutory_minimum_wage_next",
@@ -172,7 +172,7 @@
       "expected_update": "按政策變動",
       "provisional": true,
       "reason": "將於 2026-05-01 生效",
-      "last_successful_fetch_at": "2026-03-18T03:41:58.938Z"
+      "last_successful_fetch_at": "2026-03-18T04:23:48.911Z"
     }
   ]
 }

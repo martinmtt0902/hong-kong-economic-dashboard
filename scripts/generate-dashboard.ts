@@ -2,7 +2,7 @@ import { mkdir, readFile, writeFile } from "node:fs/promises";
 import path from "node:path";
 import { fetchCenstatdObservations } from "./fetch/censtatd";
 import { fetchCsvObservations } from "./fetch/csvSource";
-import { fetchDhBirthObservations } from "./fetch/dhBirths";
+import { fetchBirthsRegistrationObservations, readBirthsRegistrationSnapshot } from "./fetch/birthsRegistration";
 import { fetchBaseRateObservations, fetchHibor1MObservations } from "./fetch/hkma";
 import { fetchMinimumWageObservations } from "./fetch/labour";
 import { fetchRvdIndexObservations } from "./fetch/rvdIndex";
@@ -128,6 +128,39 @@ export async function generateDashboardArtifacts() {
     }))),
     "utf-8"
   );
+
+  const birthsAfter = reportRows.find((row) => row.metric_id === "live_births");
+  const visitor = reportRows.find((row) => row.metric_id === "visitor_arrivals");
+  await writeJson(path.join(reportsDir, "readability-pass.json"), {
+    births_card_before: {
+      raw_payload: {
+        source: "衞生署已知活產嬰兒總數（男嬰 + 女嬰）",
+        series_id: "dh|births|known_live_births_total",
+        years: {
+          2024: 36723,
+          2023: 33232
+        }
+      },
+      transformed_payload: {
+        label_tc: "出生數",
+        latest_value: 36723,
+        previous_value: 33232
+      },
+      rendered_text: {
+        headline: "36,723",
+        comparison: "較上期（2023年） +3,491",
+        previous: "上期（2023年） 33,232"
+      }
+    },
+    births_card_after: birthsAfter
+      ? {
+          raw_payload: birthsAfter.raw_payload,
+          transformed_payload: birthsAfter.transformed_payload,
+          rendered_text: birthsAfter.rendered_preview
+        }
+      : null,
+    visitor_arrivals_rounding_policy: visitor?.transformed_payload.rounding_policy ?? null
+  });
 }
 
 async function resolveMetric(
@@ -137,7 +170,17 @@ async function resolveMetric(
   referenceDate: string
 ) {
   try {
-    const primarySeries = await loadObservations(definition.metric);
+    let primarySeries = definition.metric.id === "live_births"
+      ? readBirthsRegistrationSnapshot(definition.metric.source, definition.metric.series_label_tc)
+      : await loadObservations(definition.metric);
+    if (definition.metric.id === "live_births" && primarySeries.length === 0) {
+      const birthsDefinition = definition.metric as Extract<MetricDefinitionRecord, { loader_kind: "births_registration" }>;
+      primarySeries = await fetchBirthsRegistrationObservations(
+        birthsDefinition.url,
+        birthsDefinition.source,
+        birthsDefinition.series_label_tc
+      );
+    }
     const auxiliarySeries = definition.auxiliary_series
       ? (await Promise.all(definition.auxiliary_series.map((item) => loadAuxiliaryObservations(item)))).flat()
       : [];
@@ -218,8 +261,8 @@ async function loadObservations(definition: MetricDefinitionRecord): Promise<Raw
         row_filter: definition.row_filter,
         label_selector: definition.label_selector
       });
-    case "dh_births":
-      return fetchDhBirthObservations(definition.url, definition.source, definition.series_label_tc);
+    case "births_registration":
+      return fetchBirthsRegistrationObservations(definition.url, definition.source, definition.series_label_tc);
     case "minimum_wage":
       return fetchMinimumWageObservations(definition.source, definition.series_label_tc);
     case "rvd_index":

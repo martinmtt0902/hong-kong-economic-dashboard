@@ -1,8 +1,7 @@
 {
   "id": "minimum-wage",
   "title_tc": "最低工資",
-  "latest_data_at": "2025-05-01",
-  "latest_data_label": "2025-05-01",
+  "periods_summary_text_tc": "各卡更新期不同，請以各列期別為準",
   "metrics": [
     {
       "id": "statutory_minimum_wage_current",
@@ -19,7 +18,7 @@
       "display_comparison_basis_text": "較上一次生效值",
       "display_unit": "HK$/小時",
       "data_origin": "live",
-      "last_successful_fetch_at": "2026-03-18T03:41:58.938Z",
+      "last_successful_fetch_at": "2026-03-18T04:23:48.911Z",
       "chart": {
         "chart_type": "step_after",
         "x_axis_label": "生效日期",
@@ -64,7 +63,7 @@
       "display_comparison_period_text": "2025-05-01",
       "display_unit": "HK$/小時",
       "data_origin": "live",
-      "last_successful_fetch_at": "2026-03-18T03:41:58.938Z",
+      "last_successful_fetch_at": "2026-03-18T04:23:48.911Z",
       "reason": "將於 2026-05-01 生效",
       "chart": {
         "chart_type": "step_after",
