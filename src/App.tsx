@@ -4,9 +4,12 @@ import { formatTimestamp } from "./lib/format";
 import { DashboardCard } from "./components/DashboardCard";
 import type { DashboardPayload } from "./types";
 
+const HKT_OFFSET_MS = 8 * 60 * 60 * 1000;
+
 function App() {
   const [dashboard, setDashboard] = useState<DashboardPayload | null>(null);
   const [error, setError] = useState<string | null>(null);
+  const [countdownText, setCountdownText] = useState<string>(() => formatCountdownToNextHkt9am());
 
   useEffect(() => {
     void fetchDashboard()
@@ -16,6 +19,14 @@ function App() {
       .catch((reason: unknown) => {
         setError(reason instanceof Error ? reason.message : "資料載入失敗");
       });
+  }, []);
+
+  useEffect(() => {
+    const timer = window.setInterval(() => {
+      setCountdownText(formatCountdownToNextHkt9am());
+    }, 1000);
+
+    return () => window.clearInterval(timer);
   }, []);
 
   if (error) {
@@ -51,6 +62,7 @@ function App() {
         </div>
         <div className="hero-meta">
           <p>網站更新於 {formatTimestamp(dashboard.generated_at)}</p>
+          <p>距離下次更新還有{countdownText}(時/分/秒)</p>
         </div>
       </section>
 
@@ -64,3 +76,28 @@ function App() {
 }
 
 export default App;
+
+function formatCountdownToNextHkt9am(now = new Date()): string {
+  const nextUpdate = nextHktNineAm(now);
+  const diffMs = Math.max(0, nextUpdate.getTime() - now.getTime());
+  const totalSeconds = Math.floor(diffMs / 1000);
+  const hours = Math.floor(totalSeconds / 3600);
+  const minutes = Math.floor((totalSeconds % 3600) / 60);
+  const seconds = totalSeconds % 60;
+
+  return [hours, minutes, seconds].map((value) => String(value).padStart(2, "0")).join(":");
+}
+
+function nextHktNineAm(now: Date): Date {
+  const hkNow = new Date(now.getTime() + HKT_OFFSET_MS);
+  const year = hkNow.getUTCFullYear();
+  const month = hkNow.getUTCMonth();
+  const day = hkNow.getUTCDate();
+
+  let targetMs = Date.UTC(year, month, day, 9, 0, 0) - HKT_OFFSET_MS;
+  if (targetMs <= now.getTime()) {
+    targetMs = Date.UTC(year, month, day + 1, 9, 0, 0) - HKT_OFFSET_MS;
+  }
+
+  return new Date(targetMs);
+}
