@@ -15,7 +15,8 @@ test("employment snapshot matches official latest values", () => {
   assert.equal(unemployment.latest_value, 3.9);
   assert.equal(unemployment.previous_value, 3.8);
   assert.equal(unemployment.change_value, 0.1);
-  assert.equal(unemployment.comparison_basis, "previous_rolling_window");
+  assert.equal(unemployment.comparison_type, "previous_rolling_window");
+  assert.equal(unemployment.comparison_period_label, "2025年10月–12月");
 
   const underemployment = card.metrics.find((item: any) => item.id === "underemployment");
   assert.equal(underemployment.latest_value, 1.7);
@@ -26,10 +27,10 @@ test("employment snapshot matches official latest values", () => {
   assert.equal(labourForce.change_value, -900);
 
   const unemploymentUi = uiCard.metrics.find((item: any) => item.id === "unemployment");
-  assert.equal(unemploymentUi.display_change_text, "較上一個三個月移動窗 +0.1 個百分點");
-  assert.equal(unemploymentUi.display_previous_text, "上一個三個月移動窗 3.8%");
+  assert.equal(unemploymentUi.display_change_text, "較上一個三個月移動窗（2025年10月–12月） +0.1 個百分點");
+  assert.equal(unemploymentUi.display_previous_text, "上一個三個月移動窗（2025年10月–12月） 3.8%");
 
   const labourForceUi = uiCard.metrics.find((item: any) => item.id === "labour_force");
   assert.equal(labourForceUi.display_value_text, "3,804,300");
-  assert.equal(labourForceUi.display_change_text, "較上一個三個月移動窗 -900");
+  assert.equal(labourForceUi.display_change_text, "較上一個三個月移動窗（2025年10月–12月） -900");
 });

@@ -20,6 +20,6 @@ test("period labels are normalized to dates or periods", () => {
 
   const minimumWage = canonical.cards
     .find((item: any) => item.id === "minimum-wage")
-    .metrics.find((item: any) => item.id === "statutory_minimum_wage");
-  assert.match(minimumWage.as_of_label, /^\d{4}-\d{2}-\d{2}$/);
+    .metrics.find((item: any) => item.id === "statutory_minimum_wage_next");
+  assert.equal(minimumWage.as_of_label, "2026-05-01");
 });

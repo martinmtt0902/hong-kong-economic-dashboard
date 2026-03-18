@@ -9,6 +9,6 @@ const labelMap: Record<MetricStatus, string> = {
   stale: "待官方更新"
 };
 
-export function FreshnessBadge({ state }: { state: MetricStatus }) {
-  return <span className={`badge badge-${state}`}>{labelMap[state]}</span>;
+export function FreshnessBadge({ state, label }: { state: MetricStatus; label?: string }) {
+  return <span className={`badge badge-${state}`}>{label ?? labelMap[state]}</span>;
 }

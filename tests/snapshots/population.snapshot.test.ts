@@ -16,17 +16,20 @@ test("population snapshot matches official headline values and reports", () => {
   assert.equal(population.previous_value, 7500600);
   assert.equal(population.change_value, 10200);
   assert.equal(population.comparison_basis_label_tc, "較去年同期");
+  assert.equal(population.comparison_period_label, "2024年底");
 
   const births = card.metrics.find((item: any) => item.id === "live_births");
   assert.equal(births.latest_value, 36723);
   assert.equal(births.previous_value, 33232);
+  assert.equal(births.comparison_period_label, "2023年");
 
   const medianAge = card.metrics.find((item: any) => item.id === "median_age");
   assert.equal(medianAge.latest_value, 48.4);
+  assert.equal(medianAge.comparison_period_label, "2024年");
 
   const populationUi = uiCard.metrics.find((item: any) => item.id === "population_total");
-  assert.equal(populationUi.display_change_text, "較去年同期 +10,200");
-  assert.equal(populationUi.display_previous_text, "去年同期 7,500,600");
+  assert.equal(populationUi.display_change_text, "較去年同期（2024年底） +10,200");
+  assert.equal(populationUi.display_previous_text, "去年同期（2024年底） 7,500,600");
 
   assert.ok(rawToTransformed.some((item) => item.metric_id === "population_total"));
   assert.match(preview, /## 人口/);

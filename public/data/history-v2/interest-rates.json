@@ -17,6 +17,12 @@
       "metric_type": "level",
       "frequency": "daily",
       "unit": "%",
+      "display_unit": "%",
+      "rounding_policy": {
+        "value_decimals": 1,
+        "change_decimals": 1,
+        "previous_decimals": 1
+      },
       "as_of_date": "2026-03-17",
       "as_of_label": "2026-03-17",
       "latest_value": 4,
@@ -25,8 +31,140 @@
       "previous_as_of_label": "2026-03-16",
       "change_value": 0,
       "change_type": "percentage_point_change",
+      "comparison_type": "previous_observation",
       "comparison_basis": "previous_observation",
       "comparison_basis_label_tc": "較上期",
+      "comparison_period_label": "2026-03-16",
+      "data_origin": "live",
+      "chart_definition": {
+        "series_id": "hkma|base_rate",
+        "metric_type": "level",
+        "chart_type": "line",
+        "frequency": "daily",
+        "unit": "%",
+        "display_unit": "%",
+        "period_start": "2025-10-20",
+        "period_end": "2026-03-17",
+        "x_axis_label": "日期",
+        "y_axis_label": "HKMA Base Rate (%)",
+        "value_label": "HKMA Base Rate",
+        "time_label": "日期",
+        "suggested_ticks": [
+          "2026-03-02",
+          "2026-03-10",
+          "2026-03-17"
+        ]
+      },
+      "chart_points": [
+        {
+          "as_of_date": "2026-03-02",
+          "as_of_label": "2026-03-02",
+          "tick_label": "2026-03-02",
+          "value": 4,
+          "display_value_text": "4.0%",
+          "tooltip_title": "2026-03-02",
+          "tooltip_value_text": "4.0%"
+        },
+        {
+          "as_of_date": "2026-03-03",
+          "as_of_label": "2026-03-03",
+          "tick_label": "2026-03-03",
+          "value": 4,
+          "display_value_text": "4.0%",
+          "tooltip_title": "2026-03-03",
+          "tooltip_value_text": "4.0%"
+        },
+        {
+          "as_of_date": "2026-03-04",
+          "as_of_label": "2026-03-04",
+          "tick_label": "2026-03-04",
+          "value": 4,
+          "display_value_text": "4.0%",
+          "tooltip_title": "2026-03-04",
+          "tooltip_value_text": "4.0%"
+        },
+        {
+          "as_of_date": "2026-03-05",
+          "as_of_label": "2026-03-05",
+          "tick_label": "2026-03-05",
+          "value": 4,
+          "display_value_text": "4.0%",
+          "tooltip_title": "2026-03-05",
+          "tooltip_value_text": "4.0%"
+        },
+        {
+          "as_of_date": "2026-03-06",
+          "as_of_label": "2026-03-06",
+          "tick_label": "2026-03-06",
+          "value": 4,
+          "display_value_text": "4.0%",
+          "tooltip_title": "2026-03-06",
+          "tooltip_value_text": "4.0%"
+        },
+        {
+          "as_of_date": "2026-03-09",
+          "as_of_label": "2026-03-09",
+          "tick_label": "2026-03-09",
+          "value": 4,
+          "display_value_text": "4.0%",
+          "tooltip_title": "2026-03-09",
+          "tooltip_value_text": "4.0%"
+        },
+        {
+          "as_of_date": "2026-03-10",
+          "as_of_label": "2026-03-10",
+          "tick_label": "2026-03-10",
+          "value": 4,
+          "display_value_text": "4.0%",
+          "tooltip_title": "2026-03-10",
+          "tooltip_value_text": "4.0%"
+        },
+        {
+          "as_of_date": "2026-03-11",
+          "as_of_label": "2026-03-11",
+          "tick_label": "2026-03-11",
+          "value": 4,
+          "display_value_text": "4.0%",
+          "tooltip_title": "2026-03-11",
+          "tooltip_value_text": "4.0%"
+        },
+        {
+          "as_of_date": "2026-03-12",
+          "as_of_label": "2026-03-12",
+          "tick_label": "2026-03-12",
+          "value": 4,
+          "display_value_text": "4.0%",
+          "tooltip_title": "2026-03-12",
+          "tooltip_value_text": "4.0%"
+        },
+        {
+          "as_of_date": "2026-03-13",
+          "as_of_label": "2026-03-13",
+          "tick_label": "2026-03-13",
+          "value": 4,
+          "display_value_text": "4.0%",
+          "tooltip_title": "2026-03-13",
+          "tooltip_value_text": "4.0%"
+        },
+        {
+          "as_of_date": "2026-03-16",
+          "as_of_label": "2026-03-16",
+          "tick_label": "2026-03-16",
+          "value": 4,
+          "display_value_text": "4.0%",
+          "tooltip_title": "2026-03-16",
+          "tooltip_value_text": "4.0%"
+        },
+        {
+          "as_of_date": "2026-03-17",
+          "as_of_label": "2026-03-17",
+          "tick_label": "2026-03-17",
+          "value": 4,
+          "display_value_text": "4.0%",
+          "tooltip_title": "2026-03-17",
+          "tooltip_value_text": "4.0%"
+        }
+      ],
       "sparkline_definition": {
         "series_id": "hkma|base_rate",
         "metric_type": "level",
@@ -96,15 +234,10 @@
           "value": 4
         }
       ],
-      "validation_state": "source_error",
-      "validation_messages": [
-        {
-          "code": "source_missing",
-          "level": "error",
-          "message_tc": "fetch failed"
-        }
-      ],
-      "expected_update": "每日"
+      "validation_state": "ok",
+      "validation_messages": [],
+      "expected_update": "每日",
+      "last_successful_fetch_at": "2026-03-18T03:41:58.938Z"
     },
     {
       "id": "hibor_1m",
@@ -119,6 +252,12 @@
       "metric_type": "level",
       "frequency": "daily",
       "unit": "%",
+      "display_unit": "%",
+      "rounding_policy": {
+        "value_decimals": 1,
+        "change_decimals": 1,
+        "previous_decimals": 1
+      },
       "as_of_date": "2026-03-17",
       "as_of_label": "2026-03-17",
       "latest_value": 2.08173,
@@ -127,8 +266,140 @@
       "previous_as_of_label": "2026-03-16",
       "change_value": 0.0254,
       "change_type": "percentage_point_change",
+      "comparison_type": "previous_observation",
       "comparison_basis": "previous_observation",
       "comparison_basis_label_tc": "較上期",
+      "comparison_period_label": "2026-03-16",
+      "data_origin": "live",
+      "chart_definition": {
+        "series_id": "hkma|hibor_1m",
+        "metric_type": "level",
+        "chart_type": "line",
+        "frequency": "daily",
+        "unit": "%",
+        "display_unit": "%",
+        "period_start": "2025-10-20",
+        "period_end": "2026-03-17",
+        "x_axis_label": "日期",
+        "y_axis_label": "1個月 HIBOR (%)",
+        "value_label": "1個月 HIBOR",
+        "time_label": "日期",
+        "suggested_ticks": [
+          "2026-03-02",
+          "2026-03-10",
+          "2026-03-17"
+        ]
+      },
+      "chart_points": [
+        {
+          "as_of_date": "2026-03-02",
+          "as_of_label": "2026-03-02",
+          "tick_label": "2026-03-02",
+          "value": 2.35518,
+          "display_value_text": "2.4%",
+          "tooltip_title": "2026-03-02",
+          "tooltip_value_text": "2.4%"
+        },
+        {
+          "as_of_date": "2026-03-03",
+          "as_of_label": "2026-03-03",
+          "tick_label": "2026-03-03",
+          "value": 2.30446,
+          "display_value_text": "2.3%",
+          "tooltip_title": "2026-03-03",
+          "tooltip_value_text": "2.3%"
+        },
+        {
+          "as_of_date": "2026-03-04",
+          "as_of_label": "2026-03-04",
+          "tick_label": "2026-03-04",
+          "value": 2.41399,
+          "display_value_text": "2.4%",
+          "tooltip_title": "2026-03-04",
+          "tooltip_value_text": "2.4%"
+        },
+        {
+          "as_of_date": "2026-03-05",
+          "as_of_label": "2026-03-05",
+          "tick_label": "2026-03-05",
+          "value": 2.31179,
+          "display_value_text": "2.3%",
+          "tooltip_title": "2026-03-05",
+          "tooltip_value_text": "2.3%"
+        },
+        {
+          "as_of_date": "2026-03-06",
+          "as_of_label": "2026-03-06",
+          "tick_label": "2026-03-06",
+          "value": 2.19613,
+          "display_value_text": "2.2%",
+          "tooltip_title": "2026-03-06",
+          "tooltip_value_text": "2.2%"
+        },
+        {
+          "as_of_date": "2026-03-09",
+          "as_of_label": "2026-03-09",
+          "tick_label": "2026-03-09",
+          "value": 2.04524,
+          "display_value_text": "2.0%",
+          "tooltip_title": "2026-03-09",
+          "tooltip_value_text": "2.0%"
+        },
+        {
+          "as_of_date": "2026-03-10",
+          "as_of_label": "2026-03-10",
+          "tick_label": "2026-03-10",
+          "value": 2.02083,
+          "display_value_text": "2.0%",
+          "tooltip_title": "2026-03-10",
+          "tooltip_value_text": "2.0%"
+        },
+        {
+          "as_of_date": "2026-03-11",
+          "as_of_label": "2026-03-11",
+          "tick_label": "2026-03-11",
+          "value": 2.02982,
+          "display_value_text": "2.0%",
+          "tooltip_title": "2026-03-11",
+          "tooltip_value_text": "2.0%"
+        },
+        {
+          "as_of_date": "2026-03-12",
+          "as_of_label": "2026-03-12",
+          "tick_label": "2026-03-12",
+          "value": 2.02982,
+          "display_value_text": "2.0%",
+          "tooltip_title": "2026-03-12",
+          "tooltip_value_text": "2.0%"
+        },
+        {
+          "as_of_date": "2026-03-13",
+          "as_of_label": "2026-03-13",
+          "tick_label": "2026-03-13",
+          "value": 2.07583,
+          "display_value_text": "2.1%",
+          "tooltip_title": "2026-03-13",
+          "tooltip_value_text": "2.1%"
+        },
+        {
+          "as_of_date": "2026-03-16",
+          "as_of_label": "2026-03-16",
+          "tick_label": "2026-03-16",
+          "value": 2.05637,
+          "display_value_text": "2.1%",
+          "tooltip_title": "2026-03-16",
+          "tooltip_value_text": "2.1%"
+        },
+        {
+          "as_of_date": "2026-03-17",
+          "as_of_label": "2026-03-17",
+          "tick_label": "2026-03-17",
+          "value": 2.08173,
+          "display_value_text": "2.1%",
+          "tooltip_title": "2026-03-17",
+          "tooltip_value_text": "2.1%"
+        }
+      ],
       "sparkline_definition": {
         "series_id": "hkma|hibor_1m",
         "metric_type": "level",
@@ -198,15 +469,10 @@
           "value": 2.08173
         }
       ],
-      "validation_state": "source_error",
-      "validation_messages": [
-        {
-          "code": "source_missing",
-          "level": "error",
-          "message_tc": "fetch failed"
-        }
-      ],
-      "expected_update": "每日"
+      "validation_state": "ok",
+      "validation_messages": [],
+      "expected_update": "每日",
+      "last_successful_fetch_at": "2026-03-18T03:41:58.938Z"
     }
   ]
 }

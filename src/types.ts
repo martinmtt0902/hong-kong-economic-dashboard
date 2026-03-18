@@ -14,9 +14,34 @@ export type MetricStatus =
   | "source_error"
   | "stale";
 
+export type DataOrigin =
+  | "live"
+  | "last_successful_snapshot"
+  | "last_verified_snapshot"
+  | "status_only";
+
 export type UISparklinePoint = {
   x: string;
   y: number;
+};
+
+export type UIChartPoint = {
+  x: string;
+  y: number;
+  tick_label: string;
+  tooltip_title: string;
+  tooltip_value_text: string;
+};
+
+export type UIChart = {
+  chart_type: "line" | "step_after";
+  x_axis_label: string;
+  y_axis_label: string;
+  time_label: string;
+  value_label: string;
+  display_unit: string;
+  suggested_ticks: string[];
+  points: UIChartPoint[];
 };
 
 export type UIMetricRow = {
@@ -31,7 +56,14 @@ export type UIMetricRow = {
   display_change_text: string;
   display_previous_text: string;
   display_period_text: string;
+  display_comparison_text: string;
   display_comparison_basis_text: string;
+  display_comparison_period_text?: string;
+  display_unit: string;
+  data_origin: DataOrigin;
+  last_successful_fetch_at?: string;
+  reason?: string;
+  chart: UIChart;
   sparkline_points: UISparklinePoint[];
   expected_update?: string;
 };

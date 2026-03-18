@@ -1,28 +1,106 @@
 {
   "id": "minimum-wage",
   "title_tc": "最低工資",
-  "latest_data_at": "2026-04-30",
-  "latest_data_label": "2026-04-30",
+  "latest_data_at": "2025-05-01",
+  "latest_data_label": "2025-05-01",
   "metrics": [
     {
-      "id": "statutory_minimum_wage",
-      "label_tc": "法定最低工資",
+      "id": "statutory_minimum_wage_current",
+      "label_tc": "現行法定最低工資",
       "source_name": "勞工處",
       "source_url": "https://www.labour.gov.hk/eng/news/mwo.htm",
       "status": "ok",
       "status_text_tc": "最新",
-      "display_value_text": "HK$43.1",
-      "display_change_text": "較上一次生效值 +1",
-      "display_previous_text": "上一次生效值 HK$42.1",
-      "display_period_text": "2026-04-30",
+      "display_value_text": "HK$42.1/小時",
+      "display_change_text": "沒有可比較期",
+      "display_previous_text": "沒有可比較期",
+      "display_period_text": "2025-05-01",
+      "display_comparison_text": "沒有可比較期",
       "display_comparison_basis_text": "較上一次生效值",
+      "display_unit": "HK$/小時",
+      "data_origin": "live",
+      "last_successful_fetch_at": "2026-03-18T03:41:58.938Z",
+      "chart": {
+        "chart_type": "step_after",
+        "x_axis_label": "生效日期",
+        "y_axis_label": "法定最低工資 (HK$/小時)",
+        "time_label": "生效日期",
+        "value_label": "法定最低工資",
+        "display_unit": "HK$/小時",
+        "suggested_ticks": [
+          "2025-05-01"
+        ],
+        "points": [
+          {
+            "x": "2025-05-01",
+            "y": 42.1,
+            "tick_label": "2025-05-01",
+            "tooltip_title": "2025-05-01",
+            "tooltip_value_text": "HK$42.1/小時"
+          }
+        ]
+      },
       "sparkline_points": [
         {
-          "x": "2025-04-30",
+          "x": "2025-05-01",
+          "y": 42.1
+        }
+      ],
+      "expected_update": "按政策變動"
+    },
+    {
+      "id": "statutory_minimum_wage_next",
+      "label_tc": "下一個法定最低工資",
+      "source_name": "勞工處",
+      "source_url": "https://www.labour.gov.hk/eng/news/mwo.htm",
+      "status": "ok",
+      "status_text_tc": "最新",
+      "display_value_text": "HK$43.1/小時",
+      "display_change_text": "較上一次生效值（2025-05-01） +HK$1.0/小時",
+      "display_previous_text": "上一次生效值（2025-05-01） HK$42.1/小時",
+      "display_period_text": "2026-05-01",
+      "display_comparison_text": "較上一次生效值（2025-05-01） +HK$1.0/小時",
+      "display_comparison_basis_text": "較上一次生效值",
+      "display_comparison_period_text": "2025-05-01",
+      "display_unit": "HK$/小時",
+      "data_origin": "live",
+      "last_successful_fetch_at": "2026-03-18T03:41:58.938Z",
+      "reason": "將於 2026-05-01 生效",
+      "chart": {
+        "chart_type": "step_after",
+        "x_axis_label": "生效日期",
+        "y_axis_label": "法定最低工資 (HK$/小時)",
+        "time_label": "生效日期",
+        "value_label": "法定最低工資",
+        "display_unit": "HK$/小時",
+        "suggested_ticks": [
+          "2025-05-01",
+          "2026-05-01"
+        ],
+        "points": [
+          {
+            "x": "2025-05-01",
+            "y": 42.1,
+            "tick_label": "2025-05-01",
+            "tooltip_title": "2025-05-01",
+            "tooltip_value_text": "HK$42.1/小時"
+          },
+          {
+            "x": "2026-05-01",
+            "y": 43.1,
+            "tick_label": "2026-05-01",
+            "tooltip_title": "2026-05-01",
+            "tooltip_value_text": "HK$43.1/小時"
+          }
+        ]
+      },
+      "sparkline_points": [
+        {
+          "x": "2025-05-01",
           "y": 42.1
         },
         {
-          "x": "2026-04-30",
+          "x": "2026-05-01",
           "y": 43.1
         }
       ],

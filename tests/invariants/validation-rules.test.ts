@@ -31,7 +31,10 @@ test("long-term validation invariants hold", () => {
 
   const metrics = payload.cards.flatMap((card: any) => card.metrics);
   for (const metric of metrics) {
-    assert.ok(metric.sparkline_definition);
+    assert.ok(metric.chart_definition);
     assert.ok(metric.validation_state);
+    if (typeof metric.previous_value === "number") {
+      assert.ok(metric.comparison_period_label);
+    }
   }
 });

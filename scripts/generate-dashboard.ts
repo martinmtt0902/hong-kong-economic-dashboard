@@ -5,11 +5,12 @@ import { fetchCsvObservations } from "./fetch/csvSource";
 import { fetchDhBirthObservations } from "./fetch/dhBirths";
 import { fetchBaseRateObservations, fetchHibor1MObservations } from "./fetch/hkma";
 import { fetchMinimumWageObservations } from "./fetch/labour";
+import { fetchRvdIndexObservations } from "./fetch/rvdIndex";
 import { fetchRvdCompletionsObservations } from "./fetch/rvd";
 import { metricDefinitions, type MetricDefinitionRecord, type MetricPipelineDefinition } from "./lib/metric-definition";
 import { renderPreviewMarkdown } from "./lib/render-preview";
 import { cardDefinitions } from "./lib/source";
-import { buildTransformedMetric, latestCardMetric } from "./lib/transform";
+import { buildTransformedMetric, latestCardMetric, selectCardHeaderMetric } from "./lib/transform";
 import { toDashboardPayload, toUIMetricRow } from "./lib/ui-adapter";
 import type {
   DashboardCardV2,
@@ -33,6 +34,7 @@ const rawDir = path.join(root, "artifacts", "raw");
 
 export async function generateDashboardArtifacts() {
   const generatedAt = new Date().toISOString();
+  const referenceDate = generatedAt.slice(0, 10);
   const previous = await loadPreviousDashboardV2();
   const previousMetrics = indexPreviousMetrics(previous);
 
@@ -43,14 +45,17 @@ export async function generateDashboardArtifacts() {
   await mkdir(rawDir, { recursive: true });
 
   const metricResults = await Promise.all(
-    metricDefinitions.map((definition) => resolveMetric(definition, previousMetrics[definition.metric.id]))
+    metricDefinitions.map((definition) => resolveMetric(definition, previousMetrics[definition.metric.id], generatedAt, referenceDate))
   );
 
   const cardsV2: DashboardCardV2[] = cardDefinitions.map((card) => {
     const metrics = metricResults
       .filter((result) => result.metric.card_id === card.id)
       .map((result) => result.metric);
-    const latestMetric = latestCardMetric(metrics);
+    const latestMetric =
+      card.header_mode === "latest_by_priority"
+        ? selectCardHeaderMetric(metrics, card.header_metric_priority)
+        : latestCardMetric(metrics);
 
     return {
       id: card.id,
@@ -98,7 +103,18 @@ export async function generateDashboardArtifacts() {
       auxiliary: result.auxiliarySeries
     },
     transformed_payload: result.metric,
-    rendered_preview: toUIMetricRow(result.metric)
+    rendered_preview: toUIMetricRow(result.metric),
+    comparison_type: result.metric.comparison_type,
+    comparison_period_label: result.metric.comparison_period_label,
+    display_unit: result.metric.display_unit,
+    validation_state: result.metric.validation_state,
+    chart_series_source: result.metric.chart_definition.series_id,
+    chart_x_axis_label: result.metric.chart_definition.x_axis_label,
+    chart_y_axis_label: result.metric.chart_definition.y_axis_label,
+    chart_sample_ticks: result.metric.chart_definition.suggested_ticks,
+    chart_tooltip_example: result.metric.chart_points[0]
+      ? `${result.metric.chart_points[0].tooltip_title} | ${result.metric.chart_points[0].tooltip_value_text}`
+      : null
   }));
 
   await writeJson(path.join(reportsDir, "raw-to-transformed.json"), reportRows);
@@ -114,7 +130,12 @@ export async function generateDashboardArtifacts() {
   );
 }
 
-async function resolveMetric(definition: MetricPipelineDefinition, previousMetric?: TransformedMetric) {
+async function resolveMetric(
+  definition: MetricPipelineDefinition,
+  previousMetric: TransformedMetric | undefined,
+  generatedAt: string,
+  referenceDate: string
+) {
   try {
     const primarySeries = await loadObservations(definition.metric);
     const auxiliarySeries = definition.auxiliary_series
@@ -122,24 +143,34 @@ async function resolveMetric(definition: MetricPipelineDefinition, previousMetri
       : [];
 
     await writeJson(path.join(rawDir, `${definition.metric.id}.json`), {
-      metric_id: definition.metric.id,
-      primary_series: primarySeries,
-      auxiliary_series: auxiliarySeries
-    });
+        metric_id: definition.metric.id,
+        primary_series: primarySeries,
+        auxiliary_series: auxiliarySeries
+      });
 
     if (primarySeries.length === 0) {
       return {
-        metric: fallbackMetric(definition.metric, previousMetric, "schema_changed", "來源欄位變更或找不到對應序列。"),
+        metric: fallbackMetric(
+          definition.metric,
+          previousMetric,
+          "schema_changed",
+          "來源欄位變更或找不到對應序列。",
+          generatedAt
+        ),
         primarySeries,
         auxiliarySeries
       };
     }
 
-    const metric = buildTransformedMetric({
+    const metric = {
+      ...buildTransformedMetric({
       definition: definition.metric,
       primarySeries,
-      auxiliarySeries
-    });
+      auxiliarySeries,
+      referenceDate
+      }),
+      last_successful_fetch_at: generatedAt
+    };
 
     return {
       metric,
@@ -152,7 +183,8 @@ async function resolveMetric(definition: MetricPipelineDefinition, previousMetri
         definition.metric,
         previousMetric,
         "source_error",
-        error instanceof Error ? error.message : "未知抓取錯誤"
+        error instanceof Error ? error.message : "未知抓取錯誤",
+        generatedAt
       ),
       primarySeries: [],
       auxiliarySeries: []
@@ -190,6 +222,8 @@ async function loadObservations(definition: MetricDefinitionRecord): Promise<Raw
       return fetchDhBirthObservations(definition.url, definition.source, definition.series_label_tc);
     case "minimum_wage":
       return fetchMinimumWageObservations(definition.source, definition.series_label_tc);
+    case "rvd_index":
+      return fetchRvdIndexObservations(definition.url, definition.source, definition.series_label_tc, definition.series_key);
     case "hkma":
       return definition.metric_key === "base_rate"
         ? fetchBaseRateObservations(definition.source, definition.series_label_tc)
@@ -218,7 +252,8 @@ function fallbackMetric(
   definition: MetricDefinitionRecord,
   previousMetric: TransformedMetric | undefined,
   state: TransformedMetric["validation_state"],
-  message: string
+  message: string,
+  generatedAt: string
 ): TransformedMetric {
   if (previousMetric) {
     return {
@@ -226,7 +261,12 @@ function fallbackMetric(
       source: definition.source,
       validation_state: state,
       validation_messages: [{ code: state === "schema_changed" ? "schema_changed" : "source_missing", level: "error", message_tc: message }],
-      expected_update: definition.expected_update
+      expected_update: definition.expected_update,
+      data_origin: state === "schema_changed" ? "last_verified_snapshot" : "last_successful_snapshot",
+      last_successful_fetch_at: previousMetric.last_successful_fetch_at ?? previousMetric.as_of_date,
+      last_verified_value: previousMetric.latest_value,
+      last_verified_period: previousMetric.as_of_label,
+      reason: state === "schema_changed" ? "source schema changed" : message
     };
   }
 
@@ -239,11 +279,36 @@ function fallbackMetric(
     metric_type: definition.metric_type,
     frequency: definition.frequency,
     unit: definition.unit,
+    display_unit: definition.display_unit ?? definition.unit,
+    rounding_policy: definition.rounding_policy ?? {
+      value_decimals: 0,
+      change_decimals: 0,
+      previous_decimals: 0
+    },
     as_of_date: "",
     as_of_label: "",
     change_type: definition.change_type,
+    comparison_type: definition.comparison_basis,
     comparison_basis: definition.comparison_basis,
     comparison_basis_label_tc: definition.comparison_basis_label_tc,
+    data_origin: "status_only",
+    reason: state === "schema_changed" ? "source schema changed" : message,
+    chart_definition: {
+      series_id: definition.id,
+      metric_type: definition.sparkline_metric_type ?? definition.metric_type,
+      chart_type: definition.chart_type ?? "line",
+      frequency: definition.frequency,
+      unit: definition.unit,
+      display_unit: definition.display_unit ?? definition.unit,
+      period_start: "",
+      period_end: "",
+      x_axis_label: definition.chart_time_label ?? "期間",
+      y_axis_label: `${definition.chart_value_label ?? definition.label_tc} (${definition.display_unit ?? definition.unit})`,
+      value_label: definition.chart_value_label ?? definition.label_tc,
+      time_label: definition.chart_time_label ?? "期間",
+      suggested_ticks: []
+    },
+    chart_points: [],
     sparkline_definition: {
       series_id: definition.id,
       metric_type: definition.sparkline_metric_type ?? definition.metric_type,

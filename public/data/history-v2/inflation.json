@@ -18,6 +18,12 @@
       "metric_type": "yoy_percent",
       "frequency": "monthly",
       "unit": "%",
+      "display_unit": "%",
+      "rounding_policy": {
+        "value_decimals": 1,
+        "change_decimals": 1,
+        "previous_decimals": 1
+      },
       "as_of_date": "2026-01-31",
       "as_of_label": "2026年1月",
       "latest_value": 1.1,
@@ -26,8 +32,140 @@
       "previous_as_of_label": "2025年12月",
       "change_value": -0.3,
       "change_type": "percentage_point_change",
+      "comparison_type": "previous_observation",
       "comparison_basis": "previous_observation",
       "comparison_basis_label_tc": "較上期",
+      "comparison_period_label": "2025年12月",
+      "data_origin": "live",
+      "chart_definition": {
+        "series_id": "censtatd|510-60001A|GROUP=|freq=M|measure=CC_CM_1920|label=按年變動百分率",
+        "metric_type": "yoy_percent",
+        "chart_type": "line",
+        "frequency": "monthly",
+        "unit": "%",
+        "display_unit": "%",
+        "period_start": "1981-10-31",
+        "period_end": "2026-01-31",
+        "x_axis_label": "月份",
+        "y_axis_label": "綜合 CPI 按年變動 (%)",
+        "value_label": "綜合 CPI 按年變動",
+        "time_label": "月份",
+        "suggested_ticks": [
+          "2025-02",
+          "2025-08",
+          "2026-01"
+        ]
+      },
+      "chart_points": [
+        {
+          "as_of_date": "2025-02-28",
+          "as_of_label": "2025年2月",
+          "tick_label": "2025-02",
+          "value": 1.4,
+          "display_value_text": "+1.4%",
+          "tooltip_title": "2025年2月",
+          "tooltip_value_text": "+1.4%"
+        },
+        {
+          "as_of_date": "2025-03-31",
+          "as_of_label": "2025年3月",
+          "tick_label": "2025-03",
+          "value": 1.4,
+          "display_value_text": "+1.4%",
+          "tooltip_title": "2025年3月",
+          "tooltip_value_text": "+1.4%"
+        },
+        {
+          "as_of_date": "2025-04-30",
+          "as_of_label": "2025年4月",
+          "tick_label": "2025-04",
+          "value": 2,
+          "display_value_text": "+2.0%",
+          "tooltip_title": "2025年4月",
+          "tooltip_value_text": "+2.0%"
+        },
+        {
+          "as_of_date": "2025-05-31",
+          "as_of_label": "2025年5月",
+          "tick_label": "2025-05",
+          "value": 1.9,
+          "display_value_text": "+1.9%",
+          "tooltip_title": "2025年5月",
+          "tooltip_value_text": "+1.9%"
+        },
+        {
+          "as_of_date": "2025-06-30",
+          "as_of_label": "2025年6月",
+          "tick_label": "2025-06",
+          "value": 1.4,
+          "display_value_text": "+1.4%",
+          "tooltip_title": "2025年6月",
+          "tooltip_value_text": "+1.4%"
+        },
+        {
+          "as_of_date": "2025-07-31",
+          "as_of_label": "2025年7月",
+          "tick_label": "2025-07",
+          "value": 1,
+          "display_value_text": "+1.0%",
+          "tooltip_title": "2025年7月",
+          "tooltip_value_text": "+1.0%"
+        },
+        {
+          "as_of_date": "2025-08-31",
+          "as_of_label": "2025年8月",
+          "tick_label": "2025-08",
+          "value": 1.1,
+          "display_value_text": "+1.1%",
+          "tooltip_title": "2025年8月",
+          "tooltip_value_text": "+1.1%"
+        },
+        {
+          "as_of_date": "2025-09-30",
+          "as_of_label": "2025年9月",
+          "tick_label": "2025-09",
+          "value": 1.1,
+          "display_value_text": "+1.1%",
+          "tooltip_title": "2025年9月",
+          "tooltip_value_text": "+1.1%"
+        },
+        {
+          "as_of_date": "2025-10-31",
+          "as_of_label": "2025年10月",
+          "tick_label": "2025-10",
+          "value": 1.2,
+          "display_value_text": "+1.2%",
+          "tooltip_title": "2025年10月",
+          "tooltip_value_text": "+1.2%"
+        },
+        {
+          "as_of_date": "2025-11-30",
+          "as_of_label": "2025年11月",
+          "tick_label": "2025-11",
+          "value": 1.2,
+          "display_value_text": "+1.2%",
+          "tooltip_title": "2025年11月",
+          "tooltip_value_text": "+1.2%"
+        },
+        {
+          "as_of_date": "2025-12-31",
+          "as_of_label": "2025年12月",
+          "tick_label": "2025-12",
+          "value": 1.4,
+          "display_value_text": "+1.4%",
+          "tooltip_title": "2025年12月",
+          "tooltip_value_text": "+1.4%"
+        },
+        {
+          "as_of_date": "2026-01-31",
+          "as_of_label": "2026年1月",
+          "tick_label": "2026-01",
+          "value": 1.1,
+          "display_value_text": "+1.1%",
+          "tooltip_title": "2026年1月",
+          "tooltip_value_text": "+1.1%"
+        }
+      ],
       "sparkline_definition": {
         "series_id": "censtatd|510-60001A|GROUP=|freq=M|measure=CC_CM_1920|label=按年變動百分率",
         "metric_type": "yoy_percent",
@@ -99,7 +237,8 @@
       ],
       "validation_state": "ok",
       "validation_messages": [],
-      "expected_update": "每月"
+      "expected_update": "每月",
+      "last_successful_fetch_at": "2026-03-18T03:41:58.938Z"
     }
   ]
 }

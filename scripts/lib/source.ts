@@ -22,14 +22,31 @@ export const URLs = {
     "https://api.hkma.gov.hk/public/market-data-and-statistics/daily-monetary-statistics/daily-figures-interbank-liquidity"
 } as const;
 
+export type CardDefinition = {
+  id: string;
+  title_tc: string;
+  header_mode: "latest_by_priority" | "latest_by_date";
+  header_metric_priority: string[];
+};
+
 export const cardDefinitions = [
-  { id: "employment", title_tc: "就業" },
-  { id: "inflation", title_tc: "通脹" },
-  { id: "gdp", title_tc: "GDP" },
-  { id: "consumption-travel", title_tc: "消費與旅遊" },
-  { id: "minimum-wage", title_tc: "最低工資" },
-  { id: "population", title_tc: "人口" },
-  { id: "housing", title_tc: "住屋" },
-  { id: "fiscal", title_tc: "公共財政" },
-  { id: "interest-rates", title_tc: "利率" }
-] as const;
+  { id: "employment", title_tc: "就業", header_mode: "latest_by_date", header_metric_priority: [] },
+  { id: "inflation", title_tc: "通脹", header_mode: "latest_by_date", header_metric_priority: [] },
+  { id: "gdp", title_tc: "GDP", header_mode: "latest_by_date", header_metric_priority: [] },
+  { id: "consumption-travel", title_tc: "消費與旅遊", header_mode: "latest_by_date", header_metric_priority: [] },
+  {
+    id: "minimum-wage",
+    title_tc: "最低工資",
+    header_mode: "latest_by_priority",
+    header_metric_priority: ["statutory_minimum_wage_current", "statutory_minimum_wage_next"]
+  },
+  { id: "population", title_tc: "人口", header_mode: "latest_by_date", header_metric_priority: [] },
+  {
+    id: "housing",
+    title_tc: "住屋",
+    header_mode: "latest_by_priority",
+    header_metric_priority: ["private_price_index", "private_rent_index", "private_completions"]
+  },
+  { id: "fiscal", title_tc: "公共財政", header_mode: "latest_by_date", header_metric_priority: [] },
+  { id: "interest-rates", title_tc: "利率", header_mode: "latest_by_date", header_metric_priority: [] }
+] satisfies CardDefinition[];

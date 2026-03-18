@@ -32,6 +32,13 @@ export const comparisonBasisSchema = z.enum([
   "event_previous_effective"
 ]);
 
+export const dataOriginSchema = z.enum([
+  "live",
+  "last_successful_snapshot",
+  "last_verified_snapshot",
+  "status_only"
+]);
+
 export const validationStateSchema = z.enum([
   "ok",
   "data_error",
@@ -78,6 +85,15 @@ export const rawObservationSchema = z.object({
   provisional: z.boolean().optional()
 });
 
+export const roundingPolicySchema = z.object({
+  value_decimals: z.number().int().nonnegative(),
+  change_decimals: z.number().int().nonnegative(),
+  previous_decimals: z.number().int().nonnegative(),
+  display_scale: z.number().positive().optional(),
+  display_scale_label: z.string().optional(),
+  approximate_prefix: z.string().optional()
+});
+
 export const sparklineDefinitionSchema = z.object({
   series_id: z.string(),
   metric_type: metricTypeSchema,
@@ -90,6 +106,32 @@ export const sparklinePointSchema = z.object({
   as_of_date: z.string(),
   as_of_label: z.string(),
   value: z.number()
+});
+
+export const chartDefinitionSchema = z.object({
+  series_id: z.string(),
+  metric_type: metricTypeSchema,
+  chart_type: z.enum(["line", "step_after"]),
+  frequency: frequencySchema,
+  unit: z.string(),
+  display_unit: z.string(),
+  period_start: z.string(),
+  period_end: z.string(),
+  x_axis_label: z.string(),
+  y_axis_label: z.string(),
+  value_label: z.string(),
+  time_label: z.string(),
+  suggested_ticks: z.array(z.string())
+});
+
+export const chartPointSchema = z.object({
+  as_of_date: z.string(),
+  as_of_label: z.string(),
+  tick_label: z.string(),
+  value: z.number(),
+  display_value_text: z.string(),
+  tooltip_title: z.string(),
+  tooltip_value_text: z.string()
 });
 
 export const validationMessageSchema = z.object({
@@ -108,6 +150,8 @@ export const transformedMetricSchema = z.object({
   metric_type: metricTypeSchema,
   frequency: frequencySchema,
   unit: z.string(),
+  display_unit: z.string(),
+  rounding_policy: roundingPolicySchema,
   as_of_date: z.string(),
   as_of_label: z.string(),
   release_date: z.string().optional(),
@@ -117,8 +161,17 @@ export const transformedMetricSchema = z.object({
   previous_as_of_label: z.string().optional(),
   change_value: z.number().optional(),
   change_type: changeTypeSchema,
+  comparison_type: comparisonBasisSchema,
   comparison_basis: comparisonBasisSchema,
   comparison_basis_label_tc: z.string(),
+  comparison_period_label: z.string().optional(),
+  data_origin: dataOriginSchema,
+  last_successful_fetch_at: z.string().optional(),
+  last_verified_value: z.number().optional(),
+  last_verified_period: z.string().optional(),
+  reason: z.string().optional(),
+  chart_definition: chartDefinitionSchema,
+  chart_points: z.array(chartPointSchema),
   sparkline_definition: sparklineDefinitionSchema,
   sparkline_points: z.array(sparklinePointSchema),
   validation_state: validationStateSchema,
@@ -146,6 +199,25 @@ export const uiSparklinePointSchema = z.object({
   y: z.number()
 });
 
+export const uiChartPointSchema = z.object({
+  x: z.string(),
+  y: z.number(),
+  tick_label: z.string(),
+  tooltip_title: z.string(),
+  tooltip_value_text: z.string()
+});
+
+export const uiChartSchema = z.object({
+  chart_type: z.enum(["line", "step_after"]),
+  x_axis_label: z.string(),
+  y_axis_label: z.string(),
+  time_label: z.string(),
+  value_label: z.string(),
+  display_unit: z.string(),
+  suggested_ticks: z.array(z.string()),
+  points: z.array(uiChartPointSchema)
+});
+
 export const uiMetricRowSchema = z.object({
   id: z.string(),
   label_tc: z.string(),
@@ -158,7 +230,14 @@ export const uiMetricRowSchema = z.object({
   display_change_text: z.string(),
   display_previous_text: z.string(),
   display_period_text: z.string(),
+  display_comparison_text: z.string(),
   display_comparison_basis_text: z.string(),
+  display_comparison_period_text: z.string().optional(),
+  display_unit: z.string(),
+  data_origin: dataOriginSchema,
+  last_successful_fetch_at: z.string().optional(),
+  reason: z.string().optional(),
+  chart: uiChartSchema,
   sparkline_points: z.array(uiSparklinePointSchema),
   expected_update: z.string().optional()
 });
@@ -188,16 +267,22 @@ export type Frequency = z.infer<typeof frequencySchema>;
 export type MetricType = z.infer<typeof metricTypeSchema>;
 export type ChangeType = z.infer<typeof changeTypeSchema>;
 export type ComparisonBasis = z.infer<typeof comparisonBasisSchema>;
+export type ComparisonType = z.infer<typeof comparisonBasisSchema>;
+export type DataOrigin = z.infer<typeof dataOriginSchema>;
 export type ValidationState = z.infer<typeof validationStateSchema>;
 export type ValidationMessageCode = z.infer<typeof validationMessageCodeSchema>;
 export type SourceRef = z.infer<typeof sourceRefSchema>;
 export type RawObservation = z.infer<typeof rawObservationSchema>;
+export type RoundingPolicy = z.infer<typeof roundingPolicySchema>;
 export type SparklineDefinition = z.infer<typeof sparklineDefinitionSchema>;
 export type SparklinePoint = z.infer<typeof sparklinePointSchema>;
+export type ChartDefinition = z.infer<typeof chartDefinitionSchema>;
+export type ChartPoint = z.infer<typeof chartPointSchema>;
 export type ValidationMessage = z.infer<typeof validationMessageSchema>;
 export type TransformedMetric = z.infer<typeof transformedMetricSchema>;
 export type DashboardCardV2 = z.infer<typeof dashboardCardV2Schema>;
 export type DashboardPayloadV2 = z.infer<typeof dashboardPayloadV2Schema>;
+export type UIChart = z.infer<typeof uiChartSchema>;
 export type UIMetricRow = z.infer<typeof uiMetricRowSchema>;
 export type DashboardCard = z.infer<typeof dashboardCardSchema>;
 export type DashboardPayload = z.infer<typeof dashboardPayloadSchema>;
@@ -216,6 +301,8 @@ export type MetricDefinition = {
   source: SourceRef;
   frequency: Frequency;
   unit: string;
+  display_unit?: string;
+  rounding_policy?: RoundingPolicy;
   metric_type: MetricType;
   change_type: ChangeType;
   comparison_basis: ComparisonBasis;
@@ -224,6 +311,10 @@ export type MetricDefinition = {
   expected_update?: string;
   sparkline_metric_type?: MetricType;
   sparkline_series_role?: "primary" | "auxiliary";
+  chart_type?: "line" | "step_after";
+  chart_time_label?: string;
+  chart_value_label?: string;
+  chart_tick_mode?: "compact" | "full";
   validation?: {
     min?: number;
     max?: number;

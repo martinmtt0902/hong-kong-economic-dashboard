@@ -73,11 +73,19 @@ export function validateTransformedMetric(
     });
   }
 
-  if (!metric.sparkline_definition.series_id) {
+  if (!metric.chart_definition.series_id) {
     messages.push({
       code: "source_missing",
       level: "error",
-      message_tc: "Sparkline 定義缺失。"
+      message_tc: "圖表定義缺失。"
+    });
+  }
+
+  if (typeof metric.previous_value === "number" && !metric.comparison_period_label) {
+    messages.push({
+      code: "comparison_missing",
+      level: "error",
+      message_tc: "比較期間標籤缺失。"
     });
   }
 

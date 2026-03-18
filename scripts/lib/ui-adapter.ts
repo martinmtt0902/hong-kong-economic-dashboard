@@ -1,4 +1,3 @@
-import { latestCardMetric } from "./transform";
 import type { DashboardCard, DashboardPayload, DashboardPayloadV2, TransformedMetric, UIMetricRow, ValidationState } from "./types";
 
 const statusTextMap: Record<ValidationState, string> = {
@@ -14,14 +13,13 @@ export function toDashboardPayload(payloadV2: DashboardPayloadV2): DashboardPayl
   return {
     generated_at: payloadV2.generated_at,
     cards: payloadV2.cards.map((card) => {
-      const latestMetric = latestCardMetric(card.metrics);
       const hasOnlyIssues = card.metrics.every((metric) => metric.validation_state !== "ok");
 
       return {
         id: card.id,
         title_tc: card.title_tc,
-        latest_data_at: latestMetric?.as_of_date,
-        latest_data_label: latestMetric?.as_of_label,
+        latest_data_at: card.latest_as_of_date,
+        latest_data_label: card.latest_as_of_label,
         card_status_text_tc: hasOnlyIssues ? "資料待核對" : undefined,
         metrics: card.metrics.map(toUIMetricRow)
       } satisfies DashboardCard;
@@ -30,9 +28,7 @@ export function toDashboardPayload(payloadV2: DashboardPayloadV2): DashboardPayl
 }
 
 export function toUIMetricRow(metric: TransformedMetric): UIMetricRow {
-  const canRenderPreservedValue =
-    metric.validation_state !== "data_error" &&
-    typeof metric.latest_value === "number";
+  const canRenderPreservedValue = metric.data_origin !== "status_only" && typeof metric.latest_value === "number";
 
   if (!canRenderPreservedValue) {
     return {
@@ -42,12 +38,28 @@ export function toUIMetricRow(metric: TransformedMetric): UIMetricRow {
       source_url: metric.source.dataset_url,
       source_note: metric.source_note,
       status: metric.validation_state,
-      status_text_tc: statusTextMap[metric.validation_state],
-      display_value_text: statusTextMap[metric.validation_state],
+      status_text_tc: statusText(metric),
+      display_value_text: statusText(metric),
       display_change_text: metric.validation_messages[0]?.message_tc ?? "請核對官方來源",
       display_previous_text: "請核對官方來源",
       display_period_text: metric.as_of_label || "待官方更新",
+      display_comparison_text: metric.comparison_basis_label_tc,
       display_comparison_basis_text: metric.comparison_basis_label_tc,
+      display_comparison_period_text: metric.comparison_period_label,
+      display_unit: metric.display_unit,
+      data_origin: metric.data_origin,
+      last_successful_fetch_at: metric.last_successful_fetch_at,
+      reason: metric.reason,
+      chart: {
+        chart_type: metric.chart_definition.chart_type,
+        x_axis_label: metric.chart_definition.x_axis_label,
+        y_axis_label: metric.chart_definition.y_axis_label,
+        time_label: metric.chart_definition.time_label,
+        value_label: metric.chart_definition.value_label,
+        display_unit: metric.chart_definition.display_unit,
+        suggested_ticks: metric.chart_definition.suggested_ticks,
+        points: []
+      },
       sparkline_points: [],
       expected_update: metric.expected_update
     };
@@ -60,48 +72,90 @@ export function toUIMetricRow(metric: TransformedMetric): UIMetricRow {
     source_url: metric.source.dataset_url,
     source_note: metric.source_note,
     status: metric.validation_state,
-    status_text_tc: statusTextMap[metric.validation_state],
-    display_value_text: formatValue(metric.latest_value, metric.unit, metric.metric_type),
+    status_text_tc: statusText(metric),
+    display_value_text: formatValue(metric.latest_value, metric, "value"),
     display_change_text: formatChange(metric),
     display_previous_text: formatPrevious(metric),
     display_period_text: metric.as_of_label,
+    display_comparison_text: formatChange(metric),
     display_comparison_basis_text: metric.comparison_basis_label_tc,
-    sparkline_points:
-      metric.validation_state === "data_error"
-        ? []
-        : metric.sparkline_points.map((point) => ({ x: point.as_of_label, y: point.value })),
+    display_comparison_period_text: metric.comparison_period_label,
+    display_unit: metric.display_unit,
+    data_origin: metric.data_origin,
+    last_successful_fetch_at: metric.last_successful_fetch_at,
+    reason: metric.reason,
+    chart: {
+      chart_type: metric.chart_definition.chart_type,
+      x_axis_label: metric.chart_definition.x_axis_label,
+      y_axis_label: metric.chart_definition.y_axis_label,
+      time_label: metric.chart_definition.time_label,
+      value_label: metric.chart_definition.value_label,
+      display_unit: metric.chart_definition.display_unit,
+      suggested_ticks: metric.chart_definition.suggested_ticks,
+      points: metric.chart_points.map((point) => ({
+        x: point.as_of_label,
+        y: point.value,
+        tick_label: point.tick_label,
+        tooltip_title: point.tooltip_title,
+        tooltip_value_text: point.tooltip_value_text
+      }))
+    },
+    sparkline_points: metric.chart_points.map((point) => ({ x: point.as_of_label, y: point.value })),
     expected_update: metric.expected_update
   };
 }
 
-function formatValue(value: number | undefined, unit: string, metricType: TransformedMetric["metric_type"]): string {
+function statusText(metric: TransformedMetric): string {
+  if (metric.data_origin === "last_successful_snapshot") {
+    return "上次成功抓取值";
+  }
+  if (metric.data_origin === "last_verified_snapshot") {
+    return "最後核實值";
+  }
+  return statusTextMap[metric.validation_state];
+}
+
+function formatValue(value: number | undefined, metric: TransformedMetric, mode: "value" | "previous" | "change"): string {
   if (typeof value !== "number") {
     return "待官方更新";
   }
 
-  if (metricType === "yoy_percent" || metricType === "qoq_percent") {
-    return `${value >= 0 ? "+" : ""}${value.toFixed(1)}%`;
+  const decimals =
+    mode === "change"
+      ? metric.rounding_policy.change_decimals
+      : mode === "previous"
+        ? metric.rounding_policy.previous_decimals
+        : metric.rounding_policy.value_decimals;
+  const scaled = metric.rounding_policy.display_scale ? value * metric.rounding_policy.display_scale : value;
+
+  if (metric.metric_type === "yoy_percent" || metric.metric_type === "qoq_percent") {
+    return `${scaled >= 0 ? "+" : ""}${scaled.toFixed(decimals)}%`;
   }
 
-  if (unit === "%") {
-    return `${value.toFixed(1)}%`;
+  if (metric.display_unit === "%") {
+    return `${scaled.toFixed(decimals)}%`;
   }
 
-  if (unit === "港元/小時") {
-    return `HK$${value.toFixed(1)}`;
+  if (metric.display_unit === "HK$/小時") {
+    return `HK$${scaled.toFixed(decimals)}/小時`;
   }
 
-  if (unit === "百萬港元") {
-    return `HK$${(value / 100).toFixed(1)}億`;
+  if (metric.display_unit === "億港元") {
+    return `HK$${scaled.toFixed(decimals)}億`;
   }
 
-  if (unit === "指數" || unit === "歲") {
-    return value.toFixed(1);
+  if (metric.display_unit === "歲") {
+    return `${scaled.toFixed(decimals)} 歲`;
+  }
+
+  if (metric.display_unit === "指數") {
+    return scaled.toFixed(decimals);
   }
 
   return new Intl.NumberFormat("zh-Hant-HK", {
-    maximumFractionDigits: 1
-  }).format(value);
+    maximumFractionDigits: decimals,
+    minimumFractionDigits: decimals
+  }).format(scaled);
 }
 
 function formatChange(metric: TransformedMetric): string {
@@ -109,18 +163,37 @@ function formatChange(metric: TransformedMetric): string {
     return "沒有可比較期";
   }
 
+  const prefix = `${metric.comparison_basis_label_tc}${metric.comparison_period_label ? `（${metric.comparison_period_label}）` : ""}`;
+  const sign = metric.change_value >= 0 ? "+" : "";
+  const scaled =
+    metric.change_type === "absolute_change" && metric.rounding_policy.display_scale
+      ? metric.change_value * metric.rounding_policy.display_scale
+      : metric.change_value;
+
   switch (metric.change_type) {
     case "percentage_point_change":
-      return `${metric.comparison_basis_label_tc} ${metric.change_value >= 0 ? "+" : ""}${metric.change_value.toFixed(1)} 個百分點`;
+      return `${prefix} ${sign}${scaled.toFixed(metric.rounding_policy.change_decimals)} 個百分點`;
     case "absolute_change":
-      return `${metric.comparison_basis_label_tc} ${metric.change_value >= 0 ? "+" : ""}${formatPlainNumber(metric.change_value)}`;
+      if (metric.display_unit === "HK$/小時") {
+        return `${prefix} ${sign}HK$${scaled.toFixed(metric.rounding_policy.change_decimals)}/小時`;
+      }
+      if (metric.display_unit === "億港元") {
+        return `${prefix} ${sign}${scaled.toFixed(metric.rounding_policy.change_decimals)}億`;
+      }
+      if (metric.display_unit === "歲") {
+        return `${prefix} ${sign}${scaled.toFixed(metric.rounding_policy.change_decimals)} 歲`;
+      }
+      return `${prefix} ${sign}${new Intl.NumberFormat("zh-Hant-HK", {
+        maximumFractionDigits: metric.rounding_policy.change_decimals,
+        minimumFractionDigits: metric.rounding_policy.change_decimals
+      }).format(scaled)}`;
     case "yoy_percent":
     case "qoq_percent":
-      return `${metric.comparison_basis_label_tc} ${metric.change_value >= 0 ? "+" : ""}${metric.change_value.toFixed(1)}%`;
+      return `${prefix} ${sign}${scaled.toFixed(metric.rounding_policy.change_decimals)}%`;
     case "none":
-      return metric.comparison_basis_label_tc;
+      return prefix;
     default:
-      return metric.comparison_basis_label_tc;
+      return prefix;
   }
 }
 
@@ -128,15 +201,12 @@ function formatPrevious(metric: TransformedMetric): string {
   if (typeof metric.previous_value !== "number") {
     return "沒有可比較期";
   }
-  return `${previousBasisText(metric.comparison_basis_label_tc)} ${formatValue(metric.previous_value, metric.unit, metric.metric_type)}`;
+
+  const label = previousBasisText(metric.comparison_basis_label_tc);
+  const period = metric.comparison_period_label ? `（${metric.comparison_period_label}）` : "";
+  return `${label}${period} ${formatValue(metric.previous_value, metric, "previous")}`;
 }
 
 function previousBasisText(basisLabel: string): string {
   return basisLabel.replace(/^較/, "");
-}
-
-function formatPlainNumber(value: number): string {
-  return new Intl.NumberFormat("zh-Hant-HK", {
-    maximumFractionDigits: 1
-  }).format(value);
 }

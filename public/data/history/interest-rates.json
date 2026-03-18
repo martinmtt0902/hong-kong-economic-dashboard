@@ -3,20 +3,123 @@
   "title_tc": "利率",
   "latest_data_at": "2026-03-17",
   "latest_data_label": "2026-03-17",
-  "card_status_text_tc": "資料待核對",
   "metrics": [
     {
       "id": "base_rate",
       "label_tc": "HKMA Base Rate",
       "source_name": "香港金融管理局",
       "source_url": "https://www.hkma.gov.hk/eng/data-publications-and-research/data-and-statistics/daily-monetary-statistics/",
-      "status": "source_error",
-      "status_text_tc": "來源暫時不可用",
+      "status": "ok",
+      "status_text_tc": "最新",
       "display_value_text": "4.0%",
-      "display_change_text": "較上期 +0.0 個百分點",
-      "display_previous_text": "上期 4.0%",
+      "display_change_text": "較上期（2026-03-16） +0.0 個百分點",
+      "display_previous_text": "上期（2026-03-16） 4.0%",
       "display_period_text": "2026-03-17",
+      "display_comparison_text": "較上期（2026-03-16） +0.0 個百分點",
       "display_comparison_basis_text": "較上期",
+      "display_comparison_period_text": "2026-03-16",
+      "display_unit": "%",
+      "data_origin": "live",
+      "last_successful_fetch_at": "2026-03-18T03:41:58.938Z",
+      "chart": {
+        "chart_type": "line",
+        "x_axis_label": "日期",
+        "y_axis_label": "HKMA Base Rate (%)",
+        "time_label": "日期",
+        "value_label": "HKMA Base Rate",
+        "display_unit": "%",
+        "suggested_ticks": [
+          "2026-03-02",
+          "2026-03-10",
+          "2026-03-17"
+        ],
+        "points": [
+          {
+            "x": "2026-03-02",
+            "y": 4,
+            "tick_label": "2026-03-02",
+            "tooltip_title": "2026-03-02",
+            "tooltip_value_text": "4.0%"
+          },
+          {
+            "x": "2026-03-03",
+            "y": 4,
+            "tick_label": "2026-03-03",
+            "tooltip_title": "2026-03-03",
+            "tooltip_value_text": "4.0%"
+          },
+          {
+            "x": "2026-03-04",
+            "y": 4,
+            "tick_label": "2026-03-04",
+            "tooltip_title": "2026-03-04",
+            "tooltip_value_text": "4.0%"
+          },
+          {
+            "x": "2026-03-05",
+            "y": 4,
+            "tick_label": "2026-03-05",
+            "tooltip_title": "2026-03-05",
+            "tooltip_value_text": "4.0%"
+          },
+          {
+            "x": "2026-03-06",
+            "y": 4,
+            "tick_label": "2026-03-06",
+            "tooltip_title": "2026-03-06",
+            "tooltip_value_text": "4.0%"
+          },
+          {
+            "x": "2026-03-09",
+            "y": 4,
+            "tick_label": "2026-03-09",
+            "tooltip_title": "2026-03-09",
+            "tooltip_value_text": "4.0%"
+          },
+          {
+            "x": "2026-03-10",
+            "y": 4,
+            "tick_label": "2026-03-10",
+            "tooltip_title": "2026-03-10",
+            "tooltip_value_text": "4.0%"
+          },
+          {
+            "x": "2026-03-11",
+            "y": 4,
+            "tick_label": "2026-03-11",
+            "tooltip_title": "2026-03-11",
+            "tooltip_value_text": "4.0%"
+          },
+          {
+            "x": "2026-03-12",
+            "y": 4,
+            "tick_label": "2026-03-12",
+            "tooltip_title": "2026-03-12",
+            "tooltip_value_text": "4.0%"
+          },
+          {
+            "x": "2026-03-13",
+            "y": 4,
+            "tick_label": "2026-03-13",
+            "tooltip_title": "2026-03-13",
+            "tooltip_value_text": "4.0%"
+          },
+          {
+            "x": "2026-03-16",
+            "y": 4,
+            "tick_label": "2026-03-16",
+            "tooltip_title": "2026-03-16",
+            "tooltip_value_text": "4.0%"
+          },
+          {
+            "x": "2026-03-17",
+            "y": 4,
+            "tick_label": "2026-03-17",
+            "tooltip_title": "2026-03-17",
+            "tooltip_value_text": "4.0%"
+          }
+        ]
+      },
       "sparkline_points": [
         {
           "x": "2026-03-02",
@@ -74,13 +177,117 @@
       "label_tc": "1個月 HIBOR",
       "source_name": "香港金融管理局",
       "source_url": "https://www.hkma.gov.hk/eng/data-publications-and-research/data-and-statistics/daily-monetary-statistics/",
-      "status": "source_error",
-      "status_text_tc": "來源暫時不可用",
+      "status": "ok",
+      "status_text_tc": "最新",
       "display_value_text": "2.1%",
-      "display_change_text": "較上期 +0.0 個百分點",
-      "display_previous_text": "上期 2.1%",
+      "display_change_text": "較上期（2026-03-16） +0.0 個百分點",
+      "display_previous_text": "上期（2026-03-16） 2.1%",
       "display_period_text": "2026-03-17",
+      "display_comparison_text": "較上期（2026-03-16） +0.0 個百分點",
       "display_comparison_basis_text": "較上期",
+      "display_comparison_period_text": "2026-03-16",
+      "display_unit": "%",
+      "data_origin": "live",
+      "last_successful_fetch_at": "2026-03-18T03:41:58.938Z",
+      "chart": {
+        "chart_type": "line",
+        "x_axis_label": "日期",
+        "y_axis_label": "1個月 HIBOR (%)",
+        "time_label": "日期",
+        "value_label": "1個月 HIBOR",
+        "display_unit": "%",
+        "suggested_ticks": [
+          "2026-03-02",
+          "2026-03-10",
+          "2026-03-17"
+        ],
+        "points": [
+          {
+            "x": "2026-03-02",
+            "y": 2.35518,
+            "tick_label": "2026-03-02",
+            "tooltip_title": "2026-03-02",
+            "tooltip_value_text": "2.4%"
+          },
+          {
+            "x": "2026-03-03",
+            "y": 2.30446,
+            "tick_label": "2026-03-03",
+            "tooltip_title": "2026-03-03",
+            "tooltip_value_text": "2.3%"
+          },
+          {
+            "x": "2026-03-04",
+            "y": 2.41399,
+            "tick_label": "2026-03-04",
+            "tooltip_title": "2026-03-04",
+            "tooltip_value_text": "2.4%"
+          },
+          {
+            "x": "2026-03-05",
+            "y": 2.31179,
+            "tick_label": "2026-03-05",
+            "tooltip_title": "2026-03-05",
+            "tooltip_value_text": "2.3%"
+          },
+          {
+            "x": "2026-03-06",
+            "y": 2.19613,
+            "tick_label": "2026-03-06",
+            "tooltip_title": "2026-03-06",
+            "tooltip_value_text": "2.2%"
+          },
+          {
+            "x": "2026-03-09",
+            "y": 2.04524,
+            "tick_label": "2026-03-09",
+            "tooltip_title": "2026-03-09",
+            "tooltip_value_text": "2.0%"
+          },
+          {
+            "x": "2026-03-10",
+            "y": 2.02083,
+            "tick_label": "2026-03-10",
+            "tooltip_title": "2026-03-10",
+            "tooltip_value_text": "2.0%"
+          },
+          {
+            "x": "2026-03-11",
+            "y": 2.02982,
+            "tick_label": "2026-03-11",
+            "tooltip_title": "2026-03-11",
+            "tooltip_value_text": "2.0%"
+          },
+          {
+            "x": "2026-03-12",
+            "y": 2.02982,
+            "tick_label": "2026-03-12",
+            "tooltip_title": "2026-03-12",
+            "tooltip_value_text": "2.0%"
+          },
+          {
+            "x": "2026-03-13",
+            "y": 2.07583,
+            "tick_label": "2026-03-13",
+            "tooltip_title": "2026-03-13",
+            "tooltip_value_text": "2.1%"
+          },
+          {
+            "x": "2026-03-16",
+            "y": 2.05637,
+            "tick_label": "2026-03-16",
+            "tooltip_title": "2026-03-16",
+            "tooltip_value_text": "2.1%"
+          },
+          {
+            "x": "2026-03-17",
+            "y": 2.08173,
+            "tick_label": "2026-03-17",
+            "tooltip_title": "2026-03-17",
+            "tooltip_value_text": "2.1%"
+          }
+        ]
+      },
       "sparkline_points": [
         {
           "x": "2026-03-02",

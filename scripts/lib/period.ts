@@ -23,12 +23,12 @@ export function parseOfficialPeriod(raw: string, frequency: Frequency): ParsedPe
   }
 
   if (frequency === "event") {
-    const date = new Date(text);
-    if (!Number.isNaN(date.getTime())) {
+    const eventDate = parseStrictEventDate(text);
+    if (eventDate) {
       return {
-        period_key: isoDate(date),
-        as_of_date: isoDate(date),
-        as_of_label: isoDate(date)
+        period_key: eventDate,
+        as_of_date: eventDate,
+        as_of_label: eventDate
       };
     }
   }
@@ -122,6 +122,22 @@ export function formatRollingWindowLabel(periodRaw: string): string {
   return `${start.year}年${start.month}月–${endYear}年${endMonth}月`;
 }
 
+export function formatRollingWindowLabelCompact(periodRaw: string): string {
+  if (!/^\d{6}$/.test(periodRaw)) {
+    return periodRaw;
+  }
+
+  const endYear = Number(periodRaw.slice(0, 4));
+  const endMonth = Number(periodRaw.slice(4, 6));
+  const start = addMonths(endYear, endMonth, -2);
+
+  if (start.year === endYear) {
+    return `${start.year}年${start.month}月–${endMonth}月`;
+  }
+
+  return `${start.year}年${start.month}月–${endYear}年${endMonth}月`;
+}
+
 export function periodEndDateForRollingWindow(periodRaw: string): string {
   if (!/^\d{6}$/.test(periodRaw)) {
     return periodRaw;
@@ -163,6 +179,66 @@ export function formatDisplayDate(dateString: string): string {
     return dateString;
   }
   return dateString;
+}
+
+export function formatComparisonPeriodLabel(asOfLabel: string, comparisonType: string, periodRaw?: string): string {
+  if (comparisonType === "previous_rolling_window" && periodRaw) {
+    return formatRollingWindowLabelCompact(periodRaw);
+  }
+  if (asOfLabel.endsWith("年年底")) {
+    return asOfLabel.replace("年年底", "年底");
+  }
+  if (asOfLabel.endsWith("年年中")) {
+    return asOfLabel.replace("年年中", "年中");
+  }
+  return asOfLabel;
+}
+
+export function formatTickLabel(asOfLabel: string, frequency: Frequency): string {
+  switch (frequency) {
+    case "daily":
+      return asOfLabel;
+    case "monthly": {
+      const match = asOfLabel.match(/(\d{4})年(\d{1,2})月/);
+      return match ? `${match[1]}-${match[2].padStart(2, "0")}` : asOfLabel;
+    }
+    case "quarterly": {
+      const match = asOfLabel.match(/(\d{4})年第(\d)季/);
+      return match ? `${match[1]}Q${match[2]}` : asOfLabel;
+    }
+    case "half_yearly":
+      return asOfLabel.replace("年年中", "H1").replace("年年底", "H2");
+    case "annual": {
+      if (/^\d{4}[-/]\d{2,4}/.test(asOfLabel)) {
+        return asOfLabel;
+      }
+      const match = asOfLabel.match(/(\d{4})/);
+      return match ? match[1] : asOfLabel;
+    }
+    case "event":
+      return asOfLabel;
+    default:
+      return asOfLabel;
+  }
+}
+
+export function parseStrictEventDate(text: string): string | undefined {
+  const normalized = text.trim();
+  if (/^\d{4}-\d{2}-\d{2}$/.test(normalized)) {
+    return normalized;
+  }
+
+  const match = normalized.match(/^(?<day>\d{1,2})\s+(?<month>[A-Za-z]+)\s+(?<year>\d{4})$/);
+  if (!match?.groups) {
+    return undefined;
+  }
+
+  const month = monthFromEnglish(match.groups.month);
+  if (!month) {
+    return undefined;
+  }
+
+  return `${match.groups.year}-${String(month).padStart(2, "0")}-${String(Number(match.groups.day)).padStart(2, "0")}`;
 }
 
 function monthEndIso(year: number, month: number): string {

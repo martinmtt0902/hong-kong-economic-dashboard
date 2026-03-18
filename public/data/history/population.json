@@ -12,10 +12,114 @@
       "status": "ok",
       "status_text_tc": "最新",
       "display_value_text": "7,510,800",
-      "display_change_text": "較去年同期 +10,200",
-      "display_previous_text": "去年同期 7,500,600",
+      "display_change_text": "較去年同期（2024年底） +10,200",
+      "display_previous_text": "去年同期（2024年底） 7,500,600",
       "display_period_text": "2025年年底",
+      "display_comparison_text": "較去年同期（2024年底） +10,200",
       "display_comparison_basis_text": "較去年同期",
+      "display_comparison_period_text": "2024年底",
+      "display_unit": "人",
+      "data_origin": "live",
+      "last_successful_fetch_at": "2026-03-18T03:41:58.938Z",
+      "chart": {
+        "chart_type": "line",
+        "x_axis_label": "半年期間",
+        "y_axis_label": "人口總量 (人)",
+        "time_label": "半年期間",
+        "value_label": "人口總量",
+        "display_unit": "人",
+        "suggested_ticks": [
+          "2020H1",
+          "2023H1",
+          "2025H2"
+        ],
+        "points": [
+          {
+            "x": "2020年年中",
+            "y": 7481000,
+            "tick_label": "2020H1",
+            "tooltip_title": "2020年年中",
+            "tooltip_value_text": "7,481,000 人"
+          },
+          {
+            "x": "2020年年底",
+            "y": 7426700,
+            "tick_label": "2020H2",
+            "tooltip_title": "2020年年底",
+            "tooltip_value_text": "7,426,700 人"
+          },
+          {
+            "x": "2021年年中",
+            "y": 7413100,
+            "tick_label": "2021H1",
+            "tooltip_title": "2021年年中",
+            "tooltip_value_text": "7,413,100 人"
+          },
+          {
+            "x": "2021年年底",
+            "y": 7401500,
+            "tick_label": "2021H2",
+            "tooltip_title": "2021年年底",
+            "tooltip_value_text": "7,401,500 人"
+          },
+          {
+            "x": "2022年年中",
+            "y": 7346100,
+            "tick_label": "2022H1",
+            "tooltip_title": "2022年年中",
+            "tooltip_value_text": "7,346,100 人"
+          },
+          {
+            "x": "2022年年底",
+            "y": 7472600,
+            "tick_label": "2022H2",
+            "tooltip_title": "2022年年底",
+            "tooltip_value_text": "7,472,600 人"
+          },
+          {
+            "x": "2023年年中",
+            "y": 7536100,
+            "tick_label": "2023H1",
+            "tooltip_title": "2023年年中",
+            "tooltip_value_text": "7,536,100 人"
+          },
+          {
+            "x": "2023年年底",
+            "y": 7527900,
+            "tick_label": "2023H2",
+            "tooltip_title": "2023年年底",
+            "tooltip_value_text": "7,527,900 人"
+          },
+          {
+            "x": "2024年年中",
+            "y": 7524100,
+            "tick_label": "2024H1",
+            "tooltip_title": "2024年年中",
+            "tooltip_value_text": "7,524,100 人"
+          },
+          {
+            "x": "2024年年底",
+            "y": 7500600,
+            "tick_label": "2024H2",
+            "tooltip_title": "2024年年底",
+            "tooltip_value_text": "7,500,600 人"
+          },
+          {
+            "x": "2025年年中",
+            "y": 7498900,
+            "tick_label": "2025H1",
+            "tooltip_title": "2025年年中",
+            "tooltip_value_text": "7,498,900 人"
+          },
+          {
+            "x": "2025年年底",
+            "y": 7510800,
+            "tick_label": "2025H2",
+            "tooltip_title": "2025年年底",
+            "tooltip_value_text": "7,510,800 人"
+          }
+        ]
+      },
       "sparkline_points": [
         {
           "x": "2020年年中",
@@ -76,10 +180,114 @@
       "status": "ok",
       "status_text_tc": "最新",
       "display_value_text": "36,723",
-      "display_change_text": "較上期 +3,491",
-      "display_previous_text": "上期 33,232",
+      "display_change_text": "較上期（2023年） +3,491",
+      "display_previous_text": "上期（2023年） 33,232",
       "display_period_text": "2024年",
+      "display_comparison_text": "較上期（2023年） +3,491",
       "display_comparison_basis_text": "較上期",
+      "display_comparison_period_text": "2023年",
+      "display_unit": "人",
+      "data_origin": "live",
+      "last_successful_fetch_at": "2026-03-18T03:41:58.938Z",
+      "chart": {
+        "chart_type": "line",
+        "x_axis_label": "年份",
+        "y_axis_label": "出生數 (人)",
+        "time_label": "年份",
+        "value_label": "出生數",
+        "display_unit": "人",
+        "suggested_ticks": [
+          "2013",
+          "2019",
+          "2024"
+        ],
+        "points": [
+          {
+            "x": "2013年",
+            "y": 57084,
+            "tick_label": "2013",
+            "tooltip_title": "2013年",
+            "tooltip_value_text": "57,084 人"
+          },
+          {
+            "x": "2014年",
+            "y": 62305,
+            "tick_label": "2014",
+            "tooltip_title": "2014年",
+            "tooltip_value_text": "62,305 人"
+          },
+          {
+            "x": "2015年",
+            "y": 59878,
+            "tick_label": "2015",
+            "tooltip_title": "2015年",
+            "tooltip_value_text": "59,878 人"
+          },
+          {
+            "x": "2016年",
+            "y": 60856,
+            "tick_label": "2016",
+            "tooltip_title": "2016年",
+            "tooltip_value_text": "60,856 人"
+          },
+          {
+            "x": "2017年",
+            "y": 56548,
+            "tick_label": "2017",
+            "tooltip_title": "2017年",
+            "tooltip_value_text": "56,548 人"
+          },
+          {
+            "x": "2018年",
+            "y": 53716,
+            "tick_label": "2018",
+            "tooltip_title": "2018年",
+            "tooltip_value_text": "53,716 人"
+          },
+          {
+            "x": "2019年",
+            "y": 52856,
+            "tick_label": "2019",
+            "tooltip_title": "2019年",
+            "tooltip_value_text": "52,856 人"
+          },
+          {
+            "x": "2020年",
+            "y": 43031,
+            "tick_label": "2020",
+            "tooltip_title": "2020年",
+            "tooltip_value_text": "43,031 人"
+          },
+          {
+            "x": "2021年",
+            "y": 36953,
+            "tick_label": "2021",
+            "tooltip_title": "2021年",
+            "tooltip_value_text": "36,953 人"
+          },
+          {
+            "x": "2022年",
+            "y": 32501,
+            "tick_label": "2022",
+            "tooltip_title": "2022年",
+            "tooltip_value_text": "32,501 人"
+          },
+          {
+            "x": "2023年",
+            "y": 33232,
+            "tick_label": "2023",
+            "tooltip_title": "2023年",
+            "tooltip_value_text": "33,232 人"
+          },
+          {
+            "x": "2024年",
+            "y": 36723,
+            "tick_label": "2024",
+            "tooltip_title": "2024年",
+            "tooltip_value_text": "36,723 人"
+          }
+        ]
+      },
       "sparkline_points": [
         {
           "x": "2013年",
@@ -139,11 +347,115 @@
       "source_url": "https://data.gov.hk/en-data/dataset/hk-censtatd-tablechart-110-01004",
       "status": "ok",
       "status_text_tc": "最新",
-      "display_value_text": "48.4",
-      "display_change_text": "較上期 +0.5",
-      "display_previous_text": "上期 47.9",
+      "display_value_text": "48.4 歲",
+      "display_change_text": "較上期（2024年） +0.5 歲",
+      "display_previous_text": "上期（2024年） 47.9 歲",
       "display_period_text": "2025年",
+      "display_comparison_text": "較上期（2024年） +0.5 歲",
       "display_comparison_basis_text": "較上期",
+      "display_comparison_period_text": "2024年",
+      "display_unit": "歲",
+      "data_origin": "live",
+      "last_successful_fetch_at": "2026-03-18T03:41:58.938Z",
+      "chart": {
+        "chart_type": "line",
+        "x_axis_label": "年份",
+        "y_axis_label": "年齡中位數 (歲)",
+        "time_label": "年份",
+        "value_label": "年齡中位數",
+        "display_unit": "歲",
+        "suggested_ticks": [
+          "2014",
+          "2020",
+          "2025"
+        ],
+        "points": [
+          {
+            "x": "2014年",
+            "y": 42.8,
+            "tick_label": "2014",
+            "tooltip_title": "2014年",
+            "tooltip_value_text": "42.8 歲"
+          },
+          {
+            "x": "2015年",
+            "y": 43.1,
+            "tick_label": "2015",
+            "tooltip_title": "2015年",
+            "tooltip_value_text": "43.1 歲"
+          },
+          {
+            "x": "2016年",
+            "y": 43.4,
+            "tick_label": "2016",
+            "tooltip_title": "2016年",
+            "tooltip_value_text": "43.4 歲"
+          },
+          {
+            "x": "2017年",
+            "y": 44,
+            "tick_label": "2017",
+            "tooltip_title": "2017年",
+            "tooltip_value_text": "44.0 歲"
+          },
+          {
+            "x": "2018年",
+            "y": 44.4,
+            "tick_label": "2018",
+            "tooltip_title": "2018年",
+            "tooltip_value_text": "44.4 歲"
+          },
+          {
+            "x": "2019年",
+            "y": 44.9,
+            "tick_label": "2019",
+            "tooltip_title": "2019年",
+            "tooltip_value_text": "44.9 歲"
+          },
+          {
+            "x": "2020年",
+            "y": 45.5,
+            "tick_label": "2020",
+            "tooltip_title": "2020年",
+            "tooltip_value_text": "45.5 歲"
+          },
+          {
+            "x": "2021年",
+            "y": 46.3,
+            "tick_label": "2021",
+            "tooltip_title": "2021年",
+            "tooltip_value_text": "46.3 歲"
+          },
+          {
+            "x": "2022年",
+            "y": 47.1,
+            "tick_label": "2022",
+            "tooltip_title": "2022年",
+            "tooltip_value_text": "47.1 歲"
+          },
+          {
+            "x": "2023年",
+            "y": 47.4,
+            "tick_label": "2023",
+            "tooltip_title": "2023年",
+            "tooltip_value_text": "47.4 歲"
+          },
+          {
+            "x": "2024年",
+            "y": 47.9,
+            "tick_label": "2024",
+            "tooltip_title": "2024年",
+            "tooltip_value_text": "47.9 歲"
+          },
+          {
+            "x": "2025年",
+            "y": 48.4,
+            "tick_label": "2025",
+            "tooltip_title": "2025年",
+            "tooltip_value_text": "48.4 歲"
+          }
+        ]
+      },
       "sparkline_points": [
         {
           "x": "2014年",

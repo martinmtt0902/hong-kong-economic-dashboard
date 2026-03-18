@@ -1,5 +1,5 @@
 import { fetchText } from "../lib/http";
-import { parseOfficialPeriod } from "../lib/period";
+import { parseOfficialPeriod, parseStrictEventDate } from "../lib/period";
 import { URLs } from "../lib/source";
 import type { RawObservation, SourceRef } from "../lib/types";
 
@@ -22,7 +22,11 @@ export async function fetchMinimumWageObservations(source: SourceRef, seriesLabe
     if (!match) {
       continue;
     }
-    const parsed = parseOfficialPeriod(match[2], "event");
+    const effectiveDate = parseStrictEventDate(match[2]);
+    if (!effectiveDate) {
+      continue;
+    }
+    const parsed = parseOfficialPeriod(effectiveDate, "event");
     points.push({
       source,
       series_id: "labour|min_wage",

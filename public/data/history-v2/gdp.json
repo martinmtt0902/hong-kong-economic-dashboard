@@ -18,6 +18,12 @@
       "metric_type": "yoy_percent",
       "frequency": "quarterly",
       "unit": "%",
+      "display_unit": "%",
+      "rounding_policy": {
+        "value_decimals": 1,
+        "change_decimals": 1,
+        "previous_decimals": 1
+      },
       "as_of_date": "2025-12-31",
       "as_of_label": "2025年第4季",
       "latest_value": 3.8,
@@ -26,8 +32,140 @@
       "previous_as_of_label": "2025年第3季",
       "change_value": 0.1,
       "change_type": "percentage_point_change",
+      "comparison_type": "previous_observation",
       "comparison_basis": "previous_observation",
       "comparison_basis_label_tc": "較上期",
+      "comparison_period_label": "2025年第3季",
+      "data_origin": "live",
+      "chart_definition": {
+        "series_id": "censtatd|310-31003|GDP_COMPONENT=|freq=Q|measure=CON|label=按年變動百分率",
+        "metric_type": "yoy_percent",
+        "chart_type": "line",
+        "frequency": "quarterly",
+        "unit": "%",
+        "display_unit": "%",
+        "period_start": "1974-03-31",
+        "period_end": "2025-12-31",
+        "x_axis_label": "季度",
+        "y_axis_label": "實質 GDP 增長 (%)",
+        "value_label": "實質 GDP 增長",
+        "time_label": "季度",
+        "suggested_ticks": [
+          "2023Q1",
+          "2024Q3",
+          "2025Q4"
+        ]
+      },
+      "chart_points": [
+        {
+          "as_of_date": "2023-03-31",
+          "as_of_label": "2023年第1季",
+          "tick_label": "2023Q1",
+          "value": 2.7,
+          "display_value_text": "+2.7%",
+          "tooltip_title": "2023年第1季",
+          "tooltip_value_text": "+2.7%"
+        },
+        {
+          "as_of_date": "2023-06-30",
+          "as_of_label": "2023年第2季",
+          "tick_label": "2023Q2",
+          "value": 1.5,
+          "display_value_text": "+1.5%",
+          "tooltip_title": "2023年第2季",
+          "tooltip_value_text": "+1.5%"
+        },
+        {
+          "as_of_date": "2023-09-30",
+          "as_of_label": "2023年第3季",
+          "tick_label": "2023Q3",
+          "value": 4.1,
+          "display_value_text": "+4.1%",
+          "tooltip_title": "2023年第3季",
+          "tooltip_value_text": "+4.1%"
+        },
+        {
+          "as_of_date": "2023-12-31",
+          "as_of_label": "2023年第4季",
+          "tick_label": "2023Q4",
+          "value": 4.2,
+          "display_value_text": "+4.2%",
+          "tooltip_title": "2023年第4季",
+          "tooltip_value_text": "+4.2%"
+        },
+        {
+          "as_of_date": "2024-03-31",
+          "as_of_label": "2024年第1季",
+          "tick_label": "2024Q1",
+          "value": 2.9,
+          "display_value_text": "+2.9%",
+          "tooltip_title": "2024年第1季",
+          "tooltip_value_text": "+2.9%"
+        },
+        {
+          "as_of_date": "2024-06-30",
+          "as_of_label": "2024年第2季",
+          "tick_label": "2024Q2",
+          "value": 3,
+          "display_value_text": "+3.0%",
+          "tooltip_title": "2024年第2季",
+          "tooltip_value_text": "+3.0%"
+        },
+        {
+          "as_of_date": "2024-09-30",
+          "as_of_label": "2024年第3季",
+          "tick_label": "2024Q3",
+          "value": 2.1,
+          "display_value_text": "+2.1%",
+          "tooltip_title": "2024年第3季",
+          "tooltip_value_text": "+2.1%"
+        },
+        {
+          "as_of_date": "2024-12-31",
+          "as_of_label": "2024年第4季",
+          "tick_label": "2024Q4",
+          "value": 2.5,
+          "display_value_text": "+2.5%",
+          "tooltip_title": "2024年第4季",
+          "tooltip_value_text": "+2.5%"
+        },
+        {
+          "as_of_date": "2025-03-31",
+          "as_of_label": "2025年第1季",
+          "tick_label": "2025Q1",
+          "value": 3.1,
+          "display_value_text": "+3.1%",
+          "tooltip_title": "2025年第1季",
+          "tooltip_value_text": "+3.1%"
+        },
+        {
+          "as_of_date": "2025-06-30",
+          "as_of_label": "2025年第2季",
+          "tick_label": "2025Q2",
+          "value": 3.2,
+          "display_value_text": "+3.2%",
+          "tooltip_title": "2025年第2季",
+          "tooltip_value_text": "+3.2%"
+        },
+        {
+          "as_of_date": "2025-09-30",
+          "as_of_label": "2025年第3季",
+          "tick_label": "2025Q3",
+          "value": 3.7,
+          "display_value_text": "+3.7%",
+          "tooltip_title": "2025年第3季",
+          "tooltip_value_text": "+3.7%"
+        },
+        {
+          "as_of_date": "2025-12-31",
+          "as_of_label": "2025年第4季",
+          "tick_label": "2025Q4",
+          "value": 3.8,
+          "display_value_text": "+3.8%",
+          "tooltip_title": "2025年第4季",
+          "tooltip_value_text": "+3.8%"
+        }
+      ],
       "sparkline_definition": {
         "series_id": "censtatd|310-31003|GDP_COMPONENT=|freq=Q|measure=CON|label=按年變動百分率",
         "metric_type": "yoy_percent",
@@ -99,7 +237,8 @@
       ],
       "validation_state": "ok",
       "validation_messages": [],
-      "expected_update": "每季"
+      "expected_update": "每季",
+      "last_successful_fetch_at": "2026-03-18T03:41:58.938Z"
     },
     {
       "id": "gdp_nominal_yoy",
@@ -115,6 +254,12 @@
       "metric_type": "yoy_percent",
       "frequency": "quarterly",
       "unit": "%",
+      "display_unit": "%",
+      "rounding_policy": {
+        "value_decimals": 1,
+        "change_decimals": 1,
+        "previous_decimals": 1
+      },
       "as_of_date": "2025-12-31",
       "as_of_label": "2025年第4季",
       "latest_value": 5.1,
@@ -123,8 +268,140 @@
       "previous_as_of_label": "2025年第3季",
       "change_value": 0.5,
       "change_type": "percentage_point_change",
+      "comparison_type": "previous_observation",
       "comparison_basis": "previous_observation",
       "comparison_basis_label_tc": "較上期",
+      "comparison_period_label": "2025年第3季",
+      "data_origin": "live",
+      "chart_definition": {
+        "series_id": "censtatd|310-31002|GDP_COMPONENT=|freq=Q|measure=CUR|label=按年變動百分率",
+        "metric_type": "yoy_percent",
+        "chart_type": "line",
+        "frequency": "quarterly",
+        "unit": "%",
+        "display_unit": "%",
+        "period_start": "1974-03-31",
+        "period_end": "2025-12-31",
+        "x_axis_label": "季度",
+        "y_axis_label": "名義 GDP 增長 (%)",
+        "value_label": "名義 GDP 增長",
+        "time_label": "季度",
+        "suggested_ticks": [
+          "2023Q1",
+          "2024Q3",
+          "2025Q4"
+        ]
+      },
+      "chart_points": [
+        {
+          "as_of_date": "2023-03-31",
+          "as_of_label": "2023年第1季",
+          "tick_label": "2023Q1",
+          "value": 4.9,
+          "display_value_text": "+4.9%",
+          "tooltip_title": "2023年第1季",
+          "tooltip_value_text": "+4.9%"
+        },
+        {
+          "as_of_date": "2023-06-30",
+          "as_of_label": "2023年第2季",
+          "tick_label": "2023Q2",
+          "value": 4.3,
+          "display_value_text": "+4.3%",
+          "tooltip_title": "2023年第2季",
+          "tooltip_value_text": "+4.3%"
+        },
+        {
+          "as_of_date": "2023-09-30",
+          "as_of_label": "2023年第3季",
+          "tick_label": "2023Q3",
+          "value": 6.7,
+          "display_value_text": "+6.7%",
+          "tooltip_title": "2023年第3季",
+          "tooltip_value_text": "+6.7%"
+        },
+        {
+          "as_of_date": "2023-12-31",
+          "as_of_label": "2023年第4季",
+          "tick_label": "2023Q4",
+          "value": 8.4,
+          "display_value_text": "+8.4%",
+          "tooltip_title": "2023年第4季",
+          "tooltip_value_text": "+8.4%"
+        },
+        {
+          "as_of_date": "2024-03-31",
+          "as_of_label": "2024年第1季",
+          "tick_label": "2024Q1",
+          "value": 7,
+          "display_value_text": "+7.0%",
+          "tooltip_title": "2024年第1季",
+          "tooltip_value_text": "+7.0%"
+        },
+        {
+          "as_of_date": "2024-06-30",
+          "as_of_label": "2024年第2季",
+          "tick_label": "2024Q2",
+          "value": 7.9,
+          "display_value_text": "+7.9%",
+          "tooltip_title": "2024年第2季",
+          "tooltip_value_text": "+7.9%"
+        },
+        {
+          "as_of_date": "2024-09-30",
+          "as_of_label": "2024年第3季",
+          "tick_label": "2024Q3",
+          "value": 7.1,
+          "display_value_text": "+7.1%",
+          "tooltip_title": "2024年第3季",
+          "tooltip_value_text": "+7.1%"
+        },
+        {
+          "as_of_date": "2024-12-31",
+          "as_of_label": "2024年第4季",
+          "tick_label": "2024Q4",
+          "value": 5.7,
+          "display_value_text": "+5.7%",
+          "tooltip_title": "2024年第4季",
+          "tooltip_value_text": "+5.7%"
+        },
+        {
+          "as_of_date": "2025-03-31",
+          "as_of_label": "2025年第1季",
+          "tick_label": "2025Q1",
+          "value": 4.5,
+          "display_value_text": "+4.5%",
+          "tooltip_title": "2025年第1季",
+          "tooltip_value_text": "+4.5%"
+        },
+        {
+          "as_of_date": "2025-06-30",
+          "as_of_label": "2025年第2季",
+          "tick_label": "2025Q2",
+          "value": 3.9,
+          "display_value_text": "+3.9%",
+          "tooltip_title": "2025年第2季",
+          "tooltip_value_text": "+3.9%"
+        },
+        {
+          "as_of_date": "2025-09-30",
+          "as_of_label": "2025年第3季",
+          "tick_label": "2025Q3",
+          "value": 4.6,
+          "display_value_text": "+4.6%",
+          "tooltip_title": "2025年第3季",
+          "tooltip_value_text": "+4.6%"
+        },
+        {
+          "as_of_date": "2025-12-31",
+          "as_of_label": "2025年第4季",
+          "tick_label": "2025Q4",
+          "value": 5.1,
+          "display_value_text": "+5.1%",
+          "tooltip_title": "2025年第4季",
+          "tooltip_value_text": "+5.1%"
+        }
+      ],
       "sparkline_definition": {
         "series_id": "censtatd|310-31002|GDP_COMPONENT=|freq=Q|measure=CUR|label=按年變動百分率",
         "metric_type": "yoy_percent",
@@ -196,7 +473,8 @@
       ],
       "validation_state": "ok",
       "validation_messages": [],
-      "expected_update": "每季"
+      "expected_update": "每季",
+      "last_successful_fetch_at": "2026-03-18T03:41:58.938Z"
     }
   ]
 }

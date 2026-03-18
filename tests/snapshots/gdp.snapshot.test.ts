@@ -13,10 +13,12 @@ test("gdp snapshot matches official real and nominal yoy", () => {
   assert.equal(real.previous_value, 3.7);
   assert.equal(real.change_value, 0.1);
   assert.equal(real.metric_type, "yoy_percent");
+  assert.equal(real.comparison_period_label, "2025年第3季");
 
   const nominal = card.metrics.find((item: any) => item.id === "gdp_nominal_yoy");
   assert.equal(nominal.latest_value, 5.1);
   assert.equal(nominal.previous_value, 4.6);
   assert.equal(nominal.change_value, 0.5);
   assert.equal(nominal.metric_type, "yoy_percent");
+  assert.equal(nominal.comparison_period_label, "2025年第3季");
 });

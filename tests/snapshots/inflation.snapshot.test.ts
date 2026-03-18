@@ -17,6 +17,7 @@ test("inflation snapshot matches official CPI yoy", () => {
   assert.equal(metric.change_value, -0.3);
   assert.equal(metric.metric_type, "yoy_percent");
   assert.equal(metric.change_type, "percentage_point_change");
+  assert.equal(metric.comparison_period_label, "2025年12月");
   assert.equal(uiMetric.display_value_text, "+1.1%");
-  assert.equal(uiMetric.display_change_text, "較上期 -0.3 個百分點");
+  assert.equal(uiMetric.display_change_text, "較上期（2025年12月） -0.3 個百分點");
 });

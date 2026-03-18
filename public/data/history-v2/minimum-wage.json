@@ -1,13 +1,13 @@
 {
   "id": "minimum-wage",
   "title_tc": "最低工資",
-  "latest_as_of_date": "2026-04-30",
-  "latest_as_of_label": "2026-04-30",
+  "latest_as_of_date": "2025-05-01",
+  "latest_as_of_label": "2025-05-01",
   "metrics": [
     {
-      "id": "statutory_minimum_wage",
+      "id": "statutory_minimum_wage_current",
       "card_id": "minimum-wage",
-      "label_tc": "法定最低工資",
+      "label_tc": "現行法定最低工資",
       "source": {
         "publisher": "勞工處",
         "dataset_url": "https://www.labour.gov.hk/eng/news/mwo.htm"
@@ -16,17 +16,48 @@
       "metric_type": "level",
       "frequency": "event",
       "unit": "港元/小時",
-      "as_of_date": "2026-04-30",
-      "as_of_label": "2026-04-30",
-      "release_date": "2025-04-29",
-      "latest_value": 43.1,
-      "previous_value": 42.1,
-      "previous_as_of_date": "2025-04-30",
-      "previous_as_of_label": "2025-04-30",
-      "change_value": 1,
+      "display_unit": "HK$/小時",
+      "rounding_policy": {
+        "value_decimals": 1,
+        "change_decimals": 1,
+        "previous_decimals": 1
+      },
+      "as_of_date": "2025-05-01",
+      "as_of_label": "2025-05-01",
+      "latest_value": 42.1,
       "change_type": "absolute_change",
+      "comparison_type": "event_previous_effective",
       "comparison_basis": "event_previous_effective",
       "comparison_basis_label_tc": "較上一次生效值",
+      "data_origin": "live",
+      "chart_definition": {
+        "series_id": "labour|min_wage",
+        "metric_type": "level",
+        "chart_type": "step_after",
+        "frequency": "event",
+        "unit": "港元/小時",
+        "display_unit": "HK$/小時",
+        "period_start": "2025-05-01",
+        "period_end": "2025-05-01",
+        "x_axis_label": "生效日期",
+        "y_axis_label": "法定最低工資 (HK$/小時)",
+        "value_label": "法定最低工資",
+        "time_label": "生效日期",
+        "suggested_ticks": [
+          "2025-05-01"
+        ]
+      },
+      "chart_points": [
+        {
+          "as_of_date": "2025-05-01",
+          "as_of_label": "2025-05-01",
+          "tick_label": "2025-05-01",
+          "value": 42.1,
+          "display_value_text": "HK$42.1/小時",
+          "tooltip_title": "2025-05-01",
+          "tooltip_value_text": "HK$42.1/小時"
+        }
+      ],
       "sparkline_definition": {
         "series_id": "labour|min_wage",
         "metric_type": "level",
@@ -36,20 +67,112 @@
       },
       "sparkline_points": [
         {
-          "as_of_date": "2025-04-30",
-          "as_of_label": "2025-04-30",
+          "as_of_date": "2025-05-01",
+          "as_of_label": "2025-05-01",
+          "value": 42.1
+        }
+      ],
+      "validation_state": "ok",
+      "validation_messages": [],
+      "expected_update": "按政策變動",
+      "provisional": false,
+      "last_successful_fetch_at": "2026-03-18T03:41:58.938Z"
+    },
+    {
+      "id": "statutory_minimum_wage_next",
+      "card_id": "minimum-wage",
+      "label_tc": "下一個法定最低工資",
+      "source": {
+        "publisher": "勞工處",
+        "dataset_url": "https://www.labour.gov.hk/eng/news/mwo.htm"
+      },
+      "series_id": "labour|min_wage",
+      "metric_type": "level",
+      "frequency": "event",
+      "unit": "港元/小時",
+      "display_unit": "HK$/小時",
+      "rounding_policy": {
+        "value_decimals": 1,
+        "change_decimals": 1,
+        "previous_decimals": 1
+      },
+      "as_of_date": "2026-05-01",
+      "as_of_label": "2026-05-01",
+      "release_date": "2025-04-29",
+      "latest_value": 43.1,
+      "previous_value": 42.1,
+      "previous_as_of_date": "2025-05-01",
+      "previous_as_of_label": "2025-05-01",
+      "change_value": 1,
+      "change_type": "absolute_change",
+      "comparison_type": "event_previous_effective",
+      "comparison_basis": "event_previous_effective",
+      "comparison_basis_label_tc": "較上一次生效值",
+      "comparison_period_label": "2025-05-01",
+      "data_origin": "live",
+      "chart_definition": {
+        "series_id": "labour|min_wage",
+        "metric_type": "level",
+        "chart_type": "step_after",
+        "frequency": "event",
+        "unit": "港元/小時",
+        "display_unit": "HK$/小時",
+        "period_start": "2025-05-01",
+        "period_end": "2026-05-01",
+        "x_axis_label": "生效日期",
+        "y_axis_label": "法定最低工資 (HK$/小時)",
+        "value_label": "法定最低工資",
+        "time_label": "生效日期",
+        "suggested_ticks": [
+          "2025-05-01",
+          "2026-05-01"
+        ]
+      },
+      "chart_points": [
+        {
+          "as_of_date": "2025-05-01",
+          "as_of_label": "2025-05-01",
+          "tick_label": "2025-05-01",
+          "value": 42.1,
+          "display_value_text": "HK$42.1/小時",
+          "tooltip_title": "2025-05-01",
+          "tooltip_value_text": "HK$42.1/小時"
+        },
+        {
+          "as_of_date": "2026-05-01",
+          "as_of_label": "2026-05-01",
+          "tick_label": "2026-05-01",
+          "value": 43.1,
+          "display_value_text": "HK$43.1/小時",
+          "tooltip_title": "2026-05-01",
+          "tooltip_value_text": "HK$43.1/小時"
+        }
+      ],
+      "sparkline_definition": {
+        "series_id": "labour|min_wage",
+        "metric_type": "level",
+        "comparison_basis": "event_previous_effective",
+        "unit": "港元/小時",
+        "frequency": "event"
+      },
+      "sparkline_points": [
+        {
+          "as_of_date": "2025-05-01",
+          "as_of_label": "2025-05-01",
           "value": 42.1
         },
         {
-          "as_of_date": "2026-04-30",
-          "as_of_label": "2026-04-30",
+          "as_of_date": "2026-05-01",
+          "as_of_label": "2026-05-01",
           "value": 43.1
         }
       ],
       "validation_state": "ok",
       "validation_messages": [],
       "expected_update": "按政策變動",
-      "provisional": true
+      "provisional": true,
+      "reason": "將於 2026-05-01 生效",
+      "last_successful_fetch_at": "2026-03-18T03:41:58.938Z"
     }
   ]
 }

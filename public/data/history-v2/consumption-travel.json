@@ -21,6 +21,14 @@
       "metric_type": "level",
       "frequency": "monthly",
       "unit": "百萬港元",
+      "display_unit": "億港元",
+      "rounding_policy": {
+        "value_decimals": 1,
+        "change_decimals": 1,
+        "previous_decimals": 1,
+        "display_scale": 0.01,
+        "display_scale_label": "億港元"
+      },
       "as_of_date": "2026-01-31",
       "as_of_label": "2026年1月",
       "latest_value": 37308,
@@ -29,8 +37,140 @@
       "previous_as_of_label": "2025年1月",
       "change_value": 5.4524,
       "change_type": "yoy_percent",
+      "comparison_type": "same_period_last_year",
       "comparison_basis": "same_period_last_year",
       "comparison_basis_label_tc": "較去年同月",
+      "comparison_period_label": "2025年1月",
+      "data_origin": "live",
+      "chart_definition": {
+        "series_id": "censtatd|620-67001|freq=M|measure=VAL_RS|label=百萬港元",
+        "metric_type": "level",
+        "chart_type": "line",
+        "frequency": "monthly",
+        "unit": "百萬港元",
+        "display_unit": "億港元",
+        "period_start": "2004-10-31",
+        "period_end": "2026-01-31",
+        "x_axis_label": "月份",
+        "y_axis_label": "零售銷售額 (億港元)",
+        "value_label": "零售銷售額",
+        "time_label": "月份",
+        "suggested_ticks": [
+          "2025-02",
+          "2025-08",
+          "2026-01"
+        ]
+      },
+      "chart_points": [
+        {
+          "as_of_date": "2025-02-28",
+          "as_of_label": "2025年2月",
+          "tick_label": "2025-02",
+          "value": 29385,
+          "display_value_text": "HK$293.9億",
+          "tooltip_title": "2025年2月",
+          "tooltip_value_text": "HK$293.9億"
+        },
+        {
+          "as_of_date": "2025-03-31",
+          "as_of_label": "2025年3月",
+          "tick_label": "2025-03",
+          "value": 30091,
+          "display_value_text": "HK$300.9億",
+          "tooltip_title": "2025年3月",
+          "tooltip_value_text": "HK$300.9億"
+        },
+        {
+          "as_of_date": "2025-04-30",
+          "as_of_label": "2025年4月",
+          "tick_label": "2025-04",
+          "value": 28876,
+          "display_value_text": "HK$288.8億",
+          "tooltip_title": "2025年4月",
+          "tooltip_value_text": "HK$288.8億"
+        },
+        {
+          "as_of_date": "2025-05-31",
+          "as_of_label": "2025年5月",
+          "tick_label": "2025-05",
+          "value": 31319,
+          "display_value_text": "HK$313.2億",
+          "tooltip_title": "2025年5月",
+          "tooltip_value_text": "HK$313.2億"
+        },
+        {
+          "as_of_date": "2025-06-30",
+          "as_of_label": "2025年6月",
+          "tick_label": "2025-06",
+          "value": 30094,
+          "display_value_text": "HK$300.9億",
+          "tooltip_title": "2025年6月",
+          "tooltip_value_text": "HK$300.9億"
+        },
+        {
+          "as_of_date": "2025-07-31",
+          "as_of_label": "2025年7月",
+          "tick_label": "2025-07",
+          "value": 29671,
+          "display_value_text": "HK$296.7億",
+          "tooltip_title": "2025年7月",
+          "tooltip_value_text": "HK$296.7億"
+        },
+        {
+          "as_of_date": "2025-08-31",
+          "as_of_label": "2025年8月",
+          "tick_label": "2025-08",
+          "value": 30367,
+          "display_value_text": "HK$303.7億",
+          "tooltip_title": "2025年8月",
+          "tooltip_value_text": "HK$303.7億"
+        },
+        {
+          "as_of_date": "2025-09-30",
+          "as_of_label": "2025年9月",
+          "tick_label": "2025-09",
+          "value": 31344,
+          "display_value_text": "HK$313.4億",
+          "tooltip_title": "2025年9月",
+          "tooltip_value_text": "HK$313.4億"
+        },
+        {
+          "as_of_date": "2025-10-31",
+          "as_of_label": "2025年10月",
+          "tick_label": "2025-10",
+          "value": 35174,
+          "display_value_text": "HK$351.7億",
+          "tooltip_title": "2025年10月",
+          "tooltip_value_text": "HK$351.7億"
+        },
+        {
+          "as_of_date": "2025-11-30",
+          "as_of_label": "2025年11月",
+          "tick_label": "2025-11",
+          "value": 33727,
+          "display_value_text": "HK$337.3億",
+          "tooltip_title": "2025年11月",
+          "tooltip_value_text": "HK$337.3億"
+        },
+        {
+          "as_of_date": "2025-12-31",
+          "as_of_label": "2025年12月",
+          "tick_label": "2025-12",
+          "value": 35018,
+          "display_value_text": "HK$350.2億",
+          "tooltip_title": "2025年12月",
+          "tooltip_value_text": "HK$350.2億"
+        },
+        {
+          "as_of_date": "2026-01-31",
+          "as_of_label": "2026年1月",
+          "tick_label": "2026-01",
+          "value": 37308,
+          "display_value_text": "HK$373.1億",
+          "tooltip_title": "2026年1月",
+          "tooltip_value_text": "HK$373.1億"
+        }
+      ],
       "sparkline_definition": {
         "series_id": "censtatd|620-67001|freq=M|measure=VAL_RS|label=百萬港元",
         "metric_type": "level",
@@ -102,7 +242,8 @@
       ],
       "validation_state": "ok",
       "validation_messages": [],
-      "expected_update": "每月"
+      "expected_update": "每月",
+      "last_successful_fetch_at": "2026-03-18T03:41:58.938Z"
     },
     {
       "id": "visitor_arrivals",
@@ -118,6 +259,12 @@
       "metric_type": "level",
       "frequency": "monthly",
       "unit": "人次",
+      "display_unit": "人次",
+      "rounding_policy": {
+        "value_decimals": 0,
+        "change_decimals": 1,
+        "previous_decimals": 0
+      },
       "as_of_date": "2026-01-31",
       "as_of_label": "2026年1月",
       "latest_value": 4811700,
@@ -126,8 +273,140 @@
       "previous_as_of_label": "2025年1月",
       "change_value": 1.4684,
       "change_type": "yoy_percent",
+      "comparison_type": "same_period_last_year",
       "comparison_basis": "same_period_last_year",
       "comparison_basis_label_tc": "較去年同月",
+      "comparison_period_label": "2025年1月",
+      "data_origin": "live",
+      "chart_definition": {
+        "series_id": "censtatd|650-80001|REGION=|measure=VIS_ARR|label=數目",
+        "metric_type": "level",
+        "chart_type": "line",
+        "frequency": "monthly",
+        "unit": "人次",
+        "display_unit": "人次",
+        "period_start": "2004",
+        "period_end": "2026-01-31",
+        "x_axis_label": "月份",
+        "y_axis_label": "旅客入境 (人次)",
+        "value_label": "旅客入境",
+        "time_label": "月份",
+        "suggested_ticks": [
+          "2025-02",
+          "2025-08",
+          "2026-01"
+        ]
+      },
+      "chart_points": [
+        {
+          "as_of_date": "2025-02-28",
+          "as_of_label": "2025年2月",
+          "tick_label": "2025-02",
+          "value": 3667671,
+          "display_value_text": "3,667,671 人次",
+          "tooltip_title": "2025年2月",
+          "tooltip_value_text": "3,667,671 人次"
+        },
+        {
+          "as_of_date": "2025-03-31",
+          "as_of_label": "2025年3月",
+          "tick_label": "2025-03",
+          "value": 3818512,
+          "display_value_text": "3,818,512 人次",
+          "tooltip_title": "2025年3月",
+          "tooltip_value_text": "3,818,512 人次"
+        },
+        {
+          "as_of_date": "2025-04-30",
+          "as_of_label": "2025年4月",
+          "tick_label": "2025-04",
+          "value": 3847934,
+          "display_value_text": "3,847,934 人次",
+          "tooltip_title": "2025年4月",
+          "tooltip_value_text": "3,847,934 人次"
+        },
+        {
+          "as_of_date": "2025-05-31",
+          "as_of_label": "2025年5月",
+          "tick_label": "2025-05",
+          "value": 4078938,
+          "display_value_text": "4,078,938 人次",
+          "tooltip_title": "2025年5月",
+          "tooltip_value_text": "4,078,938 人次"
+        },
+        {
+          "as_of_date": "2025-06-30",
+          "as_of_label": "2025年6月",
+          "tick_label": "2025-06",
+          "value": 3480979,
+          "display_value_text": "3,480,979 人次",
+          "tooltip_title": "2025年6月",
+          "tooltip_value_text": "3,480,979 人次"
+        },
+        {
+          "as_of_date": "2025-07-31",
+          "as_of_label": "2025年7月",
+          "tick_label": "2025-07",
+          "value": 4390514,
+          "display_value_text": "4,390,514 人次",
+          "tooltip_title": "2025年7月",
+          "tooltip_value_text": "4,390,514 人次"
+        },
+        {
+          "as_of_date": "2025-08-31",
+          "as_of_label": "2025年8月",
+          "tick_label": "2025-08",
+          "value": 5152837,
+          "display_value_text": "5,152,837 人次",
+          "tooltip_title": "2025年8月",
+          "tooltip_value_text": "5,152,837 人次"
+        },
+        {
+          "as_of_date": "2025-09-30",
+          "as_of_label": "2025年9月",
+          "tick_label": "2025-09",
+          "value": 3292197,
+          "display_value_text": "3,292,197 人次",
+          "tooltip_title": "2025年9月",
+          "tooltip_value_text": "3,292,197 人次"
+        },
+        {
+          "as_of_date": "2025-10-31",
+          "as_of_label": "2025年10月",
+          "tick_label": "2025-10",
+          "value": 4588515,
+          "display_value_text": "4,588,515 人次",
+          "tooltip_title": "2025年10月",
+          "tooltip_value_text": "4,588,515 人次"
+        },
+        {
+          "as_of_date": "2025-11-30",
+          "as_of_label": "2025年11月",
+          "tick_label": "2025-11",
+          "value": 4189272,
+          "display_value_text": "4,189,272 人次",
+          "tooltip_title": "2025年11月",
+          "tooltip_value_text": "4,189,272 人次"
+        },
+        {
+          "as_of_date": "2025-12-31",
+          "as_of_label": "2025年12月",
+          "tick_label": "2025-12",
+          "value": 4645397,
+          "display_value_text": "4,645,397 人次",
+          "tooltip_title": "2025年12月",
+          "tooltip_value_text": "4,645,397 人次"
+        },
+        {
+          "as_of_date": "2026-01-31",
+          "as_of_label": "2026年1月",
+          "tick_label": "2026-01",
+          "value": 4811700,
+          "display_value_text": "4,811,700 人次",
+          "tooltip_title": "2026年1月",
+          "tooltip_value_text": "4,811,700 人次"
+        }
+      ],
       "sparkline_definition": {
         "series_id": "censtatd|650-80001|REGION=|measure=VIS_ARR|label=數目",
         "metric_type": "level",
@@ -199,7 +478,8 @@
       ],
       "validation_state": "ok",
       "validation_messages": [],
-      "expected_update": "每月"
+      "expected_update": "每月",
+      "last_successful_fetch_at": "2026-03-18T03:41:58.938Z"
     }
   ]
 }

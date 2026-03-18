@@ -1,8 +1,8 @@
 {
   "id": "housing",
   "title_tc": "住屋",
-  "latest_as_of_date": "2026-12-31",
-  "latest_as_of_label": "2026年（預測）",
+  "latest_as_of_date": "2026-01-31",
+  "latest_as_of_label": "2026年1月",
   "metrics": [
     {
       "id": "private_price_index",
@@ -12,32 +12,231 @@
         "publisher": "差餉物業估價署",
         "dataset_url": "https://www.rvd.gov.hk/datagovhk/1.4M.csv"
       },
-      "series_id": "private_price_index",
+      "series_id": "rvd|price_index|all_classes",
       "metric_type": "level",
       "frequency": "monthly",
       "unit": "指數",
-      "as_of_date": "",
-      "as_of_label": "",
+      "display_unit": "指數",
+      "rounding_policy": {
+        "value_decimals": 1,
+        "change_decimals": 1,
+        "previous_decimals": 1
+      },
+      "as_of_date": "2026-01-31",
+      "as_of_label": "2026年1月",
+      "latest_value": 301.4,
+      "previous_value": 299.8,
+      "previous_as_of_date": "2025-12-31",
+      "previous_as_of_label": "2025年12月",
+      "change_value": 1.6,
       "change_type": "absolute_change",
+      "comparison_type": "previous_observation",
       "comparison_basis": "previous_observation",
       "comparison_basis_label_tc": "較上期",
+      "comparison_period_label": "2025年12月",
+      "data_origin": "live",
+      "chart_definition": {
+        "series_id": "rvd|price_index|all_classes",
+        "metric_type": "level",
+        "chart_type": "line",
+        "frequency": "monthly",
+        "unit": "指數",
+        "display_unit": "指數",
+        "period_start": "1993-01-31",
+        "period_end": "2026-01-31",
+        "x_axis_label": "月份",
+        "y_axis_label": "私樓售價指數 (指數)",
+        "value_label": "私樓售價指數",
+        "time_label": "月份",
+        "suggested_ticks": [
+          "2025-02",
+          "2025-08",
+          "2026-01"
+        ]
+      },
+      "chart_points": [
+        {
+          "as_of_date": "2025-02-28",
+          "as_of_label": "2025年2月",
+          "tick_label": "2025-02",
+          "value": 285.6,
+          "display_value_text": "285.6 指數",
+          "tooltip_title": "2025年2月",
+          "tooltip_value_text": "285.6 指數"
+        },
+        {
+          "as_of_date": "2025-03-31",
+          "as_of_label": "2025年3月",
+          "tick_label": "2025-03",
+          "value": 284.9,
+          "display_value_text": "284.9 指數",
+          "tooltip_title": "2025年3月",
+          "tooltip_value_text": "284.9 指數"
+        },
+        {
+          "as_of_date": "2025-04-30",
+          "as_of_label": "2025年4月",
+          "tick_label": "2025-04",
+          "value": 286.5,
+          "display_value_text": "286.5 指數",
+          "tooltip_title": "2025年4月",
+          "tooltip_value_text": "286.5 指數"
+        },
+        {
+          "as_of_date": "2025-05-31",
+          "as_of_label": "2025年5月",
+          "tick_label": "2025-05",
+          "value": 286.5,
+          "display_value_text": "286.5 指數",
+          "tooltip_title": "2025年5月",
+          "tooltip_value_text": "286.5 指數"
+        },
+        {
+          "as_of_date": "2025-06-30",
+          "as_of_label": "2025年6月",
+          "tick_label": "2025-06",
+          "value": 286.7,
+          "display_value_text": "286.7 指數",
+          "tooltip_title": "2025年6月",
+          "tooltip_value_text": "286.7 指數"
+        },
+        {
+          "as_of_date": "2025-07-31",
+          "as_of_label": "2025年7月",
+          "tick_label": "2025-07",
+          "value": 288.1,
+          "display_value_text": "288.1 指數",
+          "tooltip_title": "2025年7月",
+          "tooltip_value_text": "288.1 指數"
+        },
+        {
+          "as_of_date": "2025-08-31",
+          "as_of_label": "2025年8月",
+          "tick_label": "2025-08",
+          "value": 288.8,
+          "display_value_text": "288.8 指數",
+          "tooltip_title": "2025年8月",
+          "tooltip_value_text": "288.8 指數"
+        },
+        {
+          "as_of_date": "2025-09-30",
+          "as_of_label": "2025年9月",
+          "tick_label": "2025-09",
+          "value": 293.4,
+          "display_value_text": "293.4 指數",
+          "tooltip_title": "2025年9月",
+          "tooltip_value_text": "293.4 指數"
+        },
+        {
+          "as_of_date": "2025-10-31",
+          "as_of_label": "2025年10月",
+          "tick_label": "2025-10",
+          "value": 294.9,
+          "display_value_text": "294.9 指數",
+          "tooltip_title": "2025年10月",
+          "tooltip_value_text": "294.9 指數"
+        },
+        {
+          "as_of_date": "2025-11-30",
+          "as_of_label": "2025年11月",
+          "tick_label": "2025-11",
+          "value": 298.7,
+          "display_value_text": "298.7 指數",
+          "tooltip_title": "2025年11月",
+          "tooltip_value_text": "298.7 指數"
+        },
+        {
+          "as_of_date": "2025-12-31",
+          "as_of_label": "2025年12月",
+          "tick_label": "2025-12",
+          "value": 299.8,
+          "display_value_text": "299.8 指數",
+          "tooltip_title": "2025年12月",
+          "tooltip_value_text": "299.8 指數"
+        },
+        {
+          "as_of_date": "2026-01-31",
+          "as_of_label": "2026年1月",
+          "tick_label": "2026-01",
+          "value": 301.4,
+          "display_value_text": "301.4 指數",
+          "tooltip_title": "2026年1月",
+          "tooltip_value_text": "301.4 指數"
+        }
+      ],
       "sparkline_definition": {
-        "series_id": "private_price_index",
+        "series_id": "rvd|price_index|all_classes",
         "metric_type": "level",
         "comparison_basis": "previous_observation",
         "unit": "指數",
         "frequency": "monthly"
       },
-      "sparkline_points": [],
-      "validation_state": "schema_changed",
-      "validation_messages": [
+      "sparkline_points": [
         {
-          "code": "schema_changed",
-          "level": "error",
-          "message_tc": "來源欄位變更或找不到對應序列。"
+          "as_of_date": "2025-02-28",
+          "as_of_label": "2025年2月",
+          "value": 285.6
+        },
+        {
+          "as_of_date": "2025-03-31",
+          "as_of_label": "2025年3月",
+          "value": 284.9
+        },
+        {
+          "as_of_date": "2025-04-30",
+          "as_of_label": "2025年4月",
+          "value": 286.5
+        },
+        {
+          "as_of_date": "2025-05-31",
+          "as_of_label": "2025年5月",
+          "value": 286.5
+        },
+        {
+          "as_of_date": "2025-06-30",
+          "as_of_label": "2025年6月",
+          "value": 286.7
+        },
+        {
+          "as_of_date": "2025-07-31",
+          "as_of_label": "2025年7月",
+          "value": 288.1
+        },
+        {
+          "as_of_date": "2025-08-31",
+          "as_of_label": "2025年8月",
+          "value": 288.8
+        },
+        {
+          "as_of_date": "2025-09-30",
+          "as_of_label": "2025年9月",
+          "value": 293.4
+        },
+        {
+          "as_of_date": "2025-10-31",
+          "as_of_label": "2025年10月",
+          "value": 294.9
+        },
+        {
+          "as_of_date": "2025-11-30",
+          "as_of_label": "2025年11月",
+          "value": 298.7
+        },
+        {
+          "as_of_date": "2025-12-31",
+          "as_of_label": "2025年12月",
+          "value": 299.8
+        },
+        {
+          "as_of_date": "2026-01-31",
+          "as_of_label": "2026年1月",
+          "value": 301.4
         }
       ],
-      "expected_update": "每月"
+      "validation_state": "ok",
+      "validation_messages": [],
+      "expected_update": "每月",
+      "last_successful_fetch_at": "2026-03-18T03:41:58.938Z"
     },
     {
       "id": "private_rent_index",
@@ -47,32 +246,231 @@
         "publisher": "差餉物業估價署",
         "dataset_url": "https://www.rvd.gov.hk/datagovhk/1.3M.csv"
       },
-      "series_id": "private_rent_index",
+      "series_id": "rvd|rent_index|all_classes",
       "metric_type": "level",
       "frequency": "monthly",
       "unit": "指數",
-      "as_of_date": "",
-      "as_of_label": "",
+      "display_unit": "指數",
+      "rounding_policy": {
+        "value_decimals": 1,
+        "change_decimals": 1,
+        "previous_decimals": 1
+      },
+      "as_of_date": "2026-01-31",
+      "as_of_label": "2026年1月",
+      "latest_value": 201.1,
+      "previous_value": 200.5,
+      "previous_as_of_date": "2025-12-31",
+      "previous_as_of_label": "2025年12月",
+      "change_value": 0.6,
       "change_type": "absolute_change",
+      "comparison_type": "previous_observation",
       "comparison_basis": "previous_observation",
       "comparison_basis_label_tc": "較上期",
+      "comparison_period_label": "2025年12月",
+      "data_origin": "live",
+      "chart_definition": {
+        "series_id": "rvd|rent_index|all_classes",
+        "metric_type": "level",
+        "chart_type": "line",
+        "frequency": "monthly",
+        "unit": "指數",
+        "display_unit": "指數",
+        "period_start": "1993-01-31",
+        "period_end": "2026-01-31",
+        "x_axis_label": "月份",
+        "y_axis_label": "私樓租金指數 (指數)",
+        "value_label": "私樓租金指數",
+        "time_label": "月份",
+        "suggested_ticks": [
+          "2025-02",
+          "2025-08",
+          "2026-01"
+        ]
+      },
+      "chart_points": [
+        {
+          "as_of_date": "2025-02-28",
+          "as_of_label": "2025年2月",
+          "tick_label": "2025-02",
+          "value": 193,
+          "display_value_text": "193.0 指數",
+          "tooltip_title": "2025年2月",
+          "tooltip_value_text": "193.0 指數"
+        },
+        {
+          "as_of_date": "2025-03-31",
+          "as_of_label": "2025年3月",
+          "tick_label": "2025-03",
+          "value": 193.1,
+          "display_value_text": "193.1 指數",
+          "tooltip_title": "2025年3月",
+          "tooltip_value_text": "193.1 指數"
+        },
+        {
+          "as_of_date": "2025-04-30",
+          "as_of_label": "2025年4月",
+          "tick_label": "2025-04",
+          "value": 193.9,
+          "display_value_text": "193.9 指數",
+          "tooltip_title": "2025年4月",
+          "tooltip_value_text": "193.9 指數"
+        },
+        {
+          "as_of_date": "2025-05-31",
+          "as_of_label": "2025年5月",
+          "tick_label": "2025-05",
+          "value": 194.2,
+          "display_value_text": "194.2 指數",
+          "tooltip_title": "2025年5月",
+          "tooltip_value_text": "194.2 指數"
+        },
+        {
+          "as_of_date": "2025-06-30",
+          "as_of_label": "2025年6月",
+          "tick_label": "2025-06",
+          "value": 195.9,
+          "display_value_text": "195.9 指數",
+          "tooltip_title": "2025年6月",
+          "tooltip_value_text": "195.9 指數"
+        },
+        {
+          "as_of_date": "2025-07-31",
+          "as_of_label": "2025年7月",
+          "tick_label": "2025-07",
+          "value": 197.4,
+          "display_value_text": "197.4 指數",
+          "tooltip_title": "2025年7月",
+          "tooltip_value_text": "197.4 指數"
+        },
+        {
+          "as_of_date": "2025-08-31",
+          "as_of_label": "2025年8月",
+          "tick_label": "2025-08",
+          "value": 199.8,
+          "display_value_text": "199.8 指數",
+          "tooltip_title": "2025年8月",
+          "tooltip_value_text": "199.8 指數"
+        },
+        {
+          "as_of_date": "2025-09-30",
+          "as_of_label": "2025年9月",
+          "tick_label": "2025-09",
+          "value": 199.9,
+          "display_value_text": "199.9 指數",
+          "tooltip_title": "2025年9月",
+          "tooltip_value_text": "199.9 指數"
+        },
+        {
+          "as_of_date": "2025-10-31",
+          "as_of_label": "2025年10月",
+          "tick_label": "2025-10",
+          "value": 199.9,
+          "display_value_text": "199.9 指數",
+          "tooltip_title": "2025年10月",
+          "tooltip_value_text": "199.9 指數"
+        },
+        {
+          "as_of_date": "2025-11-30",
+          "as_of_label": "2025年11月",
+          "tick_label": "2025-11",
+          "value": 200.2,
+          "display_value_text": "200.2 指數",
+          "tooltip_title": "2025年11月",
+          "tooltip_value_text": "200.2 指數"
+        },
+        {
+          "as_of_date": "2025-12-31",
+          "as_of_label": "2025年12月",
+          "tick_label": "2025-12",
+          "value": 200.5,
+          "display_value_text": "200.5 指數",
+          "tooltip_title": "2025年12月",
+          "tooltip_value_text": "200.5 指數"
+        },
+        {
+          "as_of_date": "2026-01-31",
+          "as_of_label": "2026年1月",
+          "tick_label": "2026-01",
+          "value": 201.1,
+          "display_value_text": "201.1 指數",
+          "tooltip_title": "2026年1月",
+          "tooltip_value_text": "201.1 指數"
+        }
+      ],
       "sparkline_definition": {
-        "series_id": "private_rent_index",
+        "series_id": "rvd|rent_index|all_classes",
         "metric_type": "level",
         "comparison_basis": "previous_observation",
         "unit": "指數",
         "frequency": "monthly"
       },
-      "sparkline_points": [],
-      "validation_state": "schema_changed",
-      "validation_messages": [
+      "sparkline_points": [
         {
-          "code": "schema_changed",
-          "level": "error",
-          "message_tc": "來源欄位變更或找不到對應序列。"
+          "as_of_date": "2025-02-28",
+          "as_of_label": "2025年2月",
+          "value": 193
+        },
+        {
+          "as_of_date": "2025-03-31",
+          "as_of_label": "2025年3月",
+          "value": 193.1
+        },
+        {
+          "as_of_date": "2025-04-30",
+          "as_of_label": "2025年4月",
+          "value": 193.9
+        },
+        {
+          "as_of_date": "2025-05-31",
+          "as_of_label": "2025年5月",
+          "value": 194.2
+        },
+        {
+          "as_of_date": "2025-06-30",
+          "as_of_label": "2025年6月",
+          "value": 195.9
+        },
+        {
+          "as_of_date": "2025-07-31",
+          "as_of_label": "2025年7月",
+          "value": 197.4
+        },
+        {
+          "as_of_date": "2025-08-31",
+          "as_of_label": "2025年8月",
+          "value": 199.8
+        },
+        {
+          "as_of_date": "2025-09-30",
+          "as_of_label": "2025年9月",
+          "value": 199.9
+        },
+        {
+          "as_of_date": "2025-10-31",
+          "as_of_label": "2025年10月",
+          "value": 199.9
+        },
+        {
+          "as_of_date": "2025-11-30",
+          "as_of_label": "2025年11月",
+          "value": 200.2
+        },
+        {
+          "as_of_date": "2025-12-31",
+          "as_of_label": "2025年12月",
+          "value": 200.5
+        },
+        {
+          "as_of_date": "2026-01-31",
+          "as_of_label": "2026年1月",
+          "value": 201.1
         }
       ],
-      "expected_update": "每月"
+      "validation_state": "ok",
+      "validation_messages": [],
+      "expected_update": "每月",
+      "last_successful_fetch_at": "2026-03-18T03:41:58.938Z"
     },
     {
       "id": "private_completions",
@@ -86,6 +484,12 @@
       "metric_type": "level",
       "frequency": "annual",
       "unit": "伙",
+      "display_unit": "伙",
+      "rounding_policy": {
+        "value_decimals": 0,
+        "change_decimals": 0,
+        "previous_decimals": 0
+      },
       "as_of_date": "2026-12-31",
       "as_of_label": "2026年（預測）",
       "latest_value": 20098,
@@ -94,8 +498,59 @@
       "previous_as_of_label": "2025年（預測）",
       "change_value": -764,
       "change_type": "absolute_change",
+      "comparison_type": "previous_observation",
       "comparison_basis": "previous_observation",
       "comparison_basis_label_tc": "較上期",
+      "comparison_period_label": "2025年（預測）",
+      "data_origin": "live",
+      "chart_definition": {
+        "series_id": "rvd|private_domestic_completions|overall",
+        "metric_type": "level",
+        "chart_type": "line",
+        "frequency": "annual",
+        "unit": "伙",
+        "display_unit": "伙",
+        "period_start": "2024-12-31",
+        "period_end": "2026-12-31",
+        "x_axis_label": "年份",
+        "y_axis_label": "私人住宅落成量 (伙)",
+        "value_label": "私人住宅落成量",
+        "time_label": "年份",
+        "suggested_ticks": [
+          "2024",
+          "2025",
+          "2026"
+        ]
+      },
+      "chart_points": [
+        {
+          "as_of_date": "2024-12-31",
+          "as_of_label": "2024年",
+          "tick_label": "2024",
+          "value": 24261,
+          "display_value_text": "24,261 伙",
+          "tooltip_title": "2024年",
+          "tooltip_value_text": "24,261 伙"
+        },
+        {
+          "as_of_date": "2025-12-31",
+          "as_of_label": "2025年（預測）",
+          "tick_label": "2025",
+          "value": 20862,
+          "display_value_text": "20,862 伙",
+          "tooltip_title": "2025年（預測）",
+          "tooltip_value_text": "20,862 伙"
+        },
+        {
+          "as_of_date": "2026-12-31",
+          "as_of_label": "2026年（預測）",
+          "tick_label": "2026",
+          "value": 20098,
+          "display_value_text": "20,098 伙",
+          "tooltip_title": "2026年（預測）",
+          "tooltip_value_text": "20,098 伙"
+        }
+      ],
       "sparkline_definition": {
         "series_id": "rvd|private_domestic_completions|overall",
         "metric_type": "level",
@@ -123,7 +578,8 @@
       "validation_state": "ok",
       "validation_messages": [],
       "expected_update": "每年",
-      "provisional": true
+      "provisional": true,
+      "last_successful_fetch_at": "2026-03-18T03:41:58.938Z"
     }
   ]
 }

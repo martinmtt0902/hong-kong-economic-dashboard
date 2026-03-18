@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-03-18T02:56:47.701Z",
+  "generated_at": "2026-03-18T03:41:58.938Z",
   "cards": [
     {
       "id": "employment",
@@ -15,10 +15,114 @@
           "status": "ok",
           "status_text_tc": "最新",
           "display_value_text": "3.9%",
-          "display_change_text": "較上一個三個月移動窗 +0.1 個百分點",
-          "display_previous_text": "上一個三個月移動窗 3.8%",
+          "display_change_text": "較上一個三個月移動窗（2025年10月–12月） +0.1 個百分點",
+          "display_previous_text": "上一個三個月移動窗（2025年10月–12月） 3.8%",
           "display_period_text": "2025年11月–2026年1月",
+          "display_comparison_text": "較上一個三個月移動窗（2025年10月–12月） +0.1 個百分點",
           "display_comparison_basis_text": "較上一個三個月移動窗",
+          "display_comparison_period_text": "2025年10月–12月",
+          "display_unit": "%",
+          "data_origin": "live",
+          "last_successful_fetch_at": "2026-03-18T03:41:58.938Z",
+          "chart": {
+            "chart_type": "line",
+            "x_axis_label": "三個月移動期間",
+            "y_axis_label": "失業率 (%)",
+            "time_label": "三個月移動期間",
+            "value_label": "失業率",
+            "display_unit": "%",
+            "suggested_ticks": [
+              "2024-12",
+              "2025-06",
+              "2025-11"
+            ],
+            "points": [
+              {
+                "x": "2024年12月–2025年2月",
+                "y": 3.2,
+                "tick_label": "2024-12",
+                "tooltip_title": "2024年12月–2025年2月",
+                "tooltip_value_text": "3.2%"
+              },
+              {
+                "x": "2025年1月–2025年3月",
+                "y": 3.2,
+                "tick_label": "2025-01",
+                "tooltip_title": "2025年1月–2025年3月",
+                "tooltip_value_text": "3.2%"
+              },
+              {
+                "x": "2025年2月–2025年4月",
+                "y": 3.4,
+                "tick_label": "2025-02",
+                "tooltip_title": "2025年2月–2025年4月",
+                "tooltip_value_text": "3.4%"
+              },
+              {
+                "x": "2025年3月–2025年5月",
+                "y": 3.5,
+                "tick_label": "2025-03",
+                "tooltip_title": "2025年3月–2025年5月",
+                "tooltip_value_text": "3.5%"
+              },
+              {
+                "x": "2025年4月–2025年6月",
+                "y": 3.5,
+                "tick_label": "2025-04",
+                "tooltip_title": "2025年4月–2025年6月",
+                "tooltip_value_text": "3.5%"
+              },
+              {
+                "x": "2025年5月–2025年7月",
+                "y": 3.7,
+                "tick_label": "2025-05",
+                "tooltip_title": "2025年5月–2025年7月",
+                "tooltip_value_text": "3.7%"
+              },
+              {
+                "x": "2025年6月–2025年8月",
+                "y": 3.7,
+                "tick_label": "2025-06",
+                "tooltip_title": "2025年6月–2025年8月",
+                "tooltip_value_text": "3.7%"
+              },
+              {
+                "x": "2025年7月–2025年9月",
+                "y": 3.9,
+                "tick_label": "2025-07",
+                "tooltip_title": "2025年7月–2025年9月",
+                "tooltip_value_text": "3.9%"
+              },
+              {
+                "x": "2025年8月–2025年10月",
+                "y": 3.8,
+                "tick_label": "2025-08",
+                "tooltip_title": "2025年8月–2025年10月",
+                "tooltip_value_text": "3.8%"
+              },
+              {
+                "x": "2025年9月–2025年11月",
+                "y": 3.8,
+                "tick_label": "2025-09",
+                "tooltip_title": "2025年9月–2025年11月",
+                "tooltip_value_text": "3.8%"
+              },
+              {
+                "x": "2025年10月–2025年12月",
+                "y": 3.8,
+                "tick_label": "2025-10",
+                "tooltip_title": "2025年10月–2025年12月",
+                "tooltip_value_text": "3.8%"
+              },
+              {
+                "x": "2025年11月–2026年1月",
+                "y": 3.9,
+                "tick_label": "2025-11",
+                "tooltip_title": "2025年11月–2026年1月",
+                "tooltip_value_text": "3.9%"
+              }
+            ]
+          },
           "sparkline_points": [
             {
               "x": "2024年12月–2025年2月",
@@ -79,10 +183,114 @@
           "status": "ok",
           "status_text_tc": "最新",
           "display_value_text": "1.7%",
-          "display_change_text": "較上一個三個月移動窗 +0.0 個百分點",
-          "display_previous_text": "上一個三個月移動窗 1.7%",
+          "display_change_text": "較上一個三個月移動窗（2025年10月–12月） +0.0 個百分點",
+          "display_previous_text": "上一個三個月移動窗（2025年10月–12月） 1.7%",
           "display_period_text": "2025年11月–2026年1月",
+          "display_comparison_text": "較上一個三個月移動窗（2025年10月–12月） +0.0 個百分點",
           "display_comparison_basis_text": "較上一個三個月移動窗",
+          "display_comparison_period_text": "2025年10月–12月",
+          "display_unit": "%",
+          "data_origin": "live",
+          "last_successful_fetch_at": "2026-03-18T03:41:58.938Z",
+          "chart": {
+            "chart_type": "line",
+            "x_axis_label": "三個月移動期間",
+            "y_axis_label": "就業不足率 (%)",
+            "time_label": "三個月移動期間",
+            "value_label": "就業不足率",
+            "display_unit": "%",
+            "suggested_ticks": [
+              "2024-12",
+              "2025-06",
+              "2025-11"
+            ],
+            "points": [
+              {
+                "x": "2024年12月–2025年2月",
+                "y": 1.1,
+                "tick_label": "2024-12",
+                "tooltip_title": "2024年12月–2025年2月",
+                "tooltip_value_text": "1.1%"
+              },
+              {
+                "x": "2025年1月–2025年3月",
+                "y": 1.1,
+                "tick_label": "2025-01",
+                "tooltip_title": "2025年1月–2025年3月",
+                "tooltip_value_text": "1.1%"
+              },
+              {
+                "x": "2025年2月–2025年4月",
+                "y": 1.3,
+                "tick_label": "2025-02",
+                "tooltip_title": "2025年2月–2025年4月",
+                "tooltip_value_text": "1.3%"
+              },
+              {
+                "x": "2025年3月–2025年5月",
+                "y": 1.4,
+                "tick_label": "2025-03",
+                "tooltip_title": "2025年3月–2025年5月",
+                "tooltip_value_text": "1.4%"
+              },
+              {
+                "x": "2025年4月–2025年6月",
+                "y": 1.4,
+                "tick_label": "2025-04",
+                "tooltip_title": "2025年4月–2025年6月",
+                "tooltip_value_text": "1.4%"
+              },
+              {
+                "x": "2025年5月–2025年7月",
+                "y": 1.4,
+                "tick_label": "2025-05",
+                "tooltip_title": "2025年5月–2025年7月",
+                "tooltip_value_text": "1.4%"
+              },
+              {
+                "x": "2025年6月–2025年8月",
+                "y": 1.6,
+                "tick_label": "2025-06",
+                "tooltip_title": "2025年6月–2025年8月",
+                "tooltip_value_text": "1.6%"
+              },
+              {
+                "x": "2025年7月–2025年9月",
+                "y": 1.6,
+                "tick_label": "2025-07",
+                "tooltip_title": "2025年7月–2025年9月",
+                "tooltip_value_text": "1.6%"
+              },
+              {
+                "x": "2025年8月–2025年10月",
+                "y": 1.6,
+                "tick_label": "2025-08",
+                "tooltip_title": "2025年8月–2025年10月",
+                "tooltip_value_text": "1.6%"
+              },
+              {
+                "x": "2025年9月–2025年11月",
+                "y": 1.6,
+                "tick_label": "2025-09",
+                "tooltip_title": "2025年9月–2025年11月",
+                "tooltip_value_text": "1.6%"
+              },
+              {
+                "x": "2025年10月–2025年12月",
+                "y": 1.7,
+                "tick_label": "2025-10",
+                "tooltip_title": "2025年10月–2025年12月",
+                "tooltip_value_text": "1.7%"
+              },
+              {
+                "x": "2025年11月–2026年1月",
+                "y": 1.7,
+                "tick_label": "2025-11",
+                "tooltip_title": "2025年11月–2026年1月",
+                "tooltip_value_text": "1.7%"
+              }
+            ]
+          },
           "sparkline_points": [
             {
               "x": "2024年12月–2025年2月",
@@ -143,10 +351,114 @@
           "status": "ok",
           "status_text_tc": "最新",
           "display_value_text": "3,804,300",
-          "display_change_text": "較上一個三個月移動窗 -900",
-          "display_previous_text": "上一個三個月移動窗 3,805,200",
+          "display_change_text": "較上一個三個月移動窗（2025年10月–12月） -900",
+          "display_previous_text": "上一個三個月移動窗（2025年10月–12月） 3,805,200",
           "display_period_text": "2025年11月–2026年1月",
+          "display_comparison_text": "較上一個三個月移動窗（2025年10月–12月） -900",
           "display_comparison_basis_text": "較上一個三個月移動窗",
+          "display_comparison_period_text": "2025年10月–12月",
+          "display_unit": "人",
+          "data_origin": "live",
+          "last_successful_fetch_at": "2026-03-18T03:41:58.938Z",
+          "chart": {
+            "chart_type": "line",
+            "x_axis_label": "三個月移動期間",
+            "y_axis_label": "勞動人口 (人)",
+            "time_label": "三個月移動期間",
+            "value_label": "勞動人口",
+            "display_unit": "人",
+            "suggested_ticks": [
+              "2024-12",
+              "2025-06",
+              "2025-11"
+            ],
+            "points": [
+              {
+                "x": "2024年12月–2025年2月",
+                "y": 3821300,
+                "tick_label": "2024-12",
+                "tooltip_title": "2024年12月–2025年2月",
+                "tooltip_value_text": "3,821,300 人"
+              },
+              {
+                "x": "2025年1月–2025年3月",
+                "y": 3815500,
+                "tick_label": "2025-01",
+                "tooltip_title": "2025年1月–2025年3月",
+                "tooltip_value_text": "3,815,500 人"
+              },
+              {
+                "x": "2025年2月–2025年4月",
+                "y": 3806500,
+                "tick_label": "2025-02",
+                "tooltip_title": "2025年2月–2025年4月",
+                "tooltip_value_text": "3,806,500 人"
+              },
+              {
+                "x": "2025年3月–2025年5月",
+                "y": 3800500,
+                "tick_label": "2025-03",
+                "tooltip_title": "2025年3月–2025年5月",
+                "tooltip_value_text": "3,800,500 人"
+              },
+              {
+                "x": "2025年4月–2025年6月",
+                "y": 3793500,
+                "tick_label": "2025-04",
+                "tooltip_title": "2025年4月–2025年6月",
+                "tooltip_value_text": "3,793,500 人"
+              },
+              {
+                "x": "2025年5月–2025年7月",
+                "y": 3816200,
+                "tick_label": "2025-05",
+                "tooltip_title": "2025年5月–2025年7月",
+                "tooltip_value_text": "3,816,200 人"
+              },
+              {
+                "x": "2025年6月–2025年8月",
+                "y": 3831600,
+                "tick_label": "2025-06",
+                "tooltip_title": "2025年6月–2025年8月",
+                "tooltip_value_text": "3,831,600 人"
+              },
+              {
+                "x": "2025年7月–2025年9月",
+                "y": 3830100,
+                "tick_label": "2025-07",
+                "tooltip_title": "2025年7月–2025年9月",
+                "tooltip_value_text": "3,830,100 人"
+              },
+              {
+                "x": "2025年8月–2025年10月",
+                "y": 3822300,
+                "tick_label": "2025-08",
+                "tooltip_title": "2025年8月–2025年10月",
+                "tooltip_value_text": "3,822,300 人"
+              },
+              {
+                "x": "2025年9月–2025年11月",
+                "y": 3814300,
+                "tick_label": "2025-09",
+                "tooltip_title": "2025年9月–2025年11月",
+                "tooltip_value_text": "3,814,300 人"
+              },
+              {
+                "x": "2025年10月–2025年12月",
+                "y": 3805200,
+                "tick_label": "2025-10",
+                "tooltip_title": "2025年10月–2025年12月",
+                "tooltip_value_text": "3,805,200 人"
+              },
+              {
+                "x": "2025年11月–2026年1月",
+                "y": 3804300,
+                "tick_label": "2025-11",
+                "tooltip_title": "2025年11月–2026年1月",
+                "tooltip_value_text": "3,804,300 人"
+              }
+            ]
+          },
           "sparkline_points": [
             {
               "x": "2024年12月–2025年2月",
@@ -215,10 +527,114 @@
           "status": "ok",
           "status_text_tc": "最新",
           "display_value_text": "+1.1%",
-          "display_change_text": "較上期 -0.3 個百分點",
-          "display_previous_text": "上期 +1.4%",
+          "display_change_text": "較上期（2025年12月） -0.3 個百分點",
+          "display_previous_text": "上期（2025年12月） +1.4%",
           "display_period_text": "2026年1月",
+          "display_comparison_text": "較上期（2025年12月） -0.3 個百分點",
           "display_comparison_basis_text": "較上期",
+          "display_comparison_period_text": "2025年12月",
+          "display_unit": "%",
+          "data_origin": "live",
+          "last_successful_fetch_at": "2026-03-18T03:41:58.938Z",
+          "chart": {
+            "chart_type": "line",
+            "x_axis_label": "月份",
+            "y_axis_label": "綜合 CPI 按年變動 (%)",
+            "time_label": "月份",
+            "value_label": "綜合 CPI 按年變動",
+            "display_unit": "%",
+            "suggested_ticks": [
+              "2025-02",
+              "2025-08",
+              "2026-01"
+            ],
+            "points": [
+              {
+                "x": "2025年2月",
+                "y": 1.4,
+                "tick_label": "2025-02",
+                "tooltip_title": "2025年2月",
+                "tooltip_value_text": "+1.4%"
+              },
+              {
+                "x": "2025年3月",
+                "y": 1.4,
+                "tick_label": "2025-03",
+                "tooltip_title": "2025年3月",
+                "tooltip_value_text": "+1.4%"
+              },
+              {
+                "x": "2025年4月",
+                "y": 2,
+                "tick_label": "2025-04",
+                "tooltip_title": "2025年4月",
+                "tooltip_value_text": "+2.0%"
+              },
+              {
+                "x": "2025年5月",
+                "y": 1.9,
+                "tick_label": "2025-05",
+                "tooltip_title": "2025年5月",
+                "tooltip_value_text": "+1.9%"
+              },
+              {
+                "x": "2025年6月",
+                "y": 1.4,
+                "tick_label": "2025-06",
+                "tooltip_title": "2025年6月",
+                "tooltip_value_text": "+1.4%"
+              },
+              {
+                "x": "2025年7月",
+                "y": 1,
+                "tick_label": "2025-07",
+                "tooltip_title": "2025年7月",
+                "tooltip_value_text": "+1.0%"
+              },
+              {
+                "x": "2025年8月",
+                "y": 1.1,
+                "tick_label": "2025-08",
+                "tooltip_title": "2025年8月",
+                "tooltip_value_text": "+1.1%"
+              },
+              {
+                "x": "2025年9月",
+                "y": 1.1,
+                "tick_label": "2025-09",
+                "tooltip_title": "2025年9月",
+                "tooltip_value_text": "+1.1%"
+              },
+              {
+                "x": "2025年10月",
+                "y": 1.2,
+                "tick_label": "2025-10",
+                "tooltip_title": "2025年10月",
+                "tooltip_value_text": "+1.2%"
+              },
+              {
+                "x": "2025年11月",
+                "y": 1.2,
+                "tick_label": "2025-11",
+                "tooltip_title": "2025年11月",
+                "tooltip_value_text": "+1.2%"
+              },
+              {
+                "x": "2025年12月",
+                "y": 1.4,
+                "tick_label": "2025-12",
+                "tooltip_title": "2025年12月",
+                "tooltip_value_text": "+1.4%"
+              },
+              {
+                "x": "2026年1月",
+                "y": 1.1,
+                "tick_label": "2026-01",
+                "tooltip_title": "2026年1月",
+                "tooltip_value_text": "+1.1%"
+              }
+            ]
+          },
           "sparkline_points": [
             {
               "x": "2025年2月",
@@ -287,10 +703,114 @@
           "status": "ok",
           "status_text_tc": "最新",
           "display_value_text": "+3.8%",
-          "display_change_text": "較上期 +0.1 個百分點",
-          "display_previous_text": "上期 +3.7%",
+          "display_change_text": "較上期（2025年第3季） +0.1 個百分點",
+          "display_previous_text": "上期（2025年第3季） +3.7%",
           "display_period_text": "2025年第4季",
+          "display_comparison_text": "較上期（2025年第3季） +0.1 個百分點",
           "display_comparison_basis_text": "較上期",
+          "display_comparison_period_text": "2025年第3季",
+          "display_unit": "%",
+          "data_origin": "live",
+          "last_successful_fetch_at": "2026-03-18T03:41:58.938Z",
+          "chart": {
+            "chart_type": "line",
+            "x_axis_label": "季度",
+            "y_axis_label": "實質 GDP 增長 (%)",
+            "time_label": "季度",
+            "value_label": "實質 GDP 增長",
+            "display_unit": "%",
+            "suggested_ticks": [
+              "2023Q1",
+              "2024Q3",
+              "2025Q4"
+            ],
+            "points": [
+              {
+                "x": "2023年第1季",
+                "y": 2.7,
+                "tick_label": "2023Q1",
+                "tooltip_title": "2023年第1季",
+                "tooltip_value_text": "+2.7%"
+              },
+              {
+                "x": "2023年第2季",
+                "y": 1.5,
+                "tick_label": "2023Q2",
+                "tooltip_title": "2023年第2季",
+                "tooltip_value_text": "+1.5%"
+              },
+              {
+                "x": "2023年第3季",
+                "y": 4.1,
+                "tick_label": "2023Q3",
+                "tooltip_title": "2023年第3季",
+                "tooltip_value_text": "+4.1%"
+              },
+              {
+                "x": "2023年第4季",
+                "y": 4.2,
+                "tick_label": "2023Q4",
+                "tooltip_title": "2023年第4季",
+                "tooltip_value_text": "+4.2%"
+              },
+              {
+                "x": "2024年第1季",
+                "y": 2.9,
+                "tick_label": "2024Q1",
+                "tooltip_title": "2024年第1季",
+                "tooltip_value_text": "+2.9%"
+              },
+              {
+                "x": "2024年第2季",
+                "y": 3,
+                "tick_label": "2024Q2",
+                "tooltip_title": "2024年第2季",
+                "tooltip_value_text": "+3.0%"
+              },
+              {
+                "x": "2024年第3季",
+                "y": 2.1,
+                "tick_label": "2024Q3",
+                "tooltip_title": "2024年第3季",
+                "tooltip_value_text": "+2.1%"
+              },
+              {
+                "x": "2024年第4季",
+                "y": 2.5,
+                "tick_label": "2024Q4",
+                "tooltip_title": "2024年第4季",
+                "tooltip_value_text": "+2.5%"
+              },
+              {
+                "x": "2025年第1季",
+                "y": 3.1,
+                "tick_label": "2025Q1",
+                "tooltip_title": "2025年第1季",
+                "tooltip_value_text": "+3.1%"
+              },
+              {
+                "x": "2025年第2季",
+                "y": 3.2,
+                "tick_label": "2025Q2",
+                "tooltip_title": "2025年第2季",
+                "tooltip_value_text": "+3.2%"
+              },
+              {
+                "x": "2025年第3季",
+                "y": 3.7,
+                "tick_label": "2025Q3",
+                "tooltip_title": "2025年第3季",
+                "tooltip_value_text": "+3.7%"
+              },
+              {
+                "x": "2025年第4季",
+                "y": 3.8,
+                "tick_label": "2025Q4",
+                "tooltip_title": "2025年第4季",
+                "tooltip_value_text": "+3.8%"
+              }
+            ]
+          },
           "sparkline_points": [
             {
               "x": "2023年第1季",
@@ -351,10 +871,114 @@
           "status": "ok",
           "status_text_tc": "最新",
           "display_value_text": "+5.1%",
-          "display_change_text": "較上期 +0.5 個百分點",
-          "display_previous_text": "上期 +4.6%",
+          "display_change_text": "較上期（2025年第3季） +0.5 個百分點",
+          "display_previous_text": "上期（2025年第3季） +4.6%",
           "display_period_text": "2025年第4季",
+          "display_comparison_text": "較上期（2025年第3季） +0.5 個百分點",
           "display_comparison_basis_text": "較上期",
+          "display_comparison_period_text": "2025年第3季",
+          "display_unit": "%",
+          "data_origin": "live",
+          "last_successful_fetch_at": "2026-03-18T03:41:58.938Z",
+          "chart": {
+            "chart_type": "line",
+            "x_axis_label": "季度",
+            "y_axis_label": "名義 GDP 增長 (%)",
+            "time_label": "季度",
+            "value_label": "名義 GDP 增長",
+            "display_unit": "%",
+            "suggested_ticks": [
+              "2023Q1",
+              "2024Q3",
+              "2025Q4"
+            ],
+            "points": [
+              {
+                "x": "2023年第1季",
+                "y": 4.9,
+                "tick_label": "2023Q1",
+                "tooltip_title": "2023年第1季",
+                "tooltip_value_text": "+4.9%"
+              },
+              {
+                "x": "2023年第2季",
+                "y": 4.3,
+                "tick_label": "2023Q2",
+                "tooltip_title": "2023年第2季",
+                "tooltip_value_text": "+4.3%"
+              },
+              {
+                "x": "2023年第3季",
+                "y": 6.7,
+                "tick_label": "2023Q3",
+                "tooltip_title": "2023年第3季",
+                "tooltip_value_text": "+6.7%"
+              },
+              {
+                "x": "2023年第4季",
+                "y": 8.4,
+                "tick_label": "2023Q4",
+                "tooltip_title": "2023年第4季",
+                "tooltip_value_text": "+8.4%"
+              },
+              {
+                "x": "2024年第1季",
+                "y": 7,
+                "tick_label": "2024Q1",
+                "tooltip_title": "2024年第1季",
+                "tooltip_value_text": "+7.0%"
+              },
+              {
+                "x": "2024年第2季",
+                "y": 7.9,
+                "tick_label": "2024Q2",
+                "tooltip_title": "2024年第2季",
+                "tooltip_value_text": "+7.9%"
+              },
+              {
+                "x": "2024年第3季",
+                "y": 7.1,
+                "tick_label": "2024Q3",
+                "tooltip_title": "2024年第3季",
+                "tooltip_value_text": "+7.1%"
+              },
+              {
+                "x": "2024年第4季",
+                "y": 5.7,
+                "tick_label": "2024Q4",
+                "tooltip_title": "2024年第4季",
+                "tooltip_value_text": "+5.7%"
+              },
+              {
+                "x": "2025年第1季",
+                "y": 4.5,
+                "tick_label": "2025Q1",
+                "tooltip_title": "2025年第1季",
+                "tooltip_value_text": "+4.5%"
+              },
+              {
+                "x": "2025年第2季",
+                "y": 3.9,
+                "tick_label": "2025Q2",
+                "tooltip_title": "2025年第2季",
+                "tooltip_value_text": "+3.9%"
+              },
+              {
+                "x": "2025年第3季",
+                "y": 4.6,
+                "tick_label": "2025Q3",
+                "tooltip_title": "2025年第3季",
+                "tooltip_value_text": "+4.6%"
+              },
+              {
+                "x": "2025年第4季",
+                "y": 5.1,
+                "tick_label": "2025Q4",
+                "tooltip_title": "2025年第4季",
+                "tooltip_value_text": "+5.1%"
+              }
+            ]
+          },
           "sparkline_points": [
             {
               "x": "2023年第1季",
@@ -423,10 +1047,114 @@
           "status": "ok",
           "status_text_tc": "最新",
           "display_value_text": "HK$373.1億",
-          "display_change_text": "較去年同月 +5.5%",
-          "display_previous_text": "去年同月 HK$353.8億",
+          "display_change_text": "較去年同月（2025年1月） +5.5%",
+          "display_previous_text": "去年同月（2025年1月） HK$353.8億",
           "display_period_text": "2026年1月",
+          "display_comparison_text": "較去年同月（2025年1月） +5.5%",
           "display_comparison_basis_text": "較去年同月",
+          "display_comparison_period_text": "2025年1月",
+          "display_unit": "億港元",
+          "data_origin": "live",
+          "last_successful_fetch_at": "2026-03-18T03:41:58.938Z",
+          "chart": {
+            "chart_type": "line",
+            "x_axis_label": "月份",
+            "y_axis_label": "零售銷售額 (億港元)",
+            "time_label": "月份",
+            "value_label": "零售銷售額",
+            "display_unit": "億港元",
+            "suggested_ticks": [
+              "2025-02",
+              "2025-08",
+              "2026-01"
+            ],
+            "points": [
+              {
+                "x": "2025年2月",
+                "y": 29385,
+                "tick_label": "2025-02",
+                "tooltip_title": "2025年2月",
+                "tooltip_value_text": "HK$293.9億"
+              },
+              {
+                "x": "2025年3月",
+                "y": 30091,
+                "tick_label": "2025-03",
+                "tooltip_title": "2025年3月",
+                "tooltip_value_text": "HK$300.9億"
+              },
+              {
+                "x": "2025年4月",
+                "y": 28876,
+                "tick_label": "2025-04",
+                "tooltip_title": "2025年4月",
+                "tooltip_value_text": "HK$288.8億"
+              },
+              {
+                "x": "2025年5月",
+                "y": 31319,
+                "tick_label": "2025-05",
+                "tooltip_title": "2025年5月",
+                "tooltip_value_text": "HK$313.2億"
+              },
+              {
+                "x": "2025年6月",
+                "y": 30094,
+                "tick_label": "2025-06",
+                "tooltip_title": "2025年6月",
+                "tooltip_value_text": "HK$300.9億"
+              },
+              {
+                "x": "2025年7月",
+                "y": 29671,
+                "tick_label": "2025-07",
+                "tooltip_title": "2025年7月",
+                "tooltip_value_text": "HK$296.7億"
+              },
+              {
+                "x": "2025年8月",
+                "y": 30367,
+                "tick_label": "2025-08",
+                "tooltip_title": "2025年8月",
+                "tooltip_value_text": "HK$303.7億"
+              },
+              {
+                "x": "2025年9月",
+                "y": 31344,
+                "tick_label": "2025-09",
+                "tooltip_title": "2025年9月",
+                "tooltip_value_text": "HK$313.4億"
+              },
+              {
+                "x": "2025年10月",
+                "y": 35174,
+                "tick_label": "2025-10",
+                "tooltip_title": "2025年10月",
+                "tooltip_value_text": "HK$351.7億"
+              },
+              {
+                "x": "2025年11月",
+                "y": 33727,
+                "tick_label": "2025-11",
+                "tooltip_title": "2025年11月",
+                "tooltip_value_text": "HK$337.3億"
+              },
+              {
+                "x": "2025年12月",
+                "y": 35018,
+                "tick_label": "2025-12",
+                "tooltip_title": "2025年12月",
+                "tooltip_value_text": "HK$350.2億"
+              },
+              {
+                "x": "2026年1月",
+                "y": 37308,
+                "tick_label": "2026-01",
+                "tooltip_title": "2026年1月",
+                "tooltip_value_text": "HK$373.1億"
+              }
+            ]
+          },
           "sparkline_points": [
             {
               "x": "2025年2月",
@@ -487,10 +1215,114 @@
           "status": "ok",
           "status_text_tc": "最新",
           "display_value_text": "4,811,700",
-          "display_change_text": "較去年同月 +1.5%",
-          "display_previous_text": "去年同月 4,742,066",
+          "display_change_text": "較去年同月（2025年1月） +1.5%",
+          "display_previous_text": "去年同月（2025年1月） 4,742,066",
           "display_period_text": "2026年1月",
+          "display_comparison_text": "較去年同月（2025年1月） +1.5%",
           "display_comparison_basis_text": "較去年同月",
+          "display_comparison_period_text": "2025年1月",
+          "display_unit": "人次",
+          "data_origin": "live",
+          "last_successful_fetch_at": "2026-03-18T03:41:58.938Z",
+          "chart": {
+            "chart_type": "line",
+            "x_axis_label": "月份",
+            "y_axis_label": "旅客入境 (人次)",
+            "time_label": "月份",
+            "value_label": "旅客入境",
+            "display_unit": "人次",
+            "suggested_ticks": [
+              "2025-02",
+              "2025-08",
+              "2026-01"
+            ],
+            "points": [
+              {
+                "x": "2025年2月",
+                "y": 3667671,
+                "tick_label": "2025-02",
+                "tooltip_title": "2025年2月",
+                "tooltip_value_text": "3,667,671 人次"
+              },
+              {
+                "x": "2025年3月",
+                "y": 3818512,
+                "tick_label": "2025-03",
+                "tooltip_title": "2025年3月",
+                "tooltip_value_text": "3,818,512 人次"
+              },
+              {
+                "x": "2025年4月",
+                "y": 3847934,
+                "tick_label": "2025-04",
+                "tooltip_title": "2025年4月",
+                "tooltip_value_text": "3,847,934 人次"
+              },
+              {
+                "x": "2025年5月",
+                "y": 4078938,
+                "tick_label": "2025-05",
+                "tooltip_title": "2025年5月",
+                "tooltip_value_text": "4,078,938 人次"
+              },
+              {
+                "x": "2025年6月",
+                "y": 3480979,
+                "tick_label": "2025-06",
+                "tooltip_title": "2025年6月",
+                "tooltip_value_text": "3,480,979 人次"
+              },
+              {
+                "x": "2025年7月",
+                "y": 4390514,
+                "tick_label": "2025-07",
+                "tooltip_title": "2025年7月",
+                "tooltip_value_text": "4,390,514 人次"
+              },
+              {
+                "x": "2025年8月",
+                "y": 5152837,
+                "tick_label": "2025-08",
+                "tooltip_title": "2025年8月",
+                "tooltip_value_text": "5,152,837 人次"
+              },
+              {
+                "x": "2025年9月",
+                "y": 3292197,
+                "tick_label": "2025-09",
+                "tooltip_title": "2025年9月",
+                "tooltip_value_text": "3,292,197 人次"
+              },
+              {
+                "x": "2025年10月",
+                "y": 4588515,
+                "tick_label": "2025-10",
+                "tooltip_title": "2025年10月",
+                "tooltip_value_text": "4,588,515 人次"
+              },
+              {
+                "x": "2025年11月",
+                "y": 4189272,
+                "tick_label": "2025-11",
+                "tooltip_title": "2025年11月",
+                "tooltip_value_text": "4,189,272 人次"
+              },
+              {
+                "x": "2025年12月",
+                "y": 4645397,
+                "tick_label": "2025-12",
+                "tooltip_title": "2025年12月",
+                "tooltip_value_text": "4,645,397 人次"
+              },
+              {
+                "x": "2026年1月",
+                "y": 4811700,
+                "tick_label": "2026-01",
+                "tooltip_title": "2026年1月",
+                "tooltip_value_text": "4,811,700 人次"
+              }
+            ]
+          },
           "sparkline_points": [
             {
               "x": "2025年2月",
@@ -548,28 +1380,106 @@
     {
       "id": "minimum-wage",
       "title_tc": "最低工資",
-      "latest_data_at": "2026-04-30",
-      "latest_data_label": "2026-04-30",
+      "latest_data_at": "2025-05-01",
+      "latest_data_label": "2025-05-01",
       "metrics": [
         {
-          "id": "statutory_minimum_wage",
-          "label_tc": "法定最低工資",
+          "id": "statutory_minimum_wage_current",
+          "label_tc": "現行法定最低工資",
           "source_name": "勞工處",
           "source_url": "https://www.labour.gov.hk/eng/news/mwo.htm",
           "status": "ok",
           "status_text_tc": "最新",
-          "display_value_text": "HK$43.1",
-          "display_change_text": "較上一次生效值 +1",
-          "display_previous_text": "上一次生效值 HK$42.1",
-          "display_period_text": "2026-04-30",
+          "display_value_text": "HK$42.1/小時",
+          "display_change_text": "沒有可比較期",
+          "display_previous_text": "沒有可比較期",
+          "display_period_text": "2025-05-01",
+          "display_comparison_text": "沒有可比較期",
           "display_comparison_basis_text": "較上一次生效值",
+          "display_unit": "HK$/小時",
+          "data_origin": "live",
+          "last_successful_fetch_at": "2026-03-18T03:41:58.938Z",
+          "chart": {
+            "chart_type": "step_after",
+            "x_axis_label": "生效日期",
+            "y_axis_label": "法定最低工資 (HK$/小時)",
+            "time_label": "生效日期",
+            "value_label": "法定最低工資",
+            "display_unit": "HK$/小時",
+            "suggested_ticks": [
+              "2025-05-01"
+            ],
+            "points": [
+              {
+                "x": "2025-05-01",
+                "y": 42.1,
+                "tick_label": "2025-05-01",
+                "tooltip_title": "2025-05-01",
+                "tooltip_value_text": "HK$42.1/小時"
+              }
+            ]
+          },
           "sparkline_points": [
             {
-              "x": "2025-04-30",
+              "x": "2025-05-01",
+              "y": 42.1
+            }
+          ],
+          "expected_update": "按政策變動"
+        },
+        {
+          "id": "statutory_minimum_wage_next",
+          "label_tc": "下一個法定最低工資",
+          "source_name": "勞工處",
+          "source_url": "https://www.labour.gov.hk/eng/news/mwo.htm",
+          "status": "ok",
+          "status_text_tc": "最新",
+          "display_value_text": "HK$43.1/小時",
+          "display_change_text": "較上一次生效值（2025-05-01） +HK$1.0/小時",
+          "display_previous_text": "上一次生效值（2025-05-01） HK$42.1/小時",
+          "display_period_text": "2026-05-01",
+          "display_comparison_text": "較上一次生效值（2025-05-01） +HK$1.0/小時",
+          "display_comparison_basis_text": "較上一次生效值",
+          "display_comparison_period_text": "2025-05-01",
+          "display_unit": "HK$/小時",
+          "data_origin": "live",
+          "last_successful_fetch_at": "2026-03-18T03:41:58.938Z",
+          "reason": "將於 2026-05-01 生效",
+          "chart": {
+            "chart_type": "step_after",
+            "x_axis_label": "生效日期",
+            "y_axis_label": "法定最低工資 (HK$/小時)",
+            "time_label": "生效日期",
+            "value_label": "法定最低工資",
+            "display_unit": "HK$/小時",
+            "suggested_ticks": [
+              "2025-05-01",
+              "2026-05-01"
+            ],
+            "points": [
+              {
+                "x": "2025-05-01",
+                "y": 42.1,
+                "tick_label": "2025-05-01",
+                "tooltip_title": "2025-05-01",
+                "tooltip_value_text": "HK$42.1/小時"
+              },
+              {
+                "x": "2026-05-01",
+                "y": 43.1,
+                "tick_label": "2026-05-01",
+                "tooltip_title": "2026-05-01",
+                "tooltip_value_text": "HK$43.1/小時"
+              }
+            ]
+          },
+          "sparkline_points": [
+            {
+              "x": "2025-05-01",
               "y": 42.1
             },
             {
-              "x": "2026-04-30",
+              "x": "2026-05-01",
               "y": 43.1
             }
           ],
@@ -591,10 +1501,114 @@
           "status": "ok",
           "status_text_tc": "最新",
           "display_value_text": "7,510,800",
-          "display_change_text": "較去年同期 +10,200",
-          "display_previous_text": "去年同期 7,500,600",
+          "display_change_text": "較去年同期（2024年底） +10,200",
+          "display_previous_text": "去年同期（2024年底） 7,500,600",
           "display_period_text": "2025年年底",
+          "display_comparison_text": "較去年同期（2024年底） +10,200",
           "display_comparison_basis_text": "較去年同期",
+          "display_comparison_period_text": "2024年底",
+          "display_unit": "人",
+          "data_origin": "live",
+          "last_successful_fetch_at": "2026-03-18T03:41:58.938Z",
+          "chart": {
+            "chart_type": "line",
+            "x_axis_label": "半年期間",
+            "y_axis_label": "人口總量 (人)",
+            "time_label": "半年期間",
+            "value_label": "人口總量",
+            "display_unit": "人",
+            "suggested_ticks": [
+              "2020H1",
+              "2023H1",
+              "2025H2"
+            ],
+            "points": [
+              {
+                "x": "2020年年中",
+                "y": 7481000,
+                "tick_label": "2020H1",
+                "tooltip_title": "2020年年中",
+                "tooltip_value_text": "7,481,000 人"
+              },
+              {
+                "x": "2020年年底",
+                "y": 7426700,
+                "tick_label": "2020H2",
+                "tooltip_title": "2020年年底",
+                "tooltip_value_text": "7,426,700 人"
+              },
+              {
+                "x": "2021年年中",
+                "y": 7413100,
+                "tick_label": "2021H1",
+                "tooltip_title": "2021年年中",
+                "tooltip_value_text": "7,413,100 人"
+              },
+              {
+                "x": "2021年年底",
+                "y": 7401500,
+                "tick_label": "2021H2",
+                "tooltip_title": "2021年年底",
+                "tooltip_value_text": "7,401,500 人"
+              },
+              {
+                "x": "2022年年中",
+                "y": 7346100,
+                "tick_label": "2022H1",
+                "tooltip_title": "2022年年中",
+                "tooltip_value_text": "7,346,100 人"
+              },
+              {
+                "x": "2022年年底",
+                "y": 7472600,
+                "tick_label": "2022H2",
+                "tooltip_title": "2022年年底",
+                "tooltip_value_text": "7,472,600 人"
+              },
+              {
+                "x": "2023年年中",
+                "y": 7536100,
+                "tick_label": "2023H1",
+                "tooltip_title": "2023年年中",
+                "tooltip_value_text": "7,536,100 人"
+              },
+              {
+                "x": "2023年年底",
+                "y": 7527900,
+                "tick_label": "2023H2",
+                "tooltip_title": "2023年年底",
+                "tooltip_value_text": "7,527,900 人"
+              },
+              {
+                "x": "2024年年中",
+                "y": 7524100,
+                "tick_label": "2024H1",
+                "tooltip_title": "2024年年中",
+                "tooltip_value_text": "7,524,100 人"
+              },
+              {
+                "x": "2024年年底",
+                "y": 7500600,
+                "tick_label": "2024H2",
+                "tooltip_title": "2024年年底",
+                "tooltip_value_text": "7,500,600 人"
+              },
+              {
+                "x": "2025年年中",
+                "y": 7498900,
+                "tick_label": "2025H1",
+                "tooltip_title": "2025年年中",
+                "tooltip_value_text": "7,498,900 人"
+              },
+              {
+                "x": "2025年年底",
+                "y": 7510800,
+                "tick_label": "2025H2",
+                "tooltip_title": "2025年年底",
+                "tooltip_value_text": "7,510,800 人"
+              }
+            ]
+          },
           "sparkline_points": [
             {
               "x": "2020年年中",
@@ -655,10 +1669,114 @@
           "status": "ok",
           "status_text_tc": "最新",
           "display_value_text": "36,723",
-          "display_change_text": "較上期 +3,491",
-          "display_previous_text": "上期 33,232",
+          "display_change_text": "較上期（2023年） +3,491",
+          "display_previous_text": "上期（2023年） 33,232",
           "display_period_text": "2024年",
+          "display_comparison_text": "較上期（2023年） +3,491",
           "display_comparison_basis_text": "較上期",
+          "display_comparison_period_text": "2023年",
+          "display_unit": "人",
+          "data_origin": "live",
+          "last_successful_fetch_at": "2026-03-18T03:41:58.938Z",
+          "chart": {
+            "chart_type": "line",
+            "x_axis_label": "年份",
+            "y_axis_label": "出生數 (人)",
+            "time_label": "年份",
+            "value_label": "出生數",
+            "display_unit": "人",
+            "suggested_ticks": [
+              "2013",
+              "2019",
+              "2024"
+            ],
+            "points": [
+              {
+                "x": "2013年",
+                "y": 57084,
+                "tick_label": "2013",
+                "tooltip_title": "2013年",
+                "tooltip_value_text": "57,084 人"
+              },
+              {
+                "x": "2014年",
+                "y": 62305,
+                "tick_label": "2014",
+                "tooltip_title": "2014年",
+                "tooltip_value_text": "62,305 人"
+              },
+              {
+                "x": "2015年",
+                "y": 59878,
+                "tick_label": "2015",
+                "tooltip_title": "2015年",
+                "tooltip_value_text": "59,878 人"
+              },
+              {
+                "x": "2016年",
+                "y": 60856,
+                "tick_label": "2016",
+                "tooltip_title": "2016年",
+                "tooltip_value_text": "60,856 人"
+              },
+              {
+                "x": "2017年",
+                "y": 56548,
+                "tick_label": "2017",
+                "tooltip_title": "2017年",
+                "tooltip_value_text": "56,548 人"
+              },
+              {
+                "x": "2018年",
+                "y": 53716,
+                "tick_label": "2018",
+                "tooltip_title": "2018年",
+                "tooltip_value_text": "53,716 人"
+              },
+              {
+                "x": "2019年",
+                "y": 52856,
+                "tick_label": "2019",
+                "tooltip_title": "2019年",
+                "tooltip_value_text": "52,856 人"
+              },
+              {
+                "x": "2020年",
+                "y": 43031,
+                "tick_label": "2020",
+                "tooltip_title": "2020年",
+                "tooltip_value_text": "43,031 人"
+              },
+              {
+                "x": "2021年",
+                "y": 36953,
+                "tick_label": "2021",
+                "tooltip_title": "2021年",
+                "tooltip_value_text": "36,953 人"
+              },
+              {
+                "x": "2022年",
+                "y": 32501,
+                "tick_label": "2022",
+                "tooltip_title": "2022年",
+                "tooltip_value_text": "32,501 人"
+              },
+              {
+                "x": "2023年",
+                "y": 33232,
+                "tick_label": "2023",
+                "tooltip_title": "2023年",
+                "tooltip_value_text": "33,232 人"
+              },
+              {
+                "x": "2024年",
+                "y": 36723,
+                "tick_label": "2024",
+                "tooltip_title": "2024年",
+                "tooltip_value_text": "36,723 人"
+              }
+            ]
+          },
           "sparkline_points": [
             {
               "x": "2013年",
@@ -718,11 +1836,115 @@
           "source_url": "https://data.gov.hk/en-data/dataset/hk-censtatd-tablechart-110-01004",
           "status": "ok",
           "status_text_tc": "最新",
-          "display_value_text": "48.4",
-          "display_change_text": "較上期 +0.5",
-          "display_previous_text": "上期 47.9",
+          "display_value_text": "48.4 歲",
+          "display_change_text": "較上期（2024年） +0.5 歲",
+          "display_previous_text": "上期（2024年） 47.9 歲",
           "display_period_text": "2025年",
+          "display_comparison_text": "較上期（2024年） +0.5 歲",
           "display_comparison_basis_text": "較上期",
+          "display_comparison_period_text": "2024年",
+          "display_unit": "歲",
+          "data_origin": "live",
+          "last_successful_fetch_at": "2026-03-18T03:41:58.938Z",
+          "chart": {
+            "chart_type": "line",
+            "x_axis_label": "年份",
+            "y_axis_label": "年齡中位數 (歲)",
+            "time_label": "年份",
+            "value_label": "年齡中位數",
+            "display_unit": "歲",
+            "suggested_ticks": [
+              "2014",
+              "2020",
+              "2025"
+            ],
+            "points": [
+              {
+                "x": "2014年",
+                "y": 42.8,
+                "tick_label": "2014",
+                "tooltip_title": "2014年",
+                "tooltip_value_text": "42.8 歲"
+              },
+              {
+                "x": "2015年",
+                "y": 43.1,
+                "tick_label": "2015",
+                "tooltip_title": "2015年",
+                "tooltip_value_text": "43.1 歲"
+              },
+              {
+                "x": "2016年",
+                "y": 43.4,
+                "tick_label": "2016",
+                "tooltip_title": "2016年",
+                "tooltip_value_text": "43.4 歲"
+              },
+              {
+                "x": "2017年",
+                "y": 44,
+                "tick_label": "2017",
+                "tooltip_title": "2017年",
+                "tooltip_value_text": "44.0 歲"
+              },
+              {
+                "x": "2018年",
+                "y": 44.4,
+                "tick_label": "2018",
+                "tooltip_title": "2018年",
+                "tooltip_value_text": "44.4 歲"
+              },
+              {
+                "x": "2019年",
+                "y": 44.9,
+                "tick_label": "2019",
+                "tooltip_title": "2019年",
+                "tooltip_value_text": "44.9 歲"
+              },
+              {
+                "x": "2020年",
+                "y": 45.5,
+                "tick_label": "2020",
+                "tooltip_title": "2020年",
+                "tooltip_value_text": "45.5 歲"
+              },
+              {
+                "x": "2021年",
+                "y": 46.3,
+                "tick_label": "2021",
+                "tooltip_title": "2021年",
+                "tooltip_value_text": "46.3 歲"
+              },
+              {
+                "x": "2022年",
+                "y": 47.1,
+                "tick_label": "2022",
+                "tooltip_title": "2022年",
+                "tooltip_value_text": "47.1 歲"
+              },
+              {
+                "x": "2023年",
+                "y": 47.4,
+                "tick_label": "2023",
+                "tooltip_title": "2023年",
+                "tooltip_value_text": "47.4 歲"
+              },
+              {
+                "x": "2024年",
+                "y": 47.9,
+                "tick_label": "2024",
+                "tooltip_title": "2024年",
+                "tooltip_value_text": "47.9 歲"
+              },
+              {
+                "x": "2025年",
+                "y": 48.4,
+                "tick_label": "2025",
+                "tooltip_title": "2025年",
+                "tooltip_value_text": "48.4 歲"
+              }
+            ]
+          },
           "sparkline_points": [
             {
               "x": "2014年",
@@ -780,22 +2002,175 @@
     {
       "id": "housing",
       "title_tc": "住屋",
-      "latest_data_at": "2026-12-31",
-      "latest_data_label": "2026年（預測）",
+      "latest_data_at": "2026-01-31",
+      "latest_data_label": "2026年1月",
       "metrics": [
         {
           "id": "private_price_index",
           "label_tc": "私樓售價指數",
           "source_name": "差餉物業估價署",
           "source_url": "https://www.rvd.gov.hk/datagovhk/1.4M.csv",
-          "status": "schema_changed",
-          "status_text_tc": "來源欄位變更",
-          "display_value_text": "來源欄位變更",
-          "display_change_text": "來源欄位變更或找不到對應序列。",
-          "display_previous_text": "請核對官方來源",
-          "display_period_text": "待官方更新",
+          "status": "ok",
+          "status_text_tc": "最新",
+          "display_value_text": "301.4",
+          "display_change_text": "較上期（2025年12月） +1.6",
+          "display_previous_text": "上期（2025年12月） 299.8",
+          "display_period_text": "2026年1月",
+          "display_comparison_text": "較上期（2025年12月） +1.6",
           "display_comparison_basis_text": "較上期",
-          "sparkline_points": [],
+          "display_comparison_period_text": "2025年12月",
+          "display_unit": "指數",
+          "data_origin": "live",
+          "last_successful_fetch_at": "2026-03-18T03:41:58.938Z",
+          "chart": {
+            "chart_type": "line",
+            "x_axis_label": "月份",
+            "y_axis_label": "私樓售價指數 (指數)",
+            "time_label": "月份",
+            "value_label": "私樓售價指數",
+            "display_unit": "指數",
+            "suggested_ticks": [
+              "2025-02",
+              "2025-08",
+              "2026-01"
+            ],
+            "points": [
+              {
+                "x": "2025年2月",
+                "y": 285.6,
+                "tick_label": "2025-02",
+                "tooltip_title": "2025年2月",
+                "tooltip_value_text": "285.6 指數"
+              },
+              {
+                "x": "2025年3月",
+                "y": 284.9,
+                "tick_label": "2025-03",
+                "tooltip_title": "2025年3月",
+                "tooltip_value_text": "284.9 指數"
+              },
+              {
+                "x": "2025年4月",
+                "y": 286.5,
+                "tick_label": "2025-04",
+                "tooltip_title": "2025年4月",
+                "tooltip_value_text": "286.5 指數"
+              },
+              {
+                "x": "2025年5月",
+                "y": 286.5,
+                "tick_label": "2025-05",
+                "tooltip_title": "2025年5月",
+                "tooltip_value_text": "286.5 指數"
+              },
+              {
+                "x": "2025年6月",
+                "y": 286.7,
+                "tick_label": "2025-06",
+                "tooltip_title": "2025年6月",
+                "tooltip_value_text": "286.7 指數"
+              },
+              {
+                "x": "2025年7月",
+                "y": 288.1,
+                "tick_label": "2025-07",
+                "tooltip_title": "2025年7月",
+                "tooltip_value_text": "288.1 指數"
+              },
+              {
+                "x": "2025年8月",
+                "y": 288.8,
+                "tick_label": "2025-08",
+                "tooltip_title": "2025年8月",
+                "tooltip_value_text": "288.8 指數"
+              },
+              {
+                "x": "2025年9月",
+                "y": 293.4,
+                "tick_label": "2025-09",
+                "tooltip_title": "2025年9月",
+                "tooltip_value_text": "293.4 指數"
+              },
+              {
+                "x": "2025年10月",
+                "y": 294.9,
+                "tick_label": "2025-10",
+                "tooltip_title": "2025年10月",
+                "tooltip_value_text": "294.9 指數"
+              },
+              {
+                "x": "2025年11月",
+                "y": 298.7,
+                "tick_label": "2025-11",
+                "tooltip_title": "2025年11月",
+                "tooltip_value_text": "298.7 指數"
+              },
+              {
+                "x": "2025年12月",
+                "y": 299.8,
+                "tick_label": "2025-12",
+                "tooltip_title": "2025年12月",
+                "tooltip_value_text": "299.8 指數"
+              },
+              {
+                "x": "2026年1月",
+                "y": 301.4,
+                "tick_label": "2026-01",
+                "tooltip_title": "2026年1月",
+                "tooltip_value_text": "301.4 指數"
+              }
+            ]
+          },
+          "sparkline_points": [
+            {
+              "x": "2025年2月",
+              "y": 285.6
+            },
+            {
+              "x": "2025年3月",
+              "y": 284.9
+            },
+            {
+              "x": "2025年4月",
+              "y": 286.5
+            },
+            {
+              "x": "2025年5月",
+              "y": 286.5
+            },
+            {
+              "x": "2025年6月",
+              "y": 286.7
+            },
+            {
+              "x": "2025年7月",
+              "y": 288.1
+            },
+            {
+              "x": "2025年8月",
+              "y": 288.8
+            },
+            {
+              "x": "2025年9月",
+              "y": 293.4
+            },
+            {
+              "x": "2025年10月",
+              "y": 294.9
+            },
+            {
+              "x": "2025年11月",
+              "y": 298.7
+            },
+            {
+              "x": "2025年12月",
+              "y": 299.8
+            },
+            {
+              "x": "2026年1月",
+              "y": 301.4
+            }
+          ],
           "expected_update": "每月"
         },
         {
@@ -803,14 +2178,167 @@
           "label_tc": "私樓租金指數",
           "source_name": "差餉物業估價署",
           "source_url": "https://www.rvd.gov.hk/datagovhk/1.3M.csv",
-          "status": "schema_changed",
-          "status_text_tc": "來源欄位變更",
-          "display_value_text": "來源欄位變更",
-          "display_change_text": "來源欄位變更或找不到對應序列。",
-          "display_previous_text": "請核對官方來源",
-          "display_period_text": "待官方更新",
+          "status": "ok",
+          "status_text_tc": "最新",
+          "display_value_text": "201.1",
+          "display_change_text": "較上期（2025年12月） +0.6",
+          "display_previous_text": "上期（2025年12月） 200.5",
+          "display_period_text": "2026年1月",
+          "display_comparison_text": "較上期（2025年12月） +0.6",
           "display_comparison_basis_text": "較上期",
-          "sparkline_points": [],
+          "display_comparison_period_text": "2025年12月",
+          "display_unit": "指數",
+          "data_origin": "live",
+          "last_successful_fetch_at": "2026-03-18T03:41:58.938Z",
+          "chart": {
+            "chart_type": "line",
+            "x_axis_label": "月份",
+            "y_axis_label": "私樓租金指數 (指數)",
+            "time_label": "月份",
+            "value_label": "私樓租金指數",
+            "display_unit": "指數",
+            "suggested_ticks": [
+              "2025-02",
+              "2025-08",
+              "2026-01"
+            ],
+            "points": [
+              {
+                "x": "2025年2月",
+                "y": 193,
+                "tick_label": "2025-02",
+                "tooltip_title": "2025年2月",
+                "tooltip_value_text": "193.0 指數"
+              },
+              {
+                "x": "2025年3月",
+                "y": 193.1,
+                "tick_label": "2025-03",
+                "tooltip_title": "2025年3月",
+                "tooltip_value_text": "193.1 指數"
+              },
+              {
+                "x": "2025年4月",
+                "y": 193.9,
+                "tick_label": "2025-04",
+                "tooltip_title": "2025年4月",
+                "tooltip_value_text": "193.9 指數"
+              },
+              {
+                "x": "2025年5月",
+                "y": 194.2,
+                "tick_label": "2025-05",
+                "tooltip_title": "2025年5月",
+                "tooltip_value_text": "194.2 指數"
+              },
+              {
+                "x": "2025年6月",
+                "y": 195.9,
+                "tick_label": "2025-06",
+                "tooltip_title": "2025年6月",
+                "tooltip_value_text": "195.9 指數"
+              },
+              {
+                "x": "2025年7月",
+                "y": 197.4,
+                "tick_label": "2025-07",
+                "tooltip_title": "2025年7月",
+                "tooltip_value_text": "197.4 指數"
+              },
+              {
+                "x": "2025年8月",
+                "y": 199.8,
+                "tick_label": "2025-08",
+                "tooltip_title": "2025年8月",
+                "tooltip_value_text": "199.8 指數"
+              },
+              {
+                "x": "2025年9月",
+                "y": 199.9,
+                "tick_label": "2025-09",
+                "tooltip_title": "2025年9月",
+                "tooltip_value_text": "199.9 指數"
+              },
+              {
+                "x": "2025年10月",
+                "y": 199.9,
+                "tick_label": "2025-10",
+                "tooltip_title": "2025年10月",
+                "tooltip_value_text": "199.9 指數"
+              },
+              {
+                "x": "2025年11月",
+                "y": 200.2,
+                "tick_label": "2025-11",
+                "tooltip_title": "2025年11月",
+                "tooltip_value_text": "200.2 指數"
+              },
+              {
+                "x": "2025年12月",
+                "y": 200.5,
+                "tick_label": "2025-12",
+                "tooltip_title": "2025年12月",
+                "tooltip_value_text": "200.5 指數"
+              },
+              {
+                "x": "2026年1月",
+                "y": 201.1,
+                "tick_label": "2026-01",
+                "tooltip_title": "2026年1月",
+                "tooltip_value_text": "201.1 指數"
+              }
+            ]
+          },
+          "sparkline_points": [
+            {
+              "x": "2025年2月",
+              "y": 193
+            },
+            {
+              "x": "2025年3月",
+              "y": 193.1
+            },
+            {
+              "x": "2025年4月",
+              "y": 193.9
+            },
+            {
+              "x": "2025年5月",
+              "y": 194.2
+            },
+            {
+              "x": "2025年6月",
+              "y": 195.9
+            },
+            {
+              "x": "2025年7月",
+              "y": 197.4
+            },
+            {
+              "x": "2025年8月",
+              "y": 199.8
+            },
+            {
+              "x": "2025年9月",
+              "y": 199.9
+            },
+            {
+              "x": "2025年10月",
+              "y": 199.9
+            },
+            {
+              "x": "2025年11月",
+              "y": 200.2
+            },
+            {
+              "x": "2025年12月",
+              "y": 200.5
+            },
+            {
+              "x": "2026年1月",
+              "y": 201.1
+            }
+          ],
           "expected_update": "每月"
         },
         {
@@ -821,10 +2349,51 @@
           "status": "ok",
           "status_text_tc": "最新",
           "display_value_text": "20,098",
-          "display_change_text": "較上期 -764",
-          "display_previous_text": "上期 20,862",
+          "display_change_text": "較上期（2025年（預測）） -764",
+          "display_previous_text": "上期（2025年（預測）） 20,862",
           "display_period_text": "2026年（預測）",
+          "display_comparison_text": "較上期（2025年（預測）） -764",
           "display_comparison_basis_text": "較上期",
+          "display_comparison_period_text": "2025年（預測）",
+          "display_unit": "伙",
+          "data_origin": "live",
+          "last_successful_fetch_at": "2026-03-18T03:41:58.938Z",
+          "chart": {
+            "chart_type": "line",
+            "x_axis_label": "年份",
+            "y_axis_label": "私人住宅落成量 (伙)",
+            "time_label": "年份",
+            "value_label": "私人住宅落成量",
+            "display_unit": "伙",
+            "suggested_ticks": [
+              "2024",
+              "2025",
+              "2026"
+            ],
+            "points": [
+              {
+                "x": "2024年",
+                "y": 24261,
+                "tick_label": "2024",
+                "tooltip_title": "2024年",
+                "tooltip_value_text": "24,261 伙"
+              },
+              {
+                "x": "2025年（預測）",
+                "y": 20862,
+                "tick_label": "2025",
+                "tooltip_title": "2025年（預測）",
+                "tooltip_value_text": "20,862 伙"
+              },
+              {
+                "x": "2026年（預測）",
+                "y": 20098,
+                "tick_label": "2026",
+                "tooltip_title": "2026年（預測）",
+                "tooltip_value_text": "20,098 伙"
+              }
+            ]
+          },
           "sparkline_points": [
             {
               "x": "2024年",
@@ -857,10 +2426,114 @@
           "status": "ok",
           "status_text_tc": "最新",
           "display_value_text": "HK$7652.3億",
-          "display_change_text": "較上期 +76,472",
-          "display_previous_text": "上期 HK$6887.6億",
+          "display_change_text": "較上期（2025-26 (修訂預算)） +764.7億",
+          "display_previous_text": "上期（2025-26 (修訂預算)） HK$6887.6億",
           "display_period_text": "2026-27 (原來預算)",
+          "display_comparison_text": "較上期（2025-26 (修訂預算)） +764.7億",
           "display_comparison_basis_text": "較上期",
+          "display_comparison_period_text": "2025-26 (修訂預算)",
+          "display_unit": "億港元",
+          "data_origin": "live",
+          "last_successful_fetch_at": "2026-03-18T03:41:58.938Z",
+          "chart": {
+            "chart_type": "line",
+            "x_axis_label": "財政年度",
+            "y_axis_label": "政府收入 (億港元)",
+            "time_label": "財政年度",
+            "value_label": "政府收入",
+            "display_unit": "億港元",
+            "suggested_ticks": [
+              "2015-16",
+              "2021-22",
+              "2026-27 (原來預算)"
+            ],
+            "points": [
+              {
+                "x": "2015-16",
+                "y": 450007,
+                "tick_label": "2015-16",
+                "tooltip_title": "2015-16",
+                "tooltip_value_text": "HK$4500.1億"
+              },
+              {
+                "x": "2016-17",
+                "y": 573124,
+                "tick_label": "2016-17",
+                "tooltip_title": "2016-17",
+                "tooltip_value_text": "HK$5731.2億"
+              },
+              {
+                "x": "2017-18",
+                "y": 619837,
+                "tick_label": "2017-18",
+                "tooltip_title": "2017-18",
+                "tooltip_value_text": "HK$6198.4億"
+              },
+              {
+                "x": "2018-19",
+                "y": 599774,
+                "tick_label": "2018-19",
+                "tooltip_title": "2018-19",
+                "tooltip_value_text": "HK$5997.7億"
+              },
+              {
+                "x": "2019-20",
+                "y": 590926,
+                "tick_label": "2019-20",
+                "tooltip_title": "2019-20",
+                "tooltip_value_text": "HK$5909.3億"
+              },
+              {
+                "x": "2020-21",
+                "y": 564230,
+                "tick_label": "2020-21",
+                "tooltip_title": "2020-21",
+                "tooltip_value_text": "HK$5642.3億"
+              },
+              {
+                "x": "2021-22",
+                "y": 693576,
+                "tick_label": "2021-22",
+                "tooltip_title": "2021-22",
+                "tooltip_value_text": "HK$6935.8億"
+              },
+              {
+                "x": "2022-23",
+                "y": 622147,
+                "tick_label": "2022-23",
+                "tooltip_title": "2022-23",
+                "tooltip_value_text": "HK$6221.5億"
+              },
+              {
+                "x": "2023-24",
+                "y": 549406,
+                "tick_label": "2023-24",
+                "tooltip_title": "2023-24",
+                "tooltip_value_text": "HK$5494.1億"
+              },
+              {
+                "x": "2024-25",
+                "y": 564909,
+                "tick_label": "2024-25",
+                "tooltip_title": "2024-25",
+                "tooltip_value_text": "HK$5649.1億"
+              },
+              {
+                "x": "2025-26 (修訂預算)",
+                "y": 688762,
+                "tick_label": "2025-26 (修訂預算)",
+                "tooltip_title": "2025-26 (修訂預算)",
+                "tooltip_value_text": "HK$6887.6億"
+              },
+              {
+                "x": "2026-27 (原來預算)",
+                "y": 765234,
+                "tick_label": "2026-27 (原來預算)",
+                "tooltip_title": "2026-27 (原來預算)",
+                "tooltip_value_text": "HK$7652.3億"
+              }
+            ]
+          },
           "sparkline_points": [
             {
               "x": "2015-16",
@@ -921,10 +2594,114 @@
           "status": "ok",
           "status_text_tc": "最新",
           "display_value_text": "HK$8434.2億",
-          "display_change_text": "較上期 +54,245",
-          "display_previous_text": "上期 HK$7891.7億",
+          "display_change_text": "較上期（2025-26 (修訂預算)） +542.5億",
+          "display_previous_text": "上期（2025-26 (修訂預算)） HK$7891.7億",
           "display_period_text": "2026-27 (原來預算)",
+          "display_comparison_text": "較上期（2025-26 (修訂預算)） +542.5億",
           "display_comparison_basis_text": "較上期",
+          "display_comparison_period_text": "2025-26 (修訂預算)",
+          "display_unit": "億港元",
+          "data_origin": "live",
+          "last_successful_fetch_at": "2026-03-18T03:41:58.938Z",
+          "chart": {
+            "chart_type": "line",
+            "x_axis_label": "財政年度",
+            "y_axis_label": "政府支出 (億港元)",
+            "time_label": "財政年度",
+            "value_label": "政府支出",
+            "display_unit": "億港元",
+            "suggested_ticks": [
+              "2015-16",
+              "2021-22",
+              "2026-27 (原來預算)"
+            ],
+            "points": [
+              {
+                "x": "2015-16",
+                "y": 435633,
+                "tick_label": "2015-16",
+                "tooltip_title": "2015-16",
+                "tooltip_value_text": "HK$4356.3億"
+              },
+              {
+                "x": "2016-17",
+                "y": 462052,
+                "tick_label": "2016-17",
+                "tooltip_title": "2016-17",
+                "tooltip_value_text": "HK$4620.5億"
+              },
+              {
+                "x": "2017-18",
+                "y": 470863,
+                "tick_label": "2017-18",
+                "tooltip_title": "2017-18",
+                "tooltip_value_text": "HK$4708.6億"
+              },
+              {
+                "x": "2018-19",
+                "y": 531825,
+                "tick_label": "2018-19",
+                "tooltip_title": "2018-19",
+                "tooltip_value_text": "HK$5318.3億"
+              },
+              {
+                "x": "2019-20",
+                "y": 607830,
+                "tick_label": "2019-20",
+                "tooltip_title": "2019-20",
+                "tooltip_value_text": "HK$6078.3億"
+              },
+              {
+                "x": "2020-21",
+                "y": 816075,
+                "tick_label": "2020-21",
+                "tooltip_title": "2020-21",
+                "tooltip_value_text": "HK$8160.8億"
+              },
+              {
+                "x": "2021-22",
+                "y": 693339,
+                "tick_label": "2021-22",
+                "tooltip_title": "2021-22",
+                "tooltip_value_text": "HK$6933.4億"
+              },
+              {
+                "x": "2022-23",
+                "y": 810477,
+                "tick_label": "2022-23",
+                "tooltip_title": "2022-23",
+                "tooltip_value_text": "HK$8104.8億"
+              },
+              {
+                "x": "2023-24",
+                "y": 721301,
+                "tick_label": "2023-24",
+                "tooltip_title": "2023-24",
+                "tooltip_value_text": "HK$7213.0億"
+              },
+              {
+                "x": "2024-25",
+                "y": 753220,
+                "tick_label": "2024-25",
+                "tooltip_title": "2024-25",
+                "tooltip_value_text": "HK$7532.2億"
+              },
+              {
+                "x": "2025-26 (修訂預算)",
+                "y": 789171,
+                "tick_label": "2025-26 (修訂預算)",
+                "tooltip_title": "2025-26 (修訂預算)",
+                "tooltip_value_text": "HK$7891.7億"
+              },
+              {
+                "x": "2026-27 (原來預算)",
+                "y": 843416,
+                "tick_label": "2026-27 (原來預算)",
+                "tooltip_title": "2026-27 (原來預算)",
+                "tooltip_value_text": "HK$8434.2億"
+              }
+            ]
+          },
           "sparkline_points": [
             {
               "x": "2015-16",
@@ -985,10 +2762,114 @@
           "status": "ok",
           "status_text_tc": "最新",
           "display_value_text": "HK$6793.3億",
-          "display_change_text": "較上期 +22,110",
-          "display_previous_text": "上期 HK$6572.2億",
+          "display_change_text": "較上期（2025-26 (修訂預算)） +221.1億",
+          "display_previous_text": "上期（2025-26 (修訂預算)） HK$6572.2億",
           "display_period_text": "2026-27 (原來預算)",
+          "display_comparison_text": "較上期（2025-26 (修訂預算)） +221.1億",
           "display_comparison_basis_text": "較上期",
+          "display_comparison_period_text": "2025-26 (修訂預算)",
+          "display_unit": "億港元",
+          "data_origin": "live",
+          "last_successful_fetch_at": "2026-03-18T03:41:58.938Z",
+          "chart": {
+            "chart_type": "line",
+            "x_axis_label": "財政年度",
+            "y_axis_label": "財政儲備 (億港元)",
+            "time_label": "財政年度",
+            "value_label": "財政儲備",
+            "display_unit": "億港元",
+            "suggested_ticks": [
+              "2015-16",
+              "2021-22",
+              "2026-27 (原來預算)"
+            ],
+            "points": [
+              {
+                "x": "2015-16",
+                "y": 842888,
+                "tick_label": "2015-16",
+                "tooltip_title": "2015-16",
+                "tooltip_value_text": "HK$8428.9億"
+              },
+              {
+                "x": "2016-17",
+                "y": 953960,
+                "tick_label": "2016-17",
+                "tooltip_title": "2016-17",
+                "tooltip_value_text": "HK$9539.6億"
+              },
+              {
+                "x": "2017-18",
+                "y": 1102934,
+                "tick_label": "2017-18",
+                "tooltip_title": "2017-18",
+                "tooltip_value_text": "HK$11029.3億"
+              },
+              {
+                "x": "2018-19",
+                "y": 1170883,
+                "tick_label": "2018-19",
+                "tooltip_title": "2018-19",
+                "tooltip_value_text": "HK$11708.8億"
+              },
+              {
+                "x": "2019-20",
+                "y": 1160308,
+                "tick_label": "2019-20",
+                "tooltip_title": "2019-20",
+                "tooltip_value_text": "HK$11603.1億"
+              },
+              {
+                "x": "2020-21",
+                "y": 927767,
+                "tick_label": "2020-21",
+                "tooltip_title": "2020-21",
+                "tooltip_value_text": "HK$9277.7億"
+              },
+              {
+                "x": "2021-22",
+                "y": 957128,
+                "tick_label": "2021-22",
+                "tooltip_title": "2021-22",
+                "tooltip_value_text": "HK$9571.3億"
+              },
+              {
+                "x": "2022-23",
+                "y": 834790,
+                "tick_label": "2022-23",
+                "tooltip_title": "2022-23",
+                "tooltip_value_text": "HK$8347.9億"
+              },
+              {
+                "x": "2023-24",
+                "y": 734585,
+                "tick_label": "2023-24",
+                "tooltip_title": "2023-24",
+                "tooltip_value_text": "HK$7345.9億"
+              },
+              {
+                "x": "2024-25",
+                "y": 654317,
+                "tick_label": "2024-25",
+                "tooltip_title": "2024-25",
+                "tooltip_value_text": "HK$6543.2億"
+              },
+              {
+                "x": "2025-26 (修訂預算)",
+                "y": 657222,
+                "tick_label": "2025-26 (修訂預算)",
+                "tooltip_title": "2025-26 (修訂預算)",
+                "tooltip_value_text": "HK$6572.2億"
+              },
+              {
+                "x": "2026-27 (原來預算)",
+                "y": 679332,
+                "tick_label": "2026-27 (原來預算)",
+                "tooltip_title": "2026-27 (原來預算)",
+                "tooltip_value_text": "HK$6793.3億"
+              }
+            ]
+          },
           "sparkline_points": [
             {
               "x": "2015-16",
@@ -1048,20 +2929,123 @@
       "title_tc": "利率",
       "latest_data_at": "2026-03-17",
       "latest_data_label": "2026-03-17",
-      "card_status_text_tc": "資料待核對",
       "metrics": [
         {
           "id": "base_rate",
           "label_tc": "HKMA Base Rate",
           "source_name": "香港金融管理局",
           "source_url": "https://www.hkma.gov.hk/eng/data-publications-and-research/data-and-statistics/daily-monetary-statistics/",
-          "status": "source_error",
-          "status_text_tc": "來源暫時不可用",
+          "status": "ok",
+          "status_text_tc": "最新",
           "display_value_text": "4.0%",
-          "display_change_text": "較上期 +0.0 個百分點",
-          "display_previous_text": "上期 4.0%",
+          "display_change_text": "較上期（2026-03-16） +0.0 個百分點",
+          "display_previous_text": "上期（2026-03-16） 4.0%",
           "display_period_text": "2026-03-17",
+          "display_comparison_text": "較上期（2026-03-16） +0.0 個百分點",
           "display_comparison_basis_text": "較上期",
+          "display_comparison_period_text": "2026-03-16",
+          "display_unit": "%",
+          "data_origin": "live",
+          "last_successful_fetch_at": "2026-03-18T03:41:58.938Z",
+          "chart": {
+            "chart_type": "line",
+            "x_axis_label": "日期",
+            "y_axis_label": "HKMA Base Rate (%)",
+            "time_label": "日期",
+            "value_label": "HKMA Base Rate",
+            "display_unit": "%",
+            "suggested_ticks": [
+              "2026-03-02",
+              "2026-03-10",
+              "2026-03-17"
+            ],
+            "points": [
+              {
+                "x": "2026-03-02",
+                "y": 4,
+                "tick_label": "2026-03-02",
+                "tooltip_title": "2026-03-02",
+                "tooltip_value_text": "4.0%"
+              },
+              {
+                "x": "2026-03-03",
+                "y": 4,
+                "tick_label": "2026-03-03",
+                "tooltip_title": "2026-03-03",
+                "tooltip_value_text": "4.0%"
+              },
+              {
+                "x": "2026-03-04",
+                "y": 4,
+                "tick_label": "2026-03-04",
+                "tooltip_title": "2026-03-04",
+                "tooltip_value_text": "4.0%"
+              },
+              {
+                "x": "2026-03-05",
+                "y": 4,
+                "tick_label": "2026-03-05",
+                "tooltip_title": "2026-03-05",
+                "tooltip_value_text": "4.0%"
+              },
+              {
+                "x": "2026-03-06",
+                "y": 4,
+                "tick_label": "2026-03-06",
+                "tooltip_title": "2026-03-06",
+                "tooltip_value_text": "4.0%"
+              },
+              {
+                "x": "2026-03-09",
+                "y": 4,
+                "tick_label": "2026-03-09",
+                "tooltip_title": "2026-03-09",
+                "tooltip_value_text": "4.0%"
+              },
+              {
+                "x": "2026-03-10",
+                "y": 4,
+                "tick_label": "2026-03-10",
+                "tooltip_title": "2026-03-10",
+                "tooltip_value_text": "4.0%"
+              },
+              {
+                "x": "2026-03-11",
+                "y": 4,
+                "tick_label": "2026-03-11",
+                "tooltip_title": "2026-03-11",
+                "tooltip_value_text": "4.0%"
+              },
+              {
+                "x": "2026-03-12",
+                "y": 4,
+                "tick_label": "2026-03-12",
+                "tooltip_title": "2026-03-12",
+                "tooltip_value_text": "4.0%"
+              },
+              {
+                "x": "2026-03-13",
+                "y": 4,
+                "tick_label": "2026-03-13",
+                "tooltip_title": "2026-03-13",
+                "tooltip_value_text": "4.0%"
+              },
+              {
+                "x": "2026-03-16",
+                "y": 4,
+                "tick_label": "2026-03-16",
+                "tooltip_title": "2026-03-16",
+                "tooltip_value_text": "4.0%"
+              },
+              {
+                "x": "2026-03-17",
+                "y": 4,
+                "tick_label": "2026-03-17",
+                "tooltip_title": "2026-03-17",
+                "tooltip_value_text": "4.0%"
+              }
+            ]
+          },
           "sparkline_points": [
             {
               "x": "2026-03-02",
@@ -1119,13 +3103,117 @@
           "label_tc": "1個月 HIBOR",
           "source_name": "香港金融管理局",
           "source_url": "https://www.hkma.gov.hk/eng/data-publications-and-research/data-and-statistics/daily-monetary-statistics/",
-          "status": "source_error",
-          "status_text_tc": "來源暫時不可用",
+          "status": "ok",
+          "status_text_tc": "最新",
           "display_value_text": "2.1%",
-          "display_change_text": "較上期 +0.0 個百分點",
-          "display_previous_text": "上期 2.1%",
+          "display_change_text": "較上期（2026-03-16） +0.0 個百分點",
+          "display_previous_text": "上期（2026-03-16） 2.1%",
           "display_period_text": "2026-03-17",
+          "display_comparison_text": "較上期（2026-03-16） +0.0 個百分點",
           "display_comparison_basis_text": "較上期",
+          "display_comparison_period_text": "2026-03-16",
+          "display_unit": "%",
+          "data_origin": "live",
+          "last_successful_fetch_at": "2026-03-18T03:41:58.938Z",
+          "chart": {
+            "chart_type": "line",
+            "x_axis_label": "日期",
+            "y_axis_label": "1個月 HIBOR (%)",
+            "time_label": "日期",
+            "value_label": "1個月 HIBOR",
+            "display_unit": "%",
+            "suggested_ticks": [
+              "2026-03-02",
+              "2026-03-10",
+              "2026-03-17"
+            ],
+            "points": [
+              {
+                "x": "2026-03-02",
+                "y": 2.35518,
+                "tick_label": "2026-03-02",
+                "tooltip_title": "2026-03-02",
+                "tooltip_value_text": "2.4%"
+              },
+              {
+                "x": "2026-03-03",
+                "y": 2.30446,
+                "tick_label": "2026-03-03",
+                "tooltip_title": "2026-03-03",
+                "tooltip_value_text": "2.3%"
+              },
+              {
+                "x": "2026-03-04",
+                "y": 2.41399,
+                "tick_label": "2026-03-04",
+                "tooltip_title": "2026-03-04",
+                "tooltip_value_text": "2.4%"
+              },
+              {
+                "x": "2026-03-05",
+                "y": 2.31179,
+                "tick_label": "2026-03-05",
+                "tooltip_title": "2026-03-05",
+                "tooltip_value_text": "2.3%"
+              },
+              {
+                "x": "2026-03-06",
+                "y": 2.19613,
+                "tick_label": "2026-03-06",
+                "tooltip_title": "2026-03-06",
+                "tooltip_value_text": "2.2%"
+              },
+              {
+                "x": "2026-03-09",
+                "y": 2.04524,
+                "tick_label": "2026-03-09",
+                "tooltip_title": "2026-03-09",
+                "tooltip_value_text": "2.0%"
+              },
+              {
+                "x": "2026-03-10",
+                "y": 2.02083,
+                "tick_label": "2026-03-10",
+                "tooltip_title": "2026-03-10",
+                "tooltip_value_text": "2.0%"
+              },
+              {
+                "x": "2026-03-11",
+                "y": 2.02982,
+                "tick_label": "2026-03-11",
+                "tooltip_title": "2026-03-11",
+                "tooltip_value_text": "2.0%"
+              },
+              {
+                "x": "2026-03-12",
+                "y": 2.02982,
+                "tick_label": "2026-03-12",
+                "tooltip_title": "2026-03-12",
+                "tooltip_value_text": "2.0%"
+              },
+              {
+                "x": "2026-03-13",
+                "y": 2.07583,
+                "tick_label": "2026-03-13",
+                "tooltip_title": "2026-03-13",
+                "tooltip_value_text": "2.1%"
+              },
+              {
+                "x": "2026-03-16",
+                "y": 2.05637,
+                "tick_label": "2026-03-16",
+                "tooltip_title": "2026-03-16",
+                "tooltip_value_text": "2.1%"
+              },
+              {
+                "x": "2026-03-17",
+                "y": 2.08173,
+                "tick_label": "2026-03-17",
+                "tooltip_title": "2026-03-17",
+                "tooltip_value_text": "2.1%"
+              }
+            ]
+          },
           "sparkline_points": [
             {
               "x": "2026-03-02",
