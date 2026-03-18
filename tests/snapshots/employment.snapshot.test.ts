@@ -40,8 +40,12 @@ test("employment snapshot matches official latest values", () => {
   const unemploymentUi = uiCard.metrics.find((item: any) => item.id === "unemployment");
   assert.equal(unemploymentUi.display_change_text, "較上一個三個月移動窗（2025年11月–2026年1月） -0.1 個百分點");
   assert.equal(unemploymentUi.display_previous_text, "上一個三個月移動窗（2025年11月–2026年1月） 3.9%");
+  assert.equal(unemploymentUi.status_text_tc, "最新");
+  assert.equal(unemploymentUi.data_origin, "live");
 
   const labourForceUi = uiCard.metrics.find((item: any) => item.id === "labour_force");
   assert.equal(labourForceUi.display_value_text, "3,797,700");
   assert.equal(labourForceUi.display_change_text, "較上一個三個月移動窗（2025年11月–2026年1月） -6,600");
+  assert.equal(labourForceUi.status_text_tc, "最新");
+  assert.equal(labourForceUi.data_origin, "live");
 });

@@ -251,7 +251,7 @@
       "validation_state": "ok",
       "validation_messages": [],
       "expected_update": "每月",
-      "last_successful_fetch_at": "2026-03-18T10:40:51.560Z"
+      "last_successful_fetch_at": "2026-03-18T11:39:06.754Z"
     },
     {
       "id": "private_rent_index",
@@ -500,7 +500,7 @@
       "validation_state": "ok",
       "validation_messages": [],
       "expected_update": "每月",
-      "last_successful_fetch_at": "2026-03-18T10:40:51.560Z"
+      "last_successful_fetch_at": "2026-03-18T11:39:06.754Z"
     },
     {
       "id": "private_completions",
@@ -624,7 +624,7 @@
       "validation_messages": [],
       "expected_update": "每年",
       "provisional": true,
-      "last_successful_fetch_at": "2026-03-18T10:40:51.560Z"
+      "last_successful_fetch_at": "2026-03-18T11:39:06.754Z"
     }
   ]
 }

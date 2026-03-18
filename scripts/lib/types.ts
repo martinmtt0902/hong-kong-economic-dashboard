@@ -63,6 +63,7 @@ export const sourceSystemSchema = z.enum([
   "data_gov_hk_web_table",
   "data_gov_hk_csv",
   "official_report_xml",
+  "official_report_pdf",
   "hkma_api",
   "immd_csv",
   "rvd_csv",
@@ -226,6 +227,7 @@ export const transformedMetricSchema = z.object({
   validation_state: validationStateSchema,
   validation_messages: z.array(validationMessageSchema),
   source_note: z.string().optional(),
+  transformation_formula: z.string().optional(),
   expected_update: z.string().optional(),
   provisional: z.boolean().optional()
 });
@@ -368,6 +370,7 @@ export type MetricDefinition = {
   comparison_basis: ComparisonBasis;
   comparison_basis_label_tc: string;
   source_note?: string;
+  transformation_formula?: string;
   expected_update?: string;
   sparkline_metric_type?: MetricType;
   sparkline_series_role?: "primary" | "auxiliary";

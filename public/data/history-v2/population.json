@@ -252,7 +252,7 @@
       "validation_state": "ok",
       "validation_messages": [],
       "expected_update": "半年",
-      "last_successful_fetch_at": "2026-03-18T10:40:51.560Z"
+      "last_successful_fetch_at": "2026-03-18T11:39:06.754Z"
     },
     {
       "id": "live_births",
@@ -393,7 +393,7 @@
       "validation_state": "ok",
       "validation_messages": [],
       "expected_update": "每年",
-      "last_successful_fetch_at": "2026-03-18T10:40:51.560Z"
+      "last_successful_fetch_at": "2026-03-18T11:39:06.754Z"
     },
     {
       "id": "median_age",
@@ -643,7 +643,7 @@
       "validation_state": "ok",
       "validation_messages": [],
       "expected_update": "每年",
-      "last_successful_fetch_at": "2026-03-18T10:40:51.560Z"
+      "last_successful_fetch_at": "2026-03-18T11:39:06.754Z"
     }
   ]
 }

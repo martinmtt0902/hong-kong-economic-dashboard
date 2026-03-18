@@ -1,8 +1,8 @@
 {
   "id": "interest-rates",
   "title_tc": "貨幣與金融",
-  "latest_as_of_date": "2026-03-17",
-  "latest_as_of_label": "2026-03-17",
+  "latest_as_of_date": "2026-03-18",
+  "latest_as_of_label": "2026-03-18",
   "metrics": [
     {
       "id": "base_rate",
@@ -30,19 +30,19 @@
         "change_decimals": 1,
         "previous_decimals": 1
       },
-      "as_of_date": "2026-03-17",
-      "as_of_label": "2026-03-17",
+      "as_of_date": "2026-03-18",
+      "as_of_label": "2026-03-18",
       "latest_value": 4,
       "previous_value": 4,
-      "previous_as_of_date": "2026-03-16",
-      "previous_as_of_label": "2026-03-16",
+      "previous_as_of_date": "2026-03-17",
+      "previous_as_of_label": "2026-03-17",
       "change_value": 0,
       "raw_change_value": 0,
       "change_type": "percentage_point_change",
       "comparison_type": "previous_observation",
       "comparison_basis": "previous_observation",
       "comparison_basis_label_tc": "較上期",
-      "comparison_period_label": "2026-03-16",
+      "comparison_period_label": "2026-03-17",
       "data_origin": "live",
       "chart_series": "hkma|base_rate",
       "chart_metric_type": "level",
@@ -58,28 +58,19 @@
           "raw_unit": "%",
           "display_unit": "%"
         },
-        "period_start": "2025-10-20",
-        "period_end": "2026-03-17",
+        "period_start": "2025-10-21",
+        "period_end": "2026-03-18",
         "x_axis_label": "日期",
         "y_axis_label": "HKMA Base Rate (%)",
         "value_label": "HKMA Base Rate",
         "time_label": "日期",
         "suggested_ticks": [
-          "2026-03-02",
-          "2026-03-10",
-          "2026-03-17"
+          "2026-03-03",
+          "2026-03-11",
+          "2026-03-18"
         ]
       },
       "chart_points": [
-        {
-          "as_of_date": "2026-03-02",
-          "as_of_label": "2026-03-02",
-          "tick_label": "2026-03-02",
-          "value": 4,
-          "display_value_text": "4.0%",
-          "tooltip_title": "2026-03-02",
-          "tooltip_value_text": "4.0%"
-        },
         {
           "as_of_date": "2026-03-03",
           "as_of_label": "2026-03-03",
@@ -178,6 +169,15 @@
           "display_value_text": "4.0%",
           "tooltip_title": "2026-03-17",
           "tooltip_value_text": "4.0%"
+        },
+        {
+          "as_of_date": "2026-03-18",
+          "as_of_label": "2026-03-18",
+          "tick_label": "2026-03-18",
+          "value": 4,
+          "display_value_text": "4.0%",
+          "tooltip_title": "2026-03-18",
+          "tooltip_value_text": "4.0%"
         }
       ],
       "sparkline_definition": {
@@ -188,11 +188,6 @@
         "frequency": "daily"
       },
       "sparkline_points": [
-        {
-          "as_of_date": "2026-03-02",
-          "as_of_label": "2026-03-02",
-          "value": 4
-        },
         {
           "as_of_date": "2026-03-03",
           "as_of_label": "2026-03-03",
@@ -247,12 +242,17 @@
           "as_of_date": "2026-03-17",
           "as_of_label": "2026-03-17",
           "value": 4
+        },
+        {
+          "as_of_date": "2026-03-18",
+          "as_of_label": "2026-03-18",
+          "value": 4
         }
       ],
       "validation_state": "ok",
       "validation_messages": [],
       "expected_update": "每日",
-      "last_successful_fetch_at": "2026-03-18T10:40:51.560Z"
+      "last_successful_fetch_at": "2026-03-18T11:39:06.754Z"
     },
     {
       "id": "hibor_1m",
@@ -280,19 +280,19 @@
         "change_decimals": 1,
         "previous_decimals": 1
       },
-      "as_of_date": "2026-03-17",
-      "as_of_label": "2026-03-17",
-      "latest_value": 2.08173,
-      "previous_value": 2.05637,
-      "previous_as_of_date": "2026-03-16",
-      "previous_as_of_label": "2026-03-16",
-      "change_value": 0.0254,
-      "raw_change_value": 0.0254,
+      "as_of_date": "2026-03-18",
+      "as_of_label": "2026-03-18",
+      "latest_value": 2.07298,
+      "previous_value": 2.08173,
+      "previous_as_of_date": "2026-03-17",
+      "previous_as_of_label": "2026-03-17",
+      "change_value": -0.0088,
+      "raw_change_value": -0.0088,
       "change_type": "percentage_point_change",
       "comparison_type": "previous_observation",
       "comparison_basis": "previous_observation",
       "comparison_basis_label_tc": "較上期",
-      "comparison_period_label": "2026-03-16",
+      "comparison_period_label": "2026-03-17",
       "data_origin": "live",
       "chart_series": "hkma|hibor_1m",
       "chart_metric_type": "level",
@@ -308,28 +308,19 @@
           "raw_unit": "%",
           "display_unit": "%"
         },
-        "period_start": "2025-10-20",
-        "period_end": "2026-03-17",
+        "period_start": "2025-10-21",
+        "period_end": "2026-03-18",
         "x_axis_label": "日期",
         "y_axis_label": "1個月 HIBOR (%)",
         "value_label": "1個月 HIBOR",
         "time_label": "日期",
         "suggested_ticks": [
-          "2026-03-02",
-          "2026-03-10",
-          "2026-03-17"
+          "2026-03-03",
+          "2026-03-11",
+          "2026-03-18"
         ]
       },
       "chart_points": [
-        {
-          "as_of_date": "2026-03-02",
-          "as_of_label": "2026-03-02",
-          "tick_label": "2026-03-02",
-          "value": 2.35518,
-          "display_value_text": "2.4%",
-          "tooltip_title": "2026-03-02",
-          "tooltip_value_text": "2.4%"
-        },
         {
           "as_of_date": "2026-03-03",
           "as_of_label": "2026-03-03",
@@ -428,6 +419,15 @@
           "display_value_text": "2.1%",
           "tooltip_title": "2026-03-17",
           "tooltip_value_text": "2.1%"
+        },
+        {
+          "as_of_date": "2026-03-18",
+          "as_of_label": "2026-03-18",
+          "tick_label": "2026-03-18",
+          "value": 2.07298,
+          "display_value_text": "2.1%",
+          "tooltip_title": "2026-03-18",
+          "tooltip_value_text": "2.1%"
         }
       ],
       "sparkline_definition": {
@@ -438,11 +438,6 @@
         "frequency": "daily"
       },
       "sparkline_points": [
-        {
-          "as_of_date": "2026-03-02",
-          "as_of_label": "2026-03-02",
-          "value": 2.35518
-        },
         {
           "as_of_date": "2026-03-03",
           "as_of_label": "2026-03-03",
@@ -497,12 +492,17 @@
           "as_of_date": "2026-03-17",
           "as_of_label": "2026-03-17",
           "value": 2.08173
+        },
+        {
+          "as_of_date": "2026-03-18",
+          "as_of_label": "2026-03-18",
+          "value": 2.07298
         }
       ],
       "validation_state": "ok",
       "validation_messages": [],
       "expected_update": "每日",
-      "last_successful_fetch_at": "2026-03-18T10:40:51.560Z"
+      "last_successful_fetch_at": "2026-03-18T11:39:06.754Z"
     },
     {
       "id": "money_supply_m3",
@@ -756,7 +756,7 @@
       "validation_state": "ok",
       "validation_messages": [],
       "expected_update": "每月",
-      "last_successful_fetch_at": "2026-03-18T10:40:51.560Z"
+      "last_successful_fetch_at": "2026-03-18T11:39:06.754Z"
     }
   ]
 }

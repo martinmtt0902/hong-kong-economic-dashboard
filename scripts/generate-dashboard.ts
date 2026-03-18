@@ -1,5 +1,6 @@
 import { mkdir, readFile, writeFile } from "node:fs/promises";
 import path from "node:path";
+import { fetchBopCurrentAccountObservations } from "./fetch/bopReport";
 import { fetchCenstatdObservations } from "./fetch/censtatd";
 import { fetchCsvObservations } from "./fetch/csvSource";
 import { fetchBirthsRegistrationObservations, readBirthsRegistrationSnapshot } from "./fetch/birthsRegistration";
@@ -104,6 +105,7 @@ export async function generateDashboardArtifacts() {
     },
     transformed_payload: result.metric,
     rendered_preview: toUIMetricRow(result.metric),
+    transformation_formula: result.metric.transformation_formula,
     comparison_type: result.metric.comparison_type,
     comparison_period_label: result.metric.comparison_period_label,
     display_unit: result.metric.display_unit,
@@ -247,6 +249,14 @@ async function loadObservations(definition: MetricDefinitionRecord): Promise<Raw
         measure: definition.measure,
         scale: definition.scale,
         period_mode: definition.period_mode
+      });
+    case "bop_report_pdf":
+      return fetchBopCurrentAccountObservations({
+        source: definition.source,
+        ecode: definition.ecode,
+        table_id: definition.table_id,
+        series_label_tc: definition.series_label_tc,
+        referenceDate: new Date().toISOString().slice(0, 10)
       });
     case "csv_long":
       return fetchCsvObservations({

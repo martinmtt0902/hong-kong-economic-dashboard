@@ -24,11 +24,13 @@ test("gdp snapshot matches official real and nominal yoy", () => {
   assert.equal(nominal.comparison_period_label, "2025年第3季");
 
   const currentAccount = card.metrics.find((item: any) => item.id === "current_account_balance");
-  assert.equal(currentAccount.dataset_id, "hk-censtatd-tablechart-315-37001");
-  assert.equal(currentAccount.latest_value, 94896);
-  assert.equal(currentAccount.previous_value, 93127);
+  assert.equal(currentAccount.dataset_id, "hk-censtatd-tablechart-315-37003");
+  assert.equal(currentAccount.source_system, "official_report_pdf");
+  assert.equal(currentAccount.latest_value, 98175);
+  assert.equal(currentAccount.previous_value, 95808);
   assert.equal(currentAccount.balance_change_narrative, "surplus_increased");
-  assert.equal(currentAccount.display_change_narrative_text, "較上期（2025年第2季） 順差增加 17.7億");
+  assert.equal(currentAccount.display_change_narrative_text, "較上期（2025年第2季） 順差增加 23.7億");
+  assert.match(currentAccount.transformation_formula, /Table 2\.1/);
 
   const pce = card.metrics.find((item: any) => item.id === "private_consumption_expenditure");
   assert.equal(pce.dataset_id, "hk-censtatd-tablechart-310-31012");
@@ -36,9 +38,10 @@ test("gdp snapshot matches official real and nominal yoy", () => {
   assert.equal(pce.previous_value, 2.4);
   assert.equal(pce.chart_metric_type, "yoy_percent");
   assert.equal(pce.comparison_period_label, "2025年第3季");
+  assert.match(pce.transformation_formula, /310-31012/);
 
   const gdpUi = ui.cards.find((item: any) => item.id === "gdp");
   const currentAccountUi = gdpUi.metrics.find((item: any) => item.id === "current_account_balance");
-  assert.equal(currentAccountUi.display_value_text, "順差 949.0億");
-  assert.equal(currentAccountUi.display_change_text, "較上期（2025年第2季） 順差增加 17.7億");
+  assert.equal(currentAccountUi.display_value_text, "順差 981.8億");
+  assert.equal(currentAccountUi.display_change_text, "較上期（2025年第2季） 順差增加 23.7億");
 });

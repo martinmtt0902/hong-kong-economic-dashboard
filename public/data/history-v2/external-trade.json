@@ -261,7 +261,7 @@
       "validation_state": "ok",
       "validation_messages": [],
       "expected_update": "每月",
-      "last_successful_fetch_at": "2026-03-18T10:40:51.560Z"
+      "last_successful_fetch_at": "2026-03-18T11:39:06.754Z"
     },
     {
       "id": "imports_value",
@@ -520,7 +520,7 @@
       "validation_state": "ok",
       "validation_messages": [],
       "expected_update": "每月",
-      "last_successful_fetch_at": "2026-03-18T10:40:51.560Z"
+      "last_successful_fetch_at": "2026-03-18T11:39:06.754Z"
     },
     {
       "id": "visible_trade_balance",
@@ -780,7 +780,7 @@
       "previous_balance_position": "surplus",
       "balance_change_narrative": "surplus_to_deficit",
       "display_change_narrative_text": "較去年同月（2025年1月） 由順差轉為逆差 161.7億",
-      "last_successful_fetch_at": "2026-03-18T10:40:51.560Z"
+      "last_successful_fetch_at": "2026-03-18T11:39:06.754Z"
     }
   ]
 }

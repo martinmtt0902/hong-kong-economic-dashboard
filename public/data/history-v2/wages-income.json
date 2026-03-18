@@ -259,7 +259,7 @@
       "validation_state": "ok",
       "validation_messages": [],
       "expected_update": "每季",
-      "last_successful_fetch_at": "2026-03-18T10:40:51.560Z"
+      "last_successful_fetch_at": "2026-03-18T11:39:06.754Z"
     },
     {
       "id": "median_monthly_wage",
@@ -514,7 +514,7 @@
       "validation_messages": [],
       "source_note": "AEHS 全體僱員總計的每月工資中位數",
       "expected_update": "每年",
-      "last_successful_fetch_at": "2026-03-18T10:40:51.560Z"
+      "last_successful_fetch_at": "2026-03-18T11:39:06.754Z"
     },
     {
       "id": "median_hourly_wage",
@@ -727,7 +727,7 @@
       "validation_messages": [],
       "source_note": "AEHS 全體僱員總計的每小時工資中位數",
       "expected_update": "每年",
-      "last_successful_fetch_at": "2026-03-18T10:40:51.560Z"
+      "last_successful_fetch_at": "2026-03-18T11:39:06.754Z"
     }
   ]
 }

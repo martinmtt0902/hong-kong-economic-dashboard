@@ -19,7 +19,7 @@
       "display_comparison_period_text": "2025年第3季",
       "display_unit": "%",
       "data_origin": "live",
-      "last_successful_fetch_at": "2026-03-18T10:40:51.560Z",
+      "last_successful_fetch_at": "2026-03-18T11:39:06.754Z",
       "chart": {
         "chart_type": "line",
         "x_axis_label": "季度",
@@ -192,7 +192,7 @@
       "display_comparison_period_text": "2025年第3季",
       "display_unit": "%",
       "data_origin": "live",
-      "last_successful_fetch_at": "2026-03-18T10:40:51.560Z",
+      "last_successful_fetch_at": "2026-03-18T11:39:06.754Z",
       "chart": {
         "chart_type": "line",
         "x_axis_label": "季度",
@@ -353,19 +353,19 @@
       "id": "current_account_balance",
       "label_tc": "經常賬戶差額",
       "source_name": "政府統計處",
-      "source_url": "https://data.gov.hk/en-data/dataset/hk-censtatd-tablechart-315-37001",
+      "source_url": "https://data.gov.hk/en-data/dataset/hk-censtatd-tablechart-315-37003",
       "status": "ok",
       "status_text_tc": "最新",
-      "display_value_text": "順差 949.0億",
-      "display_change_text": "較上期（2025年第2季） 順差增加 17.7億",
-      "display_previous_text": "上期（2025年第2季） 順差 931.3億",
+      "display_value_text": "順差 981.8億",
+      "display_change_text": "較上期（2025年第2季） 順差增加 23.7億",
+      "display_previous_text": "上期（2025年第2季） 順差 958.1億",
       "display_period_text": "2025年第3季",
-      "display_comparison_text": "較上期（2025年第2季） 順差增加 17.7億",
+      "display_comparison_text": "較上期（2025年第2季） 順差增加 23.7億",
       "display_comparison_basis_text": "較上期",
       "display_comparison_period_text": "2025年第2季",
       "display_unit": "億港元",
       "data_origin": "live",
-      "last_successful_fetch_at": "2026-03-18T10:40:51.560Z",
+      "last_successful_fetch_at": "2026-03-18T11:39:06.754Z",
       "chart": {
         "chart_type": "line",
         "x_axis_label": "季度",
@@ -379,145 +379,112 @@
           "display_unit": "億港元"
         },
         "suggested_ticks": [
-          "2022Q4",
-          "2024Q2",
+          "2023Q3",
+          "2024Q3",
           "2025Q3"
         ],
         "points": [
           {
-            "x": "2022年第4季",
-            "y": 558.39,
-            "tick_label": "2022Q4",
-            "tooltip_title": "2022年第4季",
-            "tooltip_value_text": "558.4億"
-          },
-          {
-            "x": "2023年第1季",
-            "y": 413.27,
-            "tick_label": "2023Q1",
-            "tooltip_title": "2023年第1季",
-            "tooltip_value_text": "413.3億"
-          },
-          {
-            "x": "2023年第2季",
-            "y": 383.81,
-            "tick_label": "2023Q2",
-            "tooltip_title": "2023年第2季",
-            "tooltip_value_text": "383.8億"
-          },
-          {
             "x": "2023年第3季",
-            "y": 1103.31,
+            "y": 1108.83,
             "tick_label": "2023Q3",
             "tooltip_title": "2023年第3季",
-            "tooltip_value_text": "1103.3億"
+            "tooltip_value_text": "1108.8億"
           },
           {
             "x": "2023年第4季",
-            "y": 608.84,
+            "y": 614.6,
             "tick_label": "2023Q4",
             "tooltip_title": "2023年第4季",
-            "tooltip_value_text": "608.8億"
+            "tooltip_value_text": "614.6億"
           },
           {
             "x": "2024年第1季",
-            "y": 1018.26,
+            "y": 1034.1200000000001,
             "tick_label": "2024Q1",
             "tooltip_title": "2024年第1季",
-            "tooltip_value_text": "1018.3億"
+            "tooltip_value_text": "1034.1億"
           },
           {
             "x": "2024年第2季",
-            "y": 952.34,
+            "y": 967.52,
             "tick_label": "2024Q2",
             "tooltip_title": "2024年第2季",
-            "tooltip_value_text": "952.3億"
+            "tooltip_value_text": "967.5億"
           },
           {
             "x": "2024年第3季",
-            "y": 1106.3700000000001,
+            "y": 1132.28,
             "tick_label": "2024Q3",
             "tooltip_title": "2024年第3季",
-            "tooltip_value_text": "1106.4億"
+            "tooltip_value_text": "1132.3億"
           },
           {
             "x": "2024年第4季",
-            "y": 1108.99,
+            "y": 1116.33,
             "tick_label": "2024Q4",
             "tooltip_title": "2024年第4季",
-            "tooltip_value_text": "1109.0億"
+            "tooltip_value_text": "1116.3億"
           },
           {
             "x": "2025年第1季",
-            "y": 1247.02,
+            "y": 1269.2,
             "tick_label": "2025Q1",
             "tooltip_title": "2025年第1季",
-            "tooltip_value_text": "1247.0億"
+            "tooltip_value_text": "1269.2億"
           },
           {
             "x": "2025年第2季",
-            "y": 931.27,
+            "y": 958.08,
             "tick_label": "2025Q2",
             "tooltip_title": "2025年第2季",
-            "tooltip_value_text": "931.3億"
+            "tooltip_value_text": "958.1億"
           },
           {
             "x": "2025年第3季",
-            "y": 948.96,
+            "y": 981.75,
             "tick_label": "2025Q3",
             "tooltip_title": "2025年第3季",
-            "tooltip_value_text": "949.0億"
+            "tooltip_value_text": "981.8億"
           }
         ]
       },
       "sparkline_points": [
         {
-          "x": "2022年第4季",
-          "y": 55839
-        },
-        {
-          "x": "2023年第1季",
-          "y": 41327
-        },
-        {
-          "x": "2023年第2季",
-          "y": 38381
-        },
-        {
           "x": "2023年第3季",
-          "y": 110331
+          "y": 110883
         },
         {
           "x": "2023年第4季",
-          "y": 60884
+          "y": 61460
         },
         {
           "x": "2024年第1季",
-          "y": 101826
+          "y": 103412
         },
         {
           "x": "2024年第2季",
-          "y": 95234
+          "y": 96752
         },
         {
           "x": "2024年第3季",
-          "y": 110637
+          "y": 113228
         },
         {
           "x": "2024年第4季",
-          "y": 110899
+          "y": 111633
         },
         {
           "x": "2025年第1季",
-          "y": 124702
+          "y": 126920
         },
         {
           "x": "2025年第2季",
-          "y": 93127
+          "y": 95808
         },
         {
           "x": "2025年第3季",
-          "y": 94896
+          "y": 98175
         }
       ],
       "expected_update": "每季"
@@ -538,7 +505,7 @@
       "display_comparison_period_text": "2025年第3季",
       "display_unit": "%",
       "data_origin": "live",
-      "last_successful_fetch_at": "2026-03-18T10:40:51.560Z",
+      "last_successful_fetch_at": "2026-03-18T11:39:06.754Z",
       "chart": {
         "chart_type": "line",
         "x_axis_label": "季度",

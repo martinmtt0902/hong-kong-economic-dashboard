@@ -41,6 +41,12 @@ export type LabourMetricDefinition = BaseMetricDefinition & {
   loader_kind: "minimum_wage";
 };
 
+export type BopReportMetricDefinition = BaseMetricDefinition & {
+  loader_kind: "bop_report_pdf";
+  ecode: string;
+  table_id: string;
+};
+
 export type HkmaMetricDefinition = BaseMetricDefinition & {
   loader_kind: "hkma";
   metric_key: "base_rate" | "hibor_1m" | "m3_total";
@@ -62,6 +68,7 @@ export type MetricDefinitionRecord =
   | CsvMetricDefinition
   | BirthsMetricDefinition
   | LabourMetricDefinition
+  | BopReportMetricDefinition
   | HkmaMetricDefinition
   | RvdIndexMetricDefinition
   | RvdCompletionsMetricDefinition;
@@ -121,6 +128,25 @@ const labourDepartment: SourceRef = {
   dataset_title: "法定最低工資",
   statistical_framework: "Statutory Minimum Wage"
 };
+
+function officialReportTable(
+  dataset_url: string,
+  table_id: string,
+  dataset_title: string,
+  statistical_framework: string,
+  ecode: string
+): SourceRef {
+  return {
+    publisher: "政府統計處",
+    source_system: "official_report_pdf",
+    dataset_id: datasetUrlToDatasetId(dataset_url),
+    dataset_url,
+    table_id,
+    ecode,
+    dataset_title,
+    statistical_framework
+  };
+}
 
 const rvdPriceSource: SourceRef = {
   publisher: "差餉物業估價署",
@@ -239,6 +265,7 @@ function metricBase(args: {
   comparison_basis: ComparisonBasis;
   expected_update?: string;
   source_note?: string;
+  transformation_formula?: string;
   validation?: MetricDefinition["validation"];
   sparkline_metric_type?: MetricType;
   sparkline_series_role?: "primary" | "auxiliary";
@@ -617,11 +644,12 @@ export const metricDefinitions: MetricPipelineDefinition[] = [
         id: "current_account_balance",
         card_id: "gdp",
         label_tc: "經常賬戶差額",
-        source: cAndSDTable(
+        source: officialReportTable(
           URLs.currentAccountDataset,
-          "315-37001",
-          "國際收支平衡表",
-          "Balance of Payments"
+          "315-37003",
+          "國際收支平衡：經常賬戶及資本賬戶",
+          "Balance of Payments",
+          "B1040001"
         ),
         render_strategy: "balance_sign_aware",
         frequency: "quarterly",
@@ -634,12 +662,12 @@ export const metricDefinitions: MetricPipelineDefinition[] = [
         expected_update: "每季",
         chart_time_label: "季度",
         chart_value_label: "經常賬戶差額",
-        series_label_tc: "經常賬戶差額"
+        series_label_tc: "經常賬戶差額",
+        transformation_formula: "官方季度 BoP 報告 Table 2.1 的 Current account level；comparison = latest level - previous quarter level"
       }),
-      loader_kind: "censtatd",
-      table_id: "315-37001",
-      dimensions: { BOP_COMPONENT: "CRA", freq: "Q" },
-      measure: { measure_code: "BOP", measure_aliases: ["BOP"], allowed_labels_tc: ["百萬港元"] }
+      loader_kind: "bop_report_pdf",
+      table_id: "315-37003",
+      ecode: "B1040001"
     }
   },
   {
@@ -667,7 +695,8 @@ export const metricDefinitions: MetricPipelineDefinition[] = [
         chart_value_label: "私人消費開支（PCE）",
         sparkline_series_role: "primary",
         sparkline_metric_type: "yoy_percent",
-        series_label_tc: "私人消費開支按年變動"
+        series_label_tc: "私人消費開支按年變動",
+        transformation_formula: "官方表 310-31012 / GDP_COMPONENT=PCE / CON / 按年變動百分率；headline 直接採用官方 yoy row；comparison = latest yoy - previous quarter yoy"
       }),
       loader_kind: "censtatd",
       table_id: "310-31012",

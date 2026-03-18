@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-03-18T10:40:51.560Z",
+  "generated_at": "2026-03-18T11:39:06.754Z",
   "cards": [
     {
       "id": "employment",
@@ -255,7 +255,7 @@
           "validation_state": "ok",
           "validation_messages": [],
           "expected_update": "每月",
-          "last_successful_fetch_at": "2026-03-18T10:40:51.560Z"
+          "last_successful_fetch_at": "2026-03-18T11:39:06.754Z"
         },
         {
           "id": "underemployment",
@@ -505,7 +505,7 @@
           "validation_state": "ok",
           "validation_messages": [],
           "expected_update": "每月",
-          "last_successful_fetch_at": "2026-03-18T10:40:51.560Z"
+          "last_successful_fetch_at": "2026-03-18T11:39:06.754Z"
         },
         {
           "id": "labour_force",
@@ -755,7 +755,7 @@
           "validation_state": "ok",
           "validation_messages": [],
           "expected_update": "每月",
-          "last_successful_fetch_at": "2026-03-18T10:40:51.560Z"
+          "last_successful_fetch_at": "2026-03-18T11:39:06.754Z"
         },
         {
           "id": "labour_force_participation_rate",
@@ -1009,7 +1009,7 @@
           "validation_state": "ok",
           "validation_messages": [],
           "expected_update": "每月",
-          "last_successful_fetch_at": "2026-03-18T10:40:51.560Z"
+          "last_successful_fetch_at": "2026-03-18T11:39:06.754Z"
         },
         {
           "id": "vacancies",
@@ -1264,7 +1264,7 @@
           "validation_messages": [],
           "source_note": "機構單位統計（establishment-based），非住戶統計",
           "expected_update": "每季",
-          "last_successful_fetch_at": "2026-03-18T10:40:51.560Z"
+          "last_successful_fetch_at": "2026-03-18T11:39:06.754Z"
         }
       ]
     },
@@ -1529,7 +1529,7 @@
           "validation_state": "ok",
           "validation_messages": [],
           "expected_update": "每季",
-          "last_successful_fetch_at": "2026-03-18T10:40:51.560Z"
+          "last_successful_fetch_at": "2026-03-18T11:39:06.754Z"
         },
         {
           "id": "median_monthly_wage",
@@ -1784,7 +1784,7 @@
           "validation_messages": [],
           "source_note": "AEHS 全體僱員總計的每月工資中位數",
           "expected_update": "每年",
-          "last_successful_fetch_at": "2026-03-18T10:40:51.560Z"
+          "last_successful_fetch_at": "2026-03-18T11:39:06.754Z"
         },
         {
           "id": "median_hourly_wage",
@@ -1997,7 +1997,7 @@
           "validation_messages": [],
           "source_note": "AEHS 全體僱員總計的每小時工資中位數",
           "expected_update": "每年",
-          "last_successful_fetch_at": "2026-03-18T10:40:51.560Z"
+          "last_successful_fetch_at": "2026-03-18T11:39:06.754Z"
         }
       ]
     },
@@ -2255,7 +2255,7 @@
           "validation_state": "ok",
           "validation_messages": [],
           "expected_update": "每月",
-          "last_successful_fetch_at": "2026-03-18T10:40:51.560Z"
+          "last_successful_fetch_at": "2026-03-18T11:39:06.754Z"
         }
       ]
     },
@@ -2513,7 +2513,7 @@
           "validation_state": "ok",
           "validation_messages": [],
           "expected_update": "每季",
-          "last_successful_fetch_at": "2026-03-18T10:40:51.560Z"
+          "last_successful_fetch_at": "2026-03-18T11:39:06.754Z"
         },
         {
           "id": "gdp_nominal_yoy",
@@ -2763,7 +2763,7 @@
           "validation_state": "ok",
           "validation_messages": [],
           "expected_update": "每季",
-          "last_successful_fetch_at": "2026-03-18T10:40:51.560Z"
+          "last_successful_fetch_at": "2026-03-18T11:39:06.754Z"
         },
         {
           "id": "current_account_balance",
@@ -2771,20 +2771,22 @@
           "label_tc": "經常賬戶差額",
           "source": {
             "publisher": "政府統計處",
-            "source_system": "censtatd_api",
-            "dataset_id": "hk-censtatd-tablechart-315-37001",
-            "dataset_url": "https://data.gov.hk/en-data/dataset/hk-censtatd-tablechart-315-37001",
-            "api_url": "https://www.censtatd.gov.hk/api/get.php?full_series=1&id=315-37001&lang=tc",
-            "table_id": "315-37001",
-            "dataset_title": "國際收支平衡表",
-            "statistical_framework": "Balance of Payments"
+            "source_system": "official_report_pdf",
+            "dataset_id": "hk-censtatd-tablechart-315-37003",
+            "dataset_url": "https://data.gov.hk/en-data/dataset/hk-censtatd-tablechart-315-37003",
+            "table_id": "315-37003",
+            "ecode": "B1040001",
+            "dataset_title": "國際收支平衡：經常賬戶及資本賬戶",
+            "statistical_framework": "Balance of Payments",
+            "api_url": "https://www.censtatd.gov.hk/wbr/B1040001/B10400012025QQ03/att/en/B10400012025QQ03.pdf"
           },
-          "source_system": "censtatd_api",
-          "dataset_id": "hk-censtatd-tablechart-315-37001",
-          "table_id": "315-37001",
-          "dataset_title": "國際收支平衡表",
+          "source_system": "official_report_pdf",
+          "dataset_id": "hk-censtatd-tablechart-315-37003",
+          "table_id": "315-37003",
+          "ecode": "B1040001",
+          "dataset_title": "國際收支平衡：經常賬戶及資本賬戶",
           "statistical_framework": "Balance of Payments",
-          "series_id": "censtatd|315-37001|BOP_COMPONENT=CRA|freq=Q|measure=BOP|label=百萬港元",
+          "series_id": "official_report_pdf|B1040001|315-37003|Current account",
           "metric_type": "level",
           "render_strategy": "balance_sign_aware",
           "frequency": "quarterly",
@@ -2799,22 +2801,23 @@
           },
           "as_of_date": "2025-09-30",
           "as_of_label": "2025年第3季",
-          "latest_value": 94896,
-          "previous_value": 93127,
+          "release_date": "2025-12-22",
+          "latest_value": 98175,
+          "previous_value": 95808,
           "previous_as_of_date": "2025-06-30",
           "previous_as_of_label": "2025年第2季",
-          "change_value": 1769,
-          "raw_change_value": 1769,
+          "change_value": 2367,
+          "raw_change_value": 2367,
           "change_type": "absolute_change",
           "comparison_type": "previous_observation",
           "comparison_basis": "previous_observation",
           "comparison_basis_label_tc": "較上期",
           "comparison_period_label": "2025年第2季",
           "data_origin": "live",
-          "chart_series": "censtatd|315-37001|BOP_COMPONENT=CRA|freq=Q|measure=BOP|label=百萬港元",
+          "chart_series": "official_report_pdf|B1040001|315-37003|Current account",
           "chart_metric_type": "level",
           "chart_definition": {
-            "series_id": "censtatd|315-37001|BOP_COMPONENT=CRA|freq=Q|measure=BOP|label=百萬港元",
+            "series_id": "official_report_pdf|B1040001|315-37003|Current account",
             "metric_type": "level",
             "chart_type": "line",
             "frequency": "quarterly",
@@ -2825,130 +2828,103 @@
               "raw_unit": "百萬港元",
               "display_unit": "億港元"
             },
-            "period_start": "1999-03-31",
+            "period_start": "2023-09-30",
             "period_end": "2025-09-30",
             "x_axis_label": "季度",
             "y_axis_label": "經常賬戶差額 (億港元)",
             "value_label": "經常賬戶差額",
             "time_label": "季度",
             "suggested_ticks": [
-              "2022Q4",
-              "2024Q2",
+              "2023Q3",
+              "2024Q3",
               "2025Q3"
             ]
           },
           "chart_points": [
             {
-              "as_of_date": "2022-12-31",
-              "as_of_label": "2022年第4季",
-              "tick_label": "2022Q4",
-              "value": 55839,
-              "display_value_text": "558.4億",
-              "tooltip_title": "2022年第4季",
-              "tooltip_value_text": "558.4億"
-            },
-            {
-              "as_of_date": "2023-03-31",
-              "as_of_label": "2023年第1季",
-              "tick_label": "2023Q1",
-              "value": 41327,
-              "display_value_text": "413.3億",
-              "tooltip_title": "2023年第1季",
-              "tooltip_value_text": "413.3億"
-            },
-            {
-              "as_of_date": "2023-06-30",
-              "as_of_label": "2023年第2季",
-              "tick_label": "2023Q2",
-              "value": 38381,
-              "display_value_text": "383.8億",
-              "tooltip_title": "2023年第2季",
-              "tooltip_value_text": "383.8億"
-            },
-            {
               "as_of_date": "2023-09-30",
               "as_of_label": "2023年第3季",
               "tick_label": "2023Q3",
-              "value": 110331,
-              "display_value_text": "1103.3億",
+              "value": 110883,
+              "display_value_text": "1108.8億",
               "tooltip_title": "2023年第3季",
-              "tooltip_value_text": "1103.3億"
+              "tooltip_value_text": "1108.8億"
             },
             {
               "as_of_date": "2023-12-31",
               "as_of_label": "2023年第4季",
               "tick_label": "2023Q4",
-              "value": 60884,
-              "display_value_text": "608.8億",
+              "value": 61460,
+              "display_value_text": "614.6億",
               "tooltip_title": "2023年第4季",
-              "tooltip_value_text": "608.8億"
+              "tooltip_value_text": "614.6億"
             },
             {
               "as_of_date": "2024-03-31",
               "as_of_label": "2024年第1季",
               "tick_label": "2024Q1",
-              "value": 101826,
-              "display_value_text": "1018.3億",
+              "value": 103412,
+              "display_value_text": "1034.1億",
               "tooltip_title": "2024年第1季",
-              "tooltip_value_text": "1018.3億"
+              "tooltip_value_text": "1034.1億"
             },
             {
               "as_of_date": "2024-06-30",
               "as_of_label": "2024年第2季",
               "tick_label": "2024Q2",
-              "value": 95234,
-              "display_value_text": "952.3億",
+              "value": 96752,
+              "display_value_text": "967.5億",
               "tooltip_title": "2024年第2季",
-              "tooltip_value_text": "952.3億"
+              "tooltip_value_text": "967.5億"
             },
             {
               "as_of_date": "2024-09-30",
               "as_of_label": "2024年第3季",
               "tick_label": "2024Q3",
-              "value": 110637,
-              "display_value_text": "1106.4億",
+              "value": 113228,
+              "display_value_text": "1132.3億",
               "tooltip_title": "2024年第3季",
-              "tooltip_value_text": "1106.4億"
+              "tooltip_value_text": "1132.3億"
             },
             {
               "as_of_date": "2024-12-31",
               "as_of_label": "2024年第4季",
               "tick_label": "2024Q4",
-              "value": 110899,
-              "display_value_text": "1109.0億",
+              "value": 111633,
+              "display_value_text": "1116.3億",
               "tooltip_title": "2024年第4季",
-              "tooltip_value_text": "1109.0億"
+              "tooltip_value_text": "1116.3億"
             },
             {
               "as_of_date": "2025-03-31",
               "as_of_label": "2025年第1季",
               "tick_label": "2025Q1",
-              "value": 124702,
-              "display_value_text": "1247.0億",
+              "value": 126920,
+              "display_value_text": "1269.2億",
               "tooltip_title": "2025年第1季",
-              "tooltip_value_text": "1247.0億"
+              "tooltip_value_text": "1269.2億"
             },
             {
               "as_of_date": "2025-06-30",
               "as_of_label": "2025年第2季",
               "tick_label": "2025Q2",
-              "value": 93127,
-              "display_value_text": "931.3億",
+              "value": 95808,
+              "display_value_text": "958.1億",
               "tooltip_title": "2025年第2季",
-              "tooltip_value_text": "931.3億"
+              "tooltip_value_text": "958.1億"
             },
             {
               "as_of_date": "2025-09-30",
               "as_of_label": "2025年第3季",
               "tick_label": "2025Q3",
-              "value": 94896,
-              "display_value_text": "949.0億",
+              "value": 98175,
+              "display_value_text": "981.8億",
               "tooltip_title": "2025年第3季",
-              "tooltip_value_text": "949.0億"
+              "tooltip_value_text": "981.8億"
             }
           ],
           "sparkline_definition": {
-            "series_id": "censtatd|315-37001|BOP_COMPONENT=CRA|freq=Q|measure=BOP|label=百萬港元",
+            "series_id": "official_report_pdf|B1040001|315-37003|Current account",
             "metric_type": "level",
             "comparison_basis": "previous_observation",
             "unit": "百萬港元",
@@ -2956,74 +2932,61 @@
           },
           "sparkline_points": [
             {
-              "as_of_date": "2022-12-31",
-              "as_of_label": "2022年第4季",
-              "value": 55839
-            },
-            {
-              "as_of_date": "2023-03-31",
-              "as_of_label": "2023年第1季",
-              "value": 41327
-            },
-            {
-              "as_of_date": "2023-06-30",
-              "as_of_label": "2023年第2季",
-              "value": 38381
-            },
-            {
               "as_of_date": "2023-09-30",
               "as_of_label": "2023年第3季",
-              "value": 110331
+              "value": 110883
             },
             {
               "as_of_date": "2023-12-31",
               "as_of_label": "2023年第4季",
-              "value": 60884
+              "value": 61460
             },
             {
               "as_of_date": "2024-03-31",
               "as_of_label": "2024年第1季",
-              "value": 101826
+              "value": 103412
             },
             {
               "as_of_date": "2024-06-30",
               "as_of_label": "2024年第2季",
-              "value": 95234
+              "value": 96752
             },
             {
               "as_of_date": "2024-09-30",
               "as_of_label": "2024年第3季",
-              "value": 110637
+              "value": 113228
             },
             {
               "as_of_date": "2024-12-31",
               "as_of_label": "2024年第4季",
-              "value": 110899
+              "value": 111633
             },
             {
               "as_of_date": "2025-03-31",
               "as_of_label": "2025年第1季",
-              "value": 124702
+              "value": 126920
             },
             {
               "as_of_date": "2025-06-30",
               "as_of_label": "2025年第2季",
-              "value": 93127
+              "value": 95808
             },
             {
               "as_of_date": "2025-09-30",
               "as_of_label": "2025年第3季",
-              "value": 94896
+              "value": 98175
             }
           ],
           "validation_state": "ok",
           "validation_messages": [],
+          "transformation_formula": "官方季度 BoP 報告 Table 2.1 的 Current account level；comparison = latest level - previous quarter level",
           "expected_update": "每季",
+          "provisional": true,
           "balance_position": "surplus",
           "previous_balance_position": "surplus",
           "balance_change_narrative": "surplus_increased",
-          "display_change_narrative_text": "較上期（2025年第2季） 順差增加 17.7億",
-          "last_successful_fetch_at": "2026-03-18T10:40:51.560Z"
+          "display_change_narrative_text": "較上期（2025年第2季） 順差增加 23.7億",
+          "last_successful_fetch_at": "2026-03-18T11:39:06.754Z"
         },
         {
           "id": "private_consumption_expenditure",
@@ -3279,8 +3242,9 @@
           ],
           "validation_state": "ok",
           "validation_messages": [],
+          "transformation_formula": "官方表 310-31012 / GDP_COMPONENT=PCE / CON / 按年變動百分率；headline 直接採用官方 yoy row；comparison = latest yoy - previous quarter yoy",
           "expected_update": "每季",
-          "last_successful_fetch_at": "2026-03-18T10:40:51.560Z"
+          "last_successful_fetch_at": "2026-03-18T11:39:06.754Z"
         }
       ]
     },
@@ -3547,7 +3511,7 @@
           "validation_state": "ok",
           "validation_messages": [],
           "expected_update": "每月",
-          "last_successful_fetch_at": "2026-03-18T10:40:51.560Z"
+          "last_successful_fetch_at": "2026-03-18T11:39:06.754Z"
         },
         {
           "id": "imports_value",
@@ -3806,7 +3770,7 @@
           "validation_state": "ok",
           "validation_messages": [],
           "expected_update": "每月",
-          "last_successful_fetch_at": "2026-03-18T10:40:51.560Z"
+          "last_successful_fetch_at": "2026-03-18T11:39:06.754Z"
         },
         {
           "id": "visible_trade_balance",
@@ -4066,7 +4030,7 @@
           "previous_balance_position": "surplus",
           "balance_change_narrative": "surplus_to_deficit",
           "display_change_narrative_text": "較去年同月（2025年1月） 由順差轉為逆差 161.7億",
-          "last_successful_fetch_at": "2026-03-18T10:40:51.560Z"
+          "last_successful_fetch_at": "2026-03-18T11:39:06.754Z"
         }
       ]
     },
@@ -4329,7 +4293,7 @@
           "validation_state": "ok",
           "validation_messages": [],
           "expected_update": "每月",
-          "last_successful_fetch_at": "2026-03-18T10:40:51.560Z"
+          "last_successful_fetch_at": "2026-03-18T11:39:06.754Z"
         },
         {
           "id": "visitor_arrivals",
@@ -4579,7 +4543,7 @@
           "validation_state": "ok",
           "validation_messages": [],
           "expected_update": "每月",
-          "last_successful_fetch_at": "2026-03-18T10:40:51.560Z"
+          "last_successful_fetch_at": "2026-03-18T11:39:06.754Z"
         }
       ]
     },
@@ -4675,7 +4639,7 @@
           "validation_messages": [],
           "expected_update": "按政策變動",
           "provisional": false,
-          "last_successful_fetch_at": "2026-03-18T10:40:51.560Z"
+          "last_successful_fetch_at": "2026-03-18T11:39:06.754Z"
         },
         {
           "id": "statutory_minimum_wage_next",
@@ -4786,7 +4750,7 @@
           "expected_update": "按政策變動",
           "provisional": true,
           "reason": "將於 2026-05-01 生效",
-          "last_successful_fetch_at": "2026-03-18T10:40:51.560Z"
+          "last_successful_fetch_at": "2026-03-18T11:39:06.754Z"
         }
       ]
     },
@@ -5044,7 +5008,7 @@
           "validation_state": "ok",
           "validation_messages": [],
           "expected_update": "半年",
-          "last_successful_fetch_at": "2026-03-18T10:40:51.560Z"
+          "last_successful_fetch_at": "2026-03-18T11:39:06.754Z"
         },
         {
           "id": "live_births",
@@ -5185,7 +5149,7 @@
           "validation_state": "ok",
           "validation_messages": [],
           "expected_update": "每年",
-          "last_successful_fetch_at": "2026-03-18T10:40:51.560Z"
+          "last_successful_fetch_at": "2026-03-18T11:39:06.754Z"
         },
         {
           "id": "median_age",
@@ -5435,7 +5399,7 @@
           "validation_state": "ok",
           "validation_messages": [],
           "expected_update": "每年",
-          "last_successful_fetch_at": "2026-03-18T10:40:51.560Z"
+          "last_successful_fetch_at": "2026-03-18T11:39:06.754Z"
         }
       ]
     },
@@ -5692,7 +5656,7 @@
           "validation_state": "ok",
           "validation_messages": [],
           "expected_update": "每月",
-          "last_successful_fetch_at": "2026-03-18T10:40:51.560Z"
+          "last_successful_fetch_at": "2026-03-18T11:39:06.754Z"
         },
         {
           "id": "private_rent_index",
@@ -5941,7 +5905,7 @@
           "validation_state": "ok",
           "validation_messages": [],
           "expected_update": "每月",
-          "last_successful_fetch_at": "2026-03-18T10:40:51.560Z"
+          "last_successful_fetch_at": "2026-03-18T11:39:06.754Z"
         },
         {
           "id": "private_completions",
@@ -6065,7 +6029,7 @@
           "validation_messages": [],
           "expected_update": "每年",
           "provisional": true,
-          "last_successful_fetch_at": "2026-03-18T10:40:51.560Z"
+          "last_successful_fetch_at": "2026-03-18T11:39:06.754Z"
         }
       ]
     },
@@ -6324,7 +6288,7 @@
           "validation_state": "ok",
           "validation_messages": [],
           "expected_update": "每年",
-          "last_successful_fetch_at": "2026-03-18T10:40:51.560Z"
+          "last_successful_fetch_at": "2026-03-18T11:39:06.754Z"
         },
         {
           "id": "government_expenditure",
@@ -6575,7 +6539,7 @@
           "validation_state": "ok",
           "validation_messages": [],
           "expected_update": "每年",
-          "last_successful_fetch_at": "2026-03-18T10:40:51.560Z"
+          "last_successful_fetch_at": "2026-03-18T11:39:06.754Z"
         },
         {
           "id": "fiscal_reserves",
@@ -6826,15 +6790,15 @@
           "validation_state": "ok",
           "validation_messages": [],
           "expected_update": "每年",
-          "last_successful_fetch_at": "2026-03-18T10:40:51.560Z"
+          "last_successful_fetch_at": "2026-03-18T11:39:06.754Z"
         }
       ]
     },
     {
       "id": "interest-rates",
       "title_tc": "貨幣與金融",
-      "latest_as_of_date": "2026-03-17",
-      "latest_as_of_label": "2026-03-17",
+      "latest_as_of_date": "2026-03-18",
+      "latest_as_of_label": "2026-03-18",
       "metrics": [
         {
           "id": "base_rate",
@@ -6862,19 +6826,19 @@
             "change_decimals": 1,
             "previous_decimals": 1
           },
-          "as_of_date": "2026-03-17",
-          "as_of_label": "2026-03-17",
+          "as_of_date": "2026-03-18",
+          "as_of_label": "2026-03-18",
           "latest_value": 4,
           "previous_value": 4,
-          "previous_as_of_date": "2026-03-16",
-          "previous_as_of_label": "2026-03-16",
+          "previous_as_of_date": "2026-03-17",
+          "previous_as_of_label": "2026-03-17",
           "change_value": 0,
           "raw_change_value": 0,
           "change_type": "percentage_point_change",
           "comparison_type": "previous_observation",
           "comparison_basis": "previous_observation",
           "comparison_basis_label_tc": "較上期",
-          "comparison_period_label": "2026-03-16",
+          "comparison_period_label": "2026-03-17",
           "data_origin": "live",
           "chart_series": "hkma|base_rate",
           "chart_metric_type": "level",
@@ -6890,28 +6854,19 @@
               "raw_unit": "%",
               "display_unit": "%"
             },
-            "period_start": "2025-10-20",
-            "period_end": "2026-03-17",
+            "period_start": "2025-10-21",
+            "period_end": "2026-03-18",
             "x_axis_label": "日期",
             "y_axis_label": "HKMA Base Rate (%)",
             "value_label": "HKMA Base Rate",
             "time_label": "日期",
             "suggested_ticks": [
-              "2026-03-02",
-              "2026-03-10",
-              "2026-03-17"
+              "2026-03-03",
+              "2026-03-11",
+              "2026-03-18"
             ]
           },
           "chart_points": [
-            {
-              "as_of_date": "2026-03-02",
-              "as_of_label": "2026-03-02",
-              "tick_label": "2026-03-02",
-              "value": 4,
-              "display_value_text": "4.0%",
-              "tooltip_title": "2026-03-02",
-              "tooltip_value_text": "4.0%"
-            },
             {
               "as_of_date": "2026-03-03",
               "as_of_label": "2026-03-03",
@@ -7010,6 +6965,15 @@
               "display_value_text": "4.0%",
               "tooltip_title": "2026-03-17",
               "tooltip_value_text": "4.0%"
+            },
+            {
+              "as_of_date": "2026-03-18",
+              "as_of_label": "2026-03-18",
+              "tick_label": "2026-03-18",
+              "value": 4,
+              "display_value_text": "4.0%",
+              "tooltip_title": "2026-03-18",
+              "tooltip_value_text": "4.0%"
             }
           ],
           "sparkline_definition": {
@@ -7020,11 +6984,6 @@
             "frequency": "daily"
           },
           "sparkline_points": [
-            {
-              "as_of_date": "2026-03-02",
-              "as_of_label": "2026-03-02",
-              "value": 4
-            },
             {
               "as_of_date": "2026-03-03",
               "as_of_label": "2026-03-03",
@@ -7079,12 +7038,17 @@
               "as_of_date": "2026-03-17",
               "as_of_label": "2026-03-17",
               "value": 4
+            },
+            {
+              "as_of_date": "2026-03-18",
+              "as_of_label": "2026-03-18",
+              "value": 4
             }
           ],
           "validation_state": "ok",
           "validation_messages": [],
           "expected_update": "每日",
-          "last_successful_fetch_at": "2026-03-18T10:40:51.560Z"
+          "last_successful_fetch_at": "2026-03-18T11:39:06.754Z"
         },
         {
           "id": "hibor_1m",
@@ -7112,19 +7076,19 @@
             "change_decimals": 1,
             "previous_decimals": 1
           },
-          "as_of_date": "2026-03-17",
-          "as_of_label": "2026-03-17",
-          "latest_value": 2.08173,
-          "previous_value": 2.05637,
-          "previous_as_of_date": "2026-03-16",
-          "previous_as_of_label": "2026-03-16",
-          "change_value": 0.0254,
-          "raw_change_value": 0.0254,
+          "as_of_date": "2026-03-18",
+          "as_of_label": "2026-03-18",
+          "latest_value": 2.07298,
+          "previous_value": 2.08173,
+          "previous_as_of_date": "2026-03-17",
+          "previous_as_of_label": "2026-03-17",
+          "change_value": -0.0088,
+          "raw_change_value": -0.0088,
           "change_type": "percentage_point_change",
           "comparison_type": "previous_observation",
           "comparison_basis": "previous_observation",
           "comparison_basis_label_tc": "較上期",
-          "comparison_period_label": "2026-03-16",
+          "comparison_period_label": "2026-03-17",
           "data_origin": "live",
           "chart_series": "hkma|hibor_1m",
           "chart_metric_type": "level",
@@ -7140,28 +7104,19 @@
               "raw_unit": "%",
               "display_unit": "%"
             },
-            "period_start": "2025-10-20",
-            "period_end": "2026-03-17",
+            "period_start": "2025-10-21",
+            "period_end": "2026-03-18",
             "x_axis_label": "日期",
             "y_axis_label": "1個月 HIBOR (%)",
             "value_label": "1個月 HIBOR",
             "time_label": "日期",
             "suggested_ticks": [
-              "2026-03-02",
-              "2026-03-10",
-              "2026-03-17"
+              "2026-03-03",
+              "2026-03-11",
+              "2026-03-18"
             ]
           },
           "chart_points": [
-            {
-              "as_of_date": "2026-03-02",
-              "as_of_label": "2026-03-02",
-              "tick_label": "2026-03-02",
-              "value": 2.35518,
-              "display_value_text": "2.4%",
-              "tooltip_title": "2026-03-02",
-              "tooltip_value_text": "2.4%"
-            },
             {
               "as_of_date": "2026-03-03",
               "as_of_label": "2026-03-03",
@@ -7260,6 +7215,15 @@
               "display_value_text": "2.1%",
               "tooltip_title": "2026-03-17",
               "tooltip_value_text": "2.1%"
+            },
+            {
+              "as_of_date": "2026-03-18",
+              "as_of_label": "2026-03-18",
+              "tick_label": "2026-03-18",
+              "value": 2.07298,
+              "display_value_text": "2.1%",
+              "tooltip_title": "2026-03-18",
+              "tooltip_value_text": "2.1%"
             }
           ],
           "sparkline_definition": {
@@ -7270,11 +7234,6 @@
             "frequency": "daily"
           },
           "sparkline_points": [
-            {
-              "as_of_date": "2026-03-02",
-              "as_of_label": "2026-03-02",
-              "value": 2.35518
-            },
             {
               "as_of_date": "2026-03-03",
               "as_of_label": "2026-03-03",
@@ -7329,12 +7288,17 @@
               "as_of_date": "2026-03-17",
               "as_of_label": "2026-03-17",
               "value": 2.08173
+            },
+            {
+              "as_of_date": "2026-03-18",
+              "as_of_label": "2026-03-18",
+              "value": 2.07298
             }
           ],
           "validation_state": "ok",
           "validation_messages": [],
           "expected_update": "每日",
-          "last_successful_fetch_at": "2026-03-18T10:40:51.560Z"
+          "last_successful_fetch_at": "2026-03-18T11:39:06.754Z"
         },
         {
           "id": "money_supply_m3",
@@ -7588,7 +7552,7 @@
           "validation_state": "ok",
           "validation_messages": [],
           "expected_update": "每月",
-          "last_successful_fetch_at": "2026-03-18T10:40:51.560Z"
+          "last_successful_fetch_at": "2026-03-18T11:39:06.754Z"
         }
       ]
     }

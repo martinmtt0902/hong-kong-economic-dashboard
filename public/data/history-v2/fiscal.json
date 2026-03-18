@@ -253,7 +253,7 @@
       "validation_state": "ok",
       "validation_messages": [],
       "expected_update": "每年",
-      "last_successful_fetch_at": "2026-03-18T10:40:51.560Z"
+      "last_successful_fetch_at": "2026-03-18T11:39:06.754Z"
     },
     {
       "id": "government_expenditure",
@@ -504,7 +504,7 @@
       "validation_state": "ok",
       "validation_messages": [],
       "expected_update": "每年",
-      "last_successful_fetch_at": "2026-03-18T10:40:51.560Z"
+      "last_successful_fetch_at": "2026-03-18T11:39:06.754Z"
     },
     {
       "id": "fiscal_reserves",
@@ -755,7 +755,7 @@
       "validation_state": "ok",
       "validation_messages": [],
       "expected_update": "每年",
-      "last_successful_fetch_at": "2026-03-18T10:40:51.560Z"
+      "last_successful_fetch_at": "2026-03-18T11:39:06.754Z"
     }
   ]
 }

@@ -252,7 +252,7 @@
       "validation_state": "ok",
       "validation_messages": [],
       "expected_update": "每月",
-      "last_successful_fetch_at": "2026-03-18T10:40:51.560Z"
+      "last_successful_fetch_at": "2026-03-18T11:39:06.754Z"
     },
     {
       "id": "underemployment",
@@ -502,7 +502,7 @@
       "validation_state": "ok",
       "validation_messages": [],
       "expected_update": "每月",
-      "last_successful_fetch_at": "2026-03-18T10:40:51.560Z"
+      "last_successful_fetch_at": "2026-03-18T11:39:06.754Z"
     },
     {
       "id": "labour_force",
@@ -752,7 +752,7 @@
       "validation_state": "ok",
       "validation_messages": [],
       "expected_update": "每月",
-      "last_successful_fetch_at": "2026-03-18T10:40:51.560Z"
+      "last_successful_fetch_at": "2026-03-18T11:39:06.754Z"
     },
     {
       "id": "labour_force_participation_rate",
@@ -1006,7 +1006,7 @@
       "validation_state": "ok",
       "validation_messages": [],
       "expected_update": "每月",
-      "last_successful_fetch_at": "2026-03-18T10:40:51.560Z"
+      "last_successful_fetch_at": "2026-03-18T11:39:06.754Z"
     },
     {
       "id": "vacancies",
@@ -1261,7 +1261,7 @@
       "validation_messages": [],
       "source_note": "機構單位統計（establishment-based），非住戶統計",
       "expected_update": "每季",
-      "last_successful_fetch_at": "2026-03-18T10:40:51.560Z"
+      "last_successful_fetch_at": "2026-03-18T11:39:06.754Z"
     }
   ]
 }

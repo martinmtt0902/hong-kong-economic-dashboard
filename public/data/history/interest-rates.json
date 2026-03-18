@@ -11,15 +11,15 @@
       "status": "ok",
       "status_text_tc": "最新",
       "display_value_text": "4.0%",
-      "display_change_text": "較上期（2026-03-16） +0.0 個百分點",
-      "display_previous_text": "上期（2026-03-16） 4.0%",
-      "display_period_text": "2026-03-17",
-      "display_comparison_text": "較上期（2026-03-16） +0.0 個百分點",
+      "display_change_text": "較上期（2026-03-17） +0.0 個百分點",
+      "display_previous_text": "上期（2026-03-17） 4.0%",
+      "display_period_text": "2026-03-18",
+      "display_comparison_text": "較上期（2026-03-17） +0.0 個百分點",
       "display_comparison_basis_text": "較上期",
-      "display_comparison_period_text": "2026-03-16",
+      "display_comparison_period_text": "2026-03-17",
       "display_unit": "%",
       "data_origin": "live",
-      "last_successful_fetch_at": "2026-03-18T10:40:51.560Z",
+      "last_successful_fetch_at": "2026-03-18T11:39:06.754Z",
       "chart": {
         "chart_type": "line",
         "x_axis_label": "日期",
@@ -33,18 +33,11 @@
           "display_unit": "%"
         },
         "suggested_ticks": [
-          "2026-03-02",
-          "2026-03-10",
-          "2026-03-17"
+          "2026-03-03",
+          "2026-03-11",
+          "2026-03-18"
         ],
         "points": [
-          {
-            "x": "2026-03-02",
-            "y": 4,
-            "tick_label": "2026-03-02",
-            "tooltip_title": "2026-03-02",
-            "tooltip_value_text": "4.0%"
-          },
           {
             "x": "2026-03-03",
             "y": 4,
@@ -121,14 +114,17 @@
             "tick_label": "2026-03-17",
             "tooltip_title": "2026-03-17",
             "tooltip_value_text": "4.0%"
+          },
+          {
+            "x": "2026-03-18",
+            "y": 4,
+            "tick_label": "2026-03-18",
+            "tooltip_title": "2026-03-18",
+            "tooltip_value_text": "4.0%"
           }
         ]
       },
       "sparkline_points": [
-        {
-          "x": "2026-03-02",
-          "y": 4
-        },
         {
           "x": "2026-03-03",
           "y": 4
@@ -172,6 +168,10 @@
         {
           "x": "2026-03-17",
           "y": 4
+        },
+        {
+          "x": "2026-03-18",
+          "y": 4
         }
       ],
       "expected_update": "每日"
@@ -184,15 +184,15 @@
       "status": "ok",
       "status_text_tc": "最新",
       "display_value_text": "2.1%",
-      "display_change_text": "較上期（2026-03-16） +0.0 個百分點",
-      "display_previous_text": "上期（2026-03-16） 2.1%",
-      "display_period_text": "2026-03-17",
-      "display_comparison_text": "較上期（2026-03-16） +0.0 個百分點",
+      "display_change_text": "較上期（2026-03-17） -0.0 個百分點",
+      "display_previous_text": "上期（2026-03-17） 2.1%",
+      "display_period_text": "2026-03-18",
+      "display_comparison_text": "較上期（2026-03-17） -0.0 個百分點",
       "display_comparison_basis_text": "較上期",
-      "display_comparison_period_text": "2026-03-16",
+      "display_comparison_period_text": "2026-03-17",
       "display_unit": "%",
       "data_origin": "live",
-      "last_successful_fetch_at": "2026-03-18T10:40:51.560Z",
+      "last_successful_fetch_at": "2026-03-18T11:39:06.754Z",
       "chart": {
         "chart_type": "line",
         "x_axis_label": "日期",
@@ -206,18 +206,11 @@
           "display_unit": "%"
         },
         "suggested_ticks": [
-          "2026-03-02",
-          "2026-03-10",
-          "2026-03-17"
+          "2026-03-03",
+          "2026-03-11",
+          "2026-03-18"
         ],
         "points": [
-          {
-            "x": "2026-03-02",
-            "y": 2.35518,
-            "tick_label": "2026-03-02",
-            "tooltip_title": "2026-03-02",
-            "tooltip_value_text": "2.4%"
-          },
           {
             "x": "2026-03-03",
             "y": 2.30446,
@@ -294,14 +287,17 @@
             "tick_label": "2026-03-17",
             "tooltip_title": "2026-03-17",
             "tooltip_value_text": "2.1%"
+          },
+          {
+            "x": "2026-03-18",
+            "y": 2.07298,
+            "tick_label": "2026-03-18",
+            "tooltip_title": "2026-03-18",
+            "tooltip_value_text": "2.1%"
           }
         ]
       },
       "sparkline_points": [
-        {
-          "x": "2026-03-02",
-          "y": 2.35518
-        },
         {
           "x": "2026-03-03",
           "y": 2.30446
@@ -345,6 +341,10 @@
         {
           "x": "2026-03-17",
           "y": 2.08173
+        },
+        {
+          "x": "2026-03-18",
+          "y": 2.07298
         }
       ],
       "expected_update": "每日"
@@ -365,7 +365,7 @@
       "display_comparison_period_text": "2025年1月",
       "display_unit": "萬億港元",
       "data_origin": "live",
-      "last_successful_fetch_at": "2026-03-18T10:40:51.560Z",
+      "last_successful_fetch_at": "2026-03-18T11:39:06.754Z",
       "chart": {
         "chart_type": "line",
         "x_axis_label": "月份",

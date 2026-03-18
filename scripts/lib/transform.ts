@@ -35,18 +35,19 @@ export function buildTransformedMetric(input: BuildMetricInput): TransformedMetr
     change_decimals: 0,
     previous_decimals: 0
   };
+  const source = latest?.source ?? selectedSeries[0]?.source ?? input.definition.source;
 
   const baseMetric: TransformedMetric = {
     id: input.definition.id,
     card_id: input.definition.card_id,
     label_tc: input.definition.label_tc,
-    source: input.definition.source,
-    source_system: input.definition.source.source_system,
-    dataset_id: input.definition.source.dataset_id,
-    table_id: input.definition.source.table_id,
-    ecode: input.definition.source.ecode,
-    dataset_title: input.definition.source.dataset_title,
-    statistical_framework: input.definition.source.statistical_framework,
+    source,
+    source_system: source.source_system,
+    dataset_id: source.dataset_id,
+    table_id: source.table_id,
+    ecode: source.ecode,
+    dataset_title: source.dataset_title,
+    statistical_framework: source.statistical_framework,
     series_id: latest?.series_id ?? selectedSeries[0]?.series_id ?? input.definition.id,
     auxiliary_series_ids: auxiliarySeries.length > 0 ? [...new Set(auxiliarySeries.map((item) => item.series_id))] : undefined,
     metric_type: input.definition.metric_type,
@@ -110,6 +111,7 @@ export function buildTransformedMetric(input: BuildMetricInput): TransformedMetr
     validation_state: "ok",
     validation_messages: [],
     source_note: input.definition.source_note,
+    transformation_formula: input.definition.transformation_formula,
     expected_update: input.definition.expected_update,
     provisional: latest?.provisional
   };
