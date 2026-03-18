@@ -12,6 +12,7 @@
   --green: #2e6d53;
   --amber: #9a6a18;
   --red: #8c3f2d;
+  --gray: #7f857f;
   --shadow: 0 18px 40px rgba(36, 37, 24, 0.12);
 }
 
@@ -241,6 +242,10 @@ a {
 
 .sparkline-segment-down {
   stroke: var(--red);
+}
+
+.sparkline-segment-flat {
+  stroke: var(--gray);
 }
 
 .axis-line {

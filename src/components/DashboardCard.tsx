@@ -10,7 +10,6 @@ export function DashboardCard({ card }: { card: DashboardCardType }) {
     <section className="dashboard-card">
       <header className="card-header">
         <div>
-          <p className="card-eyebrow">Official Tracker</p>
           <h2>{card.title_tc}</h2>
           {card.card_status_text_tc ? <p className="card-status">{card.card_status_text_tc}</p> : null}
         </div>

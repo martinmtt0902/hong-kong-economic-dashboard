@@ -92,7 +92,13 @@ export function Sparkline({ chart }: { chart: UIChart }) {
             y1={segment.y1}
             x2={segment.x2}
             y2={segment.y2}
-            className={segment.trend === "up" ? "sparkline-segment sparkline-segment-up" : "sparkline-segment sparkline-segment-down"}
+            className={
+              segment.trend === "up"
+                ? "sparkline-segment sparkline-segment-up"
+                : segment.trend === "down"
+                  ? "sparkline-segment sparkline-segment-down"
+                  : "sparkline-segment sparkline-segment-flat"
+            }
           />
         ))}
 
@@ -131,13 +137,13 @@ export function Sparkline({ chart }: { chart: UIChart }) {
 function buildSegments(
   points: Array<{ svgX: number; svgY: number; y: number }>,
   chartType: UIChart["chart_type"]
-): Array<{ x1: number; y1: number; x2: number; y2: number; trend: "up" | "down" }> {
-  const segments: Array<{ x1: number; y1: number; x2: number; y2: number; trend: "up" | "down" }> = [];
+): Array<{ x1: number; y1: number; x2: number; y2: number; trend: "up" | "down" | "flat" }> {
+  const segments: Array<{ x1: number; y1: number; x2: number; y2: number; trend: "up" | "down" | "flat" }> = [];
 
   for (let index = 1; index < points.length; index += 1) {
     const point = points[index];
     const previous = points[index - 1];
-    const trend = point.y >= previous.y ? "up" : "down";
+    const trend = point.y > previous.y ? "up" : point.y < previous.y ? "down" : "flat";
 
     if (chartType === "step_after") {
       segments.push({ x1: previous.svgX, y1: previous.svgY, x2: point.svgX, y2: previous.svgY, trend });
