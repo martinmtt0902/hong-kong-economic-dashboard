@@ -10,12 +10,18 @@
       "label_tc": "實質增長",
       "source": {
         "publisher": "政府統計處",
+        "source_system": "censtatd_api",
+        "dataset_id": "hk-censtatd-tablechart-310-31003",
         "dataset_url": "https://data.gov.hk/en-data/dataset/hk-censtatd-tablechart-310-31003",
         "api_url": "https://www.censtatd.gov.hk/api/get.php?full_series=1&id=310-31003&lang=tc",
         "table_id": "310-31003"
       },
+      "source_system": "censtatd_api",
+      "dataset_id": "hk-censtatd-tablechart-310-31003",
+      "table_id": "310-31003",
       "series_id": "censtatd|310-31003|GDP_COMPONENT=|freq=Q|measure=CON|label=按年變動百分率",
       "metric_type": "yoy_percent",
+      "render_strategy": "default",
       "frequency": "quarterly",
       "unit": "%",
       "display_unit": "%",
@@ -31,12 +37,15 @@
       "previous_as_of_date": "2025-09-30",
       "previous_as_of_label": "2025年第3季",
       "change_value": 0.1,
+      "raw_change_value": 0.1,
       "change_type": "percentage_point_change",
       "comparison_type": "previous_observation",
       "comparison_basis": "previous_observation",
       "comparison_basis_label_tc": "較上期",
       "comparison_period_label": "2025年第3季",
       "data_origin": "live",
+      "chart_series": "censtatd|310-31003|GDP_COMPONENT=|freq=Q|measure=CON|label=按年變動百分率",
+      "chart_metric_type": "yoy_percent",
       "chart_definition": {
         "series_id": "censtatd|310-31003|GDP_COMPONENT=|freq=Q|measure=CON|label=按年變動百分率",
         "metric_type": "yoy_percent",
@@ -243,7 +252,7 @@
       "validation_state": "ok",
       "validation_messages": [],
       "expected_update": "每季",
-      "last_successful_fetch_at": "2026-03-18T08:22:14.148Z"
+      "last_successful_fetch_at": "2026-03-18T10:40:51.560Z"
     },
     {
       "id": "gdp_nominal_yoy",
@@ -251,12 +260,18 @@
       "label_tc": "名義增長",
       "source": {
         "publisher": "政府統計處",
+        "source_system": "censtatd_api",
+        "dataset_id": "hk-censtatd-tablechart-310-31002",
         "dataset_url": "https://data.gov.hk/en-data/dataset/hk-censtatd-tablechart-310-31002",
         "api_url": "https://www.censtatd.gov.hk/api/get.php?full_series=1&id=310-31002&lang=tc",
         "table_id": "310-31002"
       },
+      "source_system": "censtatd_api",
+      "dataset_id": "hk-censtatd-tablechart-310-31002",
+      "table_id": "310-31002",
       "series_id": "censtatd|310-31002|GDP_COMPONENT=|freq=Q|measure=CUR|label=按年變動百分率",
       "metric_type": "yoy_percent",
+      "render_strategy": "default",
       "frequency": "quarterly",
       "unit": "%",
       "display_unit": "%",
@@ -272,12 +287,15 @@
       "previous_as_of_date": "2025-09-30",
       "previous_as_of_label": "2025年第3季",
       "change_value": 0.5,
+      "raw_change_value": 0.5,
       "change_type": "percentage_point_change",
       "comparison_type": "previous_observation",
       "comparison_basis": "previous_observation",
       "comparison_basis_label_tc": "較上期",
       "comparison_period_label": "2025年第3季",
       "data_origin": "live",
+      "chart_series": "censtatd|310-31002|GDP_COMPONENT=|freq=Q|measure=CUR|label=按年變動百分率",
+      "chart_metric_type": "yoy_percent",
       "chart_definition": {
         "series_id": "censtatd|310-31002|GDP_COMPONENT=|freq=Q|measure=CUR|label=按年變動百分率",
         "metric_type": "yoy_percent",
@@ -484,7 +502,524 @@
       "validation_state": "ok",
       "validation_messages": [],
       "expected_update": "每季",
-      "last_successful_fetch_at": "2026-03-18T08:22:14.148Z"
+      "last_successful_fetch_at": "2026-03-18T10:40:51.560Z"
+    },
+    {
+      "id": "current_account_balance",
+      "card_id": "gdp",
+      "label_tc": "經常賬戶差額",
+      "source": {
+        "publisher": "政府統計處",
+        "source_system": "censtatd_api",
+        "dataset_id": "hk-censtatd-tablechart-315-37001",
+        "dataset_url": "https://data.gov.hk/en-data/dataset/hk-censtatd-tablechart-315-37001",
+        "api_url": "https://www.censtatd.gov.hk/api/get.php?full_series=1&id=315-37001&lang=tc",
+        "table_id": "315-37001",
+        "dataset_title": "國際收支平衡表",
+        "statistical_framework": "Balance of Payments"
+      },
+      "source_system": "censtatd_api",
+      "dataset_id": "hk-censtatd-tablechart-315-37001",
+      "table_id": "315-37001",
+      "dataset_title": "國際收支平衡表",
+      "statistical_framework": "Balance of Payments",
+      "series_id": "censtatd|315-37001|BOP_COMPONENT=CRA|freq=Q|measure=BOP|label=百萬港元",
+      "metric_type": "level",
+      "render_strategy": "balance_sign_aware",
+      "frequency": "quarterly",
+      "unit": "百萬港元",
+      "display_unit": "億港元",
+      "rounding_policy": {
+        "value_decimals": 1,
+        "change_decimals": 1,
+        "previous_decimals": 1,
+        "display_scale": 0.01,
+        "display_scale_label": "億港元"
+      },
+      "as_of_date": "2025-09-30",
+      "as_of_label": "2025年第3季",
+      "latest_value": 94896,
+      "previous_value": 93127,
+      "previous_as_of_date": "2025-06-30",
+      "previous_as_of_label": "2025年第2季",
+      "change_value": 1769,
+      "raw_change_value": 1769,
+      "change_type": "absolute_change",
+      "comparison_type": "previous_observation",
+      "comparison_basis": "previous_observation",
+      "comparison_basis_label_tc": "較上期",
+      "comparison_period_label": "2025年第2季",
+      "data_origin": "live",
+      "chart_series": "censtatd|315-37001|BOP_COMPONENT=CRA|freq=Q|measure=BOP|label=百萬港元",
+      "chart_metric_type": "level",
+      "chart_definition": {
+        "series_id": "censtatd|315-37001|BOP_COMPONENT=CRA|freq=Q|measure=BOP|label=百萬港元",
+        "metric_type": "level",
+        "chart_type": "line",
+        "frequency": "quarterly",
+        "unit": "百萬港元",
+        "display_unit": "億港元",
+        "chart_value_transform": {
+          "scale": 0.01,
+          "raw_unit": "百萬港元",
+          "display_unit": "億港元"
+        },
+        "period_start": "1999-03-31",
+        "period_end": "2025-09-30",
+        "x_axis_label": "季度",
+        "y_axis_label": "經常賬戶差額 (億港元)",
+        "value_label": "經常賬戶差額",
+        "time_label": "季度",
+        "suggested_ticks": [
+          "2022Q4",
+          "2024Q2",
+          "2025Q3"
+        ]
+      },
+      "chart_points": [
+        {
+          "as_of_date": "2022-12-31",
+          "as_of_label": "2022年第4季",
+          "tick_label": "2022Q4",
+          "value": 55839,
+          "display_value_text": "558.4億",
+          "tooltip_title": "2022年第4季",
+          "tooltip_value_text": "558.4億"
+        },
+        {
+          "as_of_date": "2023-03-31",
+          "as_of_label": "2023年第1季",
+          "tick_label": "2023Q1",
+          "value": 41327,
+          "display_value_text": "413.3億",
+          "tooltip_title": "2023年第1季",
+          "tooltip_value_text": "413.3億"
+        },
+        {
+          "as_of_date": "2023-06-30",
+          "as_of_label": "2023年第2季",
+          "tick_label": "2023Q2",
+          "value": 38381,
+          "display_value_text": "383.8億",
+          "tooltip_title": "2023年第2季",
+          "tooltip_value_text": "383.8億"
+        },
+        {
+          "as_of_date": "2023-09-30",
+          "as_of_label": "2023年第3季",
+          "tick_label": "2023Q3",
+          "value": 110331,
+          "display_value_text": "1103.3億",
+          "tooltip_title": "2023年第3季",
+          "tooltip_value_text": "1103.3億"
+        },
+        {
+          "as_of_date": "2023-12-31",
+          "as_of_label": "2023年第4季",
+          "tick_label": "2023Q4",
+          "value": 60884,
+          "display_value_text": "608.8億",
+          "tooltip_title": "2023年第4季",
+          "tooltip_value_text": "608.8億"
+        },
+        {
+          "as_of_date": "2024-03-31",
+          "as_of_label": "2024年第1季",
+          "tick_label": "2024Q1",
+          "value": 101826,
+          "display_value_text": "1018.3億",
+          "tooltip_title": "2024年第1季",
+          "tooltip_value_text": "1018.3億"
+        },
+        {
+          "as_of_date": "2024-06-30",
+          "as_of_label": "2024年第2季",
+          "tick_label": "2024Q2",
+          "value": 95234,
+          "display_value_text": "952.3億",
+          "tooltip_title": "2024年第2季",
+          "tooltip_value_text": "952.3億"
+        },
+        {
+          "as_of_date": "2024-09-30",
+          "as_of_label": "2024年第3季",
+          "tick_label": "2024Q3",
+          "value": 110637,
+          "display_value_text": "1106.4億",
+          "tooltip_title": "2024年第3季",
+          "tooltip_value_text": "1106.4億"
+        },
+        {
+          "as_of_date": "2024-12-31",
+          "as_of_label": "2024年第4季",
+          "tick_label": "2024Q4",
+          "value": 110899,
+          "display_value_text": "1109.0億",
+          "tooltip_title": "2024年第4季",
+          "tooltip_value_text": "1109.0億"
+        },
+        {
+          "as_of_date": "2025-03-31",
+          "as_of_label": "2025年第1季",
+          "tick_label": "2025Q1",
+          "value": 124702,
+          "display_value_text": "1247.0億",
+          "tooltip_title": "2025年第1季",
+          "tooltip_value_text": "1247.0億"
+        },
+        {
+          "as_of_date": "2025-06-30",
+          "as_of_label": "2025年第2季",
+          "tick_label": "2025Q2",
+          "value": 93127,
+          "display_value_text": "931.3億",
+          "tooltip_title": "2025年第2季",
+          "tooltip_value_text": "931.3億"
+        },
+        {
+          "as_of_date": "2025-09-30",
+          "as_of_label": "2025年第3季",
+          "tick_label": "2025Q3",
+          "value": 94896,
+          "display_value_text": "949.0億",
+          "tooltip_title": "2025年第3季",
+          "tooltip_value_text": "949.0億"
+        }
+      ],
+      "sparkline_definition": {
+        "series_id": "censtatd|315-37001|BOP_COMPONENT=CRA|freq=Q|measure=BOP|label=百萬港元",
+        "metric_type": "level",
+        "comparison_basis": "previous_observation",
+        "unit": "百萬港元",
+        "frequency": "quarterly"
+      },
+      "sparkline_points": [
+        {
+          "as_of_date": "2022-12-31",
+          "as_of_label": "2022年第4季",
+          "value": 55839
+        },
+        {
+          "as_of_date": "2023-03-31",
+          "as_of_label": "2023年第1季",
+          "value": 41327
+        },
+        {
+          "as_of_date": "2023-06-30",
+          "as_of_label": "2023年第2季",
+          "value": 38381
+        },
+        {
+          "as_of_date": "2023-09-30",
+          "as_of_label": "2023年第3季",
+          "value": 110331
+        },
+        {
+          "as_of_date": "2023-12-31",
+          "as_of_label": "2023年第4季",
+          "value": 60884
+        },
+        {
+          "as_of_date": "2024-03-31",
+          "as_of_label": "2024年第1季",
+          "value": 101826
+        },
+        {
+          "as_of_date": "2024-06-30",
+          "as_of_label": "2024年第2季",
+          "value": 95234
+        },
+        {
+          "as_of_date": "2024-09-30",
+          "as_of_label": "2024年第3季",
+          "value": 110637
+        },
+        {
+          "as_of_date": "2024-12-31",
+          "as_of_label": "2024年第4季",
+          "value": 110899
+        },
+        {
+          "as_of_date": "2025-03-31",
+          "as_of_label": "2025年第1季",
+          "value": 124702
+        },
+        {
+          "as_of_date": "2025-06-30",
+          "as_of_label": "2025年第2季",
+          "value": 93127
+        },
+        {
+          "as_of_date": "2025-09-30",
+          "as_of_label": "2025年第3季",
+          "value": 94896
+        }
+      ],
+      "validation_state": "ok",
+      "validation_messages": [],
+      "expected_update": "每季",
+      "balance_position": "surplus",
+      "previous_balance_position": "surplus",
+      "balance_change_narrative": "surplus_increased",
+      "display_change_narrative_text": "較上期（2025年第2季） 順差增加 17.7億",
+      "last_successful_fetch_at": "2026-03-18T10:40:51.560Z"
+    },
+    {
+      "id": "private_consumption_expenditure",
+      "card_id": "gdp",
+      "label_tc": "私人消費開支（PCE）",
+      "source": {
+        "publisher": "政府統計處",
+        "source_system": "censtatd_api",
+        "dataset_id": "hk-censtatd-tablechart-310-31012",
+        "dataset_url": "https://data.gov.hk/en-data/dataset/hk-censtatd-tablechart-310-31012",
+        "api_url": "https://www.censtatd.gov.hk/api/get.php?full_series=1&id=310-31012&lang=tc",
+        "table_id": "310-31012",
+        "dataset_title": "按組成部分劃分的私人消費開支－以環比物量計算",
+        "statistical_framework": "National Accounts / GDP expenditure approach"
+      },
+      "source_system": "censtatd_api",
+      "dataset_id": "hk-censtatd-tablechart-310-31012",
+      "table_id": "310-31012",
+      "dataset_title": "按組成部分劃分的私人消費開支－以環比物量計算",
+      "statistical_framework": "National Accounts / GDP expenditure approach",
+      "series_id": "censtatd|310-31012|GDP_COMPONENT=PCE|freq=Q|measure=CON|label=按年變動百分率",
+      "auxiliary_series_ids": [
+        "censtatd|310-31011|GDP_COMPONENT=PCE|freq=Q|measure=CUR|label=百萬港元"
+      ],
+      "metric_type": "yoy_percent",
+      "render_strategy": "default",
+      "frequency": "quarterly",
+      "unit": "%",
+      "display_unit": "%",
+      "rounding_policy": {
+        "value_decimals": 1,
+        "change_decimals": 1,
+        "previous_decimals": 1
+      },
+      "as_of_date": "2025-12-31",
+      "as_of_label": "2025年第4季",
+      "latest_value": 2.7,
+      "previous_value": 2.4,
+      "previous_as_of_date": "2025-09-30",
+      "previous_as_of_label": "2025年第3季",
+      "change_value": 0.3,
+      "raw_change_value": 0.3,
+      "change_type": "percentage_point_change",
+      "comparison_type": "previous_observation",
+      "comparison_basis": "previous_observation",
+      "comparison_basis_label_tc": "較上期",
+      "comparison_period_label": "2025年第3季",
+      "data_origin": "live",
+      "chart_series": "censtatd|310-31012|GDP_COMPONENT=PCE|freq=Q|measure=CON|label=按年變動百分率",
+      "chart_metric_type": "yoy_percent",
+      "chart_definition": {
+        "series_id": "censtatd|310-31012|GDP_COMPONENT=PCE|freq=Q|measure=CON|label=按年變動百分率",
+        "metric_type": "yoy_percent",
+        "chart_type": "line",
+        "frequency": "quarterly",
+        "unit": "%",
+        "display_unit": "%",
+        "chart_value_transform": {
+          "scale": 1,
+          "raw_unit": "%",
+          "display_unit": "%"
+        },
+        "period_start": "1974-03-31",
+        "period_end": "2025-12-31",
+        "x_axis_label": "季度",
+        "y_axis_label": "私人消費開支（PCE） (%)",
+        "value_label": "私人消費開支（PCE）",
+        "time_label": "季度",
+        "suggested_ticks": [
+          "2023Q1",
+          "2024Q3",
+          "2025Q4"
+        ]
+      },
+      "chart_points": [
+        {
+          "as_of_date": "2023-03-31",
+          "as_of_label": "2023年第1季",
+          "tick_label": "2023Q1",
+          "value": 12.2,
+          "display_value_text": "+12.2%",
+          "tooltip_title": "2023年第1季",
+          "tooltip_value_text": "+12.2%"
+        },
+        {
+          "as_of_date": "2023-06-30",
+          "as_of_label": "2023年第2季",
+          "tick_label": "2023Q2",
+          "value": 7.6,
+          "display_value_text": "+7.6%",
+          "tooltip_title": "2023年第2季",
+          "tooltip_value_text": "+7.6%"
+        },
+        {
+          "as_of_date": "2023-09-30",
+          "as_of_label": "2023年第3季",
+          "tick_label": "2023Q3",
+          "value": 5.8,
+          "display_value_text": "+5.8%",
+          "tooltip_title": "2023年第3季",
+          "tooltip_value_text": "+5.8%"
+        },
+        {
+          "as_of_date": "2023-12-31",
+          "as_of_label": "2023年第4季",
+          "tick_label": "2023Q4",
+          "value": 2.5,
+          "display_value_text": "+2.5%",
+          "tooltip_title": "2023年第4季",
+          "tooltip_value_text": "+2.5%"
+        },
+        {
+          "as_of_date": "2024-03-31",
+          "as_of_label": "2024年第1季",
+          "tick_label": "2024Q1",
+          "value": 1.4,
+          "display_value_text": "+1.4%",
+          "tooltip_title": "2024年第1季",
+          "tooltip_value_text": "+1.4%"
+        },
+        {
+          "as_of_date": "2024-06-30",
+          "as_of_label": "2024年第2季",
+          "tick_label": "2024Q2",
+          "value": -1.5,
+          "display_value_text": "-1.5%",
+          "tooltip_title": "2024年第2季",
+          "tooltip_value_text": "-1.5%"
+        },
+        {
+          "as_of_date": "2024-09-30",
+          "as_of_label": "2024年第3季",
+          "tick_label": "2024Q3",
+          "value": -0.7,
+          "display_value_text": "-0.7%",
+          "tooltip_title": "2024年第3季",
+          "tooltip_value_text": "-0.7%"
+        },
+        {
+          "as_of_date": "2024-12-31",
+          "as_of_label": "2024年第4季",
+          "tick_label": "2024Q4",
+          "value": 0.2,
+          "display_value_text": "+0.2%",
+          "tooltip_title": "2024年第4季",
+          "tooltip_value_text": "+0.2%"
+        },
+        {
+          "as_of_date": "2025-03-31",
+          "as_of_label": "2025年第1季",
+          "tick_label": "2025Q1",
+          "value": -0.9,
+          "display_value_text": "-0.9%",
+          "tooltip_title": "2025年第1季",
+          "tooltip_value_text": "-0.9%"
+        },
+        {
+          "as_of_date": "2025-06-30",
+          "as_of_label": "2025年第2季",
+          "tick_label": "2025Q2",
+          "value": 2.3,
+          "display_value_text": "+2.3%",
+          "tooltip_title": "2025年第2季",
+          "tooltip_value_text": "+2.3%"
+        },
+        {
+          "as_of_date": "2025-09-30",
+          "as_of_label": "2025年第3季",
+          "tick_label": "2025Q3",
+          "value": 2.4,
+          "display_value_text": "+2.4%",
+          "tooltip_title": "2025年第3季",
+          "tooltip_value_text": "+2.4%"
+        },
+        {
+          "as_of_date": "2025-12-31",
+          "as_of_label": "2025年第4季",
+          "tick_label": "2025Q4",
+          "value": 2.7,
+          "display_value_text": "+2.7%",
+          "tooltip_title": "2025年第4季",
+          "tooltip_value_text": "+2.7%"
+        }
+      ],
+      "sparkline_definition": {
+        "series_id": "censtatd|310-31012|GDP_COMPONENT=PCE|freq=Q|measure=CON|label=按年變動百分率",
+        "metric_type": "yoy_percent",
+        "comparison_basis": "previous_observation",
+        "unit": "%",
+        "frequency": "quarterly"
+      },
+      "sparkline_points": [
+        {
+          "as_of_date": "2023-03-31",
+          "as_of_label": "2023年第1季",
+          "value": 12.2
+        },
+        {
+          "as_of_date": "2023-06-30",
+          "as_of_label": "2023年第2季",
+          "value": 7.6
+        },
+        {
+          "as_of_date": "2023-09-30",
+          "as_of_label": "2023年第3季",
+          "value": 5.8
+        },
+        {
+          "as_of_date": "2023-12-31",
+          "as_of_label": "2023年第4季",
+          "value": 2.5
+        },
+        {
+          "as_of_date": "2024-03-31",
+          "as_of_label": "2024年第1季",
+          "value": 1.4
+        },
+        {
+          "as_of_date": "2024-06-30",
+          "as_of_label": "2024年第2季",
+          "value": -1.5
+        },
+        {
+          "as_of_date": "2024-09-30",
+          "as_of_label": "2024年第3季",
+          "value": -0.7
+        },
+        {
+          "as_of_date": "2024-12-31",
+          "as_of_label": "2024年第4季",
+          "value": 0.2
+        },
+        {
+          "as_of_date": "2025-03-31",
+          "as_of_label": "2025年第1季",
+          "value": -0.9
+        },
+        {
+          "as_of_date": "2025-06-30",
+          "as_of_label": "2025年第2季",
+          "value": 2.3
+        },
+        {
+          "as_of_date": "2025-09-30",
+          "as_of_label": "2025年第3季",
+          "value": 2.4
+        },
+        {
+          "as_of_date": "2025-12-31",
+          "as_of_label": "2025年第4季",
+          "value": 2.7
+        }
+      ],
+      "validation_state": "ok",
+      "validation_messages": [],
+      "expected_update": "每季",
+      "last_successful_fetch_at": "2026-03-18T10:40:51.560Z"
     }
   ]
 }

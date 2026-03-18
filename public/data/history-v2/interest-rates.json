@@ -1,6 +1,6 @@
 {
   "id": "interest-rates",
-  "title_tc": "利率",
+  "title_tc": "貨幣與金融",
   "latest_as_of_date": "2026-03-17",
   "latest_as_of_label": "2026-03-17",
   "metrics": [
@@ -10,11 +10,18 @@
       "label_tc": "HKMA Base Rate",
       "source": {
         "publisher": "香港金融管理局",
+        "source_system": "hkma_api",
         "dataset_url": "https://www.hkma.gov.hk/eng/data-publications-and-research/data-and-statistics/daily-monetary-statistics/",
-        "api_url": "https://api.hkma.gov.hk/public/market-data-and-statistics/daily-monetary-statistics/daily-figures-interbank-liquidity"
+        "api_url": "https://api.hkma.gov.hk/public/market-data-and-statistics/daily-monetary-statistics/daily-figures-interbank-liquidity",
+        "dataset_title": "Daily Monetary Statistics",
+        "statistical_framework": "Monetary and Banking Statistics"
       },
+      "source_system": "hkma_api",
+      "dataset_title": "Daily Monetary Statistics",
+      "statistical_framework": "Monetary and Banking Statistics",
       "series_id": "hkma|base_rate",
       "metric_type": "level",
+      "render_strategy": "default",
       "frequency": "daily",
       "unit": "%",
       "display_unit": "%",
@@ -30,12 +37,15 @@
       "previous_as_of_date": "2026-03-16",
       "previous_as_of_label": "2026-03-16",
       "change_value": 0,
+      "raw_change_value": 0,
       "change_type": "percentage_point_change",
       "comparison_type": "previous_observation",
       "comparison_basis": "previous_observation",
       "comparison_basis_label_tc": "較上期",
       "comparison_period_label": "2026-03-16",
       "data_origin": "live",
+      "chart_series": "hkma|base_rate",
+      "chart_metric_type": "level",
       "chart_definition": {
         "series_id": "hkma|base_rate",
         "metric_type": "level",
@@ -242,7 +252,7 @@
       "validation_state": "ok",
       "validation_messages": [],
       "expected_update": "每日",
-      "last_successful_fetch_at": "2026-03-18T08:22:14.148Z"
+      "last_successful_fetch_at": "2026-03-18T10:40:51.560Z"
     },
     {
       "id": "hibor_1m",
@@ -250,11 +260,18 @@
       "label_tc": "1個月 HIBOR",
       "source": {
         "publisher": "香港金融管理局",
+        "source_system": "hkma_api",
         "dataset_url": "https://www.hkma.gov.hk/eng/data-publications-and-research/data-and-statistics/daily-monetary-statistics/",
-        "api_url": "https://api.hkma.gov.hk/public/market-data-and-statistics/daily-monetary-statistics/daily-figures-interbank-liquidity"
+        "api_url": "https://api.hkma.gov.hk/public/market-data-and-statistics/daily-monetary-statistics/daily-figures-interbank-liquidity",
+        "dataset_title": "Daily Monetary Statistics",
+        "statistical_framework": "Monetary and Banking Statistics"
       },
+      "source_system": "hkma_api",
+      "dataset_title": "Daily Monetary Statistics",
+      "statistical_framework": "Monetary and Banking Statistics",
       "series_id": "hkma|hibor_1m",
       "metric_type": "level",
+      "render_strategy": "default",
       "frequency": "daily",
       "unit": "%",
       "display_unit": "%",
@@ -270,12 +287,15 @@
       "previous_as_of_date": "2026-03-16",
       "previous_as_of_label": "2026-03-16",
       "change_value": 0.0254,
+      "raw_change_value": 0.0254,
       "change_type": "percentage_point_change",
       "comparison_type": "previous_observation",
       "comparison_basis": "previous_observation",
       "comparison_basis_label_tc": "較上期",
       "comparison_period_label": "2026-03-16",
       "data_origin": "live",
+      "chart_series": "hkma|hibor_1m",
+      "chart_metric_type": "level",
       "chart_definition": {
         "series_id": "hkma|hibor_1m",
         "metric_type": "level",
@@ -482,7 +502,261 @@
       "validation_state": "ok",
       "validation_messages": [],
       "expected_update": "每日",
-      "last_successful_fetch_at": "2026-03-18T08:22:14.148Z"
+      "last_successful_fetch_at": "2026-03-18T10:40:51.560Z"
+    },
+    {
+      "id": "money_supply_m3",
+      "card_id": "interest-rates",
+      "label_tc": "貨幣供應 M3",
+      "source": {
+        "publisher": "香港金融管理局",
+        "source_system": "hkma_api",
+        "dataset_id": "hk-hkma-t01-t0101monetary-statistics",
+        "dataset_url": "https://data.gov.hk/en-data/dataset/hk-hkma-t01-t0101monetary-statistics",
+        "api_url": "https://api.hkma.gov.hk/public/market-data-and-statistics/monthly-statistical-bulletin/financial/monetary-statistics",
+        "dataset_title": "Market Data and Statistics - Monthly Statistical Bulletin - Financial statistics summary - Monetary statistics",
+        "statistical_framework": "Monetary Statistics"
+      },
+      "source_system": "hkma_api",
+      "dataset_id": "hk-hkma-t01-t0101monetary-statistics",
+      "dataset_title": "Market Data and Statistics - Monthly Statistical Bulletin - Financial statistics summary - Monetary statistics",
+      "statistical_framework": "Monetary Statistics",
+      "series_id": "hkma|m3_total",
+      "metric_type": "level",
+      "render_strategy": "default",
+      "frequency": "monthly",
+      "unit": "百萬港元",
+      "display_unit": "萬億港元",
+      "rounding_policy": {
+        "value_decimals": 1,
+        "change_decimals": 1,
+        "previous_decimals": 1,
+        "display_scale": 0.000001,
+        "display_scale_label": "萬億港元"
+      },
+      "as_of_date": "2026-01-31",
+      "as_of_label": "2026年1月",
+      "latest_value": 20647395.229,
+      "previous_value": 18796857.507,
+      "previous_as_of_date": "2025-01-31",
+      "previous_as_of_label": "2025年1月",
+      "change_value": 9.8449,
+      "raw_change_value": 1850537.722,
+      "change_type": "yoy_percent",
+      "comparison_type": "same_period_last_year",
+      "comparison_basis": "same_period_last_year",
+      "comparison_basis_label_tc": "較去年同期",
+      "comparison_period_label": "2025年1月",
+      "data_origin": "live",
+      "chart_series": "hkma|m3_total",
+      "chart_metric_type": "level",
+      "chart_definition": {
+        "series_id": "hkma|m3_total",
+        "metric_type": "level",
+        "chart_type": "line",
+        "frequency": "monthly",
+        "unit": "百萬港元",
+        "display_unit": "萬億港元",
+        "chart_value_transform": {
+          "scale": 0.000001,
+          "raw_unit": "百萬港元",
+          "display_unit": "萬億港元"
+        },
+        "period_start": "2024-12-31",
+        "period_end": "2026-01-31",
+        "x_axis_label": "月份",
+        "y_axis_label": "貨幣供應 M3 (萬億港元)",
+        "value_label": "貨幣供應 M3",
+        "time_label": "月份",
+        "suggested_ticks": [
+          "2025-02",
+          "2025-08",
+          "2026-01"
+        ]
+      },
+      "chart_points": [
+        {
+          "as_of_date": "2025-02-28",
+          "as_of_label": "2025年2月",
+          "tick_label": "2025-02",
+          "value": 18965340.838,
+          "display_value_text": "19.0萬億",
+          "tooltip_title": "2025年2月",
+          "tooltip_value_text": "19.0萬億"
+        },
+        {
+          "as_of_date": "2025-03-31",
+          "as_of_label": "2025年3月",
+          "tick_label": "2025-03",
+          "value": 19094639.585,
+          "display_value_text": "19.1萬億",
+          "tooltip_title": "2025年3月",
+          "tooltip_value_text": "19.1萬億"
+        },
+        {
+          "as_of_date": "2025-04-30",
+          "as_of_label": "2025年4月",
+          "tick_label": "2025-04",
+          "value": 19237324.56,
+          "display_value_text": "19.2萬億",
+          "tooltip_title": "2025年4月",
+          "tooltip_value_text": "19.2萬億"
+        },
+        {
+          "as_of_date": "2025-05-31",
+          "as_of_label": "2025年5月",
+          "tick_label": "2025-05",
+          "value": 19718944.348,
+          "display_value_text": "19.7萬億",
+          "tooltip_title": "2025年5月",
+          "tooltip_value_text": "19.7萬億"
+        },
+        {
+          "as_of_date": "2025-06-30",
+          "as_of_label": "2025年6月",
+          "tick_label": "2025-06",
+          "value": 19868342.464,
+          "display_value_text": "19.9萬億",
+          "tooltip_title": "2025年6月",
+          "tooltip_value_text": "19.9萬億"
+        },
+        {
+          "as_of_date": "2025-07-31",
+          "as_of_label": "2025年7月",
+          "tick_label": "2025-07",
+          "value": 19891717.902,
+          "display_value_text": "19.9萬億",
+          "tooltip_title": "2025年7月",
+          "tooltip_value_text": "19.9萬億"
+        },
+        {
+          "as_of_date": "2025-08-31",
+          "as_of_label": "2025年8月",
+          "tick_label": "2025-08",
+          "value": 20026716.256,
+          "display_value_text": "20.0萬億",
+          "tooltip_title": "2025年8月",
+          "tooltip_value_text": "20.0萬億"
+        },
+        {
+          "as_of_date": "2025-09-30",
+          "as_of_label": "2025年9月",
+          "tick_label": "2025-09",
+          "value": 20282074.012,
+          "display_value_text": "20.3萬億",
+          "tooltip_title": "2025年9月",
+          "tooltip_value_text": "20.3萬億"
+        },
+        {
+          "as_of_date": "2025-10-31",
+          "as_of_label": "2025年10月",
+          "tick_label": "2025-10",
+          "value": 20221690.851,
+          "display_value_text": "20.2萬億",
+          "tooltip_title": "2025年10月",
+          "tooltip_value_text": "20.2萬億"
+        },
+        {
+          "as_of_date": "2025-11-30",
+          "as_of_label": "2025年11月",
+          "tick_label": "2025-11",
+          "value": 20395325.666,
+          "display_value_text": "20.4萬億",
+          "tooltip_title": "2025年11月",
+          "tooltip_value_text": "20.4萬億"
+        },
+        {
+          "as_of_date": "2025-12-31",
+          "as_of_label": "2025年12月",
+          "tick_label": "2025-12",
+          "value": 20648542.068,
+          "display_value_text": "20.6萬億",
+          "tooltip_title": "2025年12月",
+          "tooltip_value_text": "20.6萬億"
+        },
+        {
+          "as_of_date": "2026-01-31",
+          "as_of_label": "2026年1月",
+          "tick_label": "2026-01",
+          "value": 20647395.229,
+          "display_value_text": "20.6萬億",
+          "tooltip_title": "2026年1月",
+          "tooltip_value_text": "20.6萬億"
+        }
+      ],
+      "sparkline_definition": {
+        "series_id": "hkma|m3_total",
+        "metric_type": "level",
+        "comparison_basis": "same_period_last_year",
+        "unit": "百萬港元",
+        "frequency": "monthly"
+      },
+      "sparkline_points": [
+        {
+          "as_of_date": "2025-02-28",
+          "as_of_label": "2025年2月",
+          "value": 18965340.838
+        },
+        {
+          "as_of_date": "2025-03-31",
+          "as_of_label": "2025年3月",
+          "value": 19094639.585
+        },
+        {
+          "as_of_date": "2025-04-30",
+          "as_of_label": "2025年4月",
+          "value": 19237324.56
+        },
+        {
+          "as_of_date": "2025-05-31",
+          "as_of_label": "2025年5月",
+          "value": 19718944.348
+        },
+        {
+          "as_of_date": "2025-06-30",
+          "as_of_label": "2025年6月",
+          "value": 19868342.464
+        },
+        {
+          "as_of_date": "2025-07-31",
+          "as_of_label": "2025年7月",
+          "value": 19891717.902
+        },
+        {
+          "as_of_date": "2025-08-31",
+          "as_of_label": "2025年8月",
+          "value": 20026716.256
+        },
+        {
+          "as_of_date": "2025-09-30",
+          "as_of_label": "2025年9月",
+          "value": 20282074.012
+        },
+        {
+          "as_of_date": "2025-10-31",
+          "as_of_label": "2025年10月",
+          "value": 20221690.851
+        },
+        {
+          "as_of_date": "2025-11-30",
+          "as_of_label": "2025年11月",
+          "value": 20395325.666
+        },
+        {
+          "as_of_date": "2025-12-31",
+          "as_of_label": "2025年12月",
+          "value": 20648542.068
+        },
+        {
+          "as_of_date": "2026-01-31",
+          "as_of_label": "2026年1月",
+          "value": 20647395.229
+        }
+      ],
+      "validation_state": "ok",
+      "validation_messages": [],
+      "expected_update": "每月",
+      "last_successful_fetch_at": "2026-03-18T10:40:51.560Z"
     }
   ]
 }

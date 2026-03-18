@@ -1,9 +1,11 @@
 {
-  "generated_at": "2026-03-18T08:22:14.148Z",
+  "generated_at": "2026-03-18T10:40:51.560Z",
   "card_ids": [
     "employment",
+    "wages-income",
     "inflation",
     "gdp",
+    "external-trade",
     "consumption-travel",
     "minimum-wage",
     "population",
@@ -13,8 +15,10 @@
   ],
   "history_paths": {
     "employment": "./history/employment.json",
+    "wages-income": "./history/wages-income.json",
     "inflation": "./history/inflation.json",
     "gdp": "./history/gdp.json",
+    "external-trade": "./history/external-trade.json",
     "consumption-travel": "./history/consumption-travel.json",
     "minimum-wage": "./history/minimum-wage.json",
     "population": "./history/population.json",
@@ -24,8 +28,10 @@
   },
   "history_v2_paths": {
     "employment": "./history-v2/employment.json",
+    "wages-income": "./history-v2/wages-income.json",
     "inflation": "./history-v2/inflation.json",
     "gdp": "./history-v2/gdp.json",
+    "external-trade": "./history-v2/external-trade.json",
     "consumption-travel": "./history-v2/consumption-travel.json",
     "minimum-wage": "./history-v2/minimum-wage.json",
     "population": "./history-v2/population.json",

@@ -10,10 +10,17 @@
       "label_tc": "收入",
       "source": {
         "publisher": "財經事務及庫務局",
-        "dataset_url": "https://www.fstb.gov.hk/datagovhk/tsyb/financial-statistics/tc/fin-stats_overview_a_tc.csv"
+        "source_system": "fstb_csv",
+        "dataset_url": "https://www.fstb.gov.hk/datagovhk/tsyb/financial-statistics/tc/fin-stats_overview_a_tc.csv",
+        "dataset_title": "香港主要財政統計數字總覽",
+        "statistical_framework": "Public Finance Statistics"
       },
+      "source_system": "fstb_csv",
+      "dataset_title": "香港主要財政統計數字總覽",
+      "statistical_framework": "Public Finance Statistics",
       "series_id": "government_revenue",
       "metric_type": "level",
+      "render_strategy": "default",
       "frequency": "annual",
       "unit": "百萬港元",
       "display_unit": "億港元",
@@ -31,12 +38,15 @@
       "previous_as_of_date": "2026-03-31",
       "previous_as_of_label": "2025-26 (修訂預算)",
       "change_value": 76472,
+      "raw_change_value": 76472,
       "change_type": "absolute_change",
       "comparison_type": "previous_observation",
       "comparison_basis": "previous_observation",
       "comparison_basis_label_tc": "較上期",
       "comparison_period_label": "2025-26 (修訂預算)",
       "data_origin": "live",
+      "chart_series": "government_revenue",
+      "chart_metric_type": "level",
       "chart_definition": {
         "series_id": "government_revenue",
         "metric_type": "level",
@@ -243,7 +253,7 @@
       "validation_state": "ok",
       "validation_messages": [],
       "expected_update": "每年",
-      "last_successful_fetch_at": "2026-03-18T08:22:14.148Z"
+      "last_successful_fetch_at": "2026-03-18T10:40:51.560Z"
     },
     {
       "id": "government_expenditure",
@@ -251,10 +261,17 @@
       "label_tc": "支出",
       "source": {
         "publisher": "財經事務及庫務局",
-        "dataset_url": "https://www.fstb.gov.hk/datagovhk/tsyb/financial-statistics/tc/fin-stats_overview_a_tc.csv"
+        "source_system": "fstb_csv",
+        "dataset_url": "https://www.fstb.gov.hk/datagovhk/tsyb/financial-statistics/tc/fin-stats_overview_a_tc.csv",
+        "dataset_title": "香港主要財政統計數字總覽",
+        "statistical_framework": "Public Finance Statistics"
       },
+      "source_system": "fstb_csv",
+      "dataset_title": "香港主要財政統計數字總覽",
+      "statistical_framework": "Public Finance Statistics",
       "series_id": "government_expenditure",
       "metric_type": "level",
+      "render_strategy": "default",
       "frequency": "annual",
       "unit": "百萬港元",
       "display_unit": "億港元",
@@ -272,12 +289,15 @@
       "previous_as_of_date": "2026-03-31",
       "previous_as_of_label": "2025-26 (修訂預算)",
       "change_value": 54245,
+      "raw_change_value": 54245,
       "change_type": "absolute_change",
       "comparison_type": "previous_observation",
       "comparison_basis": "previous_observation",
       "comparison_basis_label_tc": "較上期",
       "comparison_period_label": "2025-26 (修訂預算)",
       "data_origin": "live",
+      "chart_series": "government_expenditure",
+      "chart_metric_type": "level",
       "chart_definition": {
         "series_id": "government_expenditure",
         "metric_type": "level",
@@ -484,7 +504,7 @@
       "validation_state": "ok",
       "validation_messages": [],
       "expected_update": "每年",
-      "last_successful_fetch_at": "2026-03-18T08:22:14.148Z"
+      "last_successful_fetch_at": "2026-03-18T10:40:51.560Z"
     },
     {
       "id": "fiscal_reserves",
@@ -492,10 +512,17 @@
       "label_tc": "儲備",
       "source": {
         "publisher": "財經事務及庫務局",
-        "dataset_url": "https://www.fstb.gov.hk/datagovhk/tsyb/financial-statistics/tc/fin-stats_overview_a_tc.csv"
+        "source_system": "fstb_csv",
+        "dataset_url": "https://www.fstb.gov.hk/datagovhk/tsyb/financial-statistics/tc/fin-stats_overview_a_tc.csv",
+        "dataset_title": "香港主要財政統計數字總覽",
+        "statistical_framework": "Public Finance Statistics"
       },
+      "source_system": "fstb_csv",
+      "dataset_title": "香港主要財政統計數字總覽",
+      "statistical_framework": "Public Finance Statistics",
       "series_id": "fiscal_reserves",
       "metric_type": "level",
+      "render_strategy": "default",
       "frequency": "annual",
       "unit": "百萬港元",
       "display_unit": "億港元",
@@ -513,12 +540,15 @@
       "previous_as_of_date": "2026-03-31",
       "previous_as_of_label": "2025-26 (修訂預算)",
       "change_value": 22110,
+      "raw_change_value": 22110,
       "change_type": "absolute_change",
       "comparison_type": "previous_observation",
       "comparison_basis": "previous_observation",
       "comparison_basis_label_tc": "較上期",
       "comparison_period_label": "2025-26 (修訂預算)",
       "data_origin": "live",
+      "chart_series": "fiscal_reserves",
+      "chart_metric_type": "level",
       "chart_definition": {
         "series_id": "fiscal_reserves",
         "metric_type": "level",
@@ -725,7 +755,7 @@
       "validation_state": "ok",
       "validation_messages": [],
       "expected_update": "每年",
-      "last_successful_fetch_at": "2026-03-18T08:22:14.148Z"
+      "last_successful_fetch_at": "2026-03-18T10:40:51.560Z"
     }
   ]
 }

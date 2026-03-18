@@ -1,8 +1,7 @@
 {
   "id": "interest-rates",
-  "title_tc": "利率",
-  "latest_data_at": "2026-03-17",
-  "latest_data_label": "2026-03-17",
+  "title_tc": "貨幣與金融",
+  "periods_summary_text_tc": "各卡更新期不同，請以各列期別為準",
   "metrics": [
     {
       "id": "base_rate",
@@ -20,7 +19,7 @@
       "display_comparison_period_text": "2026-03-16",
       "display_unit": "%",
       "data_origin": "live",
-      "last_successful_fetch_at": "2026-03-18T08:22:14.148Z",
+      "last_successful_fetch_at": "2026-03-18T10:40:51.560Z",
       "chart": {
         "chart_type": "line",
         "x_axis_label": "日期",
@@ -193,7 +192,7 @@
       "display_comparison_period_text": "2026-03-16",
       "display_unit": "%",
       "data_origin": "live",
-      "last_successful_fetch_at": "2026-03-18T08:22:14.148Z",
+      "last_successful_fetch_at": "2026-03-18T10:40:51.560Z",
       "chart": {
         "chart_type": "line",
         "x_axis_label": "日期",
@@ -349,6 +348,179 @@
         }
       ],
       "expected_update": "每日"
+    },
+    {
+      "id": "money_supply_m3",
+      "label_tc": "貨幣供應 M3",
+      "source_name": "香港金融管理局",
+      "source_url": "https://data.gov.hk/en-data/dataset/hk-hkma-t01-t0101monetary-statistics",
+      "status": "ok",
+      "status_text_tc": "最新",
+      "display_value_text": "20.6萬億",
+      "display_change_text": "較去年同期（2025年1月） +9.8%",
+      "display_previous_text": "去年同期（2025年1月） 18.8萬億",
+      "display_period_text": "2026年1月",
+      "display_comparison_text": "較去年同期（2025年1月） +9.8%",
+      "display_comparison_basis_text": "較去年同期",
+      "display_comparison_period_text": "2025年1月",
+      "display_unit": "萬億港元",
+      "data_origin": "live",
+      "last_successful_fetch_at": "2026-03-18T10:40:51.560Z",
+      "chart": {
+        "chart_type": "line",
+        "x_axis_label": "月份",
+        "y_axis_label": "貨幣供應 M3 (萬億港元)",
+        "time_label": "月份",
+        "value_label": "貨幣供應 M3",
+        "display_unit": "萬億港元",
+        "chart_value_transform": {
+          "scale": 0.000001,
+          "raw_unit": "百萬港元",
+          "display_unit": "萬億港元"
+        },
+        "suggested_ticks": [
+          "2025-02",
+          "2025-08",
+          "2026-01"
+        ],
+        "points": [
+          {
+            "x": "2025年2月",
+            "y": 18.965340838,
+            "tick_label": "2025-02",
+            "tooltip_title": "2025年2月",
+            "tooltip_value_text": "19.0萬億"
+          },
+          {
+            "x": "2025年3月",
+            "y": 19.094639585,
+            "tick_label": "2025-03",
+            "tooltip_title": "2025年3月",
+            "tooltip_value_text": "19.1萬億"
+          },
+          {
+            "x": "2025年4月",
+            "y": 19.237324559999998,
+            "tick_label": "2025-04",
+            "tooltip_title": "2025年4月",
+            "tooltip_value_text": "19.2萬億"
+          },
+          {
+            "x": "2025年5月",
+            "y": 19.718944348,
+            "tick_label": "2025-05",
+            "tooltip_title": "2025年5月",
+            "tooltip_value_text": "19.7萬億"
+          },
+          {
+            "x": "2025年6月",
+            "y": 19.868342464,
+            "tick_label": "2025-06",
+            "tooltip_title": "2025年6月",
+            "tooltip_value_text": "19.9萬億"
+          },
+          {
+            "x": "2025年7月",
+            "y": 19.891717901999996,
+            "tick_label": "2025-07",
+            "tooltip_title": "2025年7月",
+            "tooltip_value_text": "19.9萬億"
+          },
+          {
+            "x": "2025年8月",
+            "y": 20.026716256,
+            "tick_label": "2025-08",
+            "tooltip_title": "2025年8月",
+            "tooltip_value_text": "20.0萬億"
+          },
+          {
+            "x": "2025年9月",
+            "y": 20.282074012,
+            "tick_label": "2025-09",
+            "tooltip_title": "2025年9月",
+            "tooltip_value_text": "20.3萬億"
+          },
+          {
+            "x": "2025年10月",
+            "y": 20.221690850999998,
+            "tick_label": "2025-10",
+            "tooltip_title": "2025年10月",
+            "tooltip_value_text": "20.2萬億"
+          },
+          {
+            "x": "2025年11月",
+            "y": 20.395325666,
+            "tick_label": "2025-11",
+            "tooltip_title": "2025年11月",
+            "tooltip_value_text": "20.4萬億"
+          },
+          {
+            "x": "2025年12月",
+            "y": 20.648542067999998,
+            "tick_label": "2025-12",
+            "tooltip_title": "2025年12月",
+            "tooltip_value_text": "20.6萬億"
+          },
+          {
+            "x": "2026年1月",
+            "y": 20.647395228999997,
+            "tick_label": "2026-01",
+            "tooltip_title": "2026年1月",
+            "tooltip_value_text": "20.6萬億"
+          }
+        ]
+      },
+      "sparkline_points": [
+        {
+          "x": "2025年2月",
+          "y": 18965340.838
+        },
+        {
+          "x": "2025年3月",
+          "y": 19094639.585
+        },
+        {
+          "x": "2025年4月",
+          "y": 19237324.56
+        },
+        {
+          "x": "2025年5月",
+          "y": 19718944.348
+        },
+        {
+          "x": "2025年6月",
+          "y": 19868342.464
+        },
+        {
+          "x": "2025年7月",
+          "y": 19891717.902
+        },
+        {
+          "x": "2025年8月",
+          "y": 20026716.256
+        },
+        {
+          "x": "2025年9月",
+          "y": 20282074.012
+        },
+        {
+          "x": "2025年10月",
+          "y": 20221690.851
+        },
+        {
+          "x": "2025年11月",
+          "y": 20395325.666
+        },
+        {
+          "x": "2025年12月",
+          "y": 20648542.068
+        },
+        {
+          "x": "2026年1月",
+          "y": 20647395.229
+        }
+      ],
+      "expected_update": "每月"
     }
   ]
 }

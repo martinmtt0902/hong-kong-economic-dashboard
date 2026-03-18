@@ -10,12 +10,18 @@
       "label_tc": "綜合 CPI 按年變動",
       "source": {
         "publisher": "政府統計處",
+        "source_system": "censtatd_api",
+        "dataset_id": "hk-censtatd-tablechart-510-60001a",
         "dataset_url": "https://data.gov.hk/en-data/dataset/hk-censtatd-tablechart-510-60001a",
         "api_url": "https://www.censtatd.gov.hk/api/get.php?full_series=1&id=510-60001A&lang=tc",
         "table_id": "510-60001A"
       },
+      "source_system": "censtatd_api",
+      "dataset_id": "hk-censtatd-tablechart-510-60001a",
+      "table_id": "510-60001A",
       "series_id": "censtatd|510-60001A|GROUP=|freq=M|measure=CC_CM_1920|label=按年變動百分率",
       "metric_type": "yoy_percent",
+      "render_strategy": "default",
       "frequency": "monthly",
       "unit": "%",
       "display_unit": "%",
@@ -31,12 +37,15 @@
       "previous_as_of_date": "2025-12-31",
       "previous_as_of_label": "2025年12月",
       "change_value": -0.3,
+      "raw_change_value": -0.3,
       "change_type": "percentage_point_change",
       "comparison_type": "previous_observation",
       "comparison_basis": "previous_observation",
       "comparison_basis_label_tc": "較上期",
       "comparison_period_label": "2025年12月",
       "data_origin": "live",
+      "chart_series": "censtatd|510-60001A|GROUP=|freq=M|measure=CC_CM_1920|label=按年變動百分率",
+      "chart_metric_type": "yoy_percent",
       "chart_definition": {
         "series_id": "censtatd|510-60001A|GROUP=|freq=M|measure=CC_CM_1920|label=按年變動百分率",
         "metric_type": "yoy_percent",
@@ -243,7 +252,7 @@
       "validation_state": "ok",
       "validation_messages": [],
       "expected_update": "每月",
-      "last_successful_fetch_at": "2026-03-18T08:22:14.148Z"
+      "last_successful_fetch_at": "2026-03-18T10:40:51.560Z"
     }
   ]
 }

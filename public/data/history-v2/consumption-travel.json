@@ -10,15 +10,21 @@
       "label_tc": "零售銷售額",
       "source": {
         "publisher": "政府統計處",
+        "source_system": "censtatd_api",
+        "dataset_id": "hk-censtatd-tablechart-620-67001",
         "dataset_url": "https://data.gov.hk/en-data/dataset/hk-censtatd-tablechart-620-67001",
         "api_url": "https://www.censtatd.gov.hk/api/get.php?full_series=1&id=620-67001&lang=tc",
         "table_id": "620-67001"
       },
+      "source_system": "censtatd_api",
+      "dataset_id": "hk-censtatd-tablechart-620-67001",
+      "table_id": "620-67001",
       "series_id": "censtatd|620-67001|freq=M|measure=VAL_RS|label=百萬港元",
       "auxiliary_series_ids": [
         "censtatd|620-67001|freq=M|measure=VAL_IDX_RS|label=按年變動百分率"
       ],
       "metric_type": "level",
+      "render_strategy": "default",
       "frequency": "monthly",
       "unit": "百萬港元",
       "display_unit": "億港元",
@@ -36,12 +42,15 @@
       "previous_as_of_date": "2025-01-31",
       "previous_as_of_label": "2025年1月",
       "change_value": 5.4524,
+      "raw_change_value": 1929,
       "change_type": "yoy_percent",
       "comparison_type": "same_period_last_year",
       "comparison_basis": "same_period_last_year",
       "comparison_basis_label_tc": "較去年同月",
       "comparison_period_label": "2025年1月",
       "data_origin": "live",
+      "chart_series": "censtatd|620-67001|freq=M|measure=VAL_RS|label=百萬港元",
+      "chart_metric_type": "level",
       "chart_definition": {
         "series_id": "censtatd|620-67001|freq=M|measure=VAL_RS|label=百萬港元",
         "metric_type": "level",
@@ -248,7 +257,7 @@
       "validation_state": "ok",
       "validation_messages": [],
       "expected_update": "每月",
-      "last_successful_fetch_at": "2026-03-18T08:22:14.148Z"
+      "last_successful_fetch_at": "2026-03-18T10:40:51.560Z"
     },
     {
       "id": "visitor_arrivals",
@@ -256,12 +265,18 @@
       "label_tc": "旅客入境",
       "source": {
         "publisher": "政府統計處",
+        "source_system": "censtatd_api",
+        "dataset_id": "hk-censtatd-tablechart-650-80001",
         "dataset_url": "https://data.gov.hk/en-data/dataset/hk-censtatd-tablechart-650-80001",
         "api_url": "https://www.censtatd.gov.hk/api/get.php?full_series=1&id=650-80001&lang=tc",
         "table_id": "650-80001"
       },
+      "source_system": "censtatd_api",
+      "dataset_id": "hk-censtatd-tablechart-650-80001",
+      "table_id": "650-80001",
       "series_id": "censtatd|650-80001|REGION=|measure=VIS_ARR|label=數目",
       "metric_type": "level",
+      "render_strategy": "default",
       "frequency": "monthly",
       "unit": "人次",
       "display_unit": "人次",
@@ -277,12 +292,15 @@
       "previous_as_of_date": "2025-01-31",
       "previous_as_of_label": "2025年1月",
       "change_value": 1.4684,
+      "raw_change_value": 69634,
       "change_type": "yoy_percent",
       "comparison_type": "same_period_last_year",
       "comparison_basis": "same_period_last_year",
       "comparison_basis_label_tc": "較去年同月",
       "comparison_period_label": "2025年1月",
       "data_origin": "live",
+      "chart_series": "censtatd|650-80001|REGION=|measure=VIS_ARR|label=數目",
+      "chart_metric_type": "level",
       "chart_definition": {
         "series_id": "censtatd|650-80001|REGION=|measure=VIS_ARR|label=數目",
         "metric_type": "level",
@@ -489,7 +507,7 @@
       "validation_state": "ok",
       "validation_messages": [],
       "expected_update": "每月",
-      "last_successful_fetch_at": "2026-03-18T08:22:14.148Z"
+      "last_successful_fetch_at": "2026-03-18T10:40:51.560Z"
     }
   ]
 }

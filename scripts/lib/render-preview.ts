@@ -9,6 +9,8 @@ export type RenderPreviewRow = {
 
 export function renderPreviewMarkdown(payload: DashboardPayloadV2, rows: RenderPreviewRow[]): string {
   const focusCards = new Set([
+    "external-trade",
+    "wages-income",
     "minimum-wage",
     "housing",
     "interest-rates",
@@ -35,7 +37,9 @@ export function renderPreviewMarkdown(payload: DashboardPayloadV2, rows: RenderP
       lines.push(`### ${metric.label_tc}`);
       lines.push("");
       lines.push(`1. Raw payload: ${row.raw_count} rows`);
-      lines.push(`2. Transformed payload: latest=${metric.latest_value ?? "n/a"}, previous=${metric.previous_value ?? "n/a"}, change=${metric.change_value ?? "n/a"}, release_date=${metric.release_date ?? "n/a"}`);
+      lines.push(
+        `2. Transformed payload: latest=${metric.latest_value ?? "n/a"}, previous=${metric.previous_value ?? "n/a"}, change=${metric.change_value ?? "n/a"}, release_date=${metric.release_date ?? "n/a"}, dataset_title=${metric.dataset_title ?? "n/a"}, framework=${metric.statistical_framework ?? "n/a"}`
+      );
       lines.push(`3. Rendered text: ${row.rendered_preview.display_value_text} | ${row.rendered_preview.display_change_text} | ${row.rendered_preview.display_previous_text}`);
       lines.push(`4. Comparison type: ${metric.comparison_type}`);
       lines.push(`5. Comparison period label: ${metric.comparison_period_label ?? "n/a"}`);

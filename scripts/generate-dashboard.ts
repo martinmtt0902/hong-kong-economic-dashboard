@@ -3,7 +3,7 @@ import path from "node:path";
 import { fetchCenstatdObservations } from "./fetch/censtatd";
 import { fetchCsvObservations } from "./fetch/csvSource";
 import { fetchBirthsRegistrationObservations, readBirthsRegistrationSnapshot } from "./fetch/birthsRegistration";
-import { fetchBaseRateObservations, fetchHibor1MObservations } from "./fetch/hkma";
+import { fetchBaseRateObservations, fetchHibor1MObservations, fetchM3Observations } from "./fetch/hkma";
 import { fetchMinimumWageObservations } from "./fetch/labour";
 import { fetchRvdIndexObservations } from "./fetch/rvdIndex";
 import { fetchRvdCompletionsObservations } from "./fetch/rvd";
@@ -268,9 +268,13 @@ async function loadObservations(definition: MetricDefinitionRecord): Promise<Raw
     case "rvd_index":
       return fetchRvdIndexObservations(definition.url, definition.source, definition.series_label_tc, definition.series_key);
     case "hkma":
-      return definition.metric_key === "base_rate"
-        ? fetchBaseRateObservations(definition.source, definition.series_label_tc)
-        : fetchHibor1MObservations(definition.source, definition.series_label_tc);
+      if (definition.metric_key === "base_rate") {
+        return fetchBaseRateObservations(definition.source, definition.series_label_tc);
+      }
+      if (definition.metric_key === "hibor_1m") {
+        return fetchHibor1MObservations(definition.source, definition.series_label_tc);
+      }
+      return fetchM3Observations(definition.source, definition.series_label_tc);
     case "rvd_completions":
       return fetchRvdCompletionsObservations(definition.url, definition.source, definition.series_label_tc);
     default:
@@ -302,6 +306,13 @@ function fallbackMetric(
     return {
       ...previousMetric,
       source: definition.source,
+      source_system: definition.source.source_system,
+      dataset_id: definition.source.dataset_id,
+      table_id: definition.source.table_id,
+      ecode: definition.source.ecode,
+      dataset_title: definition.source.dataset_title,
+      statistical_framework: definition.source.statistical_framework,
+      render_strategy: definition.render_strategy ?? previousMetric.render_strategy,
       validation_state: state,
       validation_messages: [{ code: state === "schema_changed" ? "schema_changed" : "source_missing", level: "error", message_tc: message }],
       expected_update: definition.expected_update,
@@ -318,8 +329,15 @@ function fallbackMetric(
     card_id: definition.card_id,
     label_tc: definition.label_tc,
     source: definition.source,
+    source_system: definition.source.source_system,
+    dataset_id: definition.source.dataset_id,
+    table_id: definition.source.table_id,
+    ecode: definition.source.ecode,
+    dataset_title: definition.source.dataset_title,
+    statistical_framework: definition.source.statistical_framework,
     series_id: definition.id,
     metric_type: definition.metric_type,
+    render_strategy: definition.render_strategy ?? "default",
     frequency: definition.frequency,
     unit: definition.unit,
     display_unit: definition.display_unit ?? definition.unit,
@@ -336,6 +354,8 @@ function fallbackMetric(
     comparison_basis_label_tc: definition.comparison_basis_label_tc,
     data_origin: "status_only",
     reason: state === "schema_changed" ? "source schema changed" : message,
+    chart_series: definition.id,
+    chart_metric_type: definition.sparkline_metric_type ?? definition.metric_type,
     chart_definition: {
       series_id: definition.id,
       metric_type: definition.sparkline_metric_type ?? definition.metric_type,

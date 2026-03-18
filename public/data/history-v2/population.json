@@ -10,12 +10,18 @@
       "label_tc": "人口總量",
       "source": {
         "publisher": "政府統計處",
+        "source_system": "censtatd_api",
+        "dataset_id": "hk-censtatd-tablechart-110-01002",
         "dataset_url": "https://data.gov.hk/en-data/dataset/hk-censtatd-tablechart-110-01002",
         "api_url": "https://www.censtatd.gov.hk/api/get.php?full_series=1&id=110-01002&lang=tc",
         "table_id": "110-01002"
       },
+      "source_system": "censtatd_api",
+      "dataset_id": "hk-censtatd-tablechart-110-01002",
+      "table_id": "110-01002",
       "series_id": "censtatd|110-01002|SEX=|AGE=|freq=H|measure=POP|label=數目 ('000)",
       "metric_type": "level",
+      "render_strategy": "default",
       "frequency": "half_yearly",
       "unit": "人",
       "display_unit": "人",
@@ -31,12 +37,15 @@
       "previous_as_of_date": "2024-12-31",
       "previous_as_of_label": "2024年年底",
       "change_value": 10200,
+      "raw_change_value": 10200,
       "change_type": "absolute_change",
       "comparison_type": "same_period_last_year",
       "comparison_basis": "same_period_last_year",
       "comparison_basis_label_tc": "較去年同期",
       "comparison_period_label": "2024年底",
       "data_origin": "live",
+      "chart_series": "censtatd|110-01002|SEX=|AGE=|freq=H|measure=POP|label=數目 ('000)",
+      "chart_metric_type": "level",
       "chart_definition": {
         "series_id": "censtatd|110-01002|SEX=|AGE=|freq=H|measure=POP|label=數目 ('000)",
         "metric_type": "level",
@@ -243,7 +252,7 @@
       "validation_state": "ok",
       "validation_messages": [],
       "expected_update": "半年",
-      "last_successful_fetch_at": "2026-03-18T08:22:14.148Z"
+      "last_successful_fetch_at": "2026-03-18T10:40:51.560Z"
     },
     {
       "id": "live_births",
@@ -251,11 +260,20 @@
       "label_tc": "出生登記總數",
       "source": {
         "publisher": "入境事務處",
+        "source_system": "immd_csv",
+        "dataset_id": "hk-immd-set6-statistics-personal-documentation-births-registration",
         "dataset_url": "https://data.gov.hk/en-data/dataset/hk-immd-set6-statistics-personal-documentation-births-registration",
-        "api_url": "https://www.immd.gov.hk/opendata/hkt/law-and-security/personal_documentation/statistics_on_births_registration.csv"
+        "api_url": "https://www.immd.gov.hk/opendata/hkt/law-and-security/personal_documentation/statistics_on_births_registration.csv",
+        "dataset_title": "出生登記統計數字",
+        "statistical_framework": "Births Registration Statistics"
       },
+      "source_system": "immd_csv",
+      "dataset_id": "hk-immd-set6-statistics-personal-documentation-births-registration",
+      "dataset_title": "出生登記統計數字",
+      "statistical_framework": "Births Registration Statistics",
       "series_id": "immd|births_registration|total",
       "metric_type": "level",
+      "render_strategy": "default",
       "frequency": "annual",
       "unit": "人",
       "display_unit": "人",
@@ -271,12 +289,15 @@
       "previous_as_of_date": "2023-12-31",
       "previous_as_of_label": "2023年",
       "change_value": 3479,
+      "raw_change_value": 3479,
       "change_type": "absolute_change",
       "comparison_type": "previous_observation",
       "comparison_basis": "previous_observation",
       "comparison_basis_label_tc": "較上期",
       "comparison_period_label": "2023年",
       "data_origin": "live",
+      "chart_series": "immd|births_registration|total",
+      "chart_metric_type": "level",
       "chart_definition": {
         "series_id": "immd|births_registration|total",
         "metric_type": "level",
@@ -372,7 +393,7 @@
       "validation_state": "ok",
       "validation_messages": [],
       "expected_update": "每年",
-      "last_successful_fetch_at": "2026-03-18T08:22:14.148Z"
+      "last_successful_fetch_at": "2026-03-18T10:40:51.560Z"
     },
     {
       "id": "median_age",
@@ -380,12 +401,18 @@
       "label_tc": "年齡中位數",
       "source": {
         "publisher": "政府統計處",
+        "source_system": "censtatd_api",
+        "dataset_id": "hk-censtatd-tablechart-110-01004",
         "dataset_url": "https://data.gov.hk/en-data/dataset/hk-censtatd-tablechart-110-01004",
         "api_url": "https://www.censtatd.gov.hk/api/get.php?full_series=1&id=110-01004&lang=tc",
         "table_id": "110-01004"
       },
+      "source_system": "censtatd_api",
+      "dataset_id": "hk-censtatd-tablechart-110-01004",
+      "table_id": "110-01004",
       "series_id": "censtatd|110-01004|SEX=|freq=Y|measure=MED_AGE_POPN|label=(歲)",
       "metric_type": "level",
+      "render_strategy": "default",
       "frequency": "annual",
       "unit": "歲",
       "display_unit": "歲",
@@ -401,12 +428,15 @@
       "previous_as_of_date": "2024-12-31",
       "previous_as_of_label": "2024年",
       "change_value": 0.5,
+      "raw_change_value": 0.5,
       "change_type": "absolute_change",
       "comparison_type": "previous_observation",
       "comparison_basis": "previous_observation",
       "comparison_basis_label_tc": "較上期",
       "comparison_period_label": "2024年",
       "data_origin": "live",
+      "chart_series": "censtatd|110-01004|SEX=|freq=Y|measure=MED_AGE_POPN|label=(歲)",
+      "chart_metric_type": "level",
       "chart_definition": {
         "series_id": "censtatd|110-01004|SEX=|freq=Y|measure=MED_AGE_POPN|label=(歲)",
         "metric_type": "level",
@@ -613,7 +643,7 @@
       "validation_state": "ok",
       "validation_messages": [],
       "expected_update": "每年",
-      "last_successful_fetch_at": "2026-03-18T08:22:14.148Z"
+      "last_successful_fetch_at": "2026-03-18T10:40:51.560Z"
     }
   ]
 }

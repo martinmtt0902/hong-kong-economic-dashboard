@@ -23,8 +23,14 @@ test("every metric has explicit chart metadata and tooltip unit", () => {
         if (metric.display_unit === "HK$/小時") {
           assert.match(tooltip, /HK\$/);
         }
+        if (metric.display_unit === "元/小時") {
+          assert.match(tooltip, /元\/小時/);
+        }
         if (metric.display_unit === "億港元") {
           assert.match(tooltip, /億/);
+        }
+        if (metric.display_unit === "萬億港元") {
+          assert.match(tooltip, /萬億/);
         }
       }
     }

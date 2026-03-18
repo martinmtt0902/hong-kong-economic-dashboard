@@ -1,6 +1,8 @@
 import { formatComparisonPeriodLabel, formatTickLabel, frequencyRank } from "./period";
 import type { MetricDefinitionRecord } from "./metric-definition";
 import type {
+  BalanceChangeNarrative,
+  BalancePosition,
   ChartPoint,
   ComparisonBasis,
   RawObservation,
@@ -23,6 +25,7 @@ export function buildTransformedMetric(input: BuildMetricInput): TransformedMetr
   const previous = latest ? selectPreviousObservation(selectedSeries, latest, input.definition.comparison_basis) : undefined;
   const changeValue =
     latest && previous ? computeChangeValue(latest.value, previous.value, input.definition.change_type) : undefined;
+  const rawChangeValue = latest && previous ? Number((latest.value - previous.value).toFixed(4)) : undefined;
   const chartSource =
     input.definition.sparkline_series_role === "auxiliary" && auxiliarySeries.length > 0 ? auxiliarySeries : selectedSeries;
   const chartPoints = buildChartPoints(chartSource, input.definition);
@@ -38,9 +41,16 @@ export function buildTransformedMetric(input: BuildMetricInput): TransformedMetr
     card_id: input.definition.card_id,
     label_tc: input.definition.label_tc,
     source: input.definition.source,
+    source_system: input.definition.source.source_system,
+    dataset_id: input.definition.source.dataset_id,
+    table_id: input.definition.source.table_id,
+    ecode: input.definition.source.ecode,
+    dataset_title: input.definition.source.dataset_title,
+    statistical_framework: input.definition.source.statistical_framework,
     series_id: latest?.series_id ?? selectedSeries[0]?.series_id ?? input.definition.id,
     auxiliary_series_ids: auxiliarySeries.length > 0 ? [...new Set(auxiliarySeries.map((item) => item.series_id))] : undefined,
     metric_type: input.definition.metric_type,
+    render_strategy: input.definition.render_strategy ?? "default",
     frequency: input.definition.frequency,
     unit: input.definition.unit,
     display_unit: displayUnit,
@@ -53,6 +63,7 @@ export function buildTransformedMetric(input: BuildMetricInput): TransformedMetr
     previous_as_of_date: previous?.as_of_date,
     previous_as_of_label: previous?.as_of_label,
     change_value: changeValue,
+    raw_change_value: rawChangeValue,
     change_type: input.definition.change_type,
     comparison_type: input.definition.comparison_basis,
     comparison_basis: input.definition.comparison_basis,
@@ -61,6 +72,8 @@ export function buildTransformedMetric(input: BuildMetricInput): TransformedMetr
       ? formatComparisonPeriodLabel(previous.as_of_label, input.definition.comparison_basis, previous.period_raw)
       : undefined,
     data_origin: "live",
+    chart_series: chartSource[0]?.series_id ?? latest?.series_id ?? input.definition.id,
+    chart_metric_type: input.definition.sparkline_metric_type ?? input.definition.metric_type,
     chart_definition: {
       series_id: chartSource[0]?.series_id ?? latest?.series_id ?? input.definition.id,
       metric_type: input.definition.sparkline_metric_type ?? input.definition.metric_type,
@@ -100,6 +113,14 @@ export function buildTransformedMetric(input: BuildMetricInput): TransformedMetr
     expected_update: input.definition.expected_update,
     provisional: latest?.provisional
   };
+
+  if (input.definition.render_strategy === "balance_sign_aware" && latest && previous) {
+    const balanceState = buildBalanceNarrative(latest.value, previous.value, baseMetric);
+    baseMetric.balance_position = balanceState.balance_position;
+    baseMetric.previous_balance_position = balanceState.previous_balance_position;
+    baseMetric.balance_change_narrative = balanceState.balance_change_narrative;
+    baseMetric.display_change_narrative_text = balanceState.display_change_narrative_text;
+  }
 
   if (input.definition.id === "statutory_minimum_wage_next" && latest) {
     baseMetric.reason = `將於 ${latest.as_of_label} 生效`;
@@ -264,6 +285,10 @@ function formatChartDisplayValue(
     return `${scaled.toFixed(roundingPolicy.value_decimals)}億`;
   }
 
+  if (displayUnit === "萬億港元") {
+    return `${scaled.toFixed(roundingPolicy.value_decimals)}萬億`;
+  }
+
   if (displayUnit === "歲" || displayUnit === "指數") {
     return `${scaled.toFixed(roundingPolicy.value_decimals)} ${displayUnit}`.trim();
   }
@@ -276,4 +301,89 @@ function formatChartDisplayValue(
 
 function applyDisplayScale(value: number, roundingPolicy: TransformedMetric["rounding_policy"]): number {
   return roundingPolicy.display_scale ? value * roundingPolicy.display_scale : value;
+}
+
+function buildBalanceNarrative(
+  latestValue: number,
+  previousValue: number,
+  metric: Pick<TransformedMetric, "display_unit" | "rounding_policy" | "comparison_basis_label_tc" | "comparison_period_label">
+): {
+  balance_position: BalancePosition;
+  previous_balance_position: BalancePosition;
+  balance_change_narrative: BalanceChangeNarrative;
+  display_change_narrative_text: string;
+} {
+  const currentPosition = positionForBalance(latestValue);
+  const previousPosition = positionForBalance(previousValue);
+  const amount = formatBalanceMagnitude(Math.abs(latestValue - previousValue), metric);
+  const prefix = `${metric.comparison_basis_label_tc}${metric.comparison_period_label ? `（${metric.comparison_period_label}）` : ""}`;
+
+  if (currentPosition === "deficit" && previousPosition === "deficit") {
+    const narrowed = Math.abs(latestValue) < Math.abs(previousValue);
+    return {
+      balance_position: currentPosition,
+      previous_balance_position: previousPosition,
+      balance_change_narrative: narrowed ? "deficit_narrowed" : "deficit_widened",
+      display_change_narrative_text: `${prefix} 逆差${narrowed ? "收窄" : "擴大"} ${amount}`
+    };
+  }
+
+  if (currentPosition === "surplus" && previousPosition === "surplus") {
+    const increased = Math.abs(latestValue) > Math.abs(previousValue);
+    return {
+      balance_position: currentPosition,
+      previous_balance_position: previousPosition,
+      balance_change_narrative: increased ? "surplus_increased" : "surplus_decreased",
+      display_change_narrative_text: `${prefix} 順差${increased ? "增加" : "減少"} ${amount}`
+    };
+  }
+
+  if (currentPosition === "surplus" && previousPosition === "deficit") {
+    return {
+      balance_position: currentPosition,
+      previous_balance_position: previousPosition,
+      balance_change_narrative: "deficit_to_surplus",
+      display_change_narrative_text: `${prefix} 由逆差轉為順差 ${amount}`
+    };
+  }
+
+  if (currentPosition === "deficit" && previousPosition === "surplus") {
+    return {
+      balance_position: currentPosition,
+      previous_balance_position: previousPosition,
+      balance_change_narrative: "surplus_to_deficit",
+      display_change_narrative_text: `${prefix} 由順差轉為逆差 ${amount}`
+    };
+  }
+
+  return {
+    balance_position: currentPosition,
+    previous_balance_position: previousPosition,
+    balance_change_narrative: "unchanged",
+    display_change_narrative_text: `${prefix} 變化 ${amount}`
+  };
+}
+
+function positionForBalance(value: number): BalancePosition {
+  if (value > 0) {
+    return "surplus";
+  }
+  if (value < 0) {
+    return "deficit";
+  }
+  return "balanced";
+}
+
+function formatBalanceMagnitude(
+  value: number,
+  metric: Pick<TransformedMetric, "display_unit" | "rounding_policy">
+): string {
+  const scaled = metric.rounding_policy.display_scale ? value * metric.rounding_policy.display_scale : value;
+  if (metric.display_unit === "億港元") {
+    return `${scaled.toFixed(metric.rounding_policy.change_decimals)}億`;
+  }
+  return new Intl.NumberFormat("zh-Hant-HK", {
+    maximumFractionDigits: metric.rounding_policy.change_decimals,
+    minimumFractionDigits: metric.rounding_policy.change_decimals
+  }).format(scaled);
 }

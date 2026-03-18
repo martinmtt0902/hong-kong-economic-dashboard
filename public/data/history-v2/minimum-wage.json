@@ -10,10 +10,17 @@
       "label_tc": "現行法定最低工資",
       "source": {
         "publisher": "勞工處",
-        "dataset_url": "https://www.labour.gov.hk/eng/news/mwo.htm"
+        "source_system": "labour_html",
+        "dataset_url": "https://www.labour.gov.hk/eng/news/mwo.htm",
+        "dataset_title": "法定最低工資",
+        "statistical_framework": "Statutory Minimum Wage"
       },
+      "source_system": "labour_html",
+      "dataset_title": "法定最低工資",
+      "statistical_framework": "Statutory Minimum Wage",
       "series_id": "labour|min_wage",
       "metric_type": "level",
+      "render_strategy": "default",
       "frequency": "event",
       "unit": "港元/小時",
       "display_unit": "HK$/小時",
@@ -30,6 +37,8 @@
       "comparison_basis": "event_previous_effective",
       "comparison_basis_label_tc": "較上一次生效值",
       "data_origin": "live",
+      "chart_series": "labour|min_wage",
+      "chart_metric_type": "level",
       "chart_definition": {
         "series_id": "labour|min_wage",
         "metric_type": "level",
@@ -81,7 +90,7 @@
       "validation_messages": [],
       "expected_update": "按政策變動",
       "provisional": false,
-      "last_successful_fetch_at": "2026-03-18T08:22:14.148Z"
+      "last_successful_fetch_at": "2026-03-18T10:40:51.560Z"
     },
     {
       "id": "statutory_minimum_wage_next",
@@ -89,10 +98,17 @@
       "label_tc": "下一個法定最低工資",
       "source": {
         "publisher": "勞工處",
-        "dataset_url": "https://www.labour.gov.hk/eng/news/mwo.htm"
+        "source_system": "labour_html",
+        "dataset_url": "https://www.labour.gov.hk/eng/news/mwo.htm",
+        "dataset_title": "法定最低工資",
+        "statistical_framework": "Statutory Minimum Wage"
       },
+      "source_system": "labour_html",
+      "dataset_title": "法定最低工資",
+      "statistical_framework": "Statutory Minimum Wage",
       "series_id": "labour|min_wage",
       "metric_type": "level",
+      "render_strategy": "default",
       "frequency": "event",
       "unit": "港元/小時",
       "display_unit": "HK$/小時",
@@ -109,12 +125,15 @@
       "previous_as_of_date": "2025-05-01",
       "previous_as_of_label": "2025-05-01",
       "change_value": 1,
+      "raw_change_value": 1,
       "change_type": "absolute_change",
       "comparison_type": "event_previous_effective",
       "comparison_basis": "event_previous_effective",
       "comparison_basis_label_tc": "較上一次生效值",
       "comparison_period_label": "2025-05-01",
       "data_origin": "live",
+      "chart_series": "labour|min_wage",
+      "chart_metric_type": "level",
       "chart_definition": {
         "series_id": "labour|min_wage",
         "metric_type": "level",
@@ -182,7 +201,7 @@
       "expected_update": "按政策變動",
       "provisional": true,
       "reason": "將於 2026-05-01 生效",
-      "last_successful_fetch_at": "2026-03-18T08:22:14.148Z"
+      "last_successful_fetch_at": "2026-03-18T10:40:51.560Z"
     }
   ]
 }

@@ -1,0 +1,786 @@
+{
+  "id": "external-trade",
+  "title_tc": "對外貿易",
+  "latest_as_of_date": "2026-01-31",
+  "latest_as_of_label": "2026年1月",
+  "metrics": [
+    {
+      "id": "total_exports_value",
+      "card_id": "external-trade",
+      "label_tc": "整體出口貨值",
+      "source": {
+        "publisher": "政府統計處",
+        "source_system": "censtatd_api",
+        "dataset_id": "hk-censtatd-tablechart-410-50001",
+        "dataset_url": "https://data.gov.hk/en-data/dataset/hk-censtatd-tablechart-410-50001",
+        "api_url": "https://www.censtatd.gov.hk/api/get.php?full_series=1&id=410-50001&lang=tc",
+        "table_id": "410-50001",
+        "dataset_title": "對外商品貿易總計數字",
+        "statistical_framework": "Merchandise Trade"
+      },
+      "source_system": "censtatd_api",
+      "dataset_id": "hk-censtatd-tablechart-410-50001",
+      "table_id": "410-50001",
+      "dataset_title": "對外商品貿易總計數字",
+      "statistical_framework": "Merchandise Trade",
+      "series_id": "censtatd|410-50001|freq=M|measure=VAL_TX|label=百萬港元",
+      "auxiliary_series_ids": [
+        "censtatd|410-50001|freq=M|measure=VAL_TX|label=按年變動百分率"
+      ],
+      "metric_type": "level",
+      "render_strategy": "default",
+      "frequency": "monthly",
+      "unit": "百萬港元",
+      "display_unit": "億港元",
+      "rounding_policy": {
+        "value_decimals": 1,
+        "change_decimals": 1,
+        "previous_decimals": 1,
+        "display_scale": 0.01,
+        "display_scale_label": "億港元"
+      },
+      "as_of_date": "2026-01-31",
+      "as_of_label": "2026年1月",
+      "latest_value": 520564,
+      "previous_value": 389142,
+      "previous_as_of_date": "2025-01-31",
+      "previous_as_of_label": "2025年1月",
+      "change_value": 33.7722,
+      "raw_change_value": 131422,
+      "change_type": "yoy_percent",
+      "comparison_type": "same_period_last_year",
+      "comparison_basis": "same_period_last_year",
+      "comparison_basis_label_tc": "較去年同月",
+      "comparison_period_label": "2025年1月",
+      "data_origin": "live",
+      "chart_series": "censtatd|410-50001|freq=M|measure=VAL_TX|label=百萬港元",
+      "chart_metric_type": "level",
+      "chart_definition": {
+        "series_id": "censtatd|410-50001|freq=M|measure=VAL_TX|label=百萬港元",
+        "metric_type": "level",
+        "chart_type": "line",
+        "frequency": "monthly",
+        "unit": "百萬港元",
+        "display_unit": "億港元",
+        "chart_value_transform": {
+          "scale": 0.01,
+          "raw_unit": "百萬港元",
+          "display_unit": "億港元"
+        },
+        "period_start": "1952-01-31",
+        "period_end": "2026-01-31",
+        "x_axis_label": "月份",
+        "y_axis_label": "整體出口貨值 (億港元)",
+        "value_label": "整體出口貨值",
+        "time_label": "月份",
+        "suggested_ticks": [
+          "2025-02",
+          "2025-08",
+          "2026-01"
+        ]
+      },
+      "chart_points": [
+        {
+          "as_of_date": "2025-02-28",
+          "as_of_label": "2025年2月",
+          "tick_label": "2025-02",
+          "value": 327909,
+          "display_value_text": "3279.1億",
+          "tooltip_title": "2025年2月",
+          "tooltip_value_text": "3279.1億"
+        },
+        {
+          "as_of_date": "2025-03-31",
+          "as_of_label": "2025年3月",
+          "tick_label": "2025-03",
+          "value": 455534,
+          "display_value_text": "4555.3億",
+          "tooltip_title": "2025年3月",
+          "tooltip_value_text": "4555.3億"
+        },
+        {
+          "as_of_date": "2025-04-30",
+          "as_of_label": "2025年4月",
+          "tick_label": "2025-04",
+          "value": 434464,
+          "display_value_text": "4344.6億",
+          "tooltip_title": "2025年4月",
+          "tooltip_value_text": "4344.6億"
+        },
+        {
+          "as_of_date": "2025-05-31",
+          "as_of_label": "2025年5月",
+          "tick_label": "2025-05",
+          "value": 434081,
+          "display_value_text": "4340.8億",
+          "tooltip_title": "2025年5月",
+          "tooltip_value_text": "4340.8億"
+        },
+        {
+          "as_of_date": "2025-06-30",
+          "as_of_label": "2025年6月",
+          "tick_label": "2025-06",
+          "value": 417818,
+          "display_value_text": "4178.2億",
+          "tooltip_title": "2025年6月",
+          "tooltip_value_text": "4178.2億"
+        },
+        {
+          "as_of_date": "2025-07-31",
+          "as_of_label": "2025年7月",
+          "tick_label": "2025-07",
+          "value": 446297,
+          "display_value_text": "4463.0億",
+          "tooltip_title": "2025年7月",
+          "tooltip_value_text": "4463.0億"
+        },
+        {
+          "as_of_date": "2025-08-31",
+          "as_of_label": "2025年8月",
+          "tick_label": "2025-08",
+          "value": 436591,
+          "display_value_text": "4365.9億",
+          "tooltip_title": "2025年8月",
+          "tooltip_value_text": "4365.9億"
+        },
+        {
+          "as_of_date": "2025-09-30",
+          "as_of_label": "2025年9月",
+          "tick_label": "2025-09",
+          "value": 462341,
+          "display_value_text": "4623.4億",
+          "tooltip_title": "2025年9月",
+          "tooltip_value_text": "4623.4億"
+        },
+        {
+          "as_of_date": "2025-10-31",
+          "as_of_label": "2025年10月",
+          "tick_label": "2025-10",
+          "value": 461782,
+          "display_value_text": "4617.8億",
+          "tooltip_title": "2025年10月",
+          "tooltip_value_text": "4617.8億"
+        },
+        {
+          "as_of_date": "2025-11-30",
+          "as_of_label": "2025年11月",
+          "tick_label": "2025-11",
+          "value": 468868,
+          "display_value_text": "4688.7億",
+          "tooltip_title": "2025年11月",
+          "tooltip_value_text": "4688.7億"
+        },
+        {
+          "as_of_date": "2025-12-31",
+          "as_of_label": "2025年12月",
+          "tick_label": "2025-12",
+          "value": 512795,
+          "display_value_text": "5127.9億",
+          "tooltip_title": "2025年12月",
+          "tooltip_value_text": "5127.9億"
+        },
+        {
+          "as_of_date": "2026-01-31",
+          "as_of_label": "2026年1月",
+          "tick_label": "2026-01",
+          "value": 520564,
+          "display_value_text": "5205.6億",
+          "tooltip_title": "2026年1月",
+          "tooltip_value_text": "5205.6億"
+        }
+      ],
+      "sparkline_definition": {
+        "series_id": "censtatd|410-50001|freq=M|measure=VAL_TX|label=百萬港元",
+        "metric_type": "level",
+        "comparison_basis": "same_period_last_year",
+        "unit": "百萬港元",
+        "frequency": "monthly"
+      },
+      "sparkline_points": [
+        {
+          "as_of_date": "2025-02-28",
+          "as_of_label": "2025年2月",
+          "value": 327909
+        },
+        {
+          "as_of_date": "2025-03-31",
+          "as_of_label": "2025年3月",
+          "value": 455534
+        },
+        {
+          "as_of_date": "2025-04-30",
+          "as_of_label": "2025年4月",
+          "value": 434464
+        },
+        {
+          "as_of_date": "2025-05-31",
+          "as_of_label": "2025年5月",
+          "value": 434081
+        },
+        {
+          "as_of_date": "2025-06-30",
+          "as_of_label": "2025年6月",
+          "value": 417818
+        },
+        {
+          "as_of_date": "2025-07-31",
+          "as_of_label": "2025年7月",
+          "value": 446297
+        },
+        {
+          "as_of_date": "2025-08-31",
+          "as_of_label": "2025年8月",
+          "value": 436591
+        },
+        {
+          "as_of_date": "2025-09-30",
+          "as_of_label": "2025年9月",
+          "value": 462341
+        },
+        {
+          "as_of_date": "2025-10-31",
+          "as_of_label": "2025年10月",
+          "value": 461782
+        },
+        {
+          "as_of_date": "2025-11-30",
+          "as_of_label": "2025年11月",
+          "value": 468868
+        },
+        {
+          "as_of_date": "2025-12-31",
+          "as_of_label": "2025年12月",
+          "value": 512795
+        },
+        {
+          "as_of_date": "2026-01-31",
+          "as_of_label": "2026年1月",
+          "value": 520564
+        }
+      ],
+      "validation_state": "ok",
+      "validation_messages": [],
+      "expected_update": "每月",
+      "last_successful_fetch_at": "2026-03-18T10:40:51.560Z"
+    },
+    {
+      "id": "imports_value",
+      "card_id": "external-trade",
+      "label_tc": "進口貨值",
+      "source": {
+        "publisher": "政府統計處",
+        "source_system": "censtatd_api",
+        "dataset_id": "hk-censtatd-tablechart-410-50001",
+        "dataset_url": "https://data.gov.hk/en-data/dataset/hk-censtatd-tablechart-410-50001",
+        "api_url": "https://www.censtatd.gov.hk/api/get.php?full_series=1&id=410-50001&lang=tc",
+        "table_id": "410-50001",
+        "dataset_title": "對外商品貿易總計數字",
+        "statistical_framework": "Merchandise Trade"
+      },
+      "source_system": "censtatd_api",
+      "dataset_id": "hk-censtatd-tablechart-410-50001",
+      "table_id": "410-50001",
+      "dataset_title": "對外商品貿易總計數字",
+      "statistical_framework": "Merchandise Trade",
+      "series_id": "censtatd|410-50001|freq=M|measure=VAL_IM|label=百萬港元",
+      "auxiliary_series_ids": [
+        "censtatd|410-50001|freq=M|measure=VAL_IM|label=按年變動百分率"
+      ],
+      "metric_type": "level",
+      "render_strategy": "default",
+      "frequency": "monthly",
+      "unit": "百萬港元",
+      "display_unit": "億港元",
+      "rounding_policy": {
+        "value_decimals": 1,
+        "change_decimals": 1,
+        "previous_decimals": 1,
+        "display_scale": 0.01,
+        "display_scale_label": "億港元"
+      },
+      "as_of_date": "2026-01-31",
+      "as_of_label": "2026年1月",
+      "latest_value": 534659,
+      "previous_value": 387064,
+      "previous_as_of_date": "2025-01-31",
+      "previous_as_of_label": "2025年1月",
+      "change_value": 38.1319,
+      "raw_change_value": 147595,
+      "change_type": "yoy_percent",
+      "comparison_type": "same_period_last_year",
+      "comparison_basis": "same_period_last_year",
+      "comparison_basis_label_tc": "較去年同月",
+      "comparison_period_label": "2025年1月",
+      "data_origin": "live",
+      "chart_series": "censtatd|410-50001|freq=M|measure=VAL_IM|label=百萬港元",
+      "chart_metric_type": "level",
+      "chart_definition": {
+        "series_id": "censtatd|410-50001|freq=M|measure=VAL_IM|label=百萬港元",
+        "metric_type": "level",
+        "chart_type": "line",
+        "frequency": "monthly",
+        "unit": "百萬港元",
+        "display_unit": "億港元",
+        "chart_value_transform": {
+          "scale": 0.01,
+          "raw_unit": "百萬港元",
+          "display_unit": "億港元"
+        },
+        "period_start": "1952-01-31",
+        "period_end": "2026-01-31",
+        "x_axis_label": "月份",
+        "y_axis_label": "進口貨值 (億港元)",
+        "value_label": "進口貨值",
+        "time_label": "月份",
+        "suggested_ticks": [
+          "2025-02",
+          "2025-08",
+          "2026-01"
+        ]
+      },
+      "chart_points": [
+        {
+          "as_of_date": "2025-02-28",
+          "as_of_label": "2025年2月",
+          "tick_label": "2025-02",
+          "value": 364224,
+          "display_value_text": "3642.2億",
+          "tooltip_title": "2025年2月",
+          "tooltip_value_text": "3642.2億"
+        },
+        {
+          "as_of_date": "2025-03-31",
+          "as_of_label": "2025年3月",
+          "tick_label": "2025-03",
+          "value": 500891,
+          "display_value_text": "5008.9億",
+          "tooltip_title": "2025年3月",
+          "tooltip_value_text": "5008.9億"
+        },
+        {
+          "as_of_date": "2025-04-30",
+          "as_of_label": "2025年4月",
+          "tick_label": "2025-04",
+          "value": 450472,
+          "display_value_text": "4504.7億",
+          "tooltip_title": "2025年4月",
+          "tooltip_value_text": "4504.7億"
+        },
+        {
+          "as_of_date": "2025-05-31",
+          "as_of_label": "2025年5月",
+          "tick_label": "2025-05",
+          "value": 461406,
+          "display_value_text": "4614.1億",
+          "tooltip_title": "2025年5月",
+          "tooltip_value_text": "4614.1億"
+        },
+        {
+          "as_of_date": "2025-06-30",
+          "as_of_label": "2025年6月",
+          "tick_label": "2025-06",
+          "value": 476744,
+          "display_value_text": "4767.4億",
+          "tooltip_title": "2025年6月",
+          "tooltip_value_text": "4767.4億"
+        },
+        {
+          "as_of_date": "2025-07-31",
+          "as_of_label": "2025年7月",
+          "tick_label": "2025-07",
+          "value": 480417,
+          "display_value_text": "4804.2億",
+          "tooltip_title": "2025年7月",
+          "tooltip_value_text": "4804.2億"
+        },
+        {
+          "as_of_date": "2025-08-31",
+          "as_of_label": "2025年8月",
+          "tick_label": "2025-08",
+          "value": 462006,
+          "display_value_text": "4620.1億",
+          "tooltip_title": "2025年8月",
+          "tooltip_value_text": "4620.1億"
+        },
+        {
+          "as_of_date": "2025-09-30",
+          "as_of_label": "2025年9月",
+          "tick_label": "2025-09",
+          "value": 512512,
+          "display_value_text": "5125.1億",
+          "tooltip_title": "2025年9月",
+          "tooltip_value_text": "5125.1億"
+        },
+        {
+          "as_of_date": "2025-10-31",
+          "as_of_label": "2025年10月",
+          "tick_label": "2025-10",
+          "value": 501728,
+          "display_value_text": "5017.3億",
+          "tooltip_title": "2025年10月",
+          "tooltip_value_text": "5017.3億"
+        },
+        {
+          "as_of_date": "2025-11-30",
+          "as_of_label": "2025年11月",
+          "tick_label": "2025-11",
+          "value": 517383,
+          "display_value_text": "5173.8億",
+          "tooltip_title": "2025年11月",
+          "tooltip_value_text": "5173.8億"
+        },
+        {
+          "as_of_date": "2025-12-31",
+          "as_of_label": "2025年12月",
+          "tick_label": "2025-12",
+          "value": 576048,
+          "display_value_text": "5760.5億",
+          "tooltip_title": "2025年12月",
+          "tooltip_value_text": "5760.5億"
+        },
+        {
+          "as_of_date": "2026-01-31",
+          "as_of_label": "2026年1月",
+          "tick_label": "2026-01",
+          "value": 534659,
+          "display_value_text": "5346.6億",
+          "tooltip_title": "2026年1月",
+          "tooltip_value_text": "5346.6億"
+        }
+      ],
+      "sparkline_definition": {
+        "series_id": "censtatd|410-50001|freq=M|measure=VAL_IM|label=百萬港元",
+        "metric_type": "level",
+        "comparison_basis": "same_period_last_year",
+        "unit": "百萬港元",
+        "frequency": "monthly"
+      },
+      "sparkline_points": [
+        {
+          "as_of_date": "2025-02-28",
+          "as_of_label": "2025年2月",
+          "value": 364224
+        },
+        {
+          "as_of_date": "2025-03-31",
+          "as_of_label": "2025年3月",
+          "value": 500891
+        },
+        {
+          "as_of_date": "2025-04-30",
+          "as_of_label": "2025年4月",
+          "value": 450472
+        },
+        {
+          "as_of_date": "2025-05-31",
+          "as_of_label": "2025年5月",
+          "value": 461406
+        },
+        {
+          "as_of_date": "2025-06-30",
+          "as_of_label": "2025年6月",
+          "value": 476744
+        },
+        {
+          "as_of_date": "2025-07-31",
+          "as_of_label": "2025年7月",
+          "value": 480417
+        },
+        {
+          "as_of_date": "2025-08-31",
+          "as_of_label": "2025年8月",
+          "value": 462006
+        },
+        {
+          "as_of_date": "2025-09-30",
+          "as_of_label": "2025年9月",
+          "value": 512512
+        },
+        {
+          "as_of_date": "2025-10-31",
+          "as_of_label": "2025年10月",
+          "value": 501728
+        },
+        {
+          "as_of_date": "2025-11-30",
+          "as_of_label": "2025年11月",
+          "value": 517383
+        },
+        {
+          "as_of_date": "2025-12-31",
+          "as_of_label": "2025年12月",
+          "value": 576048
+        },
+        {
+          "as_of_date": "2026-01-31",
+          "as_of_label": "2026年1月",
+          "value": 534659
+        }
+      ],
+      "validation_state": "ok",
+      "validation_messages": [],
+      "expected_update": "每月",
+      "last_successful_fetch_at": "2026-03-18T10:40:51.560Z"
+    },
+    {
+      "id": "visible_trade_balance",
+      "card_id": "external-trade",
+      "label_tc": "有形貿易差額",
+      "source": {
+        "publisher": "政府統計處",
+        "source_system": "censtatd_api",
+        "dataset_id": "hk-censtatd-tablechart-410-50001",
+        "dataset_url": "https://data.gov.hk/en-data/dataset/hk-censtatd-tablechart-410-50001",
+        "api_url": "https://www.censtatd.gov.hk/api/get.php?full_series=1&id=410-50001&lang=tc",
+        "table_id": "410-50001",
+        "dataset_title": "對外商品貿易總計數字",
+        "statistical_framework": "Merchandise Trade"
+      },
+      "source_system": "censtatd_api",
+      "dataset_id": "hk-censtatd-tablechart-410-50001",
+      "table_id": "410-50001",
+      "dataset_title": "對外商品貿易總計數字",
+      "statistical_framework": "Merchandise Trade",
+      "series_id": "censtatd|410-50001|freq=M|measure=BAL|label=百萬港元",
+      "metric_type": "level",
+      "render_strategy": "balance_sign_aware",
+      "frequency": "monthly",
+      "unit": "百萬港元",
+      "display_unit": "億港元",
+      "rounding_policy": {
+        "value_decimals": 1,
+        "change_decimals": 1,
+        "previous_decimals": 1,
+        "display_scale": 0.01,
+        "display_scale_label": "億港元"
+      },
+      "as_of_date": "2026-01-31",
+      "as_of_label": "2026年1月",
+      "latest_value": -14094,
+      "previous_value": 2078,
+      "previous_as_of_date": "2025-01-31",
+      "previous_as_of_label": "2025年1月",
+      "change_value": -16172,
+      "raw_change_value": -16172,
+      "change_type": "absolute_change",
+      "comparison_type": "same_period_last_year",
+      "comparison_basis": "same_period_last_year",
+      "comparison_basis_label_tc": "較去年同月",
+      "comparison_period_label": "2025年1月",
+      "data_origin": "live",
+      "chart_series": "censtatd|410-50001|freq=M|measure=BAL|label=百萬港元",
+      "chart_metric_type": "level",
+      "chart_definition": {
+        "series_id": "censtatd|410-50001|freq=M|measure=BAL|label=百萬港元",
+        "metric_type": "level",
+        "chart_type": "line",
+        "frequency": "monthly",
+        "unit": "百萬港元",
+        "display_unit": "億港元",
+        "chart_value_transform": {
+          "scale": 0.01,
+          "raw_unit": "百萬港元",
+          "display_unit": "億港元"
+        },
+        "period_start": "1952-01-31",
+        "period_end": "2026-01-31",
+        "x_axis_label": "月份",
+        "y_axis_label": "有形貿易差額 (億港元)",
+        "value_label": "有形貿易差額",
+        "time_label": "月份",
+        "suggested_ticks": [
+          "2025-02",
+          "2025-08",
+          "2026-01"
+        ]
+      },
+      "chart_points": [
+        {
+          "as_of_date": "2025-02-28",
+          "as_of_label": "2025年2月",
+          "tick_label": "2025-02",
+          "value": -36315,
+          "display_value_text": "-363.2億",
+          "tooltip_title": "2025年2月",
+          "tooltip_value_text": "-363.2億"
+        },
+        {
+          "as_of_date": "2025-03-31",
+          "as_of_label": "2025年3月",
+          "tick_label": "2025-03",
+          "value": -45357,
+          "display_value_text": "-453.6億",
+          "tooltip_title": "2025年3月",
+          "tooltip_value_text": "-453.6億"
+        },
+        {
+          "as_of_date": "2025-04-30",
+          "as_of_label": "2025年4月",
+          "tick_label": "2025-04",
+          "value": -16007,
+          "display_value_text": "-160.1億",
+          "tooltip_title": "2025年4月",
+          "tooltip_value_text": "-160.1億"
+        },
+        {
+          "as_of_date": "2025-05-31",
+          "as_of_label": "2025年5月",
+          "tick_label": "2025-05",
+          "value": -27325,
+          "display_value_text": "-273.3億",
+          "tooltip_title": "2025年5月",
+          "tooltip_value_text": "-273.3億"
+        },
+        {
+          "as_of_date": "2025-06-30",
+          "as_of_label": "2025年6月",
+          "tick_label": "2025-06",
+          "value": -58925,
+          "display_value_text": "-589.3億",
+          "tooltip_title": "2025年6月",
+          "tooltip_value_text": "-589.3億"
+        },
+        {
+          "as_of_date": "2025-07-31",
+          "as_of_label": "2025年7月",
+          "tick_label": "2025-07",
+          "value": -34120,
+          "display_value_text": "-341.2億",
+          "tooltip_title": "2025年7月",
+          "tooltip_value_text": "-341.2億"
+        },
+        {
+          "as_of_date": "2025-08-31",
+          "as_of_label": "2025年8月",
+          "tick_label": "2025-08",
+          "value": -25415,
+          "display_value_text": "-254.2億",
+          "tooltip_title": "2025年8月",
+          "tooltip_value_text": "-254.2億"
+        },
+        {
+          "as_of_date": "2025-09-30",
+          "as_of_label": "2025年9月",
+          "tick_label": "2025-09",
+          "value": -50171,
+          "display_value_text": "-501.7億",
+          "tooltip_title": "2025年9月",
+          "tooltip_value_text": "-501.7億"
+        },
+        {
+          "as_of_date": "2025-10-31",
+          "as_of_label": "2025年10月",
+          "tick_label": "2025-10",
+          "value": -39947,
+          "display_value_text": "-399.5億",
+          "tooltip_title": "2025年10月",
+          "tooltip_value_text": "-399.5億"
+        },
+        {
+          "as_of_date": "2025-11-30",
+          "as_of_label": "2025年11月",
+          "tick_label": "2025-11",
+          "value": -48515,
+          "display_value_text": "-485.2億",
+          "tooltip_title": "2025年11月",
+          "tooltip_value_text": "-485.2億"
+        },
+        {
+          "as_of_date": "2025-12-31",
+          "as_of_label": "2025年12月",
+          "tick_label": "2025-12",
+          "value": -63253,
+          "display_value_text": "-632.5億",
+          "tooltip_title": "2025年12月",
+          "tooltip_value_text": "-632.5億"
+        },
+        {
+          "as_of_date": "2026-01-31",
+          "as_of_label": "2026年1月",
+          "tick_label": "2026-01",
+          "value": -14094,
+          "display_value_text": "-140.9億",
+          "tooltip_title": "2026年1月",
+          "tooltip_value_text": "-140.9億"
+        }
+      ],
+      "sparkline_definition": {
+        "series_id": "censtatd|410-50001|freq=M|measure=BAL|label=百萬港元",
+        "metric_type": "level",
+        "comparison_basis": "same_period_last_year",
+        "unit": "百萬港元",
+        "frequency": "monthly"
+      },
+      "sparkline_points": [
+        {
+          "as_of_date": "2025-02-28",
+          "as_of_label": "2025年2月",
+          "value": -36315
+        },
+        {
+          "as_of_date": "2025-03-31",
+          "as_of_label": "2025年3月",
+          "value": -45357
+        },
+        {
+          "as_of_date": "2025-04-30",
+          "as_of_label": "2025年4月",
+          "value": -16007
+        },
+        {
+          "as_of_date": "2025-05-31",
+          "as_of_label": "2025年5月",
+          "value": -27325
+        },
+        {
+          "as_of_date": "2025-06-30",
+          "as_of_label": "2025年6月",
+          "value": -58925
+        },
+        {
+          "as_of_date": "2025-07-31",
+          "as_of_label": "2025年7月",
+          "value": -34120
+        },
+        {
+          "as_of_date": "2025-08-31",
+          "as_of_label": "2025年8月",
+          "value": -25415
+        },
+        {
+          "as_of_date": "2025-09-30",
+          "as_of_label": "2025年9月",
+          "value": -50171
+        },
+        {
+          "as_of_date": "2025-10-31",
+          "as_of_label": "2025年10月",
+          "value": -39947
+        },
+        {
+          "as_of_date": "2025-11-30",
+          "as_of_label": "2025年11月",
+          "value": -48515
+        },
+        {
+          "as_of_date": "2025-12-31",
+          "as_of_label": "2025年12月",
+          "value": -63253
+        },
+        {
+          "as_of_date": "2026-01-31",
+          "as_of_label": "2026年1月",
+          "value": -14094
+        }
+      ],
+      "validation_state": "ok",
+      "validation_messages": [],
+      "expected_update": "每月",
+      "balance_position": "deficit",
+      "previous_balance_position": "surplus",
+      "balance_change_narrative": "surplus_to_deficit",
+      "display_change_narrative_text": "較去年同月（2025年1月） 由順差轉為逆差 161.7億",
+      "last_successful_fetch_at": "2026-03-18T10:40:51.560Z"
+    }
+  ]
+}

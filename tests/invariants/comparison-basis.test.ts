@@ -25,6 +25,18 @@ test("comparison basis is explicit and preserved into UI text", () => {
     .metrics.find((item: any) => item.id === "statutory_minimum_wage_next");
   assert.equal(minimumWage.comparison_type, "event_previous_effective");
 
+  const vacancies = canonical.cards
+    .find((item: any) => item.id === "employment")
+    .metrics.find((item: any) => item.id === "vacancies");
+  assert.equal(vacancies.comparison_type, "same_period_last_year");
+  assert.equal(vacancies.comparison_basis_label_tc, "較去年同期");
+
+  const pce = canonical.cards
+    .find((item: any) => item.id === "gdp")
+    .metrics.find((item: any) => item.id === "private_consumption_expenditure");
+  assert.equal(pce.comparison_type, "previous_observation");
+  assert.equal(pce.comparison_period_label, "2025年第3季");
+
   const uiPopulation = ui.cards
     .find((item: any) => item.id === "population")
     .metrics.find((item: any) => item.id === "population_total");

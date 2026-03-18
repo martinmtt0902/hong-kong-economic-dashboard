@@ -63,6 +63,19 @@ export function parseOfficialPeriod(raw: string, frequency: Frequency): ParsedPe
     }
   }
 
+  if (frequency === "monthly") {
+    const isoMonthMatch = text.match(/^(?<year>\d{4})-(?<month>\d{2})$/);
+    if (isoMonthMatch?.groups) {
+      const year = Number(isoMonthMatch.groups.year);
+      const month = Number(isoMonthMatch.groups.month);
+      return {
+        period_key: `${year}-${String(month).padStart(2, "0")}`,
+        as_of_date: monthEndIso(year, month),
+        as_of_label: `${year}年${month}月`
+      };
+    }
+  }
+
   if (frequency === "annual") {
     const yearMatch = text.match(/(?<!\d)(\d{4})(?!\d)/);
     if (yearMatch) {
@@ -99,6 +112,28 @@ export function parseOfficialPeriod(raw: string, frequency: Frequency): ParsedPe
         period_key: `${year}-${String(month).padStart(2, "0")}`,
         as_of_date: monthEndIso(year, month),
         as_of_label: `${year}年${month}月`
+      };
+    }
+  }
+
+  return {
+    period_key: text,
+    as_of_date: text,
+    as_of_label: text
+  };
+}
+
+export function parseQuarterEndMonthPeriod(raw: string): ParsedPeriod {
+  const text = raw.trim();
+  if (/^\d{6}$/.test(text)) {
+    const year = Number(text.slice(0, 4));
+    const month = Number(text.slice(4, 6));
+    if ([3, 6, 9, 12].includes(month)) {
+      const quarter = month / 3;
+      return {
+        period_key: `${year}-Q${quarter}`,
+        as_of_date: monthEndIso(year, month),
+        as_of_label: `${year}年第${quarter}季`
       };
     }
   }

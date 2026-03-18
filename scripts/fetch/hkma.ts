@@ -26,8 +26,45 @@ export async function fetchHibor1MObservations(source: SourceRef, seriesLabel: s
   ]);
 }
 
+export async function fetchM3Observations(source: SourceRef, seriesLabel: string): Promise<RawObservation[]> {
+  const records = await fetchHkmaMonetaryStatisticsRecords();
+  const points: RawObservation[] = [];
+
+  for (const record of records) {
+    const rawDate = pickString(record, ["end_of_month"]);
+    const rawValue = pickNumber(record, ["m3_total"]);
+    if (!rawDate || rawDate.endsWith("-00") || typeof rawValue !== "number") {
+      continue;
+    }
+
+    const parsed = parseOfficialPeriod(rawDate, "monthly");
+    points.push({
+      source,
+      series_id: "hkma|m3_total",
+      series_label_tc: seriesLabel,
+      frequency: "monthly",
+      dimensions: {},
+      measure_code: "m3_total",
+      measure_aliases: ["m3_total"],
+      measure_label_tc: seriesLabel,
+      period_raw: rawDate,
+      as_of_date: parsed.as_of_date,
+      as_of_label: parsed.as_of_label,
+      value: rawValue,
+      unit: "百萬港元"
+    });
+  }
+
+  return points.sort((left, right) => left.as_of_date.localeCompare(right.as_of_date));
+}
+
 async function fetchHkmaRecords(): Promise<Array<Record<string, unknown>>> {
   const payload = await fetchJson<HkmaResponse>(URLs.hkmaInterbankLiquidity);
+  return payload.result?.records ?? payload.records ?? [];
+}
+
+async function fetchHkmaMonetaryStatisticsRecords(): Promise<Array<Record<string, unknown>>> {
+  const payload = await fetchJson<HkmaResponse>(URLs.hkmaMonetaryStatistics);
   return payload.result?.records ?? payload.records ?? [];
 }
 

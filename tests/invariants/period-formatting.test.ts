@@ -6,7 +6,7 @@ test("period labels are normalized to dates or periods", () => {
   const canonical = readJson<any>("public/data/dashboard.v2.json");
 
   const employment = canonical.cards.find((item: any) => item.id === "employment");
-  assert.equal(employment.latest_as_of_label, "2025年11月–2026年1月");
+  assert.equal(employment.latest_as_of_label, "2025年12月–2026年2月");
 
   const gdp = canonical.cards.find((item: any) => item.id === "gdp");
   assert.equal(gdp.latest_as_of_label, "2025年第4季");
@@ -22,4 +22,9 @@ test("period labels are normalized to dates or periods", () => {
     .find((item: any) => item.id === "minimum-wage")
     .metrics.find((item: any) => item.id === "statutory_minimum_wage_next");
   assert.equal(minimumWage.as_of_label, "2026-05-01");
+
+  const vacancies = canonical.cards
+    .find((item: any) => item.id === "employment")
+    .metrics.find((item: any) => item.id === "vacancies");
+  assert.equal(vacancies.as_of_label, "2025年第3季");
 });

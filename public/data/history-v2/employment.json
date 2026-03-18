@@ -1,8 +1,8 @@
 {
   "id": "employment",
   "title_tc": "就業",
-  "latest_as_of_date": "2026-01-31",
-  "latest_as_of_label": "2025年11月–2026年1月",
+  "latest_as_of_date": "2026-02-28",
+  "latest_as_of_label": "2025年12月–2026年2月",
   "metrics": [
     {
       "id": "unemployment",
@@ -10,12 +10,18 @@
       "label_tc": "失業率",
       "source": {
         "publisher": "政府統計處",
+        "source_system": "censtatd_api",
+        "dataset_id": "hk-censtatd-tablechart-210-06101",
         "dataset_url": "https://data.gov.hk/en-data/dataset/hk-censtatd-tablechart-210-06101",
         "api_url": "https://www.censtatd.gov.hk/api/get.php?full_series=1&id=210-06101&lang=tc",
         "table_id": "210-06101"
       },
+      "source_system": "censtatd_api",
+      "dataset_id": "hk-censtatd-tablechart-210-06101",
+      "table_id": "210-06101",
       "series_id": "censtatd|210-06101|SEX=|freq=M3M|measure=SAUR|label=(%)",
       "metric_type": "level",
+      "render_strategy": "default",
       "frequency": "monthly",
       "unit": "%",
       "display_unit": "%",
@@ -24,19 +30,22 @@
         "change_decimals": 1,
         "previous_decimals": 1
       },
-      "as_of_date": "2026-01-31",
-      "as_of_label": "2025年11月–2026年1月",
-      "latest_value": 3.9,
-      "previous_value": 3.8,
-      "previous_as_of_date": "2025-12-31",
-      "previous_as_of_label": "2025年10月–2025年12月",
-      "change_value": 0.1,
+      "as_of_date": "2026-02-28",
+      "as_of_label": "2025年12月–2026年2月",
+      "latest_value": 3.8,
+      "previous_value": 3.9,
+      "previous_as_of_date": "2026-01-31",
+      "previous_as_of_label": "2025年11月–2026年1月",
+      "change_value": -0.1,
+      "raw_change_value": -0.1,
       "change_type": "percentage_point_change",
       "comparison_type": "previous_rolling_window",
       "comparison_basis": "previous_rolling_window",
       "comparison_basis_label_tc": "較上一個三個月移動窗",
-      "comparison_period_label": "2025年10月–12月",
+      "comparison_period_label": "2025年11月–2026年1月",
       "data_origin": "live",
+      "chart_series": "censtatd|210-06101|SEX=|freq=M3M|measure=SAUR|label=(%)",
+      "chart_metric_type": "level",
       "chart_definition": {
         "series_id": "censtatd|210-06101|SEX=|freq=M3M|measure=SAUR|label=(%)",
         "metric_type": "level",
@@ -50,27 +59,18 @@
           "display_unit": "%"
         },
         "period_start": "1985-03-31",
-        "period_end": "2026-01-31",
+        "period_end": "2026-02-28",
         "x_axis_label": "三個月移動期間",
         "y_axis_label": "失業率 (%)",
         "value_label": "失業率",
         "time_label": "三個月移動期間",
         "suggested_ticks": [
-          "2024-12",
-          "2025-06",
-          "2025-11"
+          "2025-01",
+          "2025-07",
+          "2025-12"
         ]
       },
       "chart_points": [
-        {
-          "as_of_date": "2025-02-28",
-          "as_of_label": "2024年12月–2025年2月",
-          "tick_label": "2024-12",
-          "value": 3.2,
-          "display_value_text": "3.2%",
-          "tooltip_title": "2024年12月–2025年2月",
-          "tooltip_value_text": "3.2%"
-        },
         {
           "as_of_date": "2025-03-31",
           "as_of_label": "2025年1月–2025年3月",
@@ -169,6 +169,15 @@
           "display_value_text": "3.9%",
           "tooltip_title": "2025年11月–2026年1月",
           "tooltip_value_text": "3.9%"
+        },
+        {
+          "as_of_date": "2026-02-28",
+          "as_of_label": "2025年12月–2026年2月",
+          "tick_label": "2025-12",
+          "value": 3.8,
+          "display_value_text": "3.8%",
+          "tooltip_title": "2025年12月–2026年2月",
+          "tooltip_value_text": "3.8%"
         }
       ],
       "sparkline_definition": {
@@ -179,11 +188,6 @@
         "frequency": "monthly"
       },
       "sparkline_points": [
-        {
-          "as_of_date": "2025-02-28",
-          "as_of_label": "2024年12月–2025年2月",
-          "value": 3.2
-        },
         {
           "as_of_date": "2025-03-31",
           "as_of_label": "2025年1月–2025年3月",
@@ -238,12 +242,17 @@
           "as_of_date": "2026-01-31",
           "as_of_label": "2025年11月–2026年1月",
           "value": 3.9
+        },
+        {
+          "as_of_date": "2026-02-28",
+          "as_of_label": "2025年12月–2026年2月",
+          "value": 3.8
         }
       ],
       "validation_state": "ok",
       "validation_messages": [],
       "expected_update": "每月",
-      "last_successful_fetch_at": "2026-03-18T08:22:14.148Z"
+      "last_successful_fetch_at": "2026-03-18T10:40:51.560Z"
     },
     {
       "id": "underemployment",
@@ -251,12 +260,18 @@
       "label_tc": "就業不足率",
       "source": {
         "publisher": "政府統計處",
+        "source_system": "censtatd_api",
+        "dataset_id": "hk-censtatd-tablechart-210-06101",
         "dataset_url": "https://data.gov.hk/en-data/dataset/hk-censtatd-tablechart-210-06101",
         "api_url": "https://www.censtatd.gov.hk/api/get.php?full_series=1&id=210-06101&lang=tc",
         "table_id": "210-06101"
       },
+      "source_system": "censtatd_api",
+      "dataset_id": "hk-censtatd-tablechart-210-06101",
+      "table_id": "210-06101",
       "series_id": "censtatd|210-06101|SEX=|freq=M3M|measure=UDR|label=(%)",
       "metric_type": "level",
+      "render_strategy": "default",
       "frequency": "monthly",
       "unit": "%",
       "display_unit": "%",
@@ -265,19 +280,22 @@
         "change_decimals": 1,
         "previous_decimals": 1
       },
-      "as_of_date": "2026-01-31",
-      "as_of_label": "2025年11月–2026年1月",
+      "as_of_date": "2026-02-28",
+      "as_of_label": "2025年12月–2026年2月",
       "latest_value": 1.7,
       "previous_value": 1.7,
-      "previous_as_of_date": "2025-12-31",
-      "previous_as_of_label": "2025年10月–2025年12月",
+      "previous_as_of_date": "2026-01-31",
+      "previous_as_of_label": "2025年11月–2026年1月",
       "change_value": 0,
+      "raw_change_value": 0,
       "change_type": "percentage_point_change",
       "comparison_type": "previous_rolling_window",
       "comparison_basis": "previous_rolling_window",
       "comparison_basis_label_tc": "較上一個三個月移動窗",
-      "comparison_period_label": "2025年10月–12月",
+      "comparison_period_label": "2025年11月–2026年1月",
       "data_origin": "live",
+      "chart_series": "censtatd|210-06101|SEX=|freq=M3M|measure=UDR|label=(%)",
+      "chart_metric_type": "level",
       "chart_definition": {
         "series_id": "censtatd|210-06101|SEX=|freq=M3M|measure=UDR|label=(%)",
         "metric_type": "level",
@@ -291,27 +309,18 @@
           "display_unit": "%"
         },
         "period_start": "1985-03-31",
-        "period_end": "2026-01-31",
+        "period_end": "2026-02-28",
         "x_axis_label": "三個月移動期間",
         "y_axis_label": "就業不足率 (%)",
         "value_label": "就業不足率",
         "time_label": "三個月移動期間",
         "suggested_ticks": [
-          "2024-12",
-          "2025-06",
-          "2025-11"
+          "2025-01",
+          "2025-07",
+          "2025-12"
         ]
       },
       "chart_points": [
-        {
-          "as_of_date": "2025-02-28",
-          "as_of_label": "2024年12月–2025年2月",
-          "tick_label": "2024-12",
-          "value": 1.1,
-          "display_value_text": "1.1%",
-          "tooltip_title": "2024年12月–2025年2月",
-          "tooltip_value_text": "1.1%"
-        },
         {
           "as_of_date": "2025-03-31",
           "as_of_label": "2025年1月–2025年3月",
@@ -410,6 +419,15 @@
           "display_value_text": "1.7%",
           "tooltip_title": "2025年11月–2026年1月",
           "tooltip_value_text": "1.7%"
+        },
+        {
+          "as_of_date": "2026-02-28",
+          "as_of_label": "2025年12月–2026年2月",
+          "tick_label": "2025-12",
+          "value": 1.7,
+          "display_value_text": "1.7%",
+          "tooltip_title": "2025年12月–2026年2月",
+          "tooltip_value_text": "1.7%"
         }
       ],
       "sparkline_definition": {
@@ -420,11 +438,6 @@
         "frequency": "monthly"
       },
       "sparkline_points": [
-        {
-          "as_of_date": "2025-02-28",
-          "as_of_label": "2024年12月–2025年2月",
-          "value": 1.1
-        },
         {
           "as_of_date": "2025-03-31",
           "as_of_label": "2025年1月–2025年3月",
@@ -479,12 +492,17 @@
           "as_of_date": "2026-01-31",
           "as_of_label": "2025年11月–2026年1月",
           "value": 1.7
+        },
+        {
+          "as_of_date": "2026-02-28",
+          "as_of_label": "2025年12月–2026年2月",
+          "value": 1.7
         }
       ],
       "validation_state": "ok",
       "validation_messages": [],
       "expected_update": "每月",
-      "last_successful_fetch_at": "2026-03-18T08:22:14.148Z"
+      "last_successful_fetch_at": "2026-03-18T10:40:51.560Z"
     },
     {
       "id": "labour_force",
@@ -492,12 +510,18 @@
       "label_tc": "勞動人口",
       "source": {
         "publisher": "政府統計處",
+        "source_system": "censtatd_api",
+        "dataset_id": "hk-censtatd-tablechart-210-06101",
         "dataset_url": "https://data.gov.hk/en-data/dataset/hk-censtatd-tablechart-210-06101",
         "api_url": "https://www.censtatd.gov.hk/api/get.php?full_series=1&id=210-06101&lang=tc",
         "table_id": "210-06101"
       },
+      "source_system": "censtatd_api",
+      "dataset_id": "hk-censtatd-tablechart-210-06101",
+      "table_id": "210-06101",
       "series_id": "censtatd|210-06101|SEX=|freq=M3M|measure=LF|label=千人",
       "metric_type": "level",
+      "render_strategy": "default",
       "frequency": "monthly",
       "unit": "人",
       "display_unit": "人",
@@ -506,19 +530,22 @@
         "change_decimals": 0,
         "previous_decimals": 0
       },
-      "as_of_date": "2026-01-31",
-      "as_of_label": "2025年11月–2026年1月",
-      "latest_value": 3804300,
-      "previous_value": 3805200,
-      "previous_as_of_date": "2025-12-31",
-      "previous_as_of_label": "2025年10月–2025年12月",
-      "change_value": -900,
+      "as_of_date": "2026-02-28",
+      "as_of_label": "2025年12月–2026年2月",
+      "latest_value": 3797700,
+      "previous_value": 3804300,
+      "previous_as_of_date": "2026-01-31",
+      "previous_as_of_label": "2025年11月–2026年1月",
+      "change_value": -6600,
+      "raw_change_value": -6600,
       "change_type": "absolute_change",
       "comparison_type": "previous_rolling_window",
       "comparison_basis": "previous_rolling_window",
       "comparison_basis_label_tc": "較上一個三個月移動窗",
-      "comparison_period_label": "2025年10月–12月",
+      "comparison_period_label": "2025年11月–2026年1月",
       "data_origin": "live",
+      "chart_series": "censtatd|210-06101|SEX=|freq=M3M|measure=LF|label=千人",
+      "chart_metric_type": "level",
       "chart_definition": {
         "series_id": "censtatd|210-06101|SEX=|freq=M3M|measure=LF|label=千人",
         "metric_type": "level",
@@ -532,27 +559,18 @@
           "display_unit": "人"
         },
         "period_start": "1985-03-31",
-        "period_end": "2026-01-31",
+        "period_end": "2026-02-28",
         "x_axis_label": "三個月移動期間",
         "y_axis_label": "勞動人口 (人)",
         "value_label": "勞動人口",
         "time_label": "三個月移動期間",
         "suggested_ticks": [
-          "2024-12",
-          "2025-06",
-          "2025-11"
+          "2025-01",
+          "2025-07",
+          "2025-12"
         ]
       },
       "chart_points": [
-        {
-          "as_of_date": "2025-02-28",
-          "as_of_label": "2024年12月–2025年2月",
-          "tick_label": "2024-12",
-          "value": 3821300,
-          "display_value_text": "3,821,300 人",
-          "tooltip_title": "2024年12月–2025年2月",
-          "tooltip_value_text": "3,821,300 人"
-        },
         {
           "as_of_date": "2025-03-31",
           "as_of_label": "2025年1月–2025年3月",
@@ -651,6 +669,15 @@
           "display_value_text": "3,804,300 人",
           "tooltip_title": "2025年11月–2026年1月",
           "tooltip_value_text": "3,804,300 人"
+        },
+        {
+          "as_of_date": "2026-02-28",
+          "as_of_label": "2025年12月–2026年2月",
+          "tick_label": "2025-12",
+          "value": 3797700,
+          "display_value_text": "3,797,700 人",
+          "tooltip_title": "2025年12月–2026年2月",
+          "tooltip_value_text": "3,797,700 人"
         }
       ],
       "sparkline_definition": {
@@ -661,11 +688,6 @@
         "frequency": "monthly"
       },
       "sparkline_points": [
-        {
-          "as_of_date": "2025-02-28",
-          "as_of_label": "2024年12月–2025年2月",
-          "value": 3821300
-        },
         {
           "as_of_date": "2025-03-31",
           "as_of_label": "2025年1月–2025年3月",
@@ -720,12 +742,526 @@
           "as_of_date": "2026-01-31",
           "as_of_label": "2025年11月–2026年1月",
           "value": 3804300
+        },
+        {
+          "as_of_date": "2026-02-28",
+          "as_of_label": "2025年12月–2026年2月",
+          "value": 3797700
         }
       ],
       "validation_state": "ok",
       "validation_messages": [],
       "expected_update": "每月",
-      "last_successful_fetch_at": "2026-03-18T08:22:14.148Z"
+      "last_successful_fetch_at": "2026-03-18T10:40:51.560Z"
+    },
+    {
+      "id": "labour_force_participation_rate",
+      "card_id": "employment",
+      "label_tc": "勞動人口參與率",
+      "source": {
+        "publisher": "政府統計處",
+        "source_system": "censtatd_api",
+        "dataset_id": "hk-censtatd-tablechart-210-06201",
+        "dataset_url": "https://data.gov.hk/en-data/dataset/hk-censtatd-tablechart-210-06201",
+        "api_url": "https://www.censtatd.gov.hk/api/get.php?full_series=1&id=210-06201&lang=tc",
+        "table_id": "210-06201",
+        "dataset_title": "按年齡及性別劃分的勞動人口及勞動人口參與率",
+        "statistical_framework": "General Household Survey / Labour Force Statistics"
+      },
+      "source_system": "censtatd_api",
+      "dataset_id": "hk-censtatd-tablechart-210-06201",
+      "table_id": "210-06201",
+      "dataset_title": "按年齡及性別劃分的勞動人口及勞動人口參與率",
+      "statistical_framework": "General Household Survey / Labour Force Statistics",
+      "series_id": "censtatd|210-06201|AGE=|SEX=|freq=M3M|measure=LFPR|label=(%)",
+      "metric_type": "level",
+      "render_strategy": "default",
+      "frequency": "monthly",
+      "unit": "%",
+      "display_unit": "%",
+      "rounding_policy": {
+        "value_decimals": 1,
+        "change_decimals": 1,
+        "previous_decimals": 1
+      },
+      "as_of_date": "2026-02-28",
+      "as_of_label": "2025年12月–2026年2月",
+      "latest_value": 56.5,
+      "previous_value": 56.7,
+      "previous_as_of_date": "2026-01-31",
+      "previous_as_of_label": "2025年11月–2026年1月",
+      "change_value": -0.2,
+      "raw_change_value": -0.2,
+      "change_type": "percentage_point_change",
+      "comparison_type": "previous_rolling_window",
+      "comparison_basis": "previous_rolling_window",
+      "comparison_basis_label_tc": "較上一個三個月移動窗",
+      "comparison_period_label": "2025年11月–2026年1月",
+      "data_origin": "live",
+      "chart_series": "censtatd|210-06201|AGE=|SEX=|freq=M3M|measure=LFPR|label=(%)",
+      "chart_metric_type": "level",
+      "chart_definition": {
+        "series_id": "censtatd|210-06201|AGE=|SEX=|freq=M3M|measure=LFPR|label=(%)",
+        "metric_type": "level",
+        "chart_type": "line",
+        "frequency": "monthly",
+        "unit": "%",
+        "display_unit": "%",
+        "chart_value_transform": {
+          "scale": 1,
+          "raw_unit": "%",
+          "display_unit": "%"
+        },
+        "period_start": "1985-03-31",
+        "period_end": "2026-02-28",
+        "x_axis_label": "三個月移動期間",
+        "y_axis_label": "勞動人口參與率 (%)",
+        "value_label": "勞動人口參與率",
+        "time_label": "三個月移動期間",
+        "suggested_ticks": [
+          "2025-01",
+          "2025-07",
+          "2025-12"
+        ]
+      },
+      "chart_points": [
+        {
+          "as_of_date": "2025-03-31",
+          "as_of_label": "2025年1月–2025年3月",
+          "tick_label": "2025-01",
+          "value": 56.9,
+          "display_value_text": "56.9%",
+          "tooltip_title": "2025年1月–2025年3月",
+          "tooltip_value_text": "56.9%"
+        },
+        {
+          "as_of_date": "2025-04-30",
+          "as_of_label": "2025年2月–2025年4月",
+          "tick_label": "2025-02",
+          "value": 56.8,
+          "display_value_text": "56.8%",
+          "tooltip_title": "2025年2月–2025年4月",
+          "tooltip_value_text": "56.8%"
+        },
+        {
+          "as_of_date": "2025-05-31",
+          "as_of_label": "2025年3月–2025年5月",
+          "tick_label": "2025-03",
+          "value": 56.7,
+          "display_value_text": "56.7%",
+          "tooltip_title": "2025年3月–2025年5月",
+          "tooltip_value_text": "56.7%"
+        },
+        {
+          "as_of_date": "2025-06-30",
+          "as_of_label": "2025年4月–2025年6月",
+          "tick_label": "2025-04",
+          "value": 56.7,
+          "display_value_text": "56.7%",
+          "tooltip_title": "2025年4月–2025年6月",
+          "tooltip_value_text": "56.7%"
+        },
+        {
+          "as_of_date": "2025-07-31",
+          "as_of_label": "2025年5月–2025年7月",
+          "tick_label": "2025-05",
+          "value": 57,
+          "display_value_text": "57.0%",
+          "tooltip_title": "2025年5月–2025年7月",
+          "tooltip_value_text": "57.0%"
+        },
+        {
+          "as_of_date": "2025-08-31",
+          "as_of_label": "2025年6月–2025年8月",
+          "tick_label": "2025-06",
+          "value": 57.2,
+          "display_value_text": "57.2%",
+          "tooltip_title": "2025年6月–2025年8月",
+          "tooltip_value_text": "57.2%"
+        },
+        {
+          "as_of_date": "2025-09-30",
+          "as_of_label": "2025年7月–2025年9月",
+          "tick_label": "2025-07",
+          "value": 57.1,
+          "display_value_text": "57.1%",
+          "tooltip_title": "2025年7月–2025年9月",
+          "tooltip_value_text": "57.1%"
+        },
+        {
+          "as_of_date": "2025-10-31",
+          "as_of_label": "2025年8月–2025年10月",
+          "tick_label": "2025-08",
+          "value": 57,
+          "display_value_text": "57.0%",
+          "tooltip_title": "2025年8月–2025年10月",
+          "tooltip_value_text": "57.0%"
+        },
+        {
+          "as_of_date": "2025-11-30",
+          "as_of_label": "2025年9月–2025年11月",
+          "tick_label": "2025-09",
+          "value": 56.9,
+          "display_value_text": "56.9%",
+          "tooltip_title": "2025年9月–2025年11月",
+          "tooltip_value_text": "56.9%"
+        },
+        {
+          "as_of_date": "2025-12-31",
+          "as_of_label": "2025年10月–2025年12月",
+          "tick_label": "2025-10",
+          "value": 56.7,
+          "display_value_text": "56.7%",
+          "tooltip_title": "2025年10月–2025年12月",
+          "tooltip_value_text": "56.7%"
+        },
+        {
+          "as_of_date": "2026-01-31",
+          "as_of_label": "2025年11月–2026年1月",
+          "tick_label": "2025-11",
+          "value": 56.7,
+          "display_value_text": "56.7%",
+          "tooltip_title": "2025年11月–2026年1月",
+          "tooltip_value_text": "56.7%"
+        },
+        {
+          "as_of_date": "2026-02-28",
+          "as_of_label": "2025年12月–2026年2月",
+          "tick_label": "2025-12",
+          "value": 56.5,
+          "display_value_text": "56.5%",
+          "tooltip_title": "2025年12月–2026年2月",
+          "tooltip_value_text": "56.5%"
+        }
+      ],
+      "sparkline_definition": {
+        "series_id": "censtatd|210-06201|AGE=|SEX=|freq=M3M|measure=LFPR|label=(%)",
+        "metric_type": "level",
+        "comparison_basis": "previous_rolling_window",
+        "unit": "%",
+        "frequency": "monthly"
+      },
+      "sparkline_points": [
+        {
+          "as_of_date": "2025-03-31",
+          "as_of_label": "2025年1月–2025年3月",
+          "value": 56.9
+        },
+        {
+          "as_of_date": "2025-04-30",
+          "as_of_label": "2025年2月–2025年4月",
+          "value": 56.8
+        },
+        {
+          "as_of_date": "2025-05-31",
+          "as_of_label": "2025年3月–2025年5月",
+          "value": 56.7
+        },
+        {
+          "as_of_date": "2025-06-30",
+          "as_of_label": "2025年4月–2025年6月",
+          "value": 56.7
+        },
+        {
+          "as_of_date": "2025-07-31",
+          "as_of_label": "2025年5月–2025年7月",
+          "value": 57
+        },
+        {
+          "as_of_date": "2025-08-31",
+          "as_of_label": "2025年6月–2025年8月",
+          "value": 57.2
+        },
+        {
+          "as_of_date": "2025-09-30",
+          "as_of_label": "2025年7月–2025年9月",
+          "value": 57.1
+        },
+        {
+          "as_of_date": "2025-10-31",
+          "as_of_label": "2025年8月–2025年10月",
+          "value": 57
+        },
+        {
+          "as_of_date": "2025-11-30",
+          "as_of_label": "2025年9月–2025年11月",
+          "value": 56.9
+        },
+        {
+          "as_of_date": "2025-12-31",
+          "as_of_label": "2025年10月–2025年12月",
+          "value": 56.7
+        },
+        {
+          "as_of_date": "2026-01-31",
+          "as_of_label": "2025年11月–2026年1月",
+          "value": 56.7
+        },
+        {
+          "as_of_date": "2026-02-28",
+          "as_of_label": "2025年12月–2026年2月",
+          "value": 56.5
+        }
+      ],
+      "validation_state": "ok",
+      "validation_messages": [],
+      "expected_update": "每月",
+      "last_successful_fetch_at": "2026-03-18T10:40:51.560Z"
+    },
+    {
+      "id": "vacancies",
+      "card_id": "employment",
+      "label_tc": "職位空缺數",
+      "source": {
+        "publisher": "政府統計處",
+        "source_system": "censtatd_api",
+        "dataset_id": "hk-censtatd-tablechart-215-16007",
+        "dataset_url": "https://data.gov.hk/en-data/dataset/hk-censtatd-tablechart-215-16007",
+        "api_url": "https://www.censtatd.gov.hk/api/get.php?full_series=1&id=215-16007&lang=tc",
+        "table_id": "215-16007",
+        "dataset_title": "按行業主類及主要職業組別劃分的職位空缺數目（公務員除外）",
+        "statistical_framework": "Employment and Vacancies Statistics / establishment-based"
+      },
+      "source_system": "censtatd_api",
+      "dataset_id": "hk-censtatd-tablechart-215-16007",
+      "table_id": "215-16007",
+      "dataset_title": "按行業主類及主要職業組別劃分的職位空缺數目（公務員除外）",
+      "statistical_framework": "Employment and Vacancies Statistics / establishment-based",
+      "series_id": "censtatd|215-16007|IND=|OCC=|freq=M|measure=VAC|label=數目",
+      "metric_type": "level",
+      "render_strategy": "default",
+      "frequency": "quarterly",
+      "unit": "個",
+      "display_unit": "個",
+      "rounding_policy": {
+        "value_decimals": 0,
+        "change_decimals": 0,
+        "previous_decimals": 0
+      },
+      "as_of_date": "2025-09-30",
+      "as_of_label": "2025年第3季",
+      "latest_value": 51452,
+      "previous_value": 66457,
+      "previous_as_of_date": "2024-09-30",
+      "previous_as_of_label": "2024年第3季",
+      "change_value": -15005,
+      "raw_change_value": -15005,
+      "change_type": "absolute_change",
+      "comparison_type": "same_period_last_year",
+      "comparison_basis": "same_period_last_year",
+      "comparison_basis_label_tc": "較去年同期",
+      "comparison_period_label": "2024年第3季",
+      "data_origin": "live",
+      "chart_series": "censtatd|215-16007|IND=|OCC=|freq=M|measure=VAC|label=數目",
+      "chart_metric_type": "level",
+      "chart_definition": {
+        "series_id": "censtatd|215-16007|IND=|OCC=|freq=M|measure=VAC|label=數目",
+        "metric_type": "level",
+        "chart_type": "line",
+        "frequency": "quarterly",
+        "unit": "個",
+        "display_unit": "個",
+        "chart_value_transform": {
+          "scale": 1,
+          "raw_unit": "個",
+          "display_unit": "個"
+        },
+        "period_start": "2016-03-31",
+        "period_end": "2025-09-30",
+        "x_axis_label": "季度",
+        "y_axis_label": "職位空缺數 (個)",
+        "value_label": "職位空缺數",
+        "time_label": "季度",
+        "suggested_ticks": [
+          "2022Q4",
+          "2024Q2",
+          "2025Q3"
+        ]
+      },
+      "chart_points": [
+        {
+          "as_of_date": "2022-12-31",
+          "as_of_label": "2022年第4季",
+          "tick_label": "2022Q4",
+          "value": 73148,
+          "display_value_text": "73,148 個",
+          "tooltip_title": "2022年第4季",
+          "tooltip_value_text": "73,148 個"
+        },
+        {
+          "as_of_date": "2023-03-31",
+          "as_of_label": "2023年第1季",
+          "tick_label": "2023Q1",
+          "value": 77751,
+          "display_value_text": "77,751 個",
+          "tooltip_title": "2023年第1季",
+          "tooltip_value_text": "77,751 個"
+        },
+        {
+          "as_of_date": "2023-06-30",
+          "as_of_label": "2023年第2季",
+          "tick_label": "2023Q2",
+          "value": 81464,
+          "display_value_text": "81,464 個",
+          "tooltip_title": "2023年第2季",
+          "tooltip_value_text": "81,464 個"
+        },
+        {
+          "as_of_date": "2023-09-30",
+          "as_of_label": "2023年第3季",
+          "tick_label": "2023Q3",
+          "value": 80652,
+          "display_value_text": "80,652 個",
+          "tooltip_title": "2023年第3季",
+          "tooltip_value_text": "80,652 個"
+        },
+        {
+          "as_of_date": "2023-12-31",
+          "as_of_label": "2023年第4季",
+          "tick_label": "2023Q4",
+          "value": 73072,
+          "display_value_text": "73,072 個",
+          "tooltip_title": "2023年第4季",
+          "tooltip_value_text": "73,072 個"
+        },
+        {
+          "as_of_date": "2024-03-31",
+          "as_of_label": "2024年第1季",
+          "tick_label": "2024Q1",
+          "value": 75181,
+          "display_value_text": "75,181 個",
+          "tooltip_title": "2024年第1季",
+          "tooltip_value_text": "75,181 個"
+        },
+        {
+          "as_of_date": "2024-06-30",
+          "as_of_label": "2024年第2季",
+          "tick_label": "2024Q2",
+          "value": 69444,
+          "display_value_text": "69,444 個",
+          "tooltip_title": "2024年第2季",
+          "tooltip_value_text": "69,444 個"
+        },
+        {
+          "as_of_date": "2024-09-30",
+          "as_of_label": "2024年第3季",
+          "tick_label": "2024Q3",
+          "value": 66457,
+          "display_value_text": "66,457 個",
+          "tooltip_title": "2024年第3季",
+          "tooltip_value_text": "66,457 個"
+        },
+        {
+          "as_of_date": "2024-12-31",
+          "as_of_label": "2024年第4季",
+          "tick_label": "2024Q4",
+          "value": 58411,
+          "display_value_text": "58,411 個",
+          "tooltip_title": "2024年第4季",
+          "tooltip_value_text": "58,411 個"
+        },
+        {
+          "as_of_date": "2025-03-31",
+          "as_of_label": "2025年第1季",
+          "tick_label": "2025Q1",
+          "value": 55172,
+          "display_value_text": "55,172 個",
+          "tooltip_title": "2025年第1季",
+          "tooltip_value_text": "55,172 個"
+        },
+        {
+          "as_of_date": "2025-06-30",
+          "as_of_label": "2025年第2季",
+          "tick_label": "2025Q2",
+          "value": 49531,
+          "display_value_text": "49,531 個",
+          "tooltip_title": "2025年第2季",
+          "tooltip_value_text": "49,531 個"
+        },
+        {
+          "as_of_date": "2025-09-30",
+          "as_of_label": "2025年第3季",
+          "tick_label": "2025Q3",
+          "value": 51452,
+          "display_value_text": "51,452 個",
+          "tooltip_title": "2025年第3季",
+          "tooltip_value_text": "51,452 個"
+        }
+      ],
+      "sparkline_definition": {
+        "series_id": "censtatd|215-16007|IND=|OCC=|freq=M|measure=VAC|label=數目",
+        "metric_type": "level",
+        "comparison_basis": "same_period_last_year",
+        "unit": "個",
+        "frequency": "quarterly"
+      },
+      "sparkline_points": [
+        {
+          "as_of_date": "2022-12-31",
+          "as_of_label": "2022年第4季",
+          "value": 73148
+        },
+        {
+          "as_of_date": "2023-03-31",
+          "as_of_label": "2023年第1季",
+          "value": 77751
+        },
+        {
+          "as_of_date": "2023-06-30",
+          "as_of_label": "2023年第2季",
+          "value": 81464
+        },
+        {
+          "as_of_date": "2023-09-30",
+          "as_of_label": "2023年第3季",
+          "value": 80652
+        },
+        {
+          "as_of_date": "2023-12-31",
+          "as_of_label": "2023年第4季",
+          "value": 73072
+        },
+        {
+          "as_of_date": "2024-03-31",
+          "as_of_label": "2024年第1季",
+          "value": 75181
+        },
+        {
+          "as_of_date": "2024-06-30",
+          "as_of_label": "2024年第2季",
+          "value": 69444
+        },
+        {
+          "as_of_date": "2024-09-30",
+          "as_of_label": "2024年第3季",
+          "value": 66457
+        },
+        {
+          "as_of_date": "2024-12-31",
+          "as_of_label": "2024年第4季",
+          "value": 58411
+        },
+        {
+          "as_of_date": "2025-03-31",
+          "as_of_label": "2025年第1季",
+          "value": 55172
+        },
+        {
+          "as_of_date": "2025-06-30",
+          "as_of_label": "2025年第2季",
+          "value": 49531
+        },
+        {
+          "as_of_date": "2025-09-30",
+          "as_of_label": "2025年第3季",
+          "value": 51452
+        }
+      ],
+      "validation_state": "ok",
+      "validation_messages": [],
+      "source_note": "機構單位統計（establishment-based），非住戶統計",
+      "expected_update": "每季",
+      "last_successful_fetch_at": "2026-03-18T10:40:51.560Z"
     }
   ]
 }

@@ -1,9 +1,19 @@
 export const URLs = {
   censtatd: (id: string) => `https://www.censtatd.gov.hk/api/get.php?full_series=1&id=${id}&lang=tc`,
   unemploymentDataset: "https://data.gov.hk/en-data/dataset/hk-censtatd-tablechart-210-06101",
+  lfprDataset: "https://data.gov.hk/en-data/dataset/hk-censtatd-tablechart-210-06201",
+  vacanciesDataset: "https://data.gov.hk/en-data/dataset/hk-censtatd-tablechart-215-16007",
+  realPayrollIndexDataset: "https://data.gov.hk/en-data/dataset/hk-censtatd-tablechart-220-19024",
+  aehsMedianMonthlyWageDataset: "https://data.gov.hk/en-data/dataset/hk-censtatd-tablechart-220-23011",
+  aehsMedianHourlyWageDataset: "https://data.gov.hk/en-data/dataset/hk-censtatd-tablechart-220-23024",
   cpiDataset: "https://data.gov.hk/en-data/dataset/hk-censtatd-tablechart-510-60001a",
   gdpCurrentDataset: "https://data.gov.hk/en-data/dataset/hk-censtatd-tablechart-310-31002",
   gdpRealDataset: "https://data.gov.hk/en-data/dataset/hk-censtatd-tablechart-310-31003",
+  pceCurrentDataset: "https://data.gov.hk/en-data/dataset/hk-censtatd-tablechart-310-31011",
+  pceRealDataset: "https://data.gov.hk/en-data/dataset/hk-censtatd-tablechart-310-31012",
+  currentAccountDataset: "https://data.gov.hk/en-data/dataset/hk-censtatd-tablechart-315-37001",
+  m3Dataset: "https://data.gov.hk/en-data/dataset/hk-censtatd-tablechart-340-45011",
+  tradeDataset: "https://data.gov.hk/en-data/dataset/hk-censtatd-tablechart-410-50001",
   retailDataset: "https://data.gov.hk/en-data/dataset/hk-censtatd-tablechart-620-67001",
   visitorDataset: "https://data.gov.hk/en-data/dataset/hk-censtatd-tablechart-650-80001",
   populationDataset: "https://data.gov.hk/en-data/dataset/hk-censtatd-tablechart-110-01002",
@@ -23,7 +33,9 @@ export const URLs = {
   fstbOverviewCsv:
     "https://www.fstb.gov.hk/datagovhk/tsyb/financial-statistics/tc/fin-stats_overview_a_tc.csv",
   hkmaInterbankLiquidity:
-    "https://api.hkma.gov.hk/public/market-data-and-statistics/daily-monetary-statistics/daily-figures-interbank-liquidity"
+    "https://api.hkma.gov.hk/public/market-data-and-statistics/daily-monetary-statistics/daily-figures-interbank-liquidity",
+  hkmaMonetaryStatistics:
+    "https://api.hkma.gov.hk/public/market-data-and-statistics/monthly-statistical-bulletin/financial/monetary-statistics"
 } as const;
 
 export type CardDefinition = {
@@ -35,8 +47,10 @@ export type CardDefinition = {
 
 export const cardDefinitions = [
   { id: "employment", title_tc: "就業", header_mode: "latest_by_date", header_metric_priority: [] },
+  { id: "wages-income", title_tc: "工資與收入", header_mode: "latest_by_date", header_metric_priority: [] },
   { id: "inflation", title_tc: "通脹", header_mode: "latest_by_date", header_metric_priority: [] },
   { id: "gdp", title_tc: "GDP", header_mode: "latest_by_date", header_metric_priority: [] },
+  { id: "external-trade", title_tc: "對外貿易", header_mode: "latest_by_date", header_metric_priority: [] },
   { id: "consumption-travel", title_tc: "消費與旅遊", header_mode: "latest_by_date", header_metric_priority: [] },
   {
     id: "minimum-wage",
@@ -52,5 +66,5 @@ export const cardDefinitions = [
     header_metric_priority: ["private_price_index", "private_rent_index", "private_completions"]
   },
   { id: "fiscal", title_tc: "公共財政", header_mode: "latest_by_date", header_metric_priority: [] },
-  { id: "interest-rates", title_tc: "利率", header_mode: "latest_by_date", header_metric_priority: [] }
+  { id: "interest-rates", title_tc: "貨幣與金融", header_mode: "latest_by_date", header_metric_priority: [] }
 ] satisfies CardDefinition[];

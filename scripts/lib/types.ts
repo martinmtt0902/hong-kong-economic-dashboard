@@ -58,12 +58,42 @@ export const validationMessageCodeSchema = z.enum([
   "comparison_missing"
 ]);
 
+export const sourceSystemSchema = z.enum([
+  "censtatd_api",
+  "data_gov_hk_web_table",
+  "data_gov_hk_csv",
+  "official_report_xml",
+  "hkma_api",
+  "immd_csv",
+  "rvd_csv",
+  "fstb_csv",
+  "labour_html"
+]);
+
+export const renderStrategySchema = z.enum(["default", "balance_sign_aware"]);
+
+export const balancePositionSchema = z.enum(["surplus", "deficit", "balanced"]);
+
+export const balanceChangeNarrativeSchema = z.enum([
+  "surplus_increased",
+  "surplus_decreased",
+  "deficit_widened",
+  "deficit_narrowed",
+  "deficit_to_surplus",
+  "surplus_to_deficit",
+  "unchanged"
+]);
+
 export const sourceRefSchema = z.object({
   publisher: z.string(),
+  source_system: sourceSystemSchema.optional(),
   dataset_id: z.string().optional(),
   dataset_url: z.string().url(),
   api_url: z.string().url().optional(),
-  table_id: z.string().optional()
+  table_id: z.string().optional(),
+  ecode: z.string().optional(),
+  dataset_title: z.string().optional(),
+  statistical_framework: z.string().optional()
 });
 
 export const rawObservationSchema = z.object({
@@ -150,9 +180,16 @@ export const transformedMetricSchema = z.object({
   card_id: z.string(),
   label_tc: z.string(),
   source: sourceRefSchema,
+  source_system: sourceSystemSchema.optional(),
+  dataset_id: z.string().optional(),
+  table_id: z.string().optional(),
+  ecode: z.string().optional(),
+  dataset_title: z.string().optional(),
+  statistical_framework: z.string().optional(),
   series_id: z.string(),
   auxiliary_series_ids: z.array(z.string()).optional(),
   metric_type: metricTypeSchema,
+  render_strategy: renderStrategySchema.optional(),
   frequency: frequencySchema,
   unit: z.string(),
   display_unit: z.string(),
@@ -165,16 +202,23 @@ export const transformedMetricSchema = z.object({
   previous_as_of_date: z.string().optional(),
   previous_as_of_label: z.string().optional(),
   change_value: z.number().optional(),
+  raw_change_value: z.number().optional(),
   change_type: changeTypeSchema,
   comparison_type: comparisonBasisSchema,
   comparison_basis: comparisonBasisSchema,
   comparison_basis_label_tc: z.string(),
   comparison_period_label: z.string().optional(),
+  balance_position: balancePositionSchema.optional(),
+  previous_balance_position: balancePositionSchema.optional(),
+  balance_change_narrative: balanceChangeNarrativeSchema.optional(),
+  display_change_narrative_text: z.string().optional(),
   data_origin: dataOriginSchema,
   last_successful_fetch_at: z.string().optional(),
   last_verified_value: z.number().optional(),
   last_verified_period: z.string().optional(),
   reason: z.string().optional(),
+  chart_series: z.string().optional(),
+  chart_metric_type: metricTypeSchema.optional(),
   chart_definition: chartDefinitionSchema,
   chart_points: z.array(chartPointSchema),
   sparkline_definition: sparklineDefinitionSchema,
@@ -282,6 +326,10 @@ export type ComparisonType = z.infer<typeof comparisonBasisSchema>;
 export type DataOrigin = z.infer<typeof dataOriginSchema>;
 export type ValidationState = z.infer<typeof validationStateSchema>;
 export type ValidationMessageCode = z.infer<typeof validationMessageCodeSchema>;
+export type SourceSystem = z.infer<typeof sourceSystemSchema>;
+export type RenderStrategy = z.infer<typeof renderStrategySchema>;
+export type BalancePosition = z.infer<typeof balancePositionSchema>;
+export type BalanceChangeNarrative = z.infer<typeof balanceChangeNarrativeSchema>;
 export type SourceRef = z.infer<typeof sourceRefSchema>;
 export type RawObservation = z.infer<typeof rawObservationSchema>;
 export type RoundingPolicy = z.infer<typeof roundingPolicySchema>;
@@ -310,6 +358,7 @@ export type MetricDefinition = {
   card_id: string;
   label_tc: string;
   source: SourceRef;
+  render_strategy?: RenderStrategy;
   frequency: Frequency;
   unit: string;
   display_unit?: string;
@@ -326,6 +375,7 @@ export type MetricDefinition = {
   chart_time_label?: string;
   chart_value_label?: string;
   chart_tick_mode?: "compact" | "full";
+  period_mode?: "default" | "rolling_m3m" | "quarter_end_month";
   validation?: {
     min?: number;
     max?: number;

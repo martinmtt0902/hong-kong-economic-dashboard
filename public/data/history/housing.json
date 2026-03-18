@@ -19,7 +19,7 @@
       "display_comparison_period_text": "2025年12月",
       "display_unit": "指數",
       "data_origin": "live",
-      "last_successful_fetch_at": "2026-03-18T08:22:14.148Z",
+      "last_successful_fetch_at": "2026-03-18T10:40:51.560Z",
       "chart": {
         "chart_type": "line",
         "x_axis_label": "月份",
@@ -192,7 +192,7 @@
       "display_comparison_period_text": "2025年12月",
       "display_unit": "指數",
       "data_origin": "live",
-      "last_successful_fetch_at": "2026-03-18T08:22:14.148Z",
+      "last_successful_fetch_at": "2026-03-18T10:40:51.560Z",
       "chart": {
         "chart_type": "line",
         "x_axis_label": "月份",
@@ -365,7 +365,7 @@
       "display_comparison_period_text": "2025年（預測）",
       "display_unit": "伙",
       "data_origin": "live",
-      "last_successful_fetch_at": "2026-03-18T08:22:14.148Z",
+      "last_successful_fetch_at": "2026-03-18T10:40:51.560Z",
       "chart": {
         "chart_type": "line",
         "x_axis_label": "年份",

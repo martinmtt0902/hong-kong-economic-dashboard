@@ -1,5 +1,11 @@
 import { fetchJson } from "../lib/http";
-import { comparisonBasisLabel, formatRollingWindowLabel, parseOfficialPeriod, periodEndDateForRollingWindow } from "../lib/period";
+import {
+  comparisonBasisLabel,
+  formatRollingWindowLabel,
+  parseOfficialPeriod,
+  parseQuarterEndMonthPeriod,
+  periodEndDateForRollingWindow
+} from "../lib/period";
 import { URLs } from "../lib/source";
 import { numericValue } from "../lib/time";
 import type { MeasureSelector, RawObservation, SourceRef } from "../lib/types";
@@ -12,7 +18,7 @@ type CenstatdConfig = {
   dimensions: Record<string, string>;
   measure: MeasureSelector;
   scale?: number;
-  period_mode?: "default" | "rolling_m3m";
+  period_mode?: "default" | "rolling_m3m" | "quarter_end_month";
 };
 
 type CsdResponse = {
@@ -67,7 +73,9 @@ function toObservation(
           as_of_date: periodEndDateForRollingWindow(rawPeriod),
           as_of_label: formatRollingWindowLabel(rawPeriod)
         }
-      : parseOfficialPeriod(rawPeriod, config.frequency);
+      : config.period_mode === "quarter_end_month"
+        ? parseQuarterEndMonthPeriod(rawPeriod)
+        : parseOfficialPeriod(rawPeriod, config.frequency);
 
   const measureCode = String(row.sv ?? config.measure.measure_code);
   const measureLabel = String(row.svDesc ?? "");

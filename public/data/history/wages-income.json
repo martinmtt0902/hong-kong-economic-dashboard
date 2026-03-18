@@ -1,0 +1,495 @@
+{
+  "id": "wages-income",
+  "title_tc": "工資與收入",
+  "periods_summary_text_tc": "各卡更新期不同，請以各列期別為準",
+  "metrics": [
+    {
+      "id": "real_payroll_per_person_engaged_index",
+      "label_tc": "從業人士實質平均薪金指數",
+      "source_name": "政府統計處",
+      "source_url": "https://data.gov.hk/en-data/dataset/hk-censtatd-tablechart-220-19024",
+      "status": "ok",
+      "status_text_tc": "最新",
+      "display_value_text": "125.5",
+      "display_change_text": "較去年同期（2024年第3季） +1.7%",
+      "display_previous_text": "去年同期（2024年第3季） 123.4",
+      "display_period_text": "2025年第3季",
+      "display_comparison_text": "較去年同期（2024年第3季） +1.7%",
+      "display_comparison_basis_text": "較去年同期",
+      "display_comparison_period_text": "2024年第3季",
+      "display_unit": "指數",
+      "data_origin": "live",
+      "last_successful_fetch_at": "2026-03-18T10:40:51.560Z",
+      "chart": {
+        "chart_type": "line",
+        "x_axis_label": "季度",
+        "y_axis_label": "從業人士實質平均薪金指數 (指數)",
+        "time_label": "季度",
+        "value_label": "從業人士實質平均薪金指數",
+        "display_unit": "指數",
+        "chart_value_transform": {
+          "scale": 1,
+          "raw_unit": "指數",
+          "display_unit": "指數"
+        },
+        "suggested_ticks": [
+          "2022Q4",
+          "2024Q2",
+          "2025Q3"
+        ],
+        "points": [
+          {
+            "x": "2022年第4季",
+            "y": 124.5,
+            "tick_label": "2022Q4",
+            "tooltip_title": "2022年第4季",
+            "tooltip_value_text": "124.5 指數"
+          },
+          {
+            "x": "2023年第1季",
+            "y": 131.6,
+            "tick_label": "2023Q1",
+            "tooltip_title": "2023年第1季",
+            "tooltip_value_text": "131.6 指數"
+          },
+          {
+            "x": "2023年第2季",
+            "y": 121.2,
+            "tick_label": "2023Q2",
+            "tooltip_title": "2023年第2季",
+            "tooltip_value_text": "121.2 指數"
+          },
+          {
+            "x": "2023年第3季",
+            "y": 122.3,
+            "tick_label": "2023Q3",
+            "tooltip_title": "2023年第3季",
+            "tooltip_value_text": "122.3 指數"
+          },
+          {
+            "x": "2023年第4季",
+            "y": 125.7,
+            "tick_label": "2023Q4",
+            "tooltip_title": "2023年第4季",
+            "tooltip_value_text": "125.7 指數"
+          },
+          {
+            "x": "2024年第1季",
+            "y": 134,
+            "tick_label": "2024Q1",
+            "tooltip_title": "2024年第1季",
+            "tooltip_value_text": "134.0 指數"
+          },
+          {
+            "x": "2024年第2季",
+            "y": 123.9,
+            "tick_label": "2024Q2",
+            "tooltip_title": "2024年第2季",
+            "tooltip_value_text": "123.9 指數"
+          },
+          {
+            "x": "2024年第3季",
+            "y": 123.4,
+            "tick_label": "2024Q3",
+            "tooltip_title": "2024年第3季",
+            "tooltip_value_text": "123.4 指數"
+          },
+          {
+            "x": "2024年第4季",
+            "y": 128.3,
+            "tick_label": "2024Q4",
+            "tooltip_title": "2024年第4季",
+            "tooltip_value_text": "128.3 指數"
+          },
+          {
+            "x": "2025年第1季",
+            "y": 136,
+            "tick_label": "2025Q1",
+            "tooltip_title": "2025年第1季",
+            "tooltip_value_text": "136.0 指數"
+          },
+          {
+            "x": "2025年第2季",
+            "y": 126.2,
+            "tick_label": "2025Q2",
+            "tooltip_title": "2025年第2季",
+            "tooltip_value_text": "126.2 指數"
+          },
+          {
+            "x": "2025年第3季",
+            "y": 125.5,
+            "tick_label": "2025Q3",
+            "tooltip_title": "2025年第3季",
+            "tooltip_value_text": "125.5 指數"
+          }
+        ]
+      },
+      "sparkline_points": [
+        {
+          "x": "2022年第4季",
+          "y": 124.5
+        },
+        {
+          "x": "2023年第1季",
+          "y": 131.6
+        },
+        {
+          "x": "2023年第2季",
+          "y": 121.2
+        },
+        {
+          "x": "2023年第3季",
+          "y": 122.3
+        },
+        {
+          "x": "2023年第4季",
+          "y": 125.7
+        },
+        {
+          "x": "2024年第1季",
+          "y": 134
+        },
+        {
+          "x": "2024年第2季",
+          "y": 123.9
+        },
+        {
+          "x": "2024年第3季",
+          "y": 123.4
+        },
+        {
+          "x": "2024年第4季",
+          "y": 128.3
+        },
+        {
+          "x": "2025年第1季",
+          "y": 136
+        },
+        {
+          "x": "2025年第2季",
+          "y": 126.2
+        },
+        {
+          "x": "2025年第3季",
+          "y": 125.5
+        }
+      ],
+      "expected_update": "每季"
+    },
+    {
+      "id": "median_monthly_wage",
+      "label_tc": "月薪中位數",
+      "source_name": "政府統計處",
+      "source_url": "https://data.gov.hk/en-data/dataset/hk-censtatd-tablechart-220-23011",
+      "source_note": "AEHS 全體僱員總計的每月工資中位數",
+      "status": "ok",
+      "status_text_tc": "最新",
+      "display_value_text": "20,500元",
+      "display_change_text": "較上期（2023年） +700元",
+      "display_previous_text": "上期（2023年） 19,800元",
+      "display_period_text": "2024年",
+      "display_comparison_text": "較上期（2023年） +700元",
+      "display_comparison_basis_text": "較上期",
+      "display_comparison_period_text": "2023年",
+      "display_unit": "元",
+      "data_origin": "live",
+      "last_successful_fetch_at": "2026-03-18T10:40:51.560Z",
+      "chart": {
+        "chart_type": "line",
+        "x_axis_label": "年份",
+        "y_axis_label": "月薪中位數 (元)",
+        "time_label": "年份",
+        "value_label": "月薪中位數",
+        "display_unit": "元",
+        "chart_value_transform": {
+          "scale": 1,
+          "raw_unit": "元",
+          "display_unit": "元"
+        },
+        "suggested_ticks": [
+          "2013",
+          "2019",
+          "2024"
+        ],
+        "points": [
+          {
+            "x": "2013年",
+            "y": 14100,
+            "tick_label": "2013",
+            "tooltip_title": "2013年",
+            "tooltip_value_text": "14,100 元"
+          },
+          {
+            "x": "2014年",
+            "y": 14800,
+            "tick_label": "2014",
+            "tooltip_title": "2014年",
+            "tooltip_value_text": "14,800 元"
+          },
+          {
+            "x": "2015年",
+            "y": 15500,
+            "tick_label": "2015",
+            "tooltip_title": "2015年",
+            "tooltip_value_text": "15,500 元"
+          },
+          {
+            "x": "2016年",
+            "y": 16200,
+            "tick_label": "2016",
+            "tooltip_title": "2016年",
+            "tooltip_value_text": "16,200 元"
+          },
+          {
+            "x": "2017年",
+            "y": 16800,
+            "tick_label": "2017",
+            "tooltip_title": "2017年",
+            "tooltip_value_text": "16,800 元"
+          },
+          {
+            "x": "2018年",
+            "y": 17500,
+            "tick_label": "2018",
+            "tooltip_title": "2018年",
+            "tooltip_value_text": "17,500 元"
+          },
+          {
+            "x": "2019年",
+            "y": 18200,
+            "tick_label": "2019",
+            "tooltip_title": "2019年",
+            "tooltip_value_text": "18,200 元"
+          },
+          {
+            "x": "2020年",
+            "y": 18400,
+            "tick_label": "2020",
+            "tooltip_title": "2020年",
+            "tooltip_value_text": "18,400 元"
+          },
+          {
+            "x": "2021年",
+            "y": 18700,
+            "tick_label": "2021",
+            "tooltip_title": "2021年",
+            "tooltip_value_text": "18,700 元"
+          },
+          {
+            "x": "2022年",
+            "y": 19100,
+            "tick_label": "2022",
+            "tooltip_title": "2022年",
+            "tooltip_value_text": "19,100 元"
+          },
+          {
+            "x": "2023年",
+            "y": 19800,
+            "tick_label": "2023",
+            "tooltip_title": "2023年",
+            "tooltip_value_text": "19,800 元"
+          },
+          {
+            "x": "2024年",
+            "y": 20500,
+            "tick_label": "2024",
+            "tooltip_title": "2024年",
+            "tooltip_value_text": "20,500 元"
+          }
+        ]
+      },
+      "sparkline_points": [
+        {
+          "x": "2013年",
+          "y": 14100
+        },
+        {
+          "x": "2014年",
+          "y": 14800
+        },
+        {
+          "x": "2015年",
+          "y": 15500
+        },
+        {
+          "x": "2016年",
+          "y": 16200
+        },
+        {
+          "x": "2017年",
+          "y": 16800
+        },
+        {
+          "x": "2018年",
+          "y": 17500
+        },
+        {
+          "x": "2019年",
+          "y": 18200
+        },
+        {
+          "x": "2020年",
+          "y": 18400
+        },
+        {
+          "x": "2021年",
+          "y": 18700
+        },
+        {
+          "x": "2022年",
+          "y": 19100
+        },
+        {
+          "x": "2023年",
+          "y": 19800
+        },
+        {
+          "x": "2024年",
+          "y": 20500
+        }
+      ],
+      "expected_update": "每年"
+    },
+    {
+      "id": "median_hourly_wage",
+      "label_tc": "時薪中位數",
+      "source_name": "政府統計處",
+      "source_url": "https://data.gov.hk/en-data/dataset/hk-censtatd-tablechart-220-23024",
+      "source_note": "AEHS 全體僱員總計的每小時工資中位數",
+      "status": "ok",
+      "status_text_tc": "最新",
+      "display_value_text": "82.9元/小時",
+      "display_change_text": "較上期（2023年） +2.8元/小時",
+      "display_previous_text": "上期（2023年） 80.1元/小時",
+      "display_period_text": "2024年",
+      "display_comparison_text": "較上期（2023年） +2.8元/小時",
+      "display_comparison_basis_text": "較上期",
+      "display_comparison_period_text": "2023年",
+      "display_unit": "元/小時",
+      "data_origin": "live",
+      "last_successful_fetch_at": "2026-03-18T10:40:51.560Z",
+      "chart": {
+        "chart_type": "line",
+        "x_axis_label": "年份",
+        "y_axis_label": "時薪中位數 (元/小時)",
+        "time_label": "年份",
+        "value_label": "時薪中位數",
+        "display_unit": "元/小時",
+        "chart_value_transform": {
+          "scale": 1,
+          "raw_unit": "元/小時",
+          "display_unit": "元/小時"
+        },
+        "suggested_ticks": [
+          "2016",
+          "2020",
+          "2024"
+        ],
+        "points": [
+          {
+            "x": "2016年",
+            "y": 65.4,
+            "tick_label": "2016",
+            "tooltip_title": "2016年",
+            "tooltip_value_text": "65.4 元/小時"
+          },
+          {
+            "x": "2017年",
+            "y": 68,
+            "tick_label": "2017",
+            "tooltip_title": "2017年",
+            "tooltip_value_text": "68.0 元/小時"
+          },
+          {
+            "x": "2018年",
+            "y": 70.5,
+            "tick_label": "2018",
+            "tooltip_title": "2018年",
+            "tooltip_value_text": "70.5 元/小時"
+          },
+          {
+            "x": "2019年",
+            "y": 73,
+            "tick_label": "2019",
+            "tooltip_title": "2019年",
+            "tooltip_value_text": "73.0 元/小時"
+          },
+          {
+            "x": "2020年",
+            "y": 74.4,
+            "tick_label": "2020",
+            "tooltip_title": "2020年",
+            "tooltip_value_text": "74.4 元/小時"
+          },
+          {
+            "x": "2021年",
+            "y": 75.7,
+            "tick_label": "2021",
+            "tooltip_title": "2021年",
+            "tooltip_value_text": "75.7 元/小時"
+          },
+          {
+            "x": "2022年",
+            "y": 77.4,
+            "tick_label": "2022",
+            "tooltip_title": "2022年",
+            "tooltip_value_text": "77.4 元/小時"
+          },
+          {
+            "x": "2023年",
+            "y": 80.1,
+            "tick_label": "2023",
+            "tooltip_title": "2023年",
+            "tooltip_value_text": "80.1 元/小時"
+          },
+          {
+            "x": "2024年",
+            "y": 82.9,
+            "tick_label": "2024",
+            "tooltip_title": "2024年",
+            "tooltip_value_text": "82.9 元/小時"
+          }
+        ]
+      },
+      "sparkline_points": [
+        {
+          "x": "2016年",
+          "y": 65.4
+        },
+        {
+          "x": "2017年",
+          "y": 68
+        },
+        {
+          "x": "2018年",
+          "y": 70.5
+        },
+        {
+          "x": "2019年",
+          "y": 73
+        },
+        {
+          "x": "2020年",
+          "y": 74.4
+        },
+        {
+          "x": "2021年",
+          "y": 75.7
+        },
+        {
+          "x": "2022年",
+          "y": 77.4
+        },
+        {
+          "x": "2023年",
+          "y": 80.1
+        },
+        {
+          "x": "2024年",
+          "y": 82.9
+        }
+      ],
+      "expected_update": "每年"
+    }
+  ]
+}

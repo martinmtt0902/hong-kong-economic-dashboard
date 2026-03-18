@@ -10,10 +10,17 @@
       "label_tc": "私樓售價指數",
       "source": {
         "publisher": "差餉物業估價署",
-        "dataset_url": "https://www.rvd.gov.hk/datagovhk/1.4M.csv"
+        "source_system": "rvd_csv",
+        "dataset_url": "https://www.rvd.gov.hk/datagovhk/1.4M.csv",
+        "dataset_title": "私人住宅售價指數",
+        "statistical_framework": "Property Market Statistics"
       },
+      "source_system": "rvd_csv",
+      "dataset_title": "私人住宅售價指數",
+      "statistical_framework": "Property Market Statistics",
       "series_id": "rvd|price_index|all_classes",
       "metric_type": "level",
+      "render_strategy": "default",
       "frequency": "monthly",
       "unit": "指數",
       "display_unit": "指數",
@@ -29,12 +36,15 @@
       "previous_as_of_date": "2025-12-31",
       "previous_as_of_label": "2025年12月",
       "change_value": 1.6,
+      "raw_change_value": 1.6,
       "change_type": "absolute_change",
       "comparison_type": "previous_observation",
       "comparison_basis": "previous_observation",
       "comparison_basis_label_tc": "較上期",
       "comparison_period_label": "2025年12月",
       "data_origin": "live",
+      "chart_series": "rvd|price_index|all_classes",
+      "chart_metric_type": "level",
       "chart_definition": {
         "series_id": "rvd|price_index|all_classes",
         "metric_type": "level",
@@ -241,7 +251,7 @@
       "validation_state": "ok",
       "validation_messages": [],
       "expected_update": "每月",
-      "last_successful_fetch_at": "2026-03-18T08:22:14.148Z"
+      "last_successful_fetch_at": "2026-03-18T10:40:51.560Z"
     },
     {
       "id": "private_rent_index",
@@ -249,10 +259,17 @@
       "label_tc": "私樓租金指數",
       "source": {
         "publisher": "差餉物業估價署",
-        "dataset_url": "https://www.rvd.gov.hk/datagovhk/1.3M.csv"
+        "source_system": "rvd_csv",
+        "dataset_url": "https://www.rvd.gov.hk/datagovhk/1.3M.csv",
+        "dataset_title": "私人住宅租金指數",
+        "statistical_framework": "Property Market Statistics"
       },
+      "source_system": "rvd_csv",
+      "dataset_title": "私人住宅租金指數",
+      "statistical_framework": "Property Market Statistics",
       "series_id": "rvd|rent_index|all_classes",
       "metric_type": "level",
+      "render_strategy": "default",
       "frequency": "monthly",
       "unit": "指數",
       "display_unit": "指數",
@@ -268,12 +285,15 @@
       "previous_as_of_date": "2025-12-31",
       "previous_as_of_label": "2025年12月",
       "change_value": 0.6,
+      "raw_change_value": 0.6,
       "change_type": "absolute_change",
       "comparison_type": "previous_observation",
       "comparison_basis": "previous_observation",
       "comparison_basis_label_tc": "較上期",
       "comparison_period_label": "2025年12月",
       "data_origin": "live",
+      "chart_series": "rvd|rent_index|all_classes",
+      "chart_metric_type": "level",
       "chart_definition": {
         "series_id": "rvd|rent_index|all_classes",
         "metric_type": "level",
@@ -480,7 +500,7 @@
       "validation_state": "ok",
       "validation_messages": [],
       "expected_update": "每月",
-      "last_successful_fetch_at": "2026-03-18T08:22:14.148Z"
+      "last_successful_fetch_at": "2026-03-18T10:40:51.560Z"
     },
     {
       "id": "private_completions",
@@ -488,10 +508,17 @@
       "label_tc": "私人住宅落成量",
       "source": {
         "publisher": "差餉物業估價署",
-        "dataset_url": "https://www.rvd.gov.hk/datagovhk/Dom_Completions_and_Forecast_Completions_by_District_Eng.csv"
+        "source_system": "rvd_csv",
+        "dataset_url": "https://www.rvd.gov.hk/datagovhk/Dom_Completions_and_Forecast_Completions_by_District_Eng.csv",
+        "dataset_title": "私人住宅落成量",
+        "statistical_framework": "Property Market Statistics"
       },
+      "source_system": "rvd_csv",
+      "dataset_title": "私人住宅落成量",
+      "statistical_framework": "Property Market Statistics",
       "series_id": "rvd|private_domestic_completions|overall",
       "metric_type": "level",
+      "render_strategy": "default",
       "frequency": "annual",
       "unit": "伙",
       "display_unit": "伙",
@@ -507,12 +534,15 @@
       "previous_as_of_date": "2025-12-31",
       "previous_as_of_label": "2025年（預測）",
       "change_value": -764,
+      "raw_change_value": -764,
       "change_type": "absolute_change",
       "comparison_type": "previous_observation",
       "comparison_basis": "previous_observation",
       "comparison_basis_label_tc": "較上期",
       "comparison_period_label": "2025年（預測）",
       "data_origin": "live",
+      "chart_series": "rvd|private_domestic_completions|overall",
+      "chart_metric_type": "level",
       "chart_definition": {
         "series_id": "rvd|private_domestic_completions|overall",
         "metric_type": "level",
@@ -594,7 +624,7 @@
       "validation_messages": [],
       "expected_update": "每年",
       "provisional": true,
-      "last_successful_fetch_at": "2026-03-18T08:22:14.148Z"
+      "last_successful_fetch_at": "2026-03-18T10:40:51.560Z"
     }
   ]
 }

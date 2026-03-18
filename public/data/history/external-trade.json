@@ -1,0 +1,527 @@
+{
+  "id": "external-trade",
+  "title_tc": "對外貿易",
+  "latest_data_at": "2026-01-31",
+  "latest_data_label": "2026年1月",
+  "metrics": [
+    {
+      "id": "total_exports_value",
+      "label_tc": "整體出口貨值",
+      "source_name": "政府統計處",
+      "source_url": "https://data.gov.hk/en-data/dataset/hk-censtatd-tablechart-410-50001",
+      "status": "ok",
+      "status_text_tc": "最新",
+      "display_value_text": "5205.6億",
+      "display_change_text": "較去年同月（2025年1月） +33.8%",
+      "display_previous_text": "去年同月（2025年1月） 3891.4億",
+      "display_period_text": "2026年1月",
+      "display_comparison_text": "較去年同月（2025年1月） +33.8%",
+      "display_comparison_basis_text": "較去年同月",
+      "display_comparison_period_text": "2025年1月",
+      "display_unit": "億港元",
+      "data_origin": "live",
+      "last_successful_fetch_at": "2026-03-18T10:40:51.560Z",
+      "chart": {
+        "chart_type": "line",
+        "x_axis_label": "月份",
+        "y_axis_label": "整體出口貨值 (億港元)",
+        "time_label": "月份",
+        "value_label": "整體出口貨值",
+        "display_unit": "億港元",
+        "chart_value_transform": {
+          "scale": 0.01,
+          "raw_unit": "百萬港元",
+          "display_unit": "億港元"
+        },
+        "suggested_ticks": [
+          "2025-02",
+          "2025-08",
+          "2026-01"
+        ],
+        "points": [
+          {
+            "x": "2025年2月",
+            "y": 3279.09,
+            "tick_label": "2025-02",
+            "tooltip_title": "2025年2月",
+            "tooltip_value_text": "3279.1億"
+          },
+          {
+            "x": "2025年3月",
+            "y": 4555.34,
+            "tick_label": "2025-03",
+            "tooltip_title": "2025年3月",
+            "tooltip_value_text": "4555.3億"
+          },
+          {
+            "x": "2025年4月",
+            "y": 4344.64,
+            "tick_label": "2025-04",
+            "tooltip_title": "2025年4月",
+            "tooltip_value_text": "4344.6億"
+          },
+          {
+            "x": "2025年5月",
+            "y": 4340.81,
+            "tick_label": "2025-05",
+            "tooltip_title": "2025年5月",
+            "tooltip_value_text": "4340.8億"
+          },
+          {
+            "x": "2025年6月",
+            "y": 4178.18,
+            "tick_label": "2025-06",
+            "tooltip_title": "2025年6月",
+            "tooltip_value_text": "4178.2億"
+          },
+          {
+            "x": "2025年7月",
+            "y": 4462.97,
+            "tick_label": "2025-07",
+            "tooltip_title": "2025年7月",
+            "tooltip_value_text": "4463.0億"
+          },
+          {
+            "x": "2025年8月",
+            "y": 4365.91,
+            "tick_label": "2025-08",
+            "tooltip_title": "2025年8月",
+            "tooltip_value_text": "4365.9億"
+          },
+          {
+            "x": "2025年9月",
+            "y": 4623.41,
+            "tick_label": "2025-09",
+            "tooltip_title": "2025年9月",
+            "tooltip_value_text": "4623.4億"
+          },
+          {
+            "x": "2025年10月",
+            "y": 4617.82,
+            "tick_label": "2025-10",
+            "tooltip_title": "2025年10月",
+            "tooltip_value_text": "4617.8億"
+          },
+          {
+            "x": "2025年11月",
+            "y": 4688.68,
+            "tick_label": "2025-11",
+            "tooltip_title": "2025年11月",
+            "tooltip_value_text": "4688.7億"
+          },
+          {
+            "x": "2025年12月",
+            "y": 5127.95,
+            "tick_label": "2025-12",
+            "tooltip_title": "2025年12月",
+            "tooltip_value_text": "5127.9億"
+          },
+          {
+            "x": "2026年1月",
+            "y": 5205.64,
+            "tick_label": "2026-01",
+            "tooltip_title": "2026年1月",
+            "tooltip_value_text": "5205.6億"
+          }
+        ]
+      },
+      "sparkline_points": [
+        {
+          "x": "2025年2月",
+          "y": 327909
+        },
+        {
+          "x": "2025年3月",
+          "y": 455534
+        },
+        {
+          "x": "2025年4月",
+          "y": 434464
+        },
+        {
+          "x": "2025年5月",
+          "y": 434081
+        },
+        {
+          "x": "2025年6月",
+          "y": 417818
+        },
+        {
+          "x": "2025年7月",
+          "y": 446297
+        },
+        {
+          "x": "2025年8月",
+          "y": 436591
+        },
+        {
+          "x": "2025年9月",
+          "y": 462341
+        },
+        {
+          "x": "2025年10月",
+          "y": 461782
+        },
+        {
+          "x": "2025年11月",
+          "y": 468868
+        },
+        {
+          "x": "2025年12月",
+          "y": 512795
+        },
+        {
+          "x": "2026年1月",
+          "y": 520564
+        }
+      ],
+      "expected_update": "每月"
+    },
+    {
+      "id": "imports_value",
+      "label_tc": "進口貨值",
+      "source_name": "政府統計處",
+      "source_url": "https://data.gov.hk/en-data/dataset/hk-censtatd-tablechart-410-50001",
+      "status": "ok",
+      "status_text_tc": "最新",
+      "display_value_text": "5346.6億",
+      "display_change_text": "較去年同月（2025年1月） +38.1%",
+      "display_previous_text": "去年同月（2025年1月） 3870.6億",
+      "display_period_text": "2026年1月",
+      "display_comparison_text": "較去年同月（2025年1月） +38.1%",
+      "display_comparison_basis_text": "較去年同月",
+      "display_comparison_period_text": "2025年1月",
+      "display_unit": "億港元",
+      "data_origin": "live",
+      "last_successful_fetch_at": "2026-03-18T10:40:51.560Z",
+      "chart": {
+        "chart_type": "line",
+        "x_axis_label": "月份",
+        "y_axis_label": "進口貨值 (億港元)",
+        "time_label": "月份",
+        "value_label": "進口貨值",
+        "display_unit": "億港元",
+        "chart_value_transform": {
+          "scale": 0.01,
+          "raw_unit": "百萬港元",
+          "display_unit": "億港元"
+        },
+        "suggested_ticks": [
+          "2025-02",
+          "2025-08",
+          "2026-01"
+        ],
+        "points": [
+          {
+            "x": "2025年2月",
+            "y": 3642.2400000000002,
+            "tick_label": "2025-02",
+            "tooltip_title": "2025年2月",
+            "tooltip_value_text": "3642.2億"
+          },
+          {
+            "x": "2025年3月",
+            "y": 5008.91,
+            "tick_label": "2025-03",
+            "tooltip_title": "2025年3月",
+            "tooltip_value_text": "5008.9億"
+          },
+          {
+            "x": "2025年4月",
+            "y": 4504.72,
+            "tick_label": "2025-04",
+            "tooltip_title": "2025年4月",
+            "tooltip_value_text": "4504.7億"
+          },
+          {
+            "x": "2025年5月",
+            "y": 4614.06,
+            "tick_label": "2025-05",
+            "tooltip_title": "2025年5月",
+            "tooltip_value_text": "4614.1億"
+          },
+          {
+            "x": "2025年6月",
+            "y": 4767.4400000000005,
+            "tick_label": "2025-06",
+            "tooltip_title": "2025年6月",
+            "tooltip_value_text": "4767.4億"
+          },
+          {
+            "x": "2025年7月",
+            "y": 4804.17,
+            "tick_label": "2025-07",
+            "tooltip_title": "2025年7月",
+            "tooltip_value_text": "4804.2億"
+          },
+          {
+            "x": "2025年8月",
+            "y": 4620.06,
+            "tick_label": "2025-08",
+            "tooltip_title": "2025年8月",
+            "tooltip_value_text": "4620.1億"
+          },
+          {
+            "x": "2025年9月",
+            "y": 5125.12,
+            "tick_label": "2025-09",
+            "tooltip_title": "2025年9月",
+            "tooltip_value_text": "5125.1億"
+          },
+          {
+            "x": "2025年10月",
+            "y": 5017.28,
+            "tick_label": "2025-10",
+            "tooltip_title": "2025年10月",
+            "tooltip_value_text": "5017.3億"
+          },
+          {
+            "x": "2025年11月",
+            "y": 5173.83,
+            "tick_label": "2025-11",
+            "tooltip_title": "2025年11月",
+            "tooltip_value_text": "5173.8億"
+          },
+          {
+            "x": "2025年12月",
+            "y": 5760.4800000000005,
+            "tick_label": "2025-12",
+            "tooltip_title": "2025年12月",
+            "tooltip_value_text": "5760.5億"
+          },
+          {
+            "x": "2026年1月",
+            "y": 5346.59,
+            "tick_label": "2026-01",
+            "tooltip_title": "2026年1月",
+            "tooltip_value_text": "5346.6億"
+          }
+        ]
+      },
+      "sparkline_points": [
+        {
+          "x": "2025年2月",
+          "y": 364224
+        },
+        {
+          "x": "2025年3月",
+          "y": 500891
+        },
+        {
+          "x": "2025年4月",
+          "y": 450472
+        },
+        {
+          "x": "2025年5月",
+          "y": 461406
+        },
+        {
+          "x": "2025年6月",
+          "y": 476744
+        },
+        {
+          "x": "2025年7月",
+          "y": 480417
+        },
+        {
+          "x": "2025年8月",
+          "y": 462006
+        },
+        {
+          "x": "2025年9月",
+          "y": 512512
+        },
+        {
+          "x": "2025年10月",
+          "y": 501728
+        },
+        {
+          "x": "2025年11月",
+          "y": 517383
+        },
+        {
+          "x": "2025年12月",
+          "y": 576048
+        },
+        {
+          "x": "2026年1月",
+          "y": 534659
+        }
+      ],
+      "expected_update": "每月"
+    },
+    {
+      "id": "visible_trade_balance",
+      "label_tc": "有形貿易差額",
+      "source_name": "政府統計處",
+      "source_url": "https://data.gov.hk/en-data/dataset/hk-censtatd-tablechart-410-50001",
+      "status": "ok",
+      "status_text_tc": "最新",
+      "display_value_text": "逆差 140.9億",
+      "display_change_text": "較去年同月（2025年1月） 由順差轉為逆差 161.7億",
+      "display_previous_text": "去年同月（2025年1月） 順差 20.8億",
+      "display_period_text": "2026年1月",
+      "display_comparison_text": "較去年同月（2025年1月） 由順差轉為逆差 161.7億",
+      "display_comparison_basis_text": "較去年同月",
+      "display_comparison_period_text": "2025年1月",
+      "display_unit": "億港元",
+      "data_origin": "live",
+      "last_successful_fetch_at": "2026-03-18T10:40:51.560Z",
+      "chart": {
+        "chart_type": "line",
+        "x_axis_label": "月份",
+        "y_axis_label": "有形貿易差額 (億港元)",
+        "time_label": "月份",
+        "value_label": "有形貿易差額",
+        "display_unit": "億港元",
+        "chart_value_transform": {
+          "scale": 0.01,
+          "raw_unit": "百萬港元",
+          "display_unit": "億港元"
+        },
+        "suggested_ticks": [
+          "2025-02",
+          "2025-08",
+          "2026-01"
+        ],
+        "points": [
+          {
+            "x": "2025年2月",
+            "y": -363.15000000000003,
+            "tick_label": "2025-02",
+            "tooltip_title": "2025年2月",
+            "tooltip_value_text": "-363.2億"
+          },
+          {
+            "x": "2025年3月",
+            "y": -453.57,
+            "tick_label": "2025-03",
+            "tooltip_title": "2025年3月",
+            "tooltip_value_text": "-453.6億"
+          },
+          {
+            "x": "2025年4月",
+            "y": -160.07,
+            "tick_label": "2025-04",
+            "tooltip_title": "2025年4月",
+            "tooltip_value_text": "-160.1億"
+          },
+          {
+            "x": "2025年5月",
+            "y": -273.25,
+            "tick_label": "2025-05",
+            "tooltip_title": "2025年5月",
+            "tooltip_value_text": "-273.3億"
+          },
+          {
+            "x": "2025年6月",
+            "y": -589.25,
+            "tick_label": "2025-06",
+            "tooltip_title": "2025年6月",
+            "tooltip_value_text": "-589.3億"
+          },
+          {
+            "x": "2025年7月",
+            "y": -341.2,
+            "tick_label": "2025-07",
+            "tooltip_title": "2025年7月",
+            "tooltip_value_text": "-341.2億"
+          },
+          {
+            "x": "2025年8月",
+            "y": -254.15,
+            "tick_label": "2025-08",
+            "tooltip_title": "2025年8月",
+            "tooltip_value_text": "-254.2億"
+          },
+          {
+            "x": "2025年9月",
+            "y": -501.71000000000004,
+            "tick_label": "2025-09",
+            "tooltip_title": "2025年9月",
+            "tooltip_value_text": "-501.7億"
+          },
+          {
+            "x": "2025年10月",
+            "y": -399.47,
+            "tick_label": "2025-10",
+            "tooltip_title": "2025年10月",
+            "tooltip_value_text": "-399.5億"
+          },
+          {
+            "x": "2025年11月",
+            "y": -485.15000000000003,
+            "tick_label": "2025-11",
+            "tooltip_title": "2025年11月",
+            "tooltip_value_text": "-485.2億"
+          },
+          {
+            "x": "2025年12月",
+            "y": -632.53,
+            "tick_label": "2025-12",
+            "tooltip_title": "2025年12月",
+            "tooltip_value_text": "-632.5億"
+          },
+          {
+            "x": "2026年1月",
+            "y": -140.94,
+            "tick_label": "2026-01",
+            "tooltip_title": "2026年1月",
+            "tooltip_value_text": "-140.9億"
+          }
+        ]
+      },
+      "sparkline_points": [
+        {
+          "x": "2025年2月",
+          "y": -36315
+        },
+        {
+          "x": "2025年3月",
+          "y": -45357
+        },
+        {
+          "x": "2025年4月",
+          "y": -16007
+        },
+        {
+          "x": "2025年5月",
+          "y": -27325
+        },
+        {
+          "x": "2025年6月",
+          "y": -58925
+        },
+        {
+          "x": "2025年7月",
+          "y": -34120
+        },
+        {
+          "x": "2025年8月",
+          "y": -25415
+        },
+        {
+          "x": "2025年9月",
+          "y": -50171
+        },
+        {
+          "x": "2025年10月",
+          "y": -39947
+        },
+        {
+          "x": "2025年11月",
+          "y": -48515
+        },
+        {
+          "x": "2025年12月",
+          "y": -63253
+        },
+        {
+          "x": "2026年1月",
+          "y": -14094
+        }
+      ],
+      "expected_update": "每月"
+    }
+  ]
+}

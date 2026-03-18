@@ -125,6 +125,10 @@ function formatValue(value: number | undefined, metric: TransformedMetric, mode:
     return "待官方更新";
   }
 
+  if (metric.render_strategy === "balance_sign_aware" && mode !== "change") {
+    return formatBalanceValue(value, metric, mode);
+  }
+
   const decimals =
     mode === "change"
       ? metric.rounding_policy.change_decimals
@@ -145,12 +149,27 @@ function formatValue(value: number | undefined, metric: TransformedMetric, mode:
     return `HK$${scaled.toFixed(decimals)}/小時`;
   }
 
+  if (metric.display_unit === "元/小時") {
+    return `${scaled.toFixed(decimals)}元/小時`;
+  }
+
   if (metric.display_unit === "億港元") {
     return `${scaled.toFixed(decimals)}億`;
   }
 
+  if (metric.display_unit === "萬億港元") {
+    return `${scaled.toFixed(decimals)}萬億`;
+  }
+
   if (metric.display_unit === "歲") {
     return `${scaled.toFixed(decimals)} 歲`;
+  }
+
+  if (metric.display_unit === "元") {
+    return `${new Intl.NumberFormat("zh-Hant-HK", {
+      maximumFractionDigits: decimals,
+      minimumFractionDigits: decimals
+    }).format(scaled)}元`;
   }
 
   if (metric.display_unit === "指數") {
@@ -164,6 +183,10 @@ function formatValue(value: number | undefined, metric: TransformedMetric, mode:
 }
 
 function formatChange(metric: TransformedMetric): string {
+  if (metric.display_change_narrative_text) {
+    return metric.display_change_narrative_text;
+  }
+
   if (typeof metric.change_value !== "number") {
     return "沒有可比較期";
   }
@@ -182,8 +205,20 @@ function formatChange(metric: TransformedMetric): string {
       if (metric.display_unit === "HK$/小時") {
         return `${prefix} ${sign}HK$${scaled.toFixed(metric.rounding_policy.change_decimals)}/小時`;
       }
+      if (metric.display_unit === "元/小時") {
+        return `${prefix} ${sign}${scaled.toFixed(metric.rounding_policy.change_decimals)}元/小時`;
+      }
       if (metric.display_unit === "億港元") {
         return `${prefix} ${sign}${scaled.toFixed(metric.rounding_policy.change_decimals)}億`;
+      }
+      if (metric.display_unit === "萬億港元") {
+        return `${prefix} ${sign}${scaled.toFixed(metric.rounding_policy.change_decimals)}萬億`;
+      }
+      if (metric.display_unit === "元") {
+        return `${prefix} ${sign}${new Intl.NumberFormat("zh-Hant-HK", {
+          maximumFractionDigits: metric.rounding_policy.change_decimals,
+          minimumFractionDigits: metric.rounding_policy.change_decimals
+        }).format(scaled)}元`;
       }
       if (metric.display_unit === "歲") {
         return `${prefix} ${sign}${scaled.toFixed(metric.rounding_policy.change_decimals)} 歲`;
@@ -210,6 +245,19 @@ function formatPrevious(metric: TransformedMetric): string {
   const label = previousBasisText(metric.comparison_basis_label_tc);
   const period = metric.comparison_period_label ? `（${metric.comparison_period_label}）` : "";
   return `${label}${period} ${formatValue(metric.previous_value, metric, "previous")}`;
+}
+
+function formatBalanceValue(value: number, metric: TransformedMetric, mode: "value" | "previous"): string {
+  const decimals =
+    mode === "previous" ? metric.rounding_policy.previous_decimals : metric.rounding_policy.value_decimals;
+  const scaled = metric.rounding_policy.display_scale ? Math.abs(value) * metric.rounding_policy.display_scale : Math.abs(value);
+  if (value > 0) {
+    return `順差 ${scaled.toFixed(decimals)}億`;
+  }
+  if (value < 0) {
+    return `逆差 ${scaled.toFixed(decimals)}億`;
+  }
+  return "收支平衡";
 }
 
 function previousBasisText(basisLabel: string): string {
