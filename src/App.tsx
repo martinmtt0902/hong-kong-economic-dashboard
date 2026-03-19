@@ -5,11 +5,12 @@ import { DashboardCard } from "./components/DashboardCard";
 import type { DashboardPayload } from "./types";
 
 const HKT_OFFSET_MS = 8 * 60 * 60 * 1000;
+const HKT_UPDATE_HOURS = [10, 18];
 
 function App() {
   const [dashboard, setDashboard] = useState<DashboardPayload | null>(null);
   const [error, setError] = useState<string | null>(null);
-  const [countdownText, setCountdownText] = useState<string>(() => formatCountdownToNextHkt9am());
+  const [countdownText, setCountdownText] = useState<string>(() => formatCountdownToNextHktUpdate());
 
   useEffect(() => {
     void fetchDashboard()
@@ -23,7 +24,7 @@ function App() {
 
   useEffect(() => {
     const timer = window.setInterval(() => {
-      setCountdownText(formatCountdownToNextHkt9am());
+      setCountdownText(formatCountdownToNextHktUpdate());
     }, 1000);
 
     return () => window.clearInterval(timer);
@@ -77,8 +78,8 @@ function App() {
 
 export default App;
 
-function formatCountdownToNextHkt9am(now = new Date()): string {
-  const nextUpdate = nextHktNineAm(now);
+function formatCountdownToNextHktUpdate(now = new Date()): string {
+  const nextUpdate = nextHktUpdate(now);
   const diffMs = Math.max(0, nextUpdate.getTime() - now.getTime());
   const totalSeconds = Math.floor(diffMs / 1000);
   const hours = Math.floor(totalSeconds / 3600);
@@ -88,16 +89,23 @@ function formatCountdownToNextHkt9am(now = new Date()): string {
   return [hours, minutes, seconds].map((value) => String(value).padStart(2, "0")).join(":");
 }
 
-function nextHktNineAm(now: Date): Date {
+function nextHktUpdate(now: Date): Date {
   const hkNow = new Date(now.getTime() + HKT_OFFSET_MS);
   const year = hkNow.getUTCFullYear();
   const month = hkNow.getUTCMonth();
   const day = hkNow.getUTCDate();
+  const currentHour = hkNow.getUTCHours();
+  const currentMinute = hkNow.getUTCMinutes();
+  const currentSecond = hkNow.getUTCSeconds();
 
-  let targetMs = Date.UTC(year, month, day, 9, 0, 0) - HKT_OFFSET_MS;
-  if (targetMs <= now.getTime()) {
-    targetMs = Date.UTC(year, month, day + 1, 9, 0, 0) - HKT_OFFSET_MS;
+  for (const hour of HKT_UPDATE_HOURS) {
+    if (
+      currentHour < hour ||
+      (currentHour === hour && currentMinute === 0 && currentSecond === 0)
+    ) {
+      return new Date(Date.UTC(year, month, day, hour, 0, 0) - HKT_OFFSET_MS);
+    }
   }
 
-  return new Date(targetMs);
+  return new Date(Date.UTC(year, month, day + 1, HKT_UPDATE_HOURS[0], 0, 0) - HKT_OFFSET_MS);
 }
