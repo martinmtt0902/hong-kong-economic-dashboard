@@ -6,11 +6,15 @@ import type { DashboardPayload } from "./types";
 
 const HKT_OFFSET_MS = 8 * 60 * 60 * 1000;
 const HKT_UPDATE_HOURS = [10, 18];
+const THEME_STORAGE_KEY = "official-tracker-theme";
+
+type ThemeMode = "light" | "dark";
 
 function App() {
   const [dashboard, setDashboard] = useState<DashboardPayload | null>(null);
   const [error, setError] = useState<string | null>(null);
   const [countdownText, setCountdownText] = useState<string>(() => formatCountdownToNextHktUpdate());
+  const [theme, setTheme] = useState<ThemeMode>(() => getInitialTheme());
 
   useEffect(() => {
     void fetchDashboard()
@@ -29,6 +33,11 @@ function App() {
 
     return () => window.clearInterval(timer);
   }, []);
+
+  useEffect(() => {
+    document.documentElement.dataset.theme = theme;
+    window.localStorage.setItem(THEME_STORAGE_KEY, theme);
+  }, [theme]);
 
   if (error) {
     return (
@@ -62,6 +71,17 @@ function App() {
           <h1>Official Statistics Tracker</h1>
         </div>
         <div className="hero-meta">
+          <button
+            type="button"
+            className="theme-toggle"
+            onClick={() => setTheme((current) => (current === "light" ? "dark" : "light"))}
+            aria-label={theme === "light" ? "切換至夜間模式" : "切換至日間模式"}
+            title={theme === "light" ? "切換至夜間模式" : "切換至日間模式"}
+          >
+            <span className="theme-toggle-icon" aria-hidden="true">
+              {theme === "light" ? "🌙" : "☀️"}
+            </span>
+          </button>
           <p>網站更新於 {formatTimestamp(dashboard.generated_at)}</p>
           <p>距離下次更新還有{countdownText}(時/分/秒)</p>
         </div>
@@ -108,4 +128,17 @@ function nextHktUpdate(now: Date): Date {
   }
 
   return new Date(Date.UTC(year, month, day + 1, HKT_UPDATE_HOURS[0], 0, 0) - HKT_OFFSET_MS);
+}
+
+function getInitialTheme(): ThemeMode {
+  if (typeof window === "undefined") {
+    return "light";
+  }
+
+  const stored = window.localStorage.getItem(THEME_STORAGE_KEY);
+  if (stored === "light" || stored === "dark") {
+    return stored;
+  }
+
+  return window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light";
 }
