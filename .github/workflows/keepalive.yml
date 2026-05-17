@@ -1,0 +1,32 @@
+name: Repository Keepalive
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: "17 3 1 * *"
+
+permissions:
+  contents: write
+
+jobs:
+  heartbeat:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Update heartbeat
+        run: date -u +"%Y-%m-%dT%H:%M:%SZ" > .github/keepalive
+
+      - name: Commit heartbeat
+        run: |
+          if git diff --quiet -- .github/keepalive; then
+            echo "Heartbeat already current."
+            exit 0
+          fi
+
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add .github/keepalive
+          git commit -m "chore: keep repository active"
+          git push
