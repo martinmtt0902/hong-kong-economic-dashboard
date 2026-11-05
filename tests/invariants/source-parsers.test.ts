@@ -59,3 +59,17 @@ test("M3 combines older official year-end history with unchanged recent monthly 
     assert.ok(!rows.some((p) => p.value === 999));
   } finally { globalThis.fetch = original; }
 });
+
+test("daily pagination stops once seven years are covered, avoiding unnecessary older requests", async () => {
+  const original = globalThis.fetch;
+  let calls = 0;
+  globalThis.fetch = (async () => {
+    calls += 1;
+    assert.ok(calls <= 2);
+    return new Response(JSON.stringify({ result: { records: Array.from({ length: 1000 }, (_, i) => ({ end_of_date: calls === 1 ? (i === 0 ? "2026-11-05" : "2022-01-01") : "2019-12-31" })) } }));
+  }) as typeof fetch;
+  try {
+    assert.equal((await fetchHkmaHistory("https://example.test/seven-years", "end_of_date", 3)).length, 2000);
+    assert.equal(calls, 2);
+  } finally { globalThis.fetch = original; }
+});

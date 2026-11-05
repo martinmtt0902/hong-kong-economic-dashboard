@@ -95,7 +95,11 @@ export async function fetchHkmaHistory(url: string, dateField: string, maxPages:
     const batch = payload.result?.records ?? payload.records;
     if (!batch) throw new Error("HKMA response has no records");
     records.push(...batch);
-    if (batch.length < 1000) break;
+    const newest = String(records[0]?.[dateField] ?? "");
+    const cutoff = `${Number(newest.slice(0, 4)) - 6}-01-01`;
+    const coveredSevenYears = /^\d{4}-\d{2}-\d{2}$/.test(newest) &&
+      batch.some((row) => typeof row[dateField] === "string" && String(row[dateField]) <= cutoff);
+    if (batch.length < 1000 || coveredSevenYears) break;
   }
   return records;
 }
