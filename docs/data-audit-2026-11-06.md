@@ -32,3 +32,46 @@ The audit inspected every metric definition, official adapter, fetched observati
 The local preview HTTP check and production build pass. Browser automation timed out, so visual interaction QA is not claimed. Some official endpoints timed out or returned HTTP 405 from the local machine; those retained values were explicitly marked as fallback, and the deployment runner refresh is checked separately.
 
 Official references: [RVD price CSV](https://www.rvd.gov.hk/datagovhk/1.4M.csv), [birth registrations CSV](https://www.immd.gov.hk/opendata/hkt/law-and-security/personal_documentation/statistics_on_births_registration.csv), [Labour Department](https://www.labour.gov.hk/eng/news/mwo.htm), [current-account API](https://www.censtatd.gov.hk/api/get.php?full_series=1&id=315-37003&lang=tc), [HKMA API pagination](https://apidocs.hkma.gov.hk/chi/documentation/).
+
+## Final deployed verification
+
+[Deployment 42076431836](https://github.com/martinmtt0902/hong-kong-economic-dashboard/actions/runs/42076431836) succeeded at 01:38 HKT on 6 November 2026. All 45 tests and the production build passed. The live page references the verified `index-obEf0qPI.js` bundle.
+
+The live payload has all 32 unchanged statistics: 31 successfully fetched current values, no source errors, and the existing next-minimum-wage statistic correctly marked unannounced. **29 charts support ten yearly points.** The other histories are limited to one current minimum-wage event, no announced next event, and three years of private completions. They use the seven-year maximum option where a chart exists, displaying only actual observations. Annual and half-yearly sources retain fewer points in a one-year view because monthly/quarterly observations are unavailable.
+
+The table records deployed values and periods; successful retrieval does not mean all statistics share the same release period. Each quarterly/yearly chart point is the last available observation in that bucket, without changing its original unit or computing a sum/average.
+
+| Statistic | Deployed value | Official period | 1-year points | 3-year points | Longest view |
+| --- | --- | --- | --- | --- | --- |
+| 失業率 | 3.9% | 2026年7月–2026年9月 | 12 month | 12 quarter | 10 years / 10 points |
+| 就業不足率 | 2.0% | 2026年7月–2026年9月 | 12 month | 12 quarter | 10 years / 10 points |
+| 勞動人口 | 3,810,000 | 2026年7月–2026年9月 | 12 month | 12 quarter | 10 years / 10 points |
+| 勞動人口參與率 | 56.6% | 2026年7月–2026年9月 | 12 month | 12 quarter | 10 years / 10 points |
+| 職位空缺數 | 45,380 | 2026年第2季 | 4 quarter | 12 quarter | 10 years / 10 points |
+| 從業人士實質平均薪金指數 | 128.2 | 2026年第2季 | 4 quarter | 12 quarter | 10 years / 10 points |
+| 月薪中位數 | 21,200元 | 2025年 | 1 year | 3 year | 10 years / 10 points |
+| 時薪中位數 | 85.7元/小時 | 2025年 | 1 year | 3 year | 10 years / 10 points |
+| 綜合 CPI 按年變動 | +1.9% | 2026年9月 | 12 month | 12 quarter | 10 years / 10 points |
+| 實質增長 | +4.3% | 2026年第2季 | 4 quarter | 12 quarter | 10 years / 10 points |
+| 名義增長 | +6.9% | 2026年第2季 | 4 quarter | 12 quarter | 10 years / 10 points |
+| 經常賬戶差額 | 順差 960.3億 | 2026年第2季 | 4 quarter | 12 quarter | 10 years / 10 points |
+| 私人消費開支（PCE） | +2.8% | 2026年第2季 | 4 quarter | 12 quarter | 10 years / 10 points |
+| 整體出口貨值 | 7625.7億 | 2026年9月 | 12 month | 12 quarter | 10 years / 10 points |
+| 進口貨值 | 8089.0億 | 2026年9月 | 12 month | 12 quarter | 10 years / 10 points |
+| 有形貿易差額 | 逆差 463.3億 | 2026年9月 | 12 month | 12 quarter | 10 years / 10 points |
+| 零售銷售額 | 333.6億 | 2026年9月 | 12 month | 12 quarter | 10 years / 10 points |
+| 旅客入境 | 5,456,320 | 2026年8月 | 12 month | 12 quarter | 10 years / 10 points |
+| 現行法定最低工資 | HK$43.1/小時 | 2026-05-01 | 1 quarter | 1 year | 7 years / 1 points |
+| 下一個法定最低工資 | 尚未公布 | 待官方更新 | 0 year | 0 year | 7 years / 0 points |
+| 人口總量 | 7,518,300 | 2026年年中 | 2 quarter | 3 year | 10 years / 10 points |
+| 出生登記總數 | 31,714 | 2025年 | 1 year | 3 year | 10 years / 10 points |
+| 年齡中位數 | 48.8 歲 | 2026年 | 1 year | 3 year | 10 years / 10 points |
+| 私樓售價指數 | 320.8 | 2026年9月 | 12 month | 12 quarter | 10 years / 10 points |
+| 私樓租金指數 | 212.2 | 2026年9月 | 12 month | 12 quarter | 10 years / 10 points |
+| 私人住宅落成量 | 20,098 | 2026年（預測） | 1 year | 3 year | 7 years / 3 points |
+| 收入 | 7652.3億 | 2026-27 (原來預算) | 1 year | 3 year | 10 years / 10 points |
+| 支出 | 8434.2億 | 2026-27 (原來預算) | 1 year | 3 year | 10 years / 10 points |
+| 儲備 | 6876.5億 | 2026-27 (原來預算) | 1 year | 3 year | 10 years / 10 points |
+| HKMA Base Rate | 4.3% | 2026-11-05 | 12 month | 12 quarter | 10 years / 10 points |
+| 1個月 HIBOR | 2.6% | 2026-11-05 | 12 month | 12 quarter | 10 years / 10 points |
+| 貨幣供應 M3 | 22.3萬億 | 2026年9月 | 12 month | 12 quarter | 10 years / 10 points |
