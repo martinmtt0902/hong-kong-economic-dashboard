@@ -1,22 +1,28 @@
 # Source Map
 
-| 卡片 | 指標 | 官方來源 | 取數方式 |
-| --- | --- | --- | --- |
-| 就業 | 失業率、就業不足率、勞動人口 | `C&SD 210-06101` | `api/get.php?full_series=1&id=210-06101&lang=tc` |
-| 通脹 | 綜合 CPI 按年變動 | `C&SD 510-60001A` | 抓取綜合 CPI 指數後自行計算 YoY |
-| GDP | 實質增長、名義增長 | `C&SD 310-31003`, `310-31002` | 抓取 GDP 序列後自行計算 YoY |
-| 消費與旅遊 | 零售銷售額、旅客入境 | `C&SD 620-67001`, `ImmD daily passenger traffic` | 零售用 C&SD API；旅客入境以入境處日資料聚合月度 |
-| 最低工資 | 法定最低工資 | 勞工處 `mwo.htm` | HTML regex 抽取現行時薪 |
-| 人口 | 人口總量、出生數、年齡中位數 | `C&SD 110-01002`, `110-01004`, `DH births CSV` | C&SD API + 衞生署 CSV |
-| 住屋 | 私樓售價、租金指數、落成量 | 差餉物業估價署 CSV | 直接抓官方 CSV |
-| 公共財政 | 收入、支出、儲備 | 庫務署季度帳目、FSTB CSV | 季度帳目 zip CSV + 財政儲備 CSV |
-| 利率 | HKMA Base Rate、1個月 HIBOR | HKMA Public API | JSON API |
+The 32 statistics and 11 cards are fixed. Exact selectors, units, and comparison rules are in `scripts/lib/metric-definition.ts`.
 
-## Parser 原則
+| Card | Existing statistics | Official source / selection |
+| --- | --- | --- |
+| Employment | Unemployment, underemployment, labour force, participation rate, vacancies | C&SD 210-06101 and 210-06201 rolling three-month observations; 215-16007 quarterly survey reference months |
+| Wages and income | Real payroll index, median monthly wage, median hourly wage | C&SD 220-19024, 220-23011, 220-23024; retain Labour Earnings Survey / AEHS distinctions |
+| Inflation | Composite CPI year-on-year change | C&SD 510-60001A, official percentage-change measure; do not calculate YoY again |
+| GDP | Real GDP growth, nominal GDP growth, current-account balance, private-consumption growth | C&SD 310-31003, 310-31002, 315-37003 (CRA / Q / BOP), 310-31012; growth measures use official YoY series |
+| External trade | Exports, imports, visible trade balance | C&SD 410-50001 monthly amounts; retain sign-aware balance rendering |
+| Consumption and travel | Retail sales value, visitor arrivals | C&SD 620-67001 and 650-80001; visitor arrivals explicitly select `freq=M` |
+| Minimum wage | Current statutory rate, next announced rate | Labour Department SMW page; compare effective dates with the run date; no future announcement means “尚未公布” |
+| Population | Population, birth registrations, median age | C&SD 110-01002 and 110-01004; Immigration Department live Big5 birth-registration CSV (not DH known births) |
+| Housing | Private domestic price index, rent index, completions | RVD CSVs; normalize `MM-YYYY` months; preserve forecast labels for completions |
+| Fiscal | Government revenue, expenditure, fiscal reserves | FSTB financial overview CSV; fiscal years and original-budget labels are retained |
+| Monetary and financial | Base rate, one-month HIBOR, M3 | HKMA daily interbank liquidity and monthly monetary statistics APIs; paginated daily history and C&SD 340-45011 year-end M3 history |
 
-- 每個來源獨立 adapter，不共用 parser。
-- 圖表保留最近七個曆年；前端提供 1、3、5、7 年範圍。
-- 一年視圖每月最多一點；多年視圖每年取最後可用一期，並非全年總數或平均。
-- 若資料源改版，優先回退到上一版 `dashboard.json`，避免整站空白。
+## History and fallback
 
-最新來源修正及完整核對範圍見 [2026-11-06 audit](data-audit-2026-11-06.md)。
+- Retain the latest seven calendar years for charting (all available effective-date observations for event series).
+- One-year view selects the last observation in each available month; quarterly/half-yearly statistics remain sparse. Annual statistics show one year.
+- Three-, five-, and seven-year views select the last available observation in each calendar year, **not annual totals or averages**. Original periods remain in tooltips.
+- Do not invent missing observations. Coverage text shows the loaded period; limited histories remain limited.
+- Restore the most recent published canonical snapshot before scheduled generation. A failed fetch retains the prior value with an explicit fallback status, never a false live badge.
+- Every deployment runs frozen historical snapshots plus live data, parser, chart-range, and inventory checks.
+
+See the [6 November 2026 audit](data-audit-2026-11-06.md) for findings and verification limits.

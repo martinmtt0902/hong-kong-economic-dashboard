@@ -1,3 +1,4 @@
+import { fetchCenstatdObservations } from "./censtatd";
 import { fetchJson } from "../lib/http";
 import { parseOfficialPeriod } from "../lib/period";
 import { numericValue } from "../lib/time";
@@ -53,6 +54,23 @@ export async function fetchM3Observations(source: SourceRef, seriesLabel: string
       value: rawValue,
       unit: "百萬港元"
     });
+  }
+
+  // HKMA's bulletin retains recent monthly rows plus annual rows. Keep the
+  // monthly headline and comparison unchanged; recover older year-end M3
+  // observations from C&SD's full official series (same all-currency stock).
+  try {
+    const annual = await fetchCenstatdObservations({
+      source: { ...source, source_system: "censtatd_api", dataset_id: "hk-censtatd-tablechart-340-45011", dataset_url: URLs.m3Dataset, api_url: URLs.censtatd("340-45011"), table_id: "340-45011" },
+      table_id: "340-45011", series_label_tc: seriesLabel, frequency: "annual",
+      dimensions: { freq: "Y" },
+      measure: { measure_code: "M3", measure_aliases: ["M3"], allowed_labels_tc: ["百萬港元"] }
+    });
+    const firstMonthly = points.map((point) => point.as_of_date).sort()[0];
+    if (firstMonthly) points.push(...annual.filter((point) => point.as_of_date < firstMonthly));
+  } catch {
+    // A historical-source outage must not discard the live monthly series.
+    // The chart's coverage text exposes the shorter available history.
   }
 
   return points.sort((left, right) => left.as_of_date.localeCompare(right.as_of_date));

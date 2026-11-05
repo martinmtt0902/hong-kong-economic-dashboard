@@ -9,7 +9,7 @@ The dashboard retains all 32 metric IDs and all 11 cards. No statistic was added
 - Minimum-wage page wording changed. Parse the new wording, yielding HK$43.1 effective 1 May 2026. The existing “next rate” statistic remains present but shows “尚未公布” when no future rate is announced, instead of showing an already-effective rate as upcoming.
 - Visitor arrivals now explicitly select monthly frequency; annual totals cannot enter the monthly history.
 - Current-account balance uses the same official C&SD table 315-37003, component CRA, quarterly BOP amount through its full-series API. This replaces the nine-quarter PDF extraction, extends history, and preserves official precision (2026 Q2: HK$96,030.883 million; the PDF rounded to 96,031).
-- HKMA requests paginate beyond the default 100 rows. Daily rates request up to 3,000 observations; M3 up to 1,000 monthly/annual source rows, with annual rows excluded as before.
+- HKMA requests paginate beyond the default 100 rows. Daily rates request up to 3,000 observations; M3 retains its recent monthly HKMA values and adds older official year-end observations from C&SD 340-45011 (all-currency M3, in HK$ million). This extends the yearly view without substituting annual values for current monthly observations.
 - Prior-year comparisons clamp 29 February to the previous February's last day.
 - Daily builds restore the last published canonical snapshot before fetching. Source outages therefore retain the last deployed data instead of reverting to the repository's March snapshot. Requests have timeouts, one retry, shared responses, and bounded concurrency.
 

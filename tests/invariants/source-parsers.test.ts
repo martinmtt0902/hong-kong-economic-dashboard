@@ -33,3 +33,29 @@ test("birth registrations decode the official Big5 header and use live revised v
     assert.equal(rows.at(-1)!.as_of_date, "2025-12-31");
   } finally { globalThis.fetch = original; }
 });
+
+import { fetchM3Observations } from "../../scripts/fetch/hkma";
+test("M3 combines older official year-end history with unchanged recent monthly values", async () => {
+  const original = globalThis.fetch;
+  globalThis.fetch = (async (input: any) => {
+    const url = String(input);
+    if (url.includes("censtatd")) {
+      return new Response(JSON.stringify({ dataSet: [2020, 2021, 2022, 2023, 2024, 2025].map((year) => ({ freq: "Y", period: String(year), sv: "M3", svDesc: "百萬港元", figure: year })) }));
+    }
+    return new Response(JSON.stringify({ result: { records: [
+      { end_of_month: "2026-09", m3_total: 22317143.681 },
+      { end_of_month: "2025-12", m3_total: 21000000 },
+      { end_of_month: "2025-08", m3_total: 20000000 },
+      { end_of_month: "2024-00", m3_total: 999 }
+    ] } }));
+  }) as typeof fetch;
+  try {
+    const definition = metricDefinitions.find((d) => d.metric.id === "money_supply_m3")!.metric;
+    const rows = await fetchM3Observations(definition.source, definition.label_tc);
+    assert.equal(rows.at(-1)!.value, 22317143.681);
+    assert.equal(rows.find((p) => p.as_of_date === "2025-12-31")!.value, 21000000);
+    assert.equal(rows.find((p) => p.as_of_date === "2020-12-31")!.frequency, "annual");
+    assert.equal(new Set(rows.map((p) => p.as_of_date.slice(0, 4))).size, 7);
+    assert.ok(!rows.some((p) => p.value === 999));
+  } finally { globalThis.fetch = original; }
+});
