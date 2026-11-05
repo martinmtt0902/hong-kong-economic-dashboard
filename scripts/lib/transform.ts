@@ -197,7 +197,7 @@ function buildChartPoints(series: RawObservation[], definition: MetricDefinition
   };
 
   const endYear = Number(series.at(-1)?.as_of_date.slice(0, 4));
-  const history = definition.frequency === "event" ? series : series.filter((point) => Number(point.as_of_date.slice(0, 4)) >= endYear - 6);
+  const history = definition.frequency === "event" ? series : series.filter((point) => Number(point.as_of_date.slice(0, 4)) >= endYear - 9);
   return history.map((point) => {
     const displayValue = formatChartDisplayValue(point.value, displayUnit, definition.metric_type, rounding);
     return {

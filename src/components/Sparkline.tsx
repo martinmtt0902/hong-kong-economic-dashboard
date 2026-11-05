@@ -1,5 +1,5 @@
 import { useEffect, useMemo, useState } from "react";
-import { chartRanges, selectChartRange, type ChartRange } from "../lib/chartRange";
+import { availableChartRanges, selectChartRange, type ChartRange } from "../lib/chartRange";
 import type { UIChart } from "../types";
 
 const width = 320;
@@ -7,6 +7,7 @@ const height = 150;
 const margin = { top: 10, right: 10, bottom: 28, left: 46 };
 
 export function Sparkline({ chart }: { chart: UIChart }) {
+  const chartRanges = availableChartRanges(chart);
   const [range, setRange] = useState<ChartRange>(1);
   const view = useMemo(() => selectChartRange(chart, range), [chart, range]);
   const defaultIndex = view.points.length ? view.points.length - 1 : null;
@@ -54,13 +55,13 @@ export function Sparkline({ chart }: { chart: UIChart }) {
   }
 
   const activePoint = activeIndex !== null ? geometry.points[activeIndex] : undefined;
-  const segments = buildSegments(geometry.points, chart.chart_type, range > 1 || chart.frequency === "annual" ? 1 : chart.frequency === "quarterly" ? 3 : chart.frequency === "half_yearly" ? 6 : 1);
+  const segments = buildSegments(geometry.points, chart.chart_type, 1);
 
   return (
     <div className="mini-chart">
       <label className="chart-range-control">
         顯示範圍
-        <select aria-label={`${chart.value_label} 圖表範圍`} value={range} onChange={(event) => setRange(Number(event.target.value) as ChartRange)}>
+        <select aria-label={`${chart.value_label} 圖表範圍`} value={view.years} onChange={(event) => setRange(Number(event.target.value) as ChartRange)}>
           {chartRanges.map((years) => <option key={years} value={years}>近 {years} 年</option>)}
         </select>
       </label>
@@ -68,7 +69,7 @@ export function Sparkline({ chart }: { chart: UIChart }) {
       <svg
         className="sparkline"
         role="group"
-        aria-label={`${chart.value_label} 近 ${range} 年趨勢`}
+        aria-label={`${chart.value_label} 近 ${view.years} 年趨勢`}
         viewBox={`0 0 ${width} ${height}`}
         onMouseLeave={() => setActiveIndex(defaultIndex)}
       >
@@ -129,7 +130,7 @@ export function Sparkline({ chart }: { chart: UIChart }) {
           />
         ))}
       </svg>
-      <div className="mini-chart-axis mini-chart-axis-x">{range > 1 ? "年份" : chart.x_axis_label}</div>
+      <div className="mini-chart-axis mini-chart-axis-x">{view.unit === "year" ? "年份" : view.unit === "quarter" ? "季度" : "月份"}</div>
       <p className="chart-coverage">{view.note}</p>
       <div className="mini-chart-panel" role="note" aria-live="polite">
         {activePoint ? (

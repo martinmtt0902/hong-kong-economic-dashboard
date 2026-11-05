@@ -57,17 +57,17 @@ export async function fetchM3Observations(source: SourceRef, seriesLabel: string
   }
 
   // HKMA's bulletin retains recent monthly rows plus annual rows. Keep the
-  // monthly headline and comparison unchanged; recover older year-end M3
+  // monthly headline and comparison unchanged; recover older quarter-end M3
   // observations from C&SD's full official series (same all-currency stock).
   try {
-    const annual = await fetchCenstatdObservations({
+    const quarterly = await fetchCenstatdObservations({
       source: { ...source, source_system: "censtatd_api", dataset_id: "hk-censtatd-tablechart-340-45011", dataset_url: URLs.m3Dataset, api_url: URLs.censtatd("340-45011"), table_id: "340-45011" },
-      table_id: "340-45011", series_label_tc: seriesLabel, frequency: "annual",
-      dimensions: { freq: "Y" },
+      table_id: "340-45011", series_label_tc: seriesLabel, frequency: "quarterly",
+      dimensions: { freq: "Q" },
       measure: { measure_code: "M3", measure_aliases: ["M3"], allowed_labels_tc: ["百萬港元"] }
     });
     const firstMonthly = points.map((point) => point.as_of_date).sort()[0];
-    if (firstMonthly) points.push(...annual.filter((point) => point.as_of_date < firstMonthly));
+    if (firstMonthly) points.push(...quarterly.filter((point) => point.as_of_date < firstMonthly));
   } catch {
     // A historical-source outage must not discard the live monthly series.
     // The chart's coverage text exposes the shorter available history.
@@ -85,21 +85,33 @@ async function fetchHkmaMonetaryStatisticsRecords(): Promise<Array<Record<string
 }
 
 // HKMA defaults to 100 rows and caps each page at 1,000. Three daily
-// pages cover over seven calendar years; monthly history fits in one.
+// pages normally cover ten calendar years; monthly history fits in one.
 export async function fetchHkmaHistory(url: string, dateField: string, maxPages: number): Promise<Array<Record<string, unknown>>> {
   const records: Array<Record<string, unknown>> = [];
   for (let page = 0; page < maxPages; page += 1) {
     const query = new URL(url);
     query.search = new URLSearchParams({ pagesize: "1000", offset: String(page * 1000), sortby: dateField, sortorder: "desc" }).toString();
-    const payload = await fetchJson<HkmaResponse>(query.toString());
+    let payload: HkmaResponse;
+    try {
+      payload = await fetchJson<HkmaResponse>(query.toString());
+    } catch (error) {
+      const newest = String(records[0]?.[dateField] ?? "");
+      const sevenYearStart = `${Number(newest.slice(0, 4)) - 6}-01-01`;
+      if (/^\d{4}-\d{2}-\d{2}$/.test(newest) && records.some((row) => String(row[dateField]) <= sevenYearStart)) {
+        // The current values and seven-year history were fetched successfully.
+        // A failed older page caps the UI at seven years rather than losing them.
+        break;
+      }
+      throw error;
+    }
     const batch = payload.result?.records ?? payload.records;
     if (!batch) throw new Error("HKMA response has no records");
     records.push(...batch);
     const newest = String(records[0]?.[dateField] ?? "");
-    const cutoff = `${Number(newest.slice(0, 4)) - 6}-01-01`;
-    const coveredSevenYears = /^\d{4}-\d{2}-\d{2}$/.test(newest) &&
+    const cutoff = `${Number(newest.slice(0, 4)) - 9}-01-01`;
+    const coveredTenYears = /^\d{4}-\d{2}-\d{2}$/.test(newest) &&
       batch.some((row) => typeof row[dateField] === "string" && String(row[dateField]) <= cutoff);
-    if (batch.length < 1000 || coveredSevenYears) break;
+    if (batch.length < 1000 || coveredTenYears) break;
   }
   return records;
 }

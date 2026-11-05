@@ -14,14 +14,16 @@ The 32 statistics and 11 cards are fixed. Exact selectors, units, and comparison
 | Population | Population, birth registrations, median age | C&SD 110-01002 and 110-01004; Immigration Department live Big5 birth-registration CSV (not DH known births) |
 | Housing | Private domestic price index, rent index, completions | RVD CSVs; normalize `MM-YYYY` months; preserve forecast labels for completions |
 | Fiscal | Government revenue, expenditure, fiscal reserves | FSTB financial overview CSV; fiscal years and original-budget labels are retained |
-| Monetary and financial | Base rate, one-month HIBOR, M3 | HKMA daily interbank liquidity and monthly monetary statistics APIs; paginated daily history and C&SD 340-45011 year-end M3 history |
+| Monetary and financial | Base rate, one-month HIBOR, M3 | HKMA daily interbank liquidity and monthly monetary statistics APIs; paginated daily history and C&SD 340-45011 quarter-end M3 history |
 
 ## History and fallback
 
-- Retain the latest seven calendar years for charting (all available effective-date observations for event series).
-- One-year view selects the last observation in each available month; quarterly/half-yearly statistics remain sparse. Annual statistics show one year.
-- Three-, five-, and seven-year views select the last available observation in each calendar year, **not annual totals or averages**. Original periods remain in tooltips.
-- Do not invent missing observations. Coverage text shows the loaded period; limited histories remain limited.
+- Retain ten calendar years for charting (all available effective-date observations for event series).
+- Per-statistic choices are 1, 3, and 10 years when ten yearly observations exist; otherwise the longest choice is capped at 7 years. Shorter sources show only their available observations.
+- One year: 12 monthly points where available, otherwise up to 4 quarterly points. Annual sources retain their yearly frequency.
+- Three years: 12 quarterly points where available, otherwise up to 3 yearly points.
+- Ten years: 10 yearly points. Each bucket takes its last actual observation, preserving the original period/value; no sums or averages are computed.
+- No missing observations are invented or compressed. Axis labels are thinned to six while all data points remain accessible.
 - Restore the most recent published canonical snapshot before scheduled generation. A failed fetch retains the prior value with an explicit fallback status, never a false live badge.
 - Every deployment runs frozen historical snapshots plus live data, parser, chart-range, and inventory checks.
 

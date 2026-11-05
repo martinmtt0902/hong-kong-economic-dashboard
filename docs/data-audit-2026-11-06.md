@@ -9,18 +9,21 @@ The dashboard retains all 32 metric IDs and all 11 cards. No statistic was added
 - Minimum-wage page wording changed. Parse the new wording, yielding HK$43.1 effective 1 May 2026. The existing “next rate” statistic remains present but shows “尚未公布” when no future rate is announced, instead of showing an already-effective rate as upcoming.
 - Visitor arrivals now explicitly select monthly frequency; annual totals cannot enter the monthly history.
 - Current-account balance uses the same official C&SD table 315-37003, component CRA, quarterly BOP amount through its full-series API. This replaces the nine-quarter PDF extraction, extends history, and preserves official precision (2026 Q2: HK$96,030.883 million; the PDF rounded to 96,031).
-- HKMA requests paginate beyond the default 100 rows. Daily rates request up to 3,000 observations; M3 retains its recent monthly HKMA values and adds older official year-end observations from C&SD 340-45011 (all-currency M3, in HK$ million). This extends the yearly view without substituting annual values for current monthly observations.
+- HKMA requests paginate beyond the default 100 rows. Daily rates request up to 3,000 observations; M3 retains its recent monthly HKMA values and adds older official quarter-end observations from C&SD 340-45011 (all-currency M3, in HK$ million). This extends the quarterly and yearly views without substituting annual values for current monthly observations.
 - Prior-year comparisons clamp 29 February to the previous February's last day.
 - Daily builds restore the last published canonical snapshot before fetching. Source outages therefore retain the last deployed data instead of reverting to the repository's March snapshot. Requests have timeouts, one retry, shared responses, and bounded concurrency.
 
 ## Chart behavior
 
-Each non-empty chart has 1-, 3-, 5-, and 7-year choices, anchored to its latest available observation (including explicitly labelled forecasts/budgets).
+Each non-empty chart offers 1, 3, and 10 years where ten yearly points exist. Otherwise its longest option is **7 years**, even if eight or nine years are available. All ranges are anchored to the latest observation, including explicitly labelled forecasts/budgets.
 
-- One year: the latest 12 calendar months for subannual series, at most one observation per month. Quarterly and half-yearly series keep their original frequency. Annual series show their latest year.
-- Longer views: the latest 3, 5, or 7 calendar years, one last available observation per year. These are **not annual sums or averages**. The actual original period and value remain in the tooltip.
-- Monthly labels are thinned; yearly views show up to seven year labels. Missing periods are not invented or compressed. Insufficient histories show only available observations and state their loaded coverage.
-- The generator retains seven calendar years of chart history. Event series keep available effective-date history. Private completions currently expose only three years in the configured source; the current minimum-wage page supplies only the prevailing event.
+- **1 year:** 12 monthly points if available; otherwise up to 4 quarterly points. Annual data retain their native yearly frequency.
+- **3 years:** 12 quarterly points if available; otherwise up to 3 yearly points.
+- **10 years:** 10 yearly points. The seven-year fallback uses up to 7 yearly points; shorter histories show only actual observations.
+- Each period selects its last available observation. Original tooltip periods and values are retained; no new totals or averages are calculated. Missing periods are not invented or compressed.
+- Axis labels are thinned to at most six, independently of the 10 or 12 plotted points.
+- The generator retains ten calendar years of chart history. HKMA pagination stops when this horizon is covered; if an older page fails after seven years were successfully fetched, the UI uses the seven-year cap. M3 uses older official quarterly history to support its three-year view.
+- Private completions currently expose only three years in the configured source; the current minimum-wage page supplies only the prevailing event.
 
 ## Verification
 
