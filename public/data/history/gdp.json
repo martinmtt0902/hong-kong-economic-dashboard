@@ -1,7 +1,8 @@
 {
   "id": "gdp",
   "title_tc": "GDP",
-  "periods_summary_text_tc": "各卡更新期不同，請以各列期別為準",
+  "latest_data_at": "2026-06-30",
+  "latest_data_label": "2026年第2季",
   "metrics": [
     {
       "id": "gdp_real_yoy",
@@ -10,18 +11,19 @@
       "source_url": "https://data.gov.hk/en-data/dataset/hk-censtatd-tablechart-310-31003",
       "status": "ok",
       "status_text_tc": "最新",
-      "display_value_text": "+3.8%",
-      "display_change_text": "較上期（2025年第3季） +0.1 個百分點",
-      "display_previous_text": "上期（2025年第3季） +3.7%",
-      "display_period_text": "2025年第4季",
-      "display_comparison_text": "較上期（2025年第3季） +0.1 個百分點",
+      "display_value_text": "+4.3%",
+      "display_change_text": "較上期（2026年第1季） -1.6 個百分點",
+      "display_previous_text": "上期（2026年第1季） +5.9%",
+      "display_period_text": "2026年第2季",
+      "display_comparison_text": "較上期（2026年第1季） -1.6 個百分點",
       "display_comparison_basis_text": "較上期",
-      "display_comparison_period_text": "2025年第3季",
+      "display_comparison_period_text": "2026年第1季",
       "display_unit": "%",
       "data_origin": "live",
-      "last_successful_fetch_at": "2026-03-18T11:39:06.754Z",
+      "last_successful_fetch_at": "2026-11-05T17:09:20.634Z",
       "chart": {
         "chart_type": "line",
+        "frequency": "quarterly",
         "x_axis_label": "季度",
         "y_axis_label": "實質 GDP 增長 (%)",
         "time_label": "季度",
@@ -33,13 +35,110 @@
           "display_unit": "%"
         },
         "suggested_ticks": [
-          "2023Q1",
-          "2024Q3",
-          "2025Q4"
+          "2020Q1",
+          "2023Q2",
+          "2026Q2"
         ],
         "points": [
           {
+            "x": "2020年第1季",
+            "date": "2020-03-31",
+            "y": -9.4,
+            "tick_label": "2020Q1",
+            "tooltip_title": "2020年第1季",
+            "tooltip_value_text": "-9.4%"
+          },
+          {
+            "x": "2020年第2季",
+            "date": "2020-06-30",
+            "y": -9.4,
+            "tick_label": "2020Q2",
+            "tooltip_title": "2020年第2季",
+            "tooltip_value_text": "-9.4%"
+          },
+          {
+            "x": "2020年第3季",
+            "date": "2020-09-30",
+            "y": -4,
+            "tick_label": "2020Q3",
+            "tooltip_title": "2020年第3季",
+            "tooltip_value_text": "-4.0%"
+          },
+          {
+            "x": "2020年第4季",
+            "date": "2020-12-31",
+            "y": -3.5,
+            "tick_label": "2020Q4",
+            "tooltip_title": "2020年第4季",
+            "tooltip_value_text": "-3.5%"
+          },
+          {
+            "x": "2021年第1季",
+            "date": "2021-03-31",
+            "y": 8.2,
+            "tick_label": "2021Q1",
+            "tooltip_title": "2021年第1季",
+            "tooltip_value_text": "+8.2%"
+          },
+          {
+            "x": "2021年第2季",
+            "date": "2021-06-30",
+            "y": 7.6,
+            "tick_label": "2021Q2",
+            "tooltip_title": "2021年第2季",
+            "tooltip_value_text": "+7.6%"
+          },
+          {
+            "x": "2021年第3季",
+            "date": "2021-09-30",
+            "y": 5.6,
+            "tick_label": "2021Q3",
+            "tooltip_title": "2021年第3季",
+            "tooltip_value_text": "+5.6%"
+          },
+          {
+            "x": "2021年第4季",
+            "date": "2021-12-31",
+            "y": 4.7,
+            "tick_label": "2021Q4",
+            "tooltip_title": "2021年第4季",
+            "tooltip_value_text": "+4.7%"
+          },
+          {
+            "x": "2022年第1季",
+            "date": "2022-03-31",
+            "y": -4,
+            "tick_label": "2022Q1",
+            "tooltip_title": "2022年第1季",
+            "tooltip_value_text": "-4.0%"
+          },
+          {
+            "x": "2022年第2季",
+            "date": "2022-06-30",
+            "y": -1.5,
+            "tick_label": "2022Q2",
+            "tooltip_title": "2022年第2季",
+            "tooltip_value_text": "-1.5%"
+          },
+          {
+            "x": "2022年第3季",
+            "date": "2022-09-30",
+            "y": -4.9,
+            "tick_label": "2022Q3",
+            "tooltip_title": "2022年第3季",
+            "tooltip_value_text": "-4.9%"
+          },
+          {
+            "x": "2022年第4季",
+            "date": "2022-12-31",
+            "y": -4.3,
+            "tick_label": "2022Q4",
+            "tooltip_title": "2022年第4季",
+            "tooltip_value_text": "-4.3%"
+          },
+          {
             "x": "2023年第1季",
+            "date": "2023-03-31",
             "y": 2.7,
             "tick_label": "2023Q1",
             "tooltip_title": "2023年第1季",
@@ -47,6 +146,7 @@
           },
           {
             "x": "2023年第2季",
+            "date": "2023-06-30",
             "y": 1.5,
             "tick_label": "2023Q2",
             "tooltip_title": "2023年第2季",
@@ -54,6 +154,7 @@
           },
           {
             "x": "2023年第3季",
+            "date": "2023-09-30",
             "y": 4.1,
             "tick_label": "2023Q3",
             "tooltip_title": "2023年第3季",
@@ -61,6 +162,7 @@
           },
           {
             "x": "2023年第4季",
+            "date": "2023-12-31",
             "y": 4.2,
             "tick_label": "2023Q4",
             "tooltip_title": "2023年第4季",
@@ -68,6 +170,7 @@
           },
           {
             "x": "2024年第1季",
+            "date": "2024-03-31",
             "y": 2.9,
             "tick_label": "2024Q1",
             "tooltip_title": "2024年第1季",
@@ -75,6 +178,7 @@
           },
           {
             "x": "2024年第2季",
+            "date": "2024-06-30",
             "y": 3,
             "tick_label": "2024Q2",
             "tooltip_title": "2024年第2季",
@@ -82,6 +186,7 @@
           },
           {
             "x": "2024年第3季",
+            "date": "2024-09-30",
             "y": 2.1,
             "tick_label": "2024Q3",
             "tooltip_title": "2024年第3季",
@@ -89,6 +194,7 @@
           },
           {
             "x": "2024年第4季",
+            "date": "2024-12-31",
             "y": 2.5,
             "tick_label": "2024Q4",
             "tooltip_title": "2024年第4季",
@@ -96,35 +202,103 @@
           },
           {
             "x": "2025年第1季",
-            "y": 3.1,
+            "date": "2025-03-31",
+            "y": 3.2,
             "tick_label": "2025Q1",
             "tooltip_title": "2025年第1季",
-            "tooltip_value_text": "+3.1%"
-          },
-          {
-            "x": "2025年第2季",
-            "y": 3.2,
-            "tick_label": "2025Q2",
-            "tooltip_title": "2025年第2季",
             "tooltip_value_text": "+3.2%"
           },
           {
+            "x": "2025年第2季",
+            "date": "2025-06-30",
+            "y": 3.3,
+            "tick_label": "2025Q2",
+            "tooltip_title": "2025年第2季",
+            "tooltip_value_text": "+3.3%"
+          },
+          {
             "x": "2025年第3季",
-            "y": 3.7,
+            "date": "2025-09-30",
+            "y": 3.8,
             "tick_label": "2025Q3",
             "tooltip_title": "2025年第3季",
-            "tooltip_value_text": "+3.7%"
+            "tooltip_value_text": "+3.8%"
           },
           {
             "x": "2025年第4季",
-            "y": 3.8,
+            "date": "2025-12-31",
+            "y": 4,
             "tick_label": "2025Q4",
             "tooltip_title": "2025年第4季",
-            "tooltip_value_text": "+3.8%"
+            "tooltip_value_text": "+4.0%"
+          },
+          {
+            "x": "2026年第1季",
+            "date": "2026-03-31",
+            "y": 5.9,
+            "tick_label": "2026Q1",
+            "tooltip_title": "2026年第1季",
+            "tooltip_value_text": "+5.9%"
+          },
+          {
+            "x": "2026年第2季",
+            "date": "2026-06-30",
+            "y": 4.3,
+            "tick_label": "2026Q2",
+            "tooltip_title": "2026年第2季",
+            "tooltip_value_text": "+4.3%"
           }
         ]
       },
       "sparkline_points": [
+        {
+          "x": "2020年第1季",
+          "y": -9.4
+        },
+        {
+          "x": "2020年第2季",
+          "y": -9.4
+        },
+        {
+          "x": "2020年第3季",
+          "y": -4
+        },
+        {
+          "x": "2020年第4季",
+          "y": -3.5
+        },
+        {
+          "x": "2021年第1季",
+          "y": 8.2
+        },
+        {
+          "x": "2021年第2季",
+          "y": 7.6
+        },
+        {
+          "x": "2021年第3季",
+          "y": 5.6
+        },
+        {
+          "x": "2021年第4季",
+          "y": 4.7
+        },
+        {
+          "x": "2022年第1季",
+          "y": -4
+        },
+        {
+          "x": "2022年第2季",
+          "y": -1.5
+        },
+        {
+          "x": "2022年第3季",
+          "y": -4.9
+        },
+        {
+          "x": "2022年第4季",
+          "y": -4.3
+        },
         {
           "x": "2023年第1季",
           "y": 2.7
@@ -159,19 +333,27 @@
         },
         {
           "x": "2025年第1季",
-          "y": 3.1
-        },
-        {
-          "x": "2025年第2季",
           "y": 3.2
         },
         {
+          "x": "2025年第2季",
+          "y": 3.3
+        },
+        {
           "x": "2025年第3季",
-          "y": 3.7
+          "y": 3.8
         },
         {
           "x": "2025年第4季",
-          "y": 3.8
+          "y": 4
+        },
+        {
+          "x": "2026年第1季",
+          "y": 5.9
+        },
+        {
+          "x": "2026年第2季",
+          "y": 4.3
         }
       ],
       "expected_update": "每季"
@@ -183,18 +365,19 @@
       "source_url": "https://data.gov.hk/en-data/dataset/hk-censtatd-tablechart-310-31002",
       "status": "ok",
       "status_text_tc": "最新",
-      "display_value_text": "+5.1%",
-      "display_change_text": "較上期（2025年第3季） +0.5 個百分點",
-      "display_previous_text": "上期（2025年第3季） +4.6%",
-      "display_period_text": "2025年第4季",
-      "display_comparison_text": "較上期（2025年第3季） +0.5 個百分點",
+      "display_value_text": "+6.9%",
+      "display_change_text": "較上期（2026年第1季） +1.3 個百分點",
+      "display_previous_text": "上期（2026年第1季） +5.6%",
+      "display_period_text": "2026年第2季",
+      "display_comparison_text": "較上期（2026年第1季） +1.3 個百分點",
       "display_comparison_basis_text": "較上期",
-      "display_comparison_period_text": "2025年第3季",
+      "display_comparison_period_text": "2026年第1季",
       "display_unit": "%",
       "data_origin": "live",
-      "last_successful_fetch_at": "2026-03-18T11:39:06.754Z",
+      "last_successful_fetch_at": "2026-11-05T17:09:20.634Z",
       "chart": {
         "chart_type": "line",
+        "frequency": "quarterly",
         "x_axis_label": "季度",
         "y_axis_label": "名義 GDP 增長 (%)",
         "time_label": "季度",
@@ -206,13 +389,110 @@
           "display_unit": "%"
         },
         "suggested_ticks": [
-          "2023Q1",
-          "2024Q3",
-          "2025Q4"
+          "2020Q1",
+          "2023Q2",
+          "2026Q2"
         ],
         "points": [
           {
+            "x": "2020年第1季",
+            "date": "2020-03-31",
+            "y": -6.9,
+            "tick_label": "2020Q1",
+            "tooltip_title": "2020年第1季",
+            "tooltip_value_text": "-6.9%"
+          },
+          {
+            "x": "2020年第2季",
+            "date": "2020-06-30",
+            "y": -8.9,
+            "tick_label": "2020Q2",
+            "tooltip_title": "2020年第2季",
+            "tooltip_value_text": "-8.9%"
+          },
+          {
+            "x": "2020年第3季",
+            "date": "2020-09-30",
+            "y": -3.8,
+            "tick_label": "2020Q3",
+            "tooltip_title": "2020年第3季",
+            "tooltip_value_text": "-3.8%"
+          },
+          {
+            "x": "2020年第4季",
+            "date": "2020-12-31",
+            "y": -4.4,
+            "tick_label": "2020Q4",
+            "tooltip_title": "2020年第4季",
+            "tooltip_value_text": "-4.4%"
+          },
+          {
+            "x": "2021年第1季",
+            "date": "2021-03-31",
+            "y": 7.8,
+            "tick_label": "2021Q1",
+            "tooltip_title": "2021年第1季",
+            "tooltip_value_text": "+7.8%"
+          },
+          {
+            "x": "2021年第2季",
+            "date": "2021-06-30",
+            "y": 8.2,
+            "tick_label": "2021Q2",
+            "tooltip_title": "2021年第2季",
+            "tooltip_value_text": "+8.2%"
+          },
+          {
+            "x": "2021年第3季",
+            "date": "2021-09-30",
+            "y": 6.3,
+            "tick_label": "2021Q3",
+            "tooltip_title": "2021年第3季",
+            "tooltip_value_text": "+6.3%"
+          },
+          {
+            "x": "2021年第4季",
+            "date": "2021-12-31",
+            "y": 6.6,
+            "tick_label": "2021Q4",
+            "tooltip_title": "2021年第4季",
+            "tooltip_value_text": "+6.6%"
+          },
+          {
+            "x": "2022年第1季",
+            "date": "2022-03-31",
+            "y": -2.9,
+            "tick_label": "2022Q1",
+            "tooltip_title": "2022年第1季",
+            "tooltip_value_text": "-2.9%"
+          },
+          {
+            "x": "2022年第2季",
+            "date": "2022-06-30",
+            "y": -0.6,
+            "tick_label": "2022Q2",
+            "tooltip_title": "2022年第2季",
+            "tooltip_value_text": "-0.6%"
+          },
+          {
+            "x": "2022年第3季",
+            "date": "2022-09-30",
+            "y": -1.8,
+            "tick_label": "2022Q3",
+            "tooltip_title": "2022年第3季",
+            "tooltip_value_text": "-1.8%"
+          },
+          {
+            "x": "2022年第4季",
+            "date": "2022-12-31",
+            "y": -2.9,
+            "tick_label": "2022Q4",
+            "tooltip_title": "2022年第4季",
+            "tooltip_value_text": "-2.9%"
+          },
+          {
             "x": "2023年第1季",
+            "date": "2023-03-31",
             "y": 4.9,
             "tick_label": "2023Q1",
             "tooltip_title": "2023年第1季",
@@ -220,6 +500,7 @@
           },
           {
             "x": "2023年第2季",
+            "date": "2023-06-30",
             "y": 4.3,
             "tick_label": "2023Q2",
             "tooltip_title": "2023年第2季",
@@ -227,6 +508,7 @@
           },
           {
             "x": "2023年第3季",
+            "date": "2023-09-30",
             "y": 6.7,
             "tick_label": "2023Q3",
             "tooltip_title": "2023年第3季",
@@ -234,6 +516,7 @@
           },
           {
             "x": "2023年第4季",
+            "date": "2023-12-31",
             "y": 8.4,
             "tick_label": "2023Q4",
             "tooltip_title": "2023年第4季",
@@ -241,6 +524,7 @@
           },
           {
             "x": "2024年第1季",
+            "date": "2024-03-31",
             "y": 7,
             "tick_label": "2024Q1",
             "tooltip_title": "2024年第1季",
@@ -248,6 +532,7 @@
           },
           {
             "x": "2024年第2季",
+            "date": "2024-06-30",
             "y": 7.9,
             "tick_label": "2024Q2",
             "tooltip_title": "2024年第2季",
@@ -255,6 +540,7 @@
           },
           {
             "x": "2024年第3季",
+            "date": "2024-09-30",
             "y": 7.1,
             "tick_label": "2024Q3",
             "tooltip_title": "2024年第3季",
@@ -262,6 +548,7 @@
           },
           {
             "x": "2024年第4季",
+            "date": "2024-12-31",
             "y": 5.7,
             "tick_label": "2024Q4",
             "tooltip_title": "2024年第4季",
@@ -269,35 +556,103 @@
           },
           {
             "x": "2025年第1季",
-            "y": 4.5,
+            "date": "2025-03-31",
+            "y": 4.3,
             "tick_label": "2025Q1",
             "tooltip_title": "2025年第1季",
-            "tooltip_value_text": "+4.5%"
+            "tooltip_value_text": "+4.3%"
           },
           {
             "x": "2025年第2季",
-            "y": 3.9,
+            "date": "2025-06-30",
+            "y": 3.8,
             "tick_label": "2025Q2",
             "tooltip_title": "2025年第2季",
-            "tooltip_value_text": "+3.9%"
+            "tooltip_value_text": "+3.8%"
           },
           {
             "x": "2025年第3季",
-            "y": 4.6,
+            "date": "2025-09-30",
+            "y": 4.3,
             "tick_label": "2025Q3",
             "tooltip_title": "2025年第3季",
-            "tooltip_value_text": "+4.6%"
+            "tooltip_value_text": "+4.3%"
           },
           {
             "x": "2025年第4季",
-            "y": 5.1,
+            "date": "2025-12-31",
+            "y": 5.4,
             "tick_label": "2025Q4",
             "tooltip_title": "2025年第4季",
-            "tooltip_value_text": "+5.1%"
+            "tooltip_value_text": "+5.4%"
+          },
+          {
+            "x": "2026年第1季",
+            "date": "2026-03-31",
+            "y": 5.6,
+            "tick_label": "2026Q1",
+            "tooltip_title": "2026年第1季",
+            "tooltip_value_text": "+5.6%"
+          },
+          {
+            "x": "2026年第2季",
+            "date": "2026-06-30",
+            "y": 6.9,
+            "tick_label": "2026Q2",
+            "tooltip_title": "2026年第2季",
+            "tooltip_value_text": "+6.9%"
           }
         ]
       },
       "sparkline_points": [
+        {
+          "x": "2020年第1季",
+          "y": -6.9
+        },
+        {
+          "x": "2020年第2季",
+          "y": -8.9
+        },
+        {
+          "x": "2020年第3季",
+          "y": -3.8
+        },
+        {
+          "x": "2020年第4季",
+          "y": -4.4
+        },
+        {
+          "x": "2021年第1季",
+          "y": 7.8
+        },
+        {
+          "x": "2021年第2季",
+          "y": 8.2
+        },
+        {
+          "x": "2021年第3季",
+          "y": 6.3
+        },
+        {
+          "x": "2021年第4季",
+          "y": 6.6
+        },
+        {
+          "x": "2022年第1季",
+          "y": -2.9
+        },
+        {
+          "x": "2022年第2季",
+          "y": -0.6
+        },
+        {
+          "x": "2022年第3季",
+          "y": -1.8
+        },
+        {
+          "x": "2022年第4季",
+          "y": -2.9
+        },
         {
           "x": "2023年第1季",
           "y": 4.9
@@ -332,19 +687,27 @@
         },
         {
           "x": "2025年第1季",
-          "y": 4.5
+          "y": 4.3
         },
         {
           "x": "2025年第2季",
-          "y": 3.9
+          "y": 3.8
         },
         {
           "x": "2025年第3季",
-          "y": 4.6
+          "y": 4.3
         },
         {
           "x": "2025年第4季",
-          "y": 5.1
+          "y": 5.4
+        },
+        {
+          "x": "2026年第1季",
+          "y": 5.6
+        },
+        {
+          "x": "2026年第2季",
+          "y": 6.9
         }
       ],
       "expected_update": "每季"
@@ -356,18 +719,19 @@
       "source_url": "https://data.gov.hk/en-data/dataset/hk-censtatd-tablechart-315-37003",
       "status": "ok",
       "status_text_tc": "最新",
-      "display_value_text": "順差 981.8億",
-      "display_change_text": "較上期（2025年第2季） 順差增加 23.7億",
-      "display_previous_text": "上期（2025年第2季） 順差 958.1億",
-      "display_period_text": "2025年第3季",
-      "display_comparison_text": "較上期（2025年第2季） 順差增加 23.7億",
+      "display_value_text": "順差 960.3億",
+      "display_change_text": "較上期（2026年第1季） 順差增加 575.7億",
+      "display_previous_text": "上期（2026年第1季） 順差 384.6億",
+      "display_period_text": "2026年第2季",
+      "display_comparison_text": "較上期（2026年第1季） 順差增加 575.7億",
       "display_comparison_basis_text": "較上期",
-      "display_comparison_period_text": "2025年第2季",
+      "display_comparison_period_text": "2026年第1季",
       "display_unit": "億港元",
       "data_origin": "live",
-      "last_successful_fetch_at": "2026-03-18T11:39:06.754Z",
+      "last_successful_fetch_at": "2026-11-05T17:09:20.634Z",
       "chart": {
         "chart_type": "line",
+        "frequency": "quarterly",
         "x_axis_label": "季度",
         "y_axis_label": "經常賬戶差額 (億港元)",
         "time_label": "季度",
@@ -379,112 +743,325 @@
           "display_unit": "億港元"
         },
         "suggested_ticks": [
-          "2023Q3",
-          "2024Q3",
-          "2025Q3"
+          "2020Q1",
+          "2023Q2",
+          "2026Q2"
         ],
         "points": [
           {
+            "x": "2020年第1季",
+            "date": "2020-03-31",
+            "y": -70.11,
+            "tick_label": "2020Q1",
+            "tooltip_title": "2020年第1季",
+            "tooltip_value_text": "-70.1億"
+          },
+          {
+            "x": "2020年第2季",
+            "date": "2020-06-30",
+            "y": 616.76,
+            "tick_label": "2020Q2",
+            "tooltip_title": "2020年第2季",
+            "tooltip_value_text": "616.8億"
+          },
+          {
+            "x": "2020年第3季",
+            "date": "2020-09-30",
+            "y": 988.57,
+            "tick_label": "2020Q3",
+            "tooltip_title": "2020年第3季",
+            "tooltip_value_text": "988.6億"
+          },
+          {
+            "x": "2020年第4季",
+            "date": "2020-12-31",
+            "y": 334.90000000000003,
+            "tick_label": "2020Q4",
+            "tooltip_title": "2020年第4季",
+            "tooltip_value_text": "334.9億"
+          },
+          {
+            "x": "2021年第1季",
+            "date": "2021-03-31",
+            "y": 672.67,
+            "tick_label": "2021Q1",
+            "tooltip_title": "2021年第1季",
+            "tooltip_value_text": "672.7億"
+          },
+          {
+            "x": "2021年第2季",
+            "date": "2021-06-30",
+            "y": 827.83,
+            "tick_label": "2021Q2",
+            "tooltip_title": "2021年第2季",
+            "tooltip_value_text": "827.8億"
+          },
+          {
+            "x": "2021年第3季",
+            "date": "2021-09-30",
+            "y": 974.94,
+            "tick_label": "2021Q3",
+            "tooltip_title": "2021年第3季",
+            "tooltip_value_text": "974.9億"
+          },
+          {
+            "x": "2021年第4季",
+            "date": "2021-12-31",
+            "y": 918.85,
+            "tick_label": "2021Q4",
+            "tooltip_title": "2021年第4季",
+            "tooltip_value_text": "918.9億"
+          },
+          {
+            "x": "2022年第1季",
+            "date": "2022-03-31",
+            "y": 735.21,
+            "tick_label": "2022Q1",
+            "tooltip_title": "2022年第1季",
+            "tooltip_value_text": "735.2億"
+          },
+          {
+            "x": "2022年第2季",
+            "date": "2022-06-30",
+            "y": 386.06,
+            "tick_label": "2022Q2",
+            "tooltip_title": "2022年第2季",
+            "tooltip_value_text": "386.1億"
+          },
+          {
+            "x": "2022年第3季",
+            "date": "2022-09-30",
+            "y": 1180.76,
+            "tick_label": "2022Q3",
+            "tooltip_title": "2022年第3季",
+            "tooltip_value_text": "1180.8億"
+          },
+          {
+            "x": "2022年第4季",
+            "date": "2022-12-31",
+            "y": 558.39,
+            "tick_label": "2022Q4",
+            "tooltip_title": "2022年第4季",
+            "tooltip_value_text": "558.4億"
+          },
+          {
+            "x": "2023年第1季",
+            "date": "2023-03-31",
+            "y": 413.27,
+            "tick_label": "2023Q1",
+            "tooltip_title": "2023年第1季",
+            "tooltip_value_text": "413.3億"
+          },
+          {
+            "x": "2023年第2季",
+            "date": "2023-06-30",
+            "y": 383.81,
+            "tick_label": "2023Q2",
+            "tooltip_title": "2023年第2季",
+            "tooltip_value_text": "383.8億"
+          },
+          {
             "x": "2023年第3季",
-            "y": 1108.83,
+            "date": "2023-09-30",
+            "y": 1103.31,
             "tick_label": "2023Q3",
             "tooltip_title": "2023年第3季",
-            "tooltip_value_text": "1108.8億"
+            "tooltip_value_text": "1103.3億"
           },
           {
             "x": "2023年第4季",
-            "y": 614.6,
+            "date": "2023-12-31",
+            "y": 608.84,
             "tick_label": "2023Q4",
             "tooltip_title": "2023年第4季",
-            "tooltip_value_text": "614.6億"
+            "tooltip_value_text": "608.8億"
           },
           {
             "x": "2024年第1季",
-            "y": 1034.1200000000001,
+            "date": "2024-03-31",
+            "y": 1018.26,
             "tick_label": "2024Q1",
             "tooltip_title": "2024年第1季",
-            "tooltip_value_text": "1034.1億"
+            "tooltip_value_text": "1018.3億"
           },
           {
             "x": "2024年第2季",
-            "y": 967.52,
+            "date": "2024-06-30",
+            "y": 952.34,
             "tick_label": "2024Q2",
             "tooltip_title": "2024年第2季",
-            "tooltip_value_text": "967.5億"
+            "tooltip_value_text": "952.3億"
           },
           {
             "x": "2024年第3季",
-            "y": 1132.28,
+            "date": "2024-09-30",
+            "y": 1106.3700000000001,
             "tick_label": "2024Q3",
             "tooltip_title": "2024年第3季",
-            "tooltip_value_text": "1132.3億"
+            "tooltip_value_text": "1106.4億"
           },
           {
             "x": "2024年第4季",
-            "y": 1116.33,
+            "date": "2024-12-31",
+            "y": 1108.99,
             "tick_label": "2024Q4",
             "tooltip_title": "2024年第4季",
-            "tooltip_value_text": "1116.3億"
+            "tooltip_value_text": "1109.0億"
           },
           {
             "x": "2025年第1季",
-            "y": 1269.2,
+            "date": "2025-03-31",
+            "y": 1246.9,
             "tick_label": "2025Q1",
             "tooltip_title": "2025年第1季",
-            "tooltip_value_text": "1269.2億"
+            "tooltip_value_text": "1246.9億"
           },
           {
             "x": "2025年第2季",
-            "y": 958.08,
+            "date": "2025-06-30",
+            "y": 931.29,
             "tick_label": "2025Q2",
             "tooltip_title": "2025年第2季",
-            "tooltip_value_text": "958.1億"
+            "tooltip_value_text": "931.3億"
           },
           {
             "x": "2025年第3季",
-            "y": 981.75,
+            "date": "2025-09-30",
+            "y": 951,
             "tick_label": "2025Q3",
             "tooltip_title": "2025年第3季",
-            "tooltip_value_text": "981.8億"
+            "tooltip_value_text": "951.0億"
+          },
+          {
+            "x": "2025年第4季",
+            "date": "2025-12-31",
+            "y": 950.01,
+            "tick_label": "2025Q4",
+            "tooltip_title": "2025年第4季",
+            "tooltip_value_text": "950.0億"
+          },
+          {
+            "x": "2026年第1季",
+            "date": "2026-03-31",
+            "y": 384.61,
+            "tick_label": "2026Q1",
+            "tooltip_title": "2026年第1季",
+            "tooltip_value_text": "384.6億"
+          },
+          {
+            "x": "2026年第2季",
+            "date": "2026-06-30",
+            "y": 960.3088300000001,
+            "tick_label": "2026Q2",
+            "tooltip_title": "2026年第2季",
+            "tooltip_value_text": "960.3億"
           }
         ]
       },
       "sparkline_points": [
         {
+          "x": "2020年第1季",
+          "y": -7011
+        },
+        {
+          "x": "2020年第2季",
+          "y": 61676
+        },
+        {
+          "x": "2020年第3季",
+          "y": 98857
+        },
+        {
+          "x": "2020年第4季",
+          "y": 33490
+        },
+        {
+          "x": "2021年第1季",
+          "y": 67267
+        },
+        {
+          "x": "2021年第2季",
+          "y": 82783
+        },
+        {
+          "x": "2021年第3季",
+          "y": 97494
+        },
+        {
+          "x": "2021年第4季",
+          "y": 91885
+        },
+        {
+          "x": "2022年第1季",
+          "y": 73521
+        },
+        {
+          "x": "2022年第2季",
+          "y": 38606
+        },
+        {
+          "x": "2022年第3季",
+          "y": 118076
+        },
+        {
+          "x": "2022年第4季",
+          "y": 55839
+        },
+        {
+          "x": "2023年第1季",
+          "y": 41327
+        },
+        {
+          "x": "2023年第2季",
+          "y": 38381
+        },
+        {
           "x": "2023年第3季",
-          "y": 110883
+          "y": 110331
         },
         {
           "x": "2023年第4季",
-          "y": 61460
+          "y": 60884
         },
         {
           "x": "2024年第1季",
-          "y": 103412
+          "y": 101826
         },
         {
           "x": "2024年第2季",
-          "y": 96752
+          "y": 95234
         },
         {
           "x": "2024年第3季",
-          "y": 113228
+          "y": 110637
         },
         {
           "x": "2024年第4季",
-          "y": 111633
+          "y": 110899
         },
         {
           "x": "2025年第1季",
-          "y": 126920
+          "y": 124690
         },
         {
           "x": "2025年第2季",
-          "y": 95808
+          "y": 93129
         },
         {
           "x": "2025年第3季",
-          "y": 98175
+          "y": 95100
+        },
+        {
+          "x": "2025年第4季",
+          "y": 95001
+        },
+        {
+          "x": "2026年第1季",
+          "y": 38461
+        },
+        {
+          "x": "2026年第2季",
+          "y": 96030.883
         }
       ],
       "expected_update": "每季"
@@ -496,18 +1073,19 @@
       "source_url": "https://data.gov.hk/en-data/dataset/hk-censtatd-tablechart-310-31012",
       "status": "ok",
       "status_text_tc": "最新",
-      "display_value_text": "+2.7%",
-      "display_change_text": "較上期（2025年第3季） +0.3 個百分點",
-      "display_previous_text": "上期（2025年第3季） +2.4%",
-      "display_period_text": "2025年第4季",
-      "display_comparison_text": "較上期（2025年第3季） +0.3 個百分點",
+      "display_value_text": "+2.8%",
+      "display_change_text": "較上期（2026年第1季） -2.1 個百分點",
+      "display_previous_text": "上期（2026年第1季） +4.9%",
+      "display_period_text": "2026年第2季",
+      "display_comparison_text": "較上期（2026年第1季） -2.1 個百分點",
       "display_comparison_basis_text": "較上期",
-      "display_comparison_period_text": "2025年第3季",
+      "display_comparison_period_text": "2026年第1季",
       "display_unit": "%",
       "data_origin": "live",
-      "last_successful_fetch_at": "2026-03-18T11:39:06.754Z",
+      "last_successful_fetch_at": "2026-11-05T17:09:20.634Z",
       "chart": {
         "chart_type": "line",
+        "frequency": "quarterly",
         "x_axis_label": "季度",
         "y_axis_label": "私人消費開支（PCE） (%)",
         "time_label": "季度",
@@ -519,13 +1097,110 @@
           "display_unit": "%"
         },
         "suggested_ticks": [
-          "2023Q1",
-          "2024Q3",
-          "2025Q4"
+          "2020Q1",
+          "2023Q2",
+          "2026Q2"
         ],
         "points": [
           {
+            "x": "2020年第1季",
+            "date": "2020-03-31",
+            "y": -11.5,
+            "tick_label": "2020Q1",
+            "tooltip_title": "2020年第1季",
+            "tooltip_value_text": "-11.5%"
+          },
+          {
+            "x": "2020年第2季",
+            "date": "2020-06-30",
+            "y": -14.5,
+            "tick_label": "2020Q2",
+            "tooltip_title": "2020年第2季",
+            "tooltip_value_text": "-14.5%"
+          },
+          {
+            "x": "2020年第3季",
+            "date": "2020-09-30",
+            "y": -8.8,
+            "tick_label": "2020Q3",
+            "tooltip_title": "2020年第3季",
+            "tooltip_value_text": "-8.8%"
+          },
+          {
+            "x": "2020年第4季",
+            "date": "2020-12-31",
+            "y": -7.5,
+            "tick_label": "2020Q4",
+            "tooltip_title": "2020年第4季",
+            "tooltip_value_text": "-7.5%"
+          },
+          {
+            "x": "2021年第1季",
+            "date": "2021-03-31",
+            "y": 2.4,
+            "tick_label": "2021Q1",
+            "tooltip_title": "2021年第1季",
+            "tooltip_value_text": "+2.4%"
+          },
+          {
+            "x": "2021年第2季",
+            "date": "2021-06-30",
+            "y": 7.5,
+            "tick_label": "2021Q2",
+            "tooltip_title": "2021年第2季",
+            "tooltip_value_text": "+7.5%"
+          },
+          {
+            "x": "2021年第3季",
+            "date": "2021-09-30",
+            "y": 6.8,
+            "tick_label": "2021Q3",
+            "tooltip_title": "2021年第3季",
+            "tooltip_value_text": "+6.8%"
+          },
+          {
+            "x": "2021年第4季",
+            "date": "2021-12-31",
+            "y": 5.7,
+            "tick_label": "2021Q4",
+            "tooltip_title": "2021年第4季",
+            "tooltip_value_text": "+5.7%"
+          },
+          {
+            "x": "2022年第1季",
+            "date": "2022-03-31",
+            "y": -6.9,
+            "tick_label": "2022Q1",
+            "tooltip_title": "2022年第1季",
+            "tooltip_value_text": "-6.9%"
+          },
+          {
+            "x": "2022年第2季",
+            "date": "2022-06-30",
+            "y": -1.1,
+            "tick_label": "2022Q2",
+            "tooltip_title": "2022年第2季",
+            "tooltip_value_text": "-1.1%"
+          },
+          {
+            "x": "2022年第3季",
+            "date": "2022-09-30",
+            "y": -1.5,
+            "tick_label": "2022Q3",
+            "tooltip_title": "2022年第3季",
+            "tooltip_value_text": "-1.5%"
+          },
+          {
+            "x": "2022年第4季",
+            "date": "2022-12-31",
+            "y": 0.3,
+            "tick_label": "2022Q4",
+            "tooltip_title": "2022年第4季",
+            "tooltip_value_text": "+0.3%"
+          },
+          {
             "x": "2023年第1季",
+            "date": "2023-03-31",
             "y": 12.2,
             "tick_label": "2023Q1",
             "tooltip_title": "2023年第1季",
@@ -533,6 +1208,7 @@
           },
           {
             "x": "2023年第2季",
+            "date": "2023-06-30",
             "y": 7.6,
             "tick_label": "2023Q2",
             "tooltip_title": "2023年第2季",
@@ -540,6 +1216,7 @@
           },
           {
             "x": "2023年第3季",
+            "date": "2023-09-30",
             "y": 5.8,
             "tick_label": "2023Q3",
             "tooltip_title": "2023年第3季",
@@ -547,6 +1224,7 @@
           },
           {
             "x": "2023年第4季",
+            "date": "2023-12-31",
             "y": 2.5,
             "tick_label": "2023Q4",
             "tooltip_title": "2023年第4季",
@@ -554,6 +1232,7 @@
           },
           {
             "x": "2024年第1季",
+            "date": "2024-03-31",
             "y": 1.4,
             "tick_label": "2024Q1",
             "tooltip_title": "2024年第1季",
@@ -561,6 +1240,7 @@
           },
           {
             "x": "2024年第2季",
+            "date": "2024-06-30",
             "y": -1.5,
             "tick_label": "2024Q2",
             "tooltip_title": "2024年第2季",
@@ -568,6 +1248,7 @@
           },
           {
             "x": "2024年第3季",
+            "date": "2024-09-30",
             "y": -0.7,
             "tick_label": "2024Q3",
             "tooltip_title": "2024年第3季",
@@ -575,6 +1256,7 @@
           },
           {
             "x": "2024年第4季",
+            "date": "2024-12-31",
             "y": 0.2,
             "tick_label": "2024Q4",
             "tooltip_title": "2024年第4季",
@@ -582,20 +1264,23 @@
           },
           {
             "x": "2025年第1季",
-            "y": -0.9,
+            "date": "2025-03-31",
+            "y": -0.7,
             "tick_label": "2025Q1",
             "tooltip_title": "2025年第1季",
-            "tooltip_value_text": "-0.9%"
+            "tooltip_value_text": "-0.7%"
           },
           {
             "x": "2025年第2季",
-            "y": 2.3,
+            "date": "2025-06-30",
+            "y": 2.4,
             "tick_label": "2025Q2",
             "tooltip_title": "2025年第2季",
-            "tooltip_value_text": "+2.3%"
+            "tooltip_value_text": "+2.4%"
           },
           {
             "x": "2025年第3季",
+            "date": "2025-09-30",
             "y": 2.4,
             "tick_label": "2025Q3",
             "tooltip_title": "2025年第3季",
@@ -603,14 +1288,79 @@
           },
           {
             "x": "2025年第4季",
-            "y": 2.7,
+            "date": "2025-12-31",
+            "y": 2.5,
             "tick_label": "2025Q4",
             "tooltip_title": "2025年第4季",
-            "tooltip_value_text": "+2.7%"
+            "tooltip_value_text": "+2.5%"
+          },
+          {
+            "x": "2026年第1季",
+            "date": "2026-03-31",
+            "y": 4.9,
+            "tick_label": "2026Q1",
+            "tooltip_title": "2026年第1季",
+            "tooltip_value_text": "+4.9%"
+          },
+          {
+            "x": "2026年第2季",
+            "date": "2026-06-30",
+            "y": 2.8,
+            "tick_label": "2026Q2",
+            "tooltip_title": "2026年第2季",
+            "tooltip_value_text": "+2.8%"
           }
         ]
       },
       "sparkline_points": [
+        {
+          "x": "2020年第1季",
+          "y": -11.5
+        },
+        {
+          "x": "2020年第2季",
+          "y": -14.5
+        },
+        {
+          "x": "2020年第3季",
+          "y": -8.8
+        },
+        {
+          "x": "2020年第4季",
+          "y": -7.5
+        },
+        {
+          "x": "2021年第1季",
+          "y": 2.4
+        },
+        {
+          "x": "2021年第2季",
+          "y": 7.5
+        },
+        {
+          "x": "2021年第3季",
+          "y": 6.8
+        },
+        {
+          "x": "2021年第4季",
+          "y": 5.7
+        },
+        {
+          "x": "2022年第1季",
+          "y": -6.9
+        },
+        {
+          "x": "2022年第2季",
+          "y": -1.1
+        },
+        {
+          "x": "2022年第3季",
+          "y": -1.5
+        },
+        {
+          "x": "2022年第4季",
+          "y": 0.3
+        },
         {
           "x": "2023年第1季",
           "y": 12.2
@@ -645,11 +1395,11 @@
         },
         {
           "x": "2025年第1季",
-          "y": -0.9
+          "y": -0.7
         },
         {
           "x": "2025年第2季",
-          "y": 2.3
+          "y": 2.4
         },
         {
           "x": "2025年第3季",
@@ -657,7 +1407,15 @@
         },
         {
           "x": "2025年第4季",
-          "y": 2.7
+          "y": 2.5
+        },
+        {
+          "x": "2026年第1季",
+          "y": 4.9
+        },
+        {
+          "x": "2026年第2季",
+          "y": 2.8
         }
       ],
       "expected_update": "每季"

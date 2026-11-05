@@ -252,6 +252,7 @@ export const uiSparklinePointSchema = z.object({
 
 export const uiChartPointSchema = z.object({
   x: z.string(),
+  date: z.string().optional(),
   y: z.number(),
   tick_label: z.string(),
   tooltip_title: z.string(),
@@ -259,6 +260,7 @@ export const uiChartPointSchema = z.object({
 });
 
 export const uiChartSchema = z.object({
+  frequency: frequencySchema.optional(),
   chart_type: z.enum(["line", "step_after"]),
   x_axis_label: z.string(),
   y_axis_label: z.string(),

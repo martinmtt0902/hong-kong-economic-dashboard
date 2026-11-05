@@ -34,16 +34,16 @@
       "as_of_date": "2027-03-31",
       "as_of_label": "2026-27 (原來預算)",
       "latest_value": 765234,
-      "previous_value": 688762,
+      "previous_value": 697469,
       "previous_as_of_date": "2026-03-31",
-      "previous_as_of_label": "2025-26 (修訂預算)",
-      "change_value": 76472,
-      "raw_change_value": 76472,
+      "previous_as_of_label": "2025-26",
+      "change_value": 67765,
+      "raw_change_value": 67765,
       "change_type": "absolute_change",
       "comparison_type": "previous_observation",
       "comparison_basis": "previous_observation",
       "comparison_basis_label_tc": "較上期",
-      "comparison_period_label": "2025-26 (修訂預算)",
+      "comparison_period_label": "2025-26",
       "data_origin": "live",
       "chart_series": "government_revenue",
       "chart_metric_type": "level",
@@ -66,57 +66,12 @@
         "value_label": "政府收入",
         "time_label": "財政年度",
         "suggested_ticks": [
-          "2015-16",
-          "2021-22",
+          "2020-21",
+          "2023-24",
           "2026-27 (原來預算)"
         ]
       },
       "chart_points": [
-        {
-          "as_of_date": "2016-03-31",
-          "as_of_label": "2015-16",
-          "tick_label": "2015-16",
-          "value": 450007,
-          "display_value_text": "4500.1億",
-          "tooltip_title": "2015-16",
-          "tooltip_value_text": "4500.1億"
-        },
-        {
-          "as_of_date": "2017-03-31",
-          "as_of_label": "2016-17",
-          "tick_label": "2016-17",
-          "value": 573124,
-          "display_value_text": "5731.2億",
-          "tooltip_title": "2016-17",
-          "tooltip_value_text": "5731.2億"
-        },
-        {
-          "as_of_date": "2018-03-31",
-          "as_of_label": "2017-18",
-          "tick_label": "2017-18",
-          "value": 619837,
-          "display_value_text": "6198.4億",
-          "tooltip_title": "2017-18",
-          "tooltip_value_text": "6198.4億"
-        },
-        {
-          "as_of_date": "2019-03-31",
-          "as_of_label": "2018-19",
-          "tick_label": "2018-19",
-          "value": 599774,
-          "display_value_text": "5997.7億",
-          "tooltip_title": "2018-19",
-          "tooltip_value_text": "5997.7億"
-        },
-        {
-          "as_of_date": "2020-03-31",
-          "as_of_label": "2019-20",
-          "tick_label": "2019-20",
-          "value": 590926,
-          "display_value_text": "5909.3億",
-          "tooltip_title": "2019-20",
-          "tooltip_value_text": "5909.3億"
-        },
         {
           "as_of_date": "2021-03-31",
           "as_of_label": "2020-21",
@@ -164,12 +119,12 @@
         },
         {
           "as_of_date": "2026-03-31",
-          "as_of_label": "2025-26 (修訂預算)",
-          "tick_label": "2025-26 (修訂預算)",
-          "value": 688762,
-          "display_value_text": "6887.6億",
-          "tooltip_title": "2025-26 (修訂預算)",
-          "tooltip_value_text": "6887.6億"
+          "as_of_label": "2025-26",
+          "tick_label": "2025-26",
+          "value": 697469,
+          "display_value_text": "6974.7億",
+          "tooltip_title": "2025-26",
+          "tooltip_value_text": "6974.7億"
         },
         {
           "as_of_date": "2027-03-31",
@@ -189,31 +144,6 @@
         "frequency": "annual"
       },
       "sparkline_points": [
-        {
-          "as_of_date": "2016-03-31",
-          "as_of_label": "2015-16",
-          "value": 450007
-        },
-        {
-          "as_of_date": "2017-03-31",
-          "as_of_label": "2016-17",
-          "value": 573124
-        },
-        {
-          "as_of_date": "2018-03-31",
-          "as_of_label": "2017-18",
-          "value": 619837
-        },
-        {
-          "as_of_date": "2019-03-31",
-          "as_of_label": "2018-19",
-          "value": 599774
-        },
-        {
-          "as_of_date": "2020-03-31",
-          "as_of_label": "2019-20",
-          "value": 590926
-        },
         {
           "as_of_date": "2021-03-31",
           "as_of_label": "2020-21",
@@ -241,8 +171,8 @@
         },
         {
           "as_of_date": "2026-03-31",
-          "as_of_label": "2025-26 (修訂預算)",
-          "value": 688762
+          "as_of_label": "2025-26",
+          "value": 697469
         },
         {
           "as_of_date": "2027-03-31",
@@ -253,7 +183,7 @@
       "validation_state": "ok",
       "validation_messages": [],
       "expected_update": "每年",
-      "last_successful_fetch_at": "2026-03-18T11:39:06.754Z"
+      "last_successful_fetch_at": "2026-11-05T17:09:20.634Z"
     },
     {
       "id": "government_expenditure",
@@ -285,16 +215,16 @@
       "as_of_date": "2027-03-31",
       "as_of_label": "2026-27 (原來預算)",
       "latest_value": 843416,
-      "previous_value": 789171,
+      "previous_value": 790330,
       "previous_as_of_date": "2026-03-31",
-      "previous_as_of_label": "2025-26 (修訂預算)",
-      "change_value": 54245,
-      "raw_change_value": 54245,
+      "previous_as_of_label": "2025-26",
+      "change_value": 53086,
+      "raw_change_value": 53086,
       "change_type": "absolute_change",
       "comparison_type": "previous_observation",
       "comparison_basis": "previous_observation",
       "comparison_basis_label_tc": "較上期",
-      "comparison_period_label": "2025-26 (修訂預算)",
+      "comparison_period_label": "2025-26",
       "data_origin": "live",
       "chart_series": "government_expenditure",
       "chart_metric_type": "level",
@@ -317,57 +247,12 @@
         "value_label": "政府支出",
         "time_label": "財政年度",
         "suggested_ticks": [
-          "2015-16",
-          "2021-22",
+          "2020-21",
+          "2023-24",
           "2026-27 (原來預算)"
         ]
       },
       "chart_points": [
-        {
-          "as_of_date": "2016-03-31",
-          "as_of_label": "2015-16",
-          "tick_label": "2015-16",
-          "value": 435633,
-          "display_value_text": "4356.3億",
-          "tooltip_title": "2015-16",
-          "tooltip_value_text": "4356.3億"
-        },
-        {
-          "as_of_date": "2017-03-31",
-          "as_of_label": "2016-17",
-          "tick_label": "2016-17",
-          "value": 462052,
-          "display_value_text": "4620.5億",
-          "tooltip_title": "2016-17",
-          "tooltip_value_text": "4620.5億"
-        },
-        {
-          "as_of_date": "2018-03-31",
-          "as_of_label": "2017-18",
-          "tick_label": "2017-18",
-          "value": 470863,
-          "display_value_text": "4708.6億",
-          "tooltip_title": "2017-18",
-          "tooltip_value_text": "4708.6億"
-        },
-        {
-          "as_of_date": "2019-03-31",
-          "as_of_label": "2018-19",
-          "tick_label": "2018-19",
-          "value": 531825,
-          "display_value_text": "5318.3億",
-          "tooltip_title": "2018-19",
-          "tooltip_value_text": "5318.3億"
-        },
-        {
-          "as_of_date": "2020-03-31",
-          "as_of_label": "2019-20",
-          "tick_label": "2019-20",
-          "value": 607830,
-          "display_value_text": "6078.3億",
-          "tooltip_title": "2019-20",
-          "tooltip_value_text": "6078.3億"
-        },
         {
           "as_of_date": "2021-03-31",
           "as_of_label": "2020-21",
@@ -415,12 +300,12 @@
         },
         {
           "as_of_date": "2026-03-31",
-          "as_of_label": "2025-26 (修訂預算)",
-          "tick_label": "2025-26 (修訂預算)",
-          "value": 789171,
-          "display_value_text": "7891.7億",
-          "tooltip_title": "2025-26 (修訂預算)",
-          "tooltip_value_text": "7891.7億"
+          "as_of_label": "2025-26",
+          "tick_label": "2025-26",
+          "value": 790330,
+          "display_value_text": "7903.3億",
+          "tooltip_title": "2025-26",
+          "tooltip_value_text": "7903.3億"
         },
         {
           "as_of_date": "2027-03-31",
@@ -440,31 +325,6 @@
         "frequency": "annual"
       },
       "sparkline_points": [
-        {
-          "as_of_date": "2016-03-31",
-          "as_of_label": "2015-16",
-          "value": 435633
-        },
-        {
-          "as_of_date": "2017-03-31",
-          "as_of_label": "2016-17",
-          "value": 462052
-        },
-        {
-          "as_of_date": "2018-03-31",
-          "as_of_label": "2017-18",
-          "value": 470863
-        },
-        {
-          "as_of_date": "2019-03-31",
-          "as_of_label": "2018-19",
-          "value": 531825
-        },
-        {
-          "as_of_date": "2020-03-31",
-          "as_of_label": "2019-20",
-          "value": 607830
-        },
         {
           "as_of_date": "2021-03-31",
           "as_of_label": "2020-21",
@@ -492,8 +352,8 @@
         },
         {
           "as_of_date": "2026-03-31",
-          "as_of_label": "2025-26 (修訂預算)",
-          "value": 789171
+          "as_of_label": "2025-26",
+          "value": 790330
         },
         {
           "as_of_date": "2027-03-31",
@@ -504,7 +364,7 @@
       "validation_state": "ok",
       "validation_messages": [],
       "expected_update": "每年",
-      "last_successful_fetch_at": "2026-03-18T11:39:06.754Z"
+      "last_successful_fetch_at": "2026-11-05T17:09:20.634Z"
     },
     {
       "id": "fiscal_reserves",
@@ -535,17 +395,17 @@
       },
       "as_of_date": "2027-03-31",
       "as_of_label": "2026-27 (原來預算)",
-      "latest_value": 679332,
-      "previous_value": 657222,
+      "latest_value": 687651,
+      "previous_value": 665541,
       "previous_as_of_date": "2026-03-31",
-      "previous_as_of_label": "2025-26 (修訂預算)",
+      "previous_as_of_label": "2025-26",
       "change_value": 22110,
       "raw_change_value": 22110,
       "change_type": "absolute_change",
       "comparison_type": "previous_observation",
       "comparison_basis": "previous_observation",
       "comparison_basis_label_tc": "較上期",
-      "comparison_period_label": "2025-26 (修訂預算)",
+      "comparison_period_label": "2025-26",
       "data_origin": "live",
       "chart_series": "fiscal_reserves",
       "chart_metric_type": "level",
@@ -568,57 +428,12 @@
         "value_label": "財政儲備",
         "time_label": "財政年度",
         "suggested_ticks": [
-          "2015-16",
-          "2021-22",
+          "2020-21",
+          "2023-24",
           "2026-27 (原來預算)"
         ]
       },
       "chart_points": [
-        {
-          "as_of_date": "2016-03-31",
-          "as_of_label": "2015-16",
-          "tick_label": "2015-16",
-          "value": 842888,
-          "display_value_text": "8428.9億",
-          "tooltip_title": "2015-16",
-          "tooltip_value_text": "8428.9億"
-        },
-        {
-          "as_of_date": "2017-03-31",
-          "as_of_label": "2016-17",
-          "tick_label": "2016-17",
-          "value": 953960,
-          "display_value_text": "9539.6億",
-          "tooltip_title": "2016-17",
-          "tooltip_value_text": "9539.6億"
-        },
-        {
-          "as_of_date": "2018-03-31",
-          "as_of_label": "2017-18",
-          "tick_label": "2017-18",
-          "value": 1102934,
-          "display_value_text": "11029.3億",
-          "tooltip_title": "2017-18",
-          "tooltip_value_text": "11029.3億"
-        },
-        {
-          "as_of_date": "2019-03-31",
-          "as_of_label": "2018-19",
-          "tick_label": "2018-19",
-          "value": 1170883,
-          "display_value_text": "11708.8億",
-          "tooltip_title": "2018-19",
-          "tooltip_value_text": "11708.8億"
-        },
-        {
-          "as_of_date": "2020-03-31",
-          "as_of_label": "2019-20",
-          "tick_label": "2019-20",
-          "value": 1160308,
-          "display_value_text": "11603.1億",
-          "tooltip_title": "2019-20",
-          "tooltip_value_text": "11603.1億"
-        },
         {
           "as_of_date": "2021-03-31",
           "as_of_label": "2020-21",
@@ -666,21 +481,21 @@
         },
         {
           "as_of_date": "2026-03-31",
-          "as_of_label": "2025-26 (修訂預算)",
-          "tick_label": "2025-26 (修訂預算)",
-          "value": 657222,
-          "display_value_text": "6572.2億",
-          "tooltip_title": "2025-26 (修訂預算)",
-          "tooltip_value_text": "6572.2億"
+          "as_of_label": "2025-26",
+          "tick_label": "2025-26",
+          "value": 665541,
+          "display_value_text": "6655.4億",
+          "tooltip_title": "2025-26",
+          "tooltip_value_text": "6655.4億"
         },
         {
           "as_of_date": "2027-03-31",
           "as_of_label": "2026-27 (原來預算)",
           "tick_label": "2026-27 (原來預算)",
-          "value": 679332,
-          "display_value_text": "6793.3億",
+          "value": 687651,
+          "display_value_text": "6876.5億",
           "tooltip_title": "2026-27 (原來預算)",
-          "tooltip_value_text": "6793.3億"
+          "tooltip_value_text": "6876.5億"
         }
       ],
       "sparkline_definition": {
@@ -691,31 +506,6 @@
         "frequency": "annual"
       },
       "sparkline_points": [
-        {
-          "as_of_date": "2016-03-31",
-          "as_of_label": "2015-16",
-          "value": 842888
-        },
-        {
-          "as_of_date": "2017-03-31",
-          "as_of_label": "2016-17",
-          "value": 953960
-        },
-        {
-          "as_of_date": "2018-03-31",
-          "as_of_label": "2017-18",
-          "value": 1102934
-        },
-        {
-          "as_of_date": "2019-03-31",
-          "as_of_label": "2018-19",
-          "value": 1170883
-        },
-        {
-          "as_of_date": "2020-03-31",
-          "as_of_label": "2019-20",
-          "value": 1160308
-        },
         {
           "as_of_date": "2021-03-31",
           "as_of_label": "2020-21",
@@ -743,19 +533,19 @@
         },
         {
           "as_of_date": "2026-03-31",
-          "as_of_label": "2025-26 (修訂預算)",
-          "value": 657222
+          "as_of_label": "2025-26",
+          "value": 665541
         },
         {
           "as_of_date": "2027-03-31",
           "as_of_label": "2026-27 (原來預算)",
-          "value": 679332
+          "value": 687651
         }
       ],
       "validation_state": "ok",
       "validation_messages": [],
       "expected_update": "每年",
-      "last_successful_fetch_at": "2026-03-18T11:39:06.754Z"
+      "last_successful_fetch_at": "2026-11-05T17:09:20.634Z"
     }
   ]
 }

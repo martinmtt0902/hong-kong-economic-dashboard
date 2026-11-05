@@ -59,13 +59,27 @@ export async function fetchM3Observations(source: SourceRef, seriesLabel: string
 }
 
 async function fetchHkmaRecords(): Promise<Array<Record<string, unknown>>> {
-  const payload = await fetchJson<HkmaResponse>(URLs.hkmaInterbankLiquidity);
-  return payload.result?.records ?? payload.records ?? [];
+  return fetchHkmaHistory(URLs.hkmaInterbankLiquidity, "end_of_date", 3);
 }
 
 async function fetchHkmaMonetaryStatisticsRecords(): Promise<Array<Record<string, unknown>>> {
-  const payload = await fetchJson<HkmaResponse>(URLs.hkmaMonetaryStatistics);
-  return payload.result?.records ?? payload.records ?? [];
+  return fetchHkmaHistory(URLs.hkmaMonetaryStatistics, "end_of_month", 1);
+}
+
+// HKMA defaults to 100 rows and caps each page at 1,000. Three daily
+// pages cover over seven calendar years; monthly history fits in one.
+export async function fetchHkmaHistory(url: string, dateField: string, maxPages: number): Promise<Array<Record<string, unknown>>> {
+  const records: Array<Record<string, unknown>> = [];
+  for (let page = 0; page < maxPages; page += 1) {
+    const query = new URL(url);
+    query.search = new URLSearchParams({ pagesize: "1000", offset: String(page * 1000), sortby: dateField, sortorder: "desc" }).toString();
+    const payload = await fetchJson<HkmaResponse>(query.toString());
+    const batch = payload.result?.records ?? payload.records;
+    if (!batch) throw new Error("HKMA response has no records");
+    records.push(...batch);
+    if (batch.length < 1000) break;
+  }
+  return records;
 }
 
 function toObservations(

@@ -2,26 +2,29 @@
   "id": "interest-rates",
   "title_tc": "貨幣與金融",
   "periods_summary_text_tc": "各卡更新期不同，請以各列期別為準",
+  "card_status_text_tc": "資料待核對",
   "metrics": [
     {
       "id": "base_rate",
       "label_tc": "HKMA Base Rate",
       "source_name": "香港金融管理局",
       "source_url": "https://www.hkma.gov.hk/eng/data-publications-and-research/data-and-statistics/daily-monetary-statistics/",
-      "status": "ok",
-      "status_text_tc": "最新",
-      "display_value_text": "4.0%",
-      "display_change_text": "較上期（2026-03-17） +0.0 個百分點",
-      "display_previous_text": "上期（2026-03-17） 4.0%",
-      "display_period_text": "2026-03-18",
-      "display_comparison_text": "較上期（2026-03-17） +0.0 個百分點",
+      "status": "source_error",
+      "status_text_tc": "上次成功抓取值",
+      "display_value_text": "4.3%",
+      "display_change_text": "較上期（2026-11-04） +0.0 個百分點",
+      "display_previous_text": "上期（2026-11-04） 4.3%",
+      "display_period_text": "2026-11-05",
+      "display_comparison_text": "較上期（2026-11-04） +0.0 個百分點",
       "display_comparison_basis_text": "較上期",
-      "display_comparison_period_text": "2026-03-17",
+      "display_comparison_period_text": "2026-11-04",
       "display_unit": "%",
-      "data_origin": "live",
-      "last_successful_fetch_at": "2026-03-18T11:39:06.754Z",
+      "data_origin": "last_successful_snapshot",
+      "last_successful_fetch_at": "2026-11-05T16:57:10.598Z",
+      "reason": "Request failed for https://api.hkma.gov.hk/public/market-data-and-statistics/daily-monetary-statistics/daily-figures-interbank-liquidity?pagesize=1000&offset=0&sortby=end_of_date&sortorder=desc: 405",
       "chart": {
         "chart_type": "line",
+        "frequency": "daily",
         "x_axis_label": "日期",
         "y_axis_label": "HKMA Base Rate (%)",
         "time_label": "日期",
@@ -33,145 +36,157 @@
           "display_unit": "%"
         },
         "suggested_ticks": [
-          "2026-03-03",
-          "2026-03-11",
-          "2026-03-18"
+          "2026-10-21",
+          "2026-10-29",
+          "2026-11-05"
         ],
         "points": [
           {
-            "x": "2026-03-03",
-            "y": 4,
-            "tick_label": "2026-03-03",
-            "tooltip_title": "2026-03-03",
-            "tooltip_value_text": "4.0%"
+            "x": "2026-10-21",
+            "date": "2026-10-21",
+            "y": 4.25,
+            "tick_label": "2026-10-21",
+            "tooltip_title": "2026-10-21",
+            "tooltip_value_text": "4.3%"
           },
           {
-            "x": "2026-03-04",
-            "y": 4,
-            "tick_label": "2026-03-04",
-            "tooltip_title": "2026-03-04",
-            "tooltip_value_text": "4.0%"
+            "x": "2026-10-22",
+            "date": "2026-10-22",
+            "y": 4.25,
+            "tick_label": "2026-10-22",
+            "tooltip_title": "2026-10-22",
+            "tooltip_value_text": "4.3%"
           },
           {
-            "x": "2026-03-05",
-            "y": 4,
-            "tick_label": "2026-03-05",
-            "tooltip_title": "2026-03-05",
-            "tooltip_value_text": "4.0%"
+            "x": "2026-10-23",
+            "date": "2026-10-23",
+            "y": 4.25,
+            "tick_label": "2026-10-23",
+            "tooltip_title": "2026-10-23",
+            "tooltip_value_text": "4.3%"
           },
           {
-            "x": "2026-03-06",
-            "y": 4,
-            "tick_label": "2026-03-06",
-            "tooltip_title": "2026-03-06",
-            "tooltip_value_text": "4.0%"
+            "x": "2026-10-26",
+            "date": "2026-10-26",
+            "y": 4.25,
+            "tick_label": "2026-10-26",
+            "tooltip_title": "2026-10-26",
+            "tooltip_value_text": "4.3%"
           },
           {
-            "x": "2026-03-09",
-            "y": 4,
-            "tick_label": "2026-03-09",
-            "tooltip_title": "2026-03-09",
-            "tooltip_value_text": "4.0%"
+            "x": "2026-10-27",
+            "date": "2026-10-27",
+            "y": 4.25,
+            "tick_label": "2026-10-27",
+            "tooltip_title": "2026-10-27",
+            "tooltip_value_text": "4.3%"
           },
           {
-            "x": "2026-03-10",
-            "y": 4,
-            "tick_label": "2026-03-10",
-            "tooltip_title": "2026-03-10",
-            "tooltip_value_text": "4.0%"
+            "x": "2026-10-28",
+            "date": "2026-10-28",
+            "y": 4.25,
+            "tick_label": "2026-10-28",
+            "tooltip_title": "2026-10-28",
+            "tooltip_value_text": "4.3%"
           },
           {
-            "x": "2026-03-11",
-            "y": 4,
-            "tick_label": "2026-03-11",
-            "tooltip_title": "2026-03-11",
-            "tooltip_value_text": "4.0%"
+            "x": "2026-10-29",
+            "date": "2026-10-29",
+            "y": 4.25,
+            "tick_label": "2026-10-29",
+            "tooltip_title": "2026-10-29",
+            "tooltip_value_text": "4.3%"
           },
           {
-            "x": "2026-03-12",
-            "y": 4,
-            "tick_label": "2026-03-12",
-            "tooltip_title": "2026-03-12",
-            "tooltip_value_text": "4.0%"
+            "x": "2026-10-30",
+            "date": "2026-10-30",
+            "y": 4.25,
+            "tick_label": "2026-10-30",
+            "tooltip_title": "2026-10-30",
+            "tooltip_value_text": "4.3%"
           },
           {
-            "x": "2026-03-13",
-            "y": 4,
-            "tick_label": "2026-03-13",
-            "tooltip_title": "2026-03-13",
-            "tooltip_value_text": "4.0%"
+            "x": "2026-11-02",
+            "date": "2026-11-02",
+            "y": 4.25,
+            "tick_label": "2026-11-02",
+            "tooltip_title": "2026-11-02",
+            "tooltip_value_text": "4.3%"
           },
           {
-            "x": "2026-03-16",
-            "y": 4,
-            "tick_label": "2026-03-16",
-            "tooltip_title": "2026-03-16",
-            "tooltip_value_text": "4.0%"
+            "x": "2026-11-03",
+            "date": "2026-11-03",
+            "y": 4.25,
+            "tick_label": "2026-11-03",
+            "tooltip_title": "2026-11-03",
+            "tooltip_value_text": "4.3%"
           },
           {
-            "x": "2026-03-17",
-            "y": 4,
-            "tick_label": "2026-03-17",
-            "tooltip_title": "2026-03-17",
-            "tooltip_value_text": "4.0%"
+            "x": "2026-11-04",
+            "date": "2026-11-04",
+            "y": 4.25,
+            "tick_label": "2026-11-04",
+            "tooltip_title": "2026-11-04",
+            "tooltip_value_text": "4.3%"
           },
           {
-            "x": "2026-03-18",
-            "y": 4,
-            "tick_label": "2026-03-18",
-            "tooltip_title": "2026-03-18",
-            "tooltip_value_text": "4.0%"
+            "x": "2026-11-05",
+            "date": "2026-11-05",
+            "y": 4.25,
+            "tick_label": "2026-11-05",
+            "tooltip_title": "2026-11-05",
+            "tooltip_value_text": "4.3%"
           }
         ]
       },
       "sparkline_points": [
         {
-          "x": "2026-03-03",
-          "y": 4
+          "x": "2026-10-21",
+          "y": 4.25
         },
         {
-          "x": "2026-03-04",
-          "y": 4
+          "x": "2026-10-22",
+          "y": 4.25
         },
         {
-          "x": "2026-03-05",
-          "y": 4
+          "x": "2026-10-23",
+          "y": 4.25
         },
         {
-          "x": "2026-03-06",
-          "y": 4
+          "x": "2026-10-26",
+          "y": 4.25
         },
         {
-          "x": "2026-03-09",
-          "y": 4
+          "x": "2026-10-27",
+          "y": 4.25
         },
         {
-          "x": "2026-03-10",
-          "y": 4
+          "x": "2026-10-28",
+          "y": 4.25
         },
         {
-          "x": "2026-03-11",
-          "y": 4
+          "x": "2026-10-29",
+          "y": 4.25
         },
         {
-          "x": "2026-03-12",
-          "y": 4
+          "x": "2026-10-30",
+          "y": 4.25
         },
         {
-          "x": "2026-03-13",
-          "y": 4
+          "x": "2026-11-02",
+          "y": 4.25
         },
         {
-          "x": "2026-03-16",
-          "y": 4
+          "x": "2026-11-03",
+          "y": 4.25
         },
         {
-          "x": "2026-03-17",
-          "y": 4
+          "x": "2026-11-04",
+          "y": 4.25
         },
         {
-          "x": "2026-03-18",
-          "y": 4
+          "x": "2026-11-05",
+          "y": 4.25
         }
       ],
       "expected_update": "每日"
@@ -181,20 +196,22 @@
       "label_tc": "1個月 HIBOR",
       "source_name": "香港金融管理局",
       "source_url": "https://www.hkma.gov.hk/eng/data-publications-and-research/data-and-statistics/daily-monetary-statistics/",
-      "status": "ok",
-      "status_text_tc": "最新",
-      "display_value_text": "2.1%",
-      "display_change_text": "較上期（2026-03-17） -0.0 個百分點",
-      "display_previous_text": "上期（2026-03-17） 2.1%",
-      "display_period_text": "2026-03-18",
-      "display_comparison_text": "較上期（2026-03-17） -0.0 個百分點",
+      "status": "source_error",
+      "status_text_tc": "上次成功抓取值",
+      "display_value_text": "2.6%",
+      "display_change_text": "較上期（2026-11-04） -0.1 個百分點",
+      "display_previous_text": "上期（2026-11-04） 2.6%",
+      "display_period_text": "2026-11-05",
+      "display_comparison_text": "較上期（2026-11-04） -0.1 個百分點",
       "display_comparison_basis_text": "較上期",
-      "display_comparison_period_text": "2026-03-17",
+      "display_comparison_period_text": "2026-11-04",
       "display_unit": "%",
-      "data_origin": "live",
-      "last_successful_fetch_at": "2026-03-18T11:39:06.754Z",
+      "data_origin": "last_successful_snapshot",
+      "last_successful_fetch_at": "2026-11-05T16:57:10.598Z",
+      "reason": "Request failed for https://api.hkma.gov.hk/public/market-data-and-statistics/daily-monetary-statistics/daily-figures-interbank-liquidity?pagesize=1000&offset=0&sortby=end_of_date&sortorder=desc: 405",
       "chart": {
         "chart_type": "line",
+        "frequency": "daily",
         "x_axis_label": "日期",
         "y_axis_label": "1個月 HIBOR (%)",
         "time_label": "日期",
@@ -206,145 +223,157 @@
           "display_unit": "%"
         },
         "suggested_ticks": [
-          "2026-03-03",
-          "2026-03-11",
-          "2026-03-18"
+          "2026-10-21",
+          "2026-10-29",
+          "2026-11-05"
         ],
         "points": [
           {
-            "x": "2026-03-03",
-            "y": 2.30446,
-            "tick_label": "2026-03-03",
-            "tooltip_title": "2026-03-03",
-            "tooltip_value_text": "2.3%"
+            "x": "2026-10-21",
+            "date": "2026-10-21",
+            "y": 2.67917,
+            "tick_label": "2026-10-21",
+            "tooltip_title": "2026-10-21",
+            "tooltip_value_text": "2.7%"
           },
           {
-            "x": "2026-03-04",
-            "y": 2.41399,
-            "tick_label": "2026-03-04",
-            "tooltip_title": "2026-03-04",
-            "tooltip_value_text": "2.4%"
+            "x": "2026-10-22",
+            "date": "2026-10-22",
+            "y": 2.745,
+            "tick_label": "2026-10-22",
+            "tooltip_title": "2026-10-22",
+            "tooltip_value_text": "2.7%"
           },
           {
-            "x": "2026-03-05",
-            "y": 2.31179,
-            "tick_label": "2026-03-05",
-            "tooltip_title": "2026-03-05",
-            "tooltip_value_text": "2.3%"
+            "x": "2026-10-23",
+            "date": "2026-10-23",
+            "y": 2.77893,
+            "tick_label": "2026-10-23",
+            "tooltip_title": "2026-10-23",
+            "tooltip_value_text": "2.8%"
           },
           {
-            "x": "2026-03-06",
-            "y": 2.19613,
-            "tick_label": "2026-03-06",
-            "tooltip_title": "2026-03-06",
-            "tooltip_value_text": "2.2%"
+            "x": "2026-10-26",
+            "date": "2026-10-26",
+            "y": 2.75,
+            "tick_label": "2026-10-26",
+            "tooltip_title": "2026-10-26",
+            "tooltip_value_text": "2.8%"
           },
           {
-            "x": "2026-03-09",
-            "y": 2.04524,
-            "tick_label": "2026-03-09",
-            "tooltip_title": "2026-03-09",
-            "tooltip_value_text": "2.0%"
+            "x": "2026-10-27",
+            "date": "2026-10-27",
+            "y": 2.7,
+            "tick_label": "2026-10-27",
+            "tooltip_title": "2026-10-27",
+            "tooltip_value_text": "2.7%"
           },
           {
-            "x": "2026-03-10",
-            "y": 2.02083,
-            "tick_label": "2026-03-10",
-            "tooltip_title": "2026-03-10",
-            "tooltip_value_text": "2.0%"
+            "x": "2026-10-28",
+            "date": "2026-10-28",
+            "y": 2.71351,
+            "tick_label": "2026-10-28",
+            "tooltip_title": "2026-10-28",
+            "tooltip_value_text": "2.7%"
           },
           {
-            "x": "2026-03-11",
-            "y": 2.02982,
-            "tick_label": "2026-03-11",
-            "tooltip_title": "2026-03-11",
-            "tooltip_value_text": "2.0%"
+            "x": "2026-10-29",
+            "date": "2026-10-29",
+            "y": 2.71494,
+            "tick_label": "2026-10-29",
+            "tooltip_title": "2026-10-29",
+            "tooltip_value_text": "2.7%"
           },
           {
-            "x": "2026-03-12",
-            "y": 2.02982,
-            "tick_label": "2026-03-12",
-            "tooltip_title": "2026-03-12",
-            "tooltip_value_text": "2.0%"
+            "x": "2026-10-30",
+            "date": "2026-10-30",
+            "y": 2.70923,
+            "tick_label": "2026-10-30",
+            "tooltip_title": "2026-10-30",
+            "tooltip_value_text": "2.7%"
           },
           {
-            "x": "2026-03-13",
-            "y": 2.07583,
-            "tick_label": "2026-03-13",
-            "tooltip_title": "2026-03-13",
-            "tooltip_value_text": "2.1%"
+            "x": "2026-11-02",
+            "date": "2026-11-02",
+            "y": 2.6775,
+            "tick_label": "2026-11-02",
+            "tooltip_title": "2026-11-02",
+            "tooltip_value_text": "2.7%"
           },
           {
-            "x": "2026-03-16",
-            "y": 2.05637,
-            "tick_label": "2026-03-16",
-            "tooltip_title": "2026-03-16",
-            "tooltip_value_text": "2.1%"
+            "x": "2026-11-03",
+            "date": "2026-11-03",
+            "y": 2.68,
+            "tick_label": "2026-11-03",
+            "tooltip_title": "2026-11-03",
+            "tooltip_value_text": "2.7%"
           },
           {
-            "x": "2026-03-17",
-            "y": 2.08173,
-            "tick_label": "2026-03-17",
-            "tooltip_title": "2026-03-17",
-            "tooltip_value_text": "2.1%"
+            "x": "2026-11-04",
+            "date": "2026-11-04",
+            "y": 2.63982,
+            "tick_label": "2026-11-04",
+            "tooltip_title": "2026-11-04",
+            "tooltip_value_text": "2.6%"
           },
           {
-            "x": "2026-03-18",
-            "y": 2.07298,
-            "tick_label": "2026-03-18",
-            "tooltip_title": "2026-03-18",
-            "tooltip_value_text": "2.1%"
+            "x": "2026-11-05",
+            "date": "2026-11-05",
+            "y": 2.57893,
+            "tick_label": "2026-11-05",
+            "tooltip_title": "2026-11-05",
+            "tooltip_value_text": "2.6%"
           }
         ]
       },
       "sparkline_points": [
         {
-          "x": "2026-03-03",
-          "y": 2.30446
+          "x": "2026-10-21",
+          "y": 2.67917
         },
         {
-          "x": "2026-03-04",
-          "y": 2.41399
+          "x": "2026-10-22",
+          "y": 2.745
         },
         {
-          "x": "2026-03-05",
-          "y": 2.31179
+          "x": "2026-10-23",
+          "y": 2.77893
         },
         {
-          "x": "2026-03-06",
-          "y": 2.19613
+          "x": "2026-10-26",
+          "y": 2.75
         },
         {
-          "x": "2026-03-09",
-          "y": 2.04524
+          "x": "2026-10-27",
+          "y": 2.7
         },
         {
-          "x": "2026-03-10",
-          "y": 2.02083
+          "x": "2026-10-28",
+          "y": 2.71351
         },
         {
-          "x": "2026-03-11",
-          "y": 2.02982
+          "x": "2026-10-29",
+          "y": 2.71494
         },
         {
-          "x": "2026-03-12",
-          "y": 2.02982
+          "x": "2026-10-30",
+          "y": 2.70923
         },
         {
-          "x": "2026-03-13",
-          "y": 2.07583
+          "x": "2026-11-02",
+          "y": 2.6775
         },
         {
-          "x": "2026-03-16",
-          "y": 2.05637
+          "x": "2026-11-03",
+          "y": 2.68
         },
         {
-          "x": "2026-03-17",
-          "y": 2.08173
+          "x": "2026-11-04",
+          "y": 2.63982
         },
         {
-          "x": "2026-03-18",
-          "y": 2.07298
+          "x": "2026-11-05",
+          "y": 2.57893
         }
       ],
       "expected_update": "每日"
@@ -354,20 +383,22 @@
       "label_tc": "貨幣供應 M3",
       "source_name": "香港金融管理局",
       "source_url": "https://data.gov.hk/en-data/dataset/hk-hkma-t01-t0101monetary-statistics",
-      "status": "ok",
-      "status_text_tc": "最新",
-      "display_value_text": "20.6萬億",
-      "display_change_text": "較去年同期（2025年1月） +9.8%",
-      "display_previous_text": "去年同期（2025年1月） 18.8萬億",
-      "display_period_text": "2026年1月",
-      "display_comparison_text": "較去年同期（2025年1月） +9.8%",
+      "status": "source_error",
+      "status_text_tc": "上次成功抓取值",
+      "display_value_text": "22.3萬億",
+      "display_change_text": "較去年同期（2025年9月） +10.0%",
+      "display_previous_text": "去年同期（2025年9月） 20.3萬億",
+      "display_period_text": "2026年9月",
+      "display_comparison_text": "較去年同期（2025年9月） +10.0%",
       "display_comparison_basis_text": "較去年同期",
-      "display_comparison_period_text": "2025年1月",
+      "display_comparison_period_text": "2025年9月",
       "display_unit": "萬億港元",
-      "data_origin": "live",
-      "last_successful_fetch_at": "2026-03-18T11:39:06.754Z",
+      "data_origin": "last_successful_snapshot",
+      "last_successful_fetch_at": "2026-11-05T16:57:10.598Z",
+      "reason": "Request failed for https://api.hkma.gov.hk/public/market-data-and-statistics/monthly-statistical-bulletin/financial/monetary-statistics?pagesize=1000&offset=0&sortby=end_of_month&sortorder=desc: 405",
       "chart": {
         "chart_type": "line",
+        "frequency": "monthly",
         "x_axis_label": "月份",
         "y_axis_label": "貨幣供應 M3 (萬億港元)",
         "time_label": "月份",
@@ -379,69 +410,14 @@
           "display_unit": "萬億港元"
         },
         "suggested_ticks": [
-          "2025-02",
-          "2025-08",
-          "2026-01"
+          "2025-10",
+          "2026-04",
+          "2026-09"
         ],
         "points": [
           {
-            "x": "2025年2月",
-            "y": 18.965340838,
-            "tick_label": "2025-02",
-            "tooltip_title": "2025年2月",
-            "tooltip_value_text": "19.0萬億"
-          },
-          {
-            "x": "2025年3月",
-            "y": 19.094639585,
-            "tick_label": "2025-03",
-            "tooltip_title": "2025年3月",
-            "tooltip_value_text": "19.1萬億"
-          },
-          {
-            "x": "2025年4月",
-            "y": 19.237324559999998,
-            "tick_label": "2025-04",
-            "tooltip_title": "2025年4月",
-            "tooltip_value_text": "19.2萬億"
-          },
-          {
-            "x": "2025年5月",
-            "y": 19.718944348,
-            "tick_label": "2025-05",
-            "tooltip_title": "2025年5月",
-            "tooltip_value_text": "19.7萬億"
-          },
-          {
-            "x": "2025年6月",
-            "y": 19.868342464,
-            "tick_label": "2025-06",
-            "tooltip_title": "2025年6月",
-            "tooltip_value_text": "19.9萬億"
-          },
-          {
-            "x": "2025年7月",
-            "y": 19.891717901999996,
-            "tick_label": "2025-07",
-            "tooltip_title": "2025年7月",
-            "tooltip_value_text": "19.9萬億"
-          },
-          {
-            "x": "2025年8月",
-            "y": 20.026716256,
-            "tick_label": "2025-08",
-            "tooltip_title": "2025年8月",
-            "tooltip_value_text": "20.0萬億"
-          },
-          {
-            "x": "2025年9月",
-            "y": 20.282074012,
-            "tick_label": "2025-09",
-            "tooltip_title": "2025年9月",
-            "tooltip_value_text": "20.3萬億"
-          },
-          {
             "x": "2025年10月",
+            "date": "2025-10-31",
             "y": 20.221690850999998,
             "tick_label": "2025-10",
             "tooltip_title": "2025年10月",
@@ -449,6 +425,7 @@
           },
           {
             "x": "2025年11月",
+            "date": "2025-11-30",
             "y": 20.395325666,
             "tick_label": "2025-11",
             "tooltip_title": "2025年11月",
@@ -456,6 +433,7 @@
           },
           {
             "x": "2025年12月",
+            "date": "2025-12-31",
             "y": 20.648542067999998,
             "tick_label": "2025-12",
             "tooltip_title": "2025年12月",
@@ -463,46 +441,79 @@
           },
           {
             "x": "2026年1月",
+            "date": "2026-01-31",
             "y": 20.647395228999997,
             "tick_label": "2026-01",
             "tooltip_title": "2026年1月",
             "tooltip_value_text": "20.6萬億"
+          },
+          {
+            "x": "2026年2月",
+            "date": "2026-02-28",
+            "y": 20.819285826,
+            "tick_label": "2026-02",
+            "tooltip_title": "2026年2月",
+            "tooltip_value_text": "20.8萬億"
+          },
+          {
+            "x": "2026年3月",
+            "date": "2026-03-31",
+            "y": 20.864507309,
+            "tick_label": "2026-03",
+            "tooltip_title": "2026年3月",
+            "tooltip_value_text": "20.9萬億"
+          },
+          {
+            "x": "2026年4月",
+            "date": "2026-04-30",
+            "y": 21.158280661,
+            "tick_label": "2026-04",
+            "tooltip_title": "2026年4月",
+            "tooltip_value_text": "21.2萬億"
+          },
+          {
+            "x": "2026年5月",
+            "date": "2026-05-31",
+            "y": 21.656047874000002,
+            "tick_label": "2026-05",
+            "tooltip_title": "2026年5月",
+            "tooltip_value_text": "21.7萬億"
+          },
+          {
+            "x": "2026年6月",
+            "date": "2026-06-30",
+            "y": 21.687406958,
+            "tick_label": "2026-06",
+            "tooltip_title": "2026年6月",
+            "tooltip_value_text": "21.7萬億"
+          },
+          {
+            "x": "2026年7月",
+            "date": "2026-07-31",
+            "y": 21.923349902,
+            "tick_label": "2026-07",
+            "tooltip_title": "2026年7月",
+            "tooltip_value_text": "21.9萬億"
+          },
+          {
+            "x": "2026年8月",
+            "date": "2026-08-31",
+            "y": 22.221485984,
+            "tick_label": "2026-08",
+            "tooltip_title": "2026年8月",
+            "tooltip_value_text": "22.2萬億"
+          },
+          {
+            "x": "2026年9月",
+            "date": "2026-09-30",
+            "y": 22.317143681,
+            "tick_label": "2026-09",
+            "tooltip_title": "2026年9月",
+            "tooltip_value_text": "22.3萬億"
           }
         ]
       },
       "sparkline_points": [
-        {
-          "x": "2025年2月",
-          "y": 18965340.838
-        },
-        {
-          "x": "2025年3月",
-          "y": 19094639.585
-        },
-        {
-          "x": "2025年4月",
-          "y": 19237324.56
-        },
-        {
-          "x": "2025年5月",
-          "y": 19718944.348
-        },
-        {
-          "x": "2025年6月",
-          "y": 19868342.464
-        },
-        {
-          "x": "2025年7月",
-          "y": 19891717.902
-        },
-        {
-          "x": "2025年8月",
-          "y": 20026716.256
-        },
-        {
-          "x": "2025年9月",
-          "y": 20282074.012
-        },
         {
           "x": "2025年10月",
           "y": 20221690.851
@@ -518,6 +529,38 @@
         {
           "x": "2026年1月",
           "y": 20647395.229
+        },
+        {
+          "x": "2026年2月",
+          "y": 20819285.826
+        },
+        {
+          "x": "2026年3月",
+          "y": 20864507.309
+        },
+        {
+          "x": "2026年4月",
+          "y": 21158280.661
+        },
+        {
+          "x": "2026年5月",
+          "y": 21656047.874
+        },
+        {
+          "x": "2026年6月",
+          "y": 21687406.958
+        },
+        {
+          "x": "2026年7月",
+          "y": 21923349.902
+        },
+        {
+          "x": "2026年8月",
+          "y": 22221485.984
+        },
+        {
+          "x": "2026年9月",
+          "y": 22317143.681
         }
       ],
       "expected_update": "每月"

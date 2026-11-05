@@ -644,12 +644,11 @@ export const metricDefinitions: MetricPipelineDefinition[] = [
         id: "current_account_balance",
         card_id: "gdp",
         label_tc: "經常賬戶差額",
-        source: officialReportTable(
+        source: cAndSDTable(
           URLs.currentAccountDataset,
           "315-37003",
           "國際收支平衡：經常賬戶及資本賬戶",
-          "Balance of Payments",
-          "B1040001"
+          "Balance of Payments"
         ),
         render_strategy: "balance_sign_aware",
         frequency: "quarterly",
@@ -663,11 +662,12 @@ export const metricDefinitions: MetricPipelineDefinition[] = [
         chart_time_label: "季度",
         chart_value_label: "經常賬戶差額",
         series_label_tc: "經常賬戶差額",
-        transformation_formula: "官方季度 BoP 報告 Table 2.1 的 Current account level；comparison = latest level - previous quarter level"
+        transformation_formula: "官方 315-37003 經常賬戶季度差額；comparison = latest level - previous quarter level"
       }),
-      loader_kind: "bop_report_pdf",
+      loader_kind: "censtatd",
       table_id: "315-37003",
-      ecode: "B1040001"
+      dimensions: { BOP_COMPONENT: "CRA", freq: "Q" },
+      measure: { measure_code: "BOP", measure_aliases: ["BOP"], allowed_labels_tc: ["百萬港元"] }
     }
   },
   {
@@ -935,7 +935,7 @@ export const metricDefinitions: MetricPipelineDefinition[] = [
       }),
       loader_kind: "censtatd",
       table_id: "650-80001",
-      dimensions: { REGION: "" },
+      dimensions: { REGION: "", freq: "M" },
       measure: { measure_code: "VIS_ARR", measure_aliases: ["VIS_ARR"], allowed_labels_tc: ["數目"] }
     }
   },

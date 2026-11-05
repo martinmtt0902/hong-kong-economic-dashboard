@@ -11,7 +11,8 @@
     "test:snapshots": "node --import tsx --test tests/snapshots/*.test.ts",
     "test:snapshots:refresh": "npm run generate:data && npm run test:snapshots",
     "test:invariants": "node --import tsx --test tests/invariants/*.test.ts",
-    "test": "npm run test:snapshots && npm run test:invariants"
+    "test": "npm run test:snapshots && npm run test:invariants",
+    "restore:data": "node --import tsx scripts/restore-published-data.ts"
   },
   "dependencies": {
     "react": "^18.3.1",

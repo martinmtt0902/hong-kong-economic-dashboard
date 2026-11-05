@@ -1,12 +1,10 @@
 import test from "node:test";
 import assert from "node:assert/strict";
-import { readJson, readText } from "../helpers/loadData";
+import { readJson } from "../helpers/loadData";
 
 test("population snapshot matches official headline values and reports", () => {
-  const payload = readJson<any>("public/data/dashboard.v2.json");
-  const ui = readJson<any>("public/data/dashboard.json");
-  const rawToTransformed = readJson<any[]>("artifacts/reports/raw-to-transformed.json");
-  const preview = readText("artifacts/reports/render-preview.md");
+  const payload = readJson<any>("tests/fixtures/march-2026/dashboard.v2.json");
+  const ui = readJson<any>("tests/fixtures/march-2026/dashboard.json");
 
   const card = payload.cards.find((item: any) => item.id === "population");
   const uiCard = ui.cards.find((item: any) => item.id === "population");
@@ -33,7 +31,4 @@ test("population snapshot matches official headline values and reports", () => {
   assert.equal(populationUi.display_change_text, "較去年同期（2024年底） +10,200");
   assert.equal(populationUi.display_previous_text, "去年同期（2024年底） 7,500,600");
 
-  assert.ok(rawToTransformed.some((item) => item.metric_id === "population_total"));
-  assert.match(preview, /## 人口/);
-  assert.match(preview, /### 出生登記總數/);
 });

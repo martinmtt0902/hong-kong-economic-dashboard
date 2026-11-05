@@ -1,30 +1,28 @@
 import test from "node:test";
 import assert from "node:assert/strict";
+import { parseOfficialPeriod, formatRollingWindowLabel } from "../../scripts/lib/period";
 import { readJson } from "../helpers/loadData";
 
-test("period labels are normalized to dates or periods", () => {
-  const canonical = readJson<any>("public/data/dashboard.v2.json");
+test("official monthly formats normalize before sorting, including RVD MM-YYYY", () => {
+  assert.equal(parseOfficialPeriod("09-2026", "monthly").as_of_date, "2026-09-30");
+  assert.equal(parseOfficialPeriod("12-2025", "monthly").as_of_date, "2025-12-31");
+  assert.equal(parseOfficialPeriod("Feb-24", "monthly").as_of_date, "2024-02-29");
+  assert.equal(parseOfficialPeriod("202609", "monthly").as_of_label, "2026年9月");
+  assert.equal(formatRollingWindowLabel("202602"), "2025年12月–2026年2月");
+});
 
-  const employment = canonical.cards.find((item: any) => item.id === "employment");
-  assert.equal(employment.latest_as_of_label, "2025年12月–2026年2月");
+test("all available chart periods are ISO dates in chronological order", () => {
+  const payload = readJson<any>("public/data/dashboard.v2.json");
+  for (const metric of payload.cards.flatMap((card: any) => card.metrics)) {
+    const dates = metric.chart_points.map((p: any) => p.as_of_date);
+    dates.forEach((date: string) => assert.match(date, /^\d{4}-\d{2}-\d{2}$/, metric.id));
+    assert.deepEqual(dates, [...dates].sort(), metric.id);
+    assert.equal(new Set(dates).size, dates.length, metric.id);
+  }
+});
 
-  const gdp = canonical.cards.find((item: any) => item.id === "gdp");
-  assert.equal(gdp.latest_as_of_label, "2025年第4季");
-
-  const population = canonical.cards.find((item: any) => item.id === "population");
-  assert.equal(population.latest_as_of_label, "2025年年底");
-
-  const rates = canonical.cards.find((item: any) => item.id === "interest-rates");
-  const baseRate = rates.metrics.find((item: any) => item.id === "base_rate");
-  assert.match(baseRate.as_of_label, /^\d{4}-\d{2}-\d{2}$/);
-
-  const minimumWage = canonical.cards
-    .find((item: any) => item.id === "minimum-wage")
-    .metrics.find((item: any) => item.id === "statutory_minimum_wage_next");
-  assert.equal(minimumWage.as_of_label, "2026-05-01");
-
-  const vacancies = canonical.cards
-    .find((item: any) => item.id === "employment")
-    .metrics.find((item: any) => item.id === "vacancies");
-  assert.equal(vacancies.as_of_label, "2025年第3季");
+import { selectPreviousObservation } from "../../scripts/lib/transform";
+test("year-on-year comparison clamps leap day to the prior February month end", () => {
+  const rows = [{ as_of_date: "2023-02-28", value: 10 }, { as_of_date: "2024-02-29", value: 20 }] as any;
+  assert.equal(selectPreviousObservation(rows, rows[1], "same_period_last_year")?.value, 10);
 });

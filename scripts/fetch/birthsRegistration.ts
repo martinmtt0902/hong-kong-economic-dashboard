@@ -1,6 +1,6 @@
 import { readFileSync } from "node:fs";
 import path from "node:path";
-import { fetchText } from "../lib/http";
+import { fetchBytes } from "../lib/http";
 import { parseCsv } from "../lib/csv";
 import { parseOfficialPeriod } from "../lib/period";
 import { numericValue } from "../lib/time";
@@ -11,9 +11,13 @@ export async function fetchBirthsRegistrationObservations(
   source: SourceRef,
   seriesLabel: string
 ): Promise<RawObservation[]> {
-  const rows = parseCsv(await fetchRegistrationSource(url));
+  const bytes = await fetchBytes(url);
+  const utf8 = new TextDecoder().decode(bytes);
+  const text = utf8.includes("\uFFFD") ? new TextDecoder("big5").decode(bytes) : utf8;
+  const rows = parseCsv(text);
   const points = rowsToObservations(rows, source, seriesLabel);
-  return points.length > 0 ? points : readBirthsRegistrationSnapshot(source, seriesLabel);
+  if (!points.length) throw new Error("Birth-registration source schema changed");
+  return points;
 }
 
 export function readBirthsRegistrationSnapshot(source: SourceRef, seriesLabel: string): RawObservation[] {
@@ -25,7 +29,7 @@ function rowsToObservations(rows: Array<Record<string, string>>, source: SourceR
   const points: RawObservation[] = [];
   for (const row of rows) {
     const year = pickColumn(row, ["年份", "Year"]);
-    const total = pickColumn(row, ["出生登記總數", "Births", "Total Births", "No. of Births", "Registered Births"]);
+    const total = pickColumn(row, ["出生登記數目", "出生登記總數", "Births", "Total Births", "No. of Births", "Registered Births"]);
     const numeric = numericValue(total);
     if (!year || typeof numeric !== "number") {
       continue;
@@ -50,14 +54,6 @@ function rowsToObservations(rows: Array<Record<string, string>>, source: SourceR
   }
 
   return points.sort((left, right) => left.as_of_date.localeCompare(right.as_of_date));
-}
-
-async function fetchRegistrationSource(url: string): Promise<string> {
-  try {
-    return await fetchText(url);
-  } catch {
-    return "";
-  }
 }
 
 function pickColumn(row: Record<string, string>, candidates: string[]): string | undefined {

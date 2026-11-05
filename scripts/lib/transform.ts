@@ -188,7 +188,7 @@ export function selectCardHeaderMetric(metrics: TransformedMetric[], priority: s
   return latestCardMetric(metrics);
 }
 
-function buildChartPoints(series: RawObservation[], definition: MetricDefinitionRecord, limit = 12): ChartPoint[] {
+function buildChartPoints(series: RawObservation[], definition: MetricDefinitionRecord): ChartPoint[] {
   const displayUnit = definition.display_unit ?? definition.unit;
   const rounding = definition.rounding_policy ?? {
     value_decimals: 0,
@@ -196,7 +196,9 @@ function buildChartPoints(series: RawObservation[], definition: MetricDefinition
     previous_decimals: 0
   };
 
-  return series.slice(-limit).map((point) => {
+  const endYear = Number(series.at(-1)?.as_of_date.slice(0, 4));
+  const history = definition.frequency === "event" ? series : series.filter((point) => Number(point.as_of_date.slice(0, 4)) >= endYear - 6);
+  return history.map((point) => {
     const displayValue = formatChartDisplayValue(point.value, displayUnit, definition.metric_type, rounding);
     return {
       as_of_date: point.as_of_date,
@@ -232,7 +234,7 @@ function selectSeriesForDefinition(series: RawObservation[], metricId: string, r
 
   const current = series.filter((point) => point.as_of_date <= referenceDate).at(-1);
   const next = series.find((point) => point.as_of_date > referenceDate);
-  return [current, next].filter((point): point is RawObservation => Boolean(point));
+  return next ? [current, next].filter((point): point is RawObservation => Boolean(point)) : [];
 }
 
 function defaultTimeLabel(frequency: RawObservation["frequency"]): string {
@@ -260,7 +262,8 @@ function sortObservations(series: RawObservation[]): RawObservation[] {
 
 function previousYearSamePeriod(dateString: string): string {
   const [year, month, day] = dateString.split("-").map(Number);
-  return `${year - 1}-${String(month).padStart(2, "0")}-${String(day).padStart(2, "0")}`;
+  const lastDay = new Date(Date.UTC(year - 1, month, 0)).getUTCDate();
+  return `${year - 1}-${String(month).padStart(2, "0")}-${String(Math.min(day, lastDay)).padStart(2, "0")}`;
 }
 
 function formatChartDisplayValue(

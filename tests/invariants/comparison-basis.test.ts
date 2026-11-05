@@ -35,11 +35,11 @@ test("comparison basis is explicit and preserved into UI text", () => {
     .find((item: any) => item.id === "gdp")
     .metrics.find((item: any) => item.id === "private_consumption_expenditure");
   assert.equal(pce.comparison_type, "previous_observation");
-  assert.equal(pce.comparison_period_label, "2025年第3季");
+  assert.equal(pce.comparison_period_label, pce.previous_as_of_label);
 
   const uiPopulation = ui.cards
     .find((item: any) => item.id === "population")
     .metrics.find((item: any) => item.id === "population_total");
   assert.equal(uiPopulation.display_comparison_basis_text, "較去年同期");
-  assert.equal(uiPopulation.display_comparison_period_text, "2024年底");
+  assert.equal(uiPopulation.display_comparison_period_text, population.comparison_period_label);
 });

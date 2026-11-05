@@ -42,7 +42,7 @@ export function toUIMetricRow(metric: TransformedMetric): UIMetricRow {
       source_note: metric.source_note,
       status: metric.validation_state,
       status_text_tc: statusText(metric),
-      display_value_text: statusText(metric),
+      display_value_text: metric.id === "statutory_minimum_wage_next" && metric.validation_state === "stale" ? "尚未公布" : statusText(metric),
       display_change_text: metric.validation_messages[0]?.message_tc ?? "請核對官方來源",
       display_previous_text: "請核對官方來源",
       display_period_text: metric.as_of_label || "待官方更新",
@@ -55,6 +55,7 @@ export function toUIMetricRow(metric: TransformedMetric): UIMetricRow {
       reason: metric.reason,
       chart: {
         chart_type: metric.chart_definition.chart_type,
+        frequency: metric.frequency,
         x_axis_label: metric.chart_definition.x_axis_label,
         y_axis_label: metric.chart_definition.y_axis_label,
         time_label: metric.chart_definition.time_label,
@@ -90,6 +91,7 @@ export function toUIMetricRow(metric: TransformedMetric): UIMetricRow {
     reason: metric.reason,
       chart: {
         chart_type: metric.chart_definition.chart_type,
+        frequency: metric.frequency,
         x_axis_label: metric.chart_definition.x_axis_label,
         y_axis_label: metric.chart_definition.y_axis_label,
         time_label: metric.chart_definition.time_label,
@@ -99,6 +101,7 @@ export function toUIMetricRow(metric: TransformedMetric): UIMetricRow {
         suggested_ticks: metric.chart_definition.suggested_ticks,
         points: metric.chart_points.map((point) => ({
           x: point.as_of_label,
+          date: point.as_of_date,
           y: point.value * metric.chart_definition.chart_value_transform.scale,
           tick_label: point.tick_label,
           tooltip_title: point.tooltip_title,

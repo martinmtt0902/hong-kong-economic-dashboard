@@ -64,6 +64,15 @@ export function parseOfficialPeriod(raw: string, frequency: Frequency): ParsedPe
   }
 
   if (frequency === "monthly") {
+    const rvdMonth = text.match(/^(\d{2})-(\d{4})$/);
+    if (rvdMonth && Number(rvdMonth[1]) >= 1 && Number(rvdMonth[1]) <= 12) {
+      const month = Number(rvdMonth[1]);
+      const year = Number(rvdMonth[2]);
+      return { period_key: `${year}-${rvdMonth[1]}`, as_of_date: monthEndIso(year, month), as_of_label: `${year}年${month}月` };
+    }
+  }
+
+  if (frequency === "monthly") {
     const isoMonthMatch = text.match(/^(?<year>\d{4})-(?<month>\d{2})$/);
     if (isoMonthMatch?.groups) {
       const year = Number(isoMonthMatch.groups.year);

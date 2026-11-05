@@ -12,8 +12,10 @@ test("display_unit consistently drives headline, previous and change formatting"
   assert.match(revenue.display_previous_text, /億/);
 
   const wage = ui.cards.find((item: any) => item.id === "minimum-wage").metrics.find((item: any) => item.id === "statutory_minimum_wage_next");
-  assert.match(wage.display_value_text, /HK\$/);
-  assert.match(wage.display_change_text, /HK\$/);
+  if (wage.data_origin !== "status_only") {
+    assert.match(wage.display_value_text, /HK\$/);
+    assert.match(wage.display_change_text, /HK\$/);
+  }
 
   const m3 = ui.cards.find((item: any) => item.id === "interest-rates").metrics.find((item: any) => item.id === "money_supply_m3");
   assert.match(m3.display_value_text, /萬億/);

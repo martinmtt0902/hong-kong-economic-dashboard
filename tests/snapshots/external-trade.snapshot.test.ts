@@ -3,8 +3,8 @@ import assert from "node:assert/strict";
 import { readJson } from "../helpers/loadData";
 
 test("external trade snapshot uses official merchandise trade totals and sign-aware balance text", () => {
-  const payload = readJson<any>("public/data/dashboard.v2.json");
-  const ui = readJson<any>("public/data/dashboard.json");
+  const payload = readJson<any>("tests/fixtures/march-2026/dashboard.v2.json");
+  const ui = readJson<any>("tests/fixtures/march-2026/dashboard.json");
 
   const card = payload.cards.find((item: any) => item.id === "external-trade");
   const uiCard = ui.cards.find((item: any) => item.id === "external-trade");

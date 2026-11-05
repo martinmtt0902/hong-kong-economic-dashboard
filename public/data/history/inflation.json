@@ -1,28 +1,31 @@
 {
   "id": "inflation",
   "title_tc": "通脹",
-  "latest_data_at": "2026-01-31",
-  "latest_data_label": "2026年1月",
+  "latest_data_at": "2026-09-30",
+  "latest_data_label": "2026年9月",
+  "card_status_text_tc": "資料待核對",
   "metrics": [
     {
       "id": "cpi_yoy",
       "label_tc": "綜合 CPI 按年變動",
       "source_name": "政府統計處",
       "source_url": "https://data.gov.hk/en-data/dataset/hk-censtatd-tablechart-510-60001a",
-      "status": "ok",
-      "status_text_tc": "最新",
-      "display_value_text": "+1.1%",
-      "display_change_text": "較上期（2025年12月） -0.3 個百分點",
-      "display_previous_text": "上期（2025年12月） +1.4%",
-      "display_period_text": "2026年1月",
-      "display_comparison_text": "較上期（2025年12月） -0.3 個百分點",
+      "status": "source_error",
+      "status_text_tc": "上次成功抓取值",
+      "display_value_text": "+1.9%",
+      "display_change_text": "較上期（2026年8月） +0.2 個百分點",
+      "display_previous_text": "上期（2026年8月） +1.7%",
+      "display_period_text": "2026年9月",
+      "display_comparison_text": "較上期（2026年8月） +0.2 個百分點",
       "display_comparison_basis_text": "較上期",
-      "display_comparison_period_text": "2025年12月",
+      "display_comparison_period_text": "2026年8月",
       "display_unit": "%",
-      "data_origin": "live",
-      "last_successful_fetch_at": "2026-03-18T11:39:06.754Z",
+      "data_origin": "last_successful_snapshot",
+      "last_successful_fetch_at": "2026-11-05T16:57:10.598Z",
+      "reason": "The operation was aborted due to timeout",
       "chart": {
         "chart_type": "line",
+        "frequency": "monthly",
         "x_axis_label": "月份",
         "y_axis_label": "綜合 CPI 按年變動 (%)",
         "time_label": "月份",
@@ -34,69 +37,14 @@
           "display_unit": "%"
         },
         "suggested_ticks": [
-          "2025-02",
-          "2025-08",
-          "2026-01"
+          "2025-10",
+          "2026-04",
+          "2026-09"
         ],
         "points": [
           {
-            "x": "2025年2月",
-            "y": 1.4,
-            "tick_label": "2025-02",
-            "tooltip_title": "2025年2月",
-            "tooltip_value_text": "+1.4%"
-          },
-          {
-            "x": "2025年3月",
-            "y": 1.4,
-            "tick_label": "2025-03",
-            "tooltip_title": "2025年3月",
-            "tooltip_value_text": "+1.4%"
-          },
-          {
-            "x": "2025年4月",
-            "y": 2,
-            "tick_label": "2025-04",
-            "tooltip_title": "2025年4月",
-            "tooltip_value_text": "+2.0%"
-          },
-          {
-            "x": "2025年5月",
-            "y": 1.9,
-            "tick_label": "2025-05",
-            "tooltip_title": "2025年5月",
-            "tooltip_value_text": "+1.9%"
-          },
-          {
-            "x": "2025年6月",
-            "y": 1.4,
-            "tick_label": "2025-06",
-            "tooltip_title": "2025年6月",
-            "tooltip_value_text": "+1.4%"
-          },
-          {
-            "x": "2025年7月",
-            "y": 1,
-            "tick_label": "2025-07",
-            "tooltip_title": "2025年7月",
-            "tooltip_value_text": "+1.0%"
-          },
-          {
-            "x": "2025年8月",
-            "y": 1.1,
-            "tick_label": "2025-08",
-            "tooltip_title": "2025年8月",
-            "tooltip_value_text": "+1.1%"
-          },
-          {
-            "x": "2025年9月",
-            "y": 1.1,
-            "tick_label": "2025-09",
-            "tooltip_title": "2025年9月",
-            "tooltip_value_text": "+1.1%"
-          },
-          {
             "x": "2025年10月",
+            "date": "2025-10-31",
             "y": 1.2,
             "tick_label": "2025-10",
             "tooltip_title": "2025年10月",
@@ -104,6 +52,7 @@
           },
           {
             "x": "2025年11月",
+            "date": "2025-11-30",
             "y": 1.2,
             "tick_label": "2025-11",
             "tooltip_title": "2025年11月",
@@ -111,6 +60,7 @@
           },
           {
             "x": "2025年12月",
+            "date": "2025-12-31",
             "y": 1.4,
             "tick_label": "2025-12",
             "tooltip_title": "2025年12月",
@@ -118,46 +68,79 @@
           },
           {
             "x": "2026年1月",
+            "date": "2026-01-31",
             "y": 1.1,
             "tick_label": "2026-01",
             "tooltip_title": "2026年1月",
             "tooltip_value_text": "+1.1%"
+          },
+          {
+            "x": "2026年2月",
+            "date": "2026-02-28",
+            "y": 1.7,
+            "tick_label": "2026-02",
+            "tooltip_title": "2026年2月",
+            "tooltip_value_text": "+1.7%"
+          },
+          {
+            "x": "2026年3月",
+            "date": "2026-03-31",
+            "y": 1.7,
+            "tick_label": "2026-03",
+            "tooltip_title": "2026年3月",
+            "tooltip_value_text": "+1.7%"
+          },
+          {
+            "x": "2026年4月",
+            "date": "2026-04-30",
+            "y": 1.7,
+            "tick_label": "2026-04",
+            "tooltip_title": "2026年4月",
+            "tooltip_value_text": "+1.7%"
+          },
+          {
+            "x": "2026年5月",
+            "date": "2026-05-31",
+            "y": 2,
+            "tick_label": "2026-05",
+            "tooltip_title": "2026年5月",
+            "tooltip_value_text": "+2.0%"
+          },
+          {
+            "x": "2026年6月",
+            "date": "2026-06-30",
+            "y": 2,
+            "tick_label": "2026-06",
+            "tooltip_title": "2026年6月",
+            "tooltip_value_text": "+2.0%"
+          },
+          {
+            "x": "2026年7月",
+            "date": "2026-07-31",
+            "y": 1.7,
+            "tick_label": "2026-07",
+            "tooltip_title": "2026年7月",
+            "tooltip_value_text": "+1.7%"
+          },
+          {
+            "x": "2026年8月",
+            "date": "2026-08-31",
+            "y": 1.7,
+            "tick_label": "2026-08",
+            "tooltip_title": "2026年8月",
+            "tooltip_value_text": "+1.7%"
+          },
+          {
+            "x": "2026年9月",
+            "date": "2026-09-30",
+            "y": 1.9,
+            "tick_label": "2026-09",
+            "tooltip_title": "2026年9月",
+            "tooltip_value_text": "+1.9%"
           }
         ]
       },
       "sparkline_points": [
-        {
-          "x": "2025年2月",
-          "y": 1.4
-        },
-        {
-          "x": "2025年3月",
-          "y": 1.4
-        },
-        {
-          "x": "2025年4月",
-          "y": 2
-        },
-        {
-          "x": "2025年5月",
-          "y": 1.9
-        },
-        {
-          "x": "2025年6月",
-          "y": 1.4
-        },
-        {
-          "x": "2025年7月",
-          "y": 1
-        },
-        {
-          "x": "2025年8月",
-          "y": 1.1
-        },
-        {
-          "x": "2025年9月",
-          "y": 1.1
-        },
         {
           "x": "2025年10月",
           "y": 1.2
@@ -173,6 +156,38 @@
         {
           "x": "2026年1月",
           "y": 1.1
+        },
+        {
+          "x": "2026年2月",
+          "y": 1.7
+        },
+        {
+          "x": "2026年3月",
+          "y": 1.7
+        },
+        {
+          "x": "2026年4月",
+          "y": 1.7
+        },
+        {
+          "x": "2026年5月",
+          "y": 2
+        },
+        {
+          "x": "2026年6月",
+          "y": 2
+        },
+        {
+          "x": "2026年7月",
+          "y": 1.7
+        },
+        {
+          "x": "2026年8月",
+          "y": 1.7
+        },
+        {
+          "x": "2026年9月",
+          "y": 1.9
         }
       ],
       "expected_update": "每月"

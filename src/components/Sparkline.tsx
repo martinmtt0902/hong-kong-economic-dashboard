@@ -1,24 +1,27 @@
 import { useEffect, useMemo, useState } from "react";
+import { chartRanges, selectChartRange, type ChartRange } from "../lib/chartRange";
 import type { UIChart } from "../types";
 
-const width = 220;
-const height = 128;
+const width = 320;
+const height = 150;
 const margin = { top: 10, right: 10, bottom: 28, left: 46 };
 
 export function Sparkline({ chart }: { chart: UIChart }) {
-  const defaultIndex = chart.points.length ? chart.points.length - 1 : null;
+  const [range, setRange] = useState<ChartRange>(1);
+  const view = useMemo(() => selectChartRange(chart, range), [chart, range]);
+  const defaultIndex = view.points.length ? view.points.length - 1 : null;
   const [activeIndex, setActiveIndex] = useState<number | null>(defaultIndex);
 
   useEffect(() => {
     setActiveIndex(defaultIndex);
-  }, [defaultIndex]);
+  }, [defaultIndex, range, chart]);
 
   const geometry = useMemo(() => {
-    if (chart.points.length === 0) {
+    if (view.points.length === 0) {
       return null;
     }
 
-    const values = chart.points.map((point) => point.y);
+    const values = view.points.map((point) => point.y);
     const minValue = Math.min(...values);
     const maxValue = Math.max(...values);
     const plotWidth = width - margin.left - margin.right;
@@ -29,8 +32,8 @@ export function Sparkline({ chart }: { chart: UIChart }) {
     const domainMax = maxValue + padding;
     const domainSpan = domainMax - domainMin || 1;
 
-    const points = chart.points.map((point, index) => {
-      const x = margin.left + (chart.points.length === 1 ? plotWidth / 2 : (index / (chart.points.length - 1)) * plotWidth);
+    const points = view.points.map((point) => {
+      const x = margin.left + (view.start === view.end ? plotWidth / 2 : ((point.slot - view.start) / (view.end - view.start)) * plotWidth);
       const y = margin.top + plotHeight - ((point.y - domainMin) / domainSpan) * plotHeight;
       return { ...point, svgX: x, svgY: y };
     });
@@ -44,20 +47,28 @@ export function Sparkline({ chart }: { chart: UIChart }) {
     });
 
     return { points, ticks, plotWidth, plotHeight };
-  }, [chart]);
+  }, [chart, view]);
 
   if (!geometry) {
     return <div className="sparkline sparkline-empty">-</div>;
   }
 
   const activePoint = activeIndex !== null ? geometry.points[activeIndex] : undefined;
-  const segments = buildSegments(geometry.points, chart.chart_type);
+  const segments = buildSegments(geometry.points, chart.chart_type, range > 1 || chart.frequency === "annual" ? 1 : chart.frequency === "quarterly" ? 3 : chart.frequency === "half_yearly" ? 6 : 1);
 
   return (
     <div className="mini-chart">
+      <label className="chart-range-control">
+        顯示範圍
+        <select aria-label={`${chart.value_label} 圖表範圍`} value={range} onChange={(event) => setRange(Number(event.target.value) as ChartRange)}>
+          {chartRanges.map((years) => <option key={years} value={years}>近 {years} 年</option>)}
+        </select>
+      </label>
       <div className="mini-chart-axis mini-chart-axis-y">{chart.y_axis_label}</div>
       <svg
         className="sparkline"
+        role="group"
+        aria-label={`${chart.value_label} 近 ${range} 年趨勢`}
         viewBox={`0 0 ${width} ${height}`}
         onMouseLeave={() => setActiveIndex(defaultIndex)}
       >
@@ -65,7 +76,7 @@ export function Sparkline({ chart }: { chart: UIChart }) {
         <line x1={margin.left} y1={margin.top} x2={margin.left} y2={height - margin.bottom} className="axis-line" />
 
         {geometry.ticks.map((tick) => (
-          <g key={tick.label}>
+          <g key={tick.y}>
             <line x1={margin.left} y1={tick.y} x2={width - margin.right} y2={tick.y} className="grid-line" />
             <text x={margin.left - 6} y={tick.y + 4} className="axis-text axis-text-left">
               {tick.label}
@@ -73,14 +84,14 @@ export function Sparkline({ chart }: { chart: UIChart }) {
           </g>
         ))}
 
-        {chart.suggested_ticks.map((tick) => {
-          const point = geometry.points.find((item) => item.tick_label === tick);
+        {view.ticks.map((tick) => {
+          const point = geometry.points.find((item) => item.slot === tick.slot);
           if (!point) {
             return null;
           }
           return (
-            <text key={tick} x={point.svgX} y={height - 8} className="axis-text axis-text-bottom">
-              {tick}
+            <text key={tick.slot} x={point.svgX} y={height - 8} className="axis-text axis-text-bottom">
+              {tick.axisLabel}
             </text>
           );
         })}
@@ -112,11 +123,14 @@ export function Sparkline({ chart }: { chart: UIChart }) {
             onMouseEnter={() => setActiveIndex(index)}
             onFocus={() => setActiveIndex(index)}
             onBlur={() => setActiveIndex(defaultIndex)}
+            aria-label={`${point.tooltip_title}：${point.tooltip_value_text}`}
+            onClick={() => setActiveIndex(index)}
             tabIndex={0}
           />
         ))}
       </svg>
-      <div className="mini-chart-axis mini-chart-axis-x">{chart.x_axis_label}</div>
+      <div className="mini-chart-axis mini-chart-axis-x">{range > 1 ? "年份" : chart.x_axis_label}</div>
+      <p className="chart-coverage">{view.note}</p>
       <div className="mini-chart-panel" role="note" aria-live="polite">
         {activePoint ? (
           <>
@@ -135,14 +149,16 @@ export function Sparkline({ chart }: { chart: UIChart }) {
 }
 
 function buildSegments(
-  points: Array<{ svgX: number; svgY: number; y: number }>,
-  chartType: UIChart["chart_type"]
+  points: Array<{ svgX: number; svgY: number; y: number; slot: number }>,
+  chartType: UIChart["chart_type"],
+  maxGap: number
 ): Array<{ x1: number; y1: number; x2: number; y2: number; trend: "up" | "down" | "flat" }> {
   const segments: Array<{ x1: number; y1: number; x2: number; y2: number; trend: "up" | "down" | "flat" }> = [];
 
   for (let index = 1; index < points.length; index += 1) {
     const point = points[index];
     const previous = points[index - 1];
+    if (chartType !== "step_after" && point.slot - previous.slot > maxGap) continue;
     const trend = point.y > previous.y ? "up" : point.y < previous.y ? "down" : "flat";
 
     if (chartType === "step_after") {

@@ -1,8 +1,8 @@
 {
   "id": "population",
   "title_tc": "人口",
-  "latest_as_of_date": "2025-12-31",
-  "latest_as_of_label": "2025年年底",
+  "latest_as_of_date": "2026-12-31",
+  "latest_as_of_label": "2026年",
   "metrics": [
     {
       "id": "population_total",
@@ -30,20 +30,24 @@
         "change_decimals": 0,
         "previous_decimals": 0
       },
-      "as_of_date": "2025-12-31",
-      "as_of_label": "2025年年底",
-      "latest_value": 7510800,
-      "previous_value": 7500600,
-      "previous_as_of_date": "2024-12-31",
-      "previous_as_of_label": "2024年年底",
-      "change_value": 10200,
-      "raw_change_value": 10200,
+      "as_of_date": "2026-06-30",
+      "as_of_label": "2026年年中",
+      "latest_value": 7518300,
+      "previous_value": 7498900,
+      "previous_as_of_date": "2025-06-30",
+      "previous_as_of_label": "2025年年中",
+      "change_value": 19400,
+      "raw_change_value": 19400,
       "change_type": "absolute_change",
       "comparison_type": "same_period_last_year",
       "comparison_basis": "same_period_last_year",
       "comparison_basis_label_tc": "較去年同期",
-      "comparison_period_label": "2024年底",
-      "data_origin": "live",
+      "comparison_period_label": "2025年中",
+      "data_origin": "last_successful_snapshot",
+      "last_successful_fetch_at": "2026-11-05T17:01:39.213Z",
+      "last_verified_value": 7518300,
+      "last_verified_period": "2026年年中",
+      "reason": "The operation was aborted due to timeout",
       "chart_series": "censtatd|110-01002|SEX=|AGE=|freq=H|measure=POP|label=數目 ('000)",
       "chart_metric_type": "level",
       "chart_definition": {
@@ -59,18 +63,1080 @@
           "display_unit": "人"
         },
         "period_start": "1961-06-30",
-        "period_end": "2025-12-31",
+        "period_end": "2026-06-30",
         "x_axis_label": "半年期間",
         "y_axis_label": "人口總量 (人)",
         "value_label": "人口總量",
         "time_label": "半年期間",
         "suggested_ticks": [
-          "2020H1",
-          "2023H1",
-          "2025H2"
+          "1961H1",
+          "1993H2",
+          "2026H1"
         ]
       },
       "chart_points": [
+        {
+          "as_of_date": "1961-06-30",
+          "as_of_label": "1961年年中",
+          "tick_label": "1961H1",
+          "value": 3168100,
+          "display_value_text": "3,168,100 人",
+          "tooltip_title": "1961年年中",
+          "tooltip_value_text": "3,168,100 人"
+        },
+        {
+          "as_of_date": "1961-12-31",
+          "as_of_label": "1961年年底",
+          "tick_label": "1961H2",
+          "value": 3195300,
+          "display_value_text": "3,195,300 人",
+          "tooltip_title": "1961年年底",
+          "tooltip_value_text": "3,195,300 人"
+        },
+        {
+          "as_of_date": "1962-06-30",
+          "as_of_label": "1962年年中",
+          "tick_label": "1962H1",
+          "value": 3305200,
+          "display_value_text": "3,305,200 人",
+          "tooltip_title": "1962年年中",
+          "tooltip_value_text": "3,305,200 人"
+        },
+        {
+          "as_of_date": "1962-12-31",
+          "as_of_label": "1962年年底",
+          "tick_label": "1962H2",
+          "value": 3368200,
+          "display_value_text": "3,368,200 人",
+          "tooltip_title": "1962年年底",
+          "tooltip_value_text": "3,368,200 人"
+        },
+        {
+          "as_of_date": "1963-06-30",
+          "as_of_label": "1963年年中",
+          "tick_label": "1963H1",
+          "value": 3420900,
+          "display_value_text": "3,420,900 人",
+          "tooltip_title": "1963年年中",
+          "tooltip_value_text": "3,420,900 人"
+        },
+        {
+          "as_of_date": "1963-12-31",
+          "as_of_label": "1963年年底",
+          "tick_label": "1963H2",
+          "value": 3461800,
+          "display_value_text": "3,461,800 人",
+          "tooltip_title": "1963年年底",
+          "tooltip_value_text": "3,461,800 人"
+        },
+        {
+          "as_of_date": "1964-06-30",
+          "as_of_label": "1964年年中",
+          "tick_label": "1964H1",
+          "value": 3504600,
+          "display_value_text": "3,504,600 人",
+          "tooltip_title": "1964年年中",
+          "tooltip_value_text": "3,504,600 人"
+        },
+        {
+          "as_of_date": "1964-12-31",
+          "as_of_label": "1964年年底",
+          "tick_label": "1964H2",
+          "value": 3545100,
+          "display_value_text": "3,545,100 人",
+          "tooltip_title": "1964年年底",
+          "tooltip_value_text": "3,545,100 人"
+        },
+        {
+          "as_of_date": "1965-06-30",
+          "as_of_label": "1965年年中",
+          "tick_label": "1965H1",
+          "value": 3597900,
+          "display_value_text": "3,597,900 人",
+          "tooltip_title": "1965年年中",
+          "tooltip_value_text": "3,597,900 人"
+        },
+        {
+          "as_of_date": "1965-12-31",
+          "as_of_label": "1965年年底",
+          "tick_label": "1965H2",
+          "value": 3625400,
+          "display_value_text": "3,625,400 人",
+          "tooltip_title": "1965年年底",
+          "tooltip_value_text": "3,625,400 人"
+        },
+        {
+          "as_of_date": "1966-06-30",
+          "as_of_label": "1966年年中",
+          "tick_label": "1966H1",
+          "value": 3629900,
+          "display_value_text": "3,629,900 人",
+          "tooltip_title": "1966年年中",
+          "tooltip_value_text": "3,629,900 人"
+        },
+        {
+          "as_of_date": "1966-12-31",
+          "as_of_label": "1966年年底",
+          "tick_label": "1966H2",
+          "value": 3679400,
+          "display_value_text": "3,679,400 人",
+          "tooltip_title": "1966年年底",
+          "tooltip_value_text": "3,679,400 人"
+        },
+        {
+          "as_of_date": "1967-06-30",
+          "as_of_label": "1967年年中",
+          "tick_label": "1967H1",
+          "value": 3722800,
+          "display_value_text": "3,722,800 人",
+          "tooltip_title": "1967年年中",
+          "tooltip_value_text": "3,722,800 人"
+        },
+        {
+          "as_of_date": "1967-12-31",
+          "as_of_label": "1967年年底",
+          "tick_label": "1967H2",
+          "value": 3760600,
+          "display_value_text": "3,760,600 人",
+          "tooltip_title": "1967年年底",
+          "tooltip_value_text": "3,760,600 人"
+        },
+        {
+          "as_of_date": "1968-06-30",
+          "as_of_label": "1968年年中",
+          "tick_label": "1968H1",
+          "value": 3802700,
+          "display_value_text": "3,802,700 人",
+          "tooltip_title": "1968年年中",
+          "tooltip_value_text": "3,802,700 人"
+        },
+        {
+          "as_of_date": "1968-12-31",
+          "as_of_label": "1968年年底",
+          "tick_label": "1968H2",
+          "value": 3844500,
+          "display_value_text": "3,844,500 人",
+          "tooltip_title": "1968年年底",
+          "tooltip_value_text": "3,844,500 人"
+        },
+        {
+          "as_of_date": "1969-06-30",
+          "as_of_label": "1969年年中",
+          "tick_label": "1969H1",
+          "value": 3863900,
+          "display_value_text": "3,863,900 人",
+          "tooltip_title": "1969年年中",
+          "tooltip_value_text": "3,863,900 人"
+        },
+        {
+          "as_of_date": "1969-12-31",
+          "as_of_label": "1969年年底",
+          "tick_label": "1969H2",
+          "value": 3906100,
+          "display_value_text": "3,906,100 人",
+          "tooltip_title": "1969年年底",
+          "tooltip_value_text": "3,906,100 人"
+        },
+        {
+          "as_of_date": "1970-06-30",
+          "as_of_label": "1970年年中",
+          "tick_label": "1970H1",
+          "value": 3959000,
+          "display_value_text": "3,959,000 人",
+          "tooltip_title": "1970年年中",
+          "tooltip_value_text": "3,959,000 人"
+        },
+        {
+          "as_of_date": "1970-12-31",
+          "as_of_label": "1970年年底",
+          "tick_label": "1970H2",
+          "value": 3995400,
+          "display_value_text": "3,995,400 人",
+          "tooltip_title": "1970年年底",
+          "tooltip_value_text": "3,995,400 人"
+        },
+        {
+          "as_of_date": "1971-06-30",
+          "as_of_label": "1971年年中",
+          "tick_label": "1971H1",
+          "value": 4045300,
+          "display_value_text": "4,045,300 人",
+          "tooltip_title": "1971年年中",
+          "tooltip_value_text": "4,045,300 人"
+        },
+        {
+          "as_of_date": "1971-12-31",
+          "as_of_label": "1971年年底",
+          "tick_label": "1971H2",
+          "value": 4095500,
+          "display_value_text": "4,095,500 人",
+          "tooltip_title": "1971年年底",
+          "tooltip_value_text": "4,095,500 人"
+        },
+        {
+          "as_of_date": "1972-06-30",
+          "as_of_label": "1972年年中",
+          "tick_label": "1972H1",
+          "value": 4123600.0000000005,
+          "display_value_text": "4,123,600 人",
+          "tooltip_title": "1972年年中",
+          "tooltip_value_text": "4,123,600 人"
+        },
+        {
+          "as_of_date": "1972-12-31",
+          "as_of_label": "1972年年底",
+          "tick_label": "1972H2",
+          "value": 4184300,
+          "display_value_text": "4,184,300 人",
+          "tooltip_title": "1972年年底",
+          "tooltip_value_text": "4,184,300 人"
+        },
+        {
+          "as_of_date": "1973-06-30",
+          "as_of_label": "1973年年中",
+          "tick_label": "1973H1",
+          "value": 4241600,
+          "display_value_text": "4,241,600 人",
+          "tooltip_title": "1973年年中",
+          "tooltip_value_text": "4,241,600 人"
+        },
+        {
+          "as_of_date": "1973-12-31",
+          "as_of_label": "1973年年底",
+          "tick_label": "1973H2",
+          "value": 4334200,
+          "display_value_text": "4,334,200 人",
+          "tooltip_title": "1973年年底",
+          "tooltip_value_text": "4,334,200 人"
+        },
+        {
+          "as_of_date": "1974-06-30",
+          "as_of_label": "1974年年中",
+          "tick_label": "1974H1",
+          "value": 4377800,
+          "display_value_text": "4,377,800 人",
+          "tooltip_title": "1974年年中",
+          "tooltip_value_text": "4,377,800 人"
+        },
+        {
+          "as_of_date": "1974-12-31",
+          "as_of_label": "1974年年底",
+          "tick_label": "1974H2",
+          "value": 4438600,
+          "display_value_text": "4,438,600 人",
+          "tooltip_title": "1974年年底",
+          "tooltip_value_text": "4,438,600 人"
+        },
+        {
+          "as_of_date": "1975-06-30",
+          "as_of_label": "1975年年中",
+          "tick_label": "1975H1",
+          "value": 4461600,
+          "display_value_text": "4,461,600 人",
+          "tooltip_title": "1975年年中",
+          "tooltip_value_text": "4,461,600 人"
+        },
+        {
+          "as_of_date": "1975-12-31",
+          "as_of_label": "1975年年底",
+          "tick_label": "1975H2",
+          "value": 4500800,
+          "display_value_text": "4,500,800 人",
+          "tooltip_title": "1975年年底",
+          "tooltip_value_text": "4,500,800 人"
+        },
+        {
+          "as_of_date": "1976-06-30",
+          "as_of_label": "1976年年中",
+          "tick_label": "1976H1",
+          "value": 4518000,
+          "display_value_text": "4,518,000 人",
+          "tooltip_title": "1976年年中",
+          "tooltip_value_text": "4,518,000 人"
+        },
+        {
+          "as_of_date": "1976-12-31",
+          "as_of_label": "1976年年底",
+          "tick_label": "1976H2",
+          "value": 4551000,
+          "display_value_text": "4,551,000 人",
+          "tooltip_title": "1976年年底",
+          "tooltip_value_text": "4,551,000 人"
+        },
+        {
+          "as_of_date": "1977-06-30",
+          "as_of_label": "1977年年中",
+          "tick_label": "1977H1",
+          "value": 4583700,
+          "display_value_text": "4,583,700 人",
+          "tooltip_title": "1977年年中",
+          "tooltip_value_text": "4,583,700 人"
+        },
+        {
+          "as_of_date": "1977-12-31",
+          "as_of_label": "1977年年底",
+          "tick_label": "1977H2",
+          "value": 4631500,
+          "display_value_text": "4,631,500 人",
+          "tooltip_title": "1977年年底",
+          "tooltip_value_text": "4,631,500 人"
+        },
+        {
+          "as_of_date": "1978-06-30",
+          "as_of_label": "1978年年中",
+          "tick_label": "1978H1",
+          "value": 4667500,
+          "display_value_text": "4,667,500 人",
+          "tooltip_title": "1978年年中",
+          "tooltip_value_text": "4,667,500 人"
+        },
+        {
+          "as_of_date": "1978-12-31",
+          "as_of_label": "1978年年底",
+          "tick_label": "1978H2",
+          "value": 4769900,
+          "display_value_text": "4,769,900 人",
+          "tooltip_title": "1978年年底",
+          "tooltip_value_text": "4,769,900 人"
+        },
+        {
+          "as_of_date": "1979-06-30",
+          "as_of_label": "1979年年中",
+          "tick_label": "1979H1",
+          "value": 4929700,
+          "display_value_text": "4,929,700 人",
+          "tooltip_title": "1979年年中",
+          "tooltip_value_text": "4,929,700 人"
+        },
+        {
+          "as_of_date": "1979-12-31",
+          "as_of_label": "1979年年底",
+          "tick_label": "1979H2",
+          "value": 5024700,
+          "display_value_text": "5,024,700 人",
+          "tooltip_title": "1979年年底",
+          "tooltip_value_text": "5,024,700 人"
+        },
+        {
+          "as_of_date": "1980-06-30",
+          "as_of_label": "1980年年中",
+          "tick_label": "1980H1",
+          "value": 5063100,
+          "display_value_text": "5,063,100 人",
+          "tooltip_title": "1980年年中",
+          "tooltip_value_text": "5,063,100 人"
+        },
+        {
+          "as_of_date": "1980-12-31",
+          "as_of_label": "1980年年底",
+          "tick_label": "1980H2",
+          "value": 5145100,
+          "display_value_text": "5,145,100 人",
+          "tooltip_title": "1980年年底",
+          "tooltip_value_text": "5,145,100 人"
+        },
+        {
+          "as_of_date": "1981-06-30",
+          "as_of_label": "1981年年中",
+          "tick_label": "1981H1",
+          "value": 5183400,
+          "display_value_text": "5,183,400 人",
+          "tooltip_title": "1981年年中",
+          "tooltip_value_text": "5,183,400 人"
+        },
+        {
+          "as_of_date": "1981-12-31",
+          "as_of_label": "1981年年底",
+          "tick_label": "1981H2",
+          "value": 5238500,
+          "display_value_text": "5,238,500 人",
+          "tooltip_title": "1981年年底",
+          "tooltip_value_text": "5,238,500 人"
+        },
+        {
+          "as_of_date": "1982-06-30",
+          "as_of_label": "1982年年中",
+          "tick_label": "1982H1",
+          "value": 5264500,
+          "display_value_text": "5,264,500 人",
+          "tooltip_title": "1982年年中",
+          "tooltip_value_text": "5,264,500 人"
+        },
+        {
+          "as_of_date": "1982-12-31",
+          "as_of_label": "1982年年底",
+          "tick_label": "1982H2",
+          "value": 5319500,
+          "display_value_text": "5,319,500 人",
+          "tooltip_title": "1982年年底",
+          "tooltip_value_text": "5,319,500 人"
+        },
+        {
+          "as_of_date": "1983-06-30",
+          "as_of_label": "1983年年中",
+          "tick_label": "1983H1",
+          "value": 5345100,
+          "display_value_text": "5,345,100 人",
+          "tooltip_title": "1983年年中",
+          "tooltip_value_text": "5,345,100 人"
+        },
+        {
+          "as_of_date": "1983-12-31",
+          "as_of_label": "1983年年底",
+          "tick_label": "1983H2",
+          "value": 5377400,
+          "display_value_text": "5,377,400 人",
+          "tooltip_title": "1983年年底",
+          "tooltip_value_text": "5,377,400 人"
+        },
+        {
+          "as_of_date": "1984-06-30",
+          "as_of_label": "1984年年中",
+          "tick_label": "1984H1",
+          "value": 5397900,
+          "display_value_text": "5,397,900 人",
+          "tooltip_title": "1984年年中",
+          "tooltip_value_text": "5,397,900 人"
+        },
+        {
+          "as_of_date": "1984-12-31",
+          "as_of_label": "1984年年底",
+          "tick_label": "1984H2",
+          "value": 5430900,
+          "display_value_text": "5,430,900 人",
+          "tooltip_title": "1984年年底",
+          "tooltip_value_text": "5,430,900 人"
+        },
+        {
+          "as_of_date": "1985-06-30",
+          "as_of_label": "1985年年中",
+          "tick_label": "1985H1",
+          "value": 5456200,
+          "display_value_text": "5,456,200 人",
+          "tooltip_title": "1985年年中",
+          "tooltip_value_text": "5,456,200 人"
+        },
+        {
+          "as_of_date": "1985-12-31",
+          "as_of_label": "1985年年底",
+          "tick_label": "1985H2",
+          "value": 5500400,
+          "display_value_text": "5,500,400 人",
+          "tooltip_title": "1985年年底",
+          "tooltip_value_text": "5,500,400 人"
+        },
+        {
+          "as_of_date": "1986-06-30",
+          "as_of_label": "1986年年中",
+          "tick_label": "1986H1",
+          "value": 5524600,
+          "display_value_text": "5,524,600 人",
+          "tooltip_title": "1986年年中",
+          "tooltip_value_text": "5,524,600 人"
+        },
+        {
+          "as_of_date": "1986-12-31",
+          "as_of_label": "1986年年底",
+          "tick_label": "1986H2",
+          "value": 5565700,
+          "display_value_text": "5,565,700 人",
+          "tooltip_title": "1986年年底",
+          "tooltip_value_text": "5,565,700 人"
+        },
+        {
+          "as_of_date": "1987-06-30",
+          "as_of_label": "1987年年中",
+          "tick_label": "1987H1",
+          "value": 5580500,
+          "display_value_text": "5,580,500 人",
+          "tooltip_title": "1987年年中",
+          "tooltip_value_text": "5,580,500 人"
+        },
+        {
+          "as_of_date": "1987-12-31",
+          "as_of_label": "1987年年底",
+          "tick_label": "1987H2",
+          "value": 5615300,
+          "display_value_text": "5,615,300 人",
+          "tooltip_title": "1987年年底",
+          "tooltip_value_text": "5,615,300 人"
+        },
+        {
+          "as_of_date": "1988-06-30",
+          "as_of_label": "1988年年中",
+          "tick_label": "1988H1",
+          "value": 5627600,
+          "display_value_text": "5,627,600 人",
+          "tooltip_title": "1988年年中",
+          "tooltip_value_text": "5,627,600 人"
+        },
+        {
+          "as_of_date": "1988-12-31",
+          "as_of_label": "1988年年底",
+          "tick_label": "1988H2",
+          "value": 5671600,
+          "display_value_text": "5,671,600 人",
+          "tooltip_title": "1988年年底",
+          "tooltip_value_text": "5,671,600 人"
+        },
+        {
+          "as_of_date": "1989-06-30",
+          "as_of_label": "1989年年中",
+          "tick_label": "1989H1",
+          "value": 5686200,
+          "display_value_text": "5,686,200 人",
+          "tooltip_title": "1989年年中",
+          "tooltip_value_text": "5,686,200 人"
+        },
+        {
+          "as_of_date": "1989-12-31",
+          "as_of_label": "1989年年底",
+          "tick_label": "1989H2",
+          "value": 5726500,
+          "display_value_text": "5,726,500 人",
+          "tooltip_title": "1989年年底",
+          "tooltip_value_text": "5,726,500 人"
+        },
+        {
+          "as_of_date": "1990-06-30",
+          "as_of_label": "1990年年中",
+          "tick_label": "1990H1",
+          "value": 5704500,
+          "display_value_text": "5,704,500 人",
+          "tooltip_title": "1990年年中",
+          "tooltip_value_text": "5,704,500 人"
+        },
+        {
+          "as_of_date": "1990-12-31",
+          "as_of_label": "1990年年底",
+          "tick_label": "1990H2",
+          "value": 5752000,
+          "display_value_text": "5,752,000 人",
+          "tooltip_title": "1990年年底",
+          "tooltip_value_text": "5,752,000 人"
+        },
+        {
+          "as_of_date": "1991-06-30",
+          "as_of_label": "1991年年中",
+          "tick_label": "1991H1",
+          "value": 5752000,
+          "display_value_text": "5,752,000 人",
+          "tooltip_title": "1991年年中",
+          "tooltip_value_text": "5,752,000 人"
+        },
+        {
+          "as_of_date": "1991-12-31",
+          "as_of_label": "1991年年底",
+          "tick_label": "1991H2",
+          "value": 5815300,
+          "display_value_text": "5,815,300 人",
+          "tooltip_title": "1991年年底",
+          "tooltip_value_text": "5,815,300 人"
+        },
+        {
+          "as_of_date": "1992-06-30",
+          "as_of_label": "1992年年中",
+          "tick_label": "1992H1",
+          "value": 5800500,
+          "display_value_text": "5,800,500 人",
+          "tooltip_title": "1992年年中",
+          "tooltip_value_text": "5,800,500 人"
+        },
+        {
+          "as_of_date": "1992-12-31",
+          "as_of_label": "1992年年底",
+          "tick_label": "1992H2",
+          "value": 5887600,
+          "display_value_text": "5,887,600 人",
+          "tooltip_title": "1992年年底",
+          "tooltip_value_text": "5,887,600 人"
+        },
+        {
+          "as_of_date": "1993-06-30",
+          "as_of_label": "1993年年中",
+          "tick_label": "1993H1",
+          "value": 5901000,
+          "display_value_text": "5,901,000 人",
+          "tooltip_title": "1993年年中",
+          "tooltip_value_text": "5,901,000 人"
+        },
+        {
+          "as_of_date": "1993-12-31",
+          "as_of_label": "1993年年底",
+          "tick_label": "1993H2",
+          "value": 5998000,
+          "display_value_text": "5,998,000 人",
+          "tooltip_title": "1993年年底",
+          "tooltip_value_text": "5,998,000 人"
+        },
+        {
+          "as_of_date": "1994-06-30",
+          "as_of_label": "1994年年中",
+          "tick_label": "1994H1",
+          "value": 6035400,
+          "display_value_text": "6,035,400 人",
+          "tooltip_title": "1994年年中",
+          "tooltip_value_text": "6,035,400 人"
+        },
+        {
+          "as_of_date": "1994-12-31",
+          "as_of_label": "1994年年底",
+          "tick_label": "1994H2",
+          "value": 6119300,
+          "display_value_text": "6,119,300 人",
+          "tooltip_title": "1994年年底",
+          "tooltip_value_text": "6,119,300 人"
+        },
+        {
+          "as_of_date": "1995-06-30",
+          "as_of_label": "1995年年中",
+          "tick_label": "1995H1",
+          "value": 6156100,
+          "display_value_text": "6,156,100 人",
+          "tooltip_title": "1995年年中",
+          "tooltip_value_text": "6,156,100 人"
+        },
+        {
+          "as_of_date": "1995-12-31",
+          "as_of_label": "1995年年底",
+          "tick_label": "1995H2",
+          "value": 6270000,
+          "display_value_text": "6,270,000 人",
+          "tooltip_title": "1995年年底",
+          "tooltip_value_text": "6,270,000 人"
+        },
+        {
+          "as_of_date": "1996-06-30",
+          "as_of_label": "1996年年中",
+          "tick_label": "1996H1",
+          "value": 6435500,
+          "display_value_text": "6,435,500 人",
+          "tooltip_title": "1996年年中",
+          "tooltip_value_text": "6,435,500 人"
+        },
+        {
+          "as_of_date": "1996-12-31",
+          "as_of_label": "1996年年底",
+          "tick_label": "1996H2",
+          "value": 6466600,
+          "display_value_text": "6,466,600 人",
+          "tooltip_title": "1996年年底",
+          "tooltip_value_text": "6,466,600 人"
+        },
+        {
+          "as_of_date": "1997-06-30",
+          "as_of_label": "1997年年中",
+          "tick_label": "1997H1",
+          "value": 6489300,
+          "display_value_text": "6,489,300 人",
+          "tooltip_title": "1997年年中",
+          "tooltip_value_text": "6,489,300 人"
+        },
+        {
+          "as_of_date": "1997-12-31",
+          "as_of_label": "1997年年底",
+          "tick_label": "1997H2",
+          "value": 6516700,
+          "display_value_text": "6,516,700 人",
+          "tooltip_title": "1997年年底",
+          "tooltip_value_text": "6,516,700 人"
+        },
+        {
+          "as_of_date": "1998-06-30",
+          "as_of_label": "1998年年中",
+          "tick_label": "1998H1",
+          "value": 6543700,
+          "display_value_text": "6,543,700 人",
+          "tooltip_title": "1998年年中",
+          "tooltip_value_text": "6,543,700 人"
+        },
+        {
+          "as_of_date": "1998-12-31",
+          "as_of_label": "1998年年底",
+          "tick_label": "1998H2",
+          "value": 6583400,
+          "display_value_text": "6,583,400 人",
+          "tooltip_title": "1998年年底",
+          "tooltip_value_text": "6,583,400 人"
+        },
+        {
+          "as_of_date": "1999-06-30",
+          "as_of_label": "1999年年中",
+          "tick_label": "1999H1",
+          "value": 6606500,
+          "display_value_text": "6,606,500 人",
+          "tooltip_title": "1999年年中",
+          "tooltip_value_text": "6,606,500 人"
+        },
+        {
+          "as_of_date": "1999-12-31",
+          "as_of_label": "1999年年底",
+          "tick_label": "1999H2",
+          "value": 6637600,
+          "display_value_text": "6,637,600 人",
+          "tooltip_title": "1999年年底",
+          "tooltip_value_text": "6,637,600 人"
+        },
+        {
+          "as_of_date": "2000-06-30",
+          "as_of_label": "2000年年中",
+          "tick_label": "2000H1",
+          "value": 6665000,
+          "display_value_text": "6,665,000 人",
+          "tooltip_title": "2000年年中",
+          "tooltip_value_text": "6,665,000 人"
+        },
+        {
+          "as_of_date": "2000-12-31",
+          "as_of_label": "2000年年底",
+          "tick_label": "2000H2",
+          "value": 6711500,
+          "display_value_text": "6,711,500 人",
+          "tooltip_title": "2000年年底",
+          "tooltip_value_text": "6,711,500 人"
+        },
+        {
+          "as_of_date": "2001-06-30",
+          "as_of_label": "2001年年中",
+          "tick_label": "2001H1",
+          "value": 6714300,
+          "display_value_text": "6,714,300 人",
+          "tooltip_title": "2001年年中",
+          "tooltip_value_text": "6,714,300 人"
+        },
+        {
+          "as_of_date": "2001-12-31",
+          "as_of_label": "2001年年底",
+          "tick_label": "2001H2",
+          "value": 6730300,
+          "display_value_text": "6,730,300 人",
+          "tooltip_title": "2001年年底",
+          "tooltip_value_text": "6,730,300 人"
+        },
+        {
+          "as_of_date": "2002-06-30",
+          "as_of_label": "2002年年中",
+          "tick_label": "2002H1",
+          "value": 6744100,
+          "display_value_text": "6,744,100 人",
+          "tooltip_title": "2002年年中",
+          "tooltip_value_text": "6,744,100 人"
+        },
+        {
+          "as_of_date": "2002-12-31",
+          "as_of_label": "2002年年底",
+          "tick_label": "2002H2",
+          "value": 6725800,
+          "display_value_text": "6,725,800 人",
+          "tooltip_title": "2002年年底",
+          "tooltip_value_text": "6,725,800 人"
+        },
+        {
+          "as_of_date": "2003-06-30",
+          "as_of_label": "2003年年中",
+          "tick_label": "2003H1",
+          "value": 6730800,
+          "display_value_text": "6,730,800 人",
+          "tooltip_title": "2003年年中",
+          "tooltip_value_text": "6,730,800 人"
+        },
+        {
+          "as_of_date": "2003-12-31",
+          "as_of_label": "2003年年底",
+          "tick_label": "2003H2",
+          "value": 6764200,
+          "display_value_text": "6,764,200 人",
+          "tooltip_title": "2003年年底",
+          "tooltip_value_text": "6,764,200 人"
+        },
+        {
+          "as_of_date": "2004-06-30",
+          "as_of_label": "2004年年中",
+          "tick_label": "2004H1",
+          "value": 6783500,
+          "display_value_text": "6,783,500 人",
+          "tooltip_title": "2004年年中",
+          "tooltip_value_text": "6,783,500 人"
+        },
+        {
+          "as_of_date": "2004-12-31",
+          "as_of_label": "2004年年底",
+          "tick_label": "2004H2",
+          "value": 6797700,
+          "display_value_text": "6,797,700 人",
+          "tooltip_title": "2004年年底",
+          "tooltip_value_text": "6,797,700 人"
+        },
+        {
+          "as_of_date": "2005-06-30",
+          "as_of_label": "2005年年中",
+          "tick_label": "2005H1",
+          "value": 6813200,
+          "display_value_text": "6,813,200 人",
+          "tooltip_title": "2005年年中",
+          "tooltip_value_text": "6,813,200 人"
+        },
+        {
+          "as_of_date": "2005-12-31",
+          "as_of_label": "2005年年底",
+          "tick_label": "2005H2",
+          "value": 6837800,
+          "display_value_text": "6,837,800 人",
+          "tooltip_title": "2005年年底",
+          "tooltip_value_text": "6,837,800 人"
+        },
+        {
+          "as_of_date": "2006-06-30",
+          "as_of_label": "2006年年中",
+          "tick_label": "2006H1",
+          "value": 6857100,
+          "display_value_text": "6,857,100 人",
+          "tooltip_title": "2006年年中",
+          "tooltip_value_text": "6,857,100 人"
+        },
+        {
+          "as_of_date": "2006-12-31",
+          "as_of_label": "2006年年底",
+          "tick_label": "2006H2",
+          "value": 6904300,
+          "display_value_text": "6,904,300 人",
+          "tooltip_title": "2006年年底",
+          "tooltip_value_text": "6,904,300 人"
+        },
+        {
+          "as_of_date": "2007-06-30",
+          "as_of_label": "2007年年中",
+          "tick_label": "2007H1",
+          "value": 6916300,
+          "display_value_text": "6,916,300 人",
+          "tooltip_title": "2007年年中",
+          "tooltip_value_text": "6,916,300 人"
+        },
+        {
+          "as_of_date": "2007-12-31",
+          "as_of_label": "2007年年底",
+          "tick_label": "2007H2",
+          "value": 6938400,
+          "display_value_text": "6,938,400 人",
+          "tooltip_title": "2007年年底",
+          "tooltip_value_text": "6,938,400 人"
+        },
+        {
+          "as_of_date": "2008-06-30",
+          "as_of_label": "2008年年中",
+          "tick_label": "2008H1",
+          "value": 6957800,
+          "display_value_text": "6,957,800 人",
+          "tooltip_title": "2008年年中",
+          "tooltip_value_text": "6,957,800 人"
+        },
+        {
+          "as_of_date": "2008-12-31",
+          "as_of_label": "2008年年底",
+          "tick_label": "2008H2",
+          "value": 6963900,
+          "display_value_text": "6,963,900 人",
+          "tooltip_title": "2008年年底",
+          "tooltip_value_text": "6,963,900 人"
+        },
+        {
+          "as_of_date": "2009-06-30",
+          "as_of_label": "2009年年中",
+          "tick_label": "2009H1",
+          "value": 6972800,
+          "display_value_text": "6,972,800 人",
+          "tooltip_title": "2009年年中",
+          "tooltip_value_text": "6,972,800 人"
+        },
+        {
+          "as_of_date": "2009-12-31",
+          "as_of_label": "2009年年底",
+          "tick_label": "2009H2",
+          "value": 6996400,
+          "display_value_text": "6,996,400 人",
+          "tooltip_title": "2009年年底",
+          "tooltip_value_text": "6,996,400 人"
+        },
+        {
+          "as_of_date": "2010-06-30",
+          "as_of_label": "2010年年中",
+          "tick_label": "2010H1",
+          "value": 7024200,
+          "display_value_text": "7,024,200 人",
+          "tooltip_title": "2010年年中",
+          "tooltip_value_text": "7,024,200 人"
+        },
+        {
+          "as_of_date": "2010-12-31",
+          "as_of_label": "2010年年底",
+          "tick_label": "2010H2",
+          "value": 7052100,
+          "display_value_text": "7,052,100 人",
+          "tooltip_title": "2010年年底",
+          "tooltip_value_text": "7,052,100 人"
+        },
+        {
+          "as_of_date": "2011-06-30",
+          "as_of_label": "2011年年中",
+          "tick_label": "2011H1",
+          "value": 7071600,
+          "display_value_text": "7,071,600 人",
+          "tooltip_title": "2011年年中",
+          "tooltip_value_text": "7,071,600 人"
+        },
+        {
+          "as_of_date": "2011-12-31",
+          "as_of_label": "2011年年底",
+          "tick_label": "2011H2",
+          "value": 7109500,
+          "display_value_text": "7,109,500 人",
+          "tooltip_title": "2011年年底",
+          "tooltip_value_text": "7,109,500 人"
+        },
+        {
+          "as_of_date": "2012-06-30",
+          "as_of_label": "2012年年中",
+          "tick_label": "2012H1",
+          "value": 7150100,
+          "display_value_text": "7,150,100 人",
+          "tooltip_title": "2012年年中",
+          "tooltip_value_text": "7,150,100 人"
+        },
+        {
+          "as_of_date": "2012-12-31",
+          "as_of_label": "2012年年底",
+          "tick_label": "2012H2",
+          "value": 7171000,
+          "display_value_text": "7,171,000 人",
+          "tooltip_title": "2012年年底",
+          "tooltip_value_text": "7,171,000 人"
+        },
+        {
+          "as_of_date": "2013-06-30",
+          "as_of_label": "2013年年中",
+          "tick_label": "2013H1",
+          "value": 7178900,
+          "display_value_text": "7,178,900 人",
+          "tooltip_title": "2013年年中",
+          "tooltip_value_text": "7,178,900 人"
+        },
+        {
+          "as_of_date": "2013-12-31",
+          "as_of_label": "2013年年底",
+          "tick_label": "2013H2",
+          "value": 7210900,
+          "display_value_text": "7,210,900 人",
+          "tooltip_title": "2013年年底",
+          "tooltip_value_text": "7,210,900 人"
+        },
+        {
+          "as_of_date": "2014-06-30",
+          "as_of_label": "2014年年中",
+          "tick_label": "2014H1",
+          "value": 7229500,
+          "display_value_text": "7,229,500 人",
+          "tooltip_title": "2014年年中",
+          "tooltip_value_text": "7,229,500 人"
+        },
+        {
+          "as_of_date": "2014-12-31",
+          "as_of_label": "2014年年底",
+          "tick_label": "2014H2",
+          "value": 7252900,
+          "display_value_text": "7,252,900 人",
+          "tooltip_title": "2014年年底",
+          "tooltip_value_text": "7,252,900 人"
+        },
+        {
+          "as_of_date": "2015-06-30",
+          "as_of_label": "2015年年中",
+          "tick_label": "2015H1",
+          "value": 7291300,
+          "display_value_text": "7,291,300 人",
+          "tooltip_title": "2015年年中",
+          "tooltip_value_text": "7,291,300 人"
+        },
+        {
+          "as_of_date": "2015-12-31",
+          "as_of_label": "2015年年底",
+          "tick_label": "2015H2",
+          "value": 7309700,
+          "display_value_text": "7,309,700 人",
+          "tooltip_title": "2015年年底",
+          "tooltip_value_text": "7,309,700 人"
+        },
+        {
+          "as_of_date": "2016-06-30",
+          "as_of_label": "2016年年中",
+          "tick_label": "2016H1",
+          "value": 7336600,
+          "display_value_text": "7,336,600 人",
+          "tooltip_title": "2016年年中",
+          "tooltip_value_text": "7,336,600 人"
+        },
+        {
+          "as_of_date": "2016-12-31",
+          "as_of_label": "2016年年底",
+          "tick_label": "2016H2",
+          "value": 7378100,
+          "display_value_text": "7,378,100 人",
+          "tooltip_title": "2016年年底",
+          "tooltip_value_text": "7,378,100 人"
+        },
+        {
+          "as_of_date": "2017-06-30",
+          "as_of_label": "2017年年中",
+          "tick_label": "2017H1",
+          "value": 7393200,
+          "display_value_text": "7,393,200 人",
+          "tooltip_title": "2017年年中",
+          "tooltip_value_text": "7,393,200 人"
+        },
+        {
+          "as_of_date": "2017-12-31",
+          "as_of_label": "2017年年底",
+          "tick_label": "2017H2",
+          "value": 7414800,
+          "display_value_text": "7,414,800 人",
+          "tooltip_title": "2017年年底",
+          "tooltip_value_text": "7,414,800 人"
+        },
+        {
+          "as_of_date": "2018-06-30",
+          "as_of_label": "2018年年中",
+          "tick_label": "2018H1",
+          "value": 7452600,
+          "display_value_text": "7,452,600 人",
+          "tooltip_title": "2018年年中",
+          "tooltip_value_text": "7,452,600 人"
+        },
+        {
+          "as_of_date": "2018-12-31",
+          "as_of_label": "2018年年底",
+          "tick_label": "2018H2",
+          "value": 7487700,
+          "display_value_text": "7,487,700 人",
+          "tooltip_title": "2018年年底",
+          "tooltip_value_text": "7,487,700 人"
+        },
+        {
+          "as_of_date": "2019-06-30",
+          "as_of_label": "2019年年中",
+          "tick_label": "2019H1",
+          "value": 7507900,
+          "display_value_text": "7,507,900 人",
+          "tooltip_title": "2019年年中",
+          "tooltip_value_text": "7,507,900 人"
+        },
+        {
+          "as_of_date": "2019-12-31",
+          "as_of_label": "2019年年底",
+          "tick_label": "2019H2",
+          "value": 7520500,
+          "display_value_text": "7,520,500 人",
+          "tooltip_title": "2019年年底",
+          "tooltip_value_text": "7,520,500 人"
+        },
         {
           "as_of_date": "2020-06-30",
           "as_of_label": "2020年年中",
@@ -174,10 +1240,19 @@
           "as_of_date": "2025-12-31",
           "as_of_label": "2025年年底",
           "tick_label": "2025H2",
-          "value": 7510800,
-          "display_value_text": "7,510,800 人",
+          "value": 7508700,
+          "display_value_text": "7,508,700 人",
           "tooltip_title": "2025年年底",
-          "tooltip_value_text": "7,510,800 人"
+          "tooltip_value_text": "7,508,700 人"
+        },
+        {
+          "as_of_date": "2026-06-30",
+          "as_of_label": "2026年年中",
+          "tick_label": "2026H1",
+          "value": 7518300,
+          "display_value_text": "7,518,300 人",
+          "tooltip_title": "2026年年中",
+          "tooltip_value_text": "7,518,300 人"
         }
       ],
       "sparkline_definition": {
@@ -188,6 +1263,596 @@
         "frequency": "half_yearly"
       },
       "sparkline_points": [
+        {
+          "as_of_date": "1961-06-30",
+          "as_of_label": "1961年年中",
+          "value": 3168100
+        },
+        {
+          "as_of_date": "1961-12-31",
+          "as_of_label": "1961年年底",
+          "value": 3195300
+        },
+        {
+          "as_of_date": "1962-06-30",
+          "as_of_label": "1962年年中",
+          "value": 3305200
+        },
+        {
+          "as_of_date": "1962-12-31",
+          "as_of_label": "1962年年底",
+          "value": 3368200
+        },
+        {
+          "as_of_date": "1963-06-30",
+          "as_of_label": "1963年年中",
+          "value": 3420900
+        },
+        {
+          "as_of_date": "1963-12-31",
+          "as_of_label": "1963年年底",
+          "value": 3461800
+        },
+        {
+          "as_of_date": "1964-06-30",
+          "as_of_label": "1964年年中",
+          "value": 3504600
+        },
+        {
+          "as_of_date": "1964-12-31",
+          "as_of_label": "1964年年底",
+          "value": 3545100
+        },
+        {
+          "as_of_date": "1965-06-30",
+          "as_of_label": "1965年年中",
+          "value": 3597900
+        },
+        {
+          "as_of_date": "1965-12-31",
+          "as_of_label": "1965年年底",
+          "value": 3625400
+        },
+        {
+          "as_of_date": "1966-06-30",
+          "as_of_label": "1966年年中",
+          "value": 3629900
+        },
+        {
+          "as_of_date": "1966-12-31",
+          "as_of_label": "1966年年底",
+          "value": 3679400
+        },
+        {
+          "as_of_date": "1967-06-30",
+          "as_of_label": "1967年年中",
+          "value": 3722800
+        },
+        {
+          "as_of_date": "1967-12-31",
+          "as_of_label": "1967年年底",
+          "value": 3760600
+        },
+        {
+          "as_of_date": "1968-06-30",
+          "as_of_label": "1968年年中",
+          "value": 3802700
+        },
+        {
+          "as_of_date": "1968-12-31",
+          "as_of_label": "1968年年底",
+          "value": 3844500
+        },
+        {
+          "as_of_date": "1969-06-30",
+          "as_of_label": "1969年年中",
+          "value": 3863900
+        },
+        {
+          "as_of_date": "1969-12-31",
+          "as_of_label": "1969年年底",
+          "value": 3906100
+        },
+        {
+          "as_of_date": "1970-06-30",
+          "as_of_label": "1970年年中",
+          "value": 3959000
+        },
+        {
+          "as_of_date": "1970-12-31",
+          "as_of_label": "1970年年底",
+          "value": 3995400
+        },
+        {
+          "as_of_date": "1971-06-30",
+          "as_of_label": "1971年年中",
+          "value": 4045300
+        },
+        {
+          "as_of_date": "1971-12-31",
+          "as_of_label": "1971年年底",
+          "value": 4095500
+        },
+        {
+          "as_of_date": "1972-06-30",
+          "as_of_label": "1972年年中",
+          "value": 4123600.0000000005
+        },
+        {
+          "as_of_date": "1972-12-31",
+          "as_of_label": "1972年年底",
+          "value": 4184300
+        },
+        {
+          "as_of_date": "1973-06-30",
+          "as_of_label": "1973年年中",
+          "value": 4241600
+        },
+        {
+          "as_of_date": "1973-12-31",
+          "as_of_label": "1973年年底",
+          "value": 4334200
+        },
+        {
+          "as_of_date": "1974-06-30",
+          "as_of_label": "1974年年中",
+          "value": 4377800
+        },
+        {
+          "as_of_date": "1974-12-31",
+          "as_of_label": "1974年年底",
+          "value": 4438600
+        },
+        {
+          "as_of_date": "1975-06-30",
+          "as_of_label": "1975年年中",
+          "value": 4461600
+        },
+        {
+          "as_of_date": "1975-12-31",
+          "as_of_label": "1975年年底",
+          "value": 4500800
+        },
+        {
+          "as_of_date": "1976-06-30",
+          "as_of_label": "1976年年中",
+          "value": 4518000
+        },
+        {
+          "as_of_date": "1976-12-31",
+          "as_of_label": "1976年年底",
+          "value": 4551000
+        },
+        {
+          "as_of_date": "1977-06-30",
+          "as_of_label": "1977年年中",
+          "value": 4583700
+        },
+        {
+          "as_of_date": "1977-12-31",
+          "as_of_label": "1977年年底",
+          "value": 4631500
+        },
+        {
+          "as_of_date": "1978-06-30",
+          "as_of_label": "1978年年中",
+          "value": 4667500
+        },
+        {
+          "as_of_date": "1978-12-31",
+          "as_of_label": "1978年年底",
+          "value": 4769900
+        },
+        {
+          "as_of_date": "1979-06-30",
+          "as_of_label": "1979年年中",
+          "value": 4929700
+        },
+        {
+          "as_of_date": "1979-12-31",
+          "as_of_label": "1979年年底",
+          "value": 5024700
+        },
+        {
+          "as_of_date": "1980-06-30",
+          "as_of_label": "1980年年中",
+          "value": 5063100
+        },
+        {
+          "as_of_date": "1980-12-31",
+          "as_of_label": "1980年年底",
+          "value": 5145100
+        },
+        {
+          "as_of_date": "1981-06-30",
+          "as_of_label": "1981年年中",
+          "value": 5183400
+        },
+        {
+          "as_of_date": "1981-12-31",
+          "as_of_label": "1981年年底",
+          "value": 5238500
+        },
+        {
+          "as_of_date": "1982-06-30",
+          "as_of_label": "1982年年中",
+          "value": 5264500
+        },
+        {
+          "as_of_date": "1982-12-31",
+          "as_of_label": "1982年年底",
+          "value": 5319500
+        },
+        {
+          "as_of_date": "1983-06-30",
+          "as_of_label": "1983年年中",
+          "value": 5345100
+        },
+        {
+          "as_of_date": "1983-12-31",
+          "as_of_label": "1983年年底",
+          "value": 5377400
+        },
+        {
+          "as_of_date": "1984-06-30",
+          "as_of_label": "1984年年中",
+          "value": 5397900
+        },
+        {
+          "as_of_date": "1984-12-31",
+          "as_of_label": "1984年年底",
+          "value": 5430900
+        },
+        {
+          "as_of_date": "1985-06-30",
+          "as_of_label": "1985年年中",
+          "value": 5456200
+        },
+        {
+          "as_of_date": "1985-12-31",
+          "as_of_label": "1985年年底",
+          "value": 5500400
+        },
+        {
+          "as_of_date": "1986-06-30",
+          "as_of_label": "1986年年中",
+          "value": 5524600
+        },
+        {
+          "as_of_date": "1986-12-31",
+          "as_of_label": "1986年年底",
+          "value": 5565700
+        },
+        {
+          "as_of_date": "1987-06-30",
+          "as_of_label": "1987年年中",
+          "value": 5580500
+        },
+        {
+          "as_of_date": "1987-12-31",
+          "as_of_label": "1987年年底",
+          "value": 5615300
+        },
+        {
+          "as_of_date": "1988-06-30",
+          "as_of_label": "1988年年中",
+          "value": 5627600
+        },
+        {
+          "as_of_date": "1988-12-31",
+          "as_of_label": "1988年年底",
+          "value": 5671600
+        },
+        {
+          "as_of_date": "1989-06-30",
+          "as_of_label": "1989年年中",
+          "value": 5686200
+        },
+        {
+          "as_of_date": "1989-12-31",
+          "as_of_label": "1989年年底",
+          "value": 5726500
+        },
+        {
+          "as_of_date": "1990-06-30",
+          "as_of_label": "1990年年中",
+          "value": 5704500
+        },
+        {
+          "as_of_date": "1990-12-31",
+          "as_of_label": "1990年年底",
+          "value": 5752000
+        },
+        {
+          "as_of_date": "1991-06-30",
+          "as_of_label": "1991年年中",
+          "value": 5752000
+        },
+        {
+          "as_of_date": "1991-12-31",
+          "as_of_label": "1991年年底",
+          "value": 5815300
+        },
+        {
+          "as_of_date": "1992-06-30",
+          "as_of_label": "1992年年中",
+          "value": 5800500
+        },
+        {
+          "as_of_date": "1992-12-31",
+          "as_of_label": "1992年年底",
+          "value": 5887600
+        },
+        {
+          "as_of_date": "1993-06-30",
+          "as_of_label": "1993年年中",
+          "value": 5901000
+        },
+        {
+          "as_of_date": "1993-12-31",
+          "as_of_label": "1993年年底",
+          "value": 5998000
+        },
+        {
+          "as_of_date": "1994-06-30",
+          "as_of_label": "1994年年中",
+          "value": 6035400
+        },
+        {
+          "as_of_date": "1994-12-31",
+          "as_of_label": "1994年年底",
+          "value": 6119300
+        },
+        {
+          "as_of_date": "1995-06-30",
+          "as_of_label": "1995年年中",
+          "value": 6156100
+        },
+        {
+          "as_of_date": "1995-12-31",
+          "as_of_label": "1995年年底",
+          "value": 6270000
+        },
+        {
+          "as_of_date": "1996-06-30",
+          "as_of_label": "1996年年中",
+          "value": 6435500
+        },
+        {
+          "as_of_date": "1996-12-31",
+          "as_of_label": "1996年年底",
+          "value": 6466600
+        },
+        {
+          "as_of_date": "1997-06-30",
+          "as_of_label": "1997年年中",
+          "value": 6489300
+        },
+        {
+          "as_of_date": "1997-12-31",
+          "as_of_label": "1997年年底",
+          "value": 6516700
+        },
+        {
+          "as_of_date": "1998-06-30",
+          "as_of_label": "1998年年中",
+          "value": 6543700
+        },
+        {
+          "as_of_date": "1998-12-31",
+          "as_of_label": "1998年年底",
+          "value": 6583400
+        },
+        {
+          "as_of_date": "1999-06-30",
+          "as_of_label": "1999年年中",
+          "value": 6606500
+        },
+        {
+          "as_of_date": "1999-12-31",
+          "as_of_label": "1999年年底",
+          "value": 6637600
+        },
+        {
+          "as_of_date": "2000-06-30",
+          "as_of_label": "2000年年中",
+          "value": 6665000
+        },
+        {
+          "as_of_date": "2000-12-31",
+          "as_of_label": "2000年年底",
+          "value": 6711500
+        },
+        {
+          "as_of_date": "2001-06-30",
+          "as_of_label": "2001年年中",
+          "value": 6714300
+        },
+        {
+          "as_of_date": "2001-12-31",
+          "as_of_label": "2001年年底",
+          "value": 6730300
+        },
+        {
+          "as_of_date": "2002-06-30",
+          "as_of_label": "2002年年中",
+          "value": 6744100
+        },
+        {
+          "as_of_date": "2002-12-31",
+          "as_of_label": "2002年年底",
+          "value": 6725800
+        },
+        {
+          "as_of_date": "2003-06-30",
+          "as_of_label": "2003年年中",
+          "value": 6730800
+        },
+        {
+          "as_of_date": "2003-12-31",
+          "as_of_label": "2003年年底",
+          "value": 6764200
+        },
+        {
+          "as_of_date": "2004-06-30",
+          "as_of_label": "2004年年中",
+          "value": 6783500
+        },
+        {
+          "as_of_date": "2004-12-31",
+          "as_of_label": "2004年年底",
+          "value": 6797700
+        },
+        {
+          "as_of_date": "2005-06-30",
+          "as_of_label": "2005年年中",
+          "value": 6813200
+        },
+        {
+          "as_of_date": "2005-12-31",
+          "as_of_label": "2005年年底",
+          "value": 6837800
+        },
+        {
+          "as_of_date": "2006-06-30",
+          "as_of_label": "2006年年中",
+          "value": 6857100
+        },
+        {
+          "as_of_date": "2006-12-31",
+          "as_of_label": "2006年年底",
+          "value": 6904300
+        },
+        {
+          "as_of_date": "2007-06-30",
+          "as_of_label": "2007年年中",
+          "value": 6916300
+        },
+        {
+          "as_of_date": "2007-12-31",
+          "as_of_label": "2007年年底",
+          "value": 6938400
+        },
+        {
+          "as_of_date": "2008-06-30",
+          "as_of_label": "2008年年中",
+          "value": 6957800
+        },
+        {
+          "as_of_date": "2008-12-31",
+          "as_of_label": "2008年年底",
+          "value": 6963900
+        },
+        {
+          "as_of_date": "2009-06-30",
+          "as_of_label": "2009年年中",
+          "value": 6972800
+        },
+        {
+          "as_of_date": "2009-12-31",
+          "as_of_label": "2009年年底",
+          "value": 6996400
+        },
+        {
+          "as_of_date": "2010-06-30",
+          "as_of_label": "2010年年中",
+          "value": 7024200
+        },
+        {
+          "as_of_date": "2010-12-31",
+          "as_of_label": "2010年年底",
+          "value": 7052100
+        },
+        {
+          "as_of_date": "2011-06-30",
+          "as_of_label": "2011年年中",
+          "value": 7071600
+        },
+        {
+          "as_of_date": "2011-12-31",
+          "as_of_label": "2011年年底",
+          "value": 7109500
+        },
+        {
+          "as_of_date": "2012-06-30",
+          "as_of_label": "2012年年中",
+          "value": 7150100
+        },
+        {
+          "as_of_date": "2012-12-31",
+          "as_of_label": "2012年年底",
+          "value": 7171000
+        },
+        {
+          "as_of_date": "2013-06-30",
+          "as_of_label": "2013年年中",
+          "value": 7178900
+        },
+        {
+          "as_of_date": "2013-12-31",
+          "as_of_label": "2013年年底",
+          "value": 7210900
+        },
+        {
+          "as_of_date": "2014-06-30",
+          "as_of_label": "2014年年中",
+          "value": 7229500
+        },
+        {
+          "as_of_date": "2014-12-31",
+          "as_of_label": "2014年年底",
+          "value": 7252900
+        },
+        {
+          "as_of_date": "2015-06-30",
+          "as_of_label": "2015年年中",
+          "value": 7291300
+        },
+        {
+          "as_of_date": "2015-12-31",
+          "as_of_label": "2015年年底",
+          "value": 7309700
+        },
+        {
+          "as_of_date": "2016-06-30",
+          "as_of_label": "2016年年中",
+          "value": 7336600
+        },
+        {
+          "as_of_date": "2016-12-31",
+          "as_of_label": "2016年年底",
+          "value": 7378100
+        },
+        {
+          "as_of_date": "2017-06-30",
+          "as_of_label": "2017年年中",
+          "value": 7393200
+        },
+        {
+          "as_of_date": "2017-12-31",
+          "as_of_label": "2017年年底",
+          "value": 7414800
+        },
+        {
+          "as_of_date": "2018-06-30",
+          "as_of_label": "2018年年中",
+          "value": 7452600
+        },
+        {
+          "as_of_date": "2018-12-31",
+          "as_of_label": "2018年年底",
+          "value": 7487700
+        },
+        {
+          "as_of_date": "2019-06-30",
+          "as_of_label": "2019年年中",
+          "value": 7507900
+        },
+        {
+          "as_of_date": "2019-12-31",
+          "as_of_label": "2019年年底",
+          "value": 7520500
+        },
         {
           "as_of_date": "2020-06-30",
           "as_of_label": "2020年年中",
@@ -246,13 +1911,23 @@
         {
           "as_of_date": "2025-12-31",
           "as_of_label": "2025年年底",
-          "value": 7510800
+          "value": 7508700
+        },
+        {
+          "as_of_date": "2026-06-30",
+          "as_of_label": "2026年年中",
+          "value": 7518300
         }
       ],
-      "validation_state": "ok",
-      "validation_messages": [],
-      "expected_update": "半年",
-      "last_successful_fetch_at": "2026-03-18T11:39:06.754Z"
+      "validation_state": "source_error",
+      "validation_messages": [
+        {
+          "code": "source_missing",
+          "level": "error",
+          "message_tc": "The operation was aborted due to timeout"
+        }
+      ],
+      "expected_update": "半年"
     },
     {
       "id": "live_births",
@@ -282,19 +1957,19 @@
         "change_decimals": 0,
         "previous_decimals": 0
       },
-      "as_of_date": "2024-12-31",
-      "as_of_label": "2024年",
-      "latest_value": 36767,
-      "previous_value": 33288,
-      "previous_as_of_date": "2023-12-31",
-      "previous_as_of_label": "2023年",
-      "change_value": 3479,
-      "raw_change_value": 3479,
+      "as_of_date": "2025-12-31",
+      "as_of_label": "2025年",
+      "latest_value": 31714,
+      "previous_value": 36767,
+      "previous_as_of_date": "2024-12-31",
+      "previous_as_of_label": "2024年",
+      "change_value": -5053,
+      "raw_change_value": -5053,
       "change_type": "absolute_change",
       "comparison_type": "previous_observation",
       "comparison_basis": "previous_observation",
       "comparison_basis_label_tc": "較上期",
-      "comparison_period_label": "2023年",
+      "comparison_period_label": "2024年",
       "data_origin": "live",
       "chart_series": "immd|births_registration|total",
       "chart_metric_type": "level",
@@ -310,46 +1985,63 @@
           "raw_unit": "人",
           "display_unit": "人"
         },
-        "period_start": "2021-12-31",
-        "period_end": "2024-12-31",
+        "period_start": "2016-12-31",
+        "period_end": "2025-12-31",
         "x_axis_label": "年份",
         "y_axis_label": "出生數 (人)",
         "value_label": "出生數",
         "time_label": "年份",
         "suggested_ticks": [
-          "2021",
+          "2019",
           "2022",
-          "2023",
-          "2024"
+          "2025"
         ]
       },
       "chart_points": [
         {
+          "as_of_date": "2019-12-31",
+          "as_of_label": "2019年",
+          "tick_label": "2019",
+          "value": 53173,
+          "display_value_text": "53,173 人",
+          "tooltip_title": "2019年",
+          "tooltip_value_text": "53,173 人"
+        },
+        {
+          "as_of_date": "2020-12-31",
+          "as_of_label": "2020年",
+          "tick_label": "2020",
+          "value": 41958,
+          "display_value_text": "41,958 人",
+          "tooltip_title": "2020年",
+          "tooltip_value_text": "41,958 人"
+        },
+        {
           "as_of_date": "2021-12-31",
           "as_of_label": "2021年",
           "tick_label": "2021",
-          "value": 38684,
-          "display_value_text": "38,684 人",
+          "value": 38687,
+          "display_value_text": "38,687 人",
           "tooltip_title": "2021年",
-          "tooltip_value_text": "38,684 人"
+          "tooltip_value_text": "38,687 人"
         },
         {
           "as_of_date": "2022-12-31",
           "as_of_label": "2022年",
           "tick_label": "2022",
-          "value": 32950,
-          "display_value_text": "32,950 人",
+          "value": 32952,
+          "display_value_text": "32,952 人",
           "tooltip_title": "2022年",
-          "tooltip_value_text": "32,950 人"
+          "tooltip_value_text": "32,952 人"
         },
         {
           "as_of_date": "2023-12-31",
           "as_of_label": "2023年",
           "tick_label": "2023",
-          "value": 33288,
-          "display_value_text": "33,288 人",
+          "value": 33289,
+          "display_value_text": "33,289 人",
           "tooltip_title": "2023年",
-          "tooltip_value_text": "33,288 人"
+          "tooltip_value_text": "33,289 人"
         },
         {
           "as_of_date": "2024-12-31",
@@ -359,6 +2051,15 @@
           "display_value_text": "36,767 人",
           "tooltip_title": "2024年",
           "tooltip_value_text": "36,767 人"
+        },
+        {
+          "as_of_date": "2025-12-31",
+          "as_of_label": "2025年",
+          "tick_label": "2025",
+          "value": 31714,
+          "display_value_text": "31,714 人",
+          "tooltip_title": "2025年",
+          "tooltip_value_text": "31,714 人"
         }
       ],
       "sparkline_definition": {
@@ -370,30 +2071,45 @@
       },
       "sparkline_points": [
         {
+          "as_of_date": "2019-12-31",
+          "as_of_label": "2019年",
+          "value": 53173
+        },
+        {
+          "as_of_date": "2020-12-31",
+          "as_of_label": "2020年",
+          "value": 41958
+        },
+        {
           "as_of_date": "2021-12-31",
           "as_of_label": "2021年",
-          "value": 38684
+          "value": 38687
         },
         {
           "as_of_date": "2022-12-31",
           "as_of_label": "2022年",
-          "value": 32950
+          "value": 32952
         },
         {
           "as_of_date": "2023-12-31",
           "as_of_label": "2023年",
-          "value": 33288
+          "value": 33289
         },
         {
           "as_of_date": "2024-12-31",
           "as_of_label": "2024年",
           "value": 36767
+        },
+        {
+          "as_of_date": "2025-12-31",
+          "as_of_label": "2025年",
+          "value": 31714
         }
       ],
       "validation_state": "ok",
       "validation_messages": [],
       "expected_update": "每年",
-      "last_successful_fetch_at": "2026-03-18T11:39:06.754Z"
+      "last_successful_fetch_at": "2026-11-05T17:09:20.634Z"
     },
     {
       "id": "median_age",
@@ -421,19 +2137,19 @@
         "change_decimals": 1,
         "previous_decimals": 1
       },
-      "as_of_date": "2025-12-31",
-      "as_of_label": "2025年",
-      "latest_value": 48.4,
-      "previous_value": 47.9,
-      "previous_as_of_date": "2024-12-31",
-      "previous_as_of_label": "2024年",
-      "change_value": 0.5,
-      "raw_change_value": 0.5,
+      "as_of_date": "2026-12-31",
+      "as_of_label": "2026年",
+      "latest_value": 48.8,
+      "previous_value": 48.4,
+      "previous_as_of_date": "2025-12-31",
+      "previous_as_of_label": "2025年",
+      "change_value": 0.4,
+      "raw_change_value": 0.4,
       "change_type": "absolute_change",
       "comparison_type": "previous_observation",
       "comparison_basis": "previous_observation",
       "comparison_basis_label_tc": "較上期",
-      "comparison_period_label": "2024年",
+      "comparison_period_label": "2025年",
       "data_origin": "live",
       "chart_series": "censtatd|110-01004|SEX=|freq=Y|measure=MED_AGE_POPN|label=(歲)",
       "chart_metric_type": "level",
@@ -450,72 +2166,18 @@
           "display_unit": "歲"
         },
         "period_start": "1961-12-31",
-        "period_end": "2025-12-31",
+        "period_end": "2026-12-31",
         "x_axis_label": "年份",
         "y_axis_label": "年齡中位數 (歲)",
         "value_label": "年齡中位數",
         "time_label": "年份",
         "suggested_ticks": [
-          "2014",
           "2020",
-          "2025"
+          "2023",
+          "2026"
         ]
       },
       "chart_points": [
-        {
-          "as_of_date": "2014-12-31",
-          "as_of_label": "2014年",
-          "tick_label": "2014",
-          "value": 42.8,
-          "display_value_text": "42.8 歲",
-          "tooltip_title": "2014年",
-          "tooltip_value_text": "42.8 歲"
-        },
-        {
-          "as_of_date": "2015-12-31",
-          "as_of_label": "2015年",
-          "tick_label": "2015",
-          "value": 43.1,
-          "display_value_text": "43.1 歲",
-          "tooltip_title": "2015年",
-          "tooltip_value_text": "43.1 歲"
-        },
-        {
-          "as_of_date": "2016-12-31",
-          "as_of_label": "2016年",
-          "tick_label": "2016",
-          "value": 43.4,
-          "display_value_text": "43.4 歲",
-          "tooltip_title": "2016年",
-          "tooltip_value_text": "43.4 歲"
-        },
-        {
-          "as_of_date": "2017-12-31",
-          "as_of_label": "2017年",
-          "tick_label": "2017",
-          "value": 44,
-          "display_value_text": "44.0 歲",
-          "tooltip_title": "2017年",
-          "tooltip_value_text": "44.0 歲"
-        },
-        {
-          "as_of_date": "2018-12-31",
-          "as_of_label": "2018年",
-          "tick_label": "2018",
-          "value": 44.4,
-          "display_value_text": "44.4 歲",
-          "tooltip_title": "2018年",
-          "tooltip_value_text": "44.4 歲"
-        },
-        {
-          "as_of_date": "2019-12-31",
-          "as_of_label": "2019年",
-          "tick_label": "2019",
-          "value": 44.9,
-          "display_value_text": "44.9 歲",
-          "tooltip_title": "2019年",
-          "tooltip_value_text": "44.9 歲"
-        },
         {
           "as_of_date": "2020-12-31",
           "as_of_label": "2020年",
@@ -569,6 +2231,15 @@
           "display_value_text": "48.4 歲",
           "tooltip_title": "2025年",
           "tooltip_value_text": "48.4 歲"
+        },
+        {
+          "as_of_date": "2026-12-31",
+          "as_of_label": "2026年",
+          "tick_label": "2026",
+          "value": 48.8,
+          "display_value_text": "48.8 歲",
+          "tooltip_title": "2026年",
+          "tooltip_value_text": "48.8 歲"
         }
       ],
       "sparkline_definition": {
@@ -579,36 +2250,6 @@
         "frequency": "annual"
       },
       "sparkline_points": [
-        {
-          "as_of_date": "2014-12-31",
-          "as_of_label": "2014年",
-          "value": 42.8
-        },
-        {
-          "as_of_date": "2015-12-31",
-          "as_of_label": "2015年",
-          "value": 43.1
-        },
-        {
-          "as_of_date": "2016-12-31",
-          "as_of_label": "2016年",
-          "value": 43.4
-        },
-        {
-          "as_of_date": "2017-12-31",
-          "as_of_label": "2017年",
-          "value": 44
-        },
-        {
-          "as_of_date": "2018-12-31",
-          "as_of_label": "2018年",
-          "value": 44.4
-        },
-        {
-          "as_of_date": "2019-12-31",
-          "as_of_label": "2019年",
-          "value": 44.9
-        },
         {
           "as_of_date": "2020-12-31",
           "as_of_label": "2020年",
@@ -638,12 +2279,17 @@
           "as_of_date": "2025-12-31",
           "as_of_label": "2025年",
           "value": 48.4
+        },
+        {
+          "as_of_date": "2026-12-31",
+          "as_of_label": "2026年",
+          "value": 48.8
         }
       ],
       "validation_state": "ok",
       "validation_messages": [],
       "expected_update": "每年",
-      "last_successful_fetch_at": "2026-03-18T11:39:06.754Z"
+      "last_successful_fetch_at": "2026-11-05T17:09:20.634Z"
     }
   ]
 }

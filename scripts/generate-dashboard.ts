@@ -3,7 +3,7 @@ import path from "node:path";
 import { fetchBopCurrentAccountObservations } from "./fetch/bopReport";
 import { fetchCenstatdObservations } from "./fetch/censtatd";
 import { fetchCsvObservations } from "./fetch/csvSource";
-import { fetchBirthsRegistrationObservations, readBirthsRegistrationSnapshot } from "./fetch/birthsRegistration";
+import { fetchBirthsRegistrationObservations } from "./fetch/birthsRegistration";
 import { fetchBaseRateObservations, fetchHibor1MObservations, fetchM3Observations } from "./fetch/hkma";
 import { fetchMinimumWageObservations } from "./fetch/labour";
 import { fetchRvdIndexObservations } from "./fetch/rvdIndex";
@@ -45,9 +45,16 @@ export async function generateDashboardArtifacts() {
   await mkdir(reportsDir, { recursive: true });
   await mkdir(rawDir, { recursive: true });
 
-  const metricResults = await Promise.all(
-    metricDefinitions.map((definition) => resolveMetric(definition, previousMetrics[definition.metric.id], generatedAt, referenceDate))
-  );
+  // Bound concurrent source requests to avoid overloading official endpoints.
+  const metricResults: Awaited<ReturnType<typeof resolveMetric>>[] = new Array(metricDefinitions.length);
+  let nextIndex = 0;
+  await Promise.all(Array.from({ length: 4 }, async () => {
+    while (nextIndex < metricDefinitions.length) {
+      const index = nextIndex++;
+      const definition = metricDefinitions[index];
+      metricResults[index] = await resolveMetric(definition, previousMetrics[definition.metric.id], generatedAt, referenceDate);
+    }
+  }));
 
   const cardsV2: DashboardCardV2[] = cardDefinitions.map((card) => {
     const metrics = metricResults
@@ -172,17 +179,7 @@ async function resolveMetric(
   referenceDate: string
 ) {
   try {
-    let primarySeries = definition.metric.id === "live_births"
-      ? readBirthsRegistrationSnapshot(definition.metric.source, definition.metric.series_label_tc)
-      : await loadObservations(definition.metric);
-    if (definition.metric.id === "live_births" && primarySeries.length === 0) {
-      const birthsDefinition = definition.metric as Extract<MetricDefinitionRecord, { loader_kind: "births_registration" }>;
-      primarySeries = await fetchBirthsRegistrationObservations(
-        birthsDefinition.url,
-        birthsDefinition.source,
-        birthsDefinition.series_label_tc
-      );
-    }
+    const primarySeries = await loadObservations(definition.metric);
     const auxiliarySeries = definition.auxiliary_series
       ? (await Promise.all(definition.auxiliary_series.map((item) => loadAuxiliaryObservations(item)))).flat()
       : [];
@@ -216,6 +213,13 @@ async function resolveMetric(
       }),
       last_successful_fetch_at: generatedAt
     };
+
+    if (definition.metric.id === "statutory_minimum_wage_next" && !metric.latest_value) {
+      metric.validation_state = "stale";
+      metric.validation_messages = [];
+      metric.data_origin = "status_only";
+      metric.reason = "官方尚未公布下一次生效的最低工資。";
+    }
 
     return {
       metric,

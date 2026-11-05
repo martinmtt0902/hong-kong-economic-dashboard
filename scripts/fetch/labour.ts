@@ -5,9 +5,14 @@ import type { RawObservation, SourceRef } from "../lib/types";
 
 export async function fetchMinimumWageObservations(source: SourceRef, seriesLabel: string): Promise<RawObservation[]> {
   const html = await fetchText(URLs.smwPage);
+  return parseMinimumWageObservations(html, source, seriesLabel);
+}
+
+export function parseMinimumWageObservations(html: string, source: SourceRef, seriesLabel: string): RawObservation[] {
+  html = html.replace(/<[^>]*>/g, " ").replace(/&nbsp;/g, " ").replace(/\s+/g, " ");
   const prevailing = html.match(
     /prevailing SMW rate is \$\s*(\d+(?:\.\d+)?) per hour effective from (\d{1,2} \w+ \d{4})/i
-  );
+  ) ?? html.match(/SMW rate is raised to \$\s*(\d+(?:\.\d+)?) per hour with effect from (\d{1,2} \w+ \d{4})/i);
   const announced = html.match(
     /raise the SMW rate to \$\s*(\d+(?:\.\d+)?) per hour.*?come into force on (\d{1,2} \w+ \d{4})/is
   );
@@ -39,7 +44,7 @@ export async function fetchMinimumWageObservations(source: SourceRef, seriesLabe
       period_raw: match[2],
       as_of_date: parsed.as_of_date,
       as_of_label: parsed.as_of_label,
-      release_date: index === 1 ? "2025-04-29" : undefined,
+
       effective_date: parsed.as_of_date,
       value: Number(match[1]),
       unit: "港元/小時",

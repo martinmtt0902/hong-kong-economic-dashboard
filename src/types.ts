@@ -26,6 +26,7 @@ export type UISparklinePoint = {
 };
 
 export type UIChartPoint = {
+  date?: string;
   x: string;
   y: number;
   tick_label: string;
@@ -34,6 +35,7 @@ export type UIChartPoint = {
 };
 
 export type UIChart = {
+  frequency?: Frequency;
   chart_type: "line" | "step_after";
   x_axis_label: string;
   y_axis_label: string;

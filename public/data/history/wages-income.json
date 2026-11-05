@@ -10,18 +10,19 @@
       "source_url": "https://data.gov.hk/en-data/dataset/hk-censtatd-tablechart-220-19024",
       "status": "ok",
       "status_text_tc": "最新",
-      "display_value_text": "125.5",
-      "display_change_text": "較去年同期（2024年第3季） +1.7%",
-      "display_previous_text": "去年同期（2024年第3季） 123.4",
-      "display_period_text": "2025年第3季",
-      "display_comparison_text": "較去年同期（2024年第3季） +1.7%",
+      "display_value_text": "128.2",
+      "display_change_text": "較去年同期（2025年第2季） +1.6%",
+      "display_previous_text": "去年同期（2025年第2季） 126.2",
+      "display_period_text": "2026年第2季",
+      "display_comparison_text": "較去年同期（2025年第2季） +1.6%",
       "display_comparison_basis_text": "較去年同期",
-      "display_comparison_period_text": "2024年第3季",
+      "display_comparison_period_text": "2025年第2季",
       "display_unit": "指數",
       "data_origin": "live",
-      "last_successful_fetch_at": "2026-03-18T11:39:06.754Z",
+      "last_successful_fetch_at": "2026-11-05T17:09:20.634Z",
       "chart": {
         "chart_type": "line",
+        "frequency": "quarterly",
         "x_axis_label": "季度",
         "y_axis_label": "從業人士實質平均薪金指數 (指數)",
         "time_label": "季度",
@@ -33,13 +34,102 @@
           "display_unit": "指數"
         },
         "suggested_ticks": [
-          "2022Q4",
-          "2024Q2",
-          "2025Q3"
+          "2020Q1",
+          "2023Q2",
+          "2026Q2"
         ],
         "points": [
           {
+            "x": "2020年第1季",
+            "date": "2020-03-31",
+            "y": 131.9,
+            "tick_label": "2020Q1",
+            "tooltip_title": "2020年第1季",
+            "tooltip_value_text": "131.9 指數"
+          },
+          {
+            "x": "2020年第2季",
+            "date": "2020-06-30",
+            "y": 119.3,
+            "tick_label": "2020Q2",
+            "tooltip_title": "2020年第2季",
+            "tooltip_value_text": "119.3 指數"
+          },
+          {
+            "x": "2020年第3季",
+            "date": "2020-09-30",
+            "y": 122.6,
+            "tick_label": "2020Q3",
+            "tooltip_title": "2020年第3季",
+            "tooltip_value_text": "122.6 指數"
+          },
+          {
+            "x": "2020年第4季",
+            "date": "2020-12-31",
+            "y": 124.5,
+            "tick_label": "2020Q4",
+            "tooltip_title": "2020年第4季",
+            "tooltip_value_text": "124.5 指數"
+          },
+          {
+            "x": "2021年第1季",
+            "date": "2021-03-31",
+            "y": 131.2,
+            "tick_label": "2021Q1",
+            "tooltip_title": "2021年第1季",
+            "tooltip_value_text": "131.2 指數"
+          },
+          {
+            "x": "2021年第2季",
+            "date": "2021-06-30",
+            "y": 119.6,
+            "tick_label": "2021Q2",
+            "tooltip_title": "2021年第2季",
+            "tooltip_value_text": "119.6 指數"
+          },
+          {
+            "x": "2021年第3季",
+            "date": "2021-09-30",
+            "y": 121.2,
+            "tick_label": "2021Q3",
+            "tooltip_title": "2021年第3季",
+            "tooltip_value_text": "121.2 指數"
+          },
+          {
+            "x": "2021年第4季",
+            "date": "2021-12-31",
+            "y": 124,
+            "tick_label": "2021Q4",
+            "tooltip_title": "2021年第4季",
+            "tooltip_value_text": "124.0 指數"
+          },
+          {
+            "x": "2022年第1季",
+            "date": "2022-03-31",
+            "y": 130.2,
+            "tick_label": "2022Q1",
+            "tooltip_title": "2022年第1季",
+            "tooltip_value_text": "130.2 指數"
+          },
+          {
+            "x": "2022年第2季",
+            "date": "2022-06-30",
+            "y": 119.9,
+            "tick_label": "2022Q2",
+            "tooltip_title": "2022年第2季",
+            "tooltip_value_text": "119.9 指數"
+          },
+          {
+            "x": "2022年第3季",
+            "date": "2022-09-30",
+            "y": 120.4,
+            "tick_label": "2022Q3",
+            "tooltip_title": "2022年第3季",
+            "tooltip_value_text": "120.4 指數"
+          },
+          {
             "x": "2022年第4季",
+            "date": "2022-12-31",
             "y": 124.5,
             "tick_label": "2022Q4",
             "tooltip_title": "2022年第4季",
@@ -47,6 +137,7 @@
           },
           {
             "x": "2023年第1季",
+            "date": "2023-03-31",
             "y": 131.6,
             "tick_label": "2023Q1",
             "tooltip_title": "2023年第1季",
@@ -54,6 +145,7 @@
           },
           {
             "x": "2023年第2季",
+            "date": "2023-06-30",
             "y": 121.2,
             "tick_label": "2023Q2",
             "tooltip_title": "2023年第2季",
@@ -61,6 +153,7 @@
           },
           {
             "x": "2023年第3季",
+            "date": "2023-09-30",
             "y": 122.3,
             "tick_label": "2023Q3",
             "tooltip_title": "2023年第3季",
@@ -68,6 +161,7 @@
           },
           {
             "x": "2023年第4季",
+            "date": "2023-12-31",
             "y": 125.7,
             "tick_label": "2023Q4",
             "tooltip_title": "2023年第4季",
@@ -75,6 +169,7 @@
           },
           {
             "x": "2024年第1季",
+            "date": "2024-03-31",
             "y": 134,
             "tick_label": "2024Q1",
             "tooltip_title": "2024年第1季",
@@ -82,6 +177,7 @@
           },
           {
             "x": "2024年第2季",
+            "date": "2024-06-30",
             "y": 123.9,
             "tick_label": "2024Q2",
             "tooltip_title": "2024年第2季",
@@ -89,6 +185,7 @@
           },
           {
             "x": "2024年第3季",
+            "date": "2024-09-30",
             "y": 123.4,
             "tick_label": "2024Q3",
             "tooltip_title": "2024年第3季",
@@ -96,6 +193,7 @@
           },
           {
             "x": "2024年第4季",
+            "date": "2024-12-31",
             "y": 128.3,
             "tick_label": "2024Q4",
             "tooltip_title": "2024年第4季",
@@ -103,6 +201,7 @@
           },
           {
             "x": "2025年第1季",
+            "date": "2025-03-31",
             "y": 136,
             "tick_label": "2025Q1",
             "tooltip_title": "2025年第1季",
@@ -110,6 +209,7 @@
           },
           {
             "x": "2025年第2季",
+            "date": "2025-06-30",
             "y": 126.2,
             "tick_label": "2025Q2",
             "tooltip_title": "2025年第2季",
@@ -117,14 +217,83 @@
           },
           {
             "x": "2025年第3季",
+            "date": "2025-09-30",
             "y": 125.5,
             "tick_label": "2025Q3",
             "tooltip_title": "2025年第3季",
             "tooltip_value_text": "125.5 指數"
+          },
+          {
+            "x": "2025年第4季",
+            "date": "2025-12-31",
+            "y": 130.7,
+            "tick_label": "2025Q4",
+            "tooltip_title": "2025年第4季",
+            "tooltip_value_text": "130.7 指數"
+          },
+          {
+            "x": "2026年第1季",
+            "date": "2026-03-31",
+            "y": 138.6,
+            "tick_label": "2026Q1",
+            "tooltip_title": "2026年第1季",
+            "tooltip_value_text": "138.6 指數"
+          },
+          {
+            "x": "2026年第2季",
+            "date": "2026-06-30",
+            "y": 128.2,
+            "tick_label": "2026Q2",
+            "tooltip_title": "2026年第2季",
+            "tooltip_value_text": "128.2 指數"
           }
         ]
       },
       "sparkline_points": [
+        {
+          "x": "2020年第1季",
+          "y": 131.9
+        },
+        {
+          "x": "2020年第2季",
+          "y": 119.3
+        },
+        {
+          "x": "2020年第3季",
+          "y": 122.6
+        },
+        {
+          "x": "2020年第4季",
+          "y": 124.5
+        },
+        {
+          "x": "2021年第1季",
+          "y": 131.2
+        },
+        {
+          "x": "2021年第2季",
+          "y": 119.6
+        },
+        {
+          "x": "2021年第3季",
+          "y": 121.2
+        },
+        {
+          "x": "2021年第4季",
+          "y": 124
+        },
+        {
+          "x": "2022年第1季",
+          "y": 130.2
+        },
+        {
+          "x": "2022年第2季",
+          "y": 119.9
+        },
+        {
+          "x": "2022年第3季",
+          "y": 120.4
+        },
         {
           "x": "2022年第4季",
           "y": 124.5
@@ -172,6 +341,18 @@
         {
           "x": "2025年第3季",
           "y": 125.5
+        },
+        {
+          "x": "2025年第4季",
+          "y": 130.7
+        },
+        {
+          "x": "2026年第1季",
+          "y": 138.6
+        },
+        {
+          "x": "2026年第2季",
+          "y": 128.2
         }
       ],
       "expected_update": "每季"
@@ -184,18 +365,19 @@
       "source_note": "AEHS 全體僱員總計的每月工資中位數",
       "status": "ok",
       "status_text_tc": "最新",
-      "display_value_text": "20,500元",
-      "display_change_text": "較上期（2023年） +700元",
-      "display_previous_text": "上期（2023年） 19,800元",
-      "display_period_text": "2024年",
-      "display_comparison_text": "較上期（2023年） +700元",
+      "display_value_text": "21,200元",
+      "display_change_text": "較上期（2024年） +700元",
+      "display_previous_text": "上期（2024年） 20,500元",
+      "display_period_text": "2025年",
+      "display_comparison_text": "較上期（2024年） +700元",
       "display_comparison_basis_text": "較上期",
-      "display_comparison_period_text": "2023年",
+      "display_comparison_period_text": "2024年",
       "display_unit": "元",
       "data_origin": "live",
-      "last_successful_fetch_at": "2026-03-18T11:39:06.754Z",
+      "last_successful_fetch_at": "2026-11-05T17:09:20.634Z",
       "chart": {
         "chart_type": "line",
+        "frequency": "annual",
         "x_axis_label": "年份",
         "y_axis_label": "月薪中位數 (元)",
         "time_label": "年份",
@@ -207,55 +389,14 @@
           "display_unit": "元"
         },
         "suggested_ticks": [
-          "2013",
           "2019",
-          "2024"
+          "2022",
+          "2025"
         ],
         "points": [
           {
-            "x": "2013年",
-            "y": 14100,
-            "tick_label": "2013",
-            "tooltip_title": "2013年",
-            "tooltip_value_text": "14,100 元"
-          },
-          {
-            "x": "2014年",
-            "y": 14800,
-            "tick_label": "2014",
-            "tooltip_title": "2014年",
-            "tooltip_value_text": "14,800 元"
-          },
-          {
-            "x": "2015年",
-            "y": 15500,
-            "tick_label": "2015",
-            "tooltip_title": "2015年",
-            "tooltip_value_text": "15,500 元"
-          },
-          {
-            "x": "2016年",
-            "y": 16200,
-            "tick_label": "2016",
-            "tooltip_title": "2016年",
-            "tooltip_value_text": "16,200 元"
-          },
-          {
-            "x": "2017年",
-            "y": 16800,
-            "tick_label": "2017",
-            "tooltip_title": "2017年",
-            "tooltip_value_text": "16,800 元"
-          },
-          {
-            "x": "2018年",
-            "y": 17500,
-            "tick_label": "2018",
-            "tooltip_title": "2018年",
-            "tooltip_value_text": "17,500 元"
-          },
-          {
             "x": "2019年",
+            "date": "2019-12-31",
             "y": 18200,
             "tick_label": "2019",
             "tooltip_title": "2019年",
@@ -263,6 +404,7 @@
           },
           {
             "x": "2020年",
+            "date": "2020-12-31",
             "y": 18400,
             "tick_label": "2020",
             "tooltip_title": "2020年",
@@ -270,6 +412,7 @@
           },
           {
             "x": "2021年",
+            "date": "2021-12-31",
             "y": 18700,
             "tick_label": "2021",
             "tooltip_title": "2021年",
@@ -277,6 +420,7 @@
           },
           {
             "x": "2022年",
+            "date": "2022-12-31",
             "y": 19100,
             "tick_label": "2022",
             "tooltip_title": "2022年",
@@ -284,6 +428,7 @@
           },
           {
             "x": "2023年",
+            "date": "2023-12-31",
             "y": 19800,
             "tick_label": "2023",
             "tooltip_title": "2023年",
@@ -291,38 +436,23 @@
           },
           {
             "x": "2024年",
+            "date": "2024-12-31",
             "y": 20500,
             "tick_label": "2024",
             "tooltip_title": "2024年",
             "tooltip_value_text": "20,500 元"
+          },
+          {
+            "x": "2025年",
+            "date": "2025-12-31",
+            "y": 21200,
+            "tick_label": "2025",
+            "tooltip_title": "2025年",
+            "tooltip_value_text": "21,200 元"
           }
         ]
       },
       "sparkline_points": [
-        {
-          "x": "2013年",
-          "y": 14100
-        },
-        {
-          "x": "2014年",
-          "y": 14800
-        },
-        {
-          "x": "2015年",
-          "y": 15500
-        },
-        {
-          "x": "2016年",
-          "y": 16200
-        },
-        {
-          "x": "2017年",
-          "y": 16800
-        },
-        {
-          "x": "2018年",
-          "y": 17500
-        },
         {
           "x": "2019年",
           "y": 18200
@@ -346,6 +476,10 @@
         {
           "x": "2024年",
           "y": 20500
+        },
+        {
+          "x": "2025年",
+          "y": 21200
         }
       ],
       "expected_update": "每年"
@@ -358,18 +492,19 @@
       "source_note": "AEHS 全體僱員總計的每小時工資中位數",
       "status": "ok",
       "status_text_tc": "最新",
-      "display_value_text": "82.9元/小時",
-      "display_change_text": "較上期（2023年） +2.8元/小時",
-      "display_previous_text": "上期（2023年） 80.1元/小時",
-      "display_period_text": "2024年",
-      "display_comparison_text": "較上期（2023年） +2.8元/小時",
+      "display_value_text": "85.7元/小時",
+      "display_change_text": "較上期（2024年） +2.8元/小時",
+      "display_previous_text": "上期（2024年） 82.9元/小時",
+      "display_period_text": "2025年",
+      "display_comparison_text": "較上期（2024年） +2.8元/小時",
       "display_comparison_basis_text": "較上期",
-      "display_comparison_period_text": "2023年",
+      "display_comparison_period_text": "2024年",
       "display_unit": "元/小時",
       "data_origin": "live",
-      "last_successful_fetch_at": "2026-03-18T11:39:06.754Z",
+      "last_successful_fetch_at": "2026-11-05T17:09:20.634Z",
       "chart": {
         "chart_type": "line",
+        "frequency": "annual",
         "x_axis_label": "年份",
         "y_axis_label": "時薪中位數 (元/小時)",
         "time_label": "年份",
@@ -381,34 +516,14 @@
           "display_unit": "元/小時"
         },
         "suggested_ticks": [
-          "2016",
-          "2020",
-          "2024"
+          "2019",
+          "2022",
+          "2025"
         ],
         "points": [
           {
-            "x": "2016年",
-            "y": 65.4,
-            "tick_label": "2016",
-            "tooltip_title": "2016年",
-            "tooltip_value_text": "65.4 元/小時"
-          },
-          {
-            "x": "2017年",
-            "y": 68,
-            "tick_label": "2017",
-            "tooltip_title": "2017年",
-            "tooltip_value_text": "68.0 元/小時"
-          },
-          {
-            "x": "2018年",
-            "y": 70.5,
-            "tick_label": "2018",
-            "tooltip_title": "2018年",
-            "tooltip_value_text": "70.5 元/小時"
-          },
-          {
             "x": "2019年",
+            "date": "2019-12-31",
             "y": 73,
             "tick_label": "2019",
             "tooltip_title": "2019年",
@@ -416,6 +531,7 @@
           },
           {
             "x": "2020年",
+            "date": "2020-12-31",
             "y": 74.4,
             "tick_label": "2020",
             "tooltip_title": "2020年",
@@ -423,6 +539,7 @@
           },
           {
             "x": "2021年",
+            "date": "2021-12-31",
             "y": 75.7,
             "tick_label": "2021",
             "tooltip_title": "2021年",
@@ -430,6 +547,7 @@
           },
           {
             "x": "2022年",
+            "date": "2022-12-31",
             "y": 77.4,
             "tick_label": "2022",
             "tooltip_title": "2022年",
@@ -437,6 +555,7 @@
           },
           {
             "x": "2023年",
+            "date": "2023-12-31",
             "y": 80.1,
             "tick_label": "2023",
             "tooltip_title": "2023年",
@@ -444,26 +563,23 @@
           },
           {
             "x": "2024年",
+            "date": "2024-12-31",
             "y": 82.9,
             "tick_label": "2024",
             "tooltip_title": "2024年",
             "tooltip_value_text": "82.9 元/小時"
+          },
+          {
+            "x": "2025年",
+            "date": "2025-12-31",
+            "y": 85.7,
+            "tick_label": "2025",
+            "tooltip_title": "2025年",
+            "tooltip_value_text": "85.7 元/小時"
           }
         ]
       },
       "sparkline_points": [
-        {
-          "x": "2016年",
-          "y": 65.4
-        },
-        {
-          "x": "2017年",
-          "y": 68
-        },
-        {
-          "x": "2018年",
-          "y": 70.5
-        },
         {
           "x": "2019年",
           "y": 73
@@ -487,6 +603,10 @@
         {
           "x": "2024年",
           "y": 82.9
+        },
+        {
+          "x": "2025年",
+          "y": 85.7
         }
       ],
       "expected_update": "每年"

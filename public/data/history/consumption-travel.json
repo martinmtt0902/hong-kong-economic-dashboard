@@ -1,8 +1,7 @@
 {
   "id": "consumption-travel",
   "title_tc": "消費與旅遊",
-  "latest_data_at": "2026-01-31",
-  "latest_data_label": "2026年1月",
+  "periods_summary_text_tc": "各卡更新期不同，請以各列期別為準",
   "metrics": [
     {
       "id": "retail_sales",
@@ -11,18 +10,19 @@
       "source_url": "https://data.gov.hk/en-data/dataset/hk-censtatd-tablechart-620-67001",
       "status": "ok",
       "status_text_tc": "最新",
-      "display_value_text": "373.1億",
-      "display_change_text": "較去年同月（2025年1月） +5.5%",
-      "display_previous_text": "去年同月（2025年1月） 353.8億",
-      "display_period_text": "2026年1月",
-      "display_comparison_text": "較去年同月（2025年1月） +5.5%",
+      "display_value_text": "333.6億",
+      "display_change_text": "較去年同月（2025年9月） +6.4%",
+      "display_previous_text": "去年同月（2025年9月） 313.4億",
+      "display_period_text": "2026年9月",
+      "display_comparison_text": "較去年同月（2025年9月） +6.4%",
       "display_comparison_basis_text": "較去年同月",
-      "display_comparison_period_text": "2025年1月",
+      "display_comparison_period_text": "2025年9月",
       "display_unit": "億港元",
       "data_origin": "live",
-      "last_successful_fetch_at": "2026-03-18T11:39:06.754Z",
+      "last_successful_fetch_at": "2026-11-05T17:09:20.634Z",
       "chart": {
         "chart_type": "line",
+        "frequency": "monthly",
         "x_axis_label": "月份",
         "y_axis_label": "零售銷售額 (億港元)",
         "time_label": "月份",
@@ -34,13 +34,502 @@
           "display_unit": "億港元"
         },
         "suggested_ticks": [
-          "2025-02",
-          "2025-08",
-          "2026-01"
+          "2020-01",
+          "2023-05",
+          "2026-09"
         ],
         "points": [
           {
+            "x": "2020年1月",
+            "date": "2020-01-31",
+            "y": 377.35,
+            "tick_label": "2020-01",
+            "tooltip_title": "2020年1月",
+            "tooltip_value_text": "377.4億"
+          },
+          {
+            "x": "2020年2月",
+            "date": "2020-02-29",
+            "y": 227.23000000000002,
+            "tick_label": "2020-02",
+            "tooltip_title": "2020年2月",
+            "tooltip_value_text": "227.2億"
+          },
+          {
+            "x": "2020年3月",
+            "date": "2020-03-31",
+            "y": 229.77,
+            "tick_label": "2020-03",
+            "tooltip_title": "2020年3月",
+            "tooltip_value_text": "229.8億"
+          },
+          {
+            "x": "2020年4月",
+            "date": "2020-04-30",
+            "y": 241.03,
+            "tick_label": "2020-04",
+            "tooltip_title": "2020年4月",
+            "tooltip_value_text": "241.0億"
+          },
+          {
+            "x": "2020年5月",
+            "date": "2020-05-31",
+            "y": 267.88,
+            "tick_label": "2020-05",
+            "tooltip_title": "2020年5月",
+            "tooltip_value_text": "267.9億"
+          },
+          {
+            "x": "2020年6月",
+            "date": "2020-06-30",
+            "y": 265.31,
+            "tick_label": "2020-06",
+            "tooltip_title": "2020年6月",
+            "tooltip_value_text": "265.3億"
+          },
+          {
+            "x": "2020年7月",
+            "date": "2020-07-31",
+            "y": 264.66,
+            "tick_label": "2020-07",
+            "tooltip_title": "2020年7月",
+            "tooltip_value_text": "264.7億"
+          },
+          {
+            "x": "2020年8月",
+            "date": "2020-08-31",
+            "y": 255.51000000000002,
+            "tick_label": "2020-08",
+            "tooltip_title": "2020年8月",
+            "tooltip_value_text": "255.5億"
+          },
+          {
+            "x": "2020年9月",
+            "date": "2020-09-30",
+            "y": 260.76,
+            "tick_label": "2020-09",
+            "tooltip_title": "2020年9月",
+            "tooltip_value_text": "260.8億"
+          },
+          {
+            "x": "2020年10月",
+            "date": "2020-10-31",
+            "y": 274.3,
+            "tick_label": "2020-10",
+            "tooltip_title": "2020年10月",
+            "tooltip_value_text": "274.3億"
+          },
+          {
+            "x": "2020年11月",
+            "date": "2020-11-30",
+            "y": 286.99,
+            "tick_label": "2020-11",
+            "tooltip_title": "2020年11月",
+            "tooltip_value_text": "287.0億"
+          },
+          {
+            "x": "2020年12月",
+            "date": "2020-12-31",
+            "y": 313.72,
+            "tick_label": "2020-12",
+            "tooltip_title": "2020年12月",
+            "tooltip_value_text": "313.7億"
+          },
+          {
+            "x": "2021年1月",
+            "date": "2021-01-31",
+            "y": 325.49,
+            "tick_label": "2021-01",
+            "tooltip_title": "2021年1月",
+            "tooltip_value_text": "325.5億"
+          },
+          {
+            "x": "2021年2月",
+            "date": "2021-02-28",
+            "y": 295.31,
+            "tick_label": "2021-02",
+            "tooltip_title": "2021年2月",
+            "tooltip_value_text": "295.3億"
+          },
+          {
+            "x": "2021年3月",
+            "date": "2021-03-31",
+            "y": 276.26,
+            "tick_label": "2021-03",
+            "tooltip_title": "2021年3月",
+            "tooltip_value_text": "276.3億"
+          },
+          {
+            "x": "2021年4月",
+            "date": "2021-04-30",
+            "y": 270.18,
+            "tick_label": "2021-04",
+            "tooltip_title": "2021年4月",
+            "tooltip_value_text": "270.2億"
+          },
+          {
+            "x": "2021年5月",
+            "date": "2021-05-31",
+            "y": 295.65000000000003,
+            "tick_label": "2021-05",
+            "tooltip_title": "2021年5月",
+            "tooltip_value_text": "295.7億"
+          },
+          {
+            "x": "2021年6月",
+            "date": "2021-06-30",
+            "y": 280.74,
+            "tick_label": "2021-06",
+            "tooltip_title": "2021年6月",
+            "tooltip_value_text": "280.7億"
+          },
+          {
+            "x": "2021年7月",
+            "date": "2021-07-31",
+            "y": 272.03000000000003,
+            "tick_label": "2021-07",
+            "tooltip_title": "2021年7月",
+            "tooltip_value_text": "272.0億"
+          },
+          {
+            "x": "2021年8月",
+            "date": "2021-08-31",
+            "y": 285.86,
+            "tick_label": "2021-08",
+            "tooltip_title": "2021年8月",
+            "tooltip_value_text": "285.9億"
+          },
+          {
+            "x": "2021年9月",
+            "date": "2021-09-30",
+            "y": 280.18,
+            "tick_label": "2021-09",
+            "tooltip_title": "2021年9月",
+            "tooltip_value_text": "280.2億"
+          },
+          {
+            "x": "2021年10月",
+            "date": "2021-10-31",
+            "y": 307.35,
+            "tick_label": "2021-10",
+            "tooltip_title": "2021年10月",
+            "tooltip_value_text": "307.4億"
+          },
+          {
+            "x": "2021年11月",
+            "date": "2021-11-30",
+            "y": 307.49,
+            "tick_label": "2021-11",
+            "tooltip_title": "2021年11月",
+            "tooltip_value_text": "307.5億"
+          },
+          {
+            "x": "2021年12月",
+            "date": "2021-12-31",
+            "y": 332.94,
+            "tick_label": "2021-12",
+            "tooltip_title": "2021年12月",
+            "tooltip_value_text": "332.9億"
+          },
+          {
+            "x": "2022年1月",
+            "date": "2022-01-31",
+            "y": 338.35,
+            "tick_label": "2022-01",
+            "tooltip_title": "2022年1月",
+            "tooltip_value_text": "338.4億"
+          },
+          {
+            "x": "2022年2月",
+            "date": "2022-02-28",
+            "y": 252.13,
+            "tick_label": "2022-02",
+            "tooltip_title": "2022年2月",
+            "tooltip_value_text": "252.1億"
+          },
+          {
+            "x": "2022年3月",
+            "date": "2022-03-31",
+            "y": 238.16,
+            "tick_label": "2022-03",
+            "tooltip_title": "2022年3月",
+            "tooltip_value_text": "238.2億"
+          },
+          {
+            "x": "2022年4月",
+            "date": "2022-04-30",
+            "y": 301.73,
+            "tick_label": "2022-04",
+            "tooltip_title": "2022年4月",
+            "tooltip_value_text": "301.7億"
+          },
+          {
+            "x": "2022年5月",
+            "date": "2022-05-31",
+            "y": 291.05,
+            "tick_label": "2022-05",
+            "tooltip_title": "2022年5月",
+            "tooltip_value_text": "291.1億"
+          },
+          {
+            "x": "2022年6月",
+            "date": "2022-06-30",
+            "y": 277.03000000000003,
+            "tick_label": "2022-06",
+            "tooltip_title": "2022年6月",
+            "tooltip_value_text": "277.0億"
+          },
+          {
+            "x": "2022年7月",
+            "date": "2022-07-31",
+            "y": 283.19,
+            "tick_label": "2022-07",
+            "tooltip_title": "2022年7月",
+            "tooltip_value_text": "283.2億"
+          },
+          {
+            "x": "2022年8月",
+            "date": "2022-08-31",
+            "y": 285.31,
+            "tick_label": "2022-08",
+            "tooltip_title": "2022年8月",
+            "tooltip_value_text": "285.3億"
+          },
+          {
+            "x": "2022年9月",
+            "date": "2022-09-30",
+            "y": 281.13,
+            "tick_label": "2022-09",
+            "tooltip_title": "2022年9月",
+            "tooltip_value_text": "281.1億"
+          },
+          {
+            "x": "2022年10月",
+            "date": "2022-10-31",
+            "y": 319.79,
+            "tick_label": "2022-10",
+            "tooltip_title": "2022年10月",
+            "tooltip_value_text": "319.8億"
+          },
+          {
+            "x": "2022年11月",
+            "date": "2022-11-30",
+            "y": 294.83,
+            "tick_label": "2022-11",
+            "tooltip_title": "2022年11月",
+            "tooltip_value_text": "294.8億"
+          },
+          {
+            "x": "2022年12月",
+            "date": "2022-12-31",
+            "y": 336.92,
+            "tick_label": "2022-12",
+            "tooltip_title": "2022年12月",
+            "tooltip_value_text": "336.9億"
+          },
+          {
+            "x": "2023年1月",
+            "date": "2023-01-31",
+            "y": 361.76,
+            "tick_label": "2023-01",
+            "tooltip_title": "2023年1月",
+            "tooltip_value_text": "361.8億"
+          },
+          {
+            "x": "2023年2月",
+            "date": "2023-02-28",
+            "y": 331.15000000000003,
+            "tick_label": "2023-02",
+            "tooltip_title": "2023年2月",
+            "tooltip_value_text": "331.2億"
+          },
+          {
+            "x": "2023年3月",
+            "date": "2023-03-31",
+            "y": 335.22,
+            "tick_label": "2023-03",
+            "tooltip_title": "2023年3月",
+            "tooltip_value_text": "335.2億"
+          },
+          {
+            "x": "2023年4月",
+            "date": "2023-04-30",
+            "y": 346.55,
+            "tick_label": "2023-04",
+            "tooltip_title": "2023年4月",
+            "tooltip_value_text": "346.6億"
+          },
+          {
+            "x": "2023年5月",
+            "date": "2023-05-31",
+            "y": 344.88,
+            "tick_label": "2023-05",
+            "tooltip_title": "2023年5月",
+            "tooltip_value_text": "344.9億"
+          },
+          {
+            "x": "2023年6月",
+            "date": "2023-06-30",
+            "y": 330.93,
+            "tick_label": "2023-06",
+            "tooltip_title": "2023年6月",
+            "tooltip_value_text": "330.9億"
+          },
+          {
+            "x": "2023年7月",
+            "date": "2023-07-31",
+            "y": 330.35,
+            "tick_label": "2023-07",
+            "tooltip_title": "2023年7月",
+            "tooltip_value_text": "330.4億"
+          },
+          {
+            "x": "2023年8月",
+            "date": "2023-08-31",
+            "y": 324.46,
+            "tick_label": "2023-08",
+            "tooltip_title": "2023年8月",
+            "tooltip_value_text": "324.5億"
+          },
+          {
+            "x": "2023年9月",
+            "date": "2023-09-30",
+            "y": 317.59000000000003,
+            "tick_label": "2023-09",
+            "tooltip_title": "2023年9月",
+            "tooltip_value_text": "317.6億"
+          },
+          {
+            "x": "2023年10月",
+            "date": "2023-10-31",
+            "y": 338.5,
+            "tick_label": "2023-10",
+            "tooltip_title": "2023年10月",
+            "tooltip_value_text": "338.5億"
+          },
+          {
+            "x": "2023年11月",
+            "date": "2023-11-30",
+            "y": 341.82,
+            "tick_label": "2023-11",
+            "tooltip_title": "2023年11月",
+            "tooltip_value_text": "341.8億"
+          },
+          {
+            "x": "2023年12月",
+            "date": "2023-12-31",
+            "y": 363.28000000000003,
+            "tick_label": "2023-12",
+            "tooltip_title": "2023年12月",
+            "tooltip_value_text": "363.3億"
+          },
+          {
+            "x": "2024年1月",
+            "date": "2024-01-31",
+            "y": 365.18,
+            "tick_label": "2024-01",
+            "tooltip_title": "2024年1月",
+            "tooltip_value_text": "365.2億"
+          },
+          {
+            "x": "2024年2月",
+            "date": "2024-02-29",
+            "y": 337.59000000000003,
+            "tick_label": "2024-02",
+            "tooltip_title": "2024年2月",
+            "tooltip_value_text": "337.6億"
+          },
+          {
+            "x": "2024年3月",
+            "date": "2024-03-31",
+            "y": 311.67,
+            "tick_label": "2024-03",
+            "tooltip_title": "2024年3月",
+            "tooltip_value_text": "311.7億"
+          },
+          {
+            "x": "2024年4月",
+            "date": "2024-04-30",
+            "y": 295.7,
+            "tick_label": "2024-04",
+            "tooltip_title": "2024年4月",
+            "tooltip_value_text": "295.7億"
+          },
+          {
+            "x": "2024年5月",
+            "date": "2024-05-31",
+            "y": 305.71,
+            "tick_label": "2024-05",
+            "tooltip_title": "2024年5月",
+            "tooltip_value_text": "305.7億"
+          },
+          {
+            "x": "2024年6月",
+            "date": "2024-06-30",
+            "y": 298.81,
+            "tick_label": "2024-06",
+            "tooltip_title": "2024年6月",
+            "tooltip_value_text": "298.8億"
+          },
+          {
+            "x": "2024年7月",
+            "date": "2024-07-31",
+            "y": 291.58,
+            "tick_label": "2024-07",
+            "tooltip_title": "2024年7月",
+            "tooltip_value_text": "291.6億"
+          },
+          {
+            "x": "2024年8月",
+            "date": "2024-08-31",
+            "y": 292.17,
+            "tick_label": "2024-08",
+            "tooltip_title": "2024年8月",
+            "tooltip_value_text": "292.2億"
+          },
+          {
+            "x": "2024年9月",
+            "date": "2024-09-30",
+            "y": 295.66,
+            "tick_label": "2024-09",
+            "tooltip_title": "2024年9月",
+            "tooltip_value_text": "295.7億"
+          },
+          {
+            "x": "2024年10月",
+            "date": "2024-10-31",
+            "y": 329.08,
+            "tick_label": "2024-10",
+            "tooltip_title": "2024年10月",
+            "tooltip_value_text": "329.1億"
+          },
+          {
+            "x": "2024年11月",
+            "date": "2024-11-30",
+            "y": 316.77,
+            "tick_label": "2024-11",
+            "tooltip_title": "2024年11月",
+            "tooltip_value_text": "316.8億"
+          },
+          {
+            "x": "2024年12月",
+            "date": "2024-12-31",
+            "y": 328.55,
+            "tick_label": "2024-12",
+            "tooltip_title": "2024年12月",
+            "tooltip_value_text": "328.6億"
+          },
+          {
+            "x": "2025年1月",
+            "date": "2025-01-31",
+            "y": 353.79,
+            "tick_label": "2025-01",
+            "tooltip_title": "2025年1月",
+            "tooltip_value_text": "353.8億"
+          },
+          {
             "x": "2025年2月",
+            "date": "2025-02-28",
             "y": 293.85,
             "tick_label": "2025-02",
             "tooltip_title": "2025年2月",
@@ -48,6 +537,7 @@
           },
           {
             "x": "2025年3月",
+            "date": "2025-03-31",
             "y": 300.91,
             "tick_label": "2025-03",
             "tooltip_title": "2025年3月",
@@ -55,6 +545,7 @@
           },
           {
             "x": "2025年4月",
+            "date": "2025-04-30",
             "y": 288.76,
             "tick_label": "2025-04",
             "tooltip_title": "2025年4月",
@@ -62,6 +553,7 @@
           },
           {
             "x": "2025年5月",
+            "date": "2025-05-31",
             "y": 313.19,
             "tick_label": "2025-05",
             "tooltip_title": "2025年5月",
@@ -69,6 +561,7 @@
           },
           {
             "x": "2025年6月",
+            "date": "2025-06-30",
             "y": 300.94,
             "tick_label": "2025-06",
             "tooltip_title": "2025年6月",
@@ -76,6 +569,7 @@
           },
           {
             "x": "2025年7月",
+            "date": "2025-07-31",
             "y": 296.71,
             "tick_label": "2025-07",
             "tooltip_title": "2025年7月",
@@ -83,6 +577,7 @@
           },
           {
             "x": "2025年8月",
+            "date": "2025-08-31",
             "y": 303.67,
             "tick_label": "2025-08",
             "tooltip_title": "2025年8月",
@@ -90,6 +585,7 @@
           },
           {
             "x": "2025年9月",
+            "date": "2025-09-30",
             "y": 313.44,
             "tick_label": "2025-09",
             "tooltip_title": "2025年9月",
@@ -97,6 +593,7 @@
           },
           {
             "x": "2025年10月",
+            "date": "2025-10-31",
             "y": 351.74,
             "tick_label": "2025-10",
             "tooltip_title": "2025年10月",
@@ -104,6 +601,7 @@
           },
           {
             "x": "2025年11月",
+            "date": "2025-11-30",
             "y": 337.27,
             "tick_label": "2025-11",
             "tooltip_title": "2025年11月",
@@ -111,6 +609,7 @@
           },
           {
             "x": "2025年12月",
+            "date": "2025-12-31",
             "y": 350.18,
             "tick_label": "2025-12",
             "tooltip_title": "2025年12月",
@@ -118,14 +617,323 @@
           },
           {
             "x": "2026年1月",
-            "y": 373.08,
+            "date": "2026-01-31",
+            "y": 373.27,
             "tick_label": "2026-01",
             "tooltip_title": "2026年1月",
-            "tooltip_value_text": "373.1億"
+            "tooltip_value_text": "373.3億"
+          },
+          {
+            "x": "2026年2月",
+            "date": "2026-02-28",
+            "y": 350.46,
+            "tick_label": "2026-02",
+            "tooltip_title": "2026年2月",
+            "tooltip_value_text": "350.5億"
+          },
+          {
+            "x": "2026年3月",
+            "date": "2026-03-31",
+            "y": 339.55,
+            "tick_label": "2026-03",
+            "tooltip_title": "2026年3月",
+            "tooltip_value_text": "339.6億"
+          },
+          {
+            "x": "2026年4月",
+            "date": "2026-04-30",
+            "y": 313.88,
+            "tick_label": "2026-04",
+            "tooltip_title": "2026年4月",
+            "tooltip_value_text": "313.9億"
+          },
+          {
+            "x": "2026年5月",
+            "date": "2026-05-31",
+            "y": 337.90000000000003,
+            "tick_label": "2026-05",
+            "tooltip_title": "2026年5月",
+            "tooltip_value_text": "337.9億"
+          },
+          {
+            "x": "2026年6月",
+            "date": "2026-06-30",
+            "y": 314.90000000000003,
+            "tick_label": "2026-06",
+            "tooltip_title": "2026年6月",
+            "tooltip_value_text": "314.9億"
+          },
+          {
+            "x": "2026年7月",
+            "date": "2026-07-31",
+            "y": 310.2,
+            "tick_label": "2026-07",
+            "tooltip_title": "2026年7月",
+            "tooltip_value_text": "310.2億"
+          },
+          {
+            "x": "2026年8月",
+            "date": "2026-08-31",
+            "y": 320.76,
+            "tick_label": "2026-08",
+            "tooltip_title": "2026年8月",
+            "tooltip_value_text": "320.8億"
+          },
+          {
+            "x": "2026年9月",
+            "date": "2026-09-30",
+            "y": 333.57,
+            "tick_label": "2026-09",
+            "tooltip_title": "2026年9月",
+            "tooltip_value_text": "333.6億"
           }
         ]
       },
       "sparkline_points": [
+        {
+          "x": "2020年1月",
+          "y": 37735
+        },
+        {
+          "x": "2020年2月",
+          "y": 22723
+        },
+        {
+          "x": "2020年3月",
+          "y": 22977
+        },
+        {
+          "x": "2020年4月",
+          "y": 24103
+        },
+        {
+          "x": "2020年5月",
+          "y": 26788
+        },
+        {
+          "x": "2020年6月",
+          "y": 26531
+        },
+        {
+          "x": "2020年7月",
+          "y": 26466
+        },
+        {
+          "x": "2020年8月",
+          "y": 25551
+        },
+        {
+          "x": "2020年9月",
+          "y": 26076
+        },
+        {
+          "x": "2020年10月",
+          "y": 27430
+        },
+        {
+          "x": "2020年11月",
+          "y": 28699
+        },
+        {
+          "x": "2020年12月",
+          "y": 31372
+        },
+        {
+          "x": "2021年1月",
+          "y": 32549
+        },
+        {
+          "x": "2021年2月",
+          "y": 29531
+        },
+        {
+          "x": "2021年3月",
+          "y": 27626
+        },
+        {
+          "x": "2021年4月",
+          "y": 27018
+        },
+        {
+          "x": "2021年5月",
+          "y": 29565
+        },
+        {
+          "x": "2021年6月",
+          "y": 28074
+        },
+        {
+          "x": "2021年7月",
+          "y": 27203
+        },
+        {
+          "x": "2021年8月",
+          "y": 28586
+        },
+        {
+          "x": "2021年9月",
+          "y": 28018
+        },
+        {
+          "x": "2021年10月",
+          "y": 30735
+        },
+        {
+          "x": "2021年11月",
+          "y": 30749
+        },
+        {
+          "x": "2021年12月",
+          "y": 33294
+        },
+        {
+          "x": "2022年1月",
+          "y": 33835
+        },
+        {
+          "x": "2022年2月",
+          "y": 25213
+        },
+        {
+          "x": "2022年3月",
+          "y": 23816
+        },
+        {
+          "x": "2022年4月",
+          "y": 30173
+        },
+        {
+          "x": "2022年5月",
+          "y": 29105
+        },
+        {
+          "x": "2022年6月",
+          "y": 27703
+        },
+        {
+          "x": "2022年7月",
+          "y": 28319
+        },
+        {
+          "x": "2022年8月",
+          "y": 28531
+        },
+        {
+          "x": "2022年9月",
+          "y": 28113
+        },
+        {
+          "x": "2022年10月",
+          "y": 31979
+        },
+        {
+          "x": "2022年11月",
+          "y": 29483
+        },
+        {
+          "x": "2022年12月",
+          "y": 33692
+        },
+        {
+          "x": "2023年1月",
+          "y": 36176
+        },
+        {
+          "x": "2023年2月",
+          "y": 33115
+        },
+        {
+          "x": "2023年3月",
+          "y": 33522
+        },
+        {
+          "x": "2023年4月",
+          "y": 34655
+        },
+        {
+          "x": "2023年5月",
+          "y": 34488
+        },
+        {
+          "x": "2023年6月",
+          "y": 33093
+        },
+        {
+          "x": "2023年7月",
+          "y": 33035
+        },
+        {
+          "x": "2023年8月",
+          "y": 32446
+        },
+        {
+          "x": "2023年9月",
+          "y": 31759
+        },
+        {
+          "x": "2023年10月",
+          "y": 33850
+        },
+        {
+          "x": "2023年11月",
+          "y": 34182
+        },
+        {
+          "x": "2023年12月",
+          "y": 36328
+        },
+        {
+          "x": "2024年1月",
+          "y": 36518
+        },
+        {
+          "x": "2024年2月",
+          "y": 33759
+        },
+        {
+          "x": "2024年3月",
+          "y": 31167
+        },
+        {
+          "x": "2024年4月",
+          "y": 29570
+        },
+        {
+          "x": "2024年5月",
+          "y": 30571
+        },
+        {
+          "x": "2024年6月",
+          "y": 29881
+        },
+        {
+          "x": "2024年7月",
+          "y": 29158
+        },
+        {
+          "x": "2024年8月",
+          "y": 29217
+        },
+        {
+          "x": "2024年9月",
+          "y": 29566
+        },
+        {
+          "x": "2024年10月",
+          "y": 32908
+        },
+        {
+          "x": "2024年11月",
+          "y": 31677
+        },
+        {
+          "x": "2024年12月",
+          "y": 32855
+        },
+        {
+          "x": "2025年1月",
+          "y": 35379
+        },
         {
           "x": "2025年2月",
           "y": 29385
@@ -172,7 +980,39 @@
         },
         {
           "x": "2026年1月",
-          "y": 37308
+          "y": 37327
+        },
+        {
+          "x": "2026年2月",
+          "y": 35046
+        },
+        {
+          "x": "2026年3月",
+          "y": 33955
+        },
+        {
+          "x": "2026年4月",
+          "y": 31388
+        },
+        {
+          "x": "2026年5月",
+          "y": 33790
+        },
+        {
+          "x": "2026年6月",
+          "y": 31490
+        },
+        {
+          "x": "2026年7月",
+          "y": 31020
+        },
+        {
+          "x": "2026年8月",
+          "y": 32076
+        },
+        {
+          "x": "2026年9月",
+          "y": 33357
         }
       ],
       "expected_update": "每月"
@@ -184,18 +1024,19 @@
       "source_url": "https://data.gov.hk/en-data/dataset/hk-censtatd-tablechart-650-80001",
       "status": "ok",
       "status_text_tc": "最新",
-      "display_value_text": "4,811,700",
-      "display_change_text": "較去年同月（2025年1月） +1.5%",
-      "display_previous_text": "去年同月（2025年1月） 4,742,066",
-      "display_period_text": "2026年1月",
-      "display_comparison_text": "較去年同月（2025年1月） +1.5%",
+      "display_value_text": "5,456,320",
+      "display_change_text": "較去年同月（2025年8月） +5.9%",
+      "display_previous_text": "去年同月（2025年8月） 5,152,837",
+      "display_period_text": "2026年8月",
+      "display_comparison_text": "較去年同月（2025年8月） +5.9%",
       "display_comparison_basis_text": "較去年同月",
-      "display_comparison_period_text": "2025年1月",
+      "display_comparison_period_text": "2025年8月",
       "display_unit": "人次",
       "data_origin": "live",
-      "last_successful_fetch_at": "2026-03-18T11:39:06.754Z",
+      "last_successful_fetch_at": "2026-11-05T17:09:20.634Z",
       "chart": {
         "chart_type": "line",
+        "frequency": "monthly",
         "x_axis_label": "月份",
         "y_axis_label": "旅客入境 (人次)",
         "time_label": "月份",
@@ -207,13 +1048,502 @@
           "display_unit": "人次"
         },
         "suggested_ticks": [
-          "2025-02",
-          "2025-08",
-          "2026-01"
+          "2020-01",
+          "2023-05",
+          "2026-08"
         ],
         "points": [
           {
+            "x": "2020年1月",
+            "date": "2020-01-31",
+            "y": 3207802,
+            "tick_label": "2020-01",
+            "tooltip_title": "2020年1月",
+            "tooltip_value_text": "3,207,802 人次"
+          },
+          {
+            "x": "2020年2月",
+            "date": "2020-02-29",
+            "y": 199123,
+            "tick_label": "2020-02",
+            "tooltip_title": "2020年2月",
+            "tooltip_value_text": "199,123 人次"
+          },
+          {
+            "x": "2020年3月",
+            "date": "2020-03-31",
+            "y": 82285,
+            "tick_label": "2020-03",
+            "tooltip_title": "2020年3月",
+            "tooltip_value_text": "82,285 人次"
+          },
+          {
+            "x": "2020年4月",
+            "date": "2020-04-30",
+            "y": 4125,
+            "tick_label": "2020-04",
+            "tooltip_title": "2020年4月",
+            "tooltip_value_text": "4,125 人次"
+          },
+          {
+            "x": "2020年5月",
+            "date": "2020-05-31",
+            "y": 8139,
+            "tick_label": "2020-05",
+            "tooltip_title": "2020年5月",
+            "tooltip_value_text": "8,139 人次"
+          },
+          {
+            "x": "2020年6月",
+            "date": "2020-06-30",
+            "y": 14606,
+            "tick_label": "2020-06",
+            "tooltip_title": "2020年6月",
+            "tooltip_value_text": "14,606 人次"
+          },
+          {
+            "x": "2020年7月",
+            "date": "2020-07-31",
+            "y": 20568,
+            "tick_label": "2020-07",
+            "tooltip_title": "2020年7月",
+            "tooltip_value_text": "20,568 人次"
+          },
+          {
+            "x": "2020年8月",
+            "date": "2020-08-31",
+            "y": 4449,
+            "tick_label": "2020-08",
+            "tooltip_title": "2020年8月",
+            "tooltip_value_text": "4,449 人次"
+          },
+          {
+            "x": "2020年9月",
+            "date": "2020-09-30",
+            "y": 9132,
+            "tick_label": "2020-09",
+            "tooltip_title": "2020年9月",
+            "tooltip_value_text": "9,132 人次"
+          },
+          {
+            "x": "2020年10月",
+            "date": "2020-10-31",
+            "y": 7817,
+            "tick_label": "2020-10",
+            "tooltip_title": "2020年10月",
+            "tooltip_value_text": "7,817 人次"
+          },
+          {
+            "x": "2020年11月",
+            "date": "2020-11-30",
+            "y": 5962,
+            "tick_label": "2020-11",
+            "tooltip_title": "2020年11月",
+            "tooltip_value_text": "5,962 人次"
+          },
+          {
+            "x": "2020年12月",
+            "date": "2020-12-31",
+            "y": 4867,
+            "tick_label": "2020-12",
+            "tooltip_title": "2020年12月",
+            "tooltip_value_text": "4,867 人次"
+          },
+          {
+            "x": "2021年1月",
+            "date": "2021-01-31",
+            "y": 4368,
+            "tick_label": "2021-01",
+            "tooltip_title": "2021年1月",
+            "tooltip_value_text": "4,368 人次"
+          },
+          {
+            "x": "2021年2月",
+            "date": "2021-02-28",
+            "y": 5495,
+            "tick_label": "2021-02",
+            "tooltip_title": "2021年2月",
+            "tooltip_value_text": "5,495 人次"
+          },
+          {
+            "x": "2021年3月",
+            "date": "2021-03-31",
+            "y": 6675,
+            "tick_label": "2021-03",
+            "tooltip_title": "2021年3月",
+            "tooltip_value_text": "6,675 人次"
+          },
+          {
+            "x": "2021年4月",
+            "date": "2021-04-30",
+            "y": 5706,
+            "tick_label": "2021-04",
+            "tooltip_title": "2021年4月",
+            "tooltip_value_text": "5,706 人次"
+          },
+          {
+            "x": "2021年5月",
+            "date": "2021-05-31",
+            "y": 5305,
+            "tick_label": "2021-05",
+            "tooltip_title": "2021年5月",
+            "tooltip_value_text": "5,305 人次"
+          },
+          {
+            "x": "2021年6月",
+            "date": "2021-06-30",
+            "y": 6200,
+            "tick_label": "2021-06",
+            "tooltip_title": "2021年6月",
+            "tooltip_value_text": "6,200 人次"
+          },
+          {
+            "x": "2021年7月",
+            "date": "2021-07-31",
+            "y": 8666,
+            "tick_label": "2021-07",
+            "tooltip_title": "2021年7月",
+            "tooltip_value_text": "8,666 人次"
+          },
+          {
+            "x": "2021年8月",
+            "date": "2021-08-31",
+            "y": 10811,
+            "tick_label": "2021-08",
+            "tooltip_title": "2021年8月",
+            "tooltip_value_text": "10,811 人次"
+          },
+          {
+            "x": "2021年9月",
+            "date": "2021-09-30",
+            "y": 9879,
+            "tick_label": "2021-09",
+            "tooltip_title": "2021年9月",
+            "tooltip_value_text": "9,879 人次"
+          },
+          {
+            "x": "2021年10月",
+            "date": "2021-10-31",
+            "y": 9353,
+            "tick_label": "2021-10",
+            "tooltip_title": "2021年10月",
+            "tooltip_value_text": "9,353 人次"
+          },
+          {
+            "x": "2021年11月",
+            "date": "2021-11-30",
+            "y": 9492,
+            "tick_label": "2021-11",
+            "tooltip_title": "2021年11月",
+            "tooltip_value_text": "9,492 人次"
+          },
+          {
+            "x": "2021年12月",
+            "date": "2021-12-31",
+            "y": 9448,
+            "tick_label": "2021-12",
+            "tooltip_title": "2021年12月",
+            "tooltip_value_text": "9,448 人次"
+          },
+          {
+            "x": "2022年1月",
+            "date": "2022-01-31",
+            "y": 7064,
+            "tick_label": "2022-01",
+            "tooltip_title": "2022年1月",
+            "tooltip_value_text": "7,064 人次"
+          },
+          {
+            "x": "2022年2月",
+            "date": "2022-02-28",
+            "y": 2626,
+            "tick_label": "2022-02",
+            "tooltip_title": "2022年2月",
+            "tooltip_value_text": "2,626 人次"
+          },
+          {
+            "x": "2022年3月",
+            "date": "2022-03-31",
+            "y": 1800,
+            "tick_label": "2022-03",
+            "tooltip_title": "2022年3月",
+            "tooltip_value_text": "1,800 人次"
+          },
+          {
+            "x": "2022年4月",
+            "date": "2022-04-30",
+            "y": 4692,
+            "tick_label": "2022-04",
+            "tooltip_title": "2022年4月",
+            "tooltip_value_text": "4,692 人次"
+          },
+          {
+            "x": "2022年5月",
+            "date": "2022-05-31",
+            "y": 18710,
+            "tick_label": "2022-05",
+            "tooltip_title": "2022年5月",
+            "tooltip_value_text": "18,710 人次"
+          },
+          {
+            "x": "2022年6月",
+            "date": "2022-06-30",
+            "y": 41112,
+            "tick_label": "2022-06",
+            "tooltip_title": "2022年6月",
+            "tooltip_value_text": "41,112 人次"
+          },
+          {
+            "x": "2022年7月",
+            "date": "2022-07-31",
+            "y": 48048,
+            "tick_label": "2022-07",
+            "tooltip_title": "2022年7月",
+            "tooltip_value_text": "48,048 人次"
+          },
+          {
+            "x": "2022年8月",
+            "date": "2022-08-31",
+            "y": 59610,
+            "tick_label": "2022-08",
+            "tooltip_title": "2022年8月",
+            "tooltip_value_text": "59,610 人次"
+          },
+          {
+            "x": "2022年9月",
+            "date": "2022-09-30",
+            "y": 66037,
+            "tick_label": "2022-09",
+            "tooltip_title": "2022年9月",
+            "tooltip_value_text": "66,037 人次"
+          },
+          {
+            "x": "2022年10月",
+            "date": "2022-10-31",
+            "y": 80524,
+            "tick_label": "2022-10",
+            "tooltip_title": "2022年10月",
+            "tooltip_value_text": "80,524 人次"
+          },
+          {
+            "x": "2022年11月",
+            "date": "2022-11-30",
+            "y": 113763,
+            "tick_label": "2022-11",
+            "tooltip_title": "2022年11月",
+            "tooltip_value_text": "113,763 人次"
+          },
+          {
+            "x": "2022年12月",
+            "date": "2022-12-31",
+            "y": 160578,
+            "tick_label": "2022-12",
+            "tooltip_title": "2022年12月",
+            "tooltip_value_text": "160,578 人次"
+          },
+          {
+            "x": "2023年1月",
+            "date": "2023-01-31",
+            "y": 498689,
+            "tick_label": "2023-01",
+            "tooltip_title": "2023年1月",
+            "tooltip_value_text": "498,689 人次"
+          },
+          {
+            "x": "2023年2月",
+            "date": "2023-02-28",
+            "y": 1461969,
+            "tick_label": "2023-02",
+            "tooltip_title": "2023年2月",
+            "tooltip_value_text": "1,461,969 人次"
+          },
+          {
+            "x": "2023年3月",
+            "date": "2023-03-31",
+            "y": 2454093,
+            "tick_label": "2023-03",
+            "tooltip_title": "2023年3月",
+            "tooltip_value_text": "2,454,093 人次"
+          },
+          {
+            "x": "2023年4月",
+            "date": "2023-04-30",
+            "y": 2892256,
+            "tick_label": "2023-04",
+            "tooltip_title": "2023年4月",
+            "tooltip_value_text": "2,892,256 人次"
+          },
+          {
+            "x": "2023年5月",
+            "date": "2023-05-31",
+            "y": 2828384,
+            "tick_label": "2023-05",
+            "tooltip_title": "2023年5月",
+            "tooltip_value_text": "2,828,384 人次"
+          },
+          {
+            "x": "2023年6月",
+            "date": "2023-06-30",
+            "y": 2748488,
+            "tick_label": "2023-06",
+            "tooltip_title": "2023年6月",
+            "tooltip_value_text": "2,748,488 人次"
+          },
+          {
+            "x": "2023年7月",
+            "date": "2023-07-31",
+            "y": 3588530,
+            "tick_label": "2023-07",
+            "tooltip_title": "2023年7月",
+            "tooltip_value_text": "3,588,530 人次"
+          },
+          {
+            "x": "2023年8月",
+            "date": "2023-08-31",
+            "y": 4077746,
+            "tick_label": "2023-08",
+            "tooltip_title": "2023年8月",
+            "tooltip_value_text": "4,077,746 人次"
+          },
+          {
+            "x": "2023年9月",
+            "date": "2023-09-30",
+            "y": 2771826,
+            "tick_label": "2023-09",
+            "tooltip_title": "2023年9月",
+            "tooltip_value_text": "2,771,826 人次"
+          },
+          {
+            "x": "2023年10月",
+            "date": "2023-10-31",
+            "y": 3458778,
+            "tick_label": "2023-10",
+            "tooltip_title": "2023年10月",
+            "tooltip_value_text": "3,458,778 人次"
+          },
+          {
+            "x": "2023年11月",
+            "date": "2023-11-30",
+            "y": 3288915,
+            "tick_label": "2023-11",
+            "tooltip_title": "2023年11月",
+            "tooltip_value_text": "3,288,915 人次"
+          },
+          {
+            "x": "2023年12月",
+            "date": "2023-12-31",
+            "y": 3929986,
+            "tick_label": "2023-12",
+            "tooltip_title": "2023年12月",
+            "tooltip_value_text": "3,929,986 人次"
+          },
+          {
+            "x": "2024年1月",
+            "date": "2024-01-31",
+            "y": 3825617,
+            "tick_label": "2024-01",
+            "tooltip_title": "2024年1月",
+            "tooltip_value_text": "3,825,617 人次"
+          },
+          {
+            "x": "2024年2月",
+            "date": "2024-02-29",
+            "y": 4001190,
+            "tick_label": "2024-02",
+            "tooltip_title": "2024年2月",
+            "tooltip_value_text": "4,001,190 人次"
+          },
+          {
+            "x": "2024年3月",
+            "date": "2024-03-31",
+            "y": 3401991,
+            "tick_label": "2024-03",
+            "tooltip_title": "2024年3月",
+            "tooltip_value_text": "3,401,991 人次"
+          },
+          {
+            "x": "2024年4月",
+            "date": "2024-04-30",
+            "y": 3391381,
+            "tick_label": "2024-04",
+            "tooltip_title": "2024年4月",
+            "tooltip_value_text": "3,391,381 人次"
+          },
+          {
+            "x": "2024年5月",
+            "date": "2024-05-31",
+            "y": 3398458,
+            "tick_label": "2024-05",
+            "tooltip_title": "2024年5月",
+            "tooltip_value_text": "3,398,458 人次"
+          },
+          {
+            "x": "2024年6月",
+            "date": "2024-06-30",
+            "y": 3132598,
+            "tick_label": "2024-06",
+            "tooltip_title": "2024年6月",
+            "tooltip_value_text": "3,132,598 人次"
+          },
+          {
+            "x": "2024年7月",
+            "date": "2024-07-31",
+            "y": 3921630,
+            "tick_label": "2024-07",
+            "tooltip_title": "2024年7月",
+            "tooltip_value_text": "3,921,630 人次"
+          },
+          {
+            "x": "2024年8月",
+            "date": "2024-08-31",
+            "y": 4453877,
+            "tick_label": "2024-08",
+            "tooltip_title": "2024年8月",
+            "tooltip_value_text": "4,453,877 人次"
+          },
+          {
+            "x": "2024年9月",
+            "date": "2024-09-30",
+            "y": 3062003,
+            "tick_label": "2024-09",
+            "tooltip_title": "2024年9月",
+            "tooltip_value_text": "3,062,003 人次"
+          },
+          {
+            "x": "2024年10月",
+            "date": "2024-10-31",
+            "y": 4090054,
+            "tick_label": "2024-10",
+            "tooltip_title": "2024年10月",
+            "tooltip_value_text": "4,090,054 人次"
+          },
+          {
+            "x": "2024年11月",
+            "date": "2024-11-30",
+            "y": 3568437,
+            "tick_label": "2024-11",
+            "tooltip_title": "2024年11月",
+            "tooltip_value_text": "3,568,437 人次"
+          },
+          {
+            "x": "2024年12月",
+            "date": "2024-12-31",
+            "y": 4255551,
+            "tick_label": "2024-12",
+            "tooltip_title": "2024年12月",
+            "tooltip_value_text": "4,255,551 人次"
+          },
+          {
+            "x": "2025年1月",
+            "date": "2025-01-31",
+            "y": 4742066,
+            "tick_label": "2025-01",
+            "tooltip_title": "2025年1月",
+            "tooltip_value_text": "4,742,066 人次"
+          },
+          {
             "x": "2025年2月",
+            "date": "2025-02-28",
             "y": 3667671,
             "tick_label": "2025-02",
             "tooltip_title": "2025年2月",
@@ -221,6 +1551,7 @@
           },
           {
             "x": "2025年3月",
+            "date": "2025-03-31",
             "y": 3818512,
             "tick_label": "2025-03",
             "tooltip_title": "2025年3月",
@@ -228,6 +1559,7 @@
           },
           {
             "x": "2025年4月",
+            "date": "2025-04-30",
             "y": 3847934,
             "tick_label": "2025-04",
             "tooltip_title": "2025年4月",
@@ -235,6 +1567,7 @@
           },
           {
             "x": "2025年5月",
+            "date": "2025-05-31",
             "y": 4078938,
             "tick_label": "2025-05",
             "tooltip_title": "2025年5月",
@@ -242,6 +1575,7 @@
           },
           {
             "x": "2025年6月",
+            "date": "2025-06-30",
             "y": 3480979,
             "tick_label": "2025-06",
             "tooltip_title": "2025年6月",
@@ -249,6 +1583,7 @@
           },
           {
             "x": "2025年7月",
+            "date": "2025-07-31",
             "y": 4390514,
             "tick_label": "2025-07",
             "tooltip_title": "2025年7月",
@@ -256,6 +1591,7 @@
           },
           {
             "x": "2025年8月",
+            "date": "2025-08-31",
             "y": 5152837,
             "tick_label": "2025-08",
             "tooltip_title": "2025年8月",
@@ -263,6 +1599,7 @@
           },
           {
             "x": "2025年9月",
+            "date": "2025-09-30",
             "y": 3292197,
             "tick_label": "2025-09",
             "tooltip_title": "2025年9月",
@@ -270,6 +1607,7 @@
           },
           {
             "x": "2025年10月",
+            "date": "2025-10-31",
             "y": 4588515,
             "tick_label": "2025-10",
             "tooltip_title": "2025年10月",
@@ -277,6 +1615,7 @@
           },
           {
             "x": "2025年11月",
+            "date": "2025-11-30",
             "y": 4189272,
             "tick_label": "2025-11",
             "tooltip_title": "2025年11月",
@@ -284,6 +1623,7 @@
           },
           {
             "x": "2025年12月",
+            "date": "2025-12-31",
             "y": 4645397,
             "tick_label": "2025-12",
             "tooltip_title": "2025年12月",
@@ -291,14 +1631,315 @@
           },
           {
             "x": "2026年1月",
+            "date": "2026-01-31",
             "y": 4811700,
             "tick_label": "2026-01",
             "tooltip_title": "2026年1月",
             "tooltip_value_text": "4,811,700 人次"
+          },
+          {
+            "x": "2026年2月",
+            "date": "2026-02-28",
+            "y": 5141714,
+            "tick_label": "2026-02",
+            "tooltip_title": "2026年2月",
+            "tooltip_value_text": "5,141,714 人次"
+          },
+          {
+            "x": "2026年3月",
+            "date": "2026-03-31",
+            "y": 4354229,
+            "tick_label": "2026-03",
+            "tooltip_title": "2026年3月",
+            "tooltip_value_text": "4,354,229 人次"
+          },
+          {
+            "x": "2026年4月",
+            "date": "2026-04-30",
+            "y": 4217311,
+            "tick_label": "2026-04",
+            "tooltip_title": "2026年4月",
+            "tooltip_value_text": "4,217,311 人次"
+          },
+          {
+            "x": "2026年5月",
+            "date": "2026-05-31",
+            "y": 4464840,
+            "tick_label": "2026-05",
+            "tooltip_title": "2026年5月",
+            "tooltip_value_text": "4,464,840 人次"
+          },
+          {
+            "x": "2026年6月",
+            "date": "2026-06-30",
+            "y": 3722694,
+            "tick_label": "2026-06",
+            "tooltip_title": "2026年6月",
+            "tooltip_value_text": "3,722,694 人次"
+          },
+          {
+            "x": "2026年7月",
+            "date": "2026-07-31",
+            "y": 4503842,
+            "tick_label": "2026-07",
+            "tooltip_title": "2026年7月",
+            "tooltip_value_text": "4,503,842 人次"
+          },
+          {
+            "x": "2026年8月",
+            "date": "2026-08-31",
+            "y": 5456320,
+            "tick_label": "2026-08",
+            "tooltip_title": "2026年8月",
+            "tooltip_value_text": "5,456,320 人次"
           }
         ]
       },
       "sparkline_points": [
+        {
+          "x": "2020年1月",
+          "y": 3207802
+        },
+        {
+          "x": "2020年2月",
+          "y": 199123
+        },
+        {
+          "x": "2020年3月",
+          "y": 82285
+        },
+        {
+          "x": "2020年4月",
+          "y": 4125
+        },
+        {
+          "x": "2020年5月",
+          "y": 8139
+        },
+        {
+          "x": "2020年6月",
+          "y": 14606
+        },
+        {
+          "x": "2020年7月",
+          "y": 20568
+        },
+        {
+          "x": "2020年8月",
+          "y": 4449
+        },
+        {
+          "x": "2020年9月",
+          "y": 9132
+        },
+        {
+          "x": "2020年10月",
+          "y": 7817
+        },
+        {
+          "x": "2020年11月",
+          "y": 5962
+        },
+        {
+          "x": "2020年12月",
+          "y": 4867
+        },
+        {
+          "x": "2021年1月",
+          "y": 4368
+        },
+        {
+          "x": "2021年2月",
+          "y": 5495
+        },
+        {
+          "x": "2021年3月",
+          "y": 6675
+        },
+        {
+          "x": "2021年4月",
+          "y": 5706
+        },
+        {
+          "x": "2021年5月",
+          "y": 5305
+        },
+        {
+          "x": "2021年6月",
+          "y": 6200
+        },
+        {
+          "x": "2021年7月",
+          "y": 8666
+        },
+        {
+          "x": "2021年8月",
+          "y": 10811
+        },
+        {
+          "x": "2021年9月",
+          "y": 9879
+        },
+        {
+          "x": "2021年10月",
+          "y": 9353
+        },
+        {
+          "x": "2021年11月",
+          "y": 9492
+        },
+        {
+          "x": "2021年12月",
+          "y": 9448
+        },
+        {
+          "x": "2022年1月",
+          "y": 7064
+        },
+        {
+          "x": "2022年2月",
+          "y": 2626
+        },
+        {
+          "x": "2022年3月",
+          "y": 1800
+        },
+        {
+          "x": "2022年4月",
+          "y": 4692
+        },
+        {
+          "x": "2022年5月",
+          "y": 18710
+        },
+        {
+          "x": "2022年6月",
+          "y": 41112
+        },
+        {
+          "x": "2022年7月",
+          "y": 48048
+        },
+        {
+          "x": "2022年8月",
+          "y": 59610
+        },
+        {
+          "x": "2022年9月",
+          "y": 66037
+        },
+        {
+          "x": "2022年10月",
+          "y": 80524
+        },
+        {
+          "x": "2022年11月",
+          "y": 113763
+        },
+        {
+          "x": "2022年12月",
+          "y": 160578
+        },
+        {
+          "x": "2023年1月",
+          "y": 498689
+        },
+        {
+          "x": "2023年2月",
+          "y": 1461969
+        },
+        {
+          "x": "2023年3月",
+          "y": 2454093
+        },
+        {
+          "x": "2023年4月",
+          "y": 2892256
+        },
+        {
+          "x": "2023年5月",
+          "y": 2828384
+        },
+        {
+          "x": "2023年6月",
+          "y": 2748488
+        },
+        {
+          "x": "2023年7月",
+          "y": 3588530
+        },
+        {
+          "x": "2023年8月",
+          "y": 4077746
+        },
+        {
+          "x": "2023年9月",
+          "y": 2771826
+        },
+        {
+          "x": "2023年10月",
+          "y": 3458778
+        },
+        {
+          "x": "2023年11月",
+          "y": 3288915
+        },
+        {
+          "x": "2023年12月",
+          "y": 3929986
+        },
+        {
+          "x": "2024年1月",
+          "y": 3825617
+        },
+        {
+          "x": "2024年2月",
+          "y": 4001190
+        },
+        {
+          "x": "2024年3月",
+          "y": 3401991
+        },
+        {
+          "x": "2024年4月",
+          "y": 3391381
+        },
+        {
+          "x": "2024年5月",
+          "y": 3398458
+        },
+        {
+          "x": "2024年6月",
+          "y": 3132598
+        },
+        {
+          "x": "2024年7月",
+          "y": 3921630
+        },
+        {
+          "x": "2024年8月",
+          "y": 4453877
+        },
+        {
+          "x": "2024年9月",
+          "y": 3062003
+        },
+        {
+          "x": "2024年10月",
+          "y": 4090054
+        },
+        {
+          "x": "2024年11月",
+          "y": 3568437
+        },
+        {
+          "x": "2024年12月",
+          "y": 4255551
+        },
+        {
+          "x": "2025年1月",
+          "y": 4742066
+        },
         {
           "x": "2025年2月",
           "y": 3667671
@@ -346,6 +1987,34 @@
         {
           "x": "2026年1月",
           "y": 4811700
+        },
+        {
+          "x": "2026年2月",
+          "y": 5141714
+        },
+        {
+          "x": "2026年3月",
+          "y": 4354229
+        },
+        {
+          "x": "2026年4月",
+          "y": 4217311
+        },
+        {
+          "x": "2026年5月",
+          "y": 4464840
+        },
+        {
+          "x": "2026年6月",
+          "y": 3722694
+        },
+        {
+          "x": "2026年7月",
+          "y": 4503842
+        },
+        {
+          "x": "2026年8月",
+          "y": 5456320
         }
       ],
       "expected_update": "每月"
